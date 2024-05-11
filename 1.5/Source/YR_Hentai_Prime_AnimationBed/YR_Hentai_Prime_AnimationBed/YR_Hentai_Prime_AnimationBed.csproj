@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompBaseOfAnimationBed.cs" />
     <Compile Include="AnimationSetting\BedAnimationDef.cs" />
     <Compile Include="AnimationSetting\CompAnimationSetting.cs" />
     <Compile Include="AnimationSetting\BedAnimationUtility.cs" />
@@ -80,6 +81,9 @@
     <Compile Include="CNMS\CompProperties_AffectedByCNMS.cs" />
     <Compile Include="CNMS\CompProperties_Facility_CNMS.cs" />
     <Compile Include="CompProperties_ToggleHediff.cs" />
+    <Compile Include="Joy\CompProperties_DummyForJoy.cs" />
+    <Compile Include="Joy\CompProperties_SpawnDummyForJoy.cs" />
+    <Compile Include="Joy\JobDriver_WatchDummyForJoy.cs" />
     <Compile Include="YR_StudyUtility.cs" />
     <Compile Include="YR_Hentai_Prime_AnimationBed.cs" />
     <Compile Include="Buildings\Building_AnimationBed.cs" />

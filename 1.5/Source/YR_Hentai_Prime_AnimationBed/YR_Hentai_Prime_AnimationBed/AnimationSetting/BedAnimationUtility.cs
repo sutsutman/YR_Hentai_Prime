@@ -74,13 +74,13 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
                 }
                 pos.y = posY;
-                
+
                 //테스트용
                 pos += closestSetting.testOffset;
                 //closestSetting.graphic.data.drawSize.x += closestSetting.testDrawSize.x;
                 //closestSetting.graphic.data.drawSize.y += closestSetting.testDrawSize.y;
 
-                if(parentBedAnimationDef.logCurrentOffset)
+                if (parentBedAnimationDef.logCurrentOffset)
                 {
                     Log.Error($"parentBedAnimationDef defName : {pos.x.ToString("F5")}, {pos.y.ToString("F5")}, {pos.z.ToString("F5")}");
                 }
@@ -119,7 +119,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 // 컨디션에 따라 bedAnimationDef 선택
                 foreach (var conditionBedAnimationDef in bedAnimation.conditionBedAnimationDefs)
                 {
-                    if (Condition.Match(pawn, conditionBedAnimationDef.condition))
+                    if (Condition.Match(pawn, building_AnimationBed, conditionBedAnimationDef.condition))
                     {
                         bedAnimationDef = conditionBedAnimationDef.bedAnimationDef;
 
@@ -156,7 +156,7 @@ namespace YR_Hentai_Prime_AnimationBed
             // Loop through animation settings
             foreach (var bedAnimationSetting in bedAnimationDef.bedAnimationSettings)
             {
-                if (!Condition.Match(pawn, bedAnimationSetting.condition))
+                if (!Condition.Match(pawn, animationSettingComp.Building_AnimationBed, bedAnimationSetting.condition))
                 {
                     continue;
                 }
@@ -213,7 +213,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
             foreach (var condition in animationSettingComp.Props.pawnAnimationSetting.conditonPawnAnimations)
             {
-                if (Condition.Match(pawn, condition.condition))
+                if (Condition.Match(pawn, animationSettingComp.Building_AnimationBed, condition.condition))
                 {
                     pawnAnimationDef = condition.pawnAnimationDef;
 
@@ -318,7 +318,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 var pawnAnimationDef = pawnAnimationSetting.pawnAnimationDef;
                 foreach (var conditionPawnAnimation in pawnAnimationSetting.conditonPawnAnimations)
                 {
-                    if (Condition.Match(pawn, conditionPawnAnimation.condition))
+                    if (Condition.Match(pawn, building_AnimationBed, conditionPawnAnimation.condition))
                     {
                         pawnAnimationDef = conditionPawnAnimation.pawnAnimationDef;
 
@@ -331,7 +331,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 // 애니메이션 설정
                 pawn.Drawer.renderer.SetAnimation(pawnAnimationDef);
-                
+
             }
 
             //Log.Error("========");
@@ -350,7 +350,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 else
                 {
                     bedAnimationSettingAndTick.currentTick =
-                        bedAnimationSettingAndTick.currentTick < bedAnimationSettingAndTick.durationTick-1
+                        bedAnimationSettingAndTick.currentTick < bedAnimationSettingAndTick.durationTick - 1
                         ? bedAnimationSettingAndTick.currentTick + 1 : 0;
                 }
 

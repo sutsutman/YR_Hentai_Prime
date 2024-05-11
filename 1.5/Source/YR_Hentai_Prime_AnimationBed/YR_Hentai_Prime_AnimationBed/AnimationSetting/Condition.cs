@@ -24,6 +24,8 @@ namespace YR_Hentai_Prime_AnimationBed
         public List<TraitDef> neverTraitDefs = null;
         public List<Intelligence> neverIntelligences = null;
 
+        public bool dummyForJoyIsActive = false;
+
         public bool allMatch = false;
         public bool reverseCondition = false;
         bool Break = true;
@@ -34,7 +36,7 @@ namespace YR_Hentai_Prime_AnimationBed
             return condition != null && condition.Break;
         }
 
-        public static bool Match(Pawn pawn, Condition condition)
+        public static bool Match(Pawn pawn, Building_AnimationBed building_AnimationBed, Condition condition)
         {
             if (condition == null || pawn == null)
             {
@@ -74,6 +76,24 @@ namespace YR_Hentai_Prime_AnimationBed
                 return false;
             }
 
+            bool CheckDummyForJoyIsActive(Building_AnimationBed building_AnimationBed, Condition condition)
+            {
+                if (condition.dummyForJoyIsActive)
+                {
+                    if (building_AnimationBed == null)
+                    {
+                        return false;
+                    }
+
+                    return building_AnimationBed.dummyForJoyIsActive;
+
+                }
+                else
+                {
+                    return allMatch;
+                }
+            }
+
             IEnumerable<bool> matchConditions = new[]
             {
                 Check(bodyType, condition.bodyTypeDefs),
@@ -82,7 +102,8 @@ namespace YR_Hentai_Prime_AnimationBed
                 Check(pawn.def.race.intelligence, condition.intelligences),
                 CheckListCondition(condition.hediffDefs, HediffCheck),
                 CheckListCondition(condition.hediffAndSeverities, HediffAndSeverityCheck),
-                CheckListCondition(condition.traitDefs, TraitCheck)
+                CheckListCondition(condition.traitDefs, TraitCheck),
+                CheckDummyForJoyIsActive(building_AnimationBed, condition)
             };
 
             bool match = allMatch

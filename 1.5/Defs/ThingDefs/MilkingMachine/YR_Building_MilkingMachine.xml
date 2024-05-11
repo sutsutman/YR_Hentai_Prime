@@ -9,6 +9,10 @@
 			<graphicClass>Graphic_Multi</graphicClass>
 		</graphicData>
 		<uiOrder>100</uiOrder>
+		<!-- 임시로 넣은거 -->
+		<statBases>
+			<JoyGainFactor>1</JoyGainFactor>
+		</statBases>
 		<comps>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
 				<!-- 묶였을 때 부여되는 헤디프 -->
@@ -246,6 +250,14 @@
 					<!-- 펌프 -->
 					<li>
 						<bedAnimationDef>YR_Milking_Pump</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_Milking_Pump_Debug</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
 					</li>
 				</bedAnimationList>
 			</li>
@@ -273,6 +285,11 @@
 						<spawnCount>40</spawnCount>
 					</li>
 				</conditionSpawnThings>
+			</li>
+			<!--테스트용으로 삽입 -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
+				<thingDef>YR_DummyForJoy</thingDef>
+				<animationDef>YR_MilkingMachine_Animation_BodyChange</animationDef>
 			</li>
 		</comps>
 	</ThingDef>

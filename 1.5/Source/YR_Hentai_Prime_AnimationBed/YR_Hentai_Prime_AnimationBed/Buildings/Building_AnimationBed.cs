@@ -80,7 +80,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 foreach (var conditonPawnOffset in pawnAnimationSetting.conditonPawnOffsets)
                 {
-                    if (Condition.Match(HeldPawn, conditonPawnOffset.condition))
+                    if (Condition.Match(HeldPawn, this, conditonPawnOffset.condition))
                     {
                         offset = conditonPawnOffset.offset;
                         if (Condition.NeedBreak(conditonPawnOffset.condition))
@@ -646,17 +646,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        public void Notify_PawnDied(Pawn pawn, DamageInfo? dinfo)
-        {
-            if (pawn == HeldPawn)
-            {
-                innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
-                if (!dinfo.HasValue || !dinfo.Value.Def.execution)
-                {
-                    Messages.Message("EntityDiedOnHoldingPlatform".Translate(pawn), pawn, MessageTypeDefOf.NegativeEvent);
-                }
-            }
-        }
+
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -1017,7 +1007,19 @@ namespace YR_Hentai_Prime_AnimationBed
         private readonly List<float> values = new List<float> { 0.001f, 0.01f, 0.1f, 1f };
         private int currentIndex = 0;
         float movef = 0.001f;
+        internal bool dummyForJoyIsActive;
 
+        public void Notify_PawnDied(Pawn pawn, DamageInfo? dinfo)
+        {
+            if (pawn == HeldPawn)
+            {
+                innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
+                if (!dinfo.HasValue || !dinfo.Value.Def.execution)
+                {
+                    Messages.Message("EntityDiedOnHoldingPlatform".Translate(pawn), pawn, MessageTypeDefOf.NegativeEvent);
+                }
+            }
+        }
         public RoofCollapseResponse Notify_OnBeforeRoofCollapse()
         {
             if (!Occupied)

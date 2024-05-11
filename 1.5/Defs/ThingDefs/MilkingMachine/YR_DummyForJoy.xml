@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--오락-->
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>YR_DummyForJoy</defName>
+		<label>dummy for joy</label>
+		<description>YR_DummyForJoy</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<color>(0,0,0,0)</color>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<rotatable>true</rotatable>
+		<selectable>false</selectable>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_DummyForJoy">
+			</li>
+		</comps>
+	</ThingDef>
+	<JobDef>
+		<defName>Play_DummyForJoy</defName>
+		<driverClass>YR_Hentai_Prime_AnimationBed.JobDriver_WatchDummyForJoy</driverClass>
+		<reportString>Play_DummyForJoy</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joyKind>YR_Gaming_DummyForJoy</joyKind>
+		<!--<taleOnCompletion>Tale_UsedComputer</taleOnCompletion>-->
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	<JoyGiverDef>
+		<defName>Play_DummyForJoy</defName>
+		<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+		<baseChance>10</baseChance>
+		<thingDefs>
+			<li>YR_DummyForJoy</li>
+		</thingDefs>
+		<jobDef>Play_DummyForJoy</jobDef>
+		<desireSit>false</desireSit>
+		<joyKind>YR_Gaming_DummyForJoy</joyKind>
+		<!--<requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>-->
+	</JoyGiverDef>
+	<JoyKindDef>
+		<defName>YR_Gaming_DummyForJoy</defName>
+		<label>YR_Gaming_DummyForJoy</label>
+	</JoyKindDef>
+</Defs>

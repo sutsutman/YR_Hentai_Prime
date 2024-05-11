@@ -478,4 +478,67 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	
+		<!-- 착유 펌프 테스트용 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Milking_Pump_Debug</defName>
+		<autoDurationTicksSetting>false</autoDurationTicksSetting>
+		<durationTicks>21</durationTicks>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,1)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Pump/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>3</tick>
+				<offset>(0.0,1,1)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Pump/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>6</tick>
+				<offset>(0.0,1,1)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Pump/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>9</tick>
+				<offset>(0.0,1,1)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Pump/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,1,1)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Pump/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>18</tick>
+				<offset>(0.0,1,1)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Pump/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 </Defs>

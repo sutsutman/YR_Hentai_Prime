@@ -4,7 +4,7 @@ using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
-    public class CompAnimationSetting : ThingComp
+    public class CompAnimationSetting : CompBaseOfAnimationBed
     {
         public CompProperties_AnimationSetting Props => (CompProperties_AnimationSetting)props;
 

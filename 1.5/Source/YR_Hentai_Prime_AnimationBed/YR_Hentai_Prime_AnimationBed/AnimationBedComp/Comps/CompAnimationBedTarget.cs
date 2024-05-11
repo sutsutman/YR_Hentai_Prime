@@ -268,10 +268,25 @@ namespace YR_Hentai_Prime_AnimationBed
                 //PlayerKnowledgeDatabase.KnowledgeDemonstrated(ConceptDefOf.CapturingEntities, KnowledgeAmount.Total);
                 // LessonAutoActivator.TeachOpportunity(ConceptDefOf.ContainingEntities, OpportunityType.Important);
             }
+
+            foreach (var comp in AnimationBed.AllComps)
+            {
+                if (comp is CompBaseOfAnimationBed compBaseOfAnimationBed)
+                {
+                    compBaseOfAnimationBed.Notify_HeldOnPlatform(newOwner);
+                }
+            }
         }
 
         public void Notify_ReleasedFromPlatform()
         {
+            foreach (var comp in AnimationBed.AllComps)
+            {
+                if (comp is CompBaseOfAnimationBed compBaseOfAnimationBed)
+                {
+                    compBaseOfAnimationBed.Notify_ReleasedFromPlatform();
+                }
+            }
             //Find.StudyManager.UpdateStudiableCache(AnimationBed, AnimationBed.Map);
         }
 

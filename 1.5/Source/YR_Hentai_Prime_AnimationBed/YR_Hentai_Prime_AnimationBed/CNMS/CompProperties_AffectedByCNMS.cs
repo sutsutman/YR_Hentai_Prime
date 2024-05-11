@@ -21,15 +21,13 @@ namespace YR_Hentai_Prime_AnimationBed
     }
 
     [StaticConstructorOnStartup]
-    public class CompAffectedByCNMS : ThingComp
+    public class CompAffectedByCNMS : CompBaseOfAnimationBed
     {
         public CompProperties_AffectedByCNMS Props => (CompProperties_AffectedByCNMS)props;
 
-        public Building_AnimationBed Building_AnimationBed => (Building_AnimationBed)parent;
 
         public CompAffectedByFacilities AffectedByFacilitiesComp => parent.TryGetComp<CompAffectedByFacilities>();
 
-        public Pawn Pawn => Building_AnimationBed.HeldPawn;
 
         public int ticksToSpawn = 100;
 
@@ -118,7 +116,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
             foreach (var conditionSpawnThing in Props.conditionSpawnThings)
             {
-                if (Condition.Match(Pawn, conditionSpawnThing.condition))
+                if (Condition.Match(Pawn, Building_AnimationBed, conditionSpawnThing.condition))
                 {
                     thingToSpawn = conditionSpawnThing.thingToSpawn;
                     spawnCount = conditionSpawnThing.spawnCount;
