@@ -64,9 +64,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\yr_hentai_prime_animationbed\\harmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\harmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -88,8 +85,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Buildings\\Building_AnimationBed.cs",
               "ViewState": "AQIAAAABAAAAAAAAAAAIwDkBAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:50:59.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:50:59.058Z"
             },
             {
               "$type": "Document",
@@ -101,8 +97,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationBedComp\\Comps\\CompAnimationBed.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:19:56.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:19:56.047Z"
             },
             {
               "$type": "Document",
@@ -114,8 +109,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationBedComp\\Comps\\CompAnimationBedTarget.cs",
               "ViewState": "AQIAAKsAAAAAAAAAAAAswLEAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:50:34.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:50:34.687Z"
             },
             {
               "$type": "Document",
@@ -125,7 +119,7 @@
               "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\AnimationSetting\\BedAnimationDef.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\AnimationSetting\\BedAnimationDef.cs",
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationSetting\\BedAnimationDef.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T09:15:29.688Z",
               "EditorCaption": ""
@@ -138,7 +132,7 @@
               "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\AnimationSetting\\BedAnimationUtility.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\AnimationSetting\\BedAnimationUtility.cs",
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationSetting\\BedAnimationUtility.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAowCkAAABWAAAA",
+              "ViewState": "AQIAAOQAAAAAAAAAAAAmwDYBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T09:13:46.073Z",
               "EditorCaption": ""
@@ -153,8 +147,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationBedComp\\CompProperties\\CompProperties_AnimationBedTarget.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:50:32.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:50:32.886Z"
             },
             {
               "$type": "Document",
@@ -166,8 +159,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\CNMS\\CompProperties_AffectedByCNMS.cs",
               "ViewState": "AQIAAH4AAAAAAAAAAAAqwIwAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T17:59:47.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T17:59:47.311Z"
             },
             {
               "$type": "Document",
@@ -179,8 +171,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\CNMS\\CompProperties_Facility_CNMS.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAADwv1UAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T17:59:52.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T17:59:52.176Z"
             },
             {
               "$type": "Document",
@@ -192,8 +183,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationSetting\\BedAnimationKeyframe.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T13:50:19.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-10T13:50:19.627Z"
             },
             {
               "$type": "Document",
@@ -204,8 +194,7 @@
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj",
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-11T10:18:10.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-11T10:18:10.847Z"
             },
             {
               "$type": "Document",

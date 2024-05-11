@@ -310,13 +310,12 @@ namespace YR_Hentai_Prime_AnimationBed
                 return;
             }
 
-            var setAnimation = building_AnimationBed.setAnimation;
-            PawnAnimationSetting pawnAnimationSetting = animationSettingComp.Props.pawnAnimationSetting;
-            var pawnAnimationDef = pawnAnimationSetting.pawnAnimationDef;
 
             // 조건에 따라 pawnAnimationDef를 설정
-            if (setAnimation)
+            if (building_AnimationBed.setAnimation)
             {
+                PawnAnimationSetting pawnAnimationSetting = animationSettingComp.Props.pawnAnimationSetting;
+                var pawnAnimationDef = pawnAnimationSetting.pawnAnimationDef;
                 foreach (var conditionPawnAnimation in pawnAnimationSetting.conditonPawnAnimations)
                 {
                     if (Condition.Match(pawn, conditionPawnAnimation.condition))
@@ -340,7 +339,7 @@ namespace YR_Hentai_Prime_AnimationBed
             // Bed 애니메이션 업데이트
             foreach (var bedAnimationSettingAndTick in animationSettingComp.bedAnimationSettingAndTicks)
             {
-                if (setAnimation)
+                if (building_AnimationBed.setAnimation)
                 {
                     bedAnimationSettingAndTick.currentTick = 0;
                 }

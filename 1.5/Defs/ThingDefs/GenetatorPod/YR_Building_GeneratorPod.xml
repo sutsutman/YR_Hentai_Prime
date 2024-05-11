@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="YR_AnimationBedBase">
+		<defName>YR_Building_GeneratorPod</defName>
+		<label>generatorpod</label>
+		<description>According to a recent study, the moment a semen-like nanomachine in the liquid exhaled by hexapod's tentacles implant in a woman's egg, the egg disappears and a large amount of energy is released.\n\nThis hexapod binds women, and ovulates them with electric shocks. And generates electricity by extracting energy in the aforementioned method.\n\nIn normal cases, the conceived egg disappears immediately, but the case of Moyo grows without dying out with a very low probability. The creature thus created is parasitic on the body of its own mother, giving it the ability to deal with special energy.\n\n(It only has the generator function yet)</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Bed/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<uiOrder>100</uiOrder>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
+				<!-- 묶였을 때 부여되는 헤디프 -->
+				<addedHediffDefs>
+					<li>YR_MilkingMachine_DisableNeed</li>
+				</addedHediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
+				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+				<hediffDefs>
+					<li>YR_PowerMode1_Hediff</li>
+					<li>YR_PowerMode2_Hediff</li>
+				</hediffDefs>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="MoteBase" Name="YR_GeneratorPod_Spark_Base">
+		<defName>YR_GeneratorPod_Spark_One</defName>
+		<thingClass>MoteThrown</thingClass>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Yuran/Things/Mote/Spark</texPath>
+			<color>(1, 1, 1, 0.3)</color>
+			<drawSize>(1.0,1.5)</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.063</fadeInTime>
+			<solidTime>0.015</solidTime>
+			<fadeOutTime>0.35</fadeOutTime>
+			<growthRate>0.01</growthRate>
+			<acceleration>(0,0,0.0014)</acceleration>
+		</mote>
+	</ThingDef>
+	<ThingDef ParentName="YR_GeneratorPod_Spark_Base">
+		<defName>YR_GeneratorPod_Spark_Two</defName>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Yuran/Things/Mote/Spark2</texPath>
+		</graphicData>
+	</ThingDef>
+</Defs>

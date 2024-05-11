@@ -1,47 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-	<HediffDef>
-		<defName>YR_MilkingMachine_DisableNeed</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		<label>YR_MilkingMachineAddon_Hediff</label>
-		<description>Milked by a milking machine.(A Hediff that goes through to check the body type and to give a hediff for the hediff add-on.)</description>
-		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1</maxSeverity>
-		<initialSeverity>1</initialSeverity>
-		<isBad>false</isBad>
-		<stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-				<!-- <capMods> -->
-					<!-- <li> -->
-						<!-- <capacity>Manipulation</capacity> -->
-						<!-- <setMax>0</setMax> -->
-					<!-- </li> -->
-					<!-- <li> -->
-						<!-- <capacity>Moving</capacity> -->
-						<!-- <setMax>0</setMax> -->
-					<!-- </li> -->
-					<!-- <li> -->
-						<!-- <capacity>Consciousness</capacity> -->
-						<!-- <setMax>0.01</setMax> -->
-					<!-- </li> -->
-				<!-- </capMods> -->
-			</li>
-		</stages>
-		<disablesNeeds>
-			<li>Rest</li>
-			<li>Joy</li>
-			<li>Beauty</li>
-			<li>Comfort</li>
-			<li>Outdoors</li>
-			<li>Indoors</li>
-			<li>RoomSize</li>
-			<li>DrugDesire</li>
-		</disablesNeeds>
-	</HediffDef>
-
 	<ThingDef ParentName="YR_AnimationBedBase">
 		<defName>YR_Building_MilkingMachine</defName>
 		<label>milking machine</label>
@@ -52,12 +10,14 @@
 		</graphicData>
 		<uiOrder>100</uiOrder>
 		<comps>
-			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed"><!-- 묶였을 때 부여되는 헤디프 -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
+				<!-- 묶였을 때 부여되는 헤디프 -->
 				<addedHediffDefs>
 					<li>YR_MilkingMachine_DisableNeed</li>
 				</addedHediffDefs>
 			</li>
-			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff"><!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
+				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
 				<hediffDefs>
 					<li>YR_PowerMode1_Hediff</li>
 					<li>YR_PowerMode2_Hediff</li>
@@ -65,13 +25,21 @@
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
 				<pawnAnimationSetting>
-					<pawnAnimationDef>YR_MilkingMachine_Animation</pawnAnimationDef><!-- 기본 애니메이션 -->
+					<pawnAnimationDef>YR_MilkingMachine_Animation</pawnAnimationDef>
+					<!-- 기본 애니메이션 -->
 					<conditonPawnAnimations>
 						<!-- 바디 텍스처 바꾸고 싶으면 기존 바디 레이어를 숨긴 애니메이션 사용 해야 함 -->
 						<li>
 							<condition>
 								<races>
 									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+								</races>
+							</condition>
+							<pawnAnimationDef>YR_MilkingMachine_Animation_BodyChange</pawnAnimationDef>
+						</li>
+						<li>
+							<condition>
+								<races>
 									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
 								</races>
 							</condition>
@@ -280,6 +248,31 @@
 						<bedAnimationDef>YR_Milking_Pump</bedAnimationDef>
 					</li>
 				</bedAnimationList>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
+				<ticksToSpawn>10000</ticksToSpawn>
+				<thingToSpawn>Milk</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<conditionSpawnThings>
+					<li>
+						<condition>
+							<races>
+								<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+							</races>
+						</condition>
+						<thingToSpawn>YR_BreastMilk</thingToSpawn>
+						<spawnCount>20</spawnCount>
+					</li>
+					<li>
+						<condition>
+							<races>
+								<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+							</races>
+						</condition>
+						<thingToSpawn>YR_BreastMilk</thingToSpawn>
+						<spawnCount>40</spawnCount>
+					</li>
+				</conditionSpawnThings>
 			</li>
 		</comps>
 	</ThingDef>

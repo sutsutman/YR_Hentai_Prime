@@ -1,5 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<HediffDef>
+		<defName>YR_MilkingMachine_DisableNeed</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_MilkingMachineAddon_Hediff</label>
+		<description>Milked by a milking machine.(A Hediff that goes through to check the body type and to give a hediff for the hediff add-on.)</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<!-- <capMods> -->
+				<!-- <li> -->
+				<!-- <capacity>Manipulation</capacity> -->
+				<!-- <setMax>0</setMax> -->
+				<!-- </li> -->
+				<!-- <li> -->
+				<!-- <capacity>Moving</capacity> -->
+				<!-- <setMax>0</setMax> -->
+				<!-- </li> -->
+				<!-- <li> -->
+				<!-- <capacity>Consciousness</capacity> -->
+				<!-- <setMax>0.01</setMax> -->
+				<!-- </li> -->
+				<!-- </capMods> -->
+			</li>
+		</stages>
+		<disablesNeeds>
+			<li>Rest</li>
+			<li>Joy</li>
+			<li>Beauty</li>
+			<li>Comfort</li>
+			<li>Outdoors</li>
+			<li>Indoors</li>
+			<li>RoomSize</li>
+			<li>DrugDesire</li>
+		</disablesNeeds>
+	</HediffDef>
 	<DesignationCategoryDef>
 		<defName>YR_RJW_Furniture</defName>
 		<label>lewd furniture</label>
@@ -48,31 +88,6 @@
 				<linkableFacilities>
 					<li>YR_CNMS</li>
 				</linkableFacilities>
-			</li>
-			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
-				<ticksToSpawn>10000</ticksToSpawn>
-				<thingToSpawn>Milk</thingToSpawn>
-				<spawnCount>20</spawnCount>
-				<conditionSpawnThings>
-					<li>
-						<condition>
-							<races>
-								<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-							</races>
-						</condition>
-						<thingToSpawn>YR_BreastMilk</thingToSpawn>
-						<spawnCount>20</spawnCount>
-					</li>
-					<li>
-						<condition>
-							<races>
-								<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-							</races>
-						</condition>
-						<thingToSpawn>YR_BreastMilk</thingToSpawn>
-						<spawnCount>40</spawnCount>
-					</li>
-				</conditionSpawnThings>
 			</li>
 		</comps>
 	</ThingDef>
