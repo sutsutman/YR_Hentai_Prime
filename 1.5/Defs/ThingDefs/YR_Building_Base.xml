@@ -70,7 +70,7 @@
 							</races>
 						</condition>
 						<thingToSpawn>YR_BreastMilk</thingToSpawn>
-						<spawnCount>30</spawnCount>
+						<spawnCount>40</spawnCount>
 					</li>
 				</conditionSpawnThings>
 			</li>
