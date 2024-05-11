@@ -15,5 +15,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public bool logCurrentTexture = false;
         public bool logCurrentTick = false;
+        public bool logCurrentOffset = false;
     }
 }

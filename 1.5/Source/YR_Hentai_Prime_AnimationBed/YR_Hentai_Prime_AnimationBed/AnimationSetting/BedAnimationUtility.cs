@@ -45,7 +45,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 }
                 // 기본 위치에 설정된 오프셋을 추가
                 Vector3 pos = new Vector3(bedBasePos.x, pawn.DrawPos.y, bedBasePos.z) + closestSetting.offset;
-
+                var posY = pos.y;
                 BedAnimationDef parentBedAnimationDef = bedAnimationSettingAndTick.parentBedAnimationDef;
                 if (parentBedAnimationDef.animationSynchro && parentBedAnimationDef.pawnRenderNodeTagDef != null)
                 {
@@ -60,17 +60,30 @@ namespace YR_Hentai_Prime_AnimationBed
 
                         offset = renderNode.Worker.OffsetFor(renderNode, building_AnimationBed.HeldPawnDrawParms, out var pivot);
 
+                        if (parentBedAnimationDef.logCurrentOffset)
+                        {
+                            Log.Error($"pawnRenderNodeTagDef offset : {offset.x.ToString("F5")}, {offset.y.ToString("F5")}, {offset.z.ToString("F5")}");
+                            Log.Error($"pawnRenderNodeTagDef pivot : {pivot.x.ToString("F5")}, {pivot.y.ToString("F5")}, {pivot.z.ToString("F5")}");
+
+                        }
+
                         //renderNode.GetTransform(building_AnimationBed.HeldPawnDrawParms, out var offset, out _, out _, out _);
                         offset -= pivot;
                         pos.x += offset.x;
                         pos.z += offset.z;
                     }
                 }
-
+                pos.y = posY;
+                
                 //테스트용
                 pos += closestSetting.testOffset;
                 //closestSetting.graphic.data.drawSize.x += closestSetting.testDrawSize.x;
                 //closestSetting.graphic.data.drawSize.y += closestSetting.testDrawSize.y;
+
+                if(parentBedAnimationDef.logCurrentOffset)
+                {
+                    Log.Error($"parentBedAnimationDef defName : {pos.x.ToString("F5")}, {pos.y.ToString("F5")}, {pos.z.ToString("F5")}");
+                }
 
                 // 그래픽을 위치에 그리기
                 closestSetting.graphic.Draw(pos, Rot4.North, pawn);

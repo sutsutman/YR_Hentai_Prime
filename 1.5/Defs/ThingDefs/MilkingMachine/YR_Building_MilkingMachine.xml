@@ -14,20 +14,20 @@
 		<stages>
 			<li>
 				<becomeVisible>false</becomeVisible>
-				<capMods>
-					<li>
-						<capacity>Manipulation</capacity>
-						<setMax>0</setMax>
-					</li>
-					<li>
-						<capacity>Moving</capacity>
-						<setMax>0</setMax>
-					</li>
-					<li>
-						<capacity>Consciousness</capacity>
-						<setMax>0.01</setMax>
-					</li>
-				</capMods>
+				<!-- <capMods> -->
+					<!-- <li> -->
+						<!-- <capacity>Manipulation</capacity> -->
+						<!-- <setMax>0</setMax> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <capacity>Moving</capacity> -->
+						<!-- <setMax>0</setMax> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <capacity>Consciousness</capacity> -->
+						<!-- <setMax>0.01</setMax> -->
+					<!-- </li> -->
+				<!-- </capMods> -->
 			</li>
 		</stages>
 		<disablesNeeds>
@@ -147,10 +147,17 @@
 								<condition>
 									<races>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
 									</races>
 								</condition>
 								<bedAnimationDef>YR_Milking_Face_Yuran</bedAnimationDef>
+							</li>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+								</condition>
+								<bedAnimationDef>YR_Milking_Face_Yuran_Miko</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
