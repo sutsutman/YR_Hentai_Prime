@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>YR_NutritionPack</defName>
+		<label>nutrition pack</label>
+		<description>This is a nutritional pack made for CNMS.</description>
+		<descriptionHyperlinks>
+			<ThingDef>YR_CNMS</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Resource/YR_NutritionPack</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<!-- Can be used like meat in recipes -->
+			<Mass>0.01</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+		</statBases>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<stackLimit>500</stackLimit>
+	</ThingDef>
+	<RecipeDef ParentName="CookMealBase">
+		<defName>Make_YR_NutritionPack</defName>
+		<label>make nutrition pack</label>
+		<description>Make nutrition pack by concentrates nutrients.</description>
+		<jobString>Making nutrition pack.</jobString>
+		<workAmount>800</workAmount>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>FoodRaw</li>
+					</categories>
+				</filter>
+				<count>1.2</count>
+			</li>
+		</ingredients>
+		<products>
+			<YR_NutritionPack>40</YR_NutritionPack>
+		</products>
+		<workSkill>Cooking</workSkill>
+		<displayPriority>2000</displayPriority>
+			<recipeUsers>
+		<li>ElectricStove</li>	
+		<li>FueledStove</li>			
+	</recipeUsers>
+	
+	</RecipeDef>
+</Defs>

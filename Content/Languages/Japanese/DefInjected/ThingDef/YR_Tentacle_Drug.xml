@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 사목의 탕약 -->
+
+  <YR_Tentacle_Drug.label>淫妖樹の煎汁</YR_Tentacle_Drug.label>
+  <YR_Tentacle_Drug.description>淫妖樹の種を煮て作った煎汁です.非常に苦く,精液を思わせる粘り気のある味です.飲むと身体が活性化し,より強く,より速くなります.2本続けて飲むとより強い効果が得られますが,依存症になる可能性も高まります.</YR_Tentacle_Drug.description>
+  <YR_Tentacle_Drug.ingestible.ingestCommandString>{0}を飲む</YR_Tentacle_Drug.ingestible.ingestCommandString>
+  <YR_Tentacle_Drug.ingestible.ingestReportString>{0}を飲んでいる.</YR_Tentacle_Drug.ingestible.ingestReportString>
+
+
+  <!-- 사목의 음액 -->
+
+  <YR_Tentacle_Drug_Enhance.label>淫妖樹の淫煎汁</YR_Tentacle_Drug_Enhance.label>
+  <YR_Tentacle_Drug_Enhance.description>淫妖樹の煎汁に発情ウサギの媚薬とアンブロージアを加えて,より強力にした薬物です.煎汁にあった苦味がアンブロージアの甘さに変わり,恋人のようなねっとりとした愛が生々しく喉に流れるエクスタシーを感じさせます.淫妖樹の煎汁と同じリスクがありますが,淫妖樹の煎汁を2杯飲んだのと同じ効果があります.</YR_Tentacle_Drug_Enhance.description>
+  <YR_Tentacle_Drug_Enhance.ingestible.ingestCommandString>{0}を飲む</YR_Tentacle_Drug_Enhance.ingestible.ingestCommandString>
+  <YR_Tentacle_Drug_Enhance.ingestible.ingestReportString>{0}を飲んでいる.</YR_Tentacle_Drug_Enhance.ingestible.ingestReportString>
+
+
+</LanguageData>

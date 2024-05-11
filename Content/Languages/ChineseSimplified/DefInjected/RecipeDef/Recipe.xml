@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Tentacle_Egg_Install.label>种下淫妖樹的种子</YR_Tentacle_Egg_Install.label>
+  <YR_Tentacle_Egg_Install.description>种下淫妖樹的种子。</YR_Tentacle_Egg_Install.description>
+  <YR_Tentacle_Egg_Install.jobString>种下淫妖樹的种子中</YR_Tentacle_Egg_Install.jobString>
+
+  <YR_Tentacle_Egg_Remove.label>清除淫妖樹的种子</YR_Tentacle_Egg_Remove.label>
+  <YR_Tentacle_Egg_Remove.description>清除淫妖樹的种子。</YR_Tentacle_Egg_Remove.description>
+  <YR_Tentacle_Egg_Remove.jobString>清除淫妖樹的种子中</YR_Tentacle_Egg_Remove.jobString>
+  <YR_Tentacle_Egg_Remove.successfullyRemovedHediffMessage>{0}成功移除{1}的淫妖樹种子。</YR_Tentacle_Egg_Remove.successfullyRemovedHediffMessage>
+
+
+</LanguageData>

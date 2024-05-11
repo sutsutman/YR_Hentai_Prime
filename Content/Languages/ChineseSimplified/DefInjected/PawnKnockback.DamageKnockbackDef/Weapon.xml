@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 작살 끌어오기 -->
+
+  <YR_Tentacle_BullWhip_ChainDamageDef.label>触手伤害</YR_Tentacle_BullWhip_ChainDamageDef.label>
+  <YR_Tentacle_BullWhip_ChainDamageDef.deathMessage>{0} 已经被触手插死了。</YR_Tentacle_BullWhip_ChainDamageDef.deathMessage>
+
+
+</LanguageData>

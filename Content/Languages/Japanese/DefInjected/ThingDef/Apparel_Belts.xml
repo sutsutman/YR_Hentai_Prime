@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_AP_EggVibrator.label>ピンクローター</YR_AP_EggVibrator.label>
+  <YR_AP_EggVibrator.description>リモートで稼働可能なピンクローターです.振動のせいで動きにくくなります.遠隔で瞬間出力を上げて動けなくすることができます.</YR_AP_EggVibrator.description>
+  <YR_AP_EggVibrator.comps.CompUsable_NonCompFloatMenuOptions.useLabel>ピンクローターを挿入</YR_AP_EggVibrator.comps.CompUsable_NonCompFloatMenuOptions.useLabel>
+  <YR_AP_EggVibrator.verbs.switch_on.label>スイッチオン</YR_AP_EggVibrator.verbs.switch_on.label>
+
+
+  <!-- 애액 -->
+
+  <YR_Filth_VaginalLubricationDef.label>愛液</YR_Filth_VaginalLubricationDef.label>
+
+
+</LanguageData>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- plant seed of the evil tree -->
+  <YR_Tentacle_Egg_Install.label>사목의 씨앗 심기</YR_Tentacle_Egg_Install.label>
+  <!-- Plant the seed of the evil tree. -->
+  <YR_Tentacle_Egg_Install.description>사목의 씨앗을 심습니다.</YR_Tentacle_Egg_Install.description>
+  <!-- Planting seed of the evil tree. -->
+  <YR_Tentacle_Egg_Install.jobString>사목의 씨앗 심는 중</YR_Tentacle_Egg_Install.jobString>
+  <!-- remove seed of the evil tree -->
+  <YR_Tentacle_Egg_Remove.label>사목의 씨앗 제거</YR_Tentacle_Egg_Remove.label>
+  <!-- Remove the seed of the evil tree. -->
+  <YR_Tentacle_Egg_Remove.description>사목의 씨앗을 제거합니다.</YR_Tentacle_Egg_Remove.description>
+  <!-- Removing seed of the evil tree. -->
+  <YR_Tentacle_Egg_Remove.jobString>사목의 씨앗 제거 중</YR_Tentacle_Egg_Remove.jobString>
+  <!-- {0} has successfully removed {1}'s seed of the evil tree. -->
+  <YR_Tentacle_Egg_Remove.successfullyRemovedHediffMessage>{0}(이)가 성공적으로 {1}의 사목의 씨앗을 제거했습니다.</YR_Tentacle_Egg_Remove.successfullyRemovedHediffMessage>
+  <!-- cook evil tree set menu -->
+  <YR_Tentacle_Meal_Cook.label>사목의 정식 준비</YR_Tentacle_Meal_Cook.label>
+  <!-- Cook the seeds of the evil tree to make set meal. The key is how well remove the mucus from the outside of tentacles with salt and flour. -->
+  <YR_Tentacle_Meal_Cook.description>사목의 씨앗을 조리해 정식을 만듭니다. 소금과 밀가루로 촉수 겉의 점액을 얼마나 잘 제거하느냐가 관건이죠.</YR_Tentacle_Meal_Cook.description>
+  <!-- Cooking evil tree set menu. -->
+  <YR_Tentacle_Meal_Cook.jobString>사목의 정식 조리 중</YR_Tentacle_Meal_Cook.jobString>
+  <!-- cook evil tree set menu x4 -->
+  <YR_Tentacle_Meal_CookBulk.label>사목의 정식 4인분 준비</YR_Tentacle_Meal_CookBulk.label>
+  <!-- Cook the seeds of the evil tree to make 4 set meal. The key is how well remove the mucus from the outside of tentacles with salt and flour. -->
+  <YR_Tentacle_Meal_CookBulk.description>사목의 씨앗을 조리해 정식 4인분을 만듭니다. 소금과 밀가루로 촉수 겉의 점액을 얼마나 잘 제거하느냐가 관건이죠.</YR_Tentacle_Meal_CookBulk.description>
+  <!-- Cooking 4 evil tree set menus. -->
+  <YR_Tentacle_Meal_CookBulk.jobString>사목의 정식 대량 조리 중</YR_Tentacle_Meal_CookBulk.jobString>
+  <!-- insert egg vibrator -->
+  <YR_InsertEggVibrator.label>에그 진동기 삽입</YR_InsertEggVibrator.label>
+  <!-- Insert a egg vibrator. -->
+  <YR_InsertEggVibrator.description>에그 진동기를 삽입합니다.</YR_InsertEggVibrator.description>
+  <!-- Inserting egg vibrator. -->
+  <YR_InsertEggVibrator.jobString>에그 진동기 삽입 중</YR_InsertEggVibrator.jobString>
+  <!-- make component -->
+  <YR_Make_ComponentIndustrial.label>부품 제작</YR_Make_ComponentIndustrial.label>
+  <!-- Make a component. -->
+  <YR_Make_ComponentIndustrial.description>부품을 제작합니다.</YR_Make_ComponentIndustrial.description>
+  <!-- Making component. -->
+  <YR_Make_ComponentIndustrial.jobString>부품 제작 중</YR_Make_ComponentIndustrial.jobString>
+  <!-- make nutrition pack -->
+  <Make_YR_NutritionPack.label>영양팩 만들기</Make_YR_NutritionPack.label>
+  <!-- Make nutrition pack by concentrates nutrients. -->
+  <Make_YR_NutritionPack.description>영양을 농축해서 영양팩을 만듭니다.</Make_YR_NutritionPack.description>
+  <!-- Making nutrition pack. -->
+  <Make_YR_NutritionPack.jobString>영양팩 만드는 중</Make_YR_NutritionPack.jobString>
+  <!-- install YR_Golem_Core -->
+  <InstallYR_Golem_Core.label>TODO</InstallYR_Golem_Core.label>
+  <!-- TEST -->
+  <InstallYR_Golem_Core.description>TODO</InstallYR_Golem_Core.description>
+  <!-- Installing YR_Golem_Bound. -->
+  <InstallYR_Golem_Core.jobString>TODO</InstallYR_Golem_Core.jobString>
+</LanguageData>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Disciplined.degreeDatas.disciplined.label>調教済</YR_Disciplined.degreeDatas.disciplined.label>
+  <YR_Disciplined.degreeDatas.disciplined.description>{PAWN_nameDef}は,徹底的に調教されていて,身も心も淫らになっています.{PAWN_nameDef}はもはや何を着ていなくても裸であることの羞恥心なんてなくなっています.</YR_Disciplined.degreeDatas.disciplined.description>
+
+  <YR_Tentalcle.degreeDatas.abyss_bride.label>深淵の花嫁</YR_Tentalcle.degreeDatas.abyss_bride.label>
+  <YR_Tentalcle.degreeDatas.abyss_bride.description>他人に,あるいは自ら,普通の女としての人生を捨て,淫妖樹のオモチャになった{PAWN_nameDef}.彼女の未来には,理性を完全に壊すような興奮しか残されていないでしょう.</YR_Tentalcle.degreeDatas.abyss_bride.description>
+
+  <YR_Tentalcle_NonColonist.degreeDatas.abyss_bride.label>深淵の花嫁</YR_Tentalcle_NonColonist.degreeDatas.abyss_bride.label>
+  <YR_Tentalcle_NonColonist.degreeDatas.abyss_bride.description>他人に,あるいは自ら,普通の女としての人生を捨て,淫妖樹のオモチャになった{PAWN_nameDef}.彼女の未来には,理性を完全に壊すような興奮しか残されていないでしょう.</YR_Tentalcle_NonColonist.degreeDatas.abyss_bride.description>
+
+
+</LanguageData>

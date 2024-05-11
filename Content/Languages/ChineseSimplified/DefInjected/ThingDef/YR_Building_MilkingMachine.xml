@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Building_MilkingMachine.label>悠兰挤奶机</YR_Building_MilkingMachine.label>
+  <YR_Building_MilkingMachine.description>一个挤奶机。 身体上有很多东西需要附着，所以不能躺下独自使用，必须得到他人的協助。退出挤奶机时也是如此。而且，躺在挤奶机里的时候，还得有人喂食。\n\n不仅殖民者，囚犯和奴隶也能躺在这台挤奶机里。\n\n这不仅会迫使怀孕或分娩后挤奶，甚至还可以在还不能挤奶的情况下强制產奶。\n\n根据身体状况，收集足够牛奶所需的速度会有所不同。 例如，当分娩后马上有乳汁流出，或服用特殊药物时，乳汁聚集得更快。</YR_Building_MilkingMachine.description>
+  <YR_Building_MilkingMachine.comps.4.useLabel>拘束</YR_Building_MilkingMachine.comps.4.useLabel>
+
+
+</LanguageData>

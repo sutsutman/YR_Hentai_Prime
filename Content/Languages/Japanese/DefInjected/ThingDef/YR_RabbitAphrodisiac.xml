@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_RabbitAphrodisiac.label>発情ウサギの媚薬</YR_RabbitAphrodisiac.label>
+  <YR_RabbitAphrodisiac.description>非常に強力な媚薬で,一滴飲むだけでヤることしか考えられない淫乱な娼婦になるという魔性の媚薬です.ユランを躾けるために作られたものですが,他の種族にも同じような効果があります.\n\nまた,ユランは搾乳時にミルクが多く出るようになります.</YR_RabbitAphrodisiac.description>
+  <YR_RabbitAphrodisiac.ingestible.ingestCommandString>{0}を飲む</YR_RabbitAphrodisiac.ingestible.ingestCommandString>
+  <YR_RabbitAphrodisiac.ingestible.ingestReportString>{0}を飲んでいる.</YR_RabbitAphrodisiac.ingestible.ingestReportString>
+
+
+</LanguageData>

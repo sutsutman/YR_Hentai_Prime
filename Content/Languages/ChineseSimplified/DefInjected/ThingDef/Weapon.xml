@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 촉수 검 -->
+
+  <YR_Tentacle_Sword.label>淫妖樹之剑</YR_Tentacle_Sword.label>
+  <YR_Tentacle_Sword.description>淫妖樹的根已经变成了保护宿主的剑。纯粹追求锐度，实际上是主人身体的一部分，所以它可以自由摆动。</YR_Tentacle_Sword.description>
+  <YR_Tentacle_Sword.comps.1.transformData.0.label>变成淫妖樹的牛鞭</YR_Tentacle_Sword.comps.1.transformData.0.label>
+  <YR_Tentacle_Sword.comps.1.transformData.0.description>淫妖樹的根已经变成了鞭子的形式来保护宿主。它专门用于通过施加痛苦而不杀死敌人来压制敌人，它实际上是宿主身体的一部分，因此可以自由摆动。</YR_Tentacle_Sword.comps.1.transformData.0.description>
+  <YR_Tentacle_Sword.tools.0.label>手柄</YR_Tentacle_Sword.tools.0.label>
+  <YR_Tentacle_Sword.tools.1.label>刀尖</YR_Tentacle_Sword.tools.1.label>
+  <YR_Tentacle_Sword.tools.2.label>刀刃</YR_Tentacle_Sword.tools.2.label>
+
+
+  <!-- 촉수 채찍 -->
+
+  <YR_Tentacle_BullWhip.label>淫妖樹的牛鞭</YR_Tentacle_BullWhip.label>
+  <YR_Tentacle_BullWhip.description>淫妖樹的根已经变成了鞭子的形式来保护宿主。它专门用于通过施加痛苦而不杀死敌人来压制敌人，它实际上是宿主身体的一部分，因此可以自由摆动。</YR_Tentacle_BullWhip.description>
+  <YR_Tentacle_BullWhip.comps.1.transformData.0.label>变成淫妖樹之剑</YR_Tentacle_BullWhip.comps.1.transformData.0.label>
+  <YR_Tentacle_BullWhip.comps.1.transformData.0.description>淫妖樹的根已经变成了保护宿主的剑。纯粹追求锐度，实际上是主人身体的一部分，所以它可以自由摆动。</YR_Tentacle_BullWhip.comps.1.transformData.0.description>
+  <YR_Tentacle_BullWhip.tools.0.label>手柄</YR_Tentacle_BullWhip.tools.0.label>
+  <YR_Tentacle_BullWhip.tools.1.label>鞭身</YR_Tentacle_BullWhip.tools.1.label>
+
+
+  <!-- 탄환 -->
+
+  <YR_Tentacle_BullWhip_Chain.label>淫妖樹的牛鞭</YR_Tentacle_BullWhip_Chain.label>
+  
+  
+</LanguageData>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_CNMS.label>YR_CNMS</YR_CNMS.label>
+  <YR_CNMS.description>CNMS 是 Central Nutrition Management System（中央营养管理系统）的缩写，它可以自动为那些与周围配套家具相连的生物提供营养。\n\n从挤奶机收集到一定范围内的产品自动累积在本装置中。如果收集到超过一定数量，它自动排放，所有内容物都可以手动排放。\n\n当一个特定的CNMS被指定为主系统时，在其他CNMS中聚集的所有产品都将累积在主系统中。此外，当CNMS安装在监狱中时，该设备收集的产品会自动移动并累积到监狱外的CNMS上。</YR_CNMS.description>
+
+
+</LanguageData>

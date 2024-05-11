@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_AP_Tentacle.description>果てしない陵辱の末に発芽した淫妖樹の種が,この宿主に根付いています.触手のような形をしており,女性を求める淫妖樹の本質に沿い,常に宿主を陵辱し,執拗に責め立てます.宿主の意思に関係なく強い快楽を与え,その快楽は時に宿主を痙攣させ動けなくするほど度を越してしまうことがあります.</YR_AP_Tentacle.description>
+  <YR_AP_Tentacle.label>淫妖樹の根</YR_AP_Tentacle.label>
+  <YR_AP_Tentacle.comps.Comp_EggVibrator.description>{0}は宿主の膣内を心ゆくまで刺激します.</YR_AP_Tentacle.comps.Comp_EggVibrator.description>
+  <YR_AP_Tentacle.comps.CompBooster.description>淫妖樹の剣を構えて,素早く対象に接近し斬りつけます.この淫閃斬はすべての行動をキャンセルし,即座に使用することができます.\n\n{1}を装備している時のみ使用可能です.使用後{0}秒経過すると再び使用可能になります.また,宿主が直接何かを殺害したとき,再使用待機時間が初期化されます.</YR_AP_Tentacle.comps.CompBooster.description>
+  <YR_AP_Tentacle.verbs.wiggling.label>蠢く</YR_AP_Tentacle.verbs.wiggling.label>
+  <YR_AP_Tentacle.verbs.evil_rush.label>淫閃斬</YR_AP_Tentacle.verbs.evil_rush.label>
+
+
+  <!-- 이것저것용 외투 -->
+
+  <YR_AP_Tentacle_Rooted.description>淫妖樹の根が身体に根付いているため,他の衣服が着られなくなってしまいます.</YR_AP_Tentacle_Rooted.description>
+  <YR_AP_Tentacle_Rooted.label>淫妖樹の根(根付)</YR_AP_Tentacle_Rooted.label>
+
+
+  <!-- 모자 -->
+
+  <YR_AP_Tentacle_Headgear.description>果てしない陵辱の末に発芽した淫妖樹の種が,この宿主に根付いています.それはまるで恋人の顔に触れるかのように,宿主の頭に巻き付いています.宿主に危険が迫ると,淫妖樹の意志は催淫ガスを放出するマスクのような形状のもので宿主の口と鼻を覆います.</YR_AP_Tentacle_Headgear.description>
+  <YR_AP_Tentacle_Headgear.label>淫妖樹の根(頭部)</YR_AP_Tentacle_Headgear.label>
+  <YR_AP_Tentacle_Headgear.comps.CompFormChange.transformData.0.label>口元を覆う</YR_AP_Tentacle_Headgear.comps.CompFormChange.transformData.0.label>
+  <YR_AP_Tentacle_Headgear.comps.CompFormChange.transformData.0.description>淫妖樹の根が形を変えマスクのようになります.</YR_AP_Tentacle_Headgear.comps.CompFormChange.transformData.0.description>
+
+  <YR_AP_Tentacle_Headgear_Mask.description>淫妖樹の根が宿主の鼻と口周辺を完全に覆うように形を変えたマスクです.\n\nこのマスクは周辺の毒性物質だけでなく普通の空気も完全に遮断し,マスク部分から催淫ガスを吹き出します.宿主は窒息しないように,この催淫ガスを吸い続けることになります.\n\nこの催淫ガスは宿主を極度の催淫状態に陥らせます.文字通りに淫らに狂っていることにより,どんな苦痛も感じません.催淫ガスにより身体を丈夫にし,より長く戦うことができます.\n\nしかし,宿主は決して慣れることのない快楽に溺れてしまい,陰部からは常に愛液を滴らせるようになり,絶え間なく絶頂を続けることになるので,普通の空気を吸えたとしてもまともに戦える状態にはならないでしょう\n\n淫妖樹の根はその身に蓄えていた催淫ガスを使い切ってしまうとマスクを取り外します.そして,催淫ガスにより存えさせていた宿主の肉体は繰り返される絶頂による疲労のため限界が来てしまい倒れ込むことになります.\n\nそしてその後も肺の中に残っている催淫ガスや後遺症により,しばらくはベッドの中で自慰で絶頂するだけの無駄な日々を過ごすことになるでしょう.</YR_AP_Tentacle_Headgear_Mask.description>
+  <YR_AP_Tentacle_Headgear_Mask.label>淫妖樹の根(マスク)</YR_AP_Tentacle_Headgear_Mask.label>
+  <YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.transformData.0.label>口元を覆う</YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.transformData.0.label>
+  <YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.transformData.0.description>淫妖樹の根が形を変えマスクのようになります.\n\nこのマスクは周辺の毒性物質だけでなく普通の空気も完全に遮断し,マスク部分から催淫ガスを吹き出します.宿主は窒息しないように,この催淫ガスを吸い続けることになります.\n\nこの催淫ガスは宿主を極度の催淫状態に陥らせます.文字通りに淫らに狂っていることにより,どんな苦痛も感じません.催淫ガスにより身体を丈夫にし,より長く戦うことができます.\n\nしかし,宿主は決して慣れることのない快楽に溺れてしまい,陰部からは常に愛液を滴らせるようになり,絶え間なく絶頂を続けることになるので,普通の空気を吸えたとしてもまともに戦える状態にはならないでしょう\n\n淫妖樹の根はその身に蓄えていた催淫ガスを使い切ってしまうと自動的にマスクを取り外します.そして,催淫ガスにより存えさせていた宿主の肉体は繰り返される絶頂による疲労のため限界が来てしまい倒れ込むことになります.\n\nそしてその後も肺の中に残っている催淫ガスや後遺症により,しばらくはベッドの中で自慰で絶頂するだけの無駄な日々を過ごすことになるでしょう.</YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.transformData.0.description>
+  <YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.revertData.label>元に戻る</YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.revertData.label>
+  <YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.revertData.description>口元を覆っていた根が元に戻ります.\n\n催淫ガスにより存えさせていた宿主の肉体は繰り返される絶頂による疲労のため限界が来てしまい倒れ込むことになります.\n\nそしてその後も肺の中に残っている催淫ガスや後遺症により,しばらくはベッドの中で自慰で絶頂するだけの無駄な日々を過ごすことになるでしょう.</YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.revertData.description>
+  <YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.transformData.0.label>マスクを外す</YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.transformData.0.label>
+  <YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.transformData.0.description>口元を覆っているマスクを外します.\n\n淫妖樹の根はその身に蓄えていた催淫ガスを使い切ってしまうと自動的にマスクを取り外します.そして,催淫ガスにより存えさせていた宿主の肉体は繰り返される絶頂による疲労のため限界が来てしまい倒れ込むことになります.\n\nそしてその後も肺の中に残っている催淫ガスや後遺症により,しばらくはベッドの中で自慰で絶頂するだけの無駄な日々を過ごすことになるでしょう.</YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.transformData.0.description>
+  <YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.revertData.disabledReason>{0}秒後に自動的に{1}に戻ります.</YR_AP_Tentacle_Headgear_Mask.comps.CompFormChange.revertData.disabledReason>
+
+
+</LanguageData>

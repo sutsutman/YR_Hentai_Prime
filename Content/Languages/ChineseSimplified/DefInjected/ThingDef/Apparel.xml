@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_AP_Tentacle.label>淫妖樹的根</YR_AP_Tentacle.label>
+  <YR_AP_Tentacle.description>在无尽的骚扰之后发芽的淫妖樹的种子以宿主為根。它以触手的形式，不断侵扰和强奸宿主，遵循觊觎女性的淫妖樹本性。无论主人的意愿如何，它都会产生强烈的兴奋，这种兴奋有时会过度，使主人抽搐并无法动弹。</YR_AP_Tentacle.description>
+  <YR_AP_Tentacle.comps.1.description>命令 ｛0｝ 尽情搅动宿主的阴道。</YR_AP_Tentacle.comps.1.description>
+  <YR_AP_Tentacle.comps.3.description>手持淫妖樹的剑，对目标进行快速冲刺。这个冲刺可以取消所有行动并立即使用。 \n\n只能在装备 {0} 时使用。每 {0} 秒可用一次。如果宿主直接杀死某个对象，则会初始化冷却时间。</YR_AP_Tentacle.comps.3.description>
+  <YR_AP_Tentacle.verbs.0.label>搅动中</YR_AP_Tentacle.verbs.0.label>
+  <YR_AP_Tentacle.verbs.1.label>邪恶衝刺</YR_AP_Tentacle.verbs.1.label>
+
+
+  <!-- 이것저것용 외투 -->
+
+  <YR_AP_Tentacle_Rooted.label>淫妖樹的根(扎根)</YR_AP_Tentacle_Rooted.label>
+  <YR_AP_Tentacle_Rooted.description>不能穿其他服装，因为身体被淫妖樹扎根了。</YR_AP_Tentacle_Rooted.description>
+
+
+  <!-- 모자 -->
+    
+  <YR_AP_Tentacle_Headgear.label>淫妖樹的根(頭部)</YR_AP_Tentacle_Headgear.label>
+  <YR_AP_Tentacle_Headgear.description>经过无尽的侵扰后发芽的淫妖树种子以宿主為根。它缠绕在宿主的头上，就像在抚摸爱人的脸。如果宿主处于危险之中，树的意志會给宿主戴上一个面具，释放出战斗的催情气体。</YR_AP_Tentacle_Headgear.description>
+  <YR_AP_Tentacle_Headgear.comps.1.transformData.0.label>戴上口罩</YR_AP_Tentacle_Headgear.comps.1.transformData.0.label>
+  <YR_AP_Tentacle_Headgear.comps.1.transformData.0.description>这是用淫妖樹的根完全貼近宿主鼻子和嘴巴制成的面具。\n\n口罩完全阻挡了周围的普通空气和有毒物质，只释放出口罩内的战斗性催情气体。宿主必须继续吸入这种淫秽的气体以避免窒息。\n\n这是战斗用的催情气体，使吸入者处于极度兴奋的状态，简直快要发疯了並感觉不到疼痛。可以战斗更长时间，因为气体增强了身体。\n\n但是，由于吸入者继续品尝永远不可能习惯的快感，阴道无限地喷出润滑液，高潮不断重复。\n\n如果储存的战斗用催情气体用完，淫妖樹的根会摘下面具。吸气者忍受缺少气体的身驅最终会因高潮带来的疲劳而崩溃。由于留在肺部的气体和后遗症，将不得不躺在床上一段时间，并从手淫中感受到性高潮。</YR_AP_Tentacle_Headgear.comps.1.transformData.0.description>
+
+  <YR_AP_Tentacle_Headgear_Mask.label>淫妖樹之根(口罩)</YR_AP_Tentacle_Headgear_Mask.label>
+  <YR_AP_Tentacle_Headgear_Mask.description>这是用淫妖樹的根完全貼近宿主鼻子和嘴巴制成的面具。\n\n口罩完全阻挡了周围的普通空气和有毒物质，只释放出口罩内的战斗性催情气体。宿主必须继续吸入这种淫秽的气体以避免窒息。\n\n这是战斗用的催情气体，使吸入者处于极度兴奋的状态，简直快要发疯了並感觉不到疼痛。可以战斗更长时间，因为气体增强了身体。\n\n但是，由于吸入者继续品尝永远不可能习惯的快感，阴道无限地喷出润滑液，高潮不断重复。\n\n如果储存的战斗用催情气体用完，淫妖樹的根会摘下面具。吸气者忍受缺少气体的身驅最终会因高潮带来的疲劳而崩溃。由于留在肺部的气体和后遗症，将不得不躺在床上一段时间，并从手淫中感受到性高潮。</YR_AP_Tentacle_Headgear_Mask.description>
+  <YR_AP_Tentacle_Headgear_Mask.comps.1.transformData.0.label>戴上口罩</YR_AP_Tentacle_Headgear_Mask.comps.1.transformData.0.label>
+  <YR_AP_Tentacle_Headgear_Mask.comps.1.transformData.0.description>这是用淫妖樹的根完全貼近宿主鼻子和嘴巴制成的面具。\n\n口罩完全阻挡了周围的普通空气和有毒物质，只释放出口罩内的战斗性催情气体。宿主必须继续吸入这种淫秽的气体以避免窒息。\n\n这是战斗用的催情气体，使吸入者处于极度兴奋的状态，简直快要发疯了並感觉不到疼痛。可以战斗更长时间，因为气体增强了身体。\n\n但是，由于吸入者继续品尝永远不可能习惯的快感，阴道无限地喷出润滑液，高潮不断重复。\n\n如果储存的战斗用催情气体用完，淫妖樹的根会摘下面具。吸气者忍受缺少气体的身驅最终会因高潮带来的疲劳而崩溃。由于留在肺部的气体和后遗症，将不得不躺在床上一段时间，并从手淫中感受到性高潮</YR_AP_Tentacle_Headgear_Mask.comps.1.transformData.0.description>
+  <YR_AP_Tentacle_Headgear_Mask.comps.3.revertData.label>恢复淫妖樹的根(頭)(</YR_AP_Tentacle_Headgear_Mask.comps.3.revertData.label>
+  <YR_AP_Tentacle_Headgear_Mask.comps.3.revertData.description>恢复為淫妖树的根(頭)</YR_AP_Tentacle_Headgear_Mask.comps.3.revertData.description>
+  <YR_AP_Tentacle_Headgear_Mask.comps.3.transformData.0.label>未戴口罩</YR_AP_Tentacle_Headgear_Mask.comps.3.transformData.0.label>
+  <YR_AP_Tentacle_Headgear_Mask.comps.3.transformData.0.description>解开口罩。不久後，宿主将受到后遗症的影响。</YR_AP_Tentacle_Headgear_Mask.comps.3.transformData.0.description>
+  
+  
+</LanguageData>

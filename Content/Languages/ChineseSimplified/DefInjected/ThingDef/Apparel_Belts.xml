@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_AP_EggVibrator.label>悠兰跳蛋振动器</YR_AP_EggVibrator.label>
+  <YR_AP_EggVibrator.description>可以遙控操作的跳蛋振动器。振动时使其难以移动。遙控瞬间增加震动输出，可干扰佩戴者的移动。</YR_AP_EggVibrator.description>
+  <YR_AP_EggVibrator.comps.1.useLabel>插入跳蛋振动器</YR_AP_EggVibrator.comps.1.useLabel>
+  <YR_AP_EggVibrator.verbs.0.label>启动</YR_AP_EggVibrator.verbs.0.label>
+
+  <YR_Filth_VaginalLubricationDef.label>阴道润滑液</YR_Filth_VaginalLubricationDef.label>
+
+
+</LanguageData>

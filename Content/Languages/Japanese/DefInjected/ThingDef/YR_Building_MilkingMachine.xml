@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Building_MilkingMachine.label>搾乳機</YR_Building_MilkingMachine.label>
+  <YR_Building_MilkingMachine.description>搾乳する装置です.体に取り付けるものが多いので,一人で寝そべったままでは使うことはできず,人の手を借りる必要があります.これは搾乳機から出るときも同じです.また,搾乳機で横になっているときも,食事など誰かの手を借りる必要があります.\n\n入植者だけでなく,囚人や奴隷もこの搾乳機に縛り付けることができます.\n\n妊娠中や産後だけでなく,まだ搾乳ができない場合でも強制的に搾乳することができます.\n\nムースやジャイアントのような体の大きい種族には規格が合わないため決して使用しないでください.</YR_Building_MilkingMachine.description>
+  <YR_Building_MilkingMachine.comps.CompUsableBondageBed.useLabel>拘束する</YR_Building_MilkingMachine.comps.CompUsableBondageBed.useLabel>
+  <YR_Building_MilkingMachine.comps.10.hediffGizmos.0.label>パワーモード</YR_Building_MilkingMachine.comps.10.hediffGizmos.0.label>
+  <YR_Building_MilkingMachine.comps.10.hediffGizmos.1.label>パワーモード</YR_Building_MilkingMachine.comps.10.hediffGizmos.1.label>
+
+
+</LanguageData>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- YR_MilkingMachineAddon_Hediff -->
+  <YR_MilkingMachineAddon_Hediff.label>YR_MilkingMachineAddon_Hediff</YR_MilkingMachineAddon_Hediff.label>
+  <!-- Milked by a milking machine.(A Hediff that goes through to check the body type and to give a hediff for the hediff add-on.) -->
+  <YR_MilkingMachineAddon_Hediff.description>착유기에 의해 착유 당하고 있습니다. (바디타입을 체크해서 다른 헤디프 애드온용 헤디프를 부과하기 위한 헤디프)</YR_MilkingMachineAddon_Hediff.description>
+  <!-- YR_Building_MilkingMachine_Hediff -->
+  <YR_Building_MilkingMachine_Hediff.label>YR_Building_MilkingMachine_Hediff</YR_Building_MilkingMachine_Hediff.label>
+  <!-- YR_Building_MilkingMachine_Hediff -->
+  <YR_Building_MilkingMachine_Hediff.description>YR_Building_MilkingMachine_Hediff</YR_Building_MilkingMachine_Hediff.description>
+  <!-- YR_Building_Tentacle_Hediff -->
+  <YR_Building_Tentacle_Hediff.label>YR_Building_Tentacle_Hediff</YR_Building_Tentacle_Hediff.label>
+  <!-- YR_Building_Tentacle_Hediff -->
+  <YR_Building_Tentacle_Hediff.description>YR_Building_Tentacle_Hediff</YR_Building_Tentacle_Hediff.description>
+  <!-- YR_HideHead_Hediff -->
+  <YR_HideHead_Hediff.label>YR_HideHead_Hediff</YR_HideHead_Hediff.label>
+  <!-- YR_HideHead_Hediff -->
+  <YR_HideHead_Hediff.description>YR_HideHead_Hediff</YR_HideHead_Hediff.description>
+  <!-- YR_HideHat_Hediff -->
+  <YR_HideHat_Hediff.label>YR_HideHat_Hediff</YR_HideHat_Hediff.label>
+  <!-- YR_HideHat_Hediff -->
+  <YR_HideHat_Hediff.description>YR_HideHat_Hediff</YR_HideHat_Hediff.description>
+  <!-- YR_HideApparel_Hediff -->
+  <YR_HideApparel_Hediff.label>YR_HideApparel_Hediff</YR_HideApparel_Hediff.label>
+  <!-- YR_HideApparel_Hediff -->
+  <YR_HideApparel_Hediff.description>YR_HideApparel_Hediff</YR_HideApparel_Hediff.description>
+  <!-- YR_HideHair_Hediff -->
+  <YR_HideHair_Hediff.label>YR_HideHair_Hediff</YR_HideHair_Hediff.label>
+  <!-- YR_HideHair_Hediff -->
+  <YR_HideHair_Hediff.description>YR_HideHair_Hediff</YR_HideHair_Hediff.description>
+  <!-- YR_SexNeedIncrease_Hediff -->
+  <YR_SexNeedIncrease_Hediff.label>YR_SexNeedIncrease_Hediff</YR_SexNeedIncrease_Hediff.label>
+  <!-- YR_SexNeedIncrease_Hediff -->
+  <YR_SexNeedIncrease_Hediff.description>YR_SexNeedIncrease_Hediff</YR_SexNeedIncrease_Hediff.description>
+  <!-- disciplined -->
+  <YR_Disciplined_Hediff.label>조교 되고 있음</YR_Disciplined_Hediff.label>
+  <!-- It's being trained by discipline dress. Even if take off it, the progress will be maintained, but it will decrease slightly over time. -->
+  <YR_Disciplined_Hediff.description>조교복에 의해 조교 되고 있습니다. 옷을 벗더라도 진행도는 유지되지만, 시간이 지남에 따라 감소할 것입니다.</YR_Disciplined_Hediff.description>
+  <!-- egg vibrator active -->
+  <YR_EggVibrator_Hediff.label>에그 진동기 작동</YR_EggVibrator_Hediff.label>
+  <!-- The vibrator is activated, slowing down movement and getting a little excited. -->
+  <YR_EggVibrator_Hediff.description>진동기가 작동되었습니다, 움직임을 느리게 만들고 약간의 쾌락을 느끼게 합니다.</YR_EggVibrator_Hediff.description>
+  <!-- YR_VaginalLubricationFireExtinguisher_Hediff -->
+  <YR_VaginalLubricationFireExtinguisher_Hediff.label>YR_VaginalLubricationFireExtinguisher_Hediff</YR_VaginalLubricationFireExtinguisher_Hediff.label>
+  <!-- YR_VaginalLubricationFireExtinguisher_Hediff -->
+  <YR_VaginalLubricationFireExtinguisher_Hediff.description>YR_VaginalLubricationFireExtinguisher_Hediff</YR_VaginalLubricationFireExtinguisher_Hediff.description>
+  <!-- YR_BoteApparel_Hediff -->
+  <YR_BoteApparel_Hediff.label>YR_BoteApparel_Hediff</YR_BoteApparel_Hediff.label>
+  <!-- Because wear special apparel, the face addon changed. -->
+  <YR_BoteApparel_Hediff.description>특별한 옷을 입어 얼굴 애드온이 변경되었습니다.</YR_BoteApparel_Hediff.description>
+  <!-- YR_TentacleApparel_Hediff -->
+  <YR_TentacleApparel_Hediff.label>YR_TentacleApparel_Hediff</YR_TentacleApparel_Hediff.label>
+  <!-- Because wear special apparel, the face addon changed. -->
+  <YR_TentacleApparel_Hediff.description>특별한 옷을 입어 얼굴 애드온이 변경되었습니다.</YR_TentacleApparel_Hediff.description>
+  <!-- milking-able -->
+  <YR_Milking_Hediff.label>착유할 수 있음</YR_Milking_Hediff.label>
+  <!-- Can milking sweet breast milk from Yuran for a certain period of time during pregnancy and after birth. -->
+  <YR_Milking_Hediff.description>임신 중, 출산 후 일정 기간동안 유란에게서 달콤한 모유를 짜낼 수 있습니다.</YR_Milking_Hediff.description>
+  <!-- YR_BB_Hediff -->
+  <YR_BB_Hediff.label>YR_BB_Hediff</YR_BB_Hediff.label>
+  <!-- Breasts got bigger because gave birth. -->
+  <YR_BB_Hediff.description>출산해서 가슴이 커졌습니다.</YR_BB_Hediff.description>
+  <!-- YR_Bote_Hediff -->
+  <YR_Bote_Hediff.label>YR_Bote_Hediff</YR_Bote_Hediff.label>
+  <!-- Bote. -->
+  <YR_Bote_Hediff.description>Bote.</YR_Bote_Hediff.description>
+  <!-- YR_TEST_Hediff -->
+  <YR_TEST_Hediff.label>YR_TEST_Hediff</YR_TEST_Hediff.label>
+  <!-- YR_TEST_Hediff -->
+  <YR_TEST_Hediff.description>YR_TEST_Hediff</YR_TEST_Hediff.description>
+  <!-- AAA -->
+  <YR_TEST_Hediff.comps.0.testConditions.0.label>AAA</YR_TEST_Hediff.comps.0.testConditions.0.label>
+  <!-- BBB -->
+  <YR_TEST_Hediff.comps.0.testConditions.1.label>BBB</YR_TEST_Hediff.comps.0.testConditions.1.label>
+  <!-- CCC -->
+  <YR_TEST_Hediff.comps.0.testConditions.2.label>CCC</YR_TEST_Hediff.comps.0.testConditions.2.label>
+  <!-- YR_Front_Hediff -->
+  <YR_Front_Hediff.label>YR_Front_Hediff</YR_Front_Hediff.label>
+  <!-- YR_Front_Hediff -->
+  <YR_Front_Hediff.description>YR_Front_Hediff</YR_Front_Hediff.description>
+  <!-- YR_Building_LoveRoom_Hediff -->
+  <YR_Building_LoveRoom_Hediff.label>YR_Building_LoveRoom_Hediff</YR_Building_LoveRoom_Hediff.label>
+  <!-- YR_Building_LoveRoom_Hediff -->
+  <YR_Building_LoveRoom_Hediff.description>YR_Building_LoveRoom_Hediff</YR_Building_LoveRoom_Hediff.description>
+  <!-- YR_Penis_Normal_Hediff -->
+  <YR_Penis_Normal_Hediff.label>YR_Penis_Normal_Hediff</YR_Penis_Normal_Hediff.label>
+  <!-- YR_Penis_Normal_Hediff -->
+  <YR_Penis_Normal_Hediff.description>YR_Penis_Normal_Hediff</YR_Penis_Normal_Hediff.description>
+  <!-- YR_Penis_Insect_Hediff -->
+  <YR_Penis_Insect_Hediff.label>YR_Penis_Insect_Hediff</YR_Penis_Insect_Hediff.label>
+  <!-- YR_Penis_Insect_Hediff -->
+  <YR_Penis_Insect_Hediff.description>YR_Penis_Insect_Hediff</YR_Penis_Insect_Hediff.description>
+  <!-- YR_Penis_Horse_Hediff -->
+  <YR_Penis_Horse_Hediff.label>YR_Penis_Horse_Hediff</YR_Penis_Horse_Hediff.label>
+  <!-- YR_Penis_Horse_Hediff -->
+  <YR_Penis_Horse_Hediff.description>YR_Penis_Horse_Hediff</YR_Penis_Horse_Hediff.description>
+  <!-- YR_PeroPero_Normal_Hediff -->
+  <YR_PeroPero_Normal_Hediff.label>YR_PeroPero_Normal_Hediff</YR_PeroPero_Normal_Hediff.label>
+  <!-- YR_PeroPero_Normal_Hediff -->
+  <YR_PeroPero_Normal_Hediff.description>YR_PeroPero_Normal_Hediff</YR_PeroPero_Normal_Hediff.description>
+  <!-- YR_Ejaculation_Hediff -->
+  <YR_Ejaculation_Hediff.label>YR_Ejaculation_Hediff</YR_Ejaculation_Hediff.label>
+  <!-- YR_Ejaculation_Hediff -->
+  <YR_Ejaculation_Hediff.description>YR_Ejaculation_Hediff</YR_Ejaculation_Hediff.description>
+  <!-- YR_Gulp_Hediff -->
+  <YR_Gulp_Hediff.label>YR_Gulp_Hediff</YR_Gulp_Hediff.label>
+  <!-- YR_Gulp_Hediff -->
+  <YR_Gulp_Hediff.description>YR_Gulp_Hediff</YR_Gulp_Hediff.description>
+  <!-- YR_South_Hediff -->
+  <YR_South_Hediff.label>YR_South_Hediff</YR_South_Hediff.label>
+  <!-- YR_South_Hediff -->
+  <YR_South_Hediff.description>YR_South_Hediff</YR_South_Hediff.description>
+  <!-- YR_East_Hediff -->
+  <YR_East_Hediff.label>YR_East_Hediff</YR_East_Hediff.label>
+  <!-- YR_East_Hediff -->
+  <YR_East_Hediff.description>YR_East_Hediff</YR_East_Hediff.description>
+  <!-- YR_North_Hediff -->
+  <YR_North_Hediff.label>YR_North_Hediff</YR_North_Hediff.label>
+  <!-- YR_North_Hediff -->
+  <YR_North_Hediff.description>YR_North_Hediff</YR_North_Hediff.description>
+  <!-- YR_West_Hediff -->
+  <YR_West_Hediff.label>YR_West_Hediff</YR_West_Hediff.label>
+  <!-- YR_West_Hediff -->
+  <YR_West_Hediff.description>YR_West_Hediff</YR_West_Hediff.description>
+  <!-- the seed of the evil tree -->
+  <YR_Tentacle_Egg_Hediff.label>사목의 씨앗</YR_Tentacle_Egg_Hediff.label>
+  <!-- The seed of the evil tree was planted in the body. It will take root in body over time. \n\nThis seed can be removed before rooting. -->
+  <YR_Tentacle_Egg_Hediff.description>사목의 씨앗이 몸에 심어졌습니다. 시간이 지나면 몸에 뿌리를 내릴 것입니다. \n\n뿌리를 내리기 전에는 이 씨앗을 제거할 수 있습니다.</YR_Tentacle_Egg_Hediff.description>
+  <!-- tentacle wiggling -->
+  <YR_TentacleWiggle_Hediff.label>촉수가 꿈틀거림</YR_TentacleWiggle_Hediff.label>
+  <!-- Tentacles are wiggling, slowing down movement and getting a big excited. -->
+  <YR_TentacleWiggle_Hediff.description>촉수가 꿈틀거리고 있습니다, 움직임을 느리게 만들고 매우 큰 쾌락을 느끼게 합니다.</YR_TentacleWiggle_Hediff.description>
+  <!-- bearing the seed of the evil tree -->
+  <YR_Pregnant_Tentacle.label>사목의 씨앗을 품음</YR_Pregnant_Tentacle.label>
+  <!-- Ovums produced from {0} eroded ovaries were fertilized by semen in the evil tree. The fertilized ovum will grow into a tentacle shape and then be wrapped in mucus and given birth in the shape of a seed. -->
+  <YR_Pregnant_Tentacle.description>{0}의 침식된 난소에서 생성된 난자가 사목의 정액에 의해 수정되었습니다. 이 수정란은 촉수의 모양으로 성장 후 점액질에 감싸여 씨앗의 모양이 되어 출산 될 것입니다.</YR_Pregnant_Tentacle.description>
+  <!-- early-stage -->
+  <YR_Pregnant_Tentacle.stages.0.label>초기</YR_Pregnant_Tentacle.stages.0.label>
+  <!-- middle-stage -->
+  <YR_Pregnant_Tentacle.stages.1.label>중기</YR_Pregnant_Tentacle.stages.1.label>
+  <!-- late-stage -->
+  <YR_Pregnant_Tentacle.stages.2.label>만삭</YR_Pregnant_Tentacle.stages.2.label>
+  <!-- birth the seed of the evil tree -->
+  <YR_Pregnant_Tentacle_Birth.label>사목의 씨앗을 출산함</YR_Pregnant_Tentacle_Birth.label>
+  <!-- Giving birth to a seed of the evil tree. The roots of the evil tree are poking the vagina with tentacles to help the seed come out well. -->
+  <YR_Pregnant_Tentacle_Birth.description>사목의 씨앗을 출산 중입니다. 씨가 잘 나올 수 있도록 사목의 뿌리가 음부를 촉수로 쑤시고 있습니다.</YR_Pregnant_Tentacle_Birth.description>
+  <!-- the root of the evil tree -->
+  <YR_Tentacle_Hediff.label>사목의 뿌리</YR_Tentacle_Hediff.label>
+  <!-- The seed of the evil tree that germinated after endless harass is the root of the host. It is in the form of tentacles and constantly harass and rape the host following the nature of the evil tree that covets women. It gives a strong excited regardless of the host's will, and this excited sometimes goes too far that convulse and immobilize the host.\n\nAlso, as the roots assimilate with the body, the host also has regenerative ability. -->
+  <YR_Tentacle_Hediff.description>끝없는 능욕 끝에 발아한 사목의 씨앗이 숙주에 몸에 내린 뿌리입니다. 촉수의 형태를 하고 있으며 여자를 탐하는 사목의 본성을 따라 숙주를 끊임없이 희롱하고 능욕합니다. 그것은 숙주의 의지와 상관없이 강렬한 쾌락을 주며, 이 쾌감은 때때로 너무 지나쳐 숙주를 경련시키고 움직일 수 없게 합니다.\n\n또한 뿌리가 몸과 동화함에 따라 숙주에게도 재생능력이 생겼습니다.</YR_Tentacle_Hediff.description>
+  <!-- milking-able(abyss lewd milk) -->
+  <YR_Milking_Tentacle_Hediff.label>착유할 수 있음(심연의 음유)</YR_Milking_Tentacle_Hediff.label>
+  <!-- The root of the evil tree erodes the mammary glands of the host, producing a malformed breast milk that is terribly sweet enough to rot the brain. In addition, as the semen of the root of the evil tree is mixed with breast milk and fermented, it is hardened like cheese in the mammary glands, which is also scratched when breast milk is milking and put in a bottle together. -->
+  <YR_Milking_Tentacle_Hediff.description>사목의 뿌리가 숙주의 유선을 침식하여 뇌가 썩을 정도로 끔찍하게 달콤한 변질된 모유가 생성됩니다. 또한 사목의 뿌리의 정액이 모유와 뒤섞이고 발효되면서 유선 안에서 마치 치즈처럼 굳어진 것도 모유를 짜낼 때 긁어내서 같이 병 안에 담아냅니다.</YR_Milking_Tentacle_Hediff.description>
+  <!-- combat aphrodisiac gas -->
+  <YR_Tentacle_Combat_Aphrodisiac_Gas.label>전투용 최음 가스</YR_Tentacle_Combat_Aphrodisiac_Gas.label>
+  <!-- This is the combat aphrodisiac gas, that puts the inhaler in a state of extreme excitement. Literally going crazy, feeling no pain. Can fight longer because gas strengthens body.\n\nHowever, because the inhaler continues to taste pleasure that is never possible to get used to, the vagina infinitely spews of vaginal lubrication, and the orgasm is constantly repeated.\n\nIf stop inhaling, the inhaler's body, that  endured with gas, will eventually collapse due to fatigue caused by the orgasm. Since then, due to the gas and aftereffects remaining in the lungs, will have to lie in bed for a while and feel orgasm from masturbation. -->
+  <YR_Tentacle_Combat_Aphrodisiac_Gas.description>흡입자를 극도의 흥분 상태에 빠뜨리는 전투용 최음 가스입니다. 말 그대로 미쳐 날뛰며, 그 어떤 고통도 느끼지 못합니다. 가스가 신체를 튼튼하게 해주기 때문에 더 오래 싸울 수 있습니다.\n\n하지만 흡입자는 결코 익숙해지는 게 불가능한 쾌락을 계속해서 맛보기 때문에 음부에선 애액을 무한히 뿜어대고, 절정을 끊임없이 반복합니다.\n\n흡입을 중단하면 가스로 버티던 흡입자의 육체는 절정으로 인한 피로 때문에 한계가 오면서 결국 쓰러지고 말 것입니다. 그 이후로도 폐 안에 남아있는 가스와 후유증으로 인해 한동안은 침대에 누워서 자위로 절정하면서 허송세월하여야 할 것입니다.</YR_Tentacle_Combat_Aphrodisiac_Gas.description>
+  <!-- combat aphrodisiac gas aftereffect -->
+  <YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect.label>전투용 최음 가스 부작용</YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect.label>
+  <!-- This is a side effect of the combat aphrodisiac gas. Can't get up because of the tremendous fatigue and orgasm. -->
+  <YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect.description>전투용 최음 가스의 부작용입니다. 엄청난 피로와 절정으로 인해 도저히 일어날 수 없습니다.</YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect.description>
+  <!-- YR TentacleRush Hediff -->
+  <YR_TentacleRush_Hediff.label>YR TentacleRush Hediff</YR_TentacleRush_Hediff.label>
+  <!-- 부스터용 헤디프 -->
+  <YR_TentacleRush_Hediff.description>부스터용 헤디프</YR_TentacleRush_Hediff.description>
+  <!-- YR_CheckKillEnemy_Hediff -->
+  <YR_CheckKillEnemy_Hediff.label>YR_CheckKillEnemy_Hediff</YR_CheckKillEnemy_Hediff.label>
+  <!-- YR_CheckKillEnemy_Hediff -->
+  <YR_CheckKillEnemy_Hediff.description>YR_CheckKillEnemy_Hediff</YR_CheckKillEnemy_Hediff.description>
+  <!-- . -->
+  <YR_Tentacle_Girl_Haul_Spawn.description>.</YR_Tentacle_Girl_Haul_Spawn.description>
+  <!-- fall -->
+  <YR_Tentacle_Girl_Haul_Spawn.label>넘어짐</YR_Tentacle_Girl_Haul_Spawn.label>
+  <!-- . -->
+  <YR_Tentacle_Girl_Spawn_End.description>.</YR_Tentacle_Girl_Spawn_End.description>
+  <!-- contract termination -->
+  <YR_Tentacle_Girl_Spawn_End.label>계약 종료</YR_Tentacle_Girl_Spawn_End.label>
+  <!-- mofy abyss lewd milk -->
+  <Mofy_Tentacle_MilkHediff.label>모피 심연의 음유</Mofy_Tentacle_MilkHediff.label>
+  <!-- Mofy's abyss lewd milk has the effect of speeding up the healing of diseases. but... -->
+  <Mofy_Tentacle_MilkHediff.description>모피의 심연의 음유는 병의 치유를 앞당기는 효과가 있지만...</Mofy_Tentacle_MilkHediff.description>
+  <!-- sweety abyss lewd milk -->
+  <Sweety_Tentacle_MilkHediff.label>스위티 심연의 음유</Sweety_Tentacle_MilkHediff.label>
+  <!-- sweety's abyss lewd milk has greatly increased their libido. -->
+  <Sweety_Tentacle_MilkHediff.description>스위티의 심연의 음유는 성욕을 크게 증가시킵니다.</Sweety_Tentacle_MilkHediff.description>
+  <!-- high on evil tree decoction -->
+  <YR_Tentacle_DrugHigh.label>사목의 탕약에 취함</YR_Tentacle_DrugHigh.label>
+  <!-- a evil tree decoction high -->
+  <YR_Tentacle_DrugHigh.labelNoun>사목의 탕약에 취함</YR_Tentacle_DrugHigh.labelNoun>
+  <!-- evil tree decoction in the bloodstream. It supercharges combat-related abilities. -->
+  <YR_Tentacle_DrugHigh.description>혈액에 사목의 탕약이 존재합니다. 전투 관련 능력을 강화합니다.</YR_Tentacle_DrugHigh.description>
+  <!-- YR_Tentacle_Drug_Feel -->
+  <YR_Tentacle_Drug_Feel.label>YR_Tentacle_Drug_Feel</YR_Tentacle_Drug_Feel.label>
+  <!-- YR_Tentacle_Drug_Feel -->
+  <YR_Tentacle_Drug_Feel.description>YR_Tentacle_Drug_Feel</YR_Tentacle_Drug_Feel.description>
+  <!-- YR_Tentacle_Drug_Enhance_Feel -->
+  <YR_Tentacle_Drug_Enhance_Feel.label>YR_Tentacle_Drug_Enhance_Feel</YR_Tentacle_Drug_Enhance_Feel.label>
+  <!-- YR_Tentacle_Drug_Enhance_Feel -->
+  <YR_Tentacle_Drug_Enhance_Feel.description>YR_Tentacle_Drug_Enhance_Feel</YR_Tentacle_Drug_Enhance_Feel.description>
+  <!-- evil tree decoction addiction -->
+  <YR_Tentacle_Drug_Addiction.label>사목의 탕약 중독</YR_Tentacle_Drug_Addiction.label>
+  <!-- A chemical addiction to evil tree decoction. Long-term presence of evil tree decoction has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\n\nWithout regular doses of evil tree decoction, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction. -->
+  <YR_Tentacle_Drug_Addiction.description>사목의 탕약에 중독됐습니다. 사목의 탕약을 장기간 투여하면 신경세포 단위의 적응 현상이 발생하여 사목의 탕약 없이는 뇌가 제대로 기능할 수 없습니다.\n\n정기적인 사목의 탕약 투여를 하지 않으면 금단 현상이 나타납니다. 하지만 계속 투여하지 않으면 뇌가 정상적인 상태로 회복하므로 중독에서 벗어날 수 있습니다.</YR_Tentacle_Drug_Addiction.description>
+  <!-- withdrawal -->
+  <YR_Tentacle_Drug_Addiction.stages.1.label>금단 현상</YR_Tentacle_Drug_Addiction.stages.1.label>
+  <!-- evil tree decoction tolerance -->
+  <YR_Tentacle_DrugTolerance.label>사목의 탕약 내성</YR_Tentacle_DrugTolerance.label>
+  <!-- A built-up tolerance to evil tree decoction. The more severe this tolerance is, the more evil tree decoction it takes to get the same effect. -->
+  <YR_Tentacle_DrugTolerance.description>사목의 탕약에 대한 내성입니다. 이 수치가 심할수록 동일한 효과를 얻는데 더 많은 사목의 탕약이 필요합니다.</YR_Tentacle_DrugTolerance.description>
+  <!-- YR_LoveRoomHoney -->
+  <YR_LoveRoomHoneyHigh.label>사랑의 방의 꿀에 취함</YR_LoveRoomHoneyHigh.label>
+  <!-- Heave! Cough! Choke! I can't breathe...! Wheeze....! I feel like I'm about to come...! -->
+  <YR_LoveRoomHoneyHigh.description>히긋! 케헉! 콜록! 숨이 막혀...! 흐극....! 가버릴 거 같아...!</YR_LoveRoomHoneyHigh.description>
+  <!-- YR_RabbitAphrodisiac -->
+  <YR_RabbitAphrodisiacHigh.label>유란 토끼 발정제</YR_RabbitAphrodisiacHigh.label>
+  <!-- Became a lewd female who could only think of a cock. -->
+  <YR_RabbitAphrodisiacHigh.description>자지밖에 생각할 수 없는 음탕한 암컷이 되었습니다.</YR_RabbitAphrodisiacHigh.description>
+  <!-- YR_Golem_Bound -->
+  <YR_Golem_Bound.label>TODO</YR_Golem_Bound.label>
+  <!-- TEST -->
+  <YR_Golem_Bound.description>TODO</YR_Golem_Bound.description>
+  <!-- YR_Golem_Limb -->
+  <YR_Golem_Limb.label>TODO</YR_Golem_Limb.label>
+  <!-- TEST -->
+  <YR_Golem_Limb.description>TODO</YR_Golem_Limb.description>
+  <!-- receiving violent love -->
+  <YR_BellyPunch_Hediff.label>폭력적인 사랑을 받음</YR_BellyPunch_Hediff.label>
+  <!-- Love, accompanied by violence, has been hammered into the abdomen. Although it hurts at first, if keep taking it, will eventually be able to enjoy the pain and feel love within it. -->
+  <YR_BellyPunch_Hediff.description>복부에 폭력이 동반된 사랑이 때려 박혔습니다. 비록 처음에는 아프지만, 계속해서 맞다 보면 결국 고통을 즐김과 동시에 고통 속에서 사랑을 느낄 수 있을 것입니다.</YR_BellyPunch_Hediff.description>
+  <!-- steeped in warm love -->
+  <YR_Pee_Hediff.label>따뜻한 사랑에 절여짐</YR_Pee_Hediff.label>
+  <!-- Steeped in warm urine filled with love, and in vaginal lubricatio or semen that's so hot it could cause burns. Although they may initially feel discomfort, with continuous steeping, they will cling to this warmth. -->
+  <YR_Pee_Hediff.description>사랑이 듬뿍 담긴 따뜻한 오줌과 화상을 입을 거 같이 뜨거운 정액 혹은 애액에 잔뜩 절여졌습니다. 비록 처음에는 불쾌해하겠지만, 계속해서 절여지다 보면 이 따뜻함에 매달리게 될 것입니다.</YR_Pee_Hediff.description>
+  <!-- YR_PanPanPlay_Hediff -->
+  <YR_PanPanPlay_Hediff.label>YR_PanPanPlay_Hediff</YR_PanPanPlay_Hediff.label>
+  <!-- YR_PanPanPlay_Hediff -->
+  <YR_PanPanPlay_Hediff.description>YR_PanPanPlay_Hediff</YR_PanPanPlay_Hediff.description>
+  <!-- YR_PanPanPlay_Rating_Hediff -->
+  <YR_PanPanPlay_Rating_Hediff.label>YR_PanPanPlay_Rating_Hediff</YR_PanPanPlay_Rating_Hediff.label>
+  <!-- YR_PanPanPlay_Rating_Hediff -->
+  <YR_PanPanPlay_Rating_Hediff.description>YR_PanPanPlay_Rating_Hediff</YR_PanPanPlay_Rating_Hediff.description>
+  <!-- YR_PanPanPlay_PlayedWhat_Hediff -->
+  <YR_PanPanPlay_PlayedWhat_Hediff.label>YR_PanPanPlay_PlayedWhat_Hediff</YR_PanPanPlay_PlayedWhat_Hediff.label>
+  <!-- YR_PanPanPlay_PlayedWhat_Hediff -->
+  <YR_PanPanPlay_PlayedWhat_Hediff.description>YR_PanPanPlay_PlayedWhat_Hediff</YR_PanPanPlay_PlayedWhat_Hediff.description>
+  <!-- YR_PanPanPlay_Anty_Sound -->
+  <YR_PanPanPlay_Anty_Sound.label>YR_PanPanPlay_Anty_Sound</YR_PanPanPlay_Anty_Sound.label>
+  <!-- YR_PanPanPlay_Anty_Sound -->
+  <YR_PanPanPlay_Anty_Sound.description>YR_PanPanPlay_Anty_Sound</YR_PanPanPlay_Anty_Sound.description>
+</LanguageData>

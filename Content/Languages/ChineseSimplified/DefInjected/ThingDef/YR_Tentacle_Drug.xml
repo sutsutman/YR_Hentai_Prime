@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 사목의 탕약 -->
+
+  <YR_Tentacle_Drug.label>淫妖树煎剂</YR_Tentacle_Drug.label>
+  <YR_Tentacle_Drug.description>这是一种由淫妖树的种子熬制而成的水煎剂。 它非常苦，有一种粘稠的味道，让人想起精液。 饮用后，身体会变得更活跃，更强壮，更快速。 连续喝两杯可以有更强的效果，但上瘾的可能性也会增加。</YR_Tentacle_Drug.description>
+  <YR_Tentacle_Drug.ingestible.ingestCommandString>服用 {0}</YR_Tentacle_Drug.ingestible.ingestCommandString>
+  <YR_Tentacle_Drug.ingestible.ingestReportString>服用中 {0} 。</YR_Tentacle_Drug.ingestible.ingestReportString>
+
+
+  <!-- 사목의 음액 -->
+
+  <YR_Tentacle_Drug_Enhance.label>淫妖树煎剂加強版</YR_Tentacle_Drug_Enhance.label>
+  <YR_Tentacle_Drug_Enhance.description>这是一种更强大的药物，将发情兔春药和仙馐果亚添加到淫妖树汤中。现有的苦味被仙馐果的甜味所取代，让恋人粘稠的爱情生生流到喉咙的狂喜。它与树煎剂有相同的风险，其作用与服用两杯树煎剂相同。</YR_Tentacle_Drug_Enhance.description>
+  <YR_Tentacle_Drug_Enhance.ingestible.ingestCommandString>服用 {0}</YR_Tentacle_Drug_Enhance.ingestible.ingestCommandString>
+  <YR_Tentacle_Drug_Enhance.ingestible.ingestReportString>服用中 {0} 。</YR_Tentacle_Drug_Enhance.ingestible.ingestReportString>
+
+
+</LanguageData>

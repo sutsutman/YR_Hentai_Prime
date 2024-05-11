@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<loadFolders>
+	<v1.4>
+		<li>1.4</li>
+		<li>Content</li>
+		<li IfModActive="RooAndGloomy.YuranRaceMod">YuranRaceMod</li>
+		<li IfModActive="SutSutMan.MinchoTheMintChocoSlimeHARver">MinchoRaceMod</li>
+		<li IfModActive="SutSutMan.MinchoTheMintChocoSlimeHARver_Steam">MinchoRaceMod</li>
+		<li IfModActive="Roo.AntyRaceMod">AntyRaceMod</li>
+		<li IfModActive="rim.job.world">RJW</li>
+		<li IfModActive="sumghai.medpod">MedPod</li>
+		<li IfModActive="avilmask.CommonSense">CommonSense</li>
+		<li IfModActive="VAMV.Furmaru">Furmaru</li>
+		<li IfModActive="Nals.FacialAnimation">FacialAnimation</li>
+	</v1.4>
+	<v1.5>
+		<li>1.5</li>
+		<li>Content</li>
+		<li IfModActive="RooAndGloomy.YuranRaceMod">YuranRaceMod</li>
+		<li IfModActive="SutSutMan.MinchoTheMintChocoSlimeHARver">MinchoRaceMod</li>
+		<li IfModActive="SutSutMan.MinchoTheMintChocoSlimeHARver_Steam">MinchoRaceMod</li>
+		<li IfModActive="Roo.AntyRaceMod">AntyRaceMod</li>
+		<li IfModActive="rim.job.world">RJW</li>
+		<li IfModActive="sumghai.medpod">MedPod</li>
+		<li IfModActive="avilmask.CommonSense">CommonSense</li>
+		<li IfModActive="VAMV.Furmaru">Furmaru</li>
+		<li IfModActive="Nals.FacialAnimation">FacialAnimation</li>
+	</v1.5>
+</loadFolders>

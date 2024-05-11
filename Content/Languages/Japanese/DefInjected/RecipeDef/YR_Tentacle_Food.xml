@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Tentacle_Meal_Cook.label>淫妖樹定食を作る</YR_Tentacle_Meal_Cook.label>
+  <YR_Tentacle_Meal_Cook.description>淫妖樹定食を作ります.塩と小麦粉でいかにうまく触手の外側の粘液を除去するかがポイントです.</YR_Tentacle_Meal_Cook.description>
+  <YR_Tentacle_Meal_Cook.jobString>淫妖樹定食を調理中.</YR_Tentacle_Meal_Cook.jobString>
+
+  <YR_Tentacle_Meal_CookBulk.label>淫妖樹定食を4食分作る</YR_Tentacle_Meal_CookBulk.label>
+  <YR_Tentacle_Meal_CookBulk.description>淫妖樹定食を作ります.塩と小麦粉でいかにうまく触手の外側の粘液を除去するかがポイントです.</YR_Tentacle_Meal_CookBulk.description>
+  <YR_Tentacle_Meal_CookBulk.jobString>淫妖樹定食を4食分調理中.</YR_Tentacle_Meal_CookBulk.jobString>
+
+
+</LanguageData>

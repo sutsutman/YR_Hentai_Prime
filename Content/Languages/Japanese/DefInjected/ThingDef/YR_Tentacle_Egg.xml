@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Tentacle_Egg.label>淫妖樹の種</YR_Tentacle_Egg.label>
+  <YR_Tentacle_Egg.description>未成熟な淫妖樹の触手をたくさん含んだ種子です.種子は女性の子宮に植え付けることができます.この種子が子宮から発芽すると,触手が体を侵食し始めます：このプロセスを完了させると,取り返しのつかないことになります.\n\n種子の中の触手はとても柔らかいので,調理しやすく美味しいです.また,危険なほど強力なドラッグを作る原料としても使われています.</YR_Tentacle_Egg.description>
+  <YR_Tentacle_Egg.comps.CompUsable.useLabel>{0_label}を使う</YR_Tentacle_Egg.comps.CompUsable.useLabel>
+
+
+</LanguageData>

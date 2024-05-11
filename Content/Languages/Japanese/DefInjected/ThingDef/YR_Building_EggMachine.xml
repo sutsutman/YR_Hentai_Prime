@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Building_EggMachine.label>肛卵培養機</YR_Building_EggMachine.label>
+  <YR_Building_EggMachine.description>産卵マニアのための特別仕様の装置です.これはアナル挿入用に調整されています.\n\n機械の卵はパニエルの体内システムや器官に干渉し,卵とその中にいる幼虫を常に培養するように変化させます.腸内は類似体が好んで孵化する場所です.\n\n(まだ産卵機能しかありません)</YR_Building_EggMachine.description>
+  <YR_Building_EggMachine.comps.CompUsableBondageBed.useLabel>拘束する</YR_Building_EggMachine.comps.CompUsableBondageBed.useLabel>
+
+
+</LanguageData>

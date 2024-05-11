@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- bound -->
+  <YR_Bound>묶임</YR_Bound>
+  <!-- release -->
+  <YR_Release>풀어주기</YR_Release>
+  <!-- release {0}(bondage bed) -->
+  <YR_Release_BondageBed>{0}(을)를 풀어주기</YR_Release_BondageBed>
+  <!-- can't use -->
+  <YR_CantUse>사용할 수 없습니다.</YR_CantUse>
+  <!-- if health status : "{0}" is present, the work restriction can be ignored -->
+  <YR_Forbid>건강 상태 : "{0}"가 있으면 금지 제한을 무시할 수 있습니다</YR_Forbid>
+  <!-- can't find prisoners -->
+  <YR_NoPrisoner>수감자를 찾을 수 없습니다.</YR_NoPrisoner>
+  <!-- power off -->
+  <YR_NoPower>전원 꺼짐</YR_NoPower>
+  <!-- use bondage bed on {1} -->
+  <YR_BondageBed>{1}(을)를 묶기</YR_BondageBed>
+  <!-- {0}has been Reserved by someone else -->
+  <YR_Reserved>{0}(이)가 다른 사람에 의해 예약됨</YR_Reserved>
+  <!-- there is no target -->
+  <YR_NoTarget>목표가 없습니다</YR_NoTarget>
+  <!-- {0} cannot be bound because of health status: "{1}" -->
+  <YR_HasForbiddenHediffDef>{0}(은)는 건강 상태 : "{1}" 때문에 속박할 수 없음</YR_HasForbiddenHediffDef>
+  <!-- once bound, can't release it -->
+  <YR_NeverRelease>한번 묶이면 절대 풀어줄 수 없음</YR_NeverRelease>
+  <!-- Animation -->
+  <YR_AnimationCommandLabel>애니메이션</YR_AnimationCommandLabel>
+  <!-- Command setting : {0}\n\nMod setting : {1}\n\nYou need to activate both to activate the animation. -->
+  <YR_AnimationCommandDesc>커멘드 세팅 : {0}\n\n모드 세팅 : {1}\n\n둘 다 활성화 시켜야 애니메이션이 나옵니다.</YR_AnimationCommandDesc>
+  <!-- Reverses the direction of the body -->
+  <YR_ReverseBodyTextureCommandLabel>몸 방향 뒤집기</YR_ReverseBodyTextureCommandLabel>
+  <!-- Reverses the direction of the body. -->
+  <YR_ReverseBodyTextureCommandDesc>몸의 방향을 뒤집습니다.</YR_ReverseBodyTextureCommandDesc>
+  <!-- Reset -->
+  <YR_ResetLabel>리셋</YR_ResetLabel>
+  <!-- Sometimes it's most effective to just turn it off and on. -->
+  <YR_ResetDesc>때론 그냥 껐다 켜는 게 가장 효과적이죠.</YR_ResetDesc>
+  <!-- Display hat -->
+  <YR_ShowHatCommandLabel>모자 표시하기</YR_ShowHatCommandLabel>
+  <!-- Display hat. Some people don't like it because it's hard to tell who it is when take off hat, and it's less attractive.\n\nCommand setting : {0}\n\nMod setting : {1}\n\nYou need to activate both to display hat. -->
+  <YR_ShowHatCommandDesc>모자를 표시합니다. 어떤 사람들은 모자를 벗기면 이게 누군지 구별이 안 되고, 매력이 줄어든다면서 싫어하더라고요.\n\n커멘드 세팅 : {0}\n\n모드 세팅 : {1}\n\n둘 다 활성화 시켜야 모자가 표시됩니다.</YR_ShowHatCommandDesc>
+  <!-- Display apparel -->
+  <YR_ShowApparelCommandLabel>옷 표시하기</YR_ShowApparelCommandLabel>
+  <!-- Display apparel. Do you know how it feels when buy a porn like "OL stuck in the wall" and watch it, but take off all clothes in the middle?\n\nCommand setting : {0}\n\nMod setting : {1}\n\nYou need to activate both to display apparel. -->
+  <YR_ShowApparelCommandDesc>옷을 표시합니다. "벽에 끼여버린 OL" 같은 작품을 구입해서 보는데, 중간에 옷을 죄다 벗겨버릴 때의 그 기분을 아십니까?\n\n커멘드 세팅 : {0}\n\n모드 세팅 : {1}\n\n둘 다 활성화 시켜야 옷이 표시됩니다.</YR_ShowApparelCommandDesc>
+  <!-- Discharge contents -->
+  <YR_SpawnMilkCommandLabel>내용물 배출</YR_SpawnMilkCommandLabel>
+  <!-- Discharge the contents of this device. -->
+  <YR_SpawnMilkCommandDesc>이 장치 안의 내용물들을 배출합니다.</YR_SpawnMilkCommandDesc>
+  <!-- Outputs test log -->
+  <YR_TestLog>테스트 로그를 출력합니다</YR_TestLog>
+  <!-- Stop animation -->
+  <YR_StopAnimation>애니메이션을 중단합니다</YR_StopAnimation>
+  <!-- Display hat -->
+  <YR_ShowHat>모자를 표시합니다</YR_ShowHat>
+  <!-- Display apparel -->
+  <YR_ShowApparel>옷을 표시합니다</YR_ShowApparel>
+  <!-- Make moan -->
+  <YR_SexSound>신음을 냅니다</YR_SexSound>
+  <!-- If the animation is playing too fast or the tick drops excessively with the game speed up, adjust it using the slider below. (Default tick + Additional tick) * Calculated as a multiple. -->
+  <YR_Speed_Warning>게임 스피드를 높인 상태에서 애니메이션 사용 시 너무 빠르게 나오거나 틱이 과도하게 떨어지는 경우, 아래의 슬라이더를 통해 조절해 주세요.(기본 틱 + 추가 틱) * 배수로 계산됩니다.</YR_Speed_Warning>
+  <!-- Additional tick : {0} -->
+  <YR_Speed_Ticks>추가 틱 : {0}</YR_Speed_Ticks>
+  <!-- 1x speed : {0} -->
+  <YR_Speed_Normal>1배속 배수 : {0}</YR_Speed_Normal>
+  <!-- 2x speed : {0} -->
+  <YR_Speed_Fast>2배속 배수 : {0}</YR_Speed_Fast>
+  <!-- 3x speed : {0} -->
+  <YR_Speed_Superfast>3배속 배수 : {0}</YR_Speed_Superfast>
+  <!-- 4x speed : {0} -->
+  <YR_Speed_Ultrafast>4배속 배수 : {0}</YR_Speed_Ultrafast>
+  <!-- Start animation when ZoomRootSize is less than {0} -->
+  <YR_zoom>ZoomRootSize가 {0} 이하 일때 애니메이션 시작</YR_zoom>
+  <!-- Inserted {1} into vagina of {0}. -->
+  <CompUseEffect_EggVibrator_String>{0}의 보지에 {1}를 삽입했습니다.</CompUseEffect_EggVibrator_String>
+  <!-- Can use after {0} second. -->
+  <YR_EggVibrator_Cooldown>{0}초 뒤에 사용 가능.</YR_EggVibrator_Cooldown>
+  <!-- \n\n{0} Race Limitation : \n\n{8}Bodytype Limitation : {9} -->
+  <YR_Bote_Setting_CantReason>\n\n{0} 종족 제한 사항 : \n\n{8}체형 제한 : \n\n{9}</YR_Bote_Setting_CantReason>
+  <!-- \n\n{0} Race Limitation : \n\nUnable to wear due to one of the following bodytypes : \n\n{9} -->
+  <YR_Bote_Setting_CantReason_OnlyWearListApparel>\n\n{0} 종족 제한 사항 : \n\n이하의 체형 중 하나에 해당하여 입을 수 없음 : \n\n{9}</YR_Bote_Setting_CantReason_OnlyWearListApparel>
+  <!-- The bodytype of {1} no longer fits {2}. -->
+  <YR_Bote_Setting_ForceDropMessage>{1}의 체형이 더는 {2}에 맞지 않습니다.</YR_Bote_Setting_ForceDropMessage>
+  <!-- ...you tried eat me...? -->
+  <YR_LockWeaponConsumeThingTipRegion>...날 먹으려 했단 말인가...?</YR_LockWeaponConsumeThingTipRegion>
+  <!-- your body is mine... -->
+  <YR_LockWeaponTipRegion>너의 몸은 내 것이다...</YR_LockWeaponTipRegion>
+  <!-- {7} encroaches on {6}'s body... -->
+  <YR_LockApparelMessage>{2}(이)가 {1}의 신체를 잠식합니다...</YR_LockApparelMessage>
+  <!-- Until the evil tree is fully rooted: {0} -->
+  <YR_FinishEggInsert>사목이 완전히 뿌리 내리기까지 : {0}</YR_FinishEggInsert>
+  <!-- Need to offer {1} more corpses to summon evil tree -->
+  <YR_NeedCorpse_Tentacle_Altar>사목 소환을 위해 시체 {1}구를 더 바쳐야 함</YR_NeedCorpse_Tentacle_Altar>
+  <!-- Need to offer {1} more corpses to grow evil tree -->
+  <YR_NeedCorpse_Tentacle_Tree>사목을 성장시키기 위해 시체 {1}구를 더 바쳐야 함</YR_NeedCorpse_Tentacle_Tree>
+  <!-- Need to offer {2} more corpses to complete the growth of the evil tree -->
+  <YR_MoreNeedCorpse_Tentacle_Tree>사목의 성장을 완성하기 위해 시체 {2}구를 더 바쳐야 함</YR_MoreNeedCorpse_Tentacle_Tree>
+  <!-- No need to offer any more corpses -->
+  <YR_MaxCorpse>더 이상 시체를 바칠 필요 없음</YR_MaxCorpse>
+  <!-- When the pawn is bounded, displays the "bound" character. -->
+  <YR_BoundGUI>폰이 묶였을 때, "속박" 문자를 띄웁니다.</YR_BoundGUI>
+  <!-- Designate as main system -->
+  <YR_MainCNMSCommandLabel>메인 시스템으로 지정</YR_MainCNMSCommandLabel>
+  <!-- Designates this CNMS as the main system. Items stored in all other CNMS are gathered in this CNMS. -->
+  <YR_MainCNMSCommandDesc>이 CNMS를 메인 시스템으로 지정합니다. 다른 모든 CNMS에 저장된 아이템들이 이 CNMS로 모입니다.</YR_MainCNMSCommandDesc>
+  <!-- Dev : offering 1 corpse -->
+  <YR_AddCorpseCommandLabel>Dev : 시체 바치기</YR_AddCorpseCommandLabel>
+  <!-- Offering 1 corpse. -->
+  <YR_AddCorpseCommandDesc>시체를 1구 바칩니다.</YR_AddCorpseCommandDesc>
+  <!-- Dev : offering max corpses -->
+  <YR_MaxCorpseCommandLabel>Dev : 시체를 최대로 바치기</YR_MaxCorpseCommandLabel>
+  <!-- Offering max corpses. -->
+  <YR_MaxCorpseCommandDesc>시체를 최대한으로 바칩니다.</YR_MaxCorpseCommandDesc>
+  <!-- Yuran RJW Addon Mod -->
+  <YR_RJW_Mod>유란 RJW 애드온 모드</YR_RJW_Mod>
+  <!-- Can use after {0} second. -->
+  <YR_Cooldown>{0}초 뒤에 사용 가능.</YR_Cooldown>
+  <!-- adjust body direction -->
+  <FaceCellCommandLabel>신체 방향 조정</FaceCellCommandLabel>
+  <!-- When using the booster, can decide whether to view the intended direction or maintain the original direction. -->
+  <FaceCellCommandDesc>부스터 사용 시 목적 방향을 볼지, 원래 보던 방향을 유지할지를 정할 수 있습니다.</FaceCellCommandDesc>
+  <!-- Building is on {1} of {0} : {2} -->
+  <YR_ForbiddenOutsideAllowedAreaLower>건물이 {0}의 {1}에 있음 : {2}</YR_ForbiddenOutsideAllowedAreaLower>
+  <!-- {0} has been released for an unintended reason. This may be because another pawn touched the bound pawn, or because the bound building is on {1} of {0}. Please check the {2} settings of {0} -->
+  <YR_OutSideAllowedArea>{0}가 의도치 않은 이유로 풀려났습니다. 이는 다른 폰이 속박된 폰을 건드렸거나, 속박한 건물이 {0}의 {1}에 있기 때문일 수도 있습니다. {0}의 {2} 설정을 확인해주세요.</YR_OutSideAllowedArea>
+  <!-- Reset all setting -->
+  <YR_ResetAllSetting>모든 설정 리셋</YR_ResetAllSetting>
+  <!-- {0} is not adult. (current Lifestage : {1}) -->
+  <YR_IsNotAdult>{0}(은)는 어른이 아닙니다. (현재 성장 단계 : {1})</YR_IsNotAdult>
+  <!-- climax wave -->
+  <YR_TentacleAbility_Label>절정의 파동</YR_TentacleAbility_Label>
+  <!-- The evil tree consumes offered corpses, sprinkles special mechanites, and at the same time emits special psychic wave. This wave climaxes everything that moves, regardless of men and women of all ages, human, alien, or machine, and blocks movement.\n\nAlthough it climaxes without any distinction, our forces are able to move again faster than those who are at their climaxes without any advance notice because they can prepare for this wave in advance.\n\nConsumption of {0} offered corpses as fuel, climaxes for {1} seconds for allies and {2} seconds for enemies. -->
+  <YR_TentacleAbility_Desc>사목이 바쳐진 시체를 소비하여 특수한 메카나이트를 살포하고, 동시에 특수한 정신파를 발산합니다. 이 파동은 남녀노소, 인간, 이종족, 기계를 불문하고 움직이는 모든 것들을 절정 시켜 움직임을 봉쇄합니다.\n\n비록 피아구분 없이 절정 시키긴 하지만, 아군은 이 파동이 올 것을 미리 각오하여 대비할 수 있기 때문에, 아무런 사전 예고 없이 절정 당한 이들보다는 더 빨리 다시 움직일 수 있습니다.\n\n연료로 바쳐진 시체 {0}구 소비, 아군은 {1}초, 적은 {2}초 동안 절정.</YR_TentacleAbility_Desc>
+  <!-- To use the ability, {0} offered corpses as fuel are needed. -->
+  <YR_TentacleAbility_DisabledReason>능력을 사용하기 위해선 연료로 바쳐진 시체 {0}구가 필요함.</YR_TentacleAbility_DisabledReason>
+  <!-- The climax wave climaxes everything that moves. -->
+  <YR_TentacleAbility_Message>절정의 파동이 모든 움직이는 것들을 절정시킵니다.</YR_TentacleAbility_Message>
+  <!-- {0} has given birth to {1}. -->
+  <YR_MessageCompSpawner_MilkingMachine_GaveBirth>{0}(이)가 {1}(을)를 출산했습니다.</YR_MessageCompSpawner_MilkingMachine_GaveBirth>
+  <!-- {0} was squeezed, and {2} has given birth to {1} using that semen. -->
+  <YR_MessageCompSpawner_MilkingMachine_GaveBirthByMilkingMachine>{0}(이)가 착정 당했고, 그 정액으로 {2}(이)가 {1}(을)를 출산했습니다.</YR_MessageCompSpawner_MilkingMachine_GaveBirthByMilkingMachine>
+  <!-- changing position -->
+  <YR_ChangingPosition>체위 바꾸기</YR_ChangingPosition>
+  <!-- count -->
+  <YR_SpawnCount>수량</YR_SpawnCount>
+  <!-- spawn -->
+  <YR_SpawnThing>나오는 것</YR_SpawnThing>
+  <!-- power mode -->
+  <YR_PowerMode>파워 모드</YR_PowerMode>
+  <!-- The power mode is only available for Yuran of thin body type. -->
+  <YR_OnlyForYuran_Thin>파워 모드는 Thin 체형의 유란만 사용 가능합니다.</YR_OnlyForYuran_Thin>
+  <!-- The power mode is only available for Dragonian of thin body type. -->
+  <YR_OnlyForDragonian_Thin>파워 모드는 Thin 체형의 드라고니안만 사용 가능합니다.</YR_OnlyForDragonian_Thin>
+  <!-- {0} got {2} trait. (Cause: {1}) -->
+  <YR_GainTrait>{0}(은)는 {2} 특성을 얻었습니다. (원인 : {1})</YR_GainTrait>
+  <!-- {0}'s {2} has been lost. (Cause: {1}) -->
+  <YR_RemoveUnrecruitable>{0}의 {2}이 꺾였습니다. (원인 : {1})</YR_RemoveUnrecruitable>
+  <!-- Queen lewd worm can't rape -->
+  <YR_Alert_PawnDownButMaggotCantTouch_Label>여왕음충이 덮칠 수 없음</YR_Alert_PawnDownButMaggotCantTouch_Label>
+  <!-- These colonists, prisoners, and slaves are incapacitated on the ground, but the Queen lewd worm was unable to rape them.\n\n{0}\nIf there's a building beneath them, or if they're prisoners but not in a prisoner cell and there's a bed within the 8 surrounding tiles, or if they're colonists in a prisoner cell and there's a bed within the 8 surrounding tiles, the Queen lewd worm can't rape them. Please move these individuals to a more spacious area. -->
+  <YR_Alert_PawnDownButMaggotCantTouch_Desc>다음 정착민, 죄수, 노예들이 행동 불능 상태가 되었지만, 여왕음충이 그들을 덮칠 수 없습니다.\n\n{0}\n이들 아래에 건물이 있거나, 죄수이면서 죄수방에 있지 않고 주변 8칸에 침대가 있거나, 정착민이면서 죄수방에 있고 주변 8칸에 침대가 있을 경우, 여왕음충이 덮칠 수 없습니다. 해당 인원들을 좀 더 여유 있는 공간으로 이동해 주세요.</YR_Alert_PawnDownButMaggotCantTouch_Desc>
+  <!-- When the pawn is bounded, modifying the x-coordinate of the name : {0} -->
+  <YR_BoundPawnLabel_X>폰이 묶였을 때, 이름의 x좌표 수정 : {0}</YR_BoundPawnLabel_X>
+  <!-- When the pawn is bounded, modifying the y-coordinate of the name : {0} -->
+  <YR_BoundPawnLabel_Y>폰이 묶였을 때, 이름의 y좌표 수정 : {0}</YR_BoundPawnLabel_Y>
+  <!-- Let's Pang Pang play -->
+  <YR_ForcePlay>팡팡 놀이 시키기</YR_ForcePlay>
+  <!-- Something in the interaction location, so unable to pang pang play -->
+  <YR_CantUseDummy>상호작용 위치에 무언가가 있어 팡팡 놀이를 할 수 없음</YR_CantUseDummy>
+  <YR_Warp_Label>배설 시키기</YR_Warp_Label>
+  <YR_Warp_Desc>대왕음충이 대상을 삼킨 후, 항문을 꺼내둔 곳에 배설하게 합니다.</YR_Warp_Desc>
+  <YR_DestroySelfAndPawn_Label>대왕음충에게 끌려감 : {1_labelShort}</YR_DestroySelfAndPawn_Label>
+  <YR_DestroySelfAndPawn_Desc>{1_labelShort}(은)는 대왕음충에 잡힌 뒤 구출되지 않거나, 대왕음충의 항문이 지상에 나오지 않아 별도의 장소로 배설되지 않았습니다. {1_labelShort}(은)는 영원히 땅속에서 대왕음충의 몸 안에 갇힌 채 번식 행위를 할 것입니다.</YR_DestroySelfAndPawn_Desc>
+  <YR_SelfBondageBed>스스로를 묶기</YR_SelfBondageBed>
+</LanguageData>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--일반 꼬추-->
+	<HediffDef Name="YR_PenisHediff_Base">
+		<defName>YR_Penis_Normal_Hediff</defName>
+		<label>YR_Penis_Normal_Hediff</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>YR_Penis_Normal_Hediff</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_MovingHead">
+				<animationDef>HeadMoving</animationDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<AnimationDef>
+		<defName>HeadMoving</defName>
+		<durationTicks>20</durationTicks>
+		<animationParts>
+			<li>
+				<key>Head</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,0,2)</offset>
+						</li>
+						<li>
+							<tick>10</tick>
+							<offset>(0.0,0,0)</offset>
+						</li>
+						<li>
+							<tick>15</tick>
+							<offset>(0.0,0,1)</offset>
+						</li>						
+						<li>
+							<tick>20</tick>
+							<offset>(0.0,0,2)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
+		</animationParts>
+	</AnimationDef>
+</Defs>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>YR_CNMS</defName>
+		<label>CNMS</label>
+		<description>CNMS stands for the Central Nutrition Management System, which automatically nourishes those bound to the surrounding compatible furniture by inserting a nutrition pack into the device.\n\nProducts collected from the milking machine within a certain range are automatically accumulated in this device. If more than a certain amount is collected, it automatically discharged, and all the contents can be discharged manually.\n\nWhen a particular CNMS is designated as the main system, all the products gathered in the other CNMS are accumulated in the main system. In addition, when CNMS is installed in a prison, the products collected in this device are automatically moved and accumulated to CNMS that exist outside of the prison.</description>
+		<uiOrder>3500</uiOrder>
+		<!-- <descriptionHyperlinks> -->
+			<!-- <ThingDef>YR_NutritionPack</ThingDef> -->
+		<!-- </descriptionHyperlinks> -->
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<designationCategory>YR_RJW_Furniture</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<graphicData>
+			<shaderType>CutoutComplex</shaderType>
+			<texPath>Yuran/Things/Building/Furniture/CNMS/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>42</pathCost>
+		<costList>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Steel>100</Steel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Mass>15</Mass>
+			<WorkToBuild>2000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>5</Beauty>
+		</statBases>
+		<size>(1,1)</size>
+		<staticSunShadowHeight>0.5</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<uiIconScale>0.75</uiIconScale>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>80</basePowerConsumption>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Facility_CNMS">
+				<maxSimultaneous>1</maxSimultaneous>
+				<maxDistance>6</maxDistance>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

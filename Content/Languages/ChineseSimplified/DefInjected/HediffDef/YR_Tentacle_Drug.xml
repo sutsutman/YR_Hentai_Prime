@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 공통 헤디프 -->
+
+  <YR_Tentacle_DrugHigh.label>嗑了淫妖樹煎剂</YR_Tentacle_DrugHigh.label>
+  <YR_Tentacle_DrugHigh.description>淫妖樹煎剂在血液中。它能增强与战斗有关的能力，并在首次注射时可瞬间提升精神集中度。</YR_Tentacle_DrugHigh.description>
+  <YR_Tentacle_DrugHigh.labelNoun>嗑淫妖樹煎剂</YR_Tentacle_DrugHigh.labelNoun>
+
+
+  <!-- 사목의 탕약 취함 헤디프 -->
+
+  <YR_Tentacle_Drug_Feel.label>悠兰_触手_煎剂_感受</YR_Tentacle_Drug_Feel.label>
+  <YR_Tentacle_Drug_Feel.description>悠兰_触手_煎剂_感受</YR_Tentacle_Drug_Feel.description>
+
+
+  <!-- 사목의 음액 취함 헤디프 -->
+
+  <YR_Tentacle_Drug_Enhance_Feel.label>悠兰_触手_煎剂_加強版_感受</YR_Tentacle_Drug_Enhance_Feel.label>
+  <YR_Tentacle_Drug_Enhance_Feel.description>悠兰_触手_煎剂_加強版_感受</YR_Tentacle_Drug_Enhance_Feel.description>
+
+
+  <!-- 중독 -->
+
+  <YR_Tentacle_Drug_Addiction.label>淫妖樹煎剂成瘾</YR_Tentacle_Drug_Addiction.label>
+  <YR_Tentacle_Drug_Addiction.description>对淫妖樹煎剂的化学成瘾。长期服用淫妖樹煎剂会导致细胞水平的神经适应，因此、如果没有药物，大脑就不能正常工作。\n没有常规剂量的淫妖樹煎剂，戒断症状就会开始。然而、长期禁欲会迫使大脑恢复正常状态，从而消除成瘾。</YR_Tentacle_Drug_Addiction.description>
+  <YR_Tentacle_Drug_Addiction.stages.1.label>戒断中</YR_Tentacle_Drug_Addiction.stages.1.label>
+
+  <YR_Tentacle_DrugTolerance.label>淫妖樹煎剂耐受</YR_Tentacle_DrugTolerance.label>
+  <YR_Tentacle_DrugTolerance.description>对淫妖樹煎剂的耐受。这种耐受越严重，就需要越多的淫妖樹煎剂才能达到同样的效果。</YR_Tentacle_DrugTolerance.description>
+
+
+</LanguageData>

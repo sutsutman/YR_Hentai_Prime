@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- These are Mote ThingDefs. Remain the same, DO NOT translate them. -->
+
+  <YR_Tentacle_Combat_Aphrodisiac_Gas.label>Mote</YR_Tentacle_Combat_Aphrodisiac_Gas.label>
+  <YR_Tentacle_Combat_Aphrodisiac_Gas_Eye.label>Mote</YR_Tentacle_Combat_Aphrodisiac_Gas_Eye.label>
+  <YR_Tentacle_Combat_Aphrodisiac_Gas_Eye_Long.label>Mote</YR_Tentacle_Combat_Aphrodisiac_Gas_Eye_Long.label>
+  <YR_GeneratorPod_Spark_One.label>Mote</YR_GeneratorPod_Spark_One.label>
+  <YR_GeneratorPod_Spark_Two.label>Mote</YR_GeneratorPod_Spark_Two.label>
+
+  <YR_Tentacle_EmptyPullFlyerDef.label>flying</YR_Tentacle_EmptyPullFlyerDef.label>
+  <YR_KnockbackFlyerDef.label>flying</YR_KnockbackFlyerDef.label>
+  <YR_PawnSkipper.label>flying</YR_PawnSkipper.label>
+
+
+</LanguageData>

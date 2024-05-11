@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_CNMS_Wall.label>CNMS(壁掛け)</YR_CNMS_Wall.label>
+  <YR_CNMS_Wall.description>CNMSとは中央栄養管理システム(Central&#160;Nutrition&#160;Management&#160;System)の略で,周囲の対応家具に連動して自動的に栄養を供給するシステムです.\n\n一定範囲内の搾乳機から回収されたものを,自動的に本装置に集めます.一定量以上回収されると自動的に排出され,内容物はすべて手動で排出することができます.\n\n特定のCNMSを主機として指定すると,他のすべてのCNMSに蓄積されているものが主機に集められます.また,刑務所にCNMSを設置すると,この装置で集められたものは,刑務所の外に存在するCNMSに自動的に集められます.</YR_CNMS_Wall.description>
+  <YR_CNMS_Wall.comps.CompRefuelable.fuelGizmoLabel>栄養</YR_CNMS_Wall.comps.CompRefuelable.fuelGizmoLabel>
+  <YR_CNMS_Wall.comps.CompRefuelable.fuelLabel>貯蔵された栄養</YR_CNMS_Wall.comps.CompRefuelable.fuelLabel>
+  <YR_CNMS_Wall.comps.CompRefuelable.outOfFuelMessage>貯蔵された栄養なし</YR_CNMS_Wall.comps.CompRefuelable.outOfFuelMessage>
+
+
+</LanguageData>

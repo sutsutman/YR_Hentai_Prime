@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_AP_Golem.description>TEST</YR_AP_Golem.description>
+  <YR_AP_Golem.label>ラウドフレッシュゴーレム</YR_AP_Golem.label>
+  <YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.0.makeTestGizmo.label>ゴーレム</YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.0.makeTestGizmo.label>
+  <YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.1.makeTestGizmo.label>右Up</YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.1.makeTestGizmo.label>
+  <YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.2.makeTestGizmo.label>左Up</YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.2.makeTestGizmo.label>
+  <YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.3.makeTestGizmo.label>右Down</YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.3.makeTestGizmo.label>
+  <YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.4.makeTestGizmo.label>左Down</YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.4.makeTestGizmo.label>
+  <YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.5.makeTestGizmo.label>下部Up</YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.5.makeTestGizmo.label>
+  <YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.6.makeTestGizmo.label>下部Down</YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.6.makeTestGizmo.label>
+  <YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.7.makeTestGizmo.label>前部</YR_AP_Golem.comps.Comp_Golem_Apparel.decorationSettings.7.makeTestGizmo.label>
+
+
+</LanguageData>

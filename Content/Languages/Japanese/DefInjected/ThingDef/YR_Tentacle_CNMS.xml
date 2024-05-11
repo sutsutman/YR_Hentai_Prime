@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Tentacle_CNMS.label>淫妖樹の淫養プール</YR_Tentacle_CNMS.label>
+  <YR_Tentacle_CNMS.description>触手の束から,大量の愛液と媚薬が愛情たっぷりに分泌され,花嫁の食べ物として与えられています.\n\nCNMSと機能は似ていますが,単体で栄養を作り出すので維持が簡単です.ただし,単体では1人分の栄養しか作り出すことができないため,必要に応じて追加の栄養を供給することを検討してください.</YR_Tentacle_CNMS.description>
+  <YR_Tentacle_CNMS.comps.CompRefuelable.fuelGizmoLabel>栄養</YR_Tentacle_CNMS.comps.CompRefuelable.fuelGizmoLabel>
+  <YR_Tentacle_CNMS.comps.CompRefuelable.fuelLabel>貯蔵された栄養</YR_Tentacle_CNMS.comps.CompRefuelable.fuelLabel>
+  <YR_Tentacle_CNMS.comps.CompRefuelable.outOfFuelMessage>貯蔵された栄養なし</YR_Tentacle_CNMS.comps.CompRefuelable.outOfFuelMessage>
+
+
+</LanguageData>

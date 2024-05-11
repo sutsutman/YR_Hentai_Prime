@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- disciplined -->
+  <YR_Disciplined.degreeDatas.0.label>조교됨</YR_Disciplined.degreeDatas.0.label>
+  <!-- {PAWN_nameDef} has been thoroughly disciplined and has become obscene in both body and mind. {PAWN_nameDef} is no longer ashamed to don't wear anything. -->
+  <YR_Disciplined.degreeDatas.0.description>{PAWN_nameDef}(는)은 철저히 조교 되어 몸과 마음 모두 음란해졌습니다. {PAWN_nameDef}(는)은 더 이상 아무 옷도 입지 않아도 전혀 부끄러워하지 않습니다.</YR_Disciplined.degreeDatas.0.description>
+  <!-- abyss bride -->
+  <YR_Tentalcle.degreeDatas.0.label>심연의 신부</YR_Tentalcle.degreeDatas.0.label>
+  <!-- Whether by others or by herself, {PAWN_nameDef} has abandoned her life as an ordinary woman, and has become a plaything for a evil tree. There will be only excited in her future that will completely destroy her reason. -->
+  <YR_Tentalcle.degreeDatas.0.description>타인에 의해서든, 스스로가 원해서든, {PAWN_nameDef}(는)은 평범한 여성으로 사는 삶을 버리고, 사목의 노리개가 되었습니다. 그녀의 앞길에는 오직 이성을 완전히 파괴할 쾌락만이 기다리고 있을 겁니다.</YR_Tentalcle.degreeDatas.0.description>
+  <!-- abyss bride -->
+  <YR_Tentalcle_NonColonist.degreeDatas.0.label>심연의 신부</YR_Tentalcle_NonColonist.degreeDatas.0.label>
+  <!-- Whether by others or by herself, {PAWN_nameDef} has abandoned her life as an ordinary woman, and has become a plaything for a evil tree. There will be only excited in her future that will completely destroy her reason. -->
+  <YR_Tentalcle_NonColonist.degreeDatas.0.description>타인에 의해서든, 스스로가 원해서든, {PAWN_nameDef}(는)은 평범한 여성으로 사는 삶을 버리고, 사목의 노리개가 되었습니다. 그녀의 앞길에는 오직 이성을 완전히 파괴할 쾌락만이 기다리고 있을 겁니다.</YR_Tentalcle_NonColonist.degreeDatas.0.description>
+</LanguageData>

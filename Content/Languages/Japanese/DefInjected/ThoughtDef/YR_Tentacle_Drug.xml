@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 사목의 탕약 취함 무드 -->
+
+  <YR_Tentacle_Drug_Feel.stages.high_on_evil_tree_decoction.label>淫妖樹の煎汁でハイになっている</YR_Tentacle_Drug_Feel.stages.high_on_evil_tree_decoction.label>
+  <YR_Tentacle_Drug_Feel.stages.high_on_evil_tree_decoction.description>喉の奥からねっとりとした熱い感じがたまらない.気持ちイイ...</YR_Tentacle_Drug_Feel.stages.high_on_evil_tree_decoction.description>
+
+
+  <!-- 사목의 음액 취함 무드 -->
+
+  <YR_Tentacle_Drug_Enhance_Feel.stages.high_on_evil_tree_lewd_decoction.label>淫妖樹の淫煎汁でハイになっている</YR_Tentacle_Drug_Enhance_Feel.stages.high_on_evil_tree_lewd_decoction.label>
+  <YR_Tentacle_Drug_Enhance_Feel.stages.high_on_evil_tree_lewd_decoction.description>あぁ... 生々しいほどの愛が喉に流れてくるような気がします...</YR_Tentacle_Drug_Enhance_Feel.stages.high_on_evil_tree_lewd_decoction.description>
+
+
+  <!-- 중독 -->
+
+  <YR_Tentacle_DrugWithdrawal.stages.evil_tree_decoction_withdrawal.label>淫妖樹の煎汁禁断症状</YR_Tentacle_DrugWithdrawal.stages.evil_tree_decoction_withdrawal.label>
+  <YR_Tentacle_DrugWithdrawal.stages.evil_tree_decoction_withdrawal.description>誰か,その熱くてねっとりしたものを私の喉に注いでください...！</YR_Tentacle_DrugWithdrawal.stages.evil_tree_decoction_withdrawal.description>
+
+
+</LanguageData>

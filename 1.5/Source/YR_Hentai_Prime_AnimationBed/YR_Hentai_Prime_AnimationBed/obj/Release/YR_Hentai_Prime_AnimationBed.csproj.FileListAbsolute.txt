@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Assemblies\YR_Hentai_Prime_AnimationBed.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Assemblies\YR_Hentai_Prime_AnimationBed.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\YR_Hentai_Prime_AnimationBed\YR_Hentai_Prime_AnimationBed\obj\Release\YR_Hentai_Prime_AnimationBed.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\YR_Hentai_Prime_AnimationBed\YR_Hentai_Prime_AnimationBed\obj\Release\YR_Hentai_Prime_AnimationBed.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\YR_Hentai_Prime_AnimationBed\YR_Hentai_Prime_AnimationBed\obj\Release\YR_Hentai_Prime_AnimationBed.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\YR_Hentai_Prime_AnimationBed\YR_Hentai_Prime_AnimationBed\obj\Release\YR_Hentai_Prime_AnimationBed.pdb

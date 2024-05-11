@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_TentacleRushSkipRadius.label>悠兰_触手冲刺跳跃 半径</YR_TentacleRushSkipRadius.label>
+  <YR_TentacleRushSkipRadius.description>助推器可以跳过的最大距离。</YR_TentacleRushSkipRadius.description>
+  <YR_TentacleRushSkipRadius.formatString>{0} c</YR_TentacleRushSkipRadius.formatString>
+
+
+</LanguageData>

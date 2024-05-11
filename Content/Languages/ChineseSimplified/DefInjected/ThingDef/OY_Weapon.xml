@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <OY_Tentacle_Dagger.label>淫妖樹匕首</OY_Tentacle_Dagger.label>
+  <OY_Tentacle_Dagger.description>淫妖樹的根被改造成匕首的形式，以保护宿主。纯粹追求锋利，它实际上是宿主身体的一部分，它小到足以被一个相对矮小的种族使用，但也足够锋利。</OY_Tentacle_Dagger.description>
+  <OY_Tentacle_Dagger.comps.1.transformData.0.label>变成淫妖樹弓</OY_Tentacle_Dagger.comps.1.transformData.0.label>
+  <OY_Tentacle_Dagger.comps.1.transformData.0.description>淫妖樹的根已经变成了保护宿主的弓。 箭头也由触手控制，触手会抑制被其击中的敌人行动。</OY_Tentacle_Dagger.comps.1.transformData.0.description>
+  <OY_Tentacle_Dagger.tools.0.label>手柄</OY_Tentacle_Dagger.tools.0.label>
+  <OY_Tentacle_Dagger.tools.1.label>尖端</OY_Tentacle_Dagger.tools.1.label>
+  <OY_Tentacle_Dagger.tools.2.label>刀刃</OY_Tentacle_Dagger.tools.2.label>
+
+  <OY_Tentacle_Bow.label>淫妖樹弓</OY_Tentacle_Bow.label>
+  <OY_Tentacle_Bow.description>淫妖樹的根已经变成了保护宿主的弓。 箭头也由触手控制，触手会抑制被其击中的敌人行动。</OY_Tentacle_Bow.description>
+  <OY_Tentacle_Bow.comps.1.transformData.0.label>变成淫妖樹匕首</OY_Tentacle_Bow.comps.1.transformData.0.label>
+  <OY_Tentacle_Bow.comps.1.transformData.0.description>淫妖樹的根被改造成匕首的形式，以保护宿主。纯粹追求锋利，它实际上是宿主身体的一部分，它小到足以被一个相对矮小的种族使用，但也足够锋利。</OY_Tentacle_Bow.comps.1.transformData.0.description>
+  <OY_Tentacle_Bow.tools.0.label>失</OY_Tentacle_Bow.tools.0.label>
+
+  <OY_Tentacle_Arrow.label>淫妖樹之箭</OY_Tentacle_Arrow.label>
+
+
+</LanguageData>

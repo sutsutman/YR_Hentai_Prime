@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>YR_MilkingMachine_DisableNeed</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_MilkingMachineAddon_Hediff</label>
+		<description>Milked by a milking machine.(A Hediff that goes through to check the body type and to give a hediff for the hediff add-on.)</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<setMax>0</setMax>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0</setMax>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.01</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<disablesNeeds>
+			<li>Rest</li>
+			<li>Joy</li>
+			<li>Beauty</li>
+			<li>Comfort</li>
+			<li>Outdoors</li>
+			<li>Indoors</li>
+			<li>RoomSize</li>
+			<li>DrugDesire</li>
+		</disablesNeeds>
+	</HediffDef>
+
+	<ThingDef ParentName="YR_AnimationBedBase">
+		<defName>YR_Building_MilkingMachine</defName>
+		<label>milking machine</label>
+		<description>A milking machine. There are many things to attach to the body, so can't lie down and use it on one's own, and have to get help from others. This is the same when exit the milking machine. Also, when lying in the milking machine, have to feed by someone.\n\nNot only the colonist, but also the prisoner and slaves are able to lie in this milk machine.\n\nThis can force milking not only pregnancy or after childbirth, but also even if can't milking yet.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Bed/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<uiOrder>100</uiOrder>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed"><!-- 묶였을 때 부여되는 헤디프 -->
+				<addedHediffDefs>
+					<li>YR_MilkingMachine_DisableNeed</li>
+				</addedHediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff"><!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+				<hediffDefs>
+					<li>YR_PowerMode1_Hediff</li>
+					<li>YR_PowerMode2_Hediff</li>
+				</hediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
+				<pawnAnimationSetting>
+					<pawnAnimationDef>YR_MilkingMachine_Animation</pawnAnimationDef><!-- 기본 애니메이션 -->
+					<conditonPawnAnimations>
+						<!-- 바디 텍스처 바꾸고 싶으면 기존 바디 레이어를 숨긴 애니메이션 사용 해야 함 -->
+						<li>
+							<condition>
+								<races>
+									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+								</races>
+							</condition>
+							<pawnAnimationDef>YR_MilkingMachine_Animation_BodyChange</pawnAnimationDef>
+						</li>
+					</conditonPawnAnimations>
+					<offset>(0,0,0.25)</offset>
+					<conditonPawnOffsets>
+						<li>
+							<condition/>
+							<offset/>
+						</li>
+					</conditonPawnOffsets>
+				</pawnAnimationSetting>
+				<bedAnimationList>
+					<!-- 폰의 바디, 헤드 -->
+					<li>
+						<!-- YR_Milking_Dummy는 아무 애니메이션 없는거 -->
+						<bedAnimationDef>YR_Milking_Dummy</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<neverHediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+										<li>YR_PowerMode2_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Milking_Body_Yuran</bedAnimationDef>
+							</li>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<hediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+									</hediffDefs>
+									<neverHediffDefs>
+										<li>YR_PowerMode2_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Milking_Body_Yuran_PowerA</bedAnimationDef>
+							</li>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<hediffDefs>
+										<li>YR_PowerMode2_Hediff</li>
+									</hediffDefs>
+									<neverHediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Milking_Body_Yuran_PowerB</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Milking_Dummy</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+								</condition>
+								<bedAnimationDef>YR_Milking_Face_Yuran</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 침대의 애니메이션 -->
+					<!-- 헤드 기어 -->
+					<li>
+						<bedAnimationDef>YR_Milking_HeadGear</bedAnimationDef>
+					</li>
+					<!-- HMD -->
+					<li>
+						<bedAnimationDef>YR_Milking_HMD</bedAnimationDef>
+					</li>
+					<!-- 착유선 -->
+					<li>
+						<bedAnimationDef>YR_Milking_Line_R</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
+					</li>
+					<!-- 딜도 -->
+					<li>
+						<bedAnimationDef>YR_Milking_Dildo</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<hediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+									</hediffDefs>
+									<neverHediffDefs>
+										<li>YR_PowerMode2_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Milking_Dildo_Yuran_PowerA</bedAnimationDef>
+							</li>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<hediffDefs>
+										<li>YR_PowerMode2_Hediff</li>
+									</hediffDefs>
+									<neverHediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Milking_Dildo_Yuran_PowerB</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 자궁 -->
+					<li>
+						<bedAnimationDef>YR_Milking_Uterus</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<neverHediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+										<li>YR_PowerMode2_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Milking_Uterus_Yuran</bedAnimationDef>
+							</li>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<hediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+									</hediffDefs>
+									<neverHediffDefs>
+										<li>YR_PowerMode2_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Milking_Uterus_Yuran_PowerA</bedAnimationDef>
+							</li>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<hediffDefs>
+										<li>YR_PowerMode2_Hediff</li>
+									</hediffDefs>
+									<neverHediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Milking_Uterus_Yuran_PowerB</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 심전도 -->
+					<li>
+						<bedAnimationDef>YR_Milking_ECG</bedAnimationDef>
+					</li>
+					<!-- 우유 -->
+					<li>
+						<bedAnimationDef>YR_Milking_Milk</bedAnimationDef>
+					</li>
+					<!-- 펌프 -->
+					<li>
+						<bedAnimationDef>YR_Milking_Pump</bedAnimationDef>
+					</li>
+				</bedAnimationList>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

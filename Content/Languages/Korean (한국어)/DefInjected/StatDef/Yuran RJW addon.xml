@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- YR_TentacleRushSkip radius -->
+  <YR_TentacleRushSkipRadius.label>YR_TentacleRushSkip radius</YR_TentacleRushSkipRadius.label>
+  <!-- The Maxium distance that a Booster can skip. -->
+  <YR_TentacleRushSkipRadius.description>The Maxium distance that a Booster can skip.</YR_TentacleRushSkipRadius.description>
+  <!-- {0} c -->
+  <YR_TentacleRushSkipRadius.formatString>{0} c</YR_TentacleRushSkipRadius.formatString>
+</LanguageData>

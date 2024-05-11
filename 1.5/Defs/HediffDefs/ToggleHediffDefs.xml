@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 베이스 -->
+	<HediffDef Name="YR_ToggleHediff_Base" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>Toggle Hediff</description>
+		<defaultLabelColor>(0.5, 0.5, 0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- 파워모드 -->
+	<HediffDef ParentName="YR_ToggleHediff_Base">
+		<defName>YR_PowerMode1_Hediff</defName>
+		<label>YR_PowerMode1_Hediff</label>
+	</HediffDef>
+		<HediffDef ParentName="YR_ToggleHediff_Base">
+		<defName>YR_PowerMode2_Hediff</defName>
+		<label>YR_PowerMode2_Hediff</label>
+	</HediffDef>
+</Defs>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- bull whip of the evil tree -->
+  <YR_Tentacle_BullWhip_ChainDamageDef.label>사목의 채찍</YR_Tentacle_BullWhip_ChainDamageDef.label>
+  <!-- {0} is dead. -->
+  <YR_Tentacle_BullWhip_ChainDamageDef.deathMessage>{0}은(는) 죽었습니다.</YR_Tentacle_BullWhip_ChainDamageDef.deathMessage>
+</LanguageData>

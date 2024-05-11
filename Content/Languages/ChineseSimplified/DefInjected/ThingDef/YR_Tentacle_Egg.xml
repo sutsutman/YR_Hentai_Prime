@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Tentacle_Egg.label>淫妖樹的种子</YR_Tentacle_Egg.label>
+  <YR_Tentacle_Egg.description>这是一颗种子，里面有很多未成熟的淫妖樹触手。种子可以移植到另一个女人的子宫里。当移植的种子苏醒时，触手开始侵蚀身体，从子宫开始。如果完全被侵蚀，则永远无法移除。\n\n种子中的触手非常柔软，易于烹饪，味道鲜美。它也被用作一种非常危险和强大的煎剂成分。</YR_Tentacle_Egg.description>
+  <YR_Tentacle_Egg.comps.0.useLabel>使用 {0_label}</YR_Tentacle_Egg.comps.0.useLabel>
+
+</LanguageData>

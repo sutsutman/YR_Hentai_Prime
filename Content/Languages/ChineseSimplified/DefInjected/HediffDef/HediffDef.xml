@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 촉수 알 헤디프 -->
+
+  <YR_Tentacle_Egg_Hediff.label>淫妖树的种子</YR_Tentacle_Egg_Hediff.label>
+  <YR_Tentacle_Egg_Hediff.description>一棵淫妖树的种子被种在了身体里。随着时间的推移，它会在体内扎根。\n\n此种子可以在生根前移除。</YR_Tentacle_Egg_Hediff.description>
+
+
+  <!-- 촉수 로터 헤디프 -->
+
+  <YR_TentacleWiggle_Hediff.label>触手的摆动</YR_TentacleWiggle_Hediff.label>
+  <YR_TentacleWiggle_Hediff.description>触手在摆动，减慢了移动速度，人物变得非常兴奋。</YR_TentacleWiggle_Hediff.description>
+
+
+  <!-- 촉수 임신 헤디프 -->
+
+  <YR_Pregnant_Tentacle.label>孕育著淫妖树的种子</YR_Pregnant_Tentacle.label>
+  <YR_Pregnant_Tentacle.description>从 {0} 被侵蚀的卵巢产生的卵子被淫妖树的精液受精。受精卵会长成触手状，然后包裹在粘液中，以种子的形状出生。</YR_Pregnant_Tentacle.description>
+  <YR_Pregnant_Tentacle.stages.0.label>怀孕初期</YR_Pregnant_Tentacle.stages.0.label>
+  <YR_Pregnant_Tentacle.stages.1.label>怀孕中期</YR_Pregnant_Tentacle.stages.1.label>
+  <YR_Pregnant_Tentacle.stages.2.label>怀孕后期</YR_Pregnant_Tentacle.stages.2.label>
+
+
+  <!-- 촉수 출산 -->
+
+  <YR_Pregnant_Tentacle_Birth.label>生下淫妖树的种子</YR_Pregnant_Tentacle_Birth.label>
+  <YR_Pregnant_Tentacle_Birth.description>生下淫妖树的种子。淫妖树的根正用触须戳着阴道，以帮助种子顺利出生。</YR_Pregnant_Tentacle_Birth.description>
+  
+  
+  <!-- 촉수 강화 헤디프 -->
+
+  <YR_Tentacle_Hediff.label>淫妖树的根</YR_Tentacle_Hediff.label>
+  <YR_Tentacle_Hediff.description>一棵淫妖树的种子在无休止的侵扰后发芽，以宿主为根。它以触手的形式不断侵扰和强奸宿主，就像一棵觊觎女性的邪惡之树。无论主人的意愿如何，它都会给人强烈的兴奋，这种兴奋有时会过度，使主人抽搐并无法动弹。\n\n此外，当根与身体同化时，宿主也具有再生能力。</YR_Tentacle_Hediff.description>
+
+
+  <!-- 촉수 출산후 헤디프 -->
+
+  <YR_Milking_Tentacle_Hediff.label>可挤奶(深渊淫荡的乳汁)</YR_Milking_Tentacle_Hediff.label>
+  <YR_Milking_Tentacle_Hediff.description>淫妖树的根会侵蚀宿主的乳腺，产生畸形的母乳，这种母乳非常甜，足以腐烂大脑。此外，由于淫妖树根的精液与母乳混合并发酵，它在乳腺中像奶酪一样硬化，在母体进行挤奶时也会被排出，一起放进瓶子里。</YR_Milking_Tentacle_Hediff.description>
+
+
+  <!-- 전투용 최음 가스 헤디프 -->
+
+  <YR_Tentacle_Combat_Aphrodisiac_Gas.label>战斗催情气体</YR_Tentacle_Combat_Aphrodisiac_Gas.label>
+  <YR_Tentacle_Combat_Aphrodisiac_Gas.description>这是战斗用的催情气体，使吸入者处于极度兴奋的状态，简直快要发疯了並感觉不到疼痛。可以战斗更长时间，因为气体增强了身体。\n\n但是，由于吸入者继续品尝永远不可能习惯的快感，阴道无限地喷出润滑液，高潮不断重复。\n\n如果停止吸入，吸气者忍受缺少气体的身驅最终会因高潮带来的疲劳而崩溃。由于留在肺部的气体和后遗症，将不得不躺在床上一段时间，并从手淫中感受到性高潮</YR_Tentacle_Combat_Aphrodisiac_Gas.description>
+
+
+  <!-- 마스크 해제 후 헤디프 -->
+
+  <YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect.label>战斗催情气体后遗症</YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect.label>
+  <YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect.description>这是战斗催情气体的副作用。因为巨大的疲劳和高潮而无法起身。</YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect.description>
+ 
+ 
+  <!-- 돌진 쿨타임 초기화 체크용 헤디프 -->
+
+  <YR_CheckKillEnemy_Hediff.label>悠兰_检查杀死敌人_状态</YR_CheckKillEnemy_Hediff.label>
+  <YR_CheckKillEnemy_Hediff.description>悠兰_检查杀死敌人_状态</YR_CheckKillEnemy_Hediff.description>
+  
+</LanguageData>

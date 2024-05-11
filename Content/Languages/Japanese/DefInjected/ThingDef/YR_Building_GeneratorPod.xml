@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Building_GeneratorPod.label>ゼネレイトポッド</YR_Building_GeneratorPod.label>
+  <YR_Building_GeneratorPod.description>最新の研究結果によると,ヘキサポッドの触手が分泌する液体の中に存在する精液に似た性質を持つナノマシンが女性の卵子に着床するときに,卵子を消滅させるとともに大量のエネルギーが放出されるそうです.\n\nこのヘキサポッドは,女性を触手で拘束して電気ショックで刺激を与えることで排卵させ,前述の方法でエネルギーを発生させ,そのエネルギーで発電します.\n\n大抵はヘキサポッドの精子が着床した卵子は直ちに消滅しますが,モヨたちは非常に低い確率で卵子が消滅せずにそのまま生命が誕生することもあります.そうして誕生した生命体は,自分の母体の肉体に寄生し,特殊なエネルギーを扱える能力を与えます.\n\n(まだ発電機能しかありません.)\n\nムースやジャイアントのような体の大きい種族には合わないため決して使用しないでください.</YR_Building_GeneratorPod.description>
+  <YR_Building_GeneratorPod.comps.CompUsableBondageBed.useLabel>拘束する</YR_Building_GeneratorPod.comps.CompUsableBondageBed.useLabel>
+
+
+</LanguageData>

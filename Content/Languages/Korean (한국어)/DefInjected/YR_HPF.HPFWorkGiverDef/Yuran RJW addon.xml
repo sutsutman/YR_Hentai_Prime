@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Milking breast milk from yuran -->
+  <Milking_YR_BreastMilk.label>유란에게서 모유 추출</Milking_YR_BreastMilk.label>
+  <!-- milking -->
+  <Milking_YR_BreastMilk.verb>추출</Milking_YR_BreastMilk.verb>
+  <!-- milking -->
+  <Milking_YR_BreastMilk.gerund>추출 중</Milking_YR_BreastMilk.gerund>
+</LanguageData>

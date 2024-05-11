@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 골렘 결속 수술 -->
+
+  <InstallYR_Golem_Core.label>ゴーレムコアとして移植</InstallYR_Golem_Core.label>
+  <InstallYR_Golem_Core.description>ゴーレムコアとして移植します.</InstallYR_Golem_Core.description>
+  <InstallYR_Golem_Core.jobString>ゴーレムに拘束中.</InstallYR_Golem_Core.jobString>
+
+
+</LanguageData>

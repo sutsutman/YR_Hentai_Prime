@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Building_LoveRoom.label>ラブルーム</YR_Building_LoveRoom.label>
+  <YR_Building_LoveRoom.description>獲物をハチミツの中で溺れさせ,生死の境をさまよう喜びを与えることができる植物です.\n\n"獲物"が味わう痛みは,植物自身にも快楽をもたらすため,回復作用のあるハチミツを使うことで,捕獲した獲物を生かしているのです.\n\n獲物を呑み込むために分泌されたハチミツは,獲物が苦痛と快楽のために分泌した体液と混ざり合い,ゆっくりと紫色に変色します.この変化したハチミツを摂取することで,獲物の記憶を追体験することができます.</YR_Building_LoveRoom.description>
+  <YR_Building_LoveRoom.comps.CompUsableBondageBed.useLabel>拘束する</YR_Building_LoveRoom.comps.CompUsableBondageBed.useLabel>
+
+
+</LanguageData>

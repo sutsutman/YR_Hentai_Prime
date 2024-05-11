@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YR_Hentai_Prime_AnimationBed</RootNamespace>
+    <AssemblyName>YR_Hentai_Prime_AnimationBed</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AlienRace">
+      <HintPath>..\..\..\..\..\..\..\..\workshop\content\294100\839005762\1.4\Assemblies\AlienRace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimationSetting\BedAnimationDef.cs" />
+    <Compile Include="AnimationSetting\CompAnimationSetting.cs" />
+    <Compile Include="AnimationSetting\BedAnimationUtility.cs" />
+    <Compile Include="AnimationSetting\BedAnimationKeyframe.cs" />
+    <Compile Include="AnimationSetting\Condition.cs" />
+    <Compile Include="AnimationBedComp\CompProperties\CompProperties_AnimationBedTarget.cs" />
+    <Compile Include="AnimationSetting\CompProperties_AnimationSetting.cs" />
+    <Compile Include="CNMS\CompProperties_AffectedByCNMS.cs" />
+    <Compile Include="CNMS\CompProperties_Facility_CNMS.cs" />
+    <Compile Include="CompProperties_ToggleHediff.cs" />
+    <Compile Include="YR_StudyUtility.cs" />
+    <Compile Include="YR_Hentai_Prime_AnimationBed.cs" />
+    <Compile Include="Buildings\Building_AnimationBed.cs" />
+    <Compile Include="AnimationBedComp\CompProperties\CompProperties_AnimationBed.cs" />
+    <Compile Include="AnimationBedComp\Comps\CompAnimationBed.cs" />
+    <Compile Include="AnimationBedComp\Comps\CompAnimationBedTarget.cs" />
+    <Compile Include="Harmony.cs" />
+    <Compile Include="HediffCompProperties_MovingHead.cs" />
+    <Compile Include="JobDrivers\JobDriver_TendVictim.cs" />
+    <Compile Include="JobDrivers\JobDriver_ExecuteVictim.cs" />
+    <Compile Include="JobDrivers\JobDriver_ReleaseVictim.cs" />
+    <Compile Include="JobDrivers\JobDriver_CarryToAnimationBedAlreadyHolding.cs" />
+    <Compile Include="JobDrivers\JobDriver_TransferBetweenAnimationBeds.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkGivers\WorkGiver_TransferVictim.cs" />
+    <Compile Include="WorkGivers\WorkGiver_TendVictim.cs" />
+    <Compile Include="WorkGivers\WorkGiver_ReleaseVictim.cs" />
+    <Compile Include="WorkGivers\WorkGiver_ExecuteVictim.cs" />
+    <Compile Include="WorkGivers\WorkGiver_VictimOnAnimationBed.cs" />
+    <Compile Include="WorkGivers\WorkGiver_TakeVictiomToAnimationBed.cs" />
+    <Compile Include="JobDrivers\JobDriver_CarryToAnimationBed.cs" />
+    <Compile Include="YR_H_P_DefOf.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

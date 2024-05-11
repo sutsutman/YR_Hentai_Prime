@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>YR_BreastMilk</defName>
+		<label>yuran breast milk</label>
+		<description>Breast milk squeezed from a member of Yuran race. It has an uniquely sweet taste and is quite popular with a certain group of maniacs.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Resource/YR_BreastMilk</texPath>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<!-- Can be used like meat in recipes -->
+			<Mass>0.045</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<babiesCanIngest>true</babiesCanIngest>
+			<tasteThought>YR_AteBreastMilk</tasteThought>
+		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+	<ThoughtDef>
+		<defName>YR_AteBreastMilk</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>drank yuran breast milk</label>
+				<description>Sweet, it feels like I'm drinking condensed milk. I want to bury my face in that fur-covered chest and suck the nipples myself.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>YR_AteBreastMilk</li>
+		</replaceThoughts>
+	</ThoughtDef>
+</Defs>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- evil tree decoction -->
+  <YR_Tentacle_Drug_Chemical.label>사목의 탕약</YR_Tentacle_Drug_Chemical.label>
+  <!-- Because of a evil tree decoction addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms. -->
+  <YR_Tentacle_Drug_Chemical.description>사목의 탕약 중독으로 인한 금단 현상을 피하려면 주기적인 섭취가 필요합니다.</YR_Tentacle_Drug_Chemical.description>
+</LanguageData>

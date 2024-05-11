@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 착유머신 애드온 헤디프 (여기서 바디타입 구분해서 헤디프 추가 부여) -->
+
+  <YR_MilkingMachineAddon_Hediff.label>悠兰_挤奶机使用_状态</YR_MilkingMachineAddon_Hediff.label>
+  <YR_MilkingMachineAddon_Hediff.description>通过挤奶机挤奶。(一个状态，通过检查身体类型，并为状态插件提供一个状态。)</YR_MilkingMachineAddon_Hediff.description>
+
+
+  <!-- 촉수 침대 애드온 헤디프 -->
+
+  <YR_Building_Tentacle_Hediff.label>悠兰_建筑_触手_状态</YR_Building_Tentacle_Hediff.label>
+  <YR_Building_Tentacle_Hediff.description>悠兰_建筑_触手_状态</YR_Building_Tentacle_Hediff.description>
+  
+ 
+  <!-- 그냥 얼굴 숨기기용 헤디프 -->
+
+  <YR_HideHead_Hediff.label>悠兰_隐藏头_状态</YR_HideHead_Hediff.label>
+  <YR_HideHead_Hediff.description>悠兰_隐藏头_状态</YR_HideHead_Hediff.description>
+
+
+  <!-- 그냥 모자 숨기기용 헤디프 -->
+
+  <YR_HideHat_Hediff.label>悠兰_隐藏帽子_状态</YR_HideHat_Hediff.label>
+  <YR_HideHat_Hediff.description>悠兰_隐藏帽子_状态</YR_HideHat_Hediff.description>
+
+
+  <!-- 그냥 옷 숨기기용 헤디프 -->
+
+  <YR_HideApparel_Hediff.label>悠兰_隐藏衣服_状态</YR_HideApparel_Hediff.label>
+  <YR_HideApparel_Hediff.description>悠兰_隐藏衣服_状态</YR_HideApparel_Hediff.description>
+  
+  
+  <!-- 그냥 헤어 숨기기용 헤디프 -->
+
+  <YR_HideHair_Hediff.label>悠兰_隐藏頭髮_状态</YR_HideHair_Hediff.label>
+  <YR_HideHair_Hediff.description>悠兰_隐藏頭髮_状态</YR_HideHair_Hediff.description>
+
+
+  <!-- 성욕 채워주는 헤디프 -->
+
+  <YR_SexNeedIncrease_Hediff.label>悠兰_性愛需求增加_状态</YR_SexNeedIncrease_Hediff.label>
+  <YR_SexNeedIncrease_Hediff.description>悠兰_性愛需求增加_状态</YR_SexNeedIncrease_Hediff.description>
+
+  
+  <!-- 조교중 헤디프 -->
+
+  <YR_Disciplined_Hediff.label>悠兰_调教服_状态</YR_Disciplined_Hediff.label>
+  <YR_Disciplined_Hediff.description>它正在接受调教服的训练。 即使摘掉它，进度也会保持，但随着时间的推移会略有下降。</YR_Disciplined_Hediff.description>
+
+
+  <!-- 로터 헤디프 -->
+
+  <YR_EggVibrator_Hediff.label>跳蛋振动器激活</YR_EggVibrator_Hediff.label>
+  <YR_EggVibrator_Hediff.description>振动器被激活，减慢了运动速度，变得有点兴奋。</YR_EggVibrator_Hediff.description>
+
+
+  <!-- 애액으로 소화 -->
+
+  <YR_VaginalLubricationFireExtinguisher_Hediff.label>悠兰_阴道润滑灭火器_状态</YR_VaginalLubricationFireExtinguisher_Hediff.label>
+  <YR_VaginalLubricationFireExtinguisher_Hediff.description>悠兰_阴道润滑灭火器_状态</YR_VaginalLubricationFireExtinguisher_Hediff.description>
+  
+  
+  <!-- 세쿠시 옷 헤디프 -->
+
+  <YR_BoteApparel_Hediff.label>悠兰_緊身服飾_状态</YR_BoteApparel_Hediff.label>
+  <YR_BoteApparel_Hediff.description>因为穿上了特殊的服装，脸上的表情也发生了变化。</YR_BoteApparel_Hediff.description>
+
+
+  <!-- 촉수 옷 헤디프 -->
+
+  <YR_TentacleApparel_Hediff.label>悠兰_触手服饰_状态</YR_TentacleApparel_Hediff.label>
+  <YR_TentacleApparel_Hediff.description>因为穿上了特殊的服装，脸上的表情也发生了变化。</YR_TentacleApparel_Hediff.description>
+  
+
+  <!-- 젖 나오는 헤디프 -->
+
+  <YR_Milking_Hediff.label>泌乳中</YR_Milking_Hediff.label>
+  <YR_Milking_Hediff.description>可以在怀孕期间和出生后的一段时间内从悠兰胸部挤奶。</YR_Milking_Hediff.description>
+
+
+  <!-- 출산후 빅젖 헤디프 -->
+
+  <YR_BB_Hediff.label>悠兰_BB_状态</YR_BB_Hediff.label>
+  <YR_BB_Hediff.description>因为分娩，乳房变大了。</YR_BB_Hediff.description>
+
+
+  <!-- 촉수 침대 애드온 헤디프 -->
+
+  <YR_TEST_Hediff.label>悠兰_TEST_状态</YR_TEST_Hediff.label>
+  <YR_TEST_Hediff.description>悠兰_TEST_状态</YR_TEST_Hediff.description>  <!-- 촉수 침대 애드온 헤디프 -->
+
+  
+</LanguageData>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Research -->
+	<WorkGiverDef>
+		<defName>YR_TakeVictiomToAnimationBed</defName>
+		<label>capture Victim</label>
+		<giverClass>YR_Hentai_Prime_AnimationBed.WorkGiver_TakeVictiomToAnimationBed</giverClass>
+		<workType>Hauling</workType>
+		<verb>capture</verb>
+		<gerund>capturing</gerund>
+		<priorityInType>300</priorityInType>
+	</WorkGiverDef>
+	<!-- Warden -->
+	<WorkGiverDef>
+		<defName>YR_ReleaseVictim</defName>
+		<label>release victims</label>
+		<giverClass>YR_Hentai_Prime_AnimationBed.WorkGiver_ReleaseVictim</giverClass>
+		<workType>Warden</workType>
+		<verb>release</verb>
+		<gerund>releasing</gerund>
+		<priorityInType>65</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>YR_TransferVictim</defName>
+		<label>transfer victims</label>
+		<giverClass>YR_Hentai_Prime_AnimationBed.WorkGiver_TransferVictim</giverClass>
+		<workType>Hauling</workType>
+		<verb>transfer</verb>
+		<gerund>transferring</gerund>
+		<priorityInType>64</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>YR_ExecuteVictim</defName>
+		<label>execute victims</label>
+		<giverClass>YR_Hentai_Prime_AnimationBed.WorkGiver_ExecuteVictim</giverClass>
+		<workType>Warden</workType>
+		<verb>execute</verb>
+		<gerund>executing</gerund>
+		<priorityInType>115</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>YR_DoctorTendTovictims</defName>
+		<label>tend to victims</label>
+		<giverClass>YR_Hentai_Prime_AnimationBed.WorkGiver_TendVictim</giverClass>
+		<workType>Doctor</workType>
+		<verb>tend to</verb>
+		<gerund>tending to</gerund>
+		<priorityInType>95</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	<!-- <WorkGiverDef> -->
+		<!-- <defName>YR_FeedTovictims</defName> -->
+		<!-- <label>feed to victims</label> -->
+		<!-- <giverClass>YR_Hentai_Prime_AnimationBed.WorkGiver_FeedVictim</giverClass> -->
+		<!-- <workType>Warden</workType> -->
+		<!-- <verb>feed</verb> -->
+		<!-- <gerund>feeding</gerund> -->
+		<!-- <priorityInType>80</priorityInType> -->
+		<!-- <requiredCapacities> -->
+			<!-- <li>Manipulation</li> -->
+		<!-- </requiredCapacities> -->
+		<!-- <prioritizeSustains>true</prioritizeSustains> -->
+		<!-- <canBeDoneByMechs>true</canBeDoneByMechs> -->
+	<!-- </WorkGiverDef> -->
+</Defs>

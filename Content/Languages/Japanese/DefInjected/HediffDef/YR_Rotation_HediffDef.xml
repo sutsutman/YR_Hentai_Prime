@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 일반 꼬추 -->
+
+  <YR_South_Hediff.label>南用Hediff</YR_South_Hediff.label>
+  <YR_South_Hediff.description>南用Hediff.</YR_South_Hediff.description>
+
+
+  <!-- 곤충 꼬추 -->
+
+  <YR_East_Hediff.label>東用Hediff</YR_East_Hediff.label>
+  <YR_East_Hediff.description>東用Hediff.</YR_East_Hediff.description>
+
+  <YR_North_Hediff.label>北用Hediff</YR_North_Hediff.label>
+  <YR_North_Hediff.description>北用Hediff.</YR_North_Hediff.description>
+
+
+  <!-- 방향 -->
+
+  <YR_West_Hediff.label>西用Hediff</YR_West_Hediff.label>
+  <YR_West_Hediff.description>西用Hediff.</YR_West_Hediff.description>
+
+
+</LanguageData>

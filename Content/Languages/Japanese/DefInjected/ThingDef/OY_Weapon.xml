@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <OY_Tentacle_Dagger.label>淫妖樹の短剣</OY_Tentacle_Dagger.label>
+  <OY_Tentacle_Dagger.description>淫妖樹の根が宿主を守るために短剣の形に変化したものです.比較的体格の小さな種族でも扱いやすい大きさですが,切れ味は鋭いです.</OY_Tentacle_Dagger.description>
+  <OY_Tentacle_Dagger.comps.CompFormChange.transformData.0.label>淫妖樹の弓に変化</OY_Tentacle_Dagger.comps.CompFormChange.transformData.0.label>
+  <OY_Tentacle_Dagger.comps.CompFormChange.transformData.0.description>淫妖樹の根が宿主を守るために弓の形に変化したものです.矢も触手に支配されており,命中した敵の動きを触手が抑制します.</OY_Tentacle_Dagger.comps.CompFormChange.transformData.0.description>
+  <OY_Tentacle_Dagger.tools.handle.label>柄</OY_Tentacle_Dagger.tools.handle.label>
+  <OY_Tentacle_Dagger.tools.point.label>先</OY_Tentacle_Dagger.tools.point.label>
+  <OY_Tentacle_Dagger.tools.edge.label>刃</OY_Tentacle_Dagger.tools.edge.label>
+
+  <OY_Tentacle_Bow.label>淫妖樹の弓</OY_Tentacle_Bow.label>
+  <OY_Tentacle_Bow.description>淫妖樹の根が宿主を守るために弓の形に変化したものです.矢も触手に支配されており,命中した敵の動きを触手が抑制します.</OY_Tentacle_Bow.description>
+  <OY_Tentacle_Bow.comps.CompFormChange.transformData.0.label>淫妖樹の短剣に変化</OY_Tentacle_Bow.comps.CompFormChange.transformData.0.label>
+  <OY_Tentacle_Bow.comps.CompFormChange.transformData.0.description>淫妖樹の根が宿主を守るために短剣の形に変化したものです.比較的体格の小さな種族でも扱いやすい大きさですが,切れ味は鋭いです.</OY_Tentacle_Bow.comps.CompFormChange.transformData.0.description>
+  <OY_Tentacle_Bow.tools.limb.label>リム</OY_Tentacle_Bow.tools.limb.label>
+  <OY_Tentacle_Bow.verbs.Verb_Shoot.label>淫妖樹の弓</OY_Tentacle_Bow.verbs.Verb_Shoot.label>
+
+  <OY_Tentacle_Arrow.label>淫妖樹の矢</OY_Tentacle_Arrow.label>
+
+
+</LanguageData>

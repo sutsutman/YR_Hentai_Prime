@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Building_Tentacle.label>淫妖樹(ベッド部)</YR_Building_Tentacle.label>
+  <YR_Building_Tentacle.description>これは,捧げられた女性を犯すために,淫妖樹が一体となった触手の集合体です.この触手の塊の上に横たわった女性は,淫妖樹に犯され,子宮に卵を植えつけられます.植えつけられた卵が芽吹き,女性の体内で完全に根付くと,触手の塊は自らの性奴隷である"深淵の花嫁"を解放します.\n\n自ら拘束するのではなく,誰かに拘束される必要があります.\n\n現在の拘束対象は：ユラン,ミンチョ,アンティ,モヨ,ミホ,マル,AOC,ボリ,シフォン,ドラコニアン(Gloomy)のみです.\nリトルフェアリー系列が導入済みであれば,リトルフェアリー系列も対象になります.</YR_Building_Tentacle.description>
+  <YR_Building_Tentacle.comps.CompUsableBondageBed.useLabel>拘束する</YR_Building_Tentacle.comps.CompUsableBondageBed.useLabel>
+
+
+</LanguageData>

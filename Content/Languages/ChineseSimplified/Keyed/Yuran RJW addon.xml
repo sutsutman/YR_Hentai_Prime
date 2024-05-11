@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <YR_Bound>拘束</YR_Bound>
+  <YR_Release>释放</YR_Release>
+  <YR_Release_BondageBed>解除{0}的束缚(挤奶机)</YR_Release_BondageBed>
+  <YR_CantUse>无法使用</YR_CantUse>
+  <YR_Forbid>"基本"工作类型已被禁止</YR_Forbid>
+  <YR_NoPrisoner>没有囚犯</YR_NoPrisoner>
+  <YR_NoPower>电力不足</YR_NoPower>
+  <YR_BondageBed>将{1}绑到挤奶机上</YR_BondageBed>
+  <YR_Reserved>{0}已被预留给其他人</YR_Reserved>
+  <YR_NoTarget>没有目标</YR_NoTarget>
+  <YR_HasForbiddenHediffDef>{0}因健康状态:"{1}" 无法束缚</YR_HasForbiddenHediffDef>
+  <YR_NeverRelease>束缚后无法释放</YR_NeverRelease>
+  <YR_AnimationCommandLabel>动画</YR_AnimationCommandLabel>
+  <YR_AnimationCommandDesc>指令设置 : {0}\n\nMod设置 : {1}\n\n您需要同时激活两者才能激活动画。</YR_AnimationCommandDesc>
+  <YR_ReverseBodyTextureCommandLabel>扭转身体的方向</YR_ReverseBodyTextureCommandLabel>
+  <YR_ReverseBodyTextureCommandDesc>扭转身体的方向。</YR_ReverseBodyTextureCommandDesc>
+  <YR_ResetLabel>重置</YR_ResetLabel>
+  <YR_ResetDesc>發生異常时将其关闭和打开是最有效的。</YR_ResetDesc> 
+  <YR_ShowHatCommandLabel>显示帽子</YR_ShowHatCommandLabel>
+  <YR_ShowHatCommandDesc>显示帽子。 有些人不喜欢它，因为摘下帽子很难分辨是谁，而且它也不那么吸引人。\n\n指令设置 : {0}\n\nMod设置 : {1}\n\n您需要同时激活这两项才能显示帽子。</YR_ShowHatCommandDesc>
+  <YR_ShowApparelCommandLabel>显示服装</YR_ShowApparelCommandLabel>
+  <YR_ShowApparelCommandDesc>显示服装。你知道当你买了一部像“OL卡在墙上”这样的色情电影，然后看了看，却把中间的衣服都脱了的时候的感觉吗？\n\n指令设置 : {0}\n\nMod设置 : {1}\n\n您需要同时激活这两项才能显示服装。</YR_ShowApparelCommandDesc>
+  <YR_SpawnMilkCommandLabel>排出内容物</YR_SpawnMilkCommandLabel>
+  <YR_SpawnMilkCommandDesc>排放本装置的内容物。</YR_SpawnMilkCommandDesc>
+  <YR_TestLog>输出测试日志</YR_TestLog>
+  <YR_StopAnimation>停止动画</YR_StopAnimation>
+  <YR_ShowHat>显示帽子</YR_ShowHat>
+  <YR_ShowApparel>显示服装</YR_ShowApparel>
+  <YR_SexSound>关闭呻吟声</YR_SexSound>
+  <YR_Speed_Warning>在提高游戏速度的情况下，如果使用挤奶机时侦数下降过多，或者动画太快，请通过下面的滑块调节。（默认侦数+额外侦数）*以倍数计算。</YR_Speed_Warning>
+  <YR_Speed_Ticks>侦数 : {0}</YR_Speed_Ticks>
+  <YR_Speed_Normal>1倍速 : {0}</YR_Speed_Normal>
+  <YR_Speed_Fast>2倍速 : {0}</YR_Speed_Fast>
+  <YR_Speed_Superfast>3倍速 : {0}</YR_Speed_Superfast>
+  <YR_Speed_Ultrafast>4倍速 : {0}</YR_Speed_Ultrafast>
+  <YR_zoom>画面缩放小于{0}时启动动画</YR_zoom>
+  <CompUseEffect_EggVibrator_String>{1} 被插入 {0} 的胯部。</CompUseEffect_EggVibrator_String>
+  <YR_EggVibrator_Cooldown>{0}秒后可用。</YR_EggVibrator_Cooldown>
+  <YR_Bote_Setting_CantReason>\n\n{0} 种族限制 : \n\n{8}体型限制 : \n\n{9}</YR_Bote_Setting_CantReason>
+  <YR_Bote_Setting_ForceDropMessage>{1}的体型不适合{2}。</YR_Bote_Setting_ForceDropMessage>
+  <YR_LockWeaponConsumeThingTipRegion>...你想吃掉我...？</YR_LockWeaponConsumeThingTipRegion>
+  <YR_LockWeaponTipRegion>你的身体是我的...</YR_LockWeaponTipRegion>
+  <YR_FinishEggInsert>直到淫妖樹完全扎根：｛0｝</YR_FinishEggInsert>
+  <YR_NeedCorpse_Tentacle_Altar>需要提供｛1｝具尸体来召唤淫妖樹</YR_NeedCorpse_Tentacle_Altar>
+  <YR_NeedCorpse_Tentacle_Tree>需要提供｛1｝更多尸体来增强淫妖樹</YR_NeedCorpse_Tentacle_Tree>
+  <YR_MoreNeedCorpse_Tentacle_Tree>需要提供｛2｝更多尸体以完成淫妖樹的生长</YR_MoreNeedCorpse_Tentacle_Tree>
+  <YR_MaxCorpse>不需要再提供尸体了</YR_MaxCorpse>	
+  <YR_BoundGUI>當小人被綁定時，顯示“拘束”字符。</YR_BoundGUI>
+  <YR_MainCNMSCommandLabel>指定为主系统</YR_MainCNMSCommandLabel>
+  <YR_MainCNMSCommandDesc>将此CNMS指定为主系统。存储在所有其他CNMS中的產物都收集在该CNMS中</YR_MainCNMSCommandDesc>
+  <YR_AddCorpseCommandLabel>Dev：提供1具尸体</YR_AddCorpseCommandLabel>
+  <YR_AddCorpseCommandDesc>提供1具尸体。</YR_AddCorpseCommandDesc>
+  <YR_MaxCorpseCommandLabel>Dev : 提供最多尸体</YR_MaxCorpseCommandLabel>
+  <YR_MaxCorpseCommandDesc>提供最多的尸体。</YR_MaxCorpseCommandDesc>
+  <YR_RJW_Mod>Yuran RJW Addon Mod</YR_RJW_Mod>
+  
+  <YR_Cooldown>可以在 {0} 秒后使用。</YR_Cooldown>
+  <FaceCellCommandLabel>调整身体方向</FaceCellCommandLabel>
+  <FaceCellCommandDesc>使用触手冲刺时，可以决定人物是朝向目標方向还是保持原始方向。</FaceCellCommandDesc>
+
+
+  <YR_ForbiddenOutsideAllowedAreaLower>建筑物位于 {0} 的 {1} 上 ： {2}</YR_ForbiddenOutsideAllowedAreaLower>
+  <YR_OutSideAllowedArea>{0} 因意外原因被释放。这可能是因为另一个小人接触了绑定的小人，或者绑定的建筑物位于 {0} 的 {1} 上。请检查 {0} 的 {2} 设置</YR_OutSideAllowedArea>  
+  <YR_ResetAllSetting>重置所有设置</YR_ResetAllSetting>
+  
+</LanguageData>

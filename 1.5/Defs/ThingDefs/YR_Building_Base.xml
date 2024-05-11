@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DesignationCategoryDef>
+		<defName>YR_RJW_Furniture</defName>
+		<label>lewd furniture</label>
+		<order>490</order>
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
+	<ThingDef Name="YR_AnimationBedBase" ParentName="FurnitureBase" Abstract="True">
+		<graphicData>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2.25,2.25)</drawSize>
+			<color>(255,255,255)</color>
+			<damageData>
+				<rect>(0,0.05,1,1.95)</rect>
+			</damageData>
+			<shadowData>
+				<volume>(1,1,1)</volume>
+				<offset>(0, 0, 0)</offset>
+			</shadowData>
+		</graphicData>
+		<thingClass>YR_Hentai_Prime_AnimationBed.Building_AnimationBed</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<passability>PassThroughOnly</passability>
+		<rotatable>false</rotatable>
+		<fillPercent>0.4</fillPercent>
+		<drawerType>RealtimeOnly</drawerType>
+		<!-- Prevents items clipping into it -->
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<pathCost>30</pathCost>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(1, 2)</size>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<designationCategory>YR_RJW_Furniture</designationCategory>
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
+			<WorkToBuild>800</WorkToBuild>
+			<Mass>30</Mass>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>YR_CNMS</li>
+				</linkableFacilities>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
+				<ticksToSpawn>10000</ticksToSpawn>
+				<thingToSpawn>Milk</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<conditionSpawnThings>
+					<li>
+						<condition>
+							<races>
+								<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+							</races>
+						</condition>
+						<thingToSpawn>YR_BreastMilk</thingToSpawn>
+						<spawnCount>20</spawnCount>
+					</li>
+					<li>
+						<condition>
+							<races>
+								<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+							</races>
+						</condition>
+						<thingToSpawn>YR_BreastMilk</thingToSpawn>
+						<spawnCount>30</spawnCount>
+					</li>
+				</conditionSpawnThings>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

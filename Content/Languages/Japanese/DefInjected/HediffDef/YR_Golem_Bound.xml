@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 골렘 결속 (몸통) -->
+
+  <YR_Golem_Bound.label>ゴーレムに拘束</YR_Golem_Bound.label>
+  <YR_Golem_Bound.description>TEST</YR_Golem_Bound.description>
+
+
+  <!-- 골렘 사지 -->
+
+  <YR_Golem_Limb.label>ゴーレムの四肢</YR_Golem_Limb.label>
+  <YR_Golem_Limb.description>TEST</YR_Golem_Limb.description>
+
+
+</LanguageData>
