@@ -44,27 +44,27 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-18,0)</offset>
+							<offset>(0.0,0,0)</offset>
 						</li>
 						<li>
 							<tick>4</tick>
-							<offset>(0.0,-18,0)</offset>
+							<offset>(0.0,0,0)</offset>
 						</li>
 						<li>
 							<tick>8</tick>
-							<offset>(0.0,-18,0.01)</offset>
+							<offset>(0.0,0,0.01)</offset>
 						</li>
 						<li>
 							<tick>12</tick>
-							<offset>(0.0,-18,0.015)</offset>
+							<offset>(0.0,0,0.015)</offset>
 						</li>
 						<li>
 							<tick>40</tick>
-							<offset>(0.0,-18,0.01)</offset>
+							<offset>(0.0,0,0.01)</offset>
 						</li>
 						<li>
 							<tick>60</tick>
-							<offset>(0.0,-18,0)</offset>
+							<offset>(0.0,0,0)</offset>
 						</li>
 					</keyframes>
 				</value>
@@ -72,14 +72,6 @@
 		</animationParts>
 	</AnimationDef>
 	
-	<!-- 폰 바디 애니메이션 -->
-	<!-- 공용(더미) -->
-	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<defName>YR_Milking_Dummy</defName>
-		<autoDurationTicksSetting>true</autoDurationTicksSetting>
-		<bedAnimationSettings>
-		</bedAnimationSettings>
-	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 	<!-- 침대 애니메이션 -->
 	<!-- 머리 위 기계 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>

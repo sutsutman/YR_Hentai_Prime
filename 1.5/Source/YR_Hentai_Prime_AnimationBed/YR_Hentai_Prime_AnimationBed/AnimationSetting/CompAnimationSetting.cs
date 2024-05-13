@@ -32,6 +32,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public Condition condition;
         public GraphicData graphicData;
+        public string maskPathForPortrait;
         public Graphic graphic;
         public int tick;
         public Vector3 offset;
@@ -52,7 +53,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public BedAnimationSetting Copy()
         {
             var copied = (BedAnimationSetting)this.MemberwiseClone();
-            copied.graphic = new Graphic(); // 새로운 Graphic 객체 생성
+            copied.graphic = new Graphic();
             return copied;
         }
     }

@@ -275,7 +275,7 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
         public bool setAnimation = true;
-        private static bool openControllSetting;
+        public bool openControllSetting;
 
         public override void Tick()
         {
@@ -439,13 +439,26 @@ namespace YR_Hentai_Prime_AnimationBed
             Pawn heldPawn = HeldPawn;
             if (heldPawn != null)
             {
-                Rot4 value = Rot4.South;
+                Rot4 rotation = AnimationSettingComp.Props.pawnAnimationSetting.rotation;
                 if (heldPawn.IsMutant && heldPawn.RaceProps.Animal)
                 {
-                    value = Rot4.East;
+                    rotation = Rot4.East;
                 }
 
-                heldPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, DrawPos + PawnDrawOffset, value, neverAimWeapon: true);
+                foreach (var conditionPawnRotation in AnimationSettingComp.Props.pawnAnimationSetting.conditionPawnRotations)
+                {
+                    if (Condition.Match(HeldPawn, this, conditionPawnRotation.condition))
+                    {
+                        rotation = conditionPawnRotation.rotation;
+
+                        if (Condition.NeedBreak(conditionPawnRotation.condition))
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                heldPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, DrawPos + PawnDrawOffset, rotation, neverAimWeapon: true);
 
                 BedAnimationUtility.DrawBedAnimation(this, AnimationSettingComp, HeldPawn);
             }
@@ -534,6 +547,8 @@ namespace YR_Hentai_Prime_AnimationBed
             //defaultPointMapping = null;
             //chains = null;
             setAnimation = true;
+            animationSettingComp.needMakeGraphics = true;
+
             HeldPawn?.Drawer.renderer.SetAnimation(null);
             HeldPawn?.GetComp<CompAnimationBedTarget>()?.Notify_ReleasedFromPlatform();
             ToggleHediffComp?.RemoveAllHediffs(HeldPawn);
@@ -714,8 +729,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
             //테스트용 기즈모
 
-            var testGizmos = TESTGIZMO();
-            foreach (var testGizmo in testGizmos)
+            foreach (var testGizmo in TESTGIZMO())
             {
                 yield return testGizmo;
             }
@@ -746,10 +760,18 @@ namespace YR_Hentai_Prime_AnimationBed
                     foreach (var bedAnimationSettingAndTick in AnimationSettingComp.bedAnimationSettingAndTicks)
                     {
                         List<BedAnimationSetting> bedAnimationSettings = bedAnimationSettingAndTick.bedAnimationSettings;
+
+                        Texture2D openGizmoIcon = ContentFinder<Texture2D>.Get("UI/YR_Dummy");
+                        if (bedAnimationSettings[0]?.graphicData?.texPath != null)
+                        {
+
+                            openGizmoIcon = ContentFinder<Texture2D>.Get(bedAnimationSettings[0].graphicData.texPath);
+                        }
+
                         yield return new Command_Action
                         {
                             defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "OpenGizmo",
-                            icon = ContentFinder<Texture2D>.Get(bedAnimationSettings[0].graphicData.texPath),
+                            icon = openGizmoIcon,
                             action = delegate
                             {
                                 if (bedAnimationSettingAndTick.openTestGizmo)
@@ -1007,7 +1029,7 @@ namespace YR_Hentai_Prime_AnimationBed
         private readonly List<float> values = new List<float> { 0.001f, 0.01f, 0.1f, 1f };
         private int currentIndex = 0;
         float movef = 0.001f;
-        internal bool dummyForJoyIsActive;
+        public bool dummyForJoyIsActive;
 
         public void Notify_PawnDied(Pawn pawn, DamageInfo? dinfo)
         {

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 폰 애니메이션 -->
+	<AnimationDef>
+		<defName>YR_Dummy_Animation</defName>
+		<durationTicks>60</durationTicks>
+		<animationParts>
+			<li>
+				<key>Root</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+						</li>
+					</keyframes>
+				</value>
+			</li>
+		</animationParts>
+	</AnimationDef>
+	<!-- 폰 바디 애니메이션 -->
+	<!-- 공용(더미) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Dummy_BedAnimation</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.0, 0.0)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Bodies/Dummy/YR_Bote</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(0, 0)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

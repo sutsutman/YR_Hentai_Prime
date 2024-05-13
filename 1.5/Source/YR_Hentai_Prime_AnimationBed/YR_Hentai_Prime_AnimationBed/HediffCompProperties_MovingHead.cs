@@ -12,7 +12,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public AnimationDef animationDef;
     }
 
-    internal class HediffComp_MovingHead : HediffComp
+    public class HediffComp_MovingHead : HediffComp
     {
         public HediffCompProperties_MovingHead Props => (HediffCompProperties_MovingHead)props;
         public override void CompPostPostAdd(DamageInfo? dinfo)

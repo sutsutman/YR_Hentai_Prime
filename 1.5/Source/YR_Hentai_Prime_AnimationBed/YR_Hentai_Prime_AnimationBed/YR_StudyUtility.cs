@@ -6,7 +6,7 @@ using Verse.AI;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
-    internal class YR_StudyUtility
+    public class YR_StudyUtility
     {
         private static readonly HashSet<Pawn> tmpReservers = new HashSet<Pawn>();
 

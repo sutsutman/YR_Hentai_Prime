@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 폰 애니메이션 -->
+	<AnimationDef>
+		<defName>YR_GloryHole_Animation_PanPanPlay_North</defName>
+		<durationTicks>60</durationTicks>
+		<animationParts>
+			<li>
+				<key>Root</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,1,1.5)</offset>
+						</li>
+						<li>
+							<tick>4</tick>
+							<offset>(0.0,1,1.5)</offset>
+						</li>
+						<li>
+							<tick>8</tick>
+							<offset>(0.0,1,1.51)</offset>
+						</li>
+						<li>
+							<tick>12</tick>
+							<offset>(0.0,1,1.515)</offset>
+						</li>
+						<li>
+							<tick>40</tick>
+							<offset>(0.0,1,1.51)</offset>
+						</li>
+						<li>
+							<tick>60</tick>
+							<offset>(0.0,1,1.5)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
+		</animationParts>
+	</AnimationDef>
+	<!-- 침대 애니메이션 -->
+	<!-- 포트레잇 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Portrait</defName>
+		<isPortrait>true</isPortrait>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Part/Upper</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+				<maskPathForPortrait>UI/YR_Dummy</maskPathForPortrait>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 판자 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Part_Upper</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.0,0.0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Part/Upper</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Part_Lower</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0.0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Part/Lower</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 쿠션들 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Cushion_Commissure_Up</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Commissure/Up</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Cushion_Commissure_Down</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,-2.0,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Commissure/Down</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Cushion_Commissure_Right</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Commissure/Right</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Cushion_Commissure_Left</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Commissure/Left</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

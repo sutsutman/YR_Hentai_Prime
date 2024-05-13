@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--엉덩이-->
+	<ThingDef ParentName="YR_AnimationBedBase">
+		<defName>YR_Building_GloryHole</defName>
+		<label>glory hole</label>
+		<description>Bondage apparatus for the lewd whom wants to be raped as if they were masturbation toys, but too shy to reveal themselves.\n\nThey are the only ones not knowing of the large portrait placed on the pillory, however.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/GloryHole/Bed/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<uiOrder>100</uiOrder>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
+				<!-- 묶였을 때 부여되는 헤디프 -->
+				<addedHediffDefs>
+					<li>YR_MilkingMachine_DisableNeed</li>
+				</addedHediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
+				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+				<hediffDefs>
+					<li>YR_PowerMode1_Hediff</li>
+					<li>YR_PowerMode2_Hediff</li>
+				</hediffDefs>
+			</li>
+			<!-- 팡팡 놀이 -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
+				<thingDef>YR_DummyForJoy</thingDef>
+				<animationDef>YR_GloryHole_Animation_PanPanPlay_North</animationDef>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
+				<pawnAnimationSetting>
+					<pawnAnimationDef>YR_Dummy_Animation</pawnAnimationDef>
+					<!-- 기본 애니메이션 -->
+					<conditonPawnAnimations>
+						<!-- 바디 텍스처 바꾸고 싶으면 기존 바디 레이어를 숨긴 애니메이션 사용 해야 함 -->
+						<li>
+							<condition>
+								<dummyForJoyIsActive>true</dummyForJoyIsActive>
+							</condition>
+							<pawnAnimationDef>YR_MilkingMachine_Animation</pawnAnimationDef>
+						</li>
+					</conditonPawnAnimations>
+					<offset>(0,0,0.25)</offset>
+					<conditonPawnOffsets>
+						<li>
+							<condition/>
+							<offset/>
+						</li>
+					</conditonPawnOffsets>
+					<rotation>North</rotation>
+					<conditionPawnRotations>
+						<li>
+							<condition/>
+							<rotation/>
+						</li>
+					</conditionPawnRotations>
+				</pawnAnimationSetting>
+				<bedAnimationList>
+					<!-- 폰의 바디, 헤드 -->
+					<li>
+						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+					</li>
+					<!-- 침대의 애니메이션 -->
+					<!-- 포트레잇 -->
+					<!-- <li> -->
+						<!-- <bedAnimationDef>YR_GloryHole_Portrait</bedAnimationDef> -->
+					<!-- </li> -->
+					<!-- 판자 -->
+					<li>
+						<bedAnimationDef>YR_GloryHole_Part_Upper</bedAnimationDef>
+					</li>
+					<!-- 쿠션 -->
+					<li>
+						<bedAnimationDef>YR_GloryHole_Cushion_Commissure_Up</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_Cushion_Commissure_Down</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_Cushion_Commissure_Right</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_Cushion_Commissure_Left</bedAnimationDef>
+					</li>
+				</bedAnimationList>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

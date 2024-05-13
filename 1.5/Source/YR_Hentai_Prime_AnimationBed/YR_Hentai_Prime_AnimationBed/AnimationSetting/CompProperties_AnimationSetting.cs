@@ -13,11 +13,23 @@ namespace YR_Hentai_Prime_AnimationBed
     }
     public class PawnAnimationSetting
     {
+        //애니메이션
         public AnimationDef pawnAnimationDef;
         public List<ConditonPawnAnimation> conditonPawnAnimations = new List<ConditonPawnAnimation>();
 
+        //위치
         public Vector3 offset;
         public List<ConditonPawnOffset> conditonPawnOffsets = new List<ConditonPawnOffset>();
+
+        //방향
+        public Rot4 rotation = Rot4.South;
+        public List<ConditionPawnRotation> conditionPawnRotations = new List<ConditionPawnRotation>();
+    }
+
+    public class ConditionPawnRotation
+    {
+        public Condition condition;
+        public Rot4 rotation = Rot4.South;
     }
 
     public class ConditonPawnAnimation
