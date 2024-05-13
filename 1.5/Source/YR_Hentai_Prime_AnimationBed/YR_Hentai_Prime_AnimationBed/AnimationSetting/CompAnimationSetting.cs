@@ -11,6 +11,22 @@ namespace YR_Hentai_Prime_AnimationBed
         public List<BedAnimationSettingAndTick> bedAnimationSettingAndTicks = new List<BedAnimationSettingAndTick>();
 
         public bool needMakeGraphics = true;
+
+        public PortraitMeshs portraitMeshs;
+    }
+
+
+    public class PortraitMeshs
+    {
+        public Material iconMat;
+        public Mesh portraitMesh;
+        public Material material;
+        public bool openTestGizmo;
+        public Vector2 drawSize;
+
+        public Vector3 testOffset;
+        internal float testAngle;
+        internal Vector2 testDrawSize;
     }
 
     public class BedAnimationSettingAndTick
@@ -26,6 +42,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public BedAnimationDef parentBedAnimationDef;
 
         public bool openTestGizmo = false;
+
     }
 
     public class BedAnimationSetting

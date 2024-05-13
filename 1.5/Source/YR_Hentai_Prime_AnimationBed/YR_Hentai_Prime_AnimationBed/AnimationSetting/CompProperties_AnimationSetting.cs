@@ -10,7 +10,37 @@ namespace YR_Hentai_Prime_AnimationBed
         public PawnAnimationSetting pawnAnimationSetting = new PawnAnimationSetting();
 
         public List<BedAnimation> bedAnimationList = new List<BedAnimation>();
+
+        public PawnPortraitSetting pawnPortraitSetting = null;
     }
+
+    public class PawnPortraitSetting
+    {
+        public PortraitSetting portraitSetting = new PortraitSetting();
+
+        public List<ConditonPortraitSetting> conditonPortraitSettings = new List<ConditonPortraitSetting>();
+    }
+
+    public class PortraitSetting
+    {
+        public GraphicData portraitMeshGraphicData;
+        public Vector2 drawSize = Vector2.one;
+        public Vector3 offset;
+        public string maskPath;
+        public Rot4 rotation;
+        public Vector3 cameraOffset;
+        public float cameraZoom;
+        public bool renderClothes;
+        public bool renderHeadgear;
+        public float angle;
+    }
+
+    public class ConditonPortraitSetting
+    {
+        public PortraitSetting portraitSetting;
+        public Condition condition;
+    }
+
     public class PawnAnimationSetting
     {
         //애니메이션

@@ -66,7 +66,7 @@
 					<!-- 침대의 애니메이션 -->
 					<!-- 포트레잇 -->
 					<!-- <li> -->
-						<!-- <bedAnimationDef>YR_GloryHole_Portrait</bedAnimationDef> -->
+					<!-- <bedAnimationDef>YR_GloryHole_Portrait</bedAnimationDef> -->
 					<!-- </li> -->
 					<!-- 판자 -->
 					<li>
@@ -86,6 +86,29 @@
 						<bedAnimationDef>YR_GloryHole_Cushion_Commissure_Left</bedAnimationDef>
 					</li>
 				</bedAnimationList>
+				<pawnPortraitSetting>
+					<portraitSetting>
+						<!-- <offset>(0,0.5,0)</offset> -->
+						<!-- <drawSize>(2,2)</drawSize> -->
+						<maskPath>UI/YR_Dummy</maskPath>
+						<rotation>South</rotation>
+						<!-- <cameraOffset>(0,0,0)</cameraOffset> -->
+						<!-- <cameraZoom>1.5</cameraZoom> -->
+						<renderClothes>false</renderClothes>
+						<renderHeadgear>false</renderHeadgear>
+						<portraitMeshGraphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Part/Upper</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</portraitMeshGraphicData>
+					</portraitSetting>
+					<!-- <conditonPortraitSettings> -->
+						<!-- <li> -->
+							<!-- <portraitSetting/> -->
+							<!-- <condition/> -->
+						<!-- </li> -->
+					<!-- </conditonPortraitSettings> -->
+				</pawnPortraitSetting>
 			</li>
 		</comps>
 	</ThingDef>

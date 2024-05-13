@@ -997,7 +997,167 @@ namespace YR_Hentai_Prime_AnimationBed
                         }
                     }
 
+                    if (AnimationSettingComp.portraitMeshs != null)
+                    {
+                        yield return new Command_Action
+                        {
+                            defaultLabel = $"Open Portrait Gizmo",
+                            icon = ContentFinder<Texture2D>.Get("UI/YR_Dummy"),
+                            action = delegate
+                            {
+                                if (AnimationSettingComp.portraitMeshs.openTestGizmo)
+                                {
+                                    AnimationSettingComp.portraitMeshs.openTestGizmo = false;
+                                }
+                                else
+                                {
+                                    AnimationSettingComp.portraitMeshs.openTestGizmo = true;
+                                }
+                            }
+                        };
+
+                        if (AnimationSettingComp.portraitMeshs.openTestGizmo)
+                        {
+                            //reset
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : Reset",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testAngle = 0;
+                                    animationSettingComp.portraitMeshs.testDrawSize = new Vector2();
+                                    animationSettingComp.portraitMeshs.testOffset = new Vector3();
+                                }
+                            };
+
+                            // X
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : Right",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testOffset.x += movef;
+
+                                    Messages.Message($"Portrait testOffset.x : {animationSettingComp.portraitMeshs.testOffset.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : Left",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testOffset.x -= movef;
+
+                                    Messages.Message($"Portrait testOffset.x : {animationSettingComp.portraitMeshs.testOffset.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            // Y
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : Front",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testOffset.y += movef;
+
+                                    Messages.Message($"testOffset.y : {animationSettingComp.portraitMeshs.testOffset.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : Back",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testOffset.y -= movef;
+
+                                    Messages.Message($"testOffset.y : {animationSettingComp.portraitMeshs.testOffset.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+
+                            // Z
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : Up",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testOffset.z += movef;
+
+                                    Messages.Message($"testOffset.z : {animationSettingComp.portraitMeshs.testOffset.z}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : Down",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testOffset.z -= movef;
+
+                                    Messages.Message($"testOffset.z : {animationSettingComp.portraitMeshs.testOffset.z}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            // DrawSize x
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : draw x Big",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testDrawSize.x += movef;
+
+                                    Messages.Message($"Portrait testDrawSize.x : {animationSettingComp.portraitMeshs.testDrawSize.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : draw x Small",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testDrawSize.x -= movef;
+
+                                    Messages.Message($"Portrait testDrawSize.x : {animationSettingComp.portraitMeshs.testDrawSize.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            // DrawSize y
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : draw y Big",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_y_Big"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testDrawSize.y += movef;
+
+                                    Messages.Message($"Portrait testDrawSize.y : {animationSettingComp.portraitMeshs.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : draw y Small",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_y_Small"),
+                                action = delegate
+                                {
+                                    animationSettingComp.portraitMeshs.testDrawSize.y -= movef;
+
+                                    Messages.Message($"Portrait testDrawSize.y : {animationSettingComp.portraitMeshs.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                        }
+                    }
+
                 }
+
+
             }
 
             void ToggleOpenControlSetting()
@@ -1008,6 +1168,11 @@ namespace YR_Hentai_Prime_AnimationBed
                     foreach (var bedAnimationSettingAndTick in AnimationSettingComp.bedAnimationSettingAndTicks)
                     {
                         bedAnimationSettingAndTick.openTestGizmo = false;
+                    }
+
+                    if (AnimationSettingComp.portraitMeshs != null)
+                    {
+                        AnimationSettingComp.portraitMeshs.openTestGizmo = false;
                     }
                 }
                 else
@@ -1024,8 +1189,9 @@ namespace YR_Hentai_Prime_AnimationBed
                 // 새 값을 얻고 특정 소숫점 이하에서 올림
                 movef = (float)Math.Round(values[currentIndex], 3);
             }
-
         }
+
+
         private readonly List<float> values = new List<float> { 0.001f, 0.01f, 0.1f, 1f };
         private int currentIndex = 0;
         float movef = 0.001f;

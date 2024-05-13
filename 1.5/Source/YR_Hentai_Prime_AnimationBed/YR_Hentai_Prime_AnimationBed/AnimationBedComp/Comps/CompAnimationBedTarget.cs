@@ -362,11 +362,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            foreach (Gizmo gizmo in base.CompGetGizmosExtra())
-            {
-                yield return gizmo;
-            }
-
             if (StudiedAtHoldingPlatform && !CurrentlyHeldOnPlatform && CanBeCaptured)
             {
                 if (targetHolder != null)
