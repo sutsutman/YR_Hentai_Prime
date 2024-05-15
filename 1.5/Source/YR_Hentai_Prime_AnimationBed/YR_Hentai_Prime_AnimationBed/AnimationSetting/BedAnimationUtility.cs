@@ -170,6 +170,11 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             Pawn pawn = building_AnimationBed.HeldPawn;
 
+            if(animationSettingComp == null)
+            {
+                return false;
+            }
+
             if (animationSettingComp.needMakeGraphics == false)
             {
                 return true; // 애니메이션 설정이 필요 없거나 없으면 바로 반환

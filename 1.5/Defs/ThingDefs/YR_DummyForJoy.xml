@@ -24,6 +24,9 @@
 		<comps>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_DummyForJoy">
 			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ForcePlay">
+			<jobDef>Play_DummyForJoy</jobDef>
+			</li>
 		</comps>
 	</ThingDef>
 	<JobDef>

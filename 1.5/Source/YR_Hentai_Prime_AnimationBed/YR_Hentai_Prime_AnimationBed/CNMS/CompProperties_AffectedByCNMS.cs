@@ -40,7 +40,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             base.CompTick();
 
-            if (Pawn != null)
+            if (HeldPawn != null)
             {
                 ticksToSpawn--;
             }
@@ -116,7 +116,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
             foreach (var conditionSpawnThing in Props.conditionSpawnThings)
             {
-                if (Condition.Match(Pawn, Building_AnimationBed, conditionSpawnThing.condition))
+                if (Condition.Match(HeldPawn, Building_AnimationBed, conditionSpawnThing.condition))
                 {
                     thingToSpawn = conditionSpawnThing.thingToSpawn;
                     spawnCount = conditionSpawnThing.spawnCount;

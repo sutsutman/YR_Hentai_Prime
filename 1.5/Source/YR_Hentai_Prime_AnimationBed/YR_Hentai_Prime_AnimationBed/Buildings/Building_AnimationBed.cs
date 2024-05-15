@@ -75,6 +75,11 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             get
             {
+                if(AnimationSettingComp == null)
+                {
+                    return new Vector3();
+                }
+
                 PawnAnimationSetting pawnAnimationSetting = AnimationSettingComp.Props.pawnAnimationSetting;
                 var offset = pawnAnimationSetting.offset;
 
@@ -437,7 +442,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             base.DynamicDrawPhaseAt(phase, drawLoc, flip);
             Pawn heldPawn = HeldPawn;
-            if (heldPawn != null)
+            if (heldPawn != null && AnimationSettingComp!=null)
             {
                 Rot4 rotation = AnimationSettingComp.Props.pawnAnimationSetting.rotation;
                 if (heldPawn.IsMutant && heldPawn.RaceProps.Animal)
@@ -461,6 +466,10 @@ namespace YR_Hentai_Prime_AnimationBed
                 heldPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, DrawPos + PawnDrawOffset, rotation, neverAimWeapon: true);
 
                 BedAnimationUtility.DrawBedAnimation(this, AnimationSettingComp, HeldPawn);
+            }
+            else if(heldPawn != null)
+            {
+                heldPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, DrawPos + PawnDrawOffset, Rot4.South, neverAimWeapon: true);
             }
         }
 

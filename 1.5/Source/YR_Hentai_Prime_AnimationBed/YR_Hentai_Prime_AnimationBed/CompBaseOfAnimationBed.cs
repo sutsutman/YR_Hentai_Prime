@@ -6,7 +6,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public Building_AnimationBed Building_AnimationBed => (Building_AnimationBed)parent;
 
-        public Pawn Pawn => Building_AnimationBed.HeldPawn;
+        public Pawn HeldPawn => Building_AnimationBed.HeldPawn;
 
         public virtual void Notify_HeldOnPlatform(ThingOwner newOwner)
         {
