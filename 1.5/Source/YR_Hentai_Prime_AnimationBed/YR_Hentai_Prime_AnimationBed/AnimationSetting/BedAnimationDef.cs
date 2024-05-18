@@ -12,6 +12,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public bool setPawnColor = false;
         public PawnRenderNodeTagDef pawnRenderNodeTagDef;
         public bool animationSynchro;
+        public bool animationSynchrotoDummyForJoyAnimation;
         public bool isPortrait = false;
 
         public bool logCurrentTexture = false;

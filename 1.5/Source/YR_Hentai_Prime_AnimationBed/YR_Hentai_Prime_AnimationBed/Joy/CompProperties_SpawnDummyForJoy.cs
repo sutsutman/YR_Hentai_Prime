@@ -16,16 +16,17 @@ namespace YR_Hentai_Prime_AnimationBed
         public CompProperties_SpawnDummyForJoy Props => (CompProperties_SpawnDummyForJoy)props;
 
         public Thing spawnThing = null;
+
+        public CompDummyForJoy DummyForJoyComp => spawnThing?.TryGetComp<CompDummyForJoy>();
         public override void Notify_HeldOnPlatform(ThingOwner newOwner)
         {
             base.Notify_HeldOnPlatform(newOwner);
 
             spawnThing = GenSpawn.Spawn(Props.thingDef, parent.Position, parent.Map);
 
-            var comp = spawnThing.TryGetComp<CompDummyForJoy>();
-            if (comp != null)
+            if (DummyForJoyComp != null)
             {
-                comp.building_AnimationBed = Building_AnimationBed;
+                DummyForJoyComp.building_AnimationBed = Building_AnimationBed;
             }
         }
 

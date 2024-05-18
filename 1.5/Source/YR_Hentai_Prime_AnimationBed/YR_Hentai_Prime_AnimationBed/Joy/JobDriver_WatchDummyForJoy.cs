@@ -67,6 +67,7 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 pawn.Drawer.renderer.SetAnimation(CompSpawnDummyForJoy?.Props.animationDef);
                 Building_AnimationBed.dummyForJoyIsActive = true;
+                Building_AnimationBed.dummyForJoyPawn = pawn;
                 Building_AnimationBed.setAnimation = true;
                 CompAnimationSetting.needMakeGraphics = true;
             }
@@ -75,6 +76,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             pawn.Drawer.renderer.SetAnimation(null);
             Building_AnimationBed.dummyForJoyIsActive = false;
+            Building_AnimationBed.dummyForJoyPawn = null;
             Building_AnimationBed.setAnimation = true;
             CompAnimationSetting.needMakeGraphics = true;
 

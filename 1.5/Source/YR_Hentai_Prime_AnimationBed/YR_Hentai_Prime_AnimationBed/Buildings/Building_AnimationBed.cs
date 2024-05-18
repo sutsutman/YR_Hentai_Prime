@@ -42,6 +42,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private CompToggleHediff toggleHediffComp;
 
+        private CompSpawnDummyForJoy spawnDummyForJoyComp;
+
         private AttachPointTracker targetPoints;
 
         //private List<Chain> defaultPointMapping;
@@ -112,6 +114,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public CompAnimationSetting AnimationSettingComp => animationSettingComp ??= GetComp<CompAnimationSetting>();
 
         public CompToggleHediff ToggleHediffComp => toggleHediffComp ??= GetComp<CompToggleHediff>();
+        public CompSpawnDummyForJoy SpawnDummyForJoyComp => spawnDummyForJoyComp ??= GetComp<CompSpawnDummyForJoy>();
 
         public ThingOwner SearchableContents => innerContainer;
 
@@ -1308,6 +1311,7 @@ namespace YR_Hentai_Prime_AnimationBed
         private int currentIndex = 0;
         float movef = 0.001f;
         public bool dummyForJoyIsActive;
+        public Pawn dummyForJoyPawn;
 
         public void Notify_PawnDied(Pawn pawn, DamageInfo? dinfo)
         {

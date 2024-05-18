@@ -92,6 +92,25 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
                 }
             }
+            else if (bedAnimationSettingAndTick.parentBedAnimationDef.animationSynchrotoDummyForJoyAnimation && bedAnimationSettingAndTick.parentBedAnimationDef.pawnRenderNodeTagDef != null && building_AnimationBed.dummyForJoyIsActive && building_AnimationBed.dummyForJoyPawn != null)
+            {
+                var dummyPawn = building_AnimationBed.dummyForJoyPawn;
+                PawnRenderNode renderNode = dummyPawn.Drawer.renderer.renderTree.rootNode.children
+                    .FirstOrDefault(n => n?.Props?.tagDef == bedAnimationSettingAndTick.parentBedAnimationDef.pawnRenderNodeTagDef);
+
+                if (renderNode != null)
+                {
+                    Vector3 offset = renderNode.Worker.OffsetFor(renderNode, building_AnimationBed.HeldPawnDrawParms, out var pivot);
+                    offset -= pivot;
+                    pos += offset;
+
+                    if (bedAnimationSettingAndTick.parentBedAnimationDef.logCurrentOffset)
+                    {
+                        Log.Error($"pawnRenderNodeTagDef offset : {offset.x:F5}, {offset.y:F5}, {offset.z:F5}");
+                        Log.Error($"pawnRenderNodeTagDef pivot : {pivot.x:F5}, {pivot.y:F5}, {pivot.z:F5}");
+                    }
+                }
+            }
 
             // 테스트용 오프셋 추가
             pos += closestSetting.testOffset;

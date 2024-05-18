@@ -103,7 +103,7 @@
 					<li>
 						<bedAnimationDef>YR_GloryHole_Cushion_Left_UpUp</bedAnimationDef>
 					</li>
-					<!-- 펠라티오 배경 테스트용 -->
+					<!-- 펠라티오 배경 -->
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
@@ -123,6 +123,18 @@
 									<dummyForJoyIsActive>true</dummyForJoyIsActive>
 								</condition>
 								<bedAnimationDef>YR_GloryHole_FellatioBackGround_Front</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 꼬추 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Penis</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
