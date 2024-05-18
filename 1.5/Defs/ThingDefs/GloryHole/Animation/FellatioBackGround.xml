@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 말풍선 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_FellatioBackGround_BackGround</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_FellatioBackGround_Front</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Front</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

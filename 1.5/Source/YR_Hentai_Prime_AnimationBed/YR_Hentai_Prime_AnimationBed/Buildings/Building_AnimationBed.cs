@@ -75,7 +75,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             get
             {
-                if(AnimationSettingComp == null)
+                if (AnimationSettingComp == null)
                 {
                     return new Vector3();
                 }
@@ -442,7 +442,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             base.DynamicDrawPhaseAt(phase, drawLoc, flip);
             Pawn heldPawn = HeldPawn;
-            if (heldPawn != null && AnimationSettingComp!=null)
+            if (heldPawn != null && AnimationSettingComp != null)
             {
                 Rot4 rotation = AnimationSettingComp.Props.pawnAnimationSetting.rotation;
                 if (heldPawn.IsMutant && heldPawn.RaceProps.Animal)
@@ -465,11 +465,11 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 heldPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, DrawPos + PawnDrawOffset, rotation, neverAimWeapon: true);
 
-                BedAnimationUtility.DrawBedAnimation(this, AnimationSettingComp, HeldPawn);
+                BedAnimationUtility.DrawBedAnimation(this);
             }
-            else if(heldPawn != null)
+            else
             {
-                heldPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, DrawPos + PawnDrawOffset, Rot4.South, neverAimWeapon: true);
+                heldPawn?.Drawer.renderer.DynamicDrawPhaseAt(phase, DrawPos + PawnDrawOffset, Rot4.South, neverAimWeapon: true);
             }
         }
 
@@ -1006,26 +1006,28 @@ namespace YR_Hentai_Prime_AnimationBed
                         }
                     }
 
-                    if (AnimationSettingComp.portraitMeshs != null)
+                    int i = 0;
+                    foreach (var portraitIngredient in AnimationSettingComp.portraitIngredients)
                     {
+
                         yield return new Command_Action
                         {
-                            defaultLabel = $"Open Portrait Gizmo",
+                            defaultLabel = $"Open Portrait Gizmo : {i}",
                             icon = ContentFinder<Texture2D>.Get("UI/YR_Dummy"),
                             action = delegate
                             {
-                                if (AnimationSettingComp.portraitMeshs.openTestGizmo)
+                                if (portraitIngredient.openTestGizmo)
                                 {
-                                    AnimationSettingComp.portraitMeshs.openTestGizmo = false;
+                                    portraitIngredient.openTestGizmo = false;
                                 }
                                 else
                                 {
-                                    AnimationSettingComp.portraitMeshs.openTestGizmo = true;
+                                    portraitIngredient.openTestGizmo = true;
                                 }
                             }
                         };
 
-                        if (AnimationSettingComp.portraitMeshs.openTestGizmo)
+                        if (portraitIngredient.openTestGizmo)
                         {
                             //reset
                             yield return new Command_Action
@@ -1034,9 +1036,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testAngle = 0;
-                                    animationSettingComp.portraitMeshs.testDrawSize = new Vector2();
-                                    animationSettingComp.portraitMeshs.testOffset = new Vector3();
+                                    portraitIngredient.testAngle = 0;
+                                    portraitIngredient.testDrawSize = new Vector2();
+                                    portraitIngredient.testOffset = new Vector3();
                                 }
                             };
 
@@ -1047,9 +1049,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testOffset.x += movef;
+                                    portraitIngredient.testOffset.x += movef;
 
-                                    Messages.Message($"Portrait testOffset.x : {animationSettingComp.portraitMeshs.testOffset.x}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"Portrait testOffset.x : {portraitIngredient.testOffset.x}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
 
@@ -1059,9 +1061,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testOffset.x -= movef;
+                                    portraitIngredient.testOffset.x -= movef;
 
-                                    Messages.Message($"Portrait testOffset.x : {animationSettingComp.portraitMeshs.testOffset.x}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"Portrait testOffset.x : {portraitIngredient.testOffset.x}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
 
@@ -1072,9 +1074,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testOffset.y += movef;
+                                    portraitIngredient.testOffset.y += movef;
 
-                                    Messages.Message($"testOffset.y : {animationSettingComp.portraitMeshs.testOffset.y}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"testOffset.y : {portraitIngredient.testOffset.y}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
                             yield return new Command_Action
@@ -1083,9 +1085,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testOffset.y -= movef;
+                                    portraitIngredient.testOffset.y -= movef;
 
-                                    Messages.Message($"testOffset.y : {animationSettingComp.portraitMeshs.testOffset.y}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"testOffset.y : {portraitIngredient.testOffset.y}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
 
@@ -1097,9 +1099,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testOffset.z += movef;
+                                    portraitIngredient.testOffset.z += movef;
 
-                                    Messages.Message($"testOffset.z : {animationSettingComp.portraitMeshs.testOffset.z}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"testOffset.z : {portraitIngredient.testOffset.z}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
                             yield return new Command_Action
@@ -1108,9 +1110,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testOffset.z -= movef;
+                                    portraitIngredient.testOffset.z -= movef;
 
-                                    Messages.Message($"testOffset.z : {animationSettingComp.portraitMeshs.testOffset.z}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"testOffset.z : {portraitIngredient.testOffset.z}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
 
@@ -1121,9 +1123,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testDrawSize.x += movef;
+                                    portraitIngredient.testDrawSize.x += movef;
 
-                                    Messages.Message($"Portrait testDrawSize.x : {animationSettingComp.portraitMeshs.testDrawSize.x}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"Portrait testDrawSize.x : {portraitIngredient.testDrawSize.x}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
                             yield return new Command_Action
@@ -1132,9 +1134,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testDrawSize.x -= movef;
+                                    portraitIngredient.testDrawSize.x -= movef;
 
-                                    Messages.Message($"Portrait testDrawSize.x : {animationSettingComp.portraitMeshs.testDrawSize.x}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"Portrait testDrawSize.x : {portraitIngredient.testDrawSize.x}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
 
@@ -1145,9 +1147,9 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_y_Big"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testDrawSize.y += movef;
+                                    portraitIngredient.testDrawSize.y += movef;
 
-                                    Messages.Message($"Portrait testDrawSize.y : {animationSettingComp.portraitMeshs.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"Portrait testDrawSize.y : {portraitIngredient.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
                             yield return new Command_Action
@@ -1156,12 +1158,13 @@ namespace YR_Hentai_Prime_AnimationBed
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_y_Small"),
                                 action = delegate
                                 {
-                                    animationSettingComp.portraitMeshs.testDrawSize.y -= movef;
+                                    portraitIngredient.testDrawSize.y -= movef;
 
-                                    Messages.Message($"Portrait testDrawSize.y : {animationSettingComp.portraitMeshs.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
+                                    Messages.Message($"Portrait testDrawSize.y : {portraitIngredient.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
                         }
+                        i++;
                     }
 
                 }
@@ -1179,9 +1182,9 @@ namespace YR_Hentai_Prime_AnimationBed
                         bedAnimationSettingAndTick.openTestGizmo = false;
                     }
 
-                    if (AnimationSettingComp.portraitMeshs != null)
+                    foreach (var portraitIngredients in AnimationSettingComp.portraitIngredients)
                     {
-                        AnimationSettingComp.portraitMeshs.openTestGizmo = false;
+                        portraitIngredients.openTestGizmo = false;
                     }
                 }
                 else

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -12,21 +13,38 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public bool needMakeGraphics = true;
 
-        public PortraitMeshs portraitMeshs;
+        public List<PortraitIngredient> portraitIngredients = new List<PortraitIngredient>();
     }
 
 
-    public class PortraitMeshs
+    public class PortraitIngredient
     {
         public Material iconMat;
         public Mesh portraitMesh;
-        public Material material;
-        public bool openTestGizmo;
+
+        internal Vector3 offset;
+        public float angle;
         public Vector2 drawSize;
 
         public Vector3 testOffset;
         internal float testAngle;
         internal Vector2 testDrawSize;
+
+        public bool openTestGizmo;
+
+        public void DrawPortrait(Building_AnimationBed building_AnimationBed)
+        {
+            var drawPos = building_AnimationBed.DrawPos + offset + testOffset;
+            var tempDrawSize = drawSize + testDrawSize;
+            //안나오던건 Vector3 drawsize 변환 문제!!!!!!
+            Vector3 drawsize = new Vector3(tempDrawSize.x, 1, tempDrawSize.y);
+            var matrix = Matrix4x4.TRS(drawPos, Quaternion.AngleAxis(angle + testAngle, Vector3.up), drawsize);
+
+            iconMat.mainTexture = PortraitsCache.Get(building_AnimationBed.HeldPawn, new Vector2(256, 256), Rot4.South, default, 1, renderClothes: true, renderHeadgear: true, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
+
+            GenDraw.DrawMeshNowOrLater(portraitMesh, matrix, iconMat, PawnRenderFlags.None.FlagSet(PawnRenderFlags.DrawNow));
+
+        }
     }
 
     public class BedAnimationSettingAndTick

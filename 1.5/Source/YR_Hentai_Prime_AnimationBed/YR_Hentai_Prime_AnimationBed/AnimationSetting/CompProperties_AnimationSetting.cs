@@ -11,7 +11,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public List<BedAnimation> bedAnimationList = new List<BedAnimation>();
 
-        public PawnPortraitSetting pawnPortraitSetting = null;
+        public List<PawnPortraitSetting> pawnPortraitSettings = new List<PawnPortraitSetting>();
     }
 
     public class PawnPortraitSetting
@@ -33,6 +33,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public bool renderClothes;
         public bool renderHeadgear;
         public float angle;
+        public bool draw = true;
     }
 
     public class ConditonPortraitSetting
