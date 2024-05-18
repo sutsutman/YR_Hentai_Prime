@@ -43,7 +43,27 @@ namespace YR_Hentai_Prime_AnimationBed
             Vector3 drawSize = new Vector3(portraitIngredient.drawSize.x + portraitIngredient.testDrawSize.x, 1, portraitIngredient.drawSize.y + portraitIngredient.testDrawSize.y);
             Matrix4x4 matrix = Matrix4x4.TRS(drawPos, Quaternion.AngleAxis(portraitIngredient.angle + portraitIngredient.testAngle, Vector3.up), drawSize);
 
-            portraitIngredient.iconMat.mainTexture = PortraitsCache.Get(building_AnimationBed.HeldPawn, new Vector2(256, 256), Rot4.South, default, 1, renderClothes: true, renderHeadgear: true, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
+            var portraitSetting = portraitIngredient.portraitSetting;
+            var cameraOffset = portraitIngredient.cameraOffset + portraitIngredient.testCameraOffset;
+            if(portraitSetting.animationSynchro)
+            {
+                PawnRenderNode renderNode = building_AnimationBed.HeldPawn.Drawer.renderer.renderTree.rootNode.children
+    .FirstOrDefault(n => n?.Props?.tagDef == portraitSetting.pawnRenderNodeTagDef);
+
+                if (renderNode != null)
+                {
+                    Vector3 offset = renderNode.Worker.OffsetFor(renderNode, building_AnimationBed.HeldPawnDrawParms, out var pivot);
+                    offset -= pivot;
+                    cameraOffset += offset*-1;
+                }
+            }
+
+            TestLog.Error($"cameraOffset : {cameraOffset.x:F5}, {cameraOffset.y:F5}, {cameraOffset.z:F5}");
+
+            var cameraZoom = portraitIngredient.cameraZoom + portraitIngredient.testCameraZoom;
+
+            portraitIngredient.iconMat.mainTexture = PortraitsCache.Get(building_AnimationBed.HeldPawn, new Vector2(256, 256), portraitSetting.rotation, cameraOffset, cameraZoom, renderClothes: portraitSetting.renderClothes, renderHeadgear: portraitSetting.renderHeadgear, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
+
             GenDraw.DrawMeshNowOrLater(portraitIngredient.portraitMesh, matrix, portraitIngredient.iconMat, PawnRenderFlags.None.FlagSet(PawnRenderFlags.DrawNow));
         }
 
@@ -149,7 +169,9 @@ namespace YR_Hentai_Prime_AnimationBed
                 }
 
                 if (!portraitSetting.draw)
+                {
                     continue;
+                }
 
                 PortraitIngredient portraitIngredient = new PortraitIngredient
                 {
@@ -157,7 +179,10 @@ namespace YR_Hentai_Prime_AnimationBed
                     angle = portraitSetting.angle,
                     offset = portraitSetting.offset,
                     portraitMesh = portraitSetting.portraitMeshGraphicData.Graphic.MeshAt(Rot4.South),
-                    iconMat = CreateMaterial(portraitSetting, building_AnimationBed.HeldPawn)
+                    iconMat = CreateMaterial(portraitSetting, building_AnimationBed.HeldPawn),
+                    cameraOffset = portraitSetting.cameraOffset,
+                    cameraZoom = portraitSetting.cameraZoom,
+                    portraitSetting = portraitSetting
                 };
 
                 building_AnimationBed.AnimationSettingComp.portraitIngredients.Add(portraitIngredient);

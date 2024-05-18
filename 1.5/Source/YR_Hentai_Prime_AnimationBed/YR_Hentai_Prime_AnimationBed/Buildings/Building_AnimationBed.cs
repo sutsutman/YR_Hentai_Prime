@@ -765,7 +765,7 @@ namespace YR_Hentai_Prime_AnimationBed
                         action = ToggleMovef
                     };
 
-
+                    //애니메이션 쪽
                     foreach (var bedAnimationSettingAndTick in AnimationSettingComp.bedAnimationSettingAndTicks)
                     {
                         List<BedAnimationSetting> bedAnimationSettings = bedAnimationSettingAndTick.bedAnimationSettings;
@@ -1006,6 +1006,7 @@ namespace YR_Hentai_Prime_AnimationBed
                         }
                     }
 
+                    //포트레이트 쪽
                     int i = 0;
                     foreach (var portraitIngredient in AnimationSettingComp.portraitIngredients)
                     {
@@ -1039,6 +1040,8 @@ namespace YR_Hentai_Prime_AnimationBed
                                     portraitIngredient.testAngle = 0;
                                     portraitIngredient.testDrawSize = new Vector2();
                                     portraitIngredient.testOffset = new Vector3();
+                                    portraitIngredient.testCameraOffset = new Vector3();
+                                    portraitIngredient.testCameraZoom = 0;
                                 }
                             };
 
@@ -1054,7 +1057,6 @@ namespace YR_Hentai_Prime_AnimationBed
                                     Messages.Message($"Portrait testOffset.x : {portraitIngredient.testOffset.x}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
-
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : Left",
@@ -1091,7 +1093,6 @@ namespace YR_Hentai_Prime_AnimationBed
                                 }
                             };
 
-
                             // Z
                             yield return new Command_Action
                             {
@@ -1115,6 +1116,7 @@ namespace YR_Hentai_Prime_AnimationBed
                                     Messages.Message($"testOffset.z : {portraitIngredient.testOffset.z}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
+
 
                             // DrawSize x
                             yield return new Command_Action
@@ -1163,6 +1165,104 @@ namespace YR_Hentai_Prime_AnimationBed
                                     Messages.Message($"Portrait testDrawSize.y : {portraitIngredient.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
                                 }
                             };
+
+                            // CameraOffset x
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "CameraOffset : Right",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                action = delegate
+                                {
+                                    portraitIngredient.testCameraOffset.x += movef;
+
+                                    Messages.Message($"Portrait testCameraOffset.x : {portraitIngredient.testCameraOffset.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "CameraOffset : Left",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                action = delegate
+                                {
+                                    portraitIngredient.testCameraOffset.x -= movef;
+
+                                    Messages.Message($"Portrait testCameraOffset.x : {portraitIngredient.testCameraOffset.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            // CameraOffset y
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "CameraOffset : Front",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
+                                action = delegate
+                                {
+                                    portraitIngredient.testCameraOffset.y += movef;
+
+                                    Messages.Message($"Portrait testCameraOffset.y : {portraitIngredient.testCameraOffset.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "CameraOffset : Back",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
+                                action = delegate
+                                {
+                                    portraitIngredient.testCameraOffset.y -= movef;
+
+                                    Messages.Message($"Portrait testCameraOffset.y : {portraitIngredient.testCameraOffset.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            // CameraOffset z
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "CameraOffset : Up",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                action = delegate
+                                {
+                                    portraitIngredient.testCameraOffset.z += movef;
+
+                                    Messages.Message($"Portrait testCameraOffset.z : {portraitIngredient.testCameraOffset.z}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "CameraOffset : Down",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                action = delegate
+                                {
+                                    portraitIngredient.testCameraOffset.z -= movef;
+
+                                    Messages.Message($"Portrait testCameraOffset.z : {portraitIngredient.testCameraOffset.z}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+
+                            // CameraZoom
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : CameraZoom +",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
+                                action = delegate
+                                {
+                                    portraitIngredient.testCameraZoom += movef;
+
+                                    Messages.Message($"Portrait testCameraZoom : {portraitIngredient.testCameraZoom}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "Portrait : CameraZoom -",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
+                                action = delegate
+                                {
+                                    portraitIngredient.testCameraZoom -= movef;
+
+                                    Messages.Message($"Portrait testCameraZoom : {portraitIngredient.testCameraZoom}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
                         }
                         i++;
                     }

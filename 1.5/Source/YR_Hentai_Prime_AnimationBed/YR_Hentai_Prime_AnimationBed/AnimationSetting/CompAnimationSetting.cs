@@ -22,29 +22,21 @@ namespace YR_Hentai_Prime_AnimationBed
         public Material iconMat;
         public Mesh portraitMesh;
 
-        internal Vector3 offset;
+        public Vector3 offset;
         public float angle;
         public Vector2 drawSize;
+        public Vector3 cameraOffset;
+        public float cameraZoom;
 
-        public Vector3 testOffset;
-        internal float testAngle;
-        internal Vector2 testDrawSize;
+        public PortraitSetting portraitSetting;
 
         public bool openTestGizmo;
 
-        public void DrawPortrait(Building_AnimationBed building_AnimationBed)
-        {
-            var drawPos = building_AnimationBed.DrawPos + offset + testOffset;
-            var tempDrawSize = drawSize + testDrawSize;
-            //안나오던건 Vector3 drawsize 변환 문제!!!!!!
-            Vector3 drawsize = new Vector3(tempDrawSize.x, 1, tempDrawSize.y);
-            var matrix = Matrix4x4.TRS(drawPos, Quaternion.AngleAxis(angle + testAngle, Vector3.up), drawsize);
-
-            iconMat.mainTexture = PortraitsCache.Get(building_AnimationBed.HeldPawn, new Vector2(256, 256), Rot4.South, default, 1, renderClothes: true, renderHeadgear: true, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
-
-            GenDraw.DrawMeshNowOrLater(portraitMesh, matrix, iconMat, PawnRenderFlags.None.FlagSet(PawnRenderFlags.DrawNow));
-
-        }
+        public Vector3 testOffset;
+        public float testAngle;
+        public Vector2 testDrawSize;
+        public Vector3 testCameraOffset;
+        public float testCameraZoom;
     }
 
     public class BedAnimationSettingAndTick

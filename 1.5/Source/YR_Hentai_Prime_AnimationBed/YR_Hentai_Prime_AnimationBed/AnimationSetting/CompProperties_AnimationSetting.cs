@@ -27,13 +27,16 @@ namespace YR_Hentai_Prime_AnimationBed
         public Vector2 drawSize = Vector2.one;
         public Vector3 offset;
         public string maskPath;
-        public Rot4 rotation;
+        public Rot4 rotation = Rot4.South;
         public Vector3 cameraOffset;
         public float cameraZoom;
         public bool renderClothes;
         public bool renderHeadgear;
         public float angle;
         public bool draw = true;
+
+        public PawnRenderNodeTagDef pawnRenderNodeTagDef;
+        public bool animationSynchro;
     }
 
     public class ConditonPortraitSetting
