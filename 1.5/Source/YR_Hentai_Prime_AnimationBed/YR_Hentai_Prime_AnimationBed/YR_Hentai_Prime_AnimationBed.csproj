@@ -109,8 +109,5 @@
     <Compile Include="JobDrivers\JobDriver_CarryToAnimationBed.cs" />
     <Compile Include="YR_H_P_DefOf.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

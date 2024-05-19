@@ -374,11 +374,19 @@ namespace YR_Hentai_Prime_AnimationBed
                         action = delegate
                         {
                             targetHolder = null;
-                        }
+                        },
+                        Order = 10000,
                     };
                 }
                 else if (parent.Spawned)
                 {
+                    var Disabled = !YR_StudyUtility.HoldingPlatformAvailableOnCurrentMap();
+                    var disabledReason = "NoHoldingPlatformsAvailable".Translate();
+                    if (parent is Pawn pawn && pawn.Drafted)
+                    {
+                        Disabled = true;
+                        disabledReason = "YR_PawnIsDrafted".Translate();
+                    }
                     yield return new Command_Action
                     {
                         defaultLabel = "YR_CaptureEntity".Translate() + "...",
@@ -389,8 +397,9 @@ namespace YR_Hentai_Prime_AnimationBed
                             YR_StudyUtility.TargetHoldingPlatformForVictim(null, parent);
                         },
                         activateSound = SoundDefOf.Click,
-                        Disabled = !YR_StudyUtility.HoldingPlatformAvailableOnCurrentMap(),
-                        disabledReason = "NoHoldingPlatformsAvailable".Translate()
+                        Disabled = Disabled,
+                        disabledReason = "NoHoldingPlatformsAvailable".Translate(),
+                        Order = 10001,
                     };
                 }
             }
@@ -406,7 +415,8 @@ namespace YR_Hentai_Prime_AnimationBed
                         action = delegate
                         {
                             targetHolder = null;
-                        }
+                        },
+                        Order = 10002,
                     };
                 }
                 else
@@ -420,7 +430,8 @@ namespace YR_Hentai_Prime_AnimationBed
                         {
                             YR_StudyUtility.TargetHoldingPlatformForVictim(null, parent, transferBetweenPlatforms: true, AnimationBed);
                         },
-                        activateSound = SoundDefOf.Click
+                        activateSound = SoundDefOf.Click,
+                        Order = 10003,
                     };
                 }
 
@@ -433,7 +444,8 @@ namespace YR_Hentai_Prime_AnimationBed
                     {
                         AnimationBed.EjectContents();
                     },
-                    activateSound = SoundDefOf.Click
+                    activateSound = SoundDefOf.Click,
+                    Order = 10004,
                 };
             }
 
@@ -453,7 +465,8 @@ namespace YR_Hentai_Prime_AnimationBed
                     action = delegate
                     {
                         parent.Kill();
-                    }
+                    },
+                    Order = 10005,
                 };
             }
         }

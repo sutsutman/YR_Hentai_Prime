@@ -1,4 +1,6 @@
-﻿using Verse;
+﻿using System.Collections.Generic;
+using Verse;
+using static Verse.AI.ThingCountTracker;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
@@ -9,6 +11,50 @@ namespace YR_Hentai_Prime_AnimationBed
         public ThingDef thingDef;
 
         public AnimationDef animationDef;
+
+        public MakeHediff makeHediff = new MakeHediff();
+        public MakeSound makeSound = new MakeSound();
+    }
+
+    public class MakeSound
+    {
+        public PawnSound heldPawnSound = new PawnSound();
+        public PawnSound joyPawnSound = new PawnSound();
+
+    }
+
+    public class PawnSound
+    {
+        public List<SoundSetting> startSoundSettings = new List<SoundSetting>();
+        public List<SoundSetting> randomSoundSettings = new List<SoundSetting>();
+        public List<SoundSetting> finishSoundSettings = new List<SoundSetting>();
+    }
+
+    public class MakeHediff
+    {
+        public PawnHediffSetting heldPawnHediffSetting = new PawnHediffSetting();
+        public PawnHediffSetting joyPawnHediffSetting = new PawnHediffSetting();
+    }
+
+    public class PawnHediffSetting
+    {
+        public List<HediffSetting> startHediffSettings = new List<HediffSetting>();
+        public List<HediffSetting> finishHediffSettings = new List<HediffSetting>();
+    }
+
+    public class HediffSetting
+    {
+        public HediffDef hediffDef;
+
+        public bool removeWhenFinish = false;
+
+        public List<ConditionHediffDefs> conditionHediffDefs = new List<ConditionHediffDefs>();
+    }
+
+    public class ConditionHediffDefs
+    {
+        public HediffDef hediffDef;
+        public Condition condition;
     }
 
     public class CompSpawnDummyForJoy : CompBaseOfAnimationBed

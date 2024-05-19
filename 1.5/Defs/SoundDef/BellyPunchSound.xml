@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<SoundDef>
+		<defName>BellyPunchSound_1</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Impact/PunchHitPawn</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>23</volumeRange>
+				<distRange>10~38</distRange>
+				<pitchRange>1~1.14837</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

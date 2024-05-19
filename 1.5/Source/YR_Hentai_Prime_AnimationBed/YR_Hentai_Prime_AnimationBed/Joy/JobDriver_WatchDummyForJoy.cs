@@ -1,7 +1,9 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 using Verse.AI;
+using static HarmonyLib.Code;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
@@ -57,21 +59,69 @@ namespace YR_Hentai_Prime_AnimationBed
         public CompAnimationSetting CompAnimationSetting => Building_AnimationBed?.TryGetComp<CompAnimationSetting>();
 
         bool stop = false;
+
+        bool start = true;
         protected override void WatchTickAction()
         {
             pawn.rotationTracker.FaceCell(base.TargetA.Cell);
             pawn.GainComfortFromCellIfPossible();
             JoyUtility.JoyTickCheckEnd(pawn, JoyTickFullJoyAction.EndJob, 1f, Building_AnimationBed);
 
-            if (!stop && pawn.Drawer.renderer.CurAnimation != CompSpawnDummyForJoy?.Props.animationDef)
+            if (stop)
             {
-                pawn.Drawer.renderer.SetAnimation(CompSpawnDummyForJoy?.Props.animationDef);
-                Building_AnimationBed.dummyForJoyIsActive = true;
-                Building_AnimationBed.dummyForJoyPawn = pawn;
-                Building_AnimationBed.setAnimation = true;
-                CompAnimationSetting.needMakeGraphics = true;
+                return;
+            }
+
+            CompProperties_SpawnDummyForJoy props = CompSpawnDummyForJoy?.Props;
+            if (props != null)
+            {
+                Pawn heldPawn = Building_AnimationBed?.HeldPawn;
+                if (pawn.Drawer.renderer.CurAnimation != props.animationDef && heldPawn != null)
+                {
+                    pawn.Drawer.renderer.SetAnimation(props.animationDef);
+                    Building_AnimationBed.dummyForJoyIsActive = true;
+                    Building_AnimationBed.dummyForJoyPawn = pawn;
+                    Building_AnimationBed.setAnimation = true;
+                    CompAnimationSetting.needMakeGraphics = true;
+
+                    if (start)
+                    {
+                        AddHediff(heldPawn, Building_AnimationBed, props.makeHediff.heldPawnHediffSetting.startHediffSettings);
+                        AddHediff(pawn, Building_AnimationBed, props.makeHediff.joyPawnHediffSetting.startHediffSettings);
+
+                        Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.startSoundSettings);
+                        Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.startSoundSettings);
+
+                        start = false;
+                    }
+
+                    Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.randomSoundSettings);
+                    Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.randomSoundSettings);
+                }
             }
         }
+
+
+        private static void AddHediff(Pawn pawn, Building_AnimationBed building_AnimationBed, List<HediffSetting> hediffSettings)
+        {
+            foreach (var hediffSetting in hediffSettings)
+            {
+                var hediffDef = hediffSetting.hediffDef;
+
+                foreach (var conditionHediffDef in hediffSetting.conditionHediffDefs)
+                {
+                    void action() => hediffDef = conditionHediffDef.hediffDef;
+
+                    if (Condition.ExecuteActionIfConditionMatches(pawn, building_AnimationBed, conditionHediffDef.condition, action))
+                    {
+                        break;
+                    }
+
+                }
+                pawn.health.AddHediff(hediffDef);
+            }
+        }
+
         protected void FinishAction()
         {
             pawn.Drawer.renderer.SetAnimation(null);
@@ -80,8 +130,44 @@ namespace YR_Hentai_Prime_AnimationBed
             Building_AnimationBed.setAnimation = true;
             CompAnimationSetting.needMakeGraphics = true;
 
+
+            Pawn heldPawn = Building_AnimationBed.HeldPawn;
+
+            CompProperties_SpawnDummyForJoy props = CompSpawnDummyForJoy.Props;
+            AddHediff(heldPawn, Building_AnimationBed, props.makeHediff.heldPawnHediffSetting.finishHediffSettings);
+            AddHediff(pawn, Building_AnimationBed, props.makeHediff.joyPawnHediffSetting.finishHediffSettings);
+
+            RemoveStartHediff(heldPawn, props.makeHediff.heldPawnHediffSetting.startHediffSettings);
+            RemoveStartHediff(pawn, props.makeHediff.joyPawnHediffSetting.startHediffSettings);
+
+            Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.finishSoundSettings);
+            Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.finishSoundSettings);
+
             //이걸로 멈춰야 에러 안남
             stop = true;
+        }
+
+        private static void RemoveStartHediff(Pawn pawn, List<HediffSetting> hediffSettings)
+        {
+            var hediffsToRemove = pawn.health.hediffSet.hediffs
+                .Where(hediff => hediffSettings
+                    .Any(startHediffSetting => startHediffSetting.removeWhenFinish &&
+                        (hediff.def == startHediffSetting.hediffDef ||
+                        startHediffSetting.conditionHediffDefs.Any(conditionHediffDef => hediff.def == conditionHediffDef.hediffDef))))
+                .ToList();
+
+            foreach (var hediff in hediffsToRemove)
+            {
+                pawn.health.RemoveHediff(hediff);
+            }
+        }
+
+        public override void ExposeData()
+        {
+           base.ExposeData();
+
+
+            Scribe_Values.Look(ref start, "start");
         }
     }
 }

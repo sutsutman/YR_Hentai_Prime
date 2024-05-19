@@ -45,16 +45,16 @@ namespace YR_Hentai_Prime_AnimationBed
 
             var portraitSetting = portraitIngredient.portraitSetting;
             var cameraOffset = portraitIngredient.cameraOffset + portraitIngredient.testCameraOffset;
-            if(portraitSetting.animationSynchro)
+            if (portraitSetting.animationSynchro)
             {
                 PawnRenderNode renderNode = building_AnimationBed.HeldPawn.Drawer.renderer.renderTree.rootNode.children
-    .FirstOrDefault(n => n?.Props?.tagDef == portraitSetting.pawnRenderNodeTagDef);
+                .FirstOrDefault(n => n?.Props?.tagDef == portraitSetting.pawnRenderNodeTagDef);
 
                 if (renderNode != null)
                 {
                     Vector3 offset = renderNode.Worker.OffsetFor(renderNode, building_AnimationBed.HeldPawnDrawParms, out var pivot);
                     offset -= pivot;
-                    cameraOffset += offset*-1;
+                    cameraOffset += offset * -1;
                 }
             }
 
@@ -119,38 +119,40 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public static bool MakeBedAnimation(Building_AnimationBed building_AnimationBed)
         {
-            Pawn pawn = building_AnimationBed.HeldPawn;
+            Pawn HeldPawn = building_AnimationBed.HeldPawn;
 
             if (building_AnimationBed.AnimationSettingComp == null || !building_AnimationBed.AnimationSettingComp.needMakeGraphics)
                 return false;
 
-            if (pawn == null || pawn.Drawer.renderer.renderTree.rootNode == null)
+            if (HeldPawn == null || HeldPawn.Drawer.renderer.renderTree.rootNode == null)
             {
                 TestLog.Error("can't make Graphic");
                 return false;
             }
 
-            TestLog.Error($"{pawn.LabelShort} : MakeBedAnimation Start");
+            TestLog.Error($"{HeldPawn.LabelShort} : MakeBedAnimation Start");
             building_AnimationBed.AnimationSettingComp.needMakeGraphics = false; // 필요성 초기화
             building_AnimationBed.AnimationSettingComp.bedAnimationSettingAndTicks = new List<BedAnimationSettingAndTick>();
 
             var Props = building_AnimationBed.AnimationSettingComp.Props;
             var pawnAnimationDef = GetPawnAnimationDef(building_AnimationBed);
-            pawn.Drawer.renderer.SetAnimation(pawnAnimationDef);
+            HeldPawn.Drawer.renderer.SetAnimation(pawnAnimationDef);
 
             TestLog.Error("+++Check bedAnimationList+++");
             foreach (var bedAnimation in Props.bedAnimationList)
             {
                 BedAnimationDef bedAnimationDef = bedAnimation.bedAnimationDef;
 
+
                 foreach (var conditionBedAnimationDef in bedAnimation.conditionBedAnimationDefs)
                 {
-                    if (Condition.Match(pawn, building_AnimationBed, conditionBedAnimationDef.condition))
+                    void action() => bedAnimationDef = conditionBedAnimationDef.bedAnimationDef;
+
+                    if (Condition.ExecuteActionIfConditionMatches(HeldPawn, building_AnimationBed, conditionBedAnimationDef.condition, action))
                     {
-                        bedAnimationDef = conditionBedAnimationDef.bedAnimationDef;
-                        if (Condition.NeedBreak(conditionBedAnimationDef.condition))
-                            break;
+                        break;
                     }
+
                 }
 
                 TestLog.Error($"=={bedAnimationDef.defName}==");
@@ -179,11 +181,11 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 foreach (var conditionPortraitSetting in pawnPortraitSetting.conditonPortraitSettings)
                 {
-                    if (Condition.Match(building_AnimationBed.HeldPawn, building_AnimationBed, conditionPortraitSetting.condition))
+                    void action() => portraitSetting = conditionPortraitSetting.portraitSetting;
+
+                    if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed.HeldPawn, building_AnimationBed, conditionPortraitSetting.condition, action))
                     {
-                        portraitSetting = conditionPortraitSetting.portraitSetting;
-                        if (Condition.NeedBreak(conditionPortraitSetting.condition))
-                            break;
+                        break;
                     }
                 }
 
@@ -241,33 +243,32 @@ namespace YR_Hentai_Prime_AnimationBed
             // Loop through animation settings
             foreach (var bedAnimationSetting in bedAnimationDef.bedAnimationSettings)
             {
-                if (!Condition.Match(building_AnimationBed.HeldPawn, building_AnimationBed, bedAnimationSetting.condition))
+
+                void action()
                 {
-                    continue;
+                    var settingCopy = new BedAnimationSetting();
+                    settingCopy = bedAnimationSetting.Copy();
+                    settingCopy.parentBedAnimationDef = bedAnimationDef;
+                    settingCopy.setPawnColor = bedAnimationDef.setPawnColor;
+                    settingCopy.graphic = null;
+
+                    // Set appropriate graphic(그래픽 제작)
+                    settingCopy.graphic = bedAnimationDef.isPawnTextureReplace
+                        ? GetGraphic(building_AnimationBed.HeldPawn, bedAnimationDef.pawnRenderNodeTagDef, settingCopy)
+                        : settingCopy.graphicData.Graphic;
+
+
+                    if (settingCopy.graphic == null)
+                    {
+                        TestLog.Error("settingCopy Skip");
+                    }
+                    else
+                    {
+                        bedAnimationSettings.Add(settingCopy);
+                    }
                 }
 
-                var settingCopy = new BedAnimationSetting();
-                settingCopy = bedAnimationSetting.Copy();
-                settingCopy.parentBedAnimationDef = bedAnimationDef;
-                settingCopy.setPawnColor = bedAnimationDef.setPawnColor;
-                settingCopy.graphic = null;
-
-                // Set appropriate graphic(그래픽 제작)
-                settingCopy.graphic = bedAnimationDef.isPawnTextureReplace
-                    ? GetGraphic(building_AnimationBed.HeldPawn, bedAnimationDef.pawnRenderNodeTagDef, settingCopy)
-                    : settingCopy.graphicData.Graphic;
-
-
-                if (settingCopy.graphic == null)
-                {
-                    TestLog.Error("settingCopy Skip");
-                    continue;
-                }
-
-                bedAnimationSettings.Add(settingCopy);
-
-                TestLog.Error("settingCopy Finish");
-                if (Condition.NeedBreak(bedAnimationSetting.condition))
+                if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed.HeldPawn, building_AnimationBed, bedAnimationSetting.condition, action))
                 {
                     break;
                 }
@@ -308,16 +309,13 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             var pawnAnimationDef = building_AnimationBed.AnimationSettingComp.Props.pawnAnimationSetting.pawnAnimationDef;
 
-            foreach (var condition in building_AnimationBed.AnimationSettingComp.Props.pawnAnimationSetting.conditonPawnAnimations)
+            foreach (var conditonPawnAnimation in building_AnimationBed.AnimationSettingComp.Props.pawnAnimationSetting.conditonPawnAnimations)
             {
-                if (Condition.Match(building_AnimationBed.HeldPawn, building_AnimationBed.AnimationSettingComp.Building_AnimationBed, condition.condition))
-                {
-                    pawnAnimationDef = condition.pawnAnimationDef;
+                void action() => pawnAnimationDef = conditonPawnAnimation.pawnAnimationDef;
 
-                    if (Condition.NeedBreak(condition.condition))
-                    {
-                        break;
-                    }
+                if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed.HeldPawn, building_AnimationBed, conditonPawnAnimation.condition, action))
+                {
+                    break;
                 }
             }
 

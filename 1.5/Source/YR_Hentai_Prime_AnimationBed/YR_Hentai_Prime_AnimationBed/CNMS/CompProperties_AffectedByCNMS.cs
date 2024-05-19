@@ -116,16 +116,17 @@ namespace YR_Hentai_Prime_AnimationBed
 
             foreach (var conditionSpawnThing in Props.conditionSpawnThings)
             {
-                if (Condition.Match(HeldPawn, Building_AnimationBed, conditionSpawnThing.condition))
+                void action()
                 {
                     thingToSpawn = conditionSpawnThing.thingToSpawn;
                     spawnCount = conditionSpawnThing.spawnCount;
-
-                    if (Condition.NeedBreak(conditionSpawnThing.condition))
-                    {
-                        break;
-                    }
                 }
+
+                if (Condition.ExecuteActionIfConditionMatches(HeldPawn, Building_AnimationBed, conditionSpawnThing.condition, action))
+                {
+                    break;
+                }
+
             }
 
             Thing thing = ThingMaker.MakeThing(thingToSpawn, null);

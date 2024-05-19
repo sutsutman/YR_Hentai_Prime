@@ -28,6 +28,118 @@
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
 				<thingDef>YR_DummyForJoy</thingDef>
 				<animationDef>YR_GloryHole_Animation_PanPanPlay_North</animationDef>
+				<makeHediff>
+					<heldPawnHediffSetting>
+						<startHediffSettings>
+							<li>
+								<hediffDef>YR_PowerMode1_Hediff</hediffDef>
+								<!-- <conditionHediffDefs> -->
+								<!-- <li> -->
+								<!-- <hediffDef>YR_PowerMode1_Hediff</hediffDef> -->
+								<!-- <condition/> -->
+								<!-- </li> -->
+								<!-- </conditionHediffDefs> -->
+							</li>
+						</startHediffSettings>
+						<finishHediffSettings>
+							<li>
+								<hediffDef>YR_PowerMode2_Hediff</hediffDef>
+							</li>
+						</finishHediffSettings>
+					</heldPawnHediffSetting>
+					<joyPawnHediffSetting>
+						<startHediffSettings>
+							<li>
+								<hediffDef>YR_PowerMode1_Hediff</hediffDef>
+								<removeWhenFinish>true</removeWhenFinish>
+							</li>
+						</startHediffSettings>
+						<finishHediffSettings>
+							<li>
+								<hediffDef>YR_PowerMode2_Hediff</hediffDef>
+							</li>
+						</finishHediffSettings>
+					</joyPawnHediffSetting>
+				</makeHediff>
+				<makeSound>
+					<!-- 묶인 애를 기준으로 나는 소리 -->
+					<heldPawnSound>
+						<startSoundSettings>
+							<li>
+								<!-- 삽입시 응앙! 하는 소리 -->
+								<soundDefs>
+									<li>OohSound_1</li>
+									<li>OohSound_2</li>
+									<li>OohSound_3</li>
+									<li>OohSound_4</li>
+									<li>OohSound_5</li>
+									<li>OohSound_6</li>
+									<li>OohSound_7</li>
+									<li>OohSound_8</li>
+								</soundDefs>
+								<!-- <conditionSoundSettings> -->
+								<!-- <li> -->
+								<!-- <soundDef/> -->
+								<!-- <condition/> -->
+								<!-- </li> -->
+								<!-- </conditionSoundSettings> -->
+							</li>
+						</startSoundSettings>
+						<randomSoundSettings>
+							<li>
+								<!-- 신음 -->
+								<soundDefs>
+									<li>OohSound_1</li>
+									<li>OohSound_2</li>
+									<li>OohSound_3</li>
+									<li>OohSound_4</li>
+									<li>OohSound_5</li>
+									<li>OohSound_6</li>
+									<li>OohSound_7</li>
+									<li>OohSound_8</li>
+								</soundDefs>
+								<!-- 이 경우 1틱당 0.05프로의 확률로 소리가 남 -->
+								<probability>0.005</probability>
+							</li>
+						</randomSoundSettings>
+						<finishSoundSettings/>
+					</heldPawnSound>
+					<!-- 하는 애를 기준으로 나는 소리 -->
+					<joyPawnSound>
+						<finishSoundSettings>
+							<li>
+								<!-- 사정 소리 -->
+								<soundDefs>
+									<li>EjaculationSound_1</li>
+									<li>EjaculationSound_2</li>
+									<li>EjaculationSound_3</li>
+									<li>EjaculationSound_4</li>
+									<li>EjaculationSound_5</li>
+									<li>EjaculationSound_6</li>
+									<li>EjaculationSound_7</li>
+									<li>EjaculationSound_8</li>
+									<li>EjaculationSound_9</li>
+									<li>EjaculationSound_10</li>
+									<li>EjaculationSound_11</li>
+									<li>EjaculationSound_12</li>
+									<li>EjaculationSound_13</li>
+									<li>EjaculationSound_14</li>
+									<li>EjaculationSound_15</li>
+									<li>EjaculationSound_16</li>
+									<li>EjaculationSound_17</li>
+									<li>EjaculationSound_18</li>
+									<li>EjaculationSound_19</li>
+									<li>EjaculationSound_20</li>
+									<li>EjaculationSound_21</li>
+									<li>EjaculationSound_22</li>
+									<li>EjaculationSound_23</li>
+									<li>EjaculationSound_24</li>
+									<li>EjaculationSound_25</li>
+								</soundDefs>
+							</li>
+						</finishSoundSettings>
+					</joyPawnSound>
+				</makeSound>
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
 				<pawnAnimationSetting>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
@@ -87,13 +88,11 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 foreach (var conditonPawnOffset in pawnAnimationSetting.conditonPawnOffsets)
                 {
-                    if (Condition.Match(HeldPawn, this, conditonPawnOffset.condition))
+                    void action() => offset = conditonPawnOffset.offset;
+
+                    if (Condition.ExecuteActionIfConditionMatches(HeldPawn, this, conditonPawnOffset.condition, action))
                     {
-                        offset = conditonPawnOffset.offset;
-                        if (Condition.NeedBreak(conditonPawnOffset.condition))
-                        {
-                            break;
-                        }
+                        break;
                     }
                 }
 
@@ -284,43 +283,95 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public bool setAnimation = true;
         public bool openControllSetting;
-
+        public int tempTick = num;
+        public static int num = 1000;
         public override void Tick()
         {
             base.Tick();
             innerContainer.ThingOwnerTick();
 
-            {
-                //if (Occupied && chains == null && AttachPointsComp != null)
-                //{
-                //    chains = ((TargetPawnAttachPoints != null) ? BuildTargetPointMapping() : DefaultPointMapping);
-                //}
-
-                //if (!Occupied && chains != null)
-                //{
-                //    chains = null;
-                //}
-
-                //if (Occupied && HasAttachedElectroharvester && Rand.MTBEventOccurs(2f, 60000f, 1f))
-                //{
-                //    HeldPawn.TakeDamage(new DamageInfo(DamageDefOf.ElectricalBurn, Damage.RandomInRange));
-                //}
-
-                //if (Occupied && Rand.MTBEventOccurs(100f, 1f, 1f))
-                //{
-                //    UpdateAnimation();
-                //}
-
-                //if (debugEscapeTick > 0 && Find.TickManager.TicksGame == debugEscapeTick && HeldPawn != null)
-                //{
-                //    HeldPawn.TryGetComp<CompAnimationBedTarget>()?.Escape(initiator: false);
-                //}
-            }
-
             if (HeldPawn != null)
             {
+                //if (dummyForJoyPawn == null)
+                //{
+                //    tempTick--;
+
+                //    if (tempTick < 0)
+                //    {
+                //        tempTick = num;
+                //        setAnimation = true;
+                //        animationSettingComp.needMakeGraphics = true;
+                //    }
+                //}
+
                 BedAnimationUtility.SetAnimation(this);
+
+                if (HeldPawn.Drawer.renderer.HasAnimation)
+                {
+                    ProcessAnimationParts(HeldPawn.Drawer.renderer.CurAnimation.animationParts);
+                }
+                if (dummyForJoyPawn != null && dummyForJoyPawn.Drawer.renderer.HasAnimation)
+                {
+                    ProcessAnimationParts(dummyForJoyPawn.Drawer.renderer.CurAnimation.animationParts);
+                }
             }
+
+            UpdateHeldPawnStartTick();
+        }
+
+        private void ProcessAnimationParts(Dictionary<PawnRenderNodeTagDef, AnimationPart> animationParts)
+        {
+            foreach (var animationPart in animationParts)
+            {
+                foreach (var keyframe in animationPart.Value.keyframes)
+                {
+                    if (keyframe is BedAnimationKeyframe BAK && HeldPawn.Drawer.renderer.renderTree.AnimationTick == BAK.tick)
+                    {
+                        PlaySoundSettings(HeldPawn, this, BAK.soundSettings);
+                    }
+                }
+            }
+        }
+
+        public static void PlaySoundSettings(Pawn pawn, Building_AnimationBed building_AnimationBed, List<SoundSetting> soundSettings)
+        {
+            foreach (var soundSetting in soundSettings)
+            {
+                GetSoundDefAndProbability(pawn, building_AnimationBed, soundSetting, out var soundDef, out var probability);
+                var rand = Rand.Range(0, 1f);
+                //Log.Error(rand.ToString("F10"));
+                if (probability >= rand)
+                {
+                    soundDef.PlayOneShot(building_AnimationBed);
+                }
+            }
+        }
+
+        private static void GetSoundDefAndProbability(Pawn pawn, Building_AnimationBed building_AnimationBed, SoundSetting soundSetting, out SoundDef soundDef, out float probability)
+        {
+             var tempSoundDef = soundSetting.soundDefs.RandomElement();
+             var tempProbability = soundSetting.probability;
+
+            foreach (var conditionSoundSetting in soundSetting.conditionSoundSettings)
+            {
+                void action()
+                {
+                    tempSoundDef = conditionSoundSetting.soundDefs.RandomElement();
+                    tempProbability = conditionSoundSetting.probability;
+                }
+
+                if (Condition.ExecuteActionIfConditionMatches(pawn, building_AnimationBed, conditionSoundSetting.condition, action))
+                {
+                    break;
+                }
+
+            }
+            soundDef = tempSoundDef;
+            probability = tempProbability;
+        }
+
+        private void UpdateHeldPawnStartTick()
+        {
             if (heldPawnStartTick == -1 && HeldPawn != null)
             {
                 heldPawnStartTick = Find.TickManager.TicksGame;
@@ -330,6 +381,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 heldPawnStartTick = -1;
             }
         }
+
 
 
         //private void UpdateAnimation()
@@ -455,14 +507,11 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 foreach (var conditionPawnRotation in AnimationSettingComp.Props.pawnAnimationSetting.conditionPawnRotations)
                 {
-                    if (Condition.Match(HeldPawn, this, conditionPawnRotation.condition))
-                    {
-                        rotation = conditionPawnRotation.rotation;
+                    void action() => rotation = conditionPawnRotation.rotation;
 
-                        if (Condition.NeedBreak(conditionPawnRotation.condition))
-                        {
-                            break;
-                        }
+                    if (Condition.ExecuteActionIfConditionMatches(HeldPawn, this, conditionPawnRotation.condition, action))
+                    {
+                        break;
                     }
                 }
 

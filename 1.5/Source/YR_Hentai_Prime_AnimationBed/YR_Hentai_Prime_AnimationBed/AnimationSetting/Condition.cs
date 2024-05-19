@@ -26,22 +26,20 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public bool dummyForJoyIsActive = false;
 
+        public float probability = -1;
+
         public bool allMatch = false;
         public bool reverseCondition = false;
         bool Break = true;
 
-
-        public static bool NeedBreak(Condition condition)
-        {
-            return condition != null && condition.Break;
-        }
-
-        public static bool Match(Pawn pawn, Building_AnimationBed building_AnimationBed, Condition condition)
+        public static bool Match(Pawn pawn, Building_AnimationBed building_AnimationBed, Condition condition, out bool needBreak)
         {
             if (condition == null || pawn == null)
             {
+                needBreak = false;
                 return true;
             }
+            needBreak = condition.Break;
 
             bool allMatch = condition.allMatch;
 
@@ -94,6 +92,25 @@ namespace YR_Hentai_Prime_AnimationBed
                 }
             }
 
+            bool CheckProbability(float probability)
+            {
+                if (probability > 0)
+                {
+                    if (probability >= Rand.Range(0, 1f))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return allMatch;
+                }
+            }
+
             IEnumerable<bool> matchConditions = new[]
             {
                 Check(bodyType, condition.bodyTypeDefs),
@@ -103,10 +120,12 @@ namespace YR_Hentai_Prime_AnimationBed
                 CheckListCondition(condition.hediffDefs, HediffCheck),
                 CheckListCondition(condition.hediffAndSeverities, HediffAndSeverityCheck),
                 CheckListCondition(condition.traitDefs, TraitCheck),
-                CheckDummyForJoyIsActive(building_AnimationBed, condition)
+                CheckDummyForJoyIsActive(building_AnimationBed, condition),
+                CheckProbability(condition.probability)
             };
 
-            bool match = allMatch
+
+        bool match = allMatch
                 ? matchConditions.All(x => x)
                 : matchConditions.Any(x => x);
 
@@ -125,6 +144,16 @@ namespace YR_Hentai_Prime_AnimationBed
 
             static bool TraitCheck(Pawn pawn, List<TraitDef> traitDefs)
                 => pawn.story.traits.allTraits.Any(pawnTrait => traitDefs.Contains(pawnTrait.def));
+        }
+
+        public static bool ExecuteActionIfConditionMatches(Pawn pawn, Building_AnimationBed building_AnimationBed, Condition condition, Action action)
+        {
+            if (Match(pawn, building_AnimationBed, condition, out bool needBreak))
+            {
+                action();
+            }
+
+            return needBreak;
         }
 
     }
