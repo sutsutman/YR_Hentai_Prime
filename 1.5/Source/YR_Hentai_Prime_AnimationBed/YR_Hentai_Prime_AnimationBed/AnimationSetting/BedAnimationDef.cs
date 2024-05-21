@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
@@ -14,6 +15,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public bool animationSynchro;
         public bool animationSynchrotoDummyForJoyAnimation;
         public bool isPortrait = false;
+        public Vector3 offset;
 
         public bool logCurrentTexture = false;
         public bool logCurrentTick = false;

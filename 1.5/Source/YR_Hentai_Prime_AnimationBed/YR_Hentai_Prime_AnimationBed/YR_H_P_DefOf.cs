@@ -12,6 +12,8 @@ namespace YR_Hentai_Prime_AnimationBed
         public static JobDef YR_TendVictim;
         public static JobDef YR_TransferBetweenAnimationBeds;
         //public static JobDef YR_FeedVictim;
+        public static BedAnimationDef YR_Dummy_BedAnimation;
+        public static AnimationDef YR_Dummy_Animation;
 
         static YR_H_P_DefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(YR_H_P_DefOf));
     }

@@ -81,6 +81,8 @@
     <Compile Include="CNMS\CompProperties_AffectedByCNMS.cs" />
     <Compile Include="CNMS\CompProperties_Facility_CNMS.cs" />
     <Compile Include="CompProperties_ToggleHediff.cs" />
+    <Compile Include="Mod\YR_Hentai_Prime_AnimationBed_Setting.cs" />
+    <Compile Include="Mod\YR_Hentai_Prime_AnimationBed_Mod.cs" />
     <Compile Include="Joy\CompProperties_ForcePlay.cs" />
     <Compile Include="TestLog.cs" />
     <Compile Include="Joy\CompProperties_DummyForJoy.cs" />
@@ -92,8 +94,8 @@
     <Compile Include="AnimationBedComp\CompProperties\CompProperties_AnimationBed.cs" />
     <Compile Include="AnimationBedComp\Comps\CompAnimationBed.cs" />
     <Compile Include="AnimationBedComp\Comps\CompAnimationBedTarget.cs" />
-    <Compile Include="Harmony.cs" />
-    <Compile Include="HediffCompProperties_MovingHead.cs" />
+    <Compile Include="Mod\Harmony.cs" />
+    <Compile Include="HediffCompProperties_BedAnimation.cs" />
     <Compile Include="JobDrivers\JobDriver_TendVictim.cs" />
     <Compile Include="JobDrivers\JobDriver_ExecuteVictim.cs" />
     <Compile Include="JobDrivers\JobDriver_ReleaseVictim.cs" />

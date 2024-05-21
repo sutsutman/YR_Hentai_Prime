@@ -58,6 +58,9 @@ namespace YR_Hentai_Prime_AnimationBed
         //방향
         public Rot4 rotation = Rot4.South;
         public List<ConditionPawnRotation> conditionPawnRotations = new List<ConditionPawnRotation>();
+
+        public bool renderClothes = false;
+        public bool renderHeadgear = false;
     }
 
     public class ConditionPawnRotation
@@ -80,10 +83,12 @@ namespace YR_Hentai_Prime_AnimationBed
     public class BedAnimation
     {
         public BedAnimationDef bedAnimationDef;
+        public Vector3 offset;
 
         //public PawnRenderNodeTagDef animationPartKeySynchro;
 
         public List<ConditionBedAnimation> conditionBedAnimationDefs = new List<ConditionBedAnimation>();
+        public Vector2 drawSize;
     }
 
     public class ConditionBedAnimation
@@ -91,5 +96,8 @@ namespace YR_Hentai_Prime_AnimationBed
         public Condition condition;
 
         public BedAnimationDef bedAnimationDef;
+
+        public Vector3 offset;
+        public Vector2 drawSize;
     }
 }

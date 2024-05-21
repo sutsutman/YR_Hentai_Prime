@@ -128,7 +128,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.0,0.0)</offset>
+				<offset>(0.0,0.1,0.0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Part/Upper</texPath>
 					<graphicClass>Graphic_Single</graphicClass>

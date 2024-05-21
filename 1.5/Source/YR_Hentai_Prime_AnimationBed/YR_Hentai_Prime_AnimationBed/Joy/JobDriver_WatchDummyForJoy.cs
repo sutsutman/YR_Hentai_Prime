@@ -72,7 +72,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             CompProperties_SpawnDummyForJoy props = CompSpawnDummyForJoy?.Props;
-            
+
             if (props != null)
             {
                 Pawn heldPawn = Building_AnimationBed?.HeldPawn;

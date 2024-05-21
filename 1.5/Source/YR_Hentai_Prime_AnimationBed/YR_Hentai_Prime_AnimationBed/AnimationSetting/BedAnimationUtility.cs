@@ -8,126 +8,6 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class BedAnimationUtility
     {
-        //public static void DrawBedAnimation(Building_AnimationBed building_AnimationBed)
-        //{
-        //    Vector3 bedBasePos = building_AnimationBed.DrawPos;
-
-        //    CompAnimationSetting animationSettingComp = building_AnimationBed.AnimationSettingComp;
-        //    foreach (var bedAnimationSettingAndTick in animationSettingComp.bedAnimationSettingAndTicks)
-        //    {
-        //        int currentTick = bedAnimationSettingAndTick.currentTick;
-
-        //        var closestSetting = bedAnimationSettingAndTick.bedAnimationSettings
-        //            .Where(b => b.tick <= currentTick)
-        //            .OrderByDescending(b => b.tick)
-        //            .FirstOrDefault();
-
-        //        // 설정이 없을 경우 처리
-        //        if (closestSetting == null && (bedAnimationSettingAndTick.autoDurationTicksSetting || currentTick <= bedAnimationSettingAndTick.durationTick))
-        //        {
-        //            closestSetting = bedAnimationSettingAndTick.bedAnimationSettings
-        //                .OrderByDescending(x => x.tick)
-        //                .FirstOrDefault();
-
-        //            if (closestSetting == null)
-        //                continue; // 설정이 없으면 다음으로 넘어감
-        //        }
-
-        //        Vector3 pos = CalculatePos(building_AnimationBed, bedBasePos, bedAnimationSettingAndTick, closestSetting);
-
-        //        closestSetting.graphic?.Draw(pos, Rot4.North, building_AnimationBed.HeldPawn);
-        //    }
-
-        //    // 포트레잇
-        //    foreach (var portraitIngredient in animationSettingComp.portraitIngredients)
-        //    {
-        //        DrawPortrait(building_AnimationBed, portraitIngredient);
-        //    }
-        //    building_AnimationBed.makePortrait = false;
-        //}
-        //private static void DrawPortrait(Building_AnimationBed building_AnimationBed, PortraitIngredient portraitIngredient)
-        //{
-        //    Vector3 drawPos = building_AnimationBed.DrawPos + portraitIngredient.offset + portraitIngredient.testOffset;
-        //    //안나오던건 Vector3 drawsize 변환 문제!!!!!!
-        //    Vector3 drawSize = new Vector3(portraitIngredient.drawSize.x + portraitIngredient.testDrawSize.x, 1, portraitIngredient.drawSize.y + portraitIngredient.testDrawSize.y);
-        //    Matrix4x4 matrix = Matrix4x4.TRS(drawPos, Quaternion.AngleAxis(portraitIngredient.angle + portraitIngredient.testAngle, Vector3.up), drawSize);
-
-        //    var portraitSetting = portraitIngredient.portraitSetting;
-        //    var cameraOffset = portraitIngredient.cameraOffset + portraitIngredient.testCameraOffset;
-        //    if (portraitSetting.animationSynchro)
-        //    {
-        //        PawnRenderNode renderNode = building_AnimationBed.HeldPawn.Drawer.renderer.renderTree.rootNode.children
-        //        .FirstOrDefault(n => n?.Props?.tagDef == portraitSetting.pawnRenderNodeTagDef);
-
-        //        if (renderNode != null)
-        //        {
-        //            Vector3 offset = renderNode.Worker.OffsetFor(renderNode, building_AnimationBed.HeldPawnDrawParms, out var pivot);
-        //            offset -= pivot;
-        //            cameraOffset += offset * -1;
-        //        }
-        //    }
-
-        //    TestLog.Error($"cameraOffset : {cameraOffset.x:F5}, {cameraOffset.y:F5}, {cameraOffset.z:F5}");
-
-        //    var cameraZoom = portraitIngredient.cameraZoom + portraitIngredient.testCameraZoom;
-
-        //    if (building_AnimationBed.makePortrait)
-        //    {
-        //        portraitIngredient.iconMat.mainTexture = PortraitsCache.Get(building_AnimationBed.HeldPawn, new Vector2(256, 256), portraitSetting.rotation, cameraOffset, cameraZoom, renderClothes: portraitSetting.renderClothes, renderHeadgear: portraitSetting.renderHeadgear, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
-        //    }
-        //    GenDraw.DrawMeshNowOrLater(portraitIngredient.portraitMesh, matrix, portraitIngredient.iconMat, PawnRenderFlags.None.FlagSet(PawnRenderFlags.DrawNow));
-        //}
-
-        //private static Vector3 CalculatePos(Building_AnimationBed building_AnimationBed, Vector3 bedBasePos, BedAnimationSettingAndTick bedAnimationSettingAndTick, BedAnimationSetting closestSetting)
-        //{
-        //    var pawn = building_AnimationBed.HeldPawn;
-        //    // 기본 위치 계산
-        //    Vector3 pos = new Vector3(bedBasePos.x, pawn.DrawPos.y, bedBasePos.z) + closestSetting.offset;
-
-        //    // 렌더 노드의 오프셋 계산
-        //    if (bedAnimationSettingAndTick.parentBedAnimationDef.animationSynchro && bedAnimationSettingAndTick.parentBedAnimationDef.pawnRenderNodeTagDef != null)
-        //    {
-        //        PawnRenderNode renderNode = pawn.Drawer.renderer.renderTree.rootNode.children
-        //            .FirstOrDefault(n => n?.Props?.tagDef == bedAnimationSettingAndTick.parentBedAnimationDef.pawnRenderNodeTagDef);
-
-        //        if (renderNode != null)
-        //        {
-        //            Vector3 offset = renderNode.Worker.OffsetFor(renderNode, building_AnimationBed.HeldPawnDrawParms, out var pivot);
-        //            offset -= pivot;
-        //            pos += offset;
-
-        //            if (bedAnimationSettingAndTick.parentBedAnimationDef.logCurrentOffset)
-        //            {
-        //                TestLog.Error($"pawnRenderNodeTagDef offset : {offset.x:F5}, {offset.y:F5}, {offset.z:F5}");
-        //                TestLog.Error($"pawnRenderNodeTagDef pivot : {pivot.x:F5}, {pivot.y:F5}, {pivot.z:F5}");
-        //            }
-        //        }
-        //    }
-        //    else if (bedAnimationSettingAndTick.parentBedAnimationDef.animationSynchrotoDummyForJoyAnimation && bedAnimationSettingAndTick.parentBedAnimationDef.pawnRenderNodeTagDef != null && building_AnimationBed.dummyForJoyIsActive && building_AnimationBed.dummyForJoyPawn != null)
-        //    {
-        //        var dummyPawn = building_AnimationBed.dummyForJoyPawn;
-        //        PawnRenderNode renderNode = dummyPawn.Drawer.renderer.renderTree.rootNode.children
-        //            .FirstOrDefault(n => n?.Props?.tagDef == bedAnimationSettingAndTick.parentBedAnimationDef.pawnRenderNodeTagDef);
-
-        //        if (renderNode != null)
-        //        {
-        //            Vector3 offset = renderNode.Worker.OffsetFor(renderNode, building_AnimationBed.HeldPawnDrawParms, out var pivot);
-        //            offset -= pivot;
-        //            pos += offset;
-
-        //            if (bedAnimationSettingAndTick.parentBedAnimationDef.logCurrentOffset)
-        //            {
-        //                Log.Error($"pawnRenderNodeTagDef offset : {offset.x:F5}, {offset.y:F5}, {offset.z:F5}");
-        //                Log.Error($"pawnRenderNodeTagDef pivot : {pivot.x:F5}, {pivot.y:F5}, {pivot.z:F5}");
-        //            }
-        //        }
-        //    }
-
-        //    // 테스트용 오프셋 추가
-        //    pos += closestSetting.testOffset;
-        //    return pos;
-        //}
-
         public static bool MakeBedAnimation(Building_AnimationBed building_AnimationBed)
         {
             Pawn HeldPawn = building_AnimationBed.HeldPawn;
@@ -155,10 +35,17 @@ namespace YR_Hentai_Prime_AnimationBed
             foreach (var bedAnimation in Props.bedAnimationList)
             {
                 BedAnimationDef bedAnimationDef = bedAnimation.bedAnimationDef;
+                Vector3 offset = bedAnimation.offset;
+                Vector2 drawSize = bedAnimation.drawSize;
 
                 foreach (var conditionBedAnimationDef in bedAnimation.conditionBedAnimationDefs)
                 {
-                    void action() => bedAnimationDef = conditionBedAnimationDef.bedAnimationDef;
+                    void action()
+                    {
+                        bedAnimationDef = conditionBedAnimationDef.bedAnimationDef;
+                        offset = conditionBedAnimationDef.offset;
+                        drawSize = conditionBedAnimationDef.drawSize;
+                    }
 
                     if (Condition.ExecuteActionIfConditionMatches(HeldPawn, building_AnimationBed, conditionBedAnimationDef.condition, action))
                     {
@@ -170,7 +57,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 TestLog.Error($"=={bedAnimationDef.defName}==");
                 TestLog.Error("++MakeBedAnimationSettingAndTick Start++");
 
-                var result = MakeBedAnimationSettingAndTick(building_AnimationBed, bedAnimationDef, pawnAnimationDef);
+                var result = MakeBedAnimationSettingAndTick(building_AnimationBed, bedAnimationDef, offset, drawSize, pawnAnimationDef);
                 building_AnimationBed.AnimationSettingComp.bedAnimationSettingAndTicks.Add(result);
 
                 TestLog.Error("++MakeBedAnimationSettingAndTick Finish++");
@@ -240,7 +127,7 @@ namespace YR_Hentai_Prime_AnimationBed
             return MaterialPool.MatFrom(req);
         }
 
-        public static BedAnimationSettingAndTick MakeBedAnimationSettingAndTick(Building_AnimationBed building_AnimationBed, BedAnimationDef bedAnimationDef, AnimationDef pawnAnimationDef)
+        public static BedAnimationSettingAndTick MakeBedAnimationSettingAndTick(Building_AnimationBed building_AnimationBed, BedAnimationDef bedAnimationDef, Vector3 offset, Vector2 drawSize, AnimationDef pawnAnimationDef)
         {
             var bedAnimationSettings = new List<BedAnimationSetting>();
 
@@ -262,13 +149,18 @@ namespace YR_Hentai_Prime_AnimationBed
                     settingCopy = bedAnimationSetting.Copy();
                     settingCopy.parentBedAnimationDef = bedAnimationDef;
                     settingCopy.setPawnColor = bedAnimationDef.setPawnColor;
-                    settingCopy.graphic = null;
+                    settingCopy.offset = bedAnimationSetting.offset + offset + bedAnimationDef.offset;
 
                     // Set appropriate graphic(그래픽 제작)
                     settingCopy.graphic = bedAnimationDef.isPawnTextureReplace
                         ? GetGraphic(building_AnimationBed.HeldPawn, bedAnimationDef.pawnRenderNodeTagDef, settingCopy)
                         : settingCopy.graphicData.Graphic;
 
+                    if (settingCopy.graphic != null && !bedAnimationDef.isPawnTextureReplace)
+                    {
+                        settingCopy.graphic.drawSize = settingCopy.graphicData.drawSize;
+                        settingCopy.graphic.drawSize += drawSize;
+                    }
 
                     if (settingCopy.graphic == null)
                     {
@@ -304,16 +196,21 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private static Graphic GetGraphic(Pawn pawn, PawnRenderNodeTagDef tagDef, BedAnimationSetting bedAnimationSetting)
         {
+            Graphic graphic = null;
             if (tagDef == PawnRenderNodeTagDefOf.Body)
             {
-                return GraphicForBody(pawn, bedAnimationSetting);
+                graphic = GraphicForBody(pawn, bedAnimationSetting);
             }
             else if (tagDef == PawnRenderNodeTagDefOf.Head)
             {
-                return GraphicForHead(pawn, bedAnimationSetting);
+                graphic = GraphicForHead(pawn, bedAnimationSetting);
+            }
+            else
+            {
+                graphic = bedAnimationSetting.graphicData.Graphic;
             }
 
-            return bedAnimationSetting.graphicData.Graphic;
+            return graphic;
 
         }
 

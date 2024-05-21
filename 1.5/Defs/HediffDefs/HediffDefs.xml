@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!--일반 꼬추-->
-	<HediffDef Name="YR_PenisHediff_Base">
-		<defName>YR_Penis_Normal_Hediff</defName>
-		<label>YR_Penis_Normal_Hediff</label>
+	<HediffDef Name="YR_UnvisibleHediff_Base" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>YR_Penis_Normal_Hediff</description>
-		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<defaultLabelColor>(0.5, 0.5, 0.5)</defaultLabelColor>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1</maxSeverity>
 		<initialSeverity>1</initialSeverity>
@@ -16,40 +12,30 @@
 				<becomeVisible>false</becomeVisible>
 			</li>
 		</stages>
+	</HediffDef>
+	<!--뷰르릇-->
+	<HediffDef ParentName="YR_UnvisibleHediff_Base">
+		<defName>YR_Ejaculation_Hediff</defName>
+		<label>YR_Ejaculation_Hediff</label>
+		<description>YR_Ejaculation_Hediff</description>
+		<maxSeverity>0.1</maxSeverity>
+		<initialSeverity>0.1</initialSeverity>
 		<comps>
-			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_MovingHead">
-				<animationDef>HeadMoving</animationDef>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-50</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_BedAnimation">
+				<postRemoved>true</postRemoved>
 			</li>
 		</comps>
 	</HediffDef>
-	<AnimationDef>
-		<defName>HeadMoving</defName>
-		<durationTicks>20</durationTicks>
-		<animationParts>
-			<li>
-				<key>Head</key>
-				<value>
-					<workerClass>AnimationWorker_Keyframes</workerClass>
-					<keyframes>
-						<li>
-							<tick>0</tick>
-							<offset>(0.0,0,2)</offset>
-						</li>
-						<li>
-							<tick>10</tick>
-							<offset>(0.0,0,0)</offset>
-						</li>
-						<li>
-							<tick>15</tick>
-							<offset>(0.0,0,1)</offset>
-						</li>						
-						<li>
-							<tick>20</tick>
-							<offset>(0.0,0,2)</offset>
-						</li>
-					</keyframes>
-				</value>
-			</li>
-		</animationParts>
-	</AnimationDef>
+	<!--일반 꼬추-->
+	<HediffDef ParentName="YR_UnvisibleHediff_Base">
+		<defName>YR_Penis_Normal_Hediff</defName>
+		<label>YR_Penis_Normal_Hediff</label>
+		<description>YR_Penis_Normal_Hediff</description>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+	</HediffDef>
 </Defs>

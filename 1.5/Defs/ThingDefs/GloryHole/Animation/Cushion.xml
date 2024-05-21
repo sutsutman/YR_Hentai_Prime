@@ -7,7 +7,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.05,0)</offset>
+				<offset>(0.0,0.18,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Commissure/Up</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -21,7 +21,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,-1.94,0)</offset>
+				<offset>(0.0,0.01,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Commissure/Down</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -35,7 +35,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.05,0)</offset>
+				<offset>(0.0,0.17,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Commissure/Right</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -49,7 +49,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.05,0)</offset>
+				<offset>(0.0,0.17,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Commissure/Left</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -64,7 +64,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,-1.95,0)</offset>
+				<offset>(0.0,0,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Right/Down</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -78,7 +78,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.05,0)</offset>
+				<offset>(0.0,0.15,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Right/Up</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -92,7 +92,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.05,0)</offset>
+				<offset>(0.0,0.16,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Right/UpUp</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -107,7 +107,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,-1.95,0)</offset>
+				<offset>(0.0,0,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Left/Down</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -121,7 +121,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.05,0)</offset>
+				<offset>(0.0,0.15,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Left/Up</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -135,7 +135,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.05,0)</offset>
+				<offset>(0.0,0.16,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Cushion/Left/UpUp</texPath>
 					<graphicClass>Graphic_Single</graphicClass>

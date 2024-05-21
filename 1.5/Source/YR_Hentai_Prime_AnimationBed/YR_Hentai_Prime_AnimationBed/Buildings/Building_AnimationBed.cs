@@ -467,21 +467,42 @@ namespace YR_Hentai_Prime_AnimationBed
                         action = ToggleMovef
                     };
 
+                    var defLabelCount = new Dictionary<BedAnimationDef, int>();
+
                     //애니메이션 쪽
                     foreach (var bedAnimationSettingAndTick in AnimationSettingComp.bedAnimationSettingAndTicks)
                     {
+                        var parentDef = bedAnimationSettingAndTick.parentBedAnimationDef;
+
+                        if (parentDef == YR_H_P_DefOf.YR_Dummy_BedAnimation)
+                        {
+                            continue;
+                        }
+
                         List<BedAnimationSetting> bedAnimationSettings = bedAnimationSettingAndTick.bedAnimationSettings;
 
                         Texture2D openGizmoIcon = ContentFinder<Texture2D>.Get("UI/YR_Dummy");
                         if (bedAnimationSettings[0]?.graphicData?.texPath != null)
                         {
-
                             openGizmoIcon = ContentFinder<Texture2D>.Get(bedAnimationSettings[0].graphicData.texPath);
                         }
 
+                        if (!defLabelCount.ContainsKey(parentDef))
+                        {
+                            defLabelCount[parentDef] = 0;
+                        }
+                        else
+                        {
+                            defLabelCount[parentDef]++;
+                        }
+
+                        string labelSuffix = defLabelCount[parentDef] > 0 ? $" [{defLabelCount[parentDef]}]" : string.Empty;
+                        string label = (bedAnimationSettingAndTick.parentBedAnimationDef.label ?? bedAnimationSettingAndTick.parentBedAnimationDef.defName) + labelSuffix;
+
+
                         yield return new Command_Action
                         {
-                            defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "OpenGizmo",
+                            defaultLabel = $"{label} : " + "OpenGizmo",
                             icon = openGizmoIcon,
                             action = delegate
                             {
@@ -503,7 +524,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             //Reset
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "Reset",
+                                defaultLabel = $"{label} : " + "Reset",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
                                 action = delegate
                                 {
@@ -538,7 +559,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             // X
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "Right",
+                                defaultLabel = $"{label} : " + "Right",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
                                 action = delegate
                                 {
@@ -553,7 +574,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             };
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "Left",
+                                defaultLabel = $"{label} : " + "Left",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
                                 action = delegate
                                 {
@@ -571,7 +592,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             // Y
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "Front",
+                                defaultLabel = $"{label} : " + "Front",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
                                 action = delegate
                                 {
@@ -586,7 +607,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             };
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "Back",
+                                defaultLabel = $"{label} : " + "Back",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
                                 action = delegate
                                 {
@@ -604,7 +625,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             // Z
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "Up",
+                                defaultLabel = $"{label} : " + "Up",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
                                 action = delegate
                                 {
@@ -619,7 +640,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             };
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "Down",
+                                defaultLabel = $"{label} : " + "Down",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
                                 action = delegate
                                 {
@@ -637,7 +658,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             // DrawSize x
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "draw x Big",
+                                defaultLabel = $"{label} : " + "draw x Big",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
                                 action = delegate
                                 {
@@ -654,7 +675,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             };
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "draw x Small",
+                                defaultLabel = $"{label} : " + "draw x Small",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
                                 action = delegate
                                 {
@@ -673,7 +694,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             // DrawSize y
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "draw y Big",
+                                defaultLabel = $"{label} : " + "draw y Big",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_y_Big"),
                                 action = delegate
                                 {
@@ -690,7 +711,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             };
                             yield return new Command_Action
                             {
-                                defaultLabel = $"{bedAnimationSettingAndTick.parentBedAnimationDef.defName} : " + "draw y Small",
+                                defaultLabel = $"{label} : " + "draw y Small",
                                 icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_y_Small"),
                                 action = delegate
                                 {
