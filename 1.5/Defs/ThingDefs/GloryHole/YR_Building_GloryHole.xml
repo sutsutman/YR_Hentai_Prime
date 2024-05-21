@@ -146,7 +146,6 @@
 					<pawnAnimationDef>YR_Dummy_Animation</pawnAnimationDef>
 					<!-- 기본 애니메이션 -->
 					<conditonPawnAnimations>
-						<!-- 바디 텍스처 바꾸고 싶으면 기존 바디 레이어를 숨긴 애니메이션 사용 해야 함 -->
 						<li>
 							<condition>
 								<dummyForJoyIsActive>true</dummyForJoyIsActive>
@@ -154,20 +153,8 @@
 							<pawnAnimationDef>YR_MilkingMachine_Animation</pawnAnimationDef>
 						</li>
 					</conditonPawnAnimations>
-					<offset>(0,0,0.25)</offset>
-					<conditonPawnOffsets>
-						<li>
-							<condition/>
-							<offset/>
-						</li>
-					</conditonPawnOffsets>
+					<offset>(0,1,0.25)</offset>
 					<rotation>North</rotation>
-					<conditionPawnRotations>
-						<li>
-							<condition/>
-							<rotation/>
-						</li>
-					</conditionPawnRotations>
 				</pawnAnimationSetting>
 				<bedAnimationList>
 					<!-- 폰의 바디, 헤드 -->

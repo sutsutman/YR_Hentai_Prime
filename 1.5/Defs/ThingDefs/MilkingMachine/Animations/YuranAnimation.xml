@@ -83,7 +83,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,-1.89228,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -92,7 +92,7 @@
 			</li>
 			<li>
 				<tick>4</tick>
-				<offset>(0.0,-1.89228,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -101,7 +101,7 @@
 			</li>
 			<li>
 				<tick>8</tick>
-				<offset>(0.0,-1.89228,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -110,7 +110,7 @@
 			</li>
 			<li>
 				<tick>12</tick>
-				<offset>(0.0,-1.89228,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -119,7 +119,7 @@
 			</li>
 			<li>
 				<tick>24</tick>
-				<offset>(0.0,-1.89228,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/5_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -128,7 +128,7 @@
 			</li>
 			<li>
 				<tick>35</tick>
-				<offset>(0.0,-1.89228,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/6_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -137,7 +137,7 @@
 			</li>
 			<li>
 				<tick>55</tick>
-				<offset>(0.0,-1.89228,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/7_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -146,7 +146,7 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_Milking_Face_Yuran_Miko</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<isPawnTextureReplace>true</isPawnTextureReplace>
@@ -157,7 +157,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,-1.857,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -166,7 +166,7 @@
 			</li>
 			<li>
 				<tick>4</tick>
-				<offset>(0.0,-1.857,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -175,7 +175,7 @@
 			</li>
 			<li>
 				<tick>8</tick>
-				<offset>(0.0,-1.857,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -184,7 +184,7 @@
 			</li>
 			<li>
 				<tick>12</tick>
-				<offset>(0.0,-1.857,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -193,7 +193,7 @@
 			</li>
 			<li>
 				<tick>24</tick>
-				<offset>(0.0,-1.857,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/5_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -202,7 +202,7 @@
 			</li>
 			<li>
 				<tick>35</tick>
-				<offset>(0.0,-1.857,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/6_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -211,7 +211,7 @@
 			</li>
 			<li>
 				<tick>55</tick>
-				<offset>(0.0,-1.857,0.26)</offset>
+				<offset>(0.0,0.06,0.26)</offset>
 				<graphicData>
 					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Face/7_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -224,15 +224,21 @@
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_Milking_Body_Yuran</defName>
 		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
-		<autoDurationTicksSetting>true</autoDurationTicksSetting><!--폰 애니메이션과 침대 애니메이션의 총 틱의 강제 매치 -->
-		<isPawnTextureReplace>true</isPawnTextureReplace><!-- 텍스처 판정을 폰 바디 랜더로 바꿈 -->
-		<setPawnColor>false</setPawnColor><!-- 이걸 해줘야 색상이 스킨 컬러, 셰이더 적용 됨. 다만 유란 같은 경우 적용이 되면 안되니깐 꺼둠 -->
-		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef><!-- 이 텍스처는 어느 랜더 노드 태그 쓰는지 -->
-		<animationSynchro>false</animationSynchro><!--동일한 pawnRenderNodeTagDef를 가진 애니메이션과 움직임을 싱크로 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<!--폰 애니메이션과 침대 애니메이션의 총 틱의 강제 매치 -->
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<!-- 텍스처 판정을 폰 바디 랜더로 바꿈 -->
+		<setPawnColor>false</setPawnColor>
+		<!-- 이걸 해줘야 색상이 스킨 컬러, 셰이더 적용 됨. 다만 유란 같은 경우 적용이 되면 안되니깐 꺼둠 -->
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<!-- 이 텍스처는 어느 랜더 노드 태그 쓰는지 -->
+		<animationSynchro>false</animationSynchro>
+		<!--동일한 pawnRenderNodeTagDef를 가진 애니메이션과 움직임을 싱크로 -->
+		<!-- <logCurrentOffset>true</logCurrentOffset> -->
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -241,7 +247,7 @@
 			</li>
 			<li>
 				<tick>4</tick>
-				<offset>(0.0,-1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -250,7 +256,7 @@
 			</li>
 			<li>
 				<tick>8</tick>
-				<offset>(0.0,-1.9,0.25)</offset>
+				<offset>(0.0,0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -259,7 +265,7 @@
 			</li>
 			<li>
 				<tick>12</tick>
-				<offset>(0.0,-1.9,0.25)</offset>
+				<offset>(0.0,0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -268,7 +274,7 @@
 			</li>
 			<li>
 				<tick>40</tick>
-				<offset>(0.0,-1.9,0.25)</offset>
+				<offset>(0.0,0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/5_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -277,7 +283,7 @@
 			</li>
 			<li>
 				<tick>55</tick>
-				<offset>(0.0,-1.9,0.25)</offset>
+				<offset>(0.0,0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/6_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -353,18 +359,21 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-	
 	<!-- 유란 파워모드1 -->
-	
 	<!-- 유란 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_Milking_Body_Yuran_PowerA</defName>
 		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
-		<autoDurationTicksSetting>true</autoDurationTicksSetting><!--폰 애니메이션과 침대 애니메이션의 총 틱의 강제 매치 -->
-		<isPawnTextureReplace>true</isPawnTextureReplace><!-- 텍스처 판정을 폰 바디 랜더로 바꿈 -->
-		<setPawnColor>false</setPawnColor><!-- 이걸 해줘야 색상이 스킨 컬러, 셰이더 적용 됨. 다만 유란 같은 경우 적용이 되면 안되니깐 꺼둠 -->
-		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef><!-- 이 텍스처는 어느 랜더 노드 태그 쓰는지 -->
-		<animationSynchro>false</animationSynchro><!--동일한 pawnRenderNodeTagDef를 가진 애니메이션과 움직임을 싱크로 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<!--폰 애니메이션과 침대 애니메이션의 총 틱의 강제 매치 -->
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<!-- 텍스처 판정을 폰 바디 랜더로 바꿈 -->
+		<setPawnColor>false</setPawnColor>
+		<!-- 이걸 해줘야 색상이 스킨 컬러, 셰이더 적용 됨. 다만 유란 같은 경우 적용이 되면 안되니깐 꺼둠 -->
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<!-- 이 텍스처는 어느 랜더 노드 태그 쓰는지 -->
+		<animationSynchro>false</animationSynchro>
+		<!--동일한 pawnRenderNodeTagDef를 가진 애니메이션과 움직임을 싱크로 -->
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
@@ -489,7 +498,6 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-	
 	<!-- 딜도 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_Milking_Dildo_Yuran_PowerA</defName>
@@ -558,19 +566,21 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-	
-	
 	<!-- 유란 파워모드2 -->
-	
 	<!-- 유란 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_Milking_Body_Yuran_PowerB</defName>
 		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
-		<autoDurationTicksSetting>true</autoDurationTicksSetting><!--폰 애니메이션과 침대 애니메이션의 총 틱의 강제 매치 -->
-		<isPawnTextureReplace>true</isPawnTextureReplace><!-- 텍스처 판정을 폰 바디 랜더로 바꿈 -->
-		<setPawnColor>false</setPawnColor><!-- 이걸 해줘야 색상이 스킨 컬러, 셰이더 적용 됨. 다만 유란 같은 경우 적용이 되면 안되니깐 꺼둠 -->
-		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef><!-- 이 텍스처는 어느 랜더 노드 태그 쓰는지 -->
-		<animationSynchro>false</animationSynchro><!--동일한 pawnRenderNodeTagDef를 가진 애니메이션과 움직임을 싱크로 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<!--폰 애니메이션과 침대 애니메이션의 총 틱의 강제 매치 -->
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<!-- 텍스처 판정을 폰 바디 랜더로 바꿈 -->
+		<setPawnColor>false</setPawnColor>
+		<!-- 이걸 해줘야 색상이 스킨 컬러, 셰이더 적용 됨. 다만 유란 같은 경우 적용이 되면 안되니깐 꺼둠 -->
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<!-- 이 텍스처는 어느 랜더 노드 태그 쓰는지 -->
+		<animationSynchro>false</animationSynchro>
+		<!--동일한 pawnRenderNodeTagDef를 가진 애니메이션과 움직임을 싱크로 -->
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
@@ -608,7 +618,6 @@
 					<drawSize>(1.25, 1.25)</drawSize>
 				</graphicData>
 			</li>
-			
 			<li>
 				<tick>16</tick>
 				<offset>(0.0, -1.9,0.25)</offset>
@@ -681,7 +690,6 @@
 					<drawSize>(1.25, 1.25)</drawSize>
 				</graphicData>
 			</li>
-			
 			<li>
 				<tick>55</tick>
 				<offset>(0.0, -1.9,0.25)</offset>
@@ -738,7 +746,6 @@
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
-			
 			<li>
 				<tick>16</tick>
 				<offset>(0.0,1,0)</offset>
@@ -819,7 +826,6 @@
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
-			
 			<li>
 				<tick>55</tick>
 				<offset>(0.0,1,0)</offset>
@@ -832,7 +838,6 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-	
 	<!-- 딜도 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_Milking_Dildo_Yuran_PowerB</defName>
@@ -879,7 +884,6 @@
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
-			
 			<li>
 				<tick>16</tick>
 				<offset>(0,1,-0.025)</offset>
@@ -950,7 +954,6 @@
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
-
 			<li>
 				<tick>44</tick>
 				<offset>(0,1,-0.025)</offset>

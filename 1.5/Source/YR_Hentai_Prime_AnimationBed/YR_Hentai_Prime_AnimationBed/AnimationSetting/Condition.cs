@@ -73,24 +73,11 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 return false;
             }
-
             bool CheckDummyForJoyIsActive(Building_AnimationBed building_AnimationBed, Condition condition)
-            {
-                if (condition.dummyForJoyIsActive)
-                {
-                    if (building_AnimationBed == null)
-                    {
-                        return false;
-                    }
+                => allMatch
+                ? !condition.dummyForJoyIsActive || (condition.dummyForJoyIsActive && building_AnimationBed.dummyForJoyIsActive)
+                : condition.dummyForJoyIsActive && building_AnimationBed.dummyForJoyIsActive;
 
-                    return building_AnimationBed.dummyForJoyIsActive;
-
-                }
-                else
-                {
-                    return allMatch;
-                }
-            }
 
             bool CheckProbability(float probability)
             {
@@ -125,9 +112,9 @@ namespace YR_Hentai_Prime_AnimationBed
             };
 
 
-        bool match = allMatch
-                ? matchConditions.All(x => x)
-                : matchConditions.Any(x => x);
+            bool match = allMatch
+                    ? matchConditions.All(x => x)
+                    : matchConditions.Any(x => x);
 
             return condition.reverseCondition ? !match : match;
 

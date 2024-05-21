@@ -11,29 +11,9 @@ namespace YR_Hentai_Prime_AnimationBed
     [StaticConstructorOnStartup]
     public class Building_AnimationBed : Building, IThingHolderWithDrawnPawn, IThingHolder, IRoofCollapseAlert, ISearchableContents
     {
-        //public struct Chain
-        //{
-        //    public Vector3 from;
-
-        //    public Vector3 to;
-
-        //    public Graphic graphic;
-
-        //    public Graphic baseFastenerGraphic;
-
-        //    public Graphic targetFastenerGraphic;
-
-        //    public float rotation;
-        //}
-
-
         public ThingOwner innerContainer;
 
         private int lastDamaged;
-
-        private Graphic chainsUntetheredGraphic;
-
-        //private List<Chain> chains;
 
         private CompAffectedByFacilities facilitiesComp;
 
@@ -44,13 +24,6 @@ namespace YR_Hentai_Prime_AnimationBed
         private CompToggleHediff toggleHediffComp;
 
         private CompSpawnDummyForJoy spawnDummyForJoyComp;
-
-        private AttachPointTracker targetPoints;
-
-        //private List<Chain> defaultPointMapping;
-
-        [Unsaved(false)]
-        private int debugEscapeTick = -1;
 
         private int heldPawnStartTick = -1;
 
@@ -117,39 +90,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public ThingOwner SearchableContents => innerContainer;
 
-        private AttachPointTracker TargetPawnAttachPoints
-        {
-            get
-            {
-                if (targetPoints != null && targetPoints.ThingId != HeldPawn.ThingID)
-                {
-                    targetPoints = null;
-                }
-
-                bool num = targetPoints == null;
-                targetPoints = targetPoints ?? HeldPawn.TryGetComp<CompAttachPoints>()?.points;
-                if (num)
-                {
-                    foreach (HediffComp_AttachPoints hediffComp in HeldPawn.health.hediffSet.GetHediffComps<HediffComp_AttachPoints>())
-                    {
-                        if (hediffComp.Points != null)
-                        {
-                            if (targetPoints == null)
-                            {
-                                targetPoints = hediffComp.Points;
-                            }
-                            else
-                            {
-                                targetPoints.Add(hediffComp.Points);
-                            }
-                        }
-                    }
-                }
-
-                return targetPoints;
-            }
-        }
-
         public bool HasAttachedElectroharvester
         {
             get
@@ -166,19 +106,6 @@ namespace YR_Hentai_Prime_AnimationBed
                 return false;
             }
         }
-
-        //private Graphic ChainsUntetheredGraphic
-        //{
-        //    get
-        //    {
-        //        if (chainsUntetheredGraphic == null)
-        //        {
-        //            chainsUntetheredGraphic = GraphicDatabase.Get<Graphic_Single>(PlatformProps.untetheredGraphicTexPath, ShaderDatabase.Cutout, def.graphicData.drawSize, Color.white);
-        //        }
-
-        //        return chainsUntetheredGraphic;
-        //    }
-        //}
 
         private CompProperties_AnimationBed PlatformProps => GetComp<CompAnimationBed>().Props;
 
@@ -197,56 +124,11 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        //public List<Chain> DefaultPointMapping
-        //{
-        //    get
-        //    {
-        //        if (defaultPointMapping == null)
-        //        {
-        //            defaultPointMapping = new List<Chain>();
-        //            Vector3 worldPos = AttachPointsComp.points.GetWorldPos(AttachPointType.PlatformRestraint0);
-        //            Vector3 worldPos2 = AttachPointsComp.points.GetWorldPos(AttachPointType.PlatformRestraint1);
-        //            Vector3 worldPos3 = AttachPointsComp.points.GetWorldPos(AttachPointType.PlatformRestraint2);
-        //            Vector3 worldPos4 = AttachPointsComp.points.GetWorldPos(AttachPointType.PlatformRestraint3);
-        //            Vector2 vector = new Vector2(Vector3.Distance(worldPos, worldPos3), 1f);
-        //            defaultPointMapping.Add(new Chain
-        //            {
-        //                from = worldPos,
-        //                to = worldPos3,
-        //                graphic = (GraphicDatabase.Get<Graphic_Tiling>(PlatformProps.tilingChainTexPath, ShaderTypeDefOf.Cutout.Shader, vector, Color.white) as Graphic_Tiling).WithTiling(vector),
-        //                baseFastenerGraphic = GraphicDatabase.Get<Graphic_Single>(PlatformProps.baseChainFastenerTexPath, ShaderTypeDefOf.Cutout.Shader, Vector2.one, Color.white),
-        //                targetFastenerGraphic = GraphicDatabase.Get<Graphic_Single>(PlatformProps.targetChainFastenerTexPath, ShaderTypeDefOf.Cutout.Shader, Vector2.one, Color.white),
-        //                rotation = (worldPos3.WithY(0f) - worldPos.WithY(0f)).normalized.ToAngleFlat()
-        //            });
-        //            vector = new Vector2(Vector3.Distance(worldPos2, worldPos4), 1f);
-        //            defaultPointMapping.Add(new Chain
-        //            {
-        //                from = worldPos2,
-        //                to = worldPos4,
-        //                graphic = (GraphicDatabase.Get<Graphic_Tiling>(PlatformProps.tilingChainTexPath, ShaderTypeDefOf.Cutout.Shader, vector, Color.white) as Graphic_Tiling).WithTiling(vector),
-        //                baseFastenerGraphic = GraphicDatabase.Get<Graphic_Single>(PlatformProps.baseChainFastenerTexPath, ShaderTypeDefOf.Cutout.Shader, Vector2.one, Color.white),
-        //                targetFastenerGraphic = GraphicDatabase.Get<Graphic_Single>(PlatformProps.targetChainFastenerTexPath, ShaderTypeDefOf.Cutout.Shader, Vector2.one, Color.white),
-        //                rotation = (worldPos4.WithY(0f) - worldPos2.WithY(0f)).normalized.ToAngleFlat()
-        //            });
-        //        }
-
-        //        return defaultPointMapping;
-        //    }
-        //}
-
         public Building_AnimationBed() => innerContainer = new ThingOwner<Thing>(this);
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-            //if (!ModLister.CheckAnomaly("Holding platform"))
-            //{
-            //    Destroy();
-            //    return;
-            //}
-
             base.SpawnSetup(map, respawningAfterLoad);
-            //Find.StudyManager.UpdateStudiableCache(this, base.Map);
-            //Find.Anomaly.hasBuiltHoldingPlatform = true;
         }
 
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
@@ -266,25 +148,13 @@ namespace YR_Hentai_Prime_AnimationBed
             return innerContainer;
         }
 
-        private bool TryGetFirstColonistDirection(out Vector2 direction)
-        {
-            foreach (Thing item in GenRadial.RadialDistinctThingsAround(base.Position, base.Map, 4f, useCenter: false))
-            {
-                if (item is Pawn pawn && pawn.IsColonist)
-                {
-                    direction = pawn.Position.ToVector2() - base.Position.ToVector2();
-                    return true;
-                }
-            }
-
-            direction = Vector2.zero;
-            return false;
-        }
 
         public bool setAnimation = true;
         public bool openControllSetting;
         public int tempTick = num;
         public static int num = 1000;
+
+        public bool makePortrait = true;
         public override void Tick()
         {
             base.Tick();
@@ -292,17 +162,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
             if (HeldPawn != null)
             {
-                //if (dummyForJoyPawn == null)
-                //{
-                //    tempTick--;
-
-                //    if (tempTick < 0)
-                //    {
-                //        tempTick = num;
-                //        setAnimation = true;
-                //        animationSettingComp.needMakeGraphics = true;
-                //    }
-                //}
+                makePortrait = true;
 
                 BedAnimationUtility.SetAnimation(this);
 
@@ -349,8 +209,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private static void GetSoundDefAndProbability(Pawn pawn, Building_AnimationBed building_AnimationBed, SoundSetting soundSetting, out SoundDef soundDef, out float probability)
         {
-             var tempSoundDef = soundSetting.soundDefs.RandomElement();
-             var tempProbability = soundSetting.probability;
+            var tempSoundDef = soundSetting.soundDefs.RandomElement();
+            var tempProbability = soundSetting.probability;
 
             foreach (var conditionSoundSetting in soundSetting.conditionSoundSettings)
             {
@@ -382,117 +242,6 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-
-
-        //private void UpdateAnimation()
-        //{
-        //    if (HeldPawn.TryGetComp<CompAnimationBedTarget>(out var comp) && (!comp.Props.hasAnimation || HeldPawn.health.Downed))
-        //    {
-        //        HeldPawn.Drawer.renderer.SetAnimation(null);
-        //        return;
-        //    }
-
-        //    SoundDef soundDef = PlatformProps.entityLungeSoundLow;
-        //    AnimationDef animationDef = AnimationDefOf.HoldingPlatformWiggleLight;
-        //    if (TryGetFirstColonistDirection(out var direction))
-        //    {
-        //        if (TargetPawnAttachPoints != null && GenTicks.IsTickInterval(3))
-        //        {
-        //            Vector2 vector = direction.normalized.Cardinalize();
-        //            if (vector == Vector2.up)
-        //            {
-        //                animationDef = AnimationDefOf.HoldingPlatformLungeUp;
-        //            }
-
-        //            if (vector == Vector2.right)
-        //            {
-        //                animationDef = AnimationDefOf.HoldingPlatformLungeRight;
-        //            }
-
-        //            if (vector == Vector2.left)
-        //            {
-        //                animationDef = AnimationDefOf.HoldingPlatformLungeLeft;
-        //            }
-
-        //            if (vector == Vector2.down)
-        //            {
-        //                animationDef = AnimationDefOf.HoldingPlatformLungeDown;
-        //            }
-
-        //            soundDef = PlatformProps.entityLungeSoundHi;
-        //        }
-        //        else
-        //        {
-        //            animationDef = AnimationDefOf.HoldingPlatformWiggleIntense;
-        //        }
-        //    }
-
-        //    if (HeldPawn.Drawer.renderer.CurAnimation != animationDef)
-        //    {
-        //        soundDef?.PlayOneShot(this);
-        //        HeldPawn.Drawer.renderer.SetAnimation(animationDef);
-        //    }
-        //}
-
-        //public List<Chain> BuildTargetPointMapping()
-        //{
-        //    if (chains == null)
-        //    {
-        //        chains = new List<Chain>();
-        //    }
-        //    else
-        //    {
-        //        chains.Clear();
-        //    }
-
-        //    HeldPawn.Drawer.renderer.renderTree.GetRootTPRS(HeldPawnDrawParms, out var offset, out var _, out var rotation, out var _);
-        //    Vector3 vector = DrawPos + PawnDrawOffset;
-        //    Dictionary<AttachPointType, Vector3> dictionary = new Dictionary<AttachPointType, Vector3>();
-        //    int num = 5;
-        //    int num2 = 8;
-        //    foreach (AttachPointType item in TargetPawnAttachPoints.PointTypes(num, num2))
-        //    {
-        //        Vector3 value = vector + rotation * (offset + TargetPawnAttachPoints.GetRotatedOffset(item, base.Rotation));
-        //        dictionary.Add(item, value);
-        //    }
-
-        //    for (int i = num; i <= num2; i++)
-        //    {
-        //        Vector3 vector2 = GetPlatformPoints()[(AttachPointType)i];
-        //        Vector3 vector3 = dictionary[(AttachPointType)i];
-        //        Vector3 vector4 = Vector3.Lerp(vector2, vector3, AnimationAlpha);
-        //        float x = Vector3.Distance(vector4, vector2);
-        //        Vector2 vector5 = new Vector2(x, 1f);
-        //        chains.Add(new Chain
-        //        {
-        //            from = vector2,
-        //            to = vector4,
-        //            graphic = (GraphicDatabase.Get<Graphic_Tiling>(PlatformProps.tilingChainTexPath, ShaderTypeDefOf.CutoutTiling.Shader, vector5, Color.white) as Graphic_Tiling).WithTiling(vector5),
-        //            baseFastenerGraphic = GraphicDatabase.Get<Graphic_Single>(PlatformProps.baseChainFastenerTexPath, ShaderTypeDefOf.CutoutTiling.Shader, Vector2.one, Color.white),
-        //            targetFastenerGraphic = GraphicDatabase.Get<Graphic_Single>(PlatformProps.targetChainFastenerTexPath, ShaderTypeDefOf.CutoutTiling.Shader, Vector2.one, Color.white),
-        //            rotation = (vector3.WithY(0f) - vector2.WithY(0f)).normalized.ToAngleFlat()
-        //        });
-        //    }
-
-        //    return chains;
-        //}
-
-        private Dictionary<AttachPointType, Vector3> GetPlatformPoints()
-        {
-            if (platformPoints == null)
-            {
-                platformPoints = new Dictionary<AttachPointType, Vector3>();
-                int min = 5;
-                int max = 8;
-                foreach (AttachPointType item in AttachPointsComp.points.PointTypes(min, max))
-                {
-                    platformPoints.Add(item, AttachPointsComp.points.GetWorldPos(item));
-                }
-            }
-
-            return platformPoints;
-        }
-
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
         {
             base.DynamicDrawPhaseAt(phase, drawLoc, flip);
@@ -500,10 +249,6 @@ namespace YR_Hentai_Prime_AnimationBed
             if (heldPawn != null && AnimationSettingComp != null)
             {
                 Rot4 rotation = AnimationSettingComp.Props.pawnAnimationSetting.rotation;
-                if (heldPawn.IsMutant && heldPawn.RaceProps.Animal)
-                {
-                    rotation = Rot4.East;
-                }
 
                 foreach (var conditionPawnRotation in AnimationSettingComp.Props.pawnAnimationSetting.conditionPawnRotations)
                 {
@@ -515,9 +260,9 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
                 }
 
-                heldPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, DrawPos + PawnDrawOffset, rotation, neverAimWeapon: true);
-
-                BedAnimationUtility.DrawBedAnimation(this);
+                var pos = DrawPos + PawnDrawOffset;
+                //Log.Error(heldPawn.LabelShort + " : " + pos.ToString("F10"));
+                heldPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, pos, rotation, neverAimWeapon: true);
             }
             else
             {
@@ -575,38 +320,10 @@ namespace YR_Hentai_Prime_AnimationBed
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             base.DrawAt(drawLoc, flip);
-            //if (HeldPawn != null)
-            //{
-            //    DrawChains();
-            //}
-            //else
-            //{
-            //    ChainsUntetheredGraphic.Draw(drawLoc + Vector3.up * 0.05f, base.Rotation, this);
-            //}
         }
-
-        //private void DrawChains()
-        //{
-        //    if (chains == null)
-        //    {
-        //        return;
-        //    }
-
-        //    chains = ((TargetPawnAttachPoints != null) ? BuildTargetPointMapping() : DefaultPointMapping);
-        //    Vector3 vector = Vector3.up * (9f / 65f);
-        //    foreach (Chain chain in chains)
-        //    {
-        //        Vector3 v = (chain.from + chain.to) / 2f;
-        //        chain.graphic.Draw(v.WithY(DrawPos.y) + vector, base.Rotation, this, chain.rotation + 180f);
-        //        chain.targetFastenerGraphic.Draw(chain.to + 2f * vector, base.Rotation, this, chain.rotation + 90f);
-        //        chain.baseFastenerGraphic.Draw(chain.from + 2f * vector, base.Rotation, this, chain.rotation + 90f);
-        //    }
-        //}
 
         public void EjectContents()
         {
-            //defaultPointMapping = null;
-            //chains = null;
             setAnimation = true;
             animationSettingComp.needMakeGraphics = true;
 
@@ -663,52 +380,6 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        //public override string GetInspectString()
-        //{
-        //    string text = base.GetInspectString();
-        //    if (!text.NullOrEmpty())
-        //    {
-        //        text += "\n";
-        //    }
-
-        //    Pawn heldPawn = HeldPawn;
-        //    if (heldPawn != null)
-        //    {
-        //        TaggedString ts = "HoldingThing".Translate() + ": " + heldPawn.NameShortColored.CapitalizeFirst();
-        //        bool flag = this.SafelyContains(heldPawn);
-        //        if (!flag)
-        //        {
-        //            ts += " (" + "HoldingPlatformRequiresStrength".Translate(StatDefOf.MinimumContainmentStrength.Worker.ValueToString(heldPawn.GetStatValue(StatDefOf.MinimumContainmentStrength), finalized: false)) + ")";
-        //        }
-
-        //        text += ts.Colorize(flag ? Color.white : ColorLibrary.RedReadable);
-        //    }
-        //    else
-        //    {
-        //        text += "HoldingThing".Translate() + ": " + "Nothing".Translate().CapitalizeFirst();
-        //    }
-
-        //    //if (heldPawn != null && heldPawn.def.IsStudiable)
-        //    //{
-        //    //    string inspectStringExtraFor = CompStudiable.GetInspectStringExtraFor(heldPawn);
-        //    //    if (!inspectStringExtraFor.NullOrEmpty())
-        //    //    {
-        //    //        text = text + "\n" + inspectStringExtraFor;
-        //    //    }
-        //    //}
-
-        //    //if (heldPawn != null && heldPawn.TryGetComp<CompProducesBioferrite>(out var comp))
-        //    //{
-        //    //    string text2 = comp.CompInspectStringExtra();
-        //    //    if (!text2.NullOrEmpty())
-        //    //    {
-        //    //        text = text + "\n" + text2;
-        //    //    }
-        //    //}
-
-        //    return text;
-        //}
-
         public override IEnumerable<InspectTabBase> GetInspectTabs()
         {
             foreach (InspectTabBase inspectTab in base.GetInspectTabs())
@@ -721,8 +392,6 @@ namespace YR_Hentai_Prime_AnimationBed
                 yield return HeldPawn.GetInspectTabs().FirstOrDefault((InspectTabBase tab) => tab is ITab_StudyNotes);
             }
         }
-
-
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -768,25 +437,6 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 yield break;
             }
-
-            yield return new Command_Action
-            {
-                defaultLabel = "DEV: Timed escape",
-                action = delegate
-                {
-                    List<FloatMenuOption> list = new List<FloatMenuOption>();
-                    for (int i = 1; i < 21; i++)
-                    {
-                        int delay = i * 60;
-                        list.Add(new FloatMenuOption(delay.TicksToSeconds() + "s", delegate
-                        {
-                            debugEscapeTick = Find.TickManager.TicksGame + delay;
-                        }));
-                    }
-
-                    Find.WindowStack.Add(new FloatMenu(list));
-                }
-            };
 
             //테스트용 기즈모
 
@@ -1354,7 +1004,6 @@ namespace YR_Hentai_Prime_AnimationBed
                 movef = (float)Math.Round(values[currentIndex], 3);
             }
         }
-
 
         private readonly List<float> values = new List<float> { 0.001f, 0.01f, 0.1f, 1f };
         private int currentIndex = 0;

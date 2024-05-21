@@ -114,6 +114,7 @@
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
 		<animationSynchro>true</animationSynchro>
+		<!-- <logCurrentOffset>true</logCurrentOffset> -->
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>

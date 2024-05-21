@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Verse;
 using Verse.AI;
-using static HarmonyLib.Code;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
@@ -73,11 +72,13 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             CompProperties_SpawnDummyForJoy props = CompSpawnDummyForJoy?.Props;
+            
             if (props != null)
             {
                 Pawn heldPawn = Building_AnimationBed?.HeldPawn;
                 if (pawn.Drawer.renderer.CurAnimation != props.animationDef && heldPawn != null)
                 {
+                    //여기에 뭔가 원인이 있음
                     pawn.Drawer.renderer.SetAnimation(props.animationDef);
                     Building_AnimationBed.dummyForJoyIsActive = true;
                     Building_AnimationBed.dummyForJoyPawn = pawn;
@@ -164,7 +165,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public override void ExposeData()
         {
-           base.ExposeData();
+            base.ExposeData();
 
 
             Scribe_Values.Look(ref start, "start");
