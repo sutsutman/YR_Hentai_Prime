@@ -143,6 +143,7 @@ namespace YR_Hentai_Prime_AnimationBed
             foreach (var bedAnimationSetting in bedAnimationDef.bedAnimationSettings)
             {
 
+                Pawn HeldPawn = building_AnimationBed.HeldPawn;
                 void action()
                 {
                     var settingCopy = new BedAnimationSetting();
@@ -151,28 +152,45 @@ namespace YR_Hentai_Prime_AnimationBed
                     settingCopy.setPawnColor = bedAnimationDef.setPawnColor;
                     settingCopy.offset = bedAnimationSetting.offset + offset + bedAnimationDef.offset;
 
-                    // Set appropriate graphic(그래픽 제작)
-                    settingCopy.graphic = bedAnimationDef.isPawnTextureReplace
-                        ? GetGraphic(building_AnimationBed.HeldPawn, bedAnimationDef.pawnRenderNodeTagDef, settingCopy)
-                        : settingCopy.graphicData.Graphic;
+                    GraphicData graphicData = settingCopy.graphicData;
 
-                    if (settingCopy.graphic != null && !bedAnimationDef.isPawnTextureReplace)
+                    foreach (var conditionGraphicData in bedAnimationSetting.conditionGraphicDatas)
                     {
-                        settingCopy.graphic.drawSize = settingCopy.graphicData.drawSize;
-                        settingCopy.graphic.drawSize += drawSize;
+                        void choiceGraphicData()
+                        {
+                            graphicData = conditionGraphicData.graphicData;
+                        };
+                        if (Condition.ExecuteActionIfConditionMatches(HeldPawn, building_AnimationBed, conditionGraphicData.condition, choiceGraphicData))
+                        {
+                            break;
+                        }
                     }
 
-                    if (settingCopy.graphic == null)
+                    if (graphicData != null)
                     {
-                        TestLog.Error("settingCopy Skip");
-                    }
-                    else
-                    {
-                        bedAnimationSettings.Add(settingCopy);
+                        // Set appropriate graphic(그래픽 제작)
+                        settingCopy.graphic = bedAnimationDef.isPawnTextureReplace
+                            ? GetGraphic(HeldPawn, bedAnimationDef.pawnRenderNodeTagDef, settingCopy, graphicData)
+                            : graphicData.Graphic;
+
+                        if (settingCopy.graphic != null && !bedAnimationDef.isPawnTextureReplace)
+                        {
+                            settingCopy.graphic.drawSize = graphicData.drawSize;
+                            settingCopy.graphic.drawSize += drawSize;
+                        }
+
+                        if (settingCopy.graphic == null)
+                        {
+                            TestLog.Error("settingCopy Skip");
+                        }
+                        else
+                        {
+                            bedAnimationSettings.Add(settingCopy);
+                        }
                     }
                 }
 
-                if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed.HeldPawn, building_AnimationBed, bedAnimationSetting.condition, action))
+                if (Condition.ExecuteActionIfConditionMatches(HeldPawn, building_AnimationBed, bedAnimationSetting.condition, action))
                 {
                     break;
                 }
@@ -194,20 +212,20 @@ namespace YR_Hentai_Prime_AnimationBed
             return bedAnimationSettingAndTick;
         }
 
-        private static Graphic GetGraphic(Pawn pawn, PawnRenderNodeTagDef tagDef, BedAnimationSetting bedAnimationSetting)
+        private static Graphic GetGraphic(Pawn pawn, PawnRenderNodeTagDef tagDef, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)
         {
-            Graphic graphic = null;
+            Graphic graphic;
             if (tagDef == PawnRenderNodeTagDefOf.Body)
             {
-                graphic = GraphicForBody(pawn, bedAnimationSetting);
+                graphic = GraphicForBody(pawn, bedAnimationSetting, graphicData);
             }
             else if (tagDef == PawnRenderNodeTagDefOf.Head)
             {
-                graphic = GraphicForHead(pawn, bedAnimationSetting);
+                graphic = GraphicForHead(pawn, bedAnimationSetting, graphicData);
             }
             else
             {
-                graphic = bedAnimationSetting.graphicData.Graphic;
+                graphic = graphicData.Graphic;
             }
 
             return graphic;
@@ -231,7 +249,7 @@ namespace YR_Hentai_Prime_AnimationBed
             return pawnAnimationDef;
         }
 
-        public static Graphic GraphicForHead(Pawn pawn, BedAnimationSetting bedAnimationSetting)
+        public static Graphic GraphicForHead(Pawn pawn, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)
         {
             // HasHead가 false이면 즉시 null 반환
             if (!pawn.health.hediffSet.HasHead)
@@ -256,7 +274,6 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             // 셰이더 및 색상 설정
-            var graphicData = bedAnimationSetting.graphicData;
             var skinShader = graphicData.shaderType?.Shader ?? ShaderDatabase.Cutout;
             var color = graphicData.color;
 
@@ -270,7 +287,7 @@ namespace YR_Hentai_Prime_AnimationBed
             return GraphicDatabase.Get<Graphic_Multi>(graphicData.texPath, skinShader, graphicData.drawSize * 1.25f, color);
         }
 
-        public static Graphic GraphicForBody(Pawn pawn, BedAnimationSetting bedAnimationSetting)
+        public static Graphic GraphicForBody(Pawn pawn, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)
         {
             // PawnRenderNode_Body를 찾습니다.
             PawnRenderNode_Body pawnRenderNode_Body = pawn.Drawer.renderer.renderTree.rootNode?.children
@@ -283,7 +300,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             // Shader 초기화
-            var shader = bedAnimationSetting.graphicData.shaderType?.Shader ?? ShaderDatabase.Cutout;
+            var shader = graphicData.shaderType?.Shader ?? ShaderDatabase.Cutout;
 
             // 데시케이트 모드 처리
             if (pawn.Drawer.renderer.CurRotDrawMode == RotDrawMode.Dessicated)
@@ -292,7 +309,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             // 색상 및 셰이더 처리
-            var color = bedAnimationSetting.graphicData.color;
+            var color = graphicData.color;
             if (bedAnimationSetting.setPawnColor)
             {
                 color = pawnRenderNode_Body.ColorFor(pawn);
@@ -300,7 +317,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             // 그래픽 생성 및 반환
-            return GraphicDatabase.Get<Graphic_Multi>(bedAnimationSetting.graphicData.texPath, shader, bedAnimationSetting.graphicData.drawSize * 1.25f, color);
+            return GraphicDatabase.Get<Graphic_Multi>(graphicData.texPath, shader, graphicData.drawSize * 1.25f, color);
         }
 
         public static void SetAnimation(Building_AnimationBed building_AnimationBed)

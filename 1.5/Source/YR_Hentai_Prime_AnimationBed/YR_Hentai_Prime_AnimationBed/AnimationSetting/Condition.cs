@@ -15,6 +15,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public List<ThingDef> races = null;
         public List<TraitDef> traitDefs = null;
         public List<Intelligence> intelligences = null;
+        public List<SkillLevelRage> skillLevelRages = null;
 
         public List<BodyTypeDef> neverBodyTypeDefs = null;
         public List<HediffDef> neverHediffDefs = null;
@@ -30,7 +31,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public bool allMatch = false;
         public bool reverseCondition = false;
-        bool Break = true;
+        bool Break = false;
 
         public static bool Match(Pawn pawn, Building_AnimationBed building_AnimationBed, Condition condition, out bool needBreak)
         {
@@ -98,6 +99,44 @@ namespace YR_Hentai_Prime_AnimationBed
                 }
             }
 
+            bool CheckSkill(Pawn pawn, List<SkillLevelRage> skillLevelRages)
+            {
+                if (skillLevelRages == null)
+                {
+                    return allMatch;
+                }
+
+                if (allMatch)
+                {
+                    foreach (var skillLevelRage in skillLevelRages)
+                    {
+                        var level = pawn.skills.GetSkill(skillLevelRage.skillDef).Level;
+                        if(pawn.skills.GetSkill(skillLevelRage.skillDef).TotallyDisabled)
+                        {
+                            level = 0;
+                        }
+
+                        if (level < skillLevelRage.levelRange.min || level > skillLevelRage.levelRange.max)
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+                else
+                {
+                    foreach (var skillLevelRage in skillLevelRages)
+                    {
+                        var level = pawn.skills.GetSkill(skillLevelRage.skillDef).Level;
+                        if (skillLevelRage.levelRange.min <= level && level <= skillLevelRage.levelRange.max)
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            }
+
             IEnumerable<bool> matchConditions = new[]
             {
                 Check(bodyType, condition.bodyTypeDefs),
@@ -108,7 +147,8 @@ namespace YR_Hentai_Prime_AnimationBed
                 CheckListCondition(condition.hediffAndSeverities, HediffAndSeverityCheck),
                 CheckListCondition(condition.traitDefs, TraitCheck),
                 CheckDummyForJoyIsActive(building_AnimationBed, condition),
-                CheckProbability(condition.probability)
+                CheckProbability(condition.probability),
+                CheckSkill(pawn,condition.skillLevelRages)
             };
 
 
@@ -144,6 +184,13 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
     }
+
+    public class SkillLevelRage
+    {
+        public SkillDef skillDef;
+        public IntRange levelRange;
+    }
+
     public class HediffAndSeverity
     {
         public HediffDef hediffDef;

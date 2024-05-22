@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_GloryHole_Penis</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
@@ -16,7 +15,52 @@
 					<graphicClass>Graphic_Single</graphicClass>
 					<drawSize>(5, 5)</drawSize>
 				</graphicData>
-			</li>			
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/South/Normal/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/South/Normal/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/South/Normal/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/South/Normal/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>60</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/South/Normal/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 </Defs>

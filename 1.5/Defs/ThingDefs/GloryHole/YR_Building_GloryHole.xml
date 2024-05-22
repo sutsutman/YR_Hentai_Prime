@@ -192,6 +192,31 @@
 					<li>
 						<bedAnimationDef>YR_GloryHole_Cushion_Left_UpUp</bedAnimationDef>
 					</li>
+					<!-- 장식 -->
+					<li>
+						<bedAnimationDef>YR_GloryHole_SignBoard</bedAnimationDef>
+						<offset>(-0.3,0.0,-0.3)</offset>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_Paint_PlayWhat</bedAnimationDef>
+						<offset>(-0.3,0.0,-0.3)</offset>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_Paint_Rating</bedAnimationDef>
+						<offset>(-0.3,0.0,-0.3)</offset>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_WoodenPail</bedAnimationDef>
+						<offset>(0.3,0.0,-0.3)</offset>
+					</li>					
+					<li>
+						<bedAnimationDef>YR_GloryHole_Stool</bedAnimationDef>
+						<offset>(0.0,0.0,-0.4)</offset>
+					</li>					
+					<li>
+						<bedAnimationDef>YR_GloryHole_Toy</bedAnimationDef>
+						<offset>(0.1,0.15,0.0)</offset>
+					</li>
 					<!-- 펠라티오 배경 -->
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>

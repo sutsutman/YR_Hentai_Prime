@@ -219,6 +219,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public Condition condition;
         public GraphicData graphicData;
+        public List<ConditionGraphicData> conditionGraphicDatas = new List<ConditionGraphicData>();
         public string maskPathForPortrait;
         public Graphic graphic;
         public int tick;
@@ -243,5 +244,12 @@ namespace YR_Hentai_Prime_AnimationBed
             copied.graphic = new Graphic();
             return copied;
         }
+    }
+
+    public class ConditionGraphicData
+    {
+        public Condition condition;
+
+        public GraphicData graphicData;
     }
 }

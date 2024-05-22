@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 표지판 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_SignBoard</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/SignBoard/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Paint_PlayWhat</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.06,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/PlayWhat/Ass</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+				<conditionGraphicDatas>
+					<li>
+						<condition>
+							<genders>
+								<li>Male</li>
+							</genders>
+						</condition>
+						<graphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/PlayWhat/North_Male</texPath>
+							<graphicClass>Graphic_Random</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</graphicData>
+					</li>
+					<li>
+						<condition>
+							<genders>
+								<li>Female</li>
+							</genders>
+						</condition>
+						<graphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/PlayWhat/North_Female</texPath>
+							<graphicClass>Graphic_Random</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</graphicData>
+					</li>
+				</conditionGraphicDatas>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Paint_Rating</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.06,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_A</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+				<conditionGraphicDatas>
+					<li>
+						<condition>
+							<skillLevelRages>
+								<li>
+									<skillDef>Social</skillDef>
+									<levelRange>17~100</levelRange>
+								</li>
+							</skillLevelRages>
+						</condition>
+						<graphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_A</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</graphicData>
+					</li>
+					<li>
+						<condition>
+							<skillLevelRages>
+								<li>
+									<skillDef>Social</skillDef>
+									<levelRange>12~16</levelRange>
+								</li>
+							</skillLevelRages>
+						</condition>
+						<graphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_B</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</graphicData>
+					</li>
+					<li>
+						<condition>
+							<skillLevelRages>
+								<li>
+									<skillDef>Social</skillDef>
+									<levelRange>8~11</levelRange>
+								</li>
+							</skillLevelRages>
+						</condition>
+						<graphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_C</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</graphicData>
+					</li>
+					<li>
+						<condition>
+							<skillLevelRages>
+								<li>
+									<skillDef>Social</skillDef>
+									<levelRange>4~7</levelRange>
+								</li>
+							</skillLevelRages>
+						</condition>
+						<graphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_D</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</graphicData>
+					</li>
+					<li>
+						<condition>
+							<skillLevelRages>
+								<li>
+									<skillDef>Social</skillDef>
+									<levelRange>2~3</levelRange>
+								</li>
+							</skillLevelRages>
+						</condition>
+						<graphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_E</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</graphicData>
+					</li>
+					<li>
+						<condition>
+							<skillLevelRages>
+								<li>
+									<skillDef>Social</skillDef>
+									<levelRange>0~1</levelRange>
+								</li>
+							</skillLevelRages>
+						</condition>
+						<graphicData>
+							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_E</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<drawSize>(2.25, 2.25)</drawSize>
+						</graphicData>
+					</li>
+				</conditionGraphicDatas>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 받침대 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Stool</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Stool/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 장난감 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Toy</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Toy/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 통 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_WoodenPail</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/WoodenPail/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>
