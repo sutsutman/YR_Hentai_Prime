@@ -1022,11 +1022,11 @@ namespace YR_Hentai_Prime_AnimationBed
                 currentIndex = (currentIndex + 1) % values.Count;
 
                 // 새 값을 얻고 특정 소숫점 이하에서 올림
-                movef = (float)Math.Round(values[currentIndex], 3);
+                movef = (float)Math.Round(values[currentIndex], 5);
             }
         }
 
-        private readonly List<float> values = new List<float> { 0.001f, 0.01f, 0.1f, 1f };
+        private readonly List<float> values = new List<float> { 0.0001f, 0.001f, 0.01f, 0.1f, 1f };
         private int currentIndex = 0;
         float movef = 0.001f;
         public bool dummyForJoyIsActive;

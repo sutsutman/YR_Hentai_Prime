@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="YR_AnimationBedBase">
+		<defName>YR_Building_EnjoyingArmpit</defName>
+		<label>YR_Building_EnjoyingArmpit</label>
+		<description>YR_Building_EnjoyingArmpit</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Bed/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<uiOrder>100</uiOrder>
+		<!-- 임시로 넣은거 -->
+		<statBases>
+			<JoyGainFactor>1</JoyGainFactor>
+		</statBases>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
+				<!-- 묶였을 때 부여되는 헤디프 -->
+				<addedHediffDefs>
+					<li>YR_MilkingMachine_DisableNeed</li>
+				</addedHediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
+				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+				<hediffDefs>
+					<li>YR_PowerMode1_Hediff</li>
+					<li>YR_PowerMode2_Hediff</li>
+				</hediffDefs>
+			</li>
+			<!-- 팡팡 놀이 -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
+				<thingDef>YR_DummyForJoy</thingDef>
+				<animationDef>YR_GloryHole_Animation_PanPanPlay_North</animationDef>
+				<makeHediff>
+					<heldPawnHediffSetting>
+						<finishHediffSettings>
+							<li>
+								<hediffDef>YR_Ejaculation_Hediff</hediffDef>
+							</li>
+						</finishHediffSettings>
+					</heldPawnHediffSetting>
+				</makeHediff>
+				<makeSound>
+					<!-- 묶인 애를 기준으로 나는 소리 -->
+					<heldPawnSound>
+						<startSoundSettings>
+							<li>
+								<!-- 삽입시 응앙! 하는 소리 -->
+								<soundDefs>
+									<li>OohSound_1</li>
+									<li>OohSound_2</li>
+									<li>OohSound_3</li>
+									<li>OohSound_4</li>
+									<li>OohSound_5</li>
+									<li>OohSound_6</li>
+									<li>OohSound_7</li>
+									<li>OohSound_8</li>
+								</soundDefs>
+							</li>
+						</startSoundSettings>
+						<randomSoundSettings>
+							<li>
+								<!-- 신음 -->
+								<soundDefs>
+									<li>OohSound_1</li>
+									<li>OohSound_2</li>
+									<li>OohSound_3</li>
+									<li>OohSound_4</li>
+									<li>OohSound_5</li>
+									<li>OohSound_6</li>
+									<li>OohSound_7</li>
+									<li>OohSound_8</li>
+								</soundDefs>
+								<!-- 이 경우 1틱당 0.05프로의 확률로 소리가 남 -->
+								<probability>0.005</probability>
+							</li>
+						</randomSoundSettings>
+						<finishSoundSettings/>
+					</heldPawnSound>
+				</makeSound>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
+				<pawnAnimationSetting>
+					<pawnAnimationDef>YR_Animation_BodyChange</pawnAnimationDef>
+					<!-- 기본 애니메이션 -->
+					<conditonPawnAnimations>
+						<li>
+							<condition>
+								<dummyForJoyIsActive>true</dummyForJoyIsActive>
+							</condition>
+							<pawnAnimationDef>YR_MilkingMachine_Animation_BodyChange</pawnAnimationDef>
+						</li>
+					</conditonPawnAnimations>
+					<offset>(0,1,0.25)</offset>
+					<conditonPawnOffsets>
+						<li>
+							<condition/>
+							<offset/>
+						</li>
+					</conditonPawnOffsets>
+				</pawnAnimationSetting>
+				<bedAnimationList>
+					<!-- 폰의 바디, 헤드 -->
+					<li>
+						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+								</condition>
+								<bedAnimationDef>YR_EnjoyingArmpit_Body_Yuran_Normal</bedAnimationDef>
+							</li>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_EnjoyingArmpit_Body_Yuran_Enjoy</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+				</bedAnimationList>
+			</li>
+			</comps>
+	</ThingDef>
+</Defs>

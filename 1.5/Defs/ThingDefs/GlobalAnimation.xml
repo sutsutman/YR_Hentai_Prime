@@ -18,6 +18,24 @@
 			</li>
 		</animationParts>
 	</AnimationDef>
+	<AnimationDef>
+		<defName>YR_Animation_BodyChange</defName>
+		<durationTicks>60</durationTicks>
+		<animationParts>
+			<li>
+				<key>Body</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,-180,0)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
+		</animationParts>
+	</AnimationDef>
 	<!-- 폰 바디 애니메이션 -->
 	<!-- 공용(더미) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
