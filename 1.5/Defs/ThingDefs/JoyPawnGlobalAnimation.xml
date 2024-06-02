@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- 폰 애니메이션 -->
-	<!-- 글로벌(움직임 없음) -->
+	<!-- 팡팡놀이(소리 없음) -->
 	<AnimationDef>
-		<defName>YR_Global_Animation_NoMove</defName>
+		<defName>YR_Global_Animation_PanPanPlay_North</defName>
 		<durationTicks>60</durationTicks>
 		<animationParts>
 			<li>
@@ -13,17 +13,11 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
+							<offset>(0.0,1,1.5)</offset>
 						</li>
 					</keyframes>
 				</value>
 			</li>
-		</animationParts>
-	</AnimationDef>
-	<!-- 글로벌(소리 없음) -->
-	<AnimationDef>
-		<defName>YR_Global_Animation</defName>
-		<durationTicks>60</durationTicks>
-		<animationParts>
 			<li>
 				<key>Head</key>
 				<value>
@@ -63,7 +57,7 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,0,0)</offset>
+							<offset>(0.0,-0,0)</offset>
 						</li>
 						<li>
 							<tick>4</tick>
@@ -90,11 +84,23 @@
 			</li>
 		</animationParts>
 	</AnimationDef>
-	<!-- 글로벌(소리 있음) -->
+	<!-- 팡팡놀이(소리 있음) -->
 	<AnimationDef>
-		<defName>YR_Global_Animation_Sound</defName>
+		<defName>YR_Global_Animation_PanPanPlay_North_Sound</defName>
 		<durationTicks>60</durationTicks>
 		<animationParts>
+			<li>
+				<key>Root</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,1,1.5)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
 			<li>
 				<key>Head</key>
 				<value>
@@ -134,7 +140,7 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,0,0)</offset>
+							<offset>(0.0,-0,0)</offset>
 						</li>
 						<li>
 							<tick>4</tick>
@@ -182,30 +188,23 @@
 			</li>
 		</animationParts>
 	</AnimationDef>
-	<!-- 신체 변환(움직임 없음)-->
+	<!-- 할짝(소리 없음) -->
 	<AnimationDef>
-		<defName>YR_Global_Animation_BodyChange_NoMove</defName>
+		<defName>YR_Global_Animation_Lick_North</defName>
 		<durationTicks>60</durationTicks>
 		<animationParts>
 			<li>
-				<key>Body</key>
+				<key>Root</key>
 				<value>
 					<workerClass>AnimationWorker_Keyframes</workerClass>
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,1,1.5)</offset>
 						</li>
 					</keyframes>
 				</value>
 			</li>
-		</animationParts>
-	</AnimationDef>
-	<!-- 신체 변환(소리 없음)-->
-	<AnimationDef>
-		<defName>YR_Global_Animation_BodyChange</defName>
-		<durationTicks>60</durationTicks>
-		<animationParts>
 			<li>
 				<key>Head</key>
 				<value>
@@ -245,38 +244,50 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-0,0)</offset>
 						</li>
 						<li>
 							<tick>4</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,0,0)</offset>
 						</li>
 						<li>
 							<tick>8</tick>
-							<offset>(0.0,-180,0.01)</offset>
+							<offset>(0.0,0,0.01)</offset>
 						</li>
 						<li>
 							<tick>12</tick>
-							<offset>(0.0,-180,0.015)</offset>
+							<offset>(0.0,0,0.015)</offset>
 						</li>
 						<li>
 							<tick>40</tick>
-							<offset>(0.0,-180,0.01)</offset>
+							<offset>(0.0,0,0.01)</offset>
 						</li>
 						<li>
 							<tick>60</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,0,0)</offset>
 						</li>
 					</keyframes>
 				</value>
 			</li>
 		</animationParts>
 	</AnimationDef>
-	<!-- 신체 변환(소리 있음)-->
+	<!-- 할짝(소리 있음) -->
 	<AnimationDef>
-		<defName>YR_Global_Animation_BodyChange_Sound</defName>
+		<defName>YR_Global_Animation_Lick_North_Sound</defName>
 		<durationTicks>60</durationTicks>
 		<animationParts>
+			<li>
+				<key>Root</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,1,1.5)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
 			<li>
 				<key>Head</key>
 				<value>
@@ -294,53 +305,14 @@
 							<tick>8</tick>
 							<offset>(0.0,0,0.01)</offset>
 						</li>
-						<li>
+												<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>12</tick>
 							<offset>(0.0,0,0.02)</offset>
-						</li>
-						<li>
-							<tick>40</tick>
-							<offset>(0.0,0,0.01)</offset>
-						</li>
-						<li>
-							<tick>60</tick>
-							<offset>(0.0,0,0)</offset>
-						</li>
-					</keyframes>
-				</value>
-			</li>
-			<li>
-				<key>Body</key>
-				<value>
-					<workerClass>AnimationWorker_Keyframes</workerClass>
-					<keyframes>
-						<li>
-							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
-						</li>
-						<li>
-							<tick>4</tick>
-							<offset>(0.0,-180,0)</offset>
-						</li>
-						<li>
-							<tick>8</tick>
-							<offset>(0.0,-180,0.01)</offset>
-						</li>
-						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
-							<tick>12</tick>
-							<offset>(0.0,-180,0.015)</offset>
 							<soundSettings>
 								<li>
 									<soundDefs>
-										<li>YR_PanPanSound_1</li>
-										<li>YR_PanPanSound_2</li>
-										<li>YR_PanPanSound_3</li>
-										<li>YR_PanPanSound_4</li>
-										<li>YR_PanPanSound_5</li>
-										<li>YR_PanPanSound_6</li>
-										<li>YR_PanPanSound_7</li>
-										<li>YR_PanPanSound_8</li>
-										<li>YR_PanPanSound_9</li>
+										<li>LickSound_1</li>
+										<li>LickSound_2</li>
 									</soundDefs>
 									<!-- <conditionSoundSettings> -->
 									<!-- <li> -->
@@ -352,33 +324,20 @@
 							</soundSettings>
 						</li>
 						<li>
+							<tick>12</tick>
+							<offset>(0.0,0,0.02)</offset>
+						</li>
+						<li>
 							<tick>40</tick>
-							<offset>(0.0,-180,0.01)</offset>
+							<offset>(0.0,0,0.01)</offset>
 						</li>
 						<li>
 							<tick>60</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,0,0)</offset>
 						</li>
 					</keyframes>
 				</value>
 			</li>
 		</animationParts>
 	</AnimationDef>
-	<!-- 폰 바디 애니메이션 -->
-	<!-- 공용(더미) -->
-	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<defName>YR_Dummy_BedAnimation</defName>
-		<autoDurationTicksSetting>true</autoDurationTicksSetting>
-		<bedAnimationSettings>
-			<li>
-				<tick>0</tick>
-				<offset>(0.0, 0.0, 0.0)</offset>
-				<graphicData>
-					<texPath>Yuran/Yuranlike/Bodies/Dummy/YR_Bote</texPath>
-					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(0, 0)</drawSize>
-				</graphicData>
-			</li>
-		</bedAnimationSettings>
-	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 </Defs>

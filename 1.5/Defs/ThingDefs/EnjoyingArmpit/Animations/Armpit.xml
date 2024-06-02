@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 말풍선 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_EnjoyingArmpit_Armpit_Yuran</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Armpit/Yuran</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 할짝 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_EnjoyingArmpit_Lick</defName>
+		<durationTicks>40</durationTicks>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>3</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>6</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>9</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>15</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>18</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>21</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>27</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/EnjoyingArmpit/Body/Lick/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

@@ -63,6 +63,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             foreach (var portraitIngredient in portraitIngredients)
             {
+                Pawn pawn = portraitIngredient.pawn;
                 Vector3 drawPos = Building_AnimationBed.DrawPos + portraitIngredient.offset + portraitIngredient.testOffset;
                 //안나오던건 Vector3 drawsize 변환 문제!!!!!!
                 Vector3 drawSize = new Vector3(portraitIngredient.drawSize.x + portraitIngredient.testDrawSize.x, 1, portraitIngredient.drawSize.y + portraitIngredient.testDrawSize.y);
@@ -75,7 +76,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     var cameraOffset = portraitIngredient.cameraOffset;
                     if (portraitSetting.animationSynchro)
                     {
-                        PawnRenderNode renderNode = Building_AnimationBed.HeldPawn.Drawer.renderer.renderTree.rootNode.children
+                        PawnRenderNode renderNode = pawn.Drawer.renderer.renderTree.rootNode.children
                         .FirstOrDefault(n => n?.Props?.tagDef == portraitSetting.pawnRenderNodeTagDef);
 
                         if (renderNode != null)
@@ -98,21 +99,28 @@ namespace YR_Hentai_Prime_AnimationBed
                     {
                         void action() => rotation = conditionPawnRotation.rotation;
 
-                        if (Condition.ExecuteActionIfConditionMatches(HeldPawn, Building_AnimationBed, conditionPawnRotation.condition, action))
+                        if (Condition.ExecuteActionIfConditionMatches(pawn, Building_AnimationBed, conditionPawnRotation.condition, action))
                         {
                             break;
                         }
                     }
 
-                    portraitIngredient.iconMat.mainTexture = PortraitsCache.Get(Building_AnimationBed.HeldPawn, new Vector2(256, 256), portraitSetting.rotation, cameraOffset, cameraZoom, renderClothes: portraitSetting.renderClothes, renderHeadgear: portraitSetting.renderHeadgear, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
+                    portraitIngredient.iconMat.mainTexture = PortraitsCache.Get(pawn, new Vector2(256, 256), portraitSetting.rotation, cameraOffset, cameraZoom, renderClothes: portraitSetting.renderClothes, renderHeadgear: portraitSetting.renderHeadgear, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
                 }
 
                 //포트레잇 카메라 오프셋이 바뀌면 폰이 순간 깜빡거리는 문제가 있어서, 그러한 포트레잇이 있을때 용으로 넣어둠.
-                if (HeldPawn.Drawer.renderer.HasAnimation && HeldPawn.Drawer.renderer.CurAnimation != YR_H_P_DefOf.YR_Dummy_Animation)
+                if (pawn.Drawer.renderer.HasAnimation && pawn.Drawer.renderer.CurAnimation != YR_H_P_DefOf.YR_Global_Animation_NoMove)
                 {
-                    var pos = Building_AnimationBed.DrawPos + Building_AnimationBed.PawnDrawOffset;
-                    Rot4 pawnRotation = Props.pawnAnimationSetting.rotation;
-                    HeldPawn.Drawer.renderer.DynamicDrawPhaseAt(DrawPhase.Draw, pos, pawnRotation, neverAimWeapon: true);
+                    if (pawn == HeldPawn)
+                    {
+                        var pos = Building_AnimationBed.DrawPos + Building_AnimationBed.PawnDrawOffset;
+                        Rot4 pawnRotation = Props.pawnAnimationSetting.rotation;
+                        pawn.Drawer.renderer.DynamicDrawPhaseAt(DrawPhase.Draw, pos, pawnRotation, neverAimWeapon: true);
+                    }
+                    else
+                    {
+                        pawn.Drawer.renderer.DynamicDrawPhaseAt(DrawPhase.Draw, pawn.Drawer.DrawPos, pawn.Rotation, neverAimWeapon: true);
+                    }
                 }
 
                 GenDraw.DrawMeshNowOrLater(portraitIngredient.portraitMesh, matrix, portraitIngredient.iconMat, PawnRenderFlags.None.FlagSet(PawnRenderFlags.DrawNow));
@@ -179,6 +187,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class PortraitIngredient
     {
+        public Pawn pawn; 
         public Material iconMat;
         public Mesh portraitMesh;
 

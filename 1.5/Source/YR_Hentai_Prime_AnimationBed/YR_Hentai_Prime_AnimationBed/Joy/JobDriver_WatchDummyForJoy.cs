@@ -60,6 +60,8 @@ namespace YR_Hentai_Prime_AnimationBed
         bool stop = false;
 
         bool start = true;
+
+        public bool watchNow = false;
         protected override void WatchTickAction()
         {
             pawn.rotationTracker.FaceCell(base.TargetA.Cell);
@@ -70,6 +72,8 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 return;
             }
+
+            watchNow = true;
 
             CompProperties_SpawnDummyForJoy props = CompSpawnDummyForJoy?.Props;
 
@@ -146,6 +150,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
             //이걸로 멈춰야 에러 안남
             stop = true;
+
+            watchNow = false;
         }
 
         private static void RemoveStartHediff(Pawn pawn, List<HediffSetting> hediffSettings)

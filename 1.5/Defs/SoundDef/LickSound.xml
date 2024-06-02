@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<SoundDef>
+		<defName>LickSound_1</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Lick/LickSound_1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>19</volumeRange>
+				<distRange>10~38</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>LickSound_2</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Lick/LickSound_2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>19</volumeRange>
+				<distRange>10~38</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

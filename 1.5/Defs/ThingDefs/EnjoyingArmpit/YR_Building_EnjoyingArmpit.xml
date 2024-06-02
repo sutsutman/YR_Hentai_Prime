@@ -19,6 +19,12 @@
 				<addedHediffDefs>
 					<li>YR_MilkingMachine_DisableNeed</li>
 				</addedHediffDefs>
+				<condition>
+					<races>
+						<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+						<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+					</races>
+				</condition>
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
 				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
@@ -30,16 +36,7 @@
 			<!-- 팡팡 놀이 -->
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
 				<thingDef>YR_DummyForJoy</thingDef>
-				<animationDef>YR_GloryHole_Animation_PanPanPlay_North</animationDef>
-				<makeHediff>
-					<heldPawnHediffSetting>
-						<finishHediffSettings>
-							<li>
-								<hediffDef>YR_Ejaculation_Hediff</hediffDef>
-							</li>
-						</finishHediffSettings>
-					</heldPawnHediffSetting>
-				</makeHediff>
+				<animationDef>YR_Global_Animation_Lick_North_Sound</animationDef>
 				<makeSound>
 					<!-- 묶인 애를 기준으로 나는 소리 -->
 					<heldPawnSound>
@@ -71,8 +68,7 @@
 									<li>OohSound_7</li>
 									<li>OohSound_8</li>
 								</soundDefs>
-								<!-- 이 경우 1틱당 0.05프로의 확률로 소리가 남 -->
-								<probability>0.005</probability>
+								<probability>0.01</probability>
 							</li>
 						</randomSoundSettings>
 						<finishSoundSettings/>
@@ -81,14 +77,19 @@
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
 				<pawnAnimationSetting>
-					<pawnAnimationDef>YR_Animation_BodyChange</pawnAnimationDef>
+					<pawnAnimationDef>YR_Global_Animation_NoMove</pawnAnimationDef>
 					<!-- 기본 애니메이션 -->
 					<conditonPawnAnimations>
 						<li>
 							<condition>
+								<races>
+									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+								</races>
 								<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								<allMatch>true</allMatch>
 							</condition>
-							<pawnAnimationDef>YR_MilkingMachine_Animation_BodyChange</pawnAnimationDef>
+							<pawnAnimationDef>YR_Global_Animation_BodyChange</pawnAnimationDef>
 						</li>
 					</conditonPawnAnimations>
 					<offset>(0,1,0.25)</offset>
@@ -127,8 +128,82 @@
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
+					<!-- 겨드랑이 핥기 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_EnjoyingArmpit_Armpit_Yuran</bedAnimationDef>
+								<offset>(1.5,2.0,1)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_FellatioBackGround_Front</bedAnimationDef>
+								<offset>(1.5,2.0,1)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_EnjoyingArmpit_Lick</bedAnimationDef>
+								<offset>(1.4,2.11,1)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 장식 -->
+										<li>
+						<bedAnimationDef>YR_GloryHole_Stool</bedAnimationDef>
+						<offset>(0.0,0.0,-0.4)</offset>
+					</li>
 				</bedAnimationList>
+				<pawnPortraitSettings>
+					<li>
+						<portraitSetting>
+							<draw>false</draw>
+						</portraitSetting>
+						<conditonPortraitSettings>
+							<li>
+								<portraitSetting>
+									<drawJoyPawn>true</drawJoyPawn>
+									<offset>(1.5,2.1,1)</offset>
+									<animationSynchro>false</animationSynchro>
+									<drawSize>(0.8,0.8)</drawSize>
+									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
+									<rotation>West</rotation>
+									<cameraOffset>(-0.23, 0, 0.05)</cameraOffset>
+									<cameraZoom>3.5</cameraZoom>
+									<renderClothes>false</renderClothes>
+									<renderHeadgear>false</renderHeadgear>
+									<portraitMeshGraphicData>
+										<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath>
+										<graphicClass>Graphic_Single</graphicClass>
+										<drawSize>(2.25, 2.25)</drawSize>
+									</portraitMeshGraphicData>
+								</portraitSetting>
+								<condition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+							</li>
+						</conditonPortraitSettings>
+					</li>
+				</pawnPortraitSettings>
 			</li>
-			</comps>
+			<!-- <li Class="YR_Hentai_Prime_AnimationBed.CompProperties_DrawPicture"></li> -->
+		</comps>
 	</ThingDef>
 </Defs>

@@ -19,7 +19,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     return false;
                 }
             }
-            if (parms.pawn.jobs.curDriver is JobDriver_WatchDummyForJoy)
+            if (parms.pawn.jobs.curDriver is JobDriver_WatchDummyForJoy jobDriver_WatchDummyForJoy && jobDriver_WatchDummyForJoy.watchNow)
             {
                 return false;
             }
@@ -44,11 +44,24 @@ namespace YR_Hentai_Prime_AnimationBed
                 }
             }
 
-            if (parms.pawn.jobs.curDriver is JobDriver_WatchDummyForJoy)
+            if (parms.pawn.jobs.curDriver is JobDriver_WatchDummyForJoy jobDriver_WatchDummyForJoy && jobDriver_WatchDummyForJoy.watchNow)
             {
                 return false;
             }
             return true;
         }
     }
+
+    [HarmonyPatch(typeof(PawnRenderTree), "get_AnimationTick")]
+    internal class Patch_AnimationTick
+    {
+        public static void Postfix(PawnRenderTree __instance, ref int __result)
+        {
+            if (__instance.pawn.holdingOwner.Owner is Building_AnimationBed building_AnimationBed && !building_AnimationBed.PowerOn)
+            {
+                __result = building_AnimationBed.tempAnimationTick;
+            }
+        }
+    }
+
 }

@@ -11,6 +11,12 @@ namespace YR_Hentai_Prime_AnimationBed
     [StaticConstructorOnStartup]
     public class Building_AnimationBed : Building, IThingHolderWithDrawnPawn, IThingHolder, IRoofCollapseAlert, ISearchableContents
     {
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            powerComp = GetComp<CompPowerTrader>();
+        }
+
         public ThingOwner innerContainer;
 
         private int lastDamaged;
@@ -126,11 +132,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public Building_AnimationBed() => innerContainer = new ThingOwner<Thing>(this);
 
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-        }
-
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
             EjectContents();
@@ -155,6 +156,12 @@ namespace YR_Hentai_Prime_AnimationBed
         public static int num = 1000;
 
         public bool makePortrait = true;
+
+        public int tempAnimationTick = 0;
+        private CompPowerTrader powerComp;
+        public bool PowerOn => ((powerComp != null && powerComp.PowerOn) || powerComp == null) && !stopAnimation;
+
+        public bool stopAnimation = false;
         public override void Tick()
         {
             base.Tick();
@@ -164,22 +171,27 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 makePortrait = true;
 
-                BedAnimationUtility.SetAnimation(this);
+                if (PowerOn)
+                {
+                    BedAnimationUtility.SetAnimation(this);
 
-                if (HeldPawn.Drawer.renderer.HasAnimation)
-                {
-                    ProcessAnimationParts(HeldPawn.Drawer.renderer.CurAnimation.animationParts);
-                }
-                if (dummyForJoyPawn != null && dummyForJoyPawn.Drawer.renderer.HasAnimation)
-                {
-                    ProcessAnimationParts(dummyForJoyPawn.Drawer.renderer.CurAnimation.animationParts);
+                    tempAnimationTick = HeldPawn.Drawer.renderer.renderTree.AnimationTick;
+
+                    if (HeldPawn.Drawer.renderer.HasAnimation)
+                    {
+                        ProcessAnimationSounds(HeldPawn.Drawer.renderer.CurAnimation.animationParts);
+                    }
+                    if (dummyForJoyPawn != null && dummyForJoyPawn.Drawer.renderer.HasAnimation)
+                    {
+                        ProcessAnimationSounds(dummyForJoyPawn.Drawer.renderer.CurAnimation.animationParts);
+                    }
                 }
             }
 
             UpdateHeldPawnStartTick();
         }
 
-        private void ProcessAnimationParts(Dictionary<PawnRenderNodeTagDef, AnimationPart> animationParts)
+        private void ProcessAnimationSounds(Dictionary<PawnRenderNodeTagDef, AnimationPart> animationParts)
         {
             foreach (var animationPart in animationParts)
             {
@@ -433,10 +445,27 @@ namespace YR_Hentai_Prime_AnimationBed
                 }
             }
 
-            if (!DebugSettings.ShowDevGizmos || HeldPawn == null)
+            if (HeldPawn == null)
             {
                 yield break;
             }
+
+            yield return new Command_Action
+            {
+                defaultLabel = "YR_StopAnimation".Translate(),
+                icon = stopAnimation ? ContentFinder<Texture2D>.Get("UI/TimeControls/TimeSpeedButton_Normal") : ContentFinder<Texture2D>.Get("UI/TimeControls/TimeSpeedButton_Pause"),
+                action = delegate
+                {
+                    if (stopAnimation)
+                    {
+                        stopAnimation = false;
+                    }
+                    else
+                    {
+                        stopAnimation = true;
+                    }
+                }
+            };
 
             //테스트용 기즈모
 
@@ -449,8 +478,10 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private IEnumerable<Gizmo> TESTGIZMO()
         {
+
             if (Prefs.DevMode)
             {
+
                 yield return new Command_Action
                 {
                     defaultLabel = "Open controll setting",
@@ -1075,6 +1106,7 @@ namespace YR_Hentai_Prime_AnimationBed
             Scribe_Values.Look(ref lastDamaged, "lastDamaged", 0);
             Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
             Scribe_Values.Look(ref heldPawnStartTick, "heldPawnStartTick", 0);
+            Scribe_Values.Look(ref stopAnimation, "stopAnimation");
         }
     }
 }

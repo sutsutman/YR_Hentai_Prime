@@ -73,16 +73,28 @@ namespace YR_Hentai_Prime_AnimationBed
         }
         private static void MakePortrait(Building_AnimationBed building_AnimationBed)
         {
+
+
             building_AnimationBed.AnimationSettingComp.portraitIngredients = new List<PortraitIngredient>();
             foreach (var pawnPortraitSetting in building_AnimationBed.AnimationSettingComp.Props.pawnPortraitSettings)
             {
+                Pawn drawPawn;
                 var portraitSetting = pawnPortraitSetting.portraitSetting;
 
                 foreach (var conditionPortraitSetting in pawnPortraitSetting.conditonPortraitSettings)
                 {
+                    var tempPawn = building_AnimationBed.HeldPawn;
+                    if (conditionPortraitSetting.portraitSetting.drawJoyPawn)
+                    {
+                        tempPawn = building_AnimationBed.dummyForJoyPawn;
+                    }
+                    if(tempPawn == null)
+                    {
+                        continue;
+                    }
                     void action() => portraitSetting = conditionPortraitSetting.portraitSetting;
 
-                    if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed.HeldPawn, building_AnimationBed, conditionPortraitSetting.condition, action))
+                    if (Condition.ExecuteActionIfConditionMatches(tempPawn, building_AnimationBed, conditionPortraitSetting.condition, action))
                     {
                         break;
                     }
@@ -93,13 +105,21 @@ namespace YR_Hentai_Prime_AnimationBed
                     continue;
                 }
 
+                drawPawn = portraitSetting.drawJoyPawn?building_AnimationBed.dummyForJoyPawn : building_AnimationBed.HeldPawn;
+
+                if (drawPawn == null)
+                {
+                    continue;
+                }
+
                 PortraitIngredient portraitIngredient = new PortraitIngredient
                 {
+                    pawn = drawPawn,
                     drawSize = portraitSetting.drawSize,
                     angle = portraitSetting.angle,
                     offset = portraitSetting.offset,
                     portraitMesh = portraitSetting.portraitMeshGraphicData.Graphic.MeshAt(Rot4.South),
-                    iconMat = CreateMaterial(portraitSetting, building_AnimationBed.HeldPawn),
+                    iconMat = CreateMaterial(portraitSetting, drawPawn),
                     cameraOffset = portraitSetting.cameraOffset,
                     cameraZoom = portraitSetting.cameraZoom,
                     portraitSetting = portraitSetting
@@ -112,7 +132,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             var tempMat = new Material(ShaderDatabase.CutoutComplex)
             {
-                mainTexture = PortraitsCache.Get(pawn, new Vector2(256, 256), Rot4.South, default, 1, renderClothes: true, renderHeadgear: true, stylingStation: false, healthStateOverride: PawnHealthState.Mobile),
+                mainTexture = PortraitsCache.Get(pawn, new Vector2(256, 256), portraitSetting.rotation, default, 1, renderClothes: true, renderHeadgear: true, stylingStation: false, healthStateOverride: PawnHealthState.Mobile),
                 color = Color.white
             };
             var maskTex = ContentFinder<Texture2D>.Get(portraitSetting.maskPath);

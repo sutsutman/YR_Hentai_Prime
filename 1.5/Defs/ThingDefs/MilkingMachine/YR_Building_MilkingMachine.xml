@@ -14,6 +14,12 @@
 			<JoyGainFactor>1</JoyGainFactor>
 		</statBases>
 		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>120</basePowerConsumption>
+			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
 				<!-- 묶였을 때 부여되는 헤디프 -->
 				<addedHediffDefs>
@@ -29,7 +35,7 @@
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
 				<pawnAnimationSetting>
-					<pawnAnimationDef>YR_MilkingMachine_Animation</pawnAnimationDef>
+					<pawnAnimationDef>YR_Global_Animation_Sound</pawnAnimationDef>
 					<!-- 기본 애니메이션 -->
 					<conditonPawnAnimations>
 						<!-- 바디 텍스처 바꾸고 싶으면 기존 바디 레이어를 숨긴 애니메이션 사용 해야 함 -->
@@ -37,17 +43,10 @@
 							<condition>
 								<races>
 									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-								</races>
-							</condition>
-							<pawnAnimationDef>YR_MilkingMachine_Animation_BodyChange</pawnAnimationDef>
-						</li>
-						<li>
-							<condition>
-								<races>
 									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
 								</races>
 							</condition>
-							<pawnAnimationDef>YR_MilkingMachine_Animation_BodyChange</pawnAnimationDef>
+							<pawnAnimationDef>YR_Global_Animation_BodyChange_Sound</pawnAnimationDef>
 						</li>
 					</conditonPawnAnimations>
 					<offset>(0,1,0.25)</offset>

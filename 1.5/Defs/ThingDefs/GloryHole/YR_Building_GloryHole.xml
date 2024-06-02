@@ -27,7 +27,7 @@
 			<!-- 팡팡 놀이 -->
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
 				<thingDef>YR_DummyForJoy</thingDef>
-				<animationDef>YR_GloryHole_Animation_PanPanPlay_North</animationDef>
+				<animationDef>YR_Global_Animation_PanPanPlay_North_Sound</animationDef>
 				<makeHediff>
 					<heldPawnHediffSetting>
 						<finishHediffSettings>
@@ -133,14 +133,14 @@
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
 				<pawnAnimationSetting>
-					<pawnAnimationDef>YR_Dummy_Animation</pawnAnimationDef>
+					<pawnAnimationDef>YR_Global_Animation_NoMove</pawnAnimationDef>
 					<!-- 기본 애니메이션 -->
 					<conditonPawnAnimations>
 						<li>
 							<condition>
 								<dummyForJoyIsActive>true</dummyForJoyIsActive>
 							</condition>
-							<pawnAnimationDef>YR_MilkingMachine_Animation</pawnAnimationDef>
+							<pawnAnimationDef>YR_Global_Animation</pawnAnimationDef>
 						</li>
 					</conditonPawnAnimations>
 					<offset>(0,1,0.25)</offset>

@@ -42,7 +42,10 @@ namespace YR_Hentai_Prime_AnimationBed
 
             if (HeldPawn != null)
             {
-                ticksToSpawn--;
+                if (Building_AnimationBed.PowerOn)
+                {
+                    ticksToSpawn--;
+                }
             }
             else
             {

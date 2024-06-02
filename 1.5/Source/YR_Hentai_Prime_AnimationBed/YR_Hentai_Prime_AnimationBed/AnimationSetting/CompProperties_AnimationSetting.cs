@@ -23,6 +23,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class PortraitSetting
     {
+        public bool drawJoyPawn = false;
         public GraphicData portraitMeshGraphicData;
         public Vector2 drawSize = Vector2.one;
         public Vector3 offset;

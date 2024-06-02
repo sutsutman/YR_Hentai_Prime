@@ -1,75 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<AnimationDef>
-		<defName>YR_MilkingMachine_Animation_BodyChange</defName>
-		<durationTicks>60</durationTicks>
-		<animationParts>
-			<li>
-				<key>Head</key>
-				<value>
-					<workerClass>AnimationWorker_Keyframes</workerClass>
-					<keyframes>
-						<li>
-							<tick>0</tick>
-							<offset>(0.0,0,0)</offset>
-						</li>
-						<li>
-							<tick>4</tick>
-							<offset>(0.0,0,0)</offset>
-						</li>
-						<li>
-							<tick>8</tick>
-							<offset>(0.0,0,0.01)</offset>
-						</li>
-						<li>
-							<tick>12</tick>
-							<offset>(0.0,0,0.02)</offset>
-						</li>
-						<li>
-							<tick>40</tick>
-							<offset>(0.0,0,0.01)</offset>
-						</li>
-						<li>
-							<tick>60</tick>
-							<offset>(0.0,0,0)</offset>
-						</li>
-					</keyframes>
-				</value>
-			</li>
-			<li>
-				<key>Body</key>
-				<value>
-					<workerClass>AnimationWorker_Keyframes</workerClass>
-					<keyframes>
-						<li>
-							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
-						</li>
-						<li>
-							<tick>4</tick>
-							<offset>(0.0,-180,0)</offset>
-						</li>
-						<li>
-							<tick>8</tick>
-							<offset>(0.0,-180,0.01)</offset>
-						</li>
-						<li>
-							<tick>12</tick>
-							<offset>(0.0,-180,0.015)</offset>
-						</li>
-						<li>
-							<tick>40</tick>
-							<offset>(0.0,-180,0.01)</offset>
-						</li>
-						<li>
-							<tick>60</tick>
-							<offset>(0.0,-180,0)</offset>
-						</li>
-					</keyframes>
-				</value>
-			</li>
-		</animationParts>
-	</AnimationDef>
 	<!-- 폰 헤드 애니메이션 -->
 	<!-- 유란 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
@@ -377,7 +307,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -386,7 +316,7 @@
 			</li>
 			<li>
 				<tick>10</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/L1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -395,7 +325,7 @@
 			</li>
 			<li>
 				<tick>20</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/L2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -404,7 +334,7 @@
 			</li>
 			<li>
 				<tick>30</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -413,7 +343,7 @@
 			</li>
 			<li>
 				<tick>40</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/R3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -422,7 +352,7 @@
 			</li>
 			<li>
 				<tick>50</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/R4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -584,7 +514,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -593,7 +523,7 @@
 			</li>
 			<li>
 				<tick>4</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -602,7 +532,7 @@
 			</li>
 			<li>
 				<tick>8</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -611,7 +541,7 @@
 			</li>
 			<li>
 				<tick>12</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -620,7 +550,7 @@
 			</li>
 			<li>
 				<tick>16</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/L2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -629,7 +559,7 @@
 			</li>
 			<li>
 				<tick>20</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -638,7 +568,7 @@
 			</li>
 			<li>
 				<tick>24</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/R3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -647,7 +577,7 @@
 			</li>
 			<li>
 				<tick>28</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -656,7 +586,7 @@
 			</li>
 			<li>
 				<tick>32</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/L2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -665,7 +595,7 @@
 			</li>
 			<li>
 				<tick>36</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -674,7 +604,7 @@
 			</li>
 			<li>
 				<tick>40</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/R3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -683,7 +613,7 @@
 			</li>
 			<li>
 				<tick>44</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/4_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
@@ -692,7 +622,7 @@
 			</li>
 			<li>
 				<tick>55</tick>
-				<offset>(0.0, -1.9,0.25)</offset>
+				<offset>(0.0, 0.01,0.25)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Yuran/Thin/5_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>

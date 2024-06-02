@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ShaderTypeDef>
+    <defName>StencilShader</defName>
+    <shaderPath>Custom/StencilShader</shaderPath>
+  </ShaderTypeDef>
+ 
+</Defs>

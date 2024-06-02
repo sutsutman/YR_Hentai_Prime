@@ -43,10 +43,10 @@ namespace YR_Hentai_Prime_AnimationBed
                         carrier.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                     }
 
-                    if (t.Thing != null && !t.Thing.SafelyContains(victim))
-                    {
-                        Messages.Message("MessageTargetBelowMinimumContainmentStrength".Translate(t.Thing.Label, victim.Label), MessageTypeDefOf.ThreatSmall);
-                    }
+                    //if (t.Thing != null && !t.Thing.SafelyContains(victim))
+                    //{
+                    //    Messages.Message("MessageTargetBelowMinimumContainmentStrength".Translate(t.Thing.Label, victim.Label), MessageTypeDefOf.ThreatSmall);
+                    //}
                 }
             }, delegate (LocalTargetInfo t)
             {
@@ -81,7 +81,14 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
                     else
                     {
-                        label = "YR_TieUpPawn".Translate();
+                        if (!Condition.Match((Pawn)victim, (Building_AnimationBed)t.Thing, t.Thing.TryGetComp<CompAnimationBed>()?.Props.condition, out _))
+                        {
+                            label = "YR_TieUpPawn_Condition".Translate();
+                        }
+                        else
+                        {
+                            label = "YR_TieUpPawn".Translate();
+                        }
                         //label = "FloatMenuContainmentStrength".Translate() + ": " + StatDefOf.ContainmentStrength.Worker.ValueToString(compAnimationBed.ContainmentStrength, finalized: false);
                         //label += "\n" + ("FloatMenuContainmentRequires".Translate(victim).CapitalizeFirst() + ": " + StatDefOf.MinimumContainmentStrength.Worker.ValueToString(victim.GetStatValue(StatDefOf.MinimumContainmentStrength), finalized: false)).Colorize(t.Thing.SafelyContains(victim) ? Color.white : Color.red);
                     }
@@ -117,6 +124,11 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 if (t.HasThing && t.Thing.TryGetComp(out CompAnimationBed comp) && comp.HeldPawn == null)
                 {
+                    if(!Condition.Match((Pawn)victim, (Building_AnimationBed)t.Thing,comp.Props.condition,out _))
+                    {
+                        return false;
+                    }
+
                     if (carrier != null)
                     {
                         return carrier.CanReserveAndReach(t.Thing, PathEndMode.Touch, Danger.Some);
