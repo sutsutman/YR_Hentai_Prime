@@ -23,6 +23,119 @@
 					<li>YR_PowerMode2_Hediff</li>
 				</hediffDefs>
 			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SoundAndMote">
+				<moteDefs>
+					<li>YR_GeneratorPod_Spark_One</li>
+					<li>YR_GeneratorPod_Spark_Two</li>
+				</moteDefs>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>YR_Hentai_Prime_AnimationBed.CompPowerPlant_Building_BaseBondageBed</compClass>
+				<basePowerConsumption>-500</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+				<soundAmbientProducingPower>YR_GeneratorPod_Sound</soundAmbientProducingPower>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
+				<pawnAnimationSetting>
+					<pawnAnimationDef>YR_Global_Animation_Sound</pawnAnimationDef>
+					<!-- 기본 애니메이션 -->
+					<conditonPawnAnimations>
+						<!-- 바디 텍스처 바꾸고 싶으면 기존 바디 레이어를 숨긴 애니메이션 사용 해야 함 -->
+						<li>
+							<condition>
+								<races>
+									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+								</races>
+							</condition>
+							<pawnAnimationDef>YR_Global_Animation_BodyChange_Sound</pawnAnimationDef>
+						</li>
+					</conditonPawnAnimations>
+					<offset>(0,1,-0.1)</offset>
+					<conditonPawnOffsets>
+						<li>
+							<condition/>
+							<offset/>
+						</li>
+					</conditonPawnOffsets>
+				</pawnAnimationSetting>
+				<bedAnimationList>
+					<!-- 폰의 바디, 헤드 -->
+					<li>
+						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<offset>(0,0.0,-0.35)</offset>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<neverHediffDefs>
+										<li>YR_PowerMode1_Hediff</li>
+										<li>YR_PowerMode2_Hediff</li>
+									</neverHediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_GeneratorPod_Body_Yuran</bedAnimationDef>
+								<offset>(0,0.0,-0.35)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+								</condition>
+								<bedAnimationDef>YR_Milking_Face_Yuran</bedAnimationDef>
+								<offset>(0,0.0,-0.35)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 배꼽 촉수 -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_NavelFuck</bedAnimationDef>
+					</li>
+					<!-- 딜도 -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_Dildo</bedAnimationDef>
+					</li>
+					<!-- ECG -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_ECG</bedAnimationDef>
+					</li>
+					<!-- HMD -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_HMD</bedAnimationDef>
+					</li>
+					<!-- 다리 촉수 -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_LegTentacle</bedAnimationDef>
+					</li>
+					<!-- 착유 -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_Milking</bedAnimationDef>
+					</li>
+					<!-- 목 -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_Neck</bedAnimationDef>
+					</li>
+					<!-- 젖꼭지 -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_NippleFuck</bedAnimationDef>
+					</li>
+					<!-- 포드 머리 -->
+					<li>
+						<bedAnimationDef>YR_GeneratorPod_PodHead</bedAnimationDef>
+					</li>
+				</bedAnimationList>
+			</li>
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="MoteBase" Name="YR_GeneratorPod_Spark_Base">

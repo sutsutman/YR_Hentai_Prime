@@ -31,8 +31,8 @@
 						<clipPath>GeneratorPodSound</clipPath>
 					</li>
 				</grains>
-				<volumeRange>6</volumeRange>
-				<distRange>10~25</distRange>
+				<volumeRange>5</volumeRange>
+				<distRange>5~15</distRange>
 			</li>
 		</subSounds>
 	</SoundDef>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GeneratorPod_Neck</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.1,-0.2)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/Neck/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

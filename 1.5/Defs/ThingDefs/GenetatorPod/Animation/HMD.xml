@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GeneratorPod_HMD</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<offset>(0.0,0.1,-0.55)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/HMD/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

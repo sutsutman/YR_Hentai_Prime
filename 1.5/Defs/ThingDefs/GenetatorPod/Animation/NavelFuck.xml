@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GeneratorPod_NavelFuck</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<logCurrentOffset>false</logCurrentOffset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0,0.04,-0.06)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/NavelFuck/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

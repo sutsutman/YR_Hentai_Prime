@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GeneratorPod_Dildo</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/Dildo/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/Dildo/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/Dildo/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/Dildo/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/Dildo/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/Dildo/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

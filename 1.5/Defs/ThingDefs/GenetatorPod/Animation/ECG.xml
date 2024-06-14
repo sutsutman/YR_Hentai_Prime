@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GeneratorPod_ECG</defName>
+		<durationTicks>40</durationTicks>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/ECG/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>			<li>
+				<tick>8</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/ECG/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>			<li>
+				<tick>14</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/ECG/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>			<li>
+				<tick>20</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/ECG/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>			<li>
+				<tick>26</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/ECG/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>			
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,0.05,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/ECG/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>
