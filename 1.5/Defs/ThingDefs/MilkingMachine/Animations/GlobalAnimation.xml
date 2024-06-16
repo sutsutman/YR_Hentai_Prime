@@ -201,6 +201,215 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- PowerMode(Other Race) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Milking_Uterus_PowerA</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>10</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<!-- Temporary -->
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Yuran/L1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<!-- Temporary -->
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Yuran/R2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>50</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Milking_Uterus_PowerB</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<!-- Temporary -->
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Yuran/L1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<!-- Temporary -->
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Yuran/R2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>28</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<!-- Temporary -->
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Yuran/L1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>36</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<!-- Temporary -->
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Yuran/R2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>44</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Normal/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 	<!-- 심전도 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_Milking_ECG</defName>
