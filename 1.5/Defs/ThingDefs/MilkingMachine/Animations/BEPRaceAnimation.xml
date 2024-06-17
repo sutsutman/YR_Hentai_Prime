@@ -1,0 +1,1569 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ***************** 体系 **************** -->
+	<!-- リトルフェアリー -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Small</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Small_PowerA</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>10</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/L1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>50</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/R2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Small_PowerB</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>28</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>36</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>44</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- モフィー達 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Big</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Big_PowerA</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>10</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/L1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>50</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/R2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Big_PowerB</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>28</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>36</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>44</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- リザレビューイ -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Resur_Small</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Resur_Small_PowerA</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>10</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/L1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>50</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/R2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Resur_Small_PowerB</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>28</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>36</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>44</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Resur_Big</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Resur_Big_PowerA</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>10</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/L1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>50</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/R2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Body_Resur_Big_PowerB</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>28</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/L2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>36</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/R1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>44</tick>
+				<offset>(0.0, 0.01,0.26)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Global/Resur_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<!-- ***************** 拘束具 **************** -->
+	<!-- 小さい体系 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Lock_Small</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>45</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Lock_Small_PowerA</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>10</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>50</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Lock_Small_PowerB</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>28</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>36</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>44</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 大きい体系 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Lock_Big</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>45</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Lock_Big_PowerA</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>10</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>50</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_YR_Milking_Lock_Big_PowerB</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>28</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>36</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>44</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2, 2)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+</Defs>
