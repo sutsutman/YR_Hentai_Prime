@@ -470,6 +470,27 @@
 					<!-- HMD -->
 					<li>
 						<bedAnimationDef>YR_Milking_HMD</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<!-- B.E.P Race -->
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+										<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+										<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+										<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+										<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+										<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+										<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+									</races>
+								</condition>
+								<offset>(0,0,-0.08)</offset>
+								<drawSize>(-0.2,0.4)</drawSize>
+								<bedAnimationDef>YR_Milking_HMD</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
 					</li>
 					<!-- 착유선 -->
 					<li>
