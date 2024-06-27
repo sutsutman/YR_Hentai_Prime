@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="YR_AnimationBedBase">
 		<defName>YR_Building_MilkingMachine</defName>
@@ -54,6 +54,8 @@
 									<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
 									<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
 									<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+									<!-- Maru -->
+									<li MayRequire="VAMV.MaruRaceMod">Maru</li>
 								</races>
 							</condition>
 							<pawnAnimationDef>YR_Global_Animation_BodyChange_Sound</pawnAnimationDef>
@@ -81,6 +83,16 @@
 								</races>
 							</condition>
 							<offset>(0,0,0.195)</offset>
+						</li>
+						<!-- Maru -->
+						<li>
+							<condition>
+								<races>
+									
+									<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+								</races>
+							</condition>
+							<offset>(0,0,0.075)</offset>
 						</li>
 					</conditonPawnOffsets>
 				</pawnAnimationSetting>
@@ -438,6 +450,15 @@
 								</condition>
 								<offset>(0,0,-0.055)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Resur_Big_PowerB</bedAnimationDef>
+							</li>
+							<!-- Maru -->
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+									</races>
+								</condition>
+								<bedAnimationDef>YR_Milking_Body_Maru</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
