@@ -345,7 +345,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
             RemoveAnimationBedHediff();
 
-            innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
+            innerContainer?.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
         }
 
         private void RemoveAnimationBedHediff()
