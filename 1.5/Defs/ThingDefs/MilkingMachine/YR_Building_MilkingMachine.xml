@@ -1023,7 +1023,7 @@
 						<thingToSpawn>YR_BreastMilk</thingToSpawn>
 						<spawnCount>40</spawnCount>
 					</li>
-					<li>
+					<li MayRequire="bep.mofy.twfiaclr">
 						<condition>
 							<races>
 								<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
@@ -1032,7 +1032,7 @@
 						<thingToSpawn>Mofy_Milk</thingToSpawn>
 						<spawnCount>10</spawnCount>
 					</li>
-					<li>
+					<li MayRequire="bep.sweety.mcsr">
 						<condition>
 							<races>
 								<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
