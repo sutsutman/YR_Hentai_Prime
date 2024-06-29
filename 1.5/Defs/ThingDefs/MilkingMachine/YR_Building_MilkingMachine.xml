@@ -1001,7 +1001,7 @@
 				</bedAnimationList>
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
-				<ticksToSpawn>10000</ticksToSpawn>
+				<ticksToSpawn>120000</ticksToSpawn>
 				<thingToSpawn>Milk</thingToSpawn>
 				<spawnCount>20</spawnCount>
 				<conditionSpawnThings>
