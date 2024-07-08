@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\yr_hentai_prime_animationbed\\mod\\harmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\mod\\harmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\mod\\harmony.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\buildings\\building_animationbed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\yr_hentai_prime_animationbed\\buildings\\building_animationbed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\buildings\\building_animationbed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -90,8 +90,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\CompProperties_SoundAndMote.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAYwD8AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T14:26:39.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T14:26:39.988Z"
             },
             {
               "$type": "Document",
@@ -103,8 +102,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\CompProperties_DrawPicture.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T14:26:16.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T14:26:16.728Z"
             },
             {
               "$type": "Document",
@@ -116,8 +114,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Joy\\JobDriver_WatchDummyForJoy.cs",
               "ViewState": "AQIAAEcAAAAAAAAAAAAcwEsAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T15:59:28.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T15:59:28.944Z"
             },
             {
               "$type": "Document",
@@ -129,8 +126,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Buildings\\Building_AnimationBed.cs",
               "ViewState": "AQIAADYBAAAAAAAAAAAcwEYBAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T17:39:29.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T17:39:29.683Z"
             },
             {
               "$type": "Document",
@@ -142,8 +138,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\JobDrivers\\JobDriver_TransferBetweenAnimationBeds.cs",
               "ViewState": "AQIAABUAAAAAAAAAAABIwCcAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T15:59:24.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T15:59:24.901Z"
             },
             {
               "$type": "Document",
@@ -153,7 +148,7 @@
               "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Mod\\Harmony.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Mod\\Harmony.cs",
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Mod\\Harmony.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAVAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAwC4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T11:10:41.176Z",
               "EditorCaption": ""
@@ -168,8 +163,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\CompBaseOfAnimationBed.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T14:27:04.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T14:27:04.649Z"
             },
             {
               "$type": "Document",
@@ -181,8 +175,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\CompPowerPlant_Building_BaseBondageBed.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T14:30:59.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T14:30:59.919Z"
             },
             {
               "$type": "Document",
@@ -194,8 +187,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\TestLog.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T14:31:02.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T14:31:02.523Z"
             },
             {
               "$type": "Document",
@@ -207,8 +199,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationSetting\\Condition.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAABYwEgAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:35:50.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T12:35:50.565Z"
             },
             {
               "$type": "Document",
@@ -232,8 +223,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationSetting\\CompAnimationSetting.cs",
               "ViewState": "AQIAACUAAAAAAAAAAABYwCoAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T17:39:45.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T17:39:45.338Z"
             },
             {
               "$type": "Document",
@@ -245,8 +235,7 @@
               "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\AnimationSetting\\BedAnimationUtility.cs",
               "ViewState": "AQIAAAwBAAAAAAAAAAASwBoBAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T17:36:22.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T17:36:22.98Z"
             },
             {
               "$type": "Document",
