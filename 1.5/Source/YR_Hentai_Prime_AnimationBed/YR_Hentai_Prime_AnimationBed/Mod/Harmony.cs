@@ -8,7 +8,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public static bool Prefix(PawnDrawParms parms)
         {
-            if (parms.pawn.holdingOwner.Owner is Building_AnimationBed building_AnimationBed)
+            if (parms.pawn.holdingOwner?.Owner is Building_AnimationBed building_AnimationBed)
             {
                 if (building_AnimationBed.AnimationSettingComp.Props.pawnAnimationSetting.renderClothes)
                 {
@@ -19,7 +19,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     return false;
                 }
             }
-            if (parms.pawn.jobs.curDriver is JobDriver_WatchDummyForJoy jobDriver_WatchDummyForJoy && jobDriver_WatchDummyForJoy.watchNow)
+            if (parms.pawn.jobs?.curDriver is JobDriver_WatchDummyForJoy jobDriver_WatchDummyForJoy && jobDriver_WatchDummyForJoy.watchNow)
             {
                 return false;
             }
