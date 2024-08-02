@@ -11,6 +11,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public AnimationDef animationDef;
 
+        public int waitAfterJoyTick = 0;
+
         public MakeHediff makeHediff = new MakeHediff();
         public MakeSound makeSound = new MakeSound();
     }
@@ -27,6 +29,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public List<SoundSetting> startSoundSettings = new List<SoundSetting>();
         public List<SoundSetting> randomSoundSettings = new List<SoundSetting>();
         public List<SoundSetting> finishSoundSettings = new List<SoundSetting>();
+        public List<SoundSetting> waitAfterJoySoundSettings = new List<SoundSetting>();
     }
 
     public class MakeHediff

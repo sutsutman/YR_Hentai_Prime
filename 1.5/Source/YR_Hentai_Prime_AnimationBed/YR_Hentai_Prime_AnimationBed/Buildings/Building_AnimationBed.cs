@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -74,6 +75,8 @@ namespace YR_Hentai_Prime_AnimationBed
                         break;
                     }
                 }
+
+                offset += testPawnOffset;
 
                 return offset;
             }
@@ -405,6 +408,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
+        //기즈모
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (Gizmo gizmo2 in base.GetGizmos())
@@ -476,12 +480,12 @@ namespace YR_Hentai_Prime_AnimationBed
 
         }
 
+        //테스트용 기즈모
         private IEnumerable<Gizmo> TESTGIZMO()
         {
 
             if (Prefs.DevMode)
             {
-
                 yield return new Command_Action
                 {
                     defaultLabel = "Open controll setting",
@@ -500,6 +504,93 @@ namespace YR_Hentai_Prime_AnimationBed
 
                     var defLabelCount = new Dictionary<BedAnimationDef, int>();
 
+                    //폰 위치 쪽
+                    if (HeldPawn != null)
+                    {
+                        yield return new Command_Action
+                        {
+                            defaultLabel = $"Pawn Offset Setting",
+                            icon = ContentFinder<Texture2D>.Get("UI/Commands/ForColonists"),
+                            action = delegate
+                            {
+                                if (openPawnOffsetSettingGizmo)
+                                {
+                                    openPawnOffsetSettingGizmo = false;
+                                }
+                                else
+                                {
+                                    openPawnOffsetSettingGizmo = true;
+                                }
+                            }
+                        };
+
+                        if (openPawnOffsetSettingGizmo)
+                        {
+                            //Reset
+                            yield return new Command_Action
+                            {
+                                defaultLabel = $"Pawn Offset Reset",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
+                                action = delegate
+                                {
+                                    testPawnOffset = new Vector3();
+                                }
+                            };
+                            // X
+                            yield return new Command_Action
+                            {
+                                defaultLabel = $"Pawn Offset : Right",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                action = delegate
+                                {
+                                    float n = 0;
+                                    testPawnOffset.x += movef;
+                                    n = testPawnOffset.x;
+                                    Messages.Message($"testOffset.x : {n}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = $"Pawn Offset : Left",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                action = delegate
+                                {
+                                    float n = 0;
+                                    testPawnOffset.x -= movef;
+                                    n = testPawnOffset.x;
+                                    Messages.Message($"testOffset.x : {n}", MessageTypeDefOf.SilentInput, false);
+
+                                }
+                            };
+
+                            // Z
+                            yield return new Command_Action
+                            {
+                                defaultLabel = $"Pawn Offset : Up",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                action = delegate
+                                {
+                                    float n = 0;
+                                    testPawnOffset.z += movef;
+                                    n = testPawnOffset.z;
+                                    Messages.Message($"testOffset.y : {n}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = $"Pawn Offset : Down",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                action = delegate
+                                {
+                                    float n = 0;
+                                    testPawnOffset.z -= movef;
+                                    n = testPawnOffset.z;
+                                    Messages.Message($"testOffset.y : {n}", MessageTypeDefOf.SilentInput, false);
+
+                                }
+                            };
+                        }
+                    }
                     //애니메이션 쪽
                     foreach (var bedAnimationSettingAndTick in AnimationSettingComp.bedAnimationSettingAndTicks)
                     {
@@ -1021,9 +1112,166 @@ namespace YR_Hentai_Prime_AnimationBed
                         i++;
                     }
 
+                    //채우는 바 쪽
+                    int y = 0;
+                    foreach (var fillableBarIngredient in AnimationSettingComp.fillableBarIngredients)
+                    {
+
+                        yield return new Command_Action
+                        {
+                            defaultLabel = $"Open FillableBar Gizmo : {y}",
+                            icon = ContentFinder<Texture2D>.Get("UI/YR_Dummy"),
+                            action = delegate
+                            {
+                                if (fillableBarIngredient.openTestGizmo)
+                                {
+                                    fillableBarIngredient.openTestGizmo = false;
+                                }
+                                else
+                                {
+                                    fillableBarIngredient.openTestGizmo = true;
+                                }
+                            }
+                        };
+
+                        if (fillableBarIngredient.openTestGizmo)
+                        {
+                            //reset
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : Reset",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testDrawSize = new Vector2();
+                                    fillableBarIngredient.testOffset = new Vector3();
+                                }
+                            };
+
+                            // X
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : Right",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testOffset.x += movef;
+
+                                    Messages.Message($"FillableBar testOffset.x : {fillableBarIngredient.testOffset.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : Left",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testOffset.x -= movef;
+
+                                    Messages.Message($"FillableBar testOffset.x : {fillableBarIngredient.testOffset.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            // Y
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : Front",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testOffset.y += movef;
+
+                                    Messages.Message($"testOffset.y : {fillableBarIngredient.testOffset.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : Back",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testOffset.y -= movef;
+
+                                    Messages.Message($"testOffset.y : {fillableBarIngredient.testOffset.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            // Z
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : Up",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testOffset.z += movef;
+
+                                    Messages.Message($"testOffset.z : {fillableBarIngredient.testOffset.z}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : Down",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testOffset.z -= movef;
+
+                                    Messages.Message($"testOffset.z : {fillableBarIngredient.testOffset.z}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+
+                            // DrawSize x
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : draw x Big",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testDrawSize.x += movef;
+
+                                    Messages.Message($"FillableBar testDrawSize.x : {fillableBarIngredient.testDrawSize.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : draw x Small",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testDrawSize.x -= movef;
+
+                                    Messages.Message($"FillableBar testDrawSize.x : {fillableBarIngredient.testDrawSize.x}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+
+                            // DrawSize y
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : draw y Big",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_y_Big"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testDrawSize.y += movef;
+
+                                    Messages.Message($"FillableBar testDrawSize.y : {fillableBarIngredient.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                            yield return new Command_Action
+                            {
+                                defaultLabel = "FillableBar : draw y Small",
+                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_y_Small"),
+                                action = delegate
+                                {
+                                    fillableBarIngredient.testDrawSize.y -= movef;
+
+                                    Messages.Message($"FillableBar testDrawSize.y : {fillableBarIngredient.testDrawSize.y}", MessageTypeDefOf.SilentInput, false);
+                                }
+                            };
+                        }
+                        y++;
+                    }
                 }
-
-
             }
 
             void ToggleOpenControlSetting()
@@ -1031,14 +1279,22 @@ namespace YR_Hentai_Prime_AnimationBed
                 if (openControllSetting)
                 {
                     openControllSetting = false;
+
+                    openPawnOffsetSettingGizmo = false;
+
                     foreach (var bedAnimationSettingAndTick in AnimationSettingComp.bedAnimationSettingAndTicks)
                     {
                         bedAnimationSettingAndTick.openTestGizmo = false;
                     }
 
-                    foreach (var portraitIngredients in AnimationSettingComp.portraitIngredients)
+                    foreach (var portraitIngredient in AnimationSettingComp.portraitIngredients)
                     {
-                        portraitIngredients.openTestGizmo = false;
+                        portraitIngredient.openTestGizmo = false;
+                    }
+
+                    foreach (var fillableBarIngredient in AnimationSettingComp.fillableBarIngredients)
+                    {
+                        fillableBarIngredient.openTestGizmo = false;
                     }
                 }
                 else
@@ -1062,6 +1318,8 @@ namespace YR_Hentai_Prime_AnimationBed
         float movef = 0.001f;
         public bool dummyForJoyIsActive;
         public Pawn dummyForJoyPawn;
+        private Vector3 testPawnOffset;
+        private bool openPawnOffsetSettingGizmo;
 
         public void Notify_PawnDied(Pawn pawn, DamageInfo? dinfo)
         {

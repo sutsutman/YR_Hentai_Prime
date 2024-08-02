@@ -6,9 +6,9 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public static void Error(params string[] messages)
         {
+            return;
             if (Prefs.DevMode)
             {
-                return;
                 string combinedMessage = string.Join(" ", messages);
                 Log.Error(combinedMessage);
             }

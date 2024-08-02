@@ -12,6 +12,15 @@ namespace YR_Hentai_Prime_AnimationBed
         public List<BedAnimation> bedAnimationList = new List<BedAnimation>();
 
         public List<PawnPortraitSetting> pawnPortraitSettings = new List<PawnPortraitSetting>();
+        public List<FillableBarSetting> fillableBarSettings = new List<FillableBarSetting>();
+    }
+
+    public class FillableBarSetting
+    {
+        public Condition condition;
+        public Vector2 drawSize = Vector2.one;
+        public Vector3 offset;
+        public Color color = Color.white;
     }
 
     public class PawnPortraitSetting

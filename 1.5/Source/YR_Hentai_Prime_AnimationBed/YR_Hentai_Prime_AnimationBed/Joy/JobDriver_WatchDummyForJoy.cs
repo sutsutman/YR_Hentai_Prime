@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Verse;
 using Verse.AI;
+using static HarmonyLib.Code;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
@@ -34,7 +35,10 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 JoyUtility.TryGainRecRoomThought(pawn);
                 FinishAction();
+
+
             });
+           
             watch.defaultCompleteMode = ToilCompleteMode.Delay;
             watch.defaultDuration = job.def.joyDuration;
             watch.handlingFacing = true;
@@ -44,6 +48,19 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             yield return watch;
+
+            //기다리는 동안 소리
+            if (stop)
+            {
+                CompProperties_SpawnDummyForJoy props = CompSpawnDummyForJoy?.Props;
+                Building_AnimationBed.PlaySoundSettings(Building_AnimationBed?.HeldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.waitAfterJoySoundSettings);
+                Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.waitAfterJoySoundSettings);
+
+                //기다리는거 잘 작동 안하니 이걸 그냥 없애고 오줌 싸는 소리만 넣어야 할듯?
+                Toil toil = Toils_General.Wait(props.waitAfterJoyTick, TargetIndex.None);
+                yield return toil;
+            }
+
             LocalTargetInfo EffectTargetGetter()
             {
                 return base.TargetA.Thing.OccupiedRect().RandomCell + IntVec3.North.RotatedBy(base.TargetA.Thing.Rotation);

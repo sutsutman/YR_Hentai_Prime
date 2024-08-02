@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -32,14 +33,25 @@ namespace YR_Hentai_Prime_AnimationBed
             HeldPawn.Drawer.renderer.SetAnimation(pawnAnimationDef);
 
             TestLog.Error("+++Check bedAnimationList+++");
+            int i = 0;
             foreach (var bedAnimation in Props.bedAnimationList)
             {
+                TestLog.Error($"bedAnimation 설정 : {i}");
+                i++;
                 BedAnimationDef bedAnimationDef = bedAnimation.bedAnimationDef;
                 Vector3 offset = bedAnimation.offset;
                 Vector2 drawSize = bedAnimation.drawSize;
 
+                int ci = 0;
                 foreach (var conditionBedAnimationDef in bedAnimation.conditionBedAnimationDefs)
                 {
+                    TestLog.Error($"conditionBedAnimationDef 설정 : {ci}");
+                    ci++;
+                    if (conditionBedAnimationDef.bedAnimationDef == null)
+                    {
+                        TestLog.Error($"conditionBedAnimationDef.bedAnimationDef == null");
+                        continue;
+                    }
                     void action()
                     {
                         bedAnimationDef = conditionBedAnimationDef.bedAnimationDef;
@@ -51,7 +63,6 @@ namespace YR_Hentai_Prime_AnimationBed
                     {
                         break;
                     }
-
                 }
 
                 TestLog.Error($"=={bedAnimationDef.defName}==");
@@ -69,12 +80,39 @@ namespace YR_Hentai_Prime_AnimationBed
             TestLog.Error("=============================");
             MakePortrait(building_AnimationBed);
 
+            MakeFillableBar(building_AnimationBed);
+
             return true;
         }
+        //바 정보 만들기(반투명, 물 그릴때 씀)
+        public static void MakeFillableBar(Building_AnimationBed building_AnimationBed)
+        {
+            building_AnimationBed.AnimationSettingComp.fillableBarIngredients = new List<FillableBarIngredient>();
+            foreach (var fillableBarSetting in building_AnimationBed.AnimationSettingComp.Props.fillableBarSettings)
+            {
+                if (Condition.Match(building_AnimationBed.HeldPawn, building_AnimationBed, fillableBarSetting.condition, out bool needBreak))
+                {
+                    FillableBarIngredient fillableBarIngredient = new FillableBarIngredient
+                    {
+                        pawn = building_AnimationBed.HeldPawn,
+                        offset = fillableBarSetting.offset,
+                        drawSize = fillableBarSetting.drawSize,
+                        color = fillableBarSetting.color,
+                    };
+
+                    building_AnimationBed.AnimationSettingComp.fillableBarIngredients.Add(fillableBarIngredient);
+
+                    if (needBreak)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
+        //포트레잇 정보 만들기
         private static void MakePortrait(Building_AnimationBed building_AnimationBed)
         {
-
-
             building_AnimationBed.AnimationSettingComp.portraitIngredients = new List<PortraitIngredient>();
             foreach (var pawnPortraitSetting in building_AnimationBed.AnimationSettingComp.Props.pawnPortraitSettings)
             {
@@ -186,6 +224,7 @@ namespace YR_Hentai_Prime_AnimationBed
                         }
                     }
 
+
                     if (graphicData != null)
                     {
                         // Set appropriate graphic(그래픽 제작)
@@ -230,6 +269,21 @@ namespace YR_Hentai_Prime_AnimationBed
 
 
             return bedAnimationSettingAndTick;
+        }
+
+        public virtual void LiquidDraw(Color color, Vector3 rootLoc, Vector2 drawSize, float fillPct)
+        {
+            GenDraw.FillableBarRequest r = default;
+            r.center = rootLoc;
+            r.size = drawSize;
+            r.fillPercent = fillPct;
+            r.filledMat = SolidColorMaterials.SimpleSolidColorMaterial(color, false);
+            r.unfilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0, 0, 0, 0), false);
+            r.margin = 0f;
+            Rot4 rotation = Rot4.South;
+            rotation.Rotate(RotationDirection.Clockwise);
+            r.rotation = rotation;
+            GenDraw.DrawFillableBar(r);
         }
 
         private static Graphic GetGraphic(Pawn pawn, PawnRenderNodeTagDef tagDef, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)

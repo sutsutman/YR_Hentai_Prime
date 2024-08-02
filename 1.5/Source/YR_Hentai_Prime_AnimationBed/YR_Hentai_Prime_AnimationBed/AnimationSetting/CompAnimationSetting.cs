@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public bool needMakeGraphics = true;
 
         public List<PortraitIngredient> portraitIngredients = new List<PortraitIngredient>();
+        public List<FillableBarIngredient> fillableBarIngredients = new List<FillableBarIngredient>();
 
         public override void PostDraw()
         {
@@ -56,9 +58,29 @@ namespace YR_Hentai_Prime_AnimationBed
 
             // 포트레잇
             DrawPortrait();
-
+            DrawFillableBar();
             Building_AnimationBed.makePortrait = false;
         }
+
+        private void DrawFillableBar()
+        {
+            foreach (var fillableBarIngredient in fillableBarIngredients)
+            {
+                GenDraw.FillableBarRequest r = default(GenDraw.FillableBarRequest);
+                r.center = Building_AnimationBed.DrawPos + fillableBarIngredient.offset + fillableBarIngredient.testOffset;
+                r.size = fillableBarIngredient.drawSize + fillableBarIngredient.testDrawSize;
+                r.fillPercent = 1;
+                r.filledMat = SolidColorMaterials.SimpleSolidColorMaterial(fillableBarIngredient.color + fillableBarIngredient.testColor, false);
+                r.unfilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0, 0, 0, 0), false);
+                r.margin = 0f;
+                Rot4 rotation = Rot4.South;
+                rotation.Rotate(RotationDirection.Clockwise);
+                r.rotation = rotation;
+                GenDraw.DrawFillableBar(r);
+            }
+        }
+
+        //포트레잇 그려내기
         private void DrawPortrait()
         {
             foreach (var portraitIngredient in portraitIngredients)
@@ -182,6 +204,21 @@ namespace YR_Hentai_Prime_AnimationBed
             }
             return pos;
         }
+    }
+
+    public class FillableBarIngredient
+    {
+        public Pawn pawn;
+
+        public Vector3 offset;
+        public Vector2 drawSize;
+        public Color color;
+
+        public bool openTestGizmo;
+
+        public Vector3 testOffset;
+        public Vector2 testDrawSize;
+        public Color testColor;
     }
 
 
