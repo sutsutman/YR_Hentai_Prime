@@ -201,6 +201,58 @@
 			</li>
 		</animationParts>
 	</AnimationDef>
+	<!-- 글로벌(소리 있음 움직임 없음) -->
+	<AnimationDef>
+		<defName>YR_Global_Animation_Sound_NoMove</defName>
+		<durationTicks>60</durationTicks>
+		<animationParts>
+			<li>
+				<key>Body</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,0,0)</offset>
+						</li>
+						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
+							<tick>12</tick>
+							<offset>(0.0,0,0)</offset>
+							<soundSettings>
+								<li>
+									<soundDefs>
+										<li>YR_PanPanSound_1</li>
+										<li>YR_PanPanSound_2</li>
+										<li>YR_PanPanSound_3</li>
+										<li>YR_PanPanSound_4</li>
+										<li>YR_PanPanSound_5</li>
+										<li>YR_PanPanSound_6</li>
+										<li>YR_PanPanSound_7</li>
+										<li>YR_PanPanSound_8</li>
+										<li>YR_PanPanSound_9</li>
+									</soundDefs>
+									<!-- <conditionSoundSettings> -->
+									<!-- <li> -->
+									<!-- <soundDef/> -->
+									<!-- <condition/> -->
+									<!-- </li> -->
+									<!-- </conditionSoundSettings> -->
+								</li>
+							</soundSettings>
+						</li>
+						<li>
+							<tick>40</tick>
+							<offset>(0.0,0,0)</offset>
+						</li>
+						<li>
+							<tick>60</tick>
+							<offset>(0.0,0,0)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
+		</animationParts>
+	</AnimationDef>
 	<!-- 신체 변환(소리 없음)-->
 	<AnimationDef>
 		<defName>YR_Global_Animation_BodyChange</defName>
@@ -354,6 +406,58 @@
 						<li>
 							<tick>40</tick>
 							<offset>(0.0,-180,0.01)</offset>
+						</li>
+						<li>
+							<tick>60</tick>
+							<offset>(0.0,-180,0)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
+		</animationParts>
+	</AnimationDef>
+	<!-- 신체 변환(소리 있음 움직임 없음) -->
+	<AnimationDef>
+		<defName>YR_Global_Animation_BodyChange_Sound_NoMove</defName>
+		<durationTicks>60</durationTicks>
+		<animationParts>
+			<li>
+				<key>Body</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,-180,0)</offset>
+						</li>
+						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
+							<tick>12</tick>
+							<offset>(0.0,-180,0)</offset>
+							<soundSettings>
+								<li>
+									<soundDefs>
+										<li>YR_PanPanSound_1</li>
+										<li>YR_PanPanSound_2</li>
+										<li>YR_PanPanSound_3</li>
+										<li>YR_PanPanSound_4</li>
+										<li>YR_PanPanSound_5</li>
+										<li>YR_PanPanSound_6</li>
+										<li>YR_PanPanSound_7</li>
+										<li>YR_PanPanSound_8</li>
+										<li>YR_PanPanSound_9</li>
+									</soundDefs>
+									<!-- <conditionSoundSettings> -->
+									<!-- <li> -->
+									<!-- <soundDef/> -->
+									<!-- <condition/> -->
+									<!-- </li> -->
+									<!-- </conditionSoundSettings> -->
+								</li>
+							</soundSettings>
+						</li>
+						<li>
+							<tick>40</tick>
+							<offset>(0.0,-180,0)</offset>
 						</li>
 						<li>
 							<tick>60</tick>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 유란 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Queen_Body_Yuran</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<!--폰 애니메이션과 침대 애니메이션의 총 틱의 강제 매치 -->
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<!-- 텍스처 판정을 폰 바디 랜더로 바꿈 -->
+		<setPawnColor>false</setPawnColor>
+		<!-- 이걸 해줘야 색상이 스킨 컬러, 셰이더 적용 됨. 다만 유란 같은 경우 적용이 되면 안되니깐 꺼둠 -->
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<!-- 이 텍스처는 어느 랜더 노드 태그 쓰는지 -->
+		<animationSynchro>false</animationSynchro>
+		<!--동일한 pawnRenderNodeTagDef를 가진 애니메이션과 움직임을 싱크로 -->
+		<!-- <logCurrentOffset>true</logCurrentOffset> -->
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/Race/Yuran/Thin/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/Race/Yuran/Thin/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/Race/Yuran/Thin/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+</Defs>

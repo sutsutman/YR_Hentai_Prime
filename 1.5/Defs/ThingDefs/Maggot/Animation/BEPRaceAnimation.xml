@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- リトルフェアリー -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_Maggot_Queen_Body_Small</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>false</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<!-- モフィー達 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_Maggot_Queen_Body_Big</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>false</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<!-- リザレビューイ -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_Maggot_Queen_Body_Resur_Small</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>false</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Resur_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Resur_Small/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Resur_Small/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>BEPRace_Maggot_Queen_Body_Resur_Big</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>true</setPawnColor>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>false</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Resur_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Resur_Big/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>32</tick>
+				<offset>(0.0,0.01,0.25)</offset>
+				<graphicData>
+					<texPath>BEPRace/Body/Maggot/Resur_Big/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+</Defs>
