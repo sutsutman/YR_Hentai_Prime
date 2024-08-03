@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- FrontHug(for Female) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Queen_FrontHug_Egg</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,1,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/7</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<!-- FrontHug(for Male) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Queen_FrontHug_Squeezing</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,1,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/7</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/FrontHug/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<!-- BackHug(for Female) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Queen_BackHug_Egg</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,1,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<!-- BackHug(for Male) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Queen_BackHug_Squeezing</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,1,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<!-- BackGround -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Queen_BackGround</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,0,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/BackGround</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+	<!-- Mouth -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Queen_Mouth</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,1.1,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Maggot/Body/BackHug/Mouth</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+
+</Defs>
