@@ -111,7 +111,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     foreach (var skillLevelRage in skillLevelRages)
                     {
                         var level = pawn.skills.GetSkill(skillLevelRage.skillDef).Level;
-                        if(pawn.skills.GetSkill(skillLevelRage.skillDef).TotallyDisabled)
+                        if (pawn.skills.GetSkill(skillLevelRage.skillDef).TotallyDisabled)
                         {
                             level = 0;
                         }

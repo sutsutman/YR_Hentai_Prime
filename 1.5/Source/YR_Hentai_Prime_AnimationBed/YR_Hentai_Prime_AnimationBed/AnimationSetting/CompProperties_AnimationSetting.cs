@@ -32,6 +32,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class PortraitSetting
     {
+        public string label;
         public bool drawJoyPawn = false;
         public GraphicData portraitMeshGraphicData;
         public Vector2 drawSize = Vector2.one;
@@ -47,6 +48,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public PawnRenderNodeTagDef pawnRenderNodeTagDef;
         public bool animationSynchro;
+
+        public Condition visibleCondition;
     }
 
     public class ConditonPortraitSetting

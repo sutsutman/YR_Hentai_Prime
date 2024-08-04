@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Emit;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -165,10 +164,13 @@ namespace YR_Hentai_Prime_AnimationBed
         public bool PowerOn => ((powerComp != null && powerComp.PowerOn) || powerComp == null) && !stopAnimation;
 
         public bool stopAnimation = false;
+
+        public int tickForPortrait = 0;
         public override void Tick()
         {
             base.Tick();
             innerContainer.ThingOwnerTick();
+            tickForPortrait--;
 
             if (HeldPawn != null)
             {
@@ -178,6 +180,12 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     BedAnimationUtility.SetAnimation(this);
 
+                    BedAnimationUtility.MakePortrait(this);
+                    //if (tickForPortrait <= 0)
+                    //{
+                    //    tickForPortrait = 1;
+                    //    BedAnimationUtility.MakePortrait(this);
+                    //}
                     tempAnimationTick = HeldPawn.Drawer.renderer.renderTree.AnimationTick;
 
                     if (HeldPawn.Drawer.renderer.HasAnimation)
@@ -340,13 +348,18 @@ namespace YR_Hentai_Prime_AnimationBed
         public void EjectContents()
         {
             setAnimation = true;
-            animationSettingComp.needMakeGraphics = true;
+            if (animationSettingComp != null)
+            {
+                animationSettingComp.needMakeGraphics = true;
+            }
 
-            HeldPawn?.Drawer.renderer.SetAnimation(null);
-            HeldPawn?.GetComp<CompAnimationBedTarget>()?.Notify_ReleasedFromPlatform();
-            ToggleHediffComp?.RemoveAllHediffs(HeldPawn);
-
-            RemoveAnimationBedHediff();
+            if (HeldPawn != null)
+            {
+                HeldPawn?.Drawer.renderer.SetAnimation(null);
+                HeldPawn?.GetComp<CompAnimationBedTarget>()?.Notify_ReleasedFromPlatform();
+                ToggleHediffComp?.RemoveAllHediffs(HeldPawn);
+                RemoveAnimationBedHediff();
+            }
 
             innerContainer?.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
         }

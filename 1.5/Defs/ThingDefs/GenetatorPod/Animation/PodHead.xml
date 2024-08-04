@@ -6,7 +6,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,0.2,0)</offset>
+				<offset>(0.0,0.9,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GeneratorPod/Body/PodHead/1</texPath>
 					<graphicClass>Graphic_Single</graphicClass>

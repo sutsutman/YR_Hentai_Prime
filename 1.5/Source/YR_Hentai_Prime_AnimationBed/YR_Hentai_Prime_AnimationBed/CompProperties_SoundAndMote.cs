@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
-using static HarmonyLib.Code;
 using Random = System.Random;
 
 namespace YR_Hentai_Prime_AnimationBed
@@ -35,7 +34,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             base.CompTick();
 
-            if (Building_AnimationBed.PowerOn)
+            if (Building_AnimationBed.PowerOn && Building_AnimationBed.HeldPawn != null)
             {
                 ticks--;
                 if (ticks <= 0)

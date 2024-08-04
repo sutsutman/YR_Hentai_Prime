@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,6 +10,9 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public static bool MakeBedAnimation(Building_AnimationBed building_AnimationBed)
         {
+
+            MakeFillableBar(building_AnimationBed);
+
             Pawn HeldPawn = building_AnimationBed.HeldPawn;
 
             if (building_AnimationBed.AnimationSettingComp == null || HeldPawn == null || HeldPawn.Drawer.renderer.renderTree.rootNode == null)
@@ -75,12 +77,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             TestLog.Error("+++Finish Check bedAnimationList+++");
-
-            // 포트레잇
             TestLog.Error("=============================");
-            MakePortrait(building_AnimationBed);
-
-            MakeFillableBar(building_AnimationBed);
 
             return true;
         }
@@ -110,26 +107,28 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        //포트레잇 정보 만들기
-        private static void MakePortrait(Building_AnimationBed building_AnimationBed)
+        // 포트레잇 정보 만들기
+        public static void MakePortrait(Building_AnimationBed building_AnimationBed)
         {
-            building_AnimationBed.AnimationSettingComp.portraitIngredients = new List<PortraitIngredient>();
+            //여기다가 다른 모든 포트레잇 리셋 스위치를 넣기?
+            var portraitIngredients = building_AnimationBed.AnimationSettingComp.portraitIngredients;
+            portraitIngredients.Clear();  // 이전 데이터를 제거하여 초기화합니다.
+
             foreach (var pawnPortraitSetting in building_AnimationBed.AnimationSettingComp.Props.pawnPortraitSettings)
             {
-                Pawn drawPawn;
                 var portraitSetting = pawnPortraitSetting.portraitSetting;
 
                 foreach (var conditionPortraitSetting in pawnPortraitSetting.conditonPortraitSettings)
                 {
-                    var tempPawn = building_AnimationBed.HeldPawn;
-                    if (conditionPortraitSetting.portraitSetting.drawJoyPawn)
-                    {
-                        tempPawn = building_AnimationBed.dummyForJoyPawn;
-                    }
-                    if(tempPawn == null)
+                    var tempPawn = conditionPortraitSetting.portraitSetting.drawJoyPawn
+                        ? building_AnimationBed.dummyForJoyPawn
+                        : building_AnimationBed.HeldPawn;
+
+                    if (tempPawn == null)
                     {
                         continue;
                     }
+
                     void action() => portraitSetting = conditionPortraitSetting.portraitSetting;
 
                     if (Condition.ExecuteActionIfConditionMatches(tempPawn, building_AnimationBed, conditionPortraitSetting.condition, action))
@@ -138,22 +137,29 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
                 }
 
-                if (!portraitSetting.draw)
+                if (portraitSetting == null || !portraitSetting.draw)
                 {
                     continue;
                 }
 
-                drawPawn = portraitSetting.drawJoyPawn?building_AnimationBed.dummyForJoyPawn : building_AnimationBed.HeldPawn;
+                var drawPawn = portraitSetting.drawJoyPawn ? building_AnimationBed.dummyForJoyPawn : building_AnimationBed.HeldPawn;
 
                 if (drawPawn == null)
                 {
                     continue;
                 }
 
-                PortraitIngredient portraitIngredient = new PortraitIngredient
+                var drawSize = Vector3.zero;
+                if (Condition.Match(drawPawn, building_AnimationBed, portraitSetting.visibleCondition, out _))
                 {
+                    drawSize = portraitSetting.drawSize;
+                }
+
+                portraitIngredients.Add(new PortraitIngredient
+                {
+                    label = portraitSetting.label,
                     pawn = drawPawn,
-                    drawSize = portraitSetting.drawSize,
+                    drawSize = drawSize,
                     angle = portraitSetting.angle,
                     offset = portraitSetting.offset,
                     portraitMesh = portraitSetting.portraitMeshGraphicData.Graphic.MeshAt(Rot4.South),
@@ -161,29 +167,26 @@ namespace YR_Hentai_Prime_AnimationBed
                     cameraOffset = portraitSetting.cameraOffset,
                     cameraZoom = portraitSetting.cameraZoom,
                     portraitSetting = portraitSetting
-                };
-
-                building_AnimationBed.AnimationSettingComp.portraitIngredients.Add(portraitIngredient);
+                });
             }
         }
+
         private static Material CreateMaterial(PortraitSetting portraitSetting, Pawn pawn)
         {
-            var tempMat = new Material(ShaderDatabase.CutoutComplex)
-            {
-                mainTexture = PortraitsCache.Get(pawn, new Vector2(256, 256), portraitSetting.rotation, default, 1, renderClothes: true, renderHeadgear: true, stylingStation: false, healthStateOverride: PawnHealthState.Mobile),
-                color = Color.white
-            };
+            var mainTexture = PortraitsCache.Get(pawn, new Vector2(256, 256), portraitSetting.rotation, default, 1, renderClothes: true, renderHeadgear: true, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
             var maskTex = ContentFinder<Texture2D>.Get(portraitSetting.maskPath);
 
-            MaterialRequest req = default;
-            if (maskTex != null)
-                req.maskTex = maskTex;
+            var req = new MaterialRequest
+            {
+                mainTex = mainTexture,
+                color = Color.white,
+                shader = ShaderDatabase.CutoutComplex,
+                maskTex = maskTex
+            };
 
-            req.mainTex = tempMat.mainTexture;
-            req.color = tempMat.color;
-            req.shader = tempMat.shader;
             return MaterialPool.MatFrom(req);
         }
+
 
         public static BedAnimationSettingAndTick MakeBedAnimationSettingAndTick(Building_AnimationBed building_AnimationBed, BedAnimationDef bedAnimationDef, Vector3 offset, Vector2 drawSize, AnimationDef pawnAnimationDef)
         {
@@ -269,21 +272,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
 
             return bedAnimationSettingAndTick;
-        }
-
-        public virtual void LiquidDraw(Color color, Vector3 rootLoc, Vector2 drawSize, float fillPct)
-        {
-            GenDraw.FillableBarRequest r = default;
-            r.center = rootLoc;
-            r.size = drawSize;
-            r.fillPercent = fillPct;
-            r.filledMat = SolidColorMaterials.SimpleSolidColorMaterial(color, false);
-            r.unfilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0, 0, 0, 0), false);
-            r.margin = 0f;
-            Rot4 rotation = Rot4.South;
-            rotation.Rotate(RotationDirection.Clockwise);
-            r.rotation = rotation;
-            GenDraw.DrawFillableBar(r);
         }
 
         private static Graphic GetGraphic(Pawn pawn, PawnRenderNodeTagDef tagDef, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)

@@ -51,13 +51,12 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 Vector3 pos = CalculatePos(bedAnimationSettingAndTick, closestSetting);
 
-
-
                 closestSetting.graphic?.Draw(pos, Rot4.North, Building_AnimationBed.HeldPawn);
             }
 
             // 포트레잇
             DrawPortrait();
+            //액체 바
             DrawFillableBar();
             Building_AnimationBed.makePortrait = false;
         }
@@ -85,43 +84,42 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             foreach (var portraitIngredient in portraitIngredients)
             {
+                if (portraitIngredient.label != null)
+                {
+                    Log.Error(portraitIngredient.label);
+                }
+
                 Pawn pawn = portraitIngredient.pawn;
                 Vector3 drawPos = Building_AnimationBed.DrawPos + portraitIngredient.offset + portraitIngredient.testOffset;
-                //안나오던건 Vector3 drawsize 변환 문제!!!!!!
                 Vector3 drawSize = new Vector3(portraitIngredient.drawSize.x + portraitIngredient.testDrawSize.x, 1, portraitIngredient.drawSize.y + portraitIngredient.testDrawSize.y);
-                Matrix4x4 matrix = Matrix4x4.TRS(drawPos, Quaternion.AngleAxis(portraitIngredient.angle + portraitIngredient.testAngle, Vector3.up), drawSize);
 
-                //1틱당 한번 계산 해서 부담 줄이기
                 if (Building_AnimationBed.makePortrait)
                 {
                     var portraitSetting = portraitIngredient.portraitSetting;
                     var cameraOffset = portraitIngredient.cameraOffset;
+
                     if (portraitSetting.animationSynchro)
                     {
-                        PawnRenderNode renderNode = pawn.Drawer.renderer.renderTree.rootNode.children
-                        .FirstOrDefault(n => n?.Props?.tagDef == portraitSetting.pawnRenderNodeTagDef);
+                        var renderNode = pawn.Drawer.renderer.renderTree.rootNode.children
+                            .FirstOrDefault(n => n?.Props?.tagDef == portraitSetting.pawnRenderNodeTagDef);
 
                         if (renderNode != null)
                         {
-                            Vector3 offset = renderNode.Worker.OffsetFor(renderNode, Building_AnimationBed.HeldPawnDrawParms, out var pivot);
-                            offset -= pivot;
-
-                            cameraOffset -= offset;
+                            var offset = renderNode.Worker.OffsetFor(renderNode, Building_AnimationBed.HeldPawnDrawParms, out var pivot);
+                            cameraOffset -= offset - pivot;
                         }
                     }
-                    cameraOffset += portraitIngredient.testCameraOffset;
 
+                    cameraOffset += portraitIngredient.testCameraOffset;
                     TestLog.Error($"cameraOffset : {cameraOffset.x:F5}, {cameraOffset.y:F5}, {cameraOffset.z:F5}");
 
                     var cameraZoom = portraitIngredient.cameraZoom + portraitIngredient.testCameraZoom;
-
-                    Rot4 rotation = Props.pawnAnimationSetting.rotation;
+                    var rotation = Props.pawnAnimationSetting.rotation;
 
                     foreach (var conditionPawnRotation in Props.pawnAnimationSetting.conditionPawnRotations)
                     {
-                        void action() => rotation = conditionPawnRotation.rotation;
-
-                        if (Condition.ExecuteActionIfConditionMatches(pawn, Building_AnimationBed, conditionPawnRotation.condition, action))
+                        if (Condition.ExecuteActionIfConditionMatches(pawn, Building_AnimationBed, conditionPawnRotation.condition,
+                            () => rotation = conditionPawnRotation.rotation))
                         {
                             break;
                         }
@@ -130,21 +128,14 @@ namespace YR_Hentai_Prime_AnimationBed
                     portraitIngredient.iconMat.mainTexture = PortraitsCache.Get(pawn, new Vector2(256, 256), portraitSetting.rotation, cameraOffset, cameraZoom, renderClothes: portraitSetting.renderClothes, renderHeadgear: portraitSetting.renderHeadgear, stylingStation: false, healthStateOverride: PawnHealthState.Mobile);
                 }
 
-                //포트레잇 카메라 오프셋이 바뀌면 폰이 순간 깜빡거리는 문제가 있어서, 그러한 포트레잇이 있을때 용으로 넣어둠.
                 if (pawn.Drawer.renderer.HasAnimation && pawn.Drawer.renderer.CurAnimation != YR_H_P_DefOf.YR_Global_Animation_NoMove)
                 {
-                    if (pawn == HeldPawn)
-                    {
-                        var pos = Building_AnimationBed.DrawPos + Building_AnimationBed.PawnDrawOffset;
-                        Rot4 pawnRotation = Props.pawnAnimationSetting.rotation;
-                        pawn.Drawer.renderer.DynamicDrawPhaseAt(DrawPhase.Draw, pos, pawnRotation, neverAimWeapon: true);
-                    }
-                    else
-                    {
-                        pawn.Drawer.renderer.DynamicDrawPhaseAt(DrawPhase.Draw, pawn.Drawer.DrawPos, pawn.Rotation, neverAimWeapon: true);
-                    }
+                    var pos = (pawn == HeldPawn) ? Building_AnimationBed.DrawPos + Building_AnimationBed.PawnDrawOffset : pawn.Drawer.DrawPos;
+                    var pawnRotation = (pawn == HeldPawn) ? Props.pawnAnimationSetting.rotation : pawn.Rotation;
+                    pawn.Drawer.renderer.DynamicDrawPhaseAt(DrawPhase.Draw, pos, pawnRotation, neverAimWeapon: true);
                 }
 
+                Matrix4x4 matrix = Matrix4x4.TRS(drawPos, Quaternion.AngleAxis(portraitIngredient.angle + portraitIngredient.testAngle, Vector3.up), drawSize);
                 GenDraw.DrawMeshNowOrLater(portraitIngredient.portraitMesh, matrix, portraitIngredient.iconMat, PawnRenderFlags.None.FlagSet(PawnRenderFlags.DrawNow));
             }
         }
@@ -224,7 +215,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class PortraitIngredient
     {
-        public Pawn pawn; 
+        public string label;
+        public Pawn pawn;
         public Material iconMat;
         public Mesh portraitMesh;
 

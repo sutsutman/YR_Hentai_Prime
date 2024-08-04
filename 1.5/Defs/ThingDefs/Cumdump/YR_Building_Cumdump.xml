@@ -46,6 +46,9 @@
 							<li>
 								<hediffDef>YR_Ejaculation_Hediff</hediffDef>
 							</li>
+							<li>
+								<hediffDef>YR_Pee_Hediff</hediffDef>
+							</li>
 						</finishHediffSettings>
 					</heldPawnHediffSetting>
 					<!-- <joyPawnHediffSetting> -->
@@ -155,19 +158,19 @@
 				<pawnAnimationSetting>
 					<pawnAnimationDef>YR_Global_Animation_NoMove</pawnAnimationDef>
 					<!-- 기본 애니메이션 -->
-					<conditonPawnAnimations>
-						<li>
-							<condition>
-								<races>
-									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-								</races>
-								<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								<allMatch>true</allMatch>
-							</condition>
-							<pawnAnimationDef>YR_Global_Animation_BodyChange</pawnAnimationDef>
-						</li>
-					</conditonPawnAnimations>
+					<!-- <conditonPawnAnimations> -->
+					<!-- <li> -->
+					<!-- <condition> -->
+					<!-- <races> -->
+					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li> -->
+					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li> -->
+					<!-- </races> -->
+					<!-- <dummyForJoyIsActive>true</dummyForJoyIsActive> -->
+					<!-- <allMatch>true</allMatch> -->
+					<!-- </condition> -->
+					<!-- <pawnAnimationDef>YR_Global_Animation_BodyChange</pawnAnimationDef> -->
+					<!-- </li> -->
+					<!-- </conditonPawnAnimations> -->
 					<offset>(0,1,0.1)</offset>
 					<conditonPawnOffsets>
 						<li>
@@ -181,28 +184,6 @@
 					<li>
 						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
-						<conditionBedAnimationDefs>
-							<li>
-								<condition>
-									<races>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-									</races>
-								</condition>
-								<!-- <bedAnimationDef>YR_EnjoyingArmpit_Body_Yuran_Normal</bedAnimationDef> -->
-							</li>
-							<!-- <li> -->
-							<!-- <condition> -->
-							<!-- <races> -->
-							<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li> -->
-							<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li> -->
-							<!-- </races> -->
-							<!-- <dummyForJoyIsActive>true</dummyForJoyIsActive> -->
-							<!-- <allMatch>true</allMatch> -->
-							<!-- </condition> -->
-							<!-- <bedAnimationDef>YR_EnjoyingArmpit_Body_Yuran_Enjoy</bedAnimationDef> -->
-							<!-- </li> -->
-						</conditionBedAnimationDefs>
 					</li>
 					<!-- 제일 위 레이어 -->
 					<li>
@@ -221,7 +202,7 @@
 						<bedAnimationDef>YR_GloryHole_Paint_Rating</bedAnimationDef>
 						<offset>(0.3,0.035,1.3)</offset>
 					</li>
-					<!-- 펠라티오 배경 -->
+					<!-- 팡팡놀이 배경 -->
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
@@ -252,6 +233,35 @@
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
+					<!-- 오줌 배경 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+								</condition>
+								<bedAnimationDef>YR_Cumdump_FaceBackGround_BackGround</bedAnimationDef>
+								<offset>(0,1.0,1.5)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+								</condition>
+								<bedAnimationDef>YR_Cumdump_FaceBackGround_Front</bedAnimationDef>
+								<offset>(0,2.0,1.5)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
 					<!-- 꼬추 -->
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
@@ -261,6 +271,17 @@
 									<dummyForJoyIsActive>true</dummyForJoyIsActive>
 								</condition>
 								<bedAnimationDef>YR_GloryHole_Penis</bedAnimationDef>
+							</li>
+							<!-- 오줌 -->
+							<li>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Penis</bedAnimationDef>
+								<offset>(-1.5,0.0,0.5)</offset>
+								<drawSize>(2.5, 2.5)</drawSize>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
@@ -333,9 +354,41 @@
 						<conditonPortraitSettings>
 							<li>
 								<portraitSetting>
-									<offset>(1.5,2.0,1)</offset>
+									<offset>(0.0, 1.5, 1.5)</offset>
+									<drawSize>(0.8, 0.8)</drawSize>
+									<!-- mask가 같으면 오염 -->
+									<maskPath>Yuran/Things/Building/Furniture/Cumdump/Body/FaceBackGround/Mask</maskPath>
+									<rotation>South</rotation>
+									<cameraOffset>(0.0, -0.1, 0.15)</cameraOffset>
+									<cameraZoom>3.0</cameraZoom>
+									<renderClothes>false</renderClothes>
+									<renderHeadgear>false</renderHeadgear>
+									<portraitMeshGraphicData>
+										<texPath>Yuran/Things/Building/Furniture/Cumdump/Body/FaceBackGround/BackGround</texPath>
+										<graphicClass>Graphic_Single</graphicClass>
+										<drawSize>(2.25, 2.25)</drawSize>
+									</portraitMeshGraphicData>
+								</portraitSetting>									
+								<condition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsActive>false</dummyForJoyIsActive>
+										<allMatch>true</allMatch>
+									</condition>
+							</li>
+						</conditonPortraitSettings>
+					</li>
+					<li>
+						<portraitSetting>
+							<draw>false</draw>
+						</portraitSetting>
+						<conditonPortraitSettings>
+							<li>
+								<portraitSetting>
+									<offset>(1.5,1.5,1)</offset>
 									<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
-									<animationSynchro>false</animationSynchro>
+									<animationSynchro>true</animationSynchro>
 									<drawSize>(0.8,0.8)</drawSize>
 									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
 									<rotation>South</rotation>
@@ -358,12 +411,72 @@
 							</li>
 						</conditonPortraitSettings>
 					</li>
+					<!-- 오줌 때 얼굴 -->
+					<!-- <li> -->
+					<!-- <portraitSetting> -->
+					<!-- <offset>(0,2.0,1.5)</offset> -->
+					<!-- <drawSize>(0.8,0.8)</drawSize> -->
+					<!-- <maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath> -->
+					<!-- <rotation>South</rotation> -->
+					<!-- <cameraOffset>(0.0, -0.1, -0.1)</cameraOffset> -->
+					<!-- <cameraZoom>2</cameraZoom> -->
+					<!-- <renderClothes>false</renderClothes> -->
+					<!-- <renderHeadgear>false</renderHeadgear> -->
+					<!-- <portraitMeshGraphicData> -->
+					<!-- <texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath> -->
+					<!-- <graphicClass>Graphic_Single</graphicClass> -->
+					<!-- <drawSize>(2.25, 2.25)</drawSize> -->
+					<!-- </portraitMeshGraphicData> -->
+					<!-- 사정 헤디프가 있으면서, 팡팡 놀이 상태가 아닐때 표시 -->
+					<!-- <visibleCondition> -->
+					<!-- <hediffDefs> -->
+					<!-- <li>YR_Ejaculation_Hediff</li> -->
+					<!-- </hediffDefs> -->
+					<!-- <dummyForJoyIsActive>false</dummyForJoyIsActive> -->
+					<!-- <allMatch>true</allMatch> -->
+					<!-- </visibleCondition> -->
+					<!-- </portraitSetting> -->
+					<!-- </li> -->
+					<!-- 팡팡 놀이시, 놀이 후 몸통 -->
+					<!-- <li> -->
+					<!-- <portraitSetting> -->
+					<!-- <draw>false</draw> -->
+					<!-- </portraitSetting> -->
+					<!-- <conditonPortraitSettings> -->
+					<!-- <li> -->
+					<!-- <portraitSetting> -->
+					<!-- <label>pangbody</label> -->
+					<!-- <offset>(1.5,2.0,1)</offset> -->
+					<!-- <pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef> -->
+					<!-- <animationSynchro>false</animationSynchro> -->
+					<!-- <drawSize>(0.8,0.8)</drawSize> -->
+					<!-- <maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath> -->
+					<!-- <rotation>South</rotation> -->
+					<!-- <cameraOffset>(0, 0, -0.4)</cameraOffset> -->
+					<!-- <cameraZoom>3.5</cameraZoom> -->
+					<!-- <renderClothes>false</renderClothes> -->
+					<!-- <renderHeadgear>false</renderHeadgear> -->
+					<!-- <portraitMeshGraphicData> -->
+					<!-- <texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath> -->
+					<!-- <graphicClass>Graphic_Single</graphicClass> -->
+					<!-- <drawSize>(2.25, 2.25)</drawSize> -->
+					<!-- </portraitMeshGraphicData> -->
+					<!-- </portraitSetting> -->
+					<!-- <condition> -->
+					<!-- <hediffDefs> -->
+					<!-- <li>YR_Ejaculation_Hediff</li> -->
+					<!-- </hediffDefs> -->
+					<!-- <dummyForJoyIsActive>true</dummyForJoyIsActive> -->
+					<!-- </condition> -->
+					<!-- </li> -->
+					<!-- </conditonPortraitSettings> -->
+					<!-- </li> -->
 				</pawnPortraitSettings>
 				<fillableBarSettings>
 					<li>
 						<condition>
 							<hediffDefs>
-								<li>YR_Ejaculation_Hediff</li>
+								<li>YR_Pee_Hediff</li>
 							</hediffDefs>
 						</condition>
 						<offset>(0,0.04,0)</offset>

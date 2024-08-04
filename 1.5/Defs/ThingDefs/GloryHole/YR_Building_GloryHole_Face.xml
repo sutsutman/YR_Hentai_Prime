@@ -336,57 +336,40 @@
 						</conditionBedAnimationDefs>
 					</li>
 				</bedAnimationList>
-				<!-- <pawnPortraitSettings> -->
-				<!-- <li> -->
-				<!-- <portraitSetting> -->
-				<!-- <offset>(0.0, 2.0, 0.04)</offset> -->
-				<!-- <drawSize>(0.9, 0.9)</drawSize> -->
-				<!-- <maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paper/mask</maskPath> -->
-				<!-- <rotation>South</rotation> -->
-				<!-- <cameraOffset>(0.0, -0.1, -0.1)</cameraOffset> -->
-				<!-- <cameraZoom>0.895</cameraZoom> -->
-				<!-- <renderClothes>false</renderClothes> -->
-				<!-- <renderHeadgear>false</renderHeadgear> -->
-				<!-- <portraitMeshGraphicData> -->
-				<!-- <texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paper/1</texPath> -->
-				<!-- <graphicClass>Graphic_Single</graphicClass> -->
-				<!-- <drawSize>(2.25, 2.25)</drawSize> -->
-				<!-- </portraitMeshGraphicData> -->
-				<!-- </portraitSetting> -->
-				<!-- </li> -->
-				<!-- <li> -->
-				<!-- <portraitSetting> -->
-				<!-- <draw>false</draw> -->
-				<!-- </portraitSetting> -->
-				<!-- <conditonPortraitSettings> -->
-				<!-- <li> -->
-				<!-- <portraitSetting> -->
-				<!-- <offset>(1.5,2.0,1)</offset> -->
-				<!-- <pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef> -->
-				<!-- <animationSynchro>true</animationSynchro> -->
-				<!-- <drawSize>(0.8,0.8)</drawSize> -->
-				<!-- <maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath> -->
-				<!-- <rotation>North</rotation> -->
-				<!-- <cameraOffset>(0, 0, -0.4)</cameraOffset> -->
-				<!-- <cameraZoom>3.5</cameraZoom> -->
-				<!-- <renderClothes>false</renderClothes> -->
-				<!-- <renderHeadgear>false</renderHeadgear> -->
-				<!-- <portraitMeshGraphicData> -->
-				<!-- <texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath> -->
-				<!-- <graphicClass>Graphic_Single</graphicClass> -->
-				<!-- <drawSize>(2.25, 2.25)</drawSize> -->
-				<!-- </portraitMeshGraphicData> -->
-				<!-- </portraitSetting> -->
-				<!-- <condition> -->
-				<!-- <hediffDefs> -->
-				<!-- <li>YR_Ejaculation_Hediff</li> -->
-				<!-- </hediffDefs> -->
-				<!-- <dummyForJoyIsActive>true</dummyForJoyIsActive> -->
-				<!-- </condition> -->
-				<!-- </li> -->
-				<!-- </conditonPortraitSettings> -->
-				<!-- </li> -->
-				<!-- </pawnPortraitSettings> -->
+				<pawnPortraitSettings>
+					<li>
+						<portraitSetting>
+							<draw>false</draw>
+						</portraitSetting>
+						<conditonPortraitSettings>
+							<li>
+								<portraitSetting>
+									<offset>(1.5,2.0,1)</offset>
+									<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+									<animationSynchro>true</animationSynchro>
+									<drawSize>(0.8,0.8)</drawSize>
+									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
+									<rotation>South</rotation>
+									<cameraOffset>(0, 0, -0.4)</cameraOffset>
+									<cameraZoom>3.5</cameraZoom>
+									<renderClothes>false</renderClothes>
+									<renderHeadgear>false</renderHeadgear>
+									<portraitMeshGraphicData>
+										<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath>
+										<graphicClass>Graphic_Single</graphicClass>
+										<drawSize>(2.25, 2.25)</drawSize>
+									</portraitMeshGraphicData>
+								</portraitSetting>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+							</li>
+						</conditonPortraitSettings>
+					</li>
+				</pawnPortraitSettings>
 			</li>
 		</comps>
 	</ThingDef>

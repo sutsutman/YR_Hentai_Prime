@@ -124,7 +124,7 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 if (t.HasThing && t.Thing.TryGetComp(out CompAnimationBed comp) && comp.HeldPawn == null)
                 {
-                    if(!Condition.Match((Pawn)victim, (Building_AnimationBed)t.Thing,comp.Props.condition,out _))
+                    if (!Condition.Match((Pawn)victim, (Building_AnimationBed)t.Thing, comp.Props.condition, out _))
                     {
                         return false;
                     }

@@ -15,6 +15,11 @@
 				<addedHediffDefs>
 					<li>YR_MilkingMachine_DisableNeed</li>
 				</addedHediffDefs>
+				<condition>
+					<genders>
+						<li>Female</li>
+					</genders>
+				</condition>
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
 				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
@@ -288,8 +293,8 @@
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 									</races>
 								</condition>
-								<offset>(0,0,-0.1)</offset>
-								<drawSize>(-0.2,-0.4)</drawSize>
+								<!-- <offset>(0,0,-0.1)</offset> -->
+								<!-- <drawSize>(-0.2,-0.4)</drawSize> -->
 								<bedAnimationDef>YR_GeneratorPod_LegTentacle</bedAnimationDef>
 							</li>
 							<li>
@@ -309,8 +314,8 @@
 									</neverBodyTypeDefs>
 									<allMatch>true</allMatch>
 								</condition>
-								<offset>(0,0,-0.1)</offset>
-								<drawSize>(-0.2,-0.4)</drawSize>
+								<!-- <offset>(0,0,-0.1)</offset> -->
+								<!-- <drawSize>(-0.2,-0.4)</drawSize> -->
 								<bedAnimationDef>YR_GeneratorPod_LegTentacle</bedAnimationDef>
 							</li>
 							<li>
@@ -330,8 +335,8 @@
 									</bodyTypeDefs>
 									<allMatch>true</allMatch>
 								</condition>
-								<offset>(0,0,-0.11)</offset>
-								<drawSize>(-0.2,-0.2)</drawSize>
+								<!-- <offset>(0,0,-0.11)</offset> -->
+								<!-- <drawSize>(-0.2,-0.2)</drawSize> -->
 								<bedAnimationDef>YR_GeneratorPod_LegTentacle</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>

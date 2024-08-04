@@ -18,8 +18,25 @@
 		<defName>YR_Ejaculation_Hediff</defName>
 		<label>YR_Ejaculation_Hediff</label>
 		<description>YR_Ejaculation_Hediff</description>
-		<maxSeverity>0.1</maxSeverity>
-		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>0.2</maxSeverity>
+		<initialSeverity>0.2</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-25</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_BedAnimation">
+				<postRemoved>true</postRemoved>
+			</li>
+		</comps>
+	</HediffDef>
+		<!--오줌-->
+	<HediffDef ParentName="YR_UnvisibleHediff_Base">
+		<defName>YR_Pee_Hediff</defName>
+		<label>YR_Pee_Hediff</label>
+		<description>YR_Pee_Hediff</description>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-50</severityPerDay>
