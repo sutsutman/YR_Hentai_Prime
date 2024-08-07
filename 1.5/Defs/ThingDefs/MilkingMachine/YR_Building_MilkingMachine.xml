@@ -462,6 +462,7 @@
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
+					<!-- 유란 얼굴 -->
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>

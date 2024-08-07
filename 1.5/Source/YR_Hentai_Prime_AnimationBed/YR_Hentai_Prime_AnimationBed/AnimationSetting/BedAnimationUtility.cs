@@ -11,8 +11,6 @@ namespace YR_Hentai_Prime_AnimationBed
         public static bool MakeBedAnimation(Building_AnimationBed building_AnimationBed)
         {
 
-            MakeFillableBar(building_AnimationBed);
-
             Pawn HeldPawn = building_AnimationBed.HeldPawn;
 
             if (building_AnimationBed.AnimationSettingComp == null || HeldPawn == null || HeldPawn.Drawer.renderer.renderTree.rootNode == null)
@@ -25,7 +23,6 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 return true;
             }
-
             TestLog.Error($"{HeldPawn.LabelShort} : MakeBedAnimation Start");
             building_AnimationBed.AnimationSettingComp.needMakeGraphics = false; // 필요성 초기화
             building_AnimationBed.AnimationSettingComp.bedAnimationSettingAndTicks = new List<BedAnimationSettingAndTick>();
@@ -77,6 +74,12 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             TestLog.Error("+++Finish Check bedAnimationList+++");
+
+            TestLog.Error("###Make Portrait and FillableBar###");
+            MakePortrait(building_AnimationBed);
+            MakeFillableBar(building_AnimationBed);
+            TestLog.Error("###Finish Make Portrait and FillableBar###");
+
             TestLog.Error("=============================");
 
             return true;

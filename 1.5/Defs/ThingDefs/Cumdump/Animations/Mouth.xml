@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Cumdump_Mouth_Yuran</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>false</setPawnColor>
+		<!-- <logCurrentOffset>true</logCurrentOffset> -->
+		<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/5_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>35</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/6_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Cumdump_Mouth_Yuran_Portrait</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<setPawnColor>false</setPawnColor>
+		<!-- <logCurrentOffset>true</logCurrentOffset> -->
+		<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3.25, 3.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/2_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3.25, 3.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/3_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3.25, 3.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/4_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3.25, 3.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/5_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3.25, 3.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>35</tick>
+				<offset>(0.0,0.06,0.26)</offset>
+				<graphicData>
+					<texPath>Yuran/Yuranlike/Addon/MilkingMachine/Mouth/6_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3.25, 3.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

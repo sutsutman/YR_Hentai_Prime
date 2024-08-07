@@ -180,12 +180,11 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     BedAnimationUtility.SetAnimation(this);
 
-                    BedAnimationUtility.MakePortrait(this);
-                    //if (tickForPortrait <= 0)
-                    //{
-                    //    tickForPortrait = 1;
-                    //    BedAnimationUtility.MakePortrait(this);
-                    //}
+                    if (tickForPortrait <= 0)
+                    {
+                        tickForPortrait = 1000;
+                        BedAnimationUtility.MakePortrait(this);
+                    }
                     tempAnimationTick = HeldPawn.Drawer.renderer.renderTree.AnimationTick;
 
                     if (HeldPawn.Drawer.renderer.HasAnimation)

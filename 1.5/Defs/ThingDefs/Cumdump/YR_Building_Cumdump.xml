@@ -279,9 +279,44 @@
 										<li>YR_Ejaculation_Hediff</li>
 									</hediffDefs>
 								</condition>
-								<bedAnimationDef>YR_GloryHole_Penis</bedAnimationDef>
-								<offset>(-1.5,0.0,0.5)</offset>
-								<drawSize>(2.5, 2.5)</drawSize>
+								<bedAnimationDef>YR_GloryHole_Penis_Full</bedAnimationDef>
+								<offset>(-1.5,0.0,0.0)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 입 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+								</condition>
+								<bedAnimationDef>YR_Cumdump_Mouth_Yuran</bedAnimationDef>
+								<offset>(0.0,0.01,-0.155)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 입(포트레잇) -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+									<allMatch>true</allMatch>
+								</condition>
+								<bedAnimationDef>YR_Cumdump_Mouth_Yuran_Portrait</bedAnimationDef>
+								<offset>(0.0,1.45,1.3)</offset>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>

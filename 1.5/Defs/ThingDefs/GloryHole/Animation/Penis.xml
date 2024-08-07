@@ -63,4 +63,22 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Penis_Full</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchrotoDummyForJoyAnimation>true</animationSynchrotoDummyForJoyAnimation>
+		<logCurrentOffset>false</logCurrentOffset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/South/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 </Defs>
