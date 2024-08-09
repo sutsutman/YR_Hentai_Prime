@@ -658,7 +658,7 @@
 										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
 									</races>
 								</condition>
-								<offset>(-0.02,0,-0.01)</offset>
+								<offset>(0.02,0,-0.01)</offset>
 								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
