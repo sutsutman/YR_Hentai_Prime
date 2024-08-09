@@ -102,7 +102,7 @@
 									<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
 								</races>
 							</condition>
-							<offset>(0,0,0.1812)</offset>
+							<offset>(0,0,0.192)</offset>
 						</li>
 					</conditonPawnOffsets>
 				</pawnAnimationSetting>
@@ -718,6 +718,16 @@
 									<allMatch>true</allMatch>
 								</condition>
 								<bedAnimationDef>YR_Milking_Dildo_Yuran_PowerB</bedAnimationDef>
+							</li>
+							<!-- Dragonian -->
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
+									</races>
+								</condition>
+								<bedAnimationDef>YR_Milking_Dildo</bedAnimationDef>
+								<offset>(0,0,0.014)</offset>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
