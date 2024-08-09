@@ -651,8 +651,7 @@
 								<offset>(0.04,0,-0.14)</offset>
 								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
 							</li>
-						</conditionBedAnimationDefs>
-						<!-- Dragonian -->
+							<!-- Dragonian -->
 							<li>
 								<condition>
 									<races>
@@ -662,6 +661,7 @@
 								<offset>(-0.02,0,-0.01)</offset>
 								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
 							</li>
+						</conditionBedAnimationDefs>
 					</li>
 					<!-- 딜도 -->
 					<li>
