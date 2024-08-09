@@ -56,6 +56,8 @@
 									<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
 									<!-- Maru -->
 									<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+									<!-- Dragonian -->
+									<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
 								</races>
 							</condition>
 							<pawnAnimationDef>YR_Global_Animation_BodyChange_Sound</pawnAnimationDef>
@@ -88,11 +90,19 @@
 						<li>
 							<condition>
 								<races>
-									
 									<li MayRequire="VAMV.MaruRaceMod">Maru</li>
 								</races>
 							</condition>
 							<offset>(0,0,0.075)</offset>
+						</li>
+						<!-- Dragonian -->
+						<li>
+							<condition>
+								<races>
+									<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
+								</races>
+							</condition>
+							<offset>(0,0,-0.07)</offset>
 						</li>
 					</conditonPawnOffsets>
 				</pawnAnimationSetting>
@@ -460,9 +470,17 @@
 								</condition>
 								<bedAnimationDef>YR_Milking_Body_Maru</bedAnimationDef>
 							</li>
+							<!-- Dragonian -->
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
+									</races>
+								</condition>
+								<bedAnimationDef>YR_Milking_Body_Dragonian</bedAnimationDef>
+							</li>
 						</conditionBedAnimationDefs>
 					</li>
-					<!-- 유란 얼굴 -->
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
@@ -568,6 +586,16 @@
 								<offset>(-0.04,0,-0.14)</offset>
 								<bedAnimationDef>YR_Milking_Line_R</bedAnimationDef>
 							</li>
+							<!-- Dragonian -->
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
+									</races>
+								</condition>
+								<offset>(-0.02,0,-0.01)</offset>
+								<bedAnimationDef>YR_Milking_Line_R</bedAnimationDef>
+							</li>
 						</conditionBedAnimationDefs>
 					</li>
 					<li>
@@ -624,6 +652,16 @@
 								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
+						<!-- Dragonian -->
+							<li>
+								<condition>
+									<races>
+										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
+									</races>
+								</condition>
+								<offset>(-0.02,0,-0.01)</offset>
+								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
+							</li>
 					</li>
 					<!-- 딜도 -->
 					<li>
@@ -1006,22 +1044,31 @@
 				<thingToSpawn>Milk</thingToSpawn>
 				<spawnCount>20</spawnCount>
 				<conditionSpawnThings>
-					<li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">
 						<condition>
 							<races>
-								<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+								<li>Yuran_Race</li>
 							</races>
 						</condition>
 						<thingToSpawn>YR_BreastMilk</thingToSpawn>
 						<spawnCount>20</spawnCount>
 					</li>
-					<li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">
 						<condition>
 							<races>
-								<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+								<li>Yuran_Race_Miko</li>
 							</races>
 						</condition>
 						<thingToSpawn>YR_BreastMilk</thingToSpawn>
+						<spawnCount>40</spawnCount>
+					</li>
+					<li MayRequire="RooAndGloomy.DragonianRaceMod">
+						<condition>
+							<races>
+								<li>Dragonian_Race</li>
+							</races>
+						</condition>
+						<thingToSpawn>DragonianMilk</thingToSpawn>
 						<spawnCount>40</spawnCount>
 					</li>
 					<li MayRequire="bep.mofy.twfiaclr">
