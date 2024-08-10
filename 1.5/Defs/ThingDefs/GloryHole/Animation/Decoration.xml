@@ -206,4 +206,19 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 오크통 전면 레이어 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Cask</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,0.1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Cask/Texture</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(3,3)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 </Defs>

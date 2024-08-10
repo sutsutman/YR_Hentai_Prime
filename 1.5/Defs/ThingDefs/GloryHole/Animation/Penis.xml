@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- 일반 삽입(북) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_GloryHole_Penis</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
@@ -63,7 +64,8 @@
 			</li>
 		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 일반 풀(북) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_GloryHole_Penis_Full</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
@@ -75,6 +77,181 @@
 				<offset>(1.5,2.01,1.3)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/South/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 일반 트리밍(북) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Penis_Triming</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchrotoDummyForJoyAnimation>true</animationSynchrotoDummyForJoyAnimation>
+		<logCurrentOffset>false</logCurrentOffset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/South/Normal/Triming</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 일반 삽입(동) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Penis_East</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchrotoDummyForJoyAnimation>false</animationSynchrotoDummyForJoyAnimation>
+		<logCurrentOffset>false</logCurrentOffset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>60</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 일반 풀(동) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Penis_Full_East</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchrotoDummyForJoyAnimation>false</animationSynchrotoDummyForJoyAnimation>
+		<logCurrentOffset>false</logCurrentOffset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 일반 풀 삽입(동) -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_GloryHole_Penis_Full_East_Piston</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchrotoDummyForJoyAnimation>false</animationSynchrotoDummyForJoyAnimation>
+		<logCurrentOffset>false</logCurrentOffset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(1.5,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(1.52,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(1.54,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(1.6,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<offset>(1.56,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(1.54,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/Full</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(5, 5)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>60</tick>
+				<offset>(1.52,2.01,1.3)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Penis/East/Normal/Full</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
 					<drawSize>(5, 5)</drawSize>
 				</graphicData>

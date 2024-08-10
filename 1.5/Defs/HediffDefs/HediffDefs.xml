@@ -33,17 +33,36 @@
 		<!--오줌-->
 	<HediffDef ParentName="YR_UnvisibleHediff_Base">
 		<defName>YR_Pee_Hediff</defName>
-		<label>YR_Pee_Hediff</label>
-		<description>YR_Pee_Hediff</description>
-		<maxSeverity>1</maxSeverity>
-		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>steeped in warm love</label>
+		<description>Steeped in warm urine filled with love, and in vaginal lubricatio or semen that's so hot it could cause burns. Although they may initially feel discomfort, with continuous steeping, they will cling to this warmth.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>2</maxSeverity>
+		<initialSeverity>0.0075</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+			</li>
+		</stages>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-50</severityPerDay>
+				<severityPerDay>-0.06</severityPerDay>
 				<showHoursToRecover>true</showHoursToRecover>
 			</li>
-			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_BedAnimation">
-				<postRemoved>true</postRemoved>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Disciplined">
+				<!--체크주기-->
+				<ticks>50</ticks>
+				<gainTraits>
+					<li>
+						<def>Masochist</def>
+						<degree>0</degree>
+					</li>
+				</gainTraits>
+				<addTraitSeverity>0.99</addTraitSeverity>
+				<removeHediffPostAddTrait>false</removeHediffPostAddTrait>
+				<removeUnrecruitableSeverity>1.99</removeUnrecruitableSeverity>
+				<removeHediffPostRemoveUnrecruitable>false</removeHediffPostRemoveUnrecruitable>
 			</li>
 		</comps>
 	</HediffDef>

@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--엉덩이-->
+	<ThingDef ParentName="YR_AnimationBedBase">
+		<defName>YR_Building_GloryHole_Cask</defName>
+		<label>glory hole(cask)</label>
+		<description>Bondage apparatus for the lewd whom voracious for cum or love juice, but too shy to show themselves.\n\nA tool for the gluttonous mouth-pussies that hungers after every drop of cum down their throat and lustfully licking away pussies for love juice, just to burp crudely after they had their fill... They should be punished for their greed with cocks and pussies.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/GloryHole/Cask/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<uiOrder>100</uiOrder>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<costList>
+			<WoodLog>100</WoodLog>
+		</costList>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
+				<!-- 묶였을 때 부여되는 헤디프 -->
+				<addedHediffDefs>
+					<li>YR_MilkingMachine_DisableNeed</li>
+				</addedHediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
+				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+				<hediffDefs>
+					<li>YR_PowerMode1_Hediff</li>
+					<li>YR_PowerMode2_Hediff</li>
+				</hediffDefs>
+			</li>
+			<!-- 팡팡 놀이 -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
+				<thingDef>YR_DummyForJoy</thingDef>
+				<animationDef>YR_Global_Animation_PanPanPlay_North_Sound</animationDef>
+				<makeHediff>
+					<heldPawnHediffSetting>
+						<finishHediffSettings>
+							<li>
+								<hediffDef>YR_Ejaculation_Hediff</hediffDef>
+							</li>
+						</finishHediffSettings>
+					</heldPawnHediffSetting>
+					<!-- <joyPawnHediffSetting> -->
+					<!-- <startHediffSettings> -->
+					<!-- <li> -->
+					<!-- <hediffDef>YR_PowerMode1_Hediff</hediffDef> -->
+					<!-- <conditionHediffDefs> -->
+					<!-- <li> -->
+					<!-- <hediffDef>YR_PowerMode1_Hediff</hediffDef> -->
+					<!-- <condition/> -->
+					<!-- </li> -->
+					<!-- </conditionHediffDefs> -->
+					<!-- <removeWhenFinish>true</removeWhenFinish> -->
+					<!-- </li> -->
+					<!-- </startHediffSettings> -->
+					<!-- </joyPawnHediffSetting> -->
+				</makeHediff>
+				<makeSound>
+					<!-- 묶인 애를 기준으로 나는 소리 -->
+					<heldPawnSound>
+						<startSoundSettings>
+							<li>
+								<!-- 삽입시 응앙! 하는 소리 -->
+								<soundDefs>
+									<li>OohSound_1</li>
+									<li>OohSound_2</li>
+									<li>OohSound_3</li>
+									<li>OohSound_4</li>
+									<li>OohSound_5</li>
+									<li>OohSound_6</li>
+									<li>OohSound_7</li>
+									<li>OohSound_8</li>
+								</soundDefs>
+								<!-- <conditionSoundSettings> -->
+								<!-- <li> -->
+								<!-- <soundDef/> -->
+								<!-- <condition/> -->
+								<!-- </li> -->
+								<!-- </conditionSoundSettings> -->
+							</li>
+						</startSoundSettings>
+						<randomSoundSettings>
+							<li>
+								<!-- 신음 -->
+								<soundDefs>
+									<li>OohSound_1</li>
+									<li>OohSound_2</li>
+									<li>OohSound_3</li>
+									<li>OohSound_4</li>
+									<li>OohSound_5</li>
+									<li>OohSound_6</li>
+									<li>OohSound_7</li>
+									<li>OohSound_8</li>
+								</soundDefs>
+								<!-- 이 경우 1틱당 0.05프로의 확률로 소리가 남 -->
+								<probability>0.005</probability>
+							</li>
+						</randomSoundSettings>
+						<finishSoundSettings/>
+					</heldPawnSound>
+					<!-- 하는 애를 기준으로 나는 소리 -->
+					<joyPawnSound>
+						<finishSoundSettings>
+							<li>
+								<!-- 사정 소리 -->
+								<soundDefs>
+									<li>EjaculationSound_1</li>
+									<li>EjaculationSound_2</li>
+									<li>EjaculationSound_3</li>
+									<li>EjaculationSound_4</li>
+									<li>EjaculationSound_5</li>
+									<li>EjaculationSound_6</li>
+									<li>EjaculationSound_7</li>
+									<li>EjaculationSound_8</li>
+									<li>EjaculationSound_9</li>
+									<li>EjaculationSound_10</li>
+									<li>EjaculationSound_11</li>
+									<li>EjaculationSound_12</li>
+									<li>EjaculationSound_13</li>
+									<li>EjaculationSound_14</li>
+									<li>EjaculationSound_15</li>
+									<li>EjaculationSound_16</li>
+									<li>EjaculationSound_17</li>
+									<li>EjaculationSound_18</li>
+									<li>EjaculationSound_19</li>
+									<li>EjaculationSound_20</li>
+									<li>EjaculationSound_21</li>
+									<li>EjaculationSound_22</li>
+									<li>EjaculationSound_23</li>
+									<li>EjaculationSound_24</li>
+									<li>EjaculationSound_25</li>
+								</soundDefs>
+							</li>
+						</finishSoundSettings>
+					</joyPawnSound>
+				</makeSound>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
+				<pawnAnimationSetting>
+					<pawnAnimationDef>YR_Global_Animation_BodyChange_NoMove</pawnAnimationDef>
+					<offset>(0,1.0,0.05)</offset>
+					<rotation>South</rotation>
+				</pawnAnimationSetting>
+				<bedAnimationList>
+					<!-- 폰의 바디, 헤드 -->
+					<li>
+						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+					</li>
+					<!-- 오크통 레이어 -->
+					<li>
+						<bedAnimationDef>YR_GloryHole_Cask</bedAnimationDef>
+					</li>
+					<!-- 펠라티오 배경 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_FellatioBackGround_BackGround</bedAnimationDef>
+								<offset>(1.5,0.0,1)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_FellatioBackGround_Front</bedAnimationDef>
+								<offset>(1.5,2.0,1)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 꼬추 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Penis_Full_East_Piston</bedAnimationDef>
+								<offset>(0.3,-0.05,-0.5)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 정액(포트레잇) -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Water_Fella_Portrait_East</bedAnimationDef>
+								<offset>(1.68,2.01,0.79)</offset>
+								<drawSize>(4, 4)</drawSize>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Ejaculation_Out_Portrait_East</bedAnimationDef>
+								<offset>(1.85,2.01,0.75)</offset>
+								<drawSize>(4, 4)</drawSize>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 정액(입가) -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Ejaculation</bedAnimationDef>
+								<offset>(-0.2,0.15,0.3)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Ejaculation_Out</bedAnimationDef>
+								<offset>(0,0.16,0.32)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+				</bedAnimationList>
+				<pawnPortraitSettings>
+					<li>
+						<portraitSetting>
+							<draw>false</draw>
+						</portraitSetting>
+						<conditonPortraitSettings>
+							<li>
+								<portraitSetting>
+									<offset>(1.5,2.0,1)</offset>
+									<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+									<animationSynchro>false</animationSynchro>
+									<drawSize>(0.8,0.8)</drawSize>
+									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask_East</maskPath>
+									<rotation>West</rotation>
+									<cameraOffset>(-0.2, 0, 0.2)</cameraOffset>
+									<cameraZoom>3.5</cameraZoom>
+									<renderClothes>false</renderClothes>
+									<renderHeadgear>false</renderHeadgear>
+									<portraitMeshGraphicData>
+										<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath>
+										<graphicClass>Graphic_Single</graphicClass>
+										<drawSize>(2.25, 2.25)</drawSize>
+									</portraitMeshGraphicData>
+								</portraitSetting>
+								<condition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</condition>
+							</li>
+						</conditonPortraitSettings>
+					</li>
+					<li>
+						<portraitSetting>
+							<draw>false</draw>
+						</portraitSetting>
+						<conditonPortraitSettings>
+							<li>
+								<portraitSetting>
+									<offset>(1.5,2.0,1)</offset>
+									<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+									<animationSynchro>false</animationSynchro>
+									<drawSize>(0.8,0.8)</drawSize>
+									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
+									<rotation>West</rotation>
+									<cameraOffset>(-0.2, 0, 0.2)</cameraOffset>
+									<cameraZoom>3.5</cameraZoom>
+									<renderClothes>false</renderClothes>
+									<renderHeadgear>false</renderHeadgear>
+									<portraitMeshGraphicData>
+										<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath>
+										<graphicClass>Graphic_Single</graphicClass>
+										<drawSize>(2.25, 2.25)</drawSize>
+									</portraitMeshGraphicData>
+								</portraitSetting>
+								<condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+								</condition>
+							</li>
+						</conditonPortraitSettings>
+					</li>
+				</pawnPortraitSettings>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

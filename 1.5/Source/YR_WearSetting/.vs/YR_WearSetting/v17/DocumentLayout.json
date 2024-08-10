@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yuran_rjw_addon\\1.5\\source\\yr_wearsetting\\thingcomp_wearsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|solutionrelative:thingcomp_wearsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\harmony_equipmentutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|solutionrelative:harmony_equipmentutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|YR_WearSetting||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\harmony_jobgiver_optimizeapparel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|solutionrelative:harmony_jobgiver_optimizeapparel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kim06\\AppData\\Local\\Temp\\BNZ.64a3e09214e94a33\\ThingComp_WearSetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\wearsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|solutionrelative:wearsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\wearsettingboolstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DC8EAD5-8487-4761-9C6F-399DA940E056}|YR_WearSetting.csproj|solutionrelative:wearsettingboolstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "YR_WearSetting",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\YR_WearSetting.csproj",
+              "RelativeDocumentMoniker": "YR_WearSetting.csproj",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\YR_WearSetting.csproj",
+              "RelativeToolTip": "YR_WearSetting.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2023-07-06T04:04:40.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ThingComp_WearSetting.cs",
+              "DocumentMoniker": "C:\\Users\\kim06\\AppData\\Local\\Temp\\BNZ.64a3e09214e94a33\\ThingComp_WearSetting.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Users\\kim06\\AppData\\Local\\Temp\\BNZ.64a3e09214e94a33\\ThingComp_WearSetting.cs",
+              "ToolTip": "C:\\Users\\kim06\\AppData\\Local\\Temp\\BNZ.64a3e09214e94a33\\ThingComp_WearSetting.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Users\\kim06\\AppData\\Local\\Temp\\BNZ.64a3e09214e94a33\\ThingComp_WearSetting.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAFsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-07-04T09:04:18.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThingComp_WearSetting.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\ThingComp_WearSetting.cs",
+              "RelativeDocumentMoniker": "ThingComp_WearSetting.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\ThingComp_WearSetting.cs",
+              "RelativeToolTip": "ThingComp_WearSetting.cs",
+              "ViewState": "AQIAAFkBAAAAAAAAAAAAAG8BAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T15:23:00.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Harmony_JobGiver_OptimizeApparel.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\Harmony_JobGiver_OptimizeApparel.cs",
+              "RelativeDocumentMoniker": "Harmony_JobGiver_OptimizeApparel.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\Harmony_JobGiver_OptimizeApparel.cs",
+              "RelativeToolTip": "Harmony_JobGiver_OptimizeApparel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T15:23:00.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Harmony_EquipmentUtility.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\Harmony_EquipmentUtility.cs",
+              "RelativeDocumentMoniker": "Harmony_EquipmentUtility.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\Harmony_EquipmentUtility.cs",
+              "RelativeToolTip": "Harmony_EquipmentUtility.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAIwC0AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T15:23:00.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WearSetting.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\WearSetting.cs",
+              "RelativeDocumentMoniker": "WearSetting.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\WearSetting.cs",
+              "RelativeToolTip": "WearSetting.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAADwvxYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T15:23:00.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WearSettingBoolString.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\WearSettingBoolString.cs",
+              "RelativeDocumentMoniker": "WearSettingBoolString.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Yuran_RJW_Addon\\1.5\\Source\\YR_WearSetting\\WearSettingBoolString.cs",
+              "RelativeToolTip": "WearSettingBoolString.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T15:23:00.422Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

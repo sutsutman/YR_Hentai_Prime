@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_WearSetting.WearSettingDef>
+		<defName>OY_WearSetting_LitF</defName>
+		<targetRaces>
+			<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+			<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+			<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+			<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+			<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+			<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+			<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+			<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+			<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+		</targetRaces>
+		<wearSetting>
+			<li>
+				<wearList>
+					<li>YR_AP_Tentacle</li>
+					<li>YR_AP_Tentacle_Rooted</li>
+					<li>YR_AP_Tentacle_Headgear</li>
+					<li>YR_AP_Tentacle_Headgear_Mask</li>
+					<li>OY_Tentacle_Dagger</li>
+					<li>OY_Tentacle_Bow</li>
+				</wearList>
+				<condition>
+					<bodyTypeDef>
+						<li>Female</li>
+					</bodyTypeDef>
+				</condition>
+				<makeThingCopyHitPoint>false</makeThingCopyHitPoint>
+				<makeApparel>
+					<li>YR_AP_Tentacle</li>
+					<li>YR_AP_Tentacle_Rooted</li>
+					<li>YR_AP_Tentacle_Headgear</li>
+				</makeApparel>
+				<makeApparelDontDrop>
+					<li>YR_AP_Tentacle_Headgear_Mask</li>
+				</makeApparelDontDrop>
+				<makeWeapon>OY_Tentacle_Dagger</makeWeapon>
+				<makeWeaponDontDrop>
+					<li>OY_Tentacle_Dagger</li>
+					<li>OY_Tentacle_Bow</li>
+				</makeWeaponDontDrop>
+				<cantReason>YR_Bote_Setting_CantReason</cantReason>
+				<forceDrop>true</forceDrop>
+				<forceDropMessage>ForceDropMessage</forceDropMessage>
+				<lockApparel>true</lockApparel>
+				<lockApparelMessage>YR_LockApparelMessage</lockApparelMessage>
+				<lockApparelMessageApparels>
+					<li>YR_AP_Tentacle</li>
+				</lockApparelMessageApparels>
+				<lockWeapon>true</lockWeapon>
+				<lockWeaponConsumeThingTipRegion>YR_LockWeaponConsumeThingTipRegion</lockWeaponConsumeThingTipRegion>
+				<lockWeaponTipRegion>YR_LockWeaponTipRegion</lockWeaponTipRegion>
+				<prisonerRemoveWeapon>true</prisonerRemoveWeapon>
+			</li>
+		</wearSetting>
+	</YR_WearSetting.WearSettingDef>
+</Defs>

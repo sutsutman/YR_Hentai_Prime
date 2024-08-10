@@ -3,7 +3,7 @@
 	<!-- 정액 뚝뚝 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_GloryHole_Ejaculation</defName>
-		<label>정액뚝(포트레잇)</label>
+		<label>정액뚝</label>
 		<autoDurationTicksSetting>false</autoDurationTicksSetting>
 		<durationTicks>25</durationTicks>
 		<bedAnimationSettings>

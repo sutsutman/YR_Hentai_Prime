@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_WearSetting.WearSettingDef Name="Tentacle_WearSetting" Abstract="True">
+		<wearSetting>
+			<li>
+				<wearList>
+					<li>YR_AP_Tentacle</li>
+					<li>YR_AP_Tentacle_Rooted</li>
+					<li>YR_AP_Tentacle_Headgear</li>
+					<li>YR_AP_Tentacle_Headgear_Mask</li>
+					<li>YR_Tentacle_Sword</li>
+					<li>YR_Tentacle_BullWhip</li>
+				</wearList>
+				<makeThingCopyHitPoint>false</makeThingCopyHitPoint>
+				<makeApparel>
+					<li>YR_AP_Tentacle</li>
+					<li>YR_AP_Tentacle_Rooted</li>
+					<li>YR_AP_Tentacle_Headgear</li>
+				</makeApparel>
+				<makeApparelDontDrop>
+					<li>YR_AP_Tentacle_Headgear_Mask</li>
+				</makeApparelDontDrop>
+				<makeWeapon>YR_Tentacle_Sword</makeWeapon>
+				<makeWeaponDontDrop>
+					<li>YR_Tentacle_Sword</li>
+					<li>YR_Tentacle_BullWhip</li>
+				</makeWeaponDontDrop>
+				<cantReason>YR_Bote_Setting_CantReason</cantReason>
+				<forceDrop>true</forceDrop>
+				<forceDropMessage>ForceDropMessage</forceDropMessage>
+				<lockApparel>true</lockApparel>
+				<lockApparelMessage>YR_LockApparelMessage</lockApparelMessage>
+				<lockApparelMessageApparels>
+					<li>YR_AP_Tentacle</li>
+				</lockApparelMessageApparels>
+				<lockWeapon>true</lockWeapon>
+				<lockWeaponConsumeThingTipRegion>YR_LockWeaponConsumeThingTipRegion</lockWeaponConsumeThingTipRegion>
+				<lockWeaponTipRegion>YR_LockWeaponTipRegion</lockWeaponTipRegion>
+				<prisonerRemoveWeapon>true</prisonerRemoveWeapon>
+			</li>
+		</wearSetting>
+	</YR_WearSetting.WearSettingDef>
+	<YR_WearSetting.WearSettingDef ParentName="Tentacle_WearSetting">
+		<defName>Alien_Tentacle_Setting</defName>
+		<targetRaces>
+			<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">Mincho_ThingDef</li>
+			<li MayRequire="Roo.AntyRaceMod">Anty</li>
+			<li MayRequire="Nemonian.MY">Alien_Moyo</li>
+			<li MayRequire="miho.fortifiedoutremer">Alien_Miho</li>
+			<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+			<li MayRequire="Millap.AOC">AOC</li>
+			<li MayRequire="Millap.Bori">Alien_SP</li>
+		</targetRaces>
+	</YR_WearSetting.WearSettingDef>
+</Defs>
