@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Research -->
+
+  <YR_TakeVictiomToAnimationBed.label>犠牲者を拘束</YR_TakeVictiomToAnimationBed.label>
+  <YR_TakeVictiomToAnimationBed.verb>拘束</YR_TakeVictiomToAnimationBed.verb>
+  <YR_TakeVictiomToAnimationBed.gerund>を拘束する</YR_TakeVictiomToAnimationBed.gerund>
+
+
+  <!-- Warden -->
+
+  <YR_ReleaseVictim.label>犠牲者を解放</YR_ReleaseVictim.label>
+  <YR_ReleaseVictim.verb>解放</YR_ReleaseVictim.verb>
+  <YR_ReleaseVictim.gerund>を解放する</YR_ReleaseVictim.gerund>
+
+  <YR_TransferVictim.label>犠牲者を移送</YR_TransferVictim.label>
+  <YR_TransferVictim.verb>移送</YR_TransferVictim.verb>
+  <YR_TransferVictim.gerund>を移送する</YR_TransferVictim.gerund>
+
+  <YR_ExecuteVictim.label>犠牲者を処刑</YR_ExecuteVictim.label>
+  <YR_ExecuteVictim.verb>処刑</YR_ExecuteVictim.verb>
+  <YR_ExecuteVictim.gerund>を処刑する</YR_ExecuteVictim.gerund>
+
+  <YR_DoctorTendTovictims.label>被害者を看病</YR_DoctorTendTovictims.label>
+  <YR_DoctorTendTovictims.verb>看病</YR_DoctorTendTovictims.verb>
+  <YR_DoctorTendTovictims.gerund>を看病する</YR_DoctorTendTovictims.gerund>
+
+
+</LanguageData>

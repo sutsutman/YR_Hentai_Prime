@@ -30,7 +30,7 @@
 			</li>
 		</comps>
 	</HediffDef>
-		<!--오줌-->
+	<!--오줌-->
 	<HediffDef ParentName="YR_UnvisibleHediff_Base">
 		<defName>YR_Pee_Hediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -41,9 +41,7 @@
 		<maxSeverity>2</maxSeverity>
 		<initialSeverity>0.0075</initialSeverity>
 		<isBad>false</isBad>
-		<stages>
-			<li>
-			</li>
+		<stages Inherit="False">
 		</stages>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
@@ -66,6 +64,39 @@
 			</li>
 		</comps>
 	</HediffDef>
+	<ThoughtDef>
+		<defName>YR_Pee_Hediff</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_Pee_Hediff</hediff>
+		<nullifyingTraits>
+			<li>Masochist</li>
+		</nullifyingTraits>
+		<neverNullifyIfAnyTrait>
+			<li>Wimp</li>
+		</neverNullifyIfAnyTrait>
+		<stages>
+			<li>
+				<label>steeped in warm love</label>
+				<description>I hate it... It smells and I feel bad... My entire body is steeped in pee...</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>YR_Pee_Hediff_Masochist</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_Pee_Hediff</hediff>
+		<requiredTraits>
+			<li>Masochist</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>steeped in warm love (masochist)</label>
+				<description>Ah...♡ Such an overwhelming love for a toilet like me... Please drown me quickly in this warm affection...♡</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
 	<!--일반 꼬추-->
 	<HediffDef ParentName="YR_UnvisibleHediff_Base">
 		<defName>YR_Penis_Normal_Hediff</defName>

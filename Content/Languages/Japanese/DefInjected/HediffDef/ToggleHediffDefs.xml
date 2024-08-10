@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 파워모드 -->
+
+  <YR_PowerMode1_Hediff.label>パワーモード1用Hediff</YR_PowerMode1_Hediff.label>
+  <YR_PowerMode1_Hediff.description>切替Hediff</YR_PowerMode1_Hediff.description>
+
+  <YR_PowerMode2_Hediff.label>パワーモード2用Hediff</YR_PowerMode2_Hediff.label>
+  <YR_PowerMode2_Hediff.description>切替Hediff</YR_PowerMode2_Hediff.description>
+
+
+</LanguageData>

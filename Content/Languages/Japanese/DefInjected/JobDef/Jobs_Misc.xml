@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_CarryToAnimationBed.reportString>TargetBをTargetAに運んでいる.</YR_CarryToAnimationBed.reportString>
+  <YR_TransferBetweenAnimationBeds.reportString>TargetCを別の収容場所に移している.</YR_TransferBetweenAnimationBeds.reportString>
+  <YR_CarryToAnimationBedAlreadyHolding.reportString>TargetBをTargetAに運んでいる.</YR_CarryToAnimationBedAlreadyHolding.reportString>
+  <YR_ReleaseVictim.reportString>TargetBを解放している.</YR_ReleaseVictim.reportString>
+  <YR_TendVictim.reportString>TargetAを看病している.</YR_TendVictim.reportString>
+  <YR_ExecuteVictim.reportString>TargetAを処刑している.</YR_ExecuteVictim.reportString>
+
+
+</LanguageData>

@@ -294,6 +294,10 @@
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
 									</races>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+									<allMatch>true</allMatch>
 								</condition>
 								<bedAnimationDef>YR_Cumdump_Mouth_Yuran</bedAnimationDef>
 								<offset>(0.0,0.01,-0.155)</offset>

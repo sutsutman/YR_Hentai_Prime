@@ -38,6 +38,7 @@
 			<li>Indoors</li>
 			<li>RoomSize</li>
 			<li>DrugDesire</li>
+			<li>Food</li>
 		</disablesNeeds>
 	</HediffDef>
 	<DesignationCategoryDef>

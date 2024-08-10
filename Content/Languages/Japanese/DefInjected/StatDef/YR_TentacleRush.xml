@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<LanguageData>
-
-  <YR_TentacleRushSkipRadius.label>淫閃斬最大距離</YR_TentacleRushSkipRadius.label>
-  <YR_TentacleRushSkipRadius.description>淫閃斬で移動することができる最大距離です.</YR_TentacleRushSkipRadius.description>
-  <YR_TentacleRushSkipRadius.formatString>{0}セル</YR_TentacleRushSkipRadius.formatString>
-
-
-</LanguageData>

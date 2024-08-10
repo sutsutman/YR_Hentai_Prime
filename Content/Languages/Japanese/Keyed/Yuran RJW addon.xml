@@ -56,7 +56,7 @@
   <YR_AddCorpseCommandDesc>死体を1体分捧げます.</YR_AddCorpseCommandDesc>
   <YR_MaxCorpseCommandLabel>Dev:死体を最大まで捧げる</YR_MaxCorpseCommandLabel>
   <YR_MaxCorpseCommandDesc>死体を最大まで捧げます.</YR_MaxCorpseCommandDesc>
-  <YR_RJW_Mod>Yuran&#160;RJW&#160;Addon&#160;Mod</YR_RJW_Mod>
+  <YR_RJW_Mod>Yuran RJW Addon Mod</YR_RJW_Mod>
   <YR_Cooldown>{0}秒後に使用できます.</YR_Cooldown>
   <FaceCellCommandLabel>体の向きを変える</FaceCellCommandLabel>
   <FaceCellCommandDesc>淫閃斬使用時に,意図した方向を向くか,元の方向を維持するかを決めることができます.</FaceCellCommandDesc>
@@ -82,8 +82,8 @@
   <YR_Alert_PawnDownButMaggotCantTouch_Desc>これらの入植者,囚人,奴隷は地上では無力ですが,女王淫蟲は彼らを犯すことができませんでした.\n\n{0}\nもし,足元に建築物があったり,囚人であっても監獄でなく,周囲8タイル以内にベッドがあったり,もしくは監獄にいる入植者であっても,周囲8タイル以内にベッドがあれば,女王淫蟲はそれらを犯すことができません.</YR_Alert_PawnDownButMaggotCantTouch_Desc>
   <YR_BoundPawnLabel_X>ポーンが拘束されているとき,足下に表示されている名前のx座標を変更する：{0}</YR_BoundPawnLabel_X>
   <YR_BoundPawnLabel_Y>ポーンが拘束されているとき,足下に表示されている名前のy座標を変更する：{0}</YR_BoundPawnLabel_Y>
-  <YR_ForcePlay>パンパン遊び</YR_ForcePlay>
-  <YR_CantUseDummy>何かがその場所にあるため,パンパン遊びできません.</YR_CantUseDummy>
+  <YR_ForcePlay>楽しむ</YR_ForcePlay>
+  <YR_CantUseDummy>何かがその場所にあるため,楽しむことができません.</YR_CantUseDummy>
   <YR_Warp_Label>排泄</YR_Warp_Label>
   <YR_Warp_Desc>大王淫蟲が対象物を呑み込んだあと,それを肛門から指定した場所に排泄します.</YR_Warp_Desc>
   <YR_DestroySelfAndPawn_Label>大王淫蟲に魅入られた：{1_labelShort}</YR_DestroySelfAndPawn_Label>

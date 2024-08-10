@@ -155,6 +155,27 @@
 					<li>
 						<bedAnimationDef>YR_GloryHole_Cask</bedAnimationDef>
 					</li>
+					<!-- 장식 -->
+					<li>
+						<bedAnimationDef>YR_GloryHole_SignBoard</bedAnimationDef>
+						<offset>(-0.3,0.0,-0.3)</offset>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_Paint_PlayWhat</bedAnimationDef>
+						<offset>(-0.3,0.0,-0.3)</offset>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_Paint_Rating</bedAnimationDef>
+						<offset>(-0.3,0.0,-0.3)</offset>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_WoodenPail</bedAnimationDef>
+						<offset>(0.3,0.0,-0.3)</offset>
+					</li>
+					<li>
+						<bedAnimationDef>YR_GloryHole_Stool</bedAnimationDef>
+						<offset>(0.0,0.05,-0.4)</offset>
+					</li>
 					<!-- 펠라티오 배경 -->
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
@@ -239,7 +260,7 @@
 									</hediffDefs>
 								</condition>
 								<bedAnimationDef>YR_GloryHole_Ejaculation</bedAnimationDef>
-								<offset>(-0.2,0.15,0.3)</offset>
+								<offset>(0,0.15,0.3)</offset>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>

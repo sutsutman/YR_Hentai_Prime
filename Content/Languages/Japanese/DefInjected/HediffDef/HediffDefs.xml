@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 뷰르릇 -->
+
+  <YR_Ejaculation_Hediff.label>射精用Hediff</YR_Ejaculation_Hediff.label>
+  <YR_Ejaculation_Hediff.description>射精用Hediff</YR_Ejaculation_Hediff.description>
+
+
+  <!-- 오줌 -->
+
+  <YR_Pee_Hediff.label>おしっこ用Hediff</YR_Pee_Hediff.label>
+  <YR_Pee_Hediff.description>おしっこ用Hediff</YR_Pee_Hediff.description>
+
+
+  <!-- 일반 꼬추 -->
+
+  <YR_Penis_Normal_Hediff.label>普チン用Hediff</YR_Penis_Normal_Hediff.label>
+  <YR_Penis_Normal_Hediff.description>普チン用Hediff</YR_Penis_Normal_Hediff.description>
+
+
+</LanguageData>
