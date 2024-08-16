@@ -468,6 +468,37 @@
 			</li>
 		</animationParts>
 	</AnimationDef>
+	<!-- 신체 변환(아예 안보임) -->
+	<AnimationDef>
+		<defName>YR_Global_Animation_BodyChange_Invisible</defName>
+		<durationTicks>60</durationTicks>
+		<animationParts>
+			<li>
+				<key>Head</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,-180,0)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
+			<li>
+				<key>Body</key>
+				<value>
+					<workerClass>AnimationWorker_Keyframes</workerClass>
+					<keyframes>
+						<li>
+							<tick>0</tick>
+							<offset>(0.0,-180,0)</offset>
+						</li>
+					</keyframes>
+				</value>
+			</li>
+		</animationParts>
+	</AnimationDef>
 	<!-- 폰 바디 애니메이션 -->
 	<!-- 공용(더미) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>

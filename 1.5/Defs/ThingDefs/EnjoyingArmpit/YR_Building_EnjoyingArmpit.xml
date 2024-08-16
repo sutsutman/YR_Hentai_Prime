@@ -166,7 +166,7 @@
 						</conditionBedAnimationDefs>
 					</li>
 					<!-- 장식 -->
-										<li>
+					<li>
 						<bedAnimationDef>YR_GloryHole_Stool</bedAnimationDef>
 						<offset>(0.0,0.0,-0.4)</offset>
 					</li>
@@ -185,7 +185,11 @@
 									<drawSize>(0.8,0.8)</drawSize>
 									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
 									<rotation>West</rotation>
-									<cameraOffset>(-0.23, 0, 0.05)</cameraOffset>
+									<conditionCameraOffsets>
+										<li>
+											<cameraOffset>(-0.23, 0, 0.05)</cameraOffset>
+										</li>
+									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>
 									<renderClothes>false</renderClothes>
 									<renderHeadgear>false</renderHeadgear>

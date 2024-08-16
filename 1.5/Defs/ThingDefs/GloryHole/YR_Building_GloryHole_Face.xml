@@ -267,11 +267,23 @@
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
+																			<li MayRequire="Roo.AntyRaceMod">
+								<condition>
+									<races>
+										<li>Anty</li>
+									</races>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									<allMatch>true</allMatch>
+									<checkPawnIsJoyPawn>true</checkPawnIsJoyPawn>
+									<Break>true</Break>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Penis_Insect</bedAnimationDef>
+							</li>
 							<li>
 								<condition>
 									<dummyForJoyIsActive>true</dummyForJoyIsActive>
 								</condition>
-								<bedAnimationDef>YR_GloryHole_Penis</bedAnimationDef>
+								<bedAnimationDef>YR_GloryHole_Penis_Normal</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
@@ -350,7 +362,11 @@
 									<drawSize>(0.8,0.8)</drawSize>
 									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
 									<rotation>South</rotation>
-									<cameraOffset>(0, 0, -0.4)</cameraOffset>
+									<conditionCameraOffsets>
+										<li>
+											<cameraOffset>(0, 0, -0.4)</cameraOffset>
+										</li>
+									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>
 									<renderClothes>false</renderClothes>
 									<renderHeadgear>false</renderHeadgear>

@@ -2,7 +2,7 @@
 <Defs>
 	<!-- 일반 삽입(북) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<defName>YR_GloryHole_Penis</defName>
+		<defName>YR_GloryHole_Penis_Normal</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
 		<animationSynchrotoDummyForJoyAnimation>true</animationSynchrotoDummyForJoyAnimation>
@@ -66,7 +66,7 @@
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 	<!-- 일반 풀(북) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<defName>YR_GloryHole_Penis_Full</defName>
+		<defName>YR_GloryHole_Penis_Normal_Full</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
 		<animationSynchrotoDummyForJoyAnimation>true</animationSynchrotoDummyForJoyAnimation>
@@ -85,7 +85,7 @@
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 	<!-- 일반 트리밍(북) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<defName>YR_GloryHole_Penis_Triming</defName>
+		<defName>YR_GloryHole_Penis_Normal_Triming</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
 		<animationSynchrotoDummyForJoyAnimation>true</animationSynchrotoDummyForJoyAnimation>
@@ -104,7 +104,7 @@
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 	<!-- 일반 삽입(동) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<defName>YR_GloryHole_Penis_East</defName>
+		<defName>YR_GloryHole_Penis_Normal_East</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
 		<animationSynchrotoDummyForJoyAnimation>false</animationSynchrotoDummyForJoyAnimation>
@@ -168,7 +168,7 @@
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 	<!-- 일반 풀(동) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<defName>YR_GloryHole_Penis_Full_East</defName>
+		<defName>YR_GloryHole_Penis_Normal_Full_East</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
 		<animationSynchrotoDummyForJoyAnimation>false</animationSynchrotoDummyForJoyAnimation>
@@ -187,7 +187,7 @@
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 	<!-- 일반 풀 삽입(동) -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
-		<defName>YR_GloryHole_Penis_Full_East_Piston</defName>
+		<defName>YR_GloryHole_Penis_Normal_Full_East_Piston</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
 		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
 		<animationSynchrotoDummyForJoyAnimation>false</animationSynchrotoDummyForJoyAnimation>

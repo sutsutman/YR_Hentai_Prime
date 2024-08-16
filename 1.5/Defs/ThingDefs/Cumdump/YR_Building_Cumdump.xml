@@ -266,20 +266,47 @@
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
+							<li MayRequire="Roo.AntyRaceMod">
+								<condition>
+									<races>
+										<li>Anty</li>
+									</races>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									<allMatch>true</allMatch>
+									<checkPawnIsJoyPawn>true</checkPawnIsJoyPawn>
+									<Break>true</Break>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Penis_Insect</bedAnimationDef>
+							</li>
 							<li>
 								<condition>
 									<dummyForJoyIsActive>true</dummyForJoyIsActive>
 								</condition>
-								<bedAnimationDef>YR_GloryHole_Penis</bedAnimationDef>
+								<bedAnimationDef>YR_GloryHole_Penis_Normal</bedAnimationDef>
 							</li>
 							<!-- 오줌 -->
+							<!-- 아래는 temp 등으로 임시 처리를 해줘야 함 -->
+							<li MayRequire="Roo.AntyRaceMod">
+								<condition>
+									<races>
+										<li>Anty</li>
+									</races>									
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+									<allMatch>true</allMatch>
+									<checkPawnIsJoyPawn>true</checkPawnIsJoyPawn>
+									<Break>true</Break>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Penis_Insect_Triming</bedAnimationDef>
+							</li>
 							<li>
 								<condition>
 									<hediffDefs>
 										<li>YR_Ejaculation_Hediff</li>
 									</hediffDefs>
 								</condition>
-								<bedAnimationDef>YR_GloryHole_Penis_Triming</bedAnimationDef>
+								<bedAnimationDef>YR_GloryHole_Penis_Normal_Triming</bedAnimationDef>
 								<offset>(-1.5,0.0,0.0)</offset>
 							</li>
 						</conditionBedAnimationDefs>
@@ -398,7 +425,11 @@
 									<!-- mask가 같으면 오염 -->
 									<maskPath>Yuran/Things/Building/Furniture/Cumdump/Body/FaceBackGround/Mask</maskPath>
 									<rotation>South</rotation>
-									<cameraOffset>(0.0, -0.1, 0.15)</cameraOffset>
+									<conditionCameraOffsets>
+										<li>
+											<cameraOffset>(0.0, -0.1, 0.15)</cameraOffset>
+										</li>
+									</conditionCameraOffsets>
 									<cameraZoom>3.0</cameraZoom>
 									<renderClothes>false</renderClothes>
 									<renderHeadgear>false</renderHeadgear>
@@ -407,14 +438,14 @@
 										<graphicClass>Graphic_Single</graphicClass>
 										<drawSize>(2.25, 2.25)</drawSize>
 									</portraitMeshGraphicData>
-								</portraitSetting>									
+								</portraitSetting>
 								<condition>
-										<hediffDefs>
-											<li>YR_Ejaculation_Hediff</li>
-										</hediffDefs>
-										<dummyForJoyIsActive>false</dummyForJoyIsActive>
-										<allMatch>true</allMatch>
-									</condition>
+									<hediffDefs>
+										<li>YR_Ejaculation_Hediff</li>
+									</hediffDefs>
+									<dummyForJoyIsActive>false</dummyForJoyIsActive>
+									<allMatch>true</allMatch>
+								</condition>
 							</li>
 						</conditonPortraitSettings>
 					</li>
@@ -431,7 +462,11 @@
 									<drawSize>(0.8,0.8)</drawSize>
 									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
 									<rotation>South</rotation>
-									<cameraOffset>(0, 0, -0.4)</cameraOffset>
+									<conditionCameraOffsets>
+										<li>
+											<cameraOffset>(0, 0, -0.4)</cameraOffset>
+										</li>
+									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>
 									<renderClothes>false</renderClothes>
 									<renderHeadgear>false</renderHeadgear>
@@ -457,7 +492,7 @@
 					<!-- <drawSize>(0.8,0.8)</drawSize> -->
 					<!-- <maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath> -->
 					<!-- <rotation>South</rotation> -->
-					<!-- <cameraOffset>(0.0, -0.1, -0.1)</cameraOffset> -->
+					<!-- <conditionCameraOffsets><li>(0.0, -0.1, -0.1)</li></conditionCameraOffsets> -->
 					<!-- <cameraZoom>2</cameraZoom> -->
 					<!-- <renderClothes>false</renderClothes> -->
 					<!-- <renderHeadgear>false</renderHeadgear> -->
@@ -491,7 +526,7 @@
 					<!-- <drawSize>(0.8,0.8)</drawSize> -->
 					<!-- <maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath> -->
 					<!-- <rotation>South</rotation> -->
-					<!-- <cameraOffset>(0, 0, -0.4)</cameraOffset> -->
+					<!-- <conditionCameraOffsets><li>(0, 0, -0.4)</li></conditionCameraOffsets> -->
 					<!-- <cameraZoom>3.5</cameraZoom> -->
 					<!-- <renderClothes>false</renderClothes> -->
 					<!-- <renderHeadgear>false</renderHeadgear> -->

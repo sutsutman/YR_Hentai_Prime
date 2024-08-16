@@ -39,7 +39,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public Vector3 offset;
         public string maskPath;
         public Rot4 rotation = Rot4.South;
-        public Vector3 cameraOffset;
+        public List<ConditionCameraOffset> conditionCameraOffsets;
         public float cameraZoom;
         public bool renderClothes;
         public bool renderHeadgear;
@@ -50,6 +50,12 @@ namespace YR_Hentai_Prime_AnimationBed
         public bool animationSynchro;
 
         public Condition visibleCondition;
+    }
+
+    public class ConditionCameraOffset
+    {
+        public Condition condition;
+        public Vector3 cameraOffset;
     }
 
     public class ConditonPortraitSetting

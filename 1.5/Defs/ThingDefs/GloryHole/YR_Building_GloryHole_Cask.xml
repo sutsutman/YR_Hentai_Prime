@@ -211,11 +211,23 @@
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
+							<li MayRequire="Roo.AntyRaceMod">
+								<condition>
+									<races>
+										<li>Anty</li>
+									</races>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									<allMatch>true</allMatch>
+									<checkPawnIsJoyPawn>true</checkPawnIsJoyPawn>
+									<Break>true</Break>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Penis_Insect_Full_East_Piston</bedAnimationDef>
+							</li>
 							<li>
 								<condition>
 									<dummyForJoyIsActive>true</dummyForJoyIsActive>
 								</condition>
-								<bedAnimationDef>YR_GloryHole_Penis_Full_East_Piston</bedAnimationDef>
+								<bedAnimationDef>YR_GloryHole_Penis_Normal_Full_East_Piston</bedAnimationDef>
 								<offset>(0.3,-0.05,-0.5)</offset>
 							</li>
 						</conditionBedAnimationDefs>
@@ -226,7 +238,7 @@
 						<conditionBedAnimationDefs>
 							<li>
 								<condition>
-										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
 								</condition>
 								<bedAnimationDef>YR_GloryHole_Water_Fella_Portrait_East</bedAnimationDef>
 								<offset>(1.68,2.01,0.79)</offset>
@@ -293,7 +305,11 @@
 									<drawSize>(0.8,0.8)</drawSize>
 									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask_East</maskPath>
 									<rotation>West</rotation>
-									<cameraOffset>(-0.2, 0, 0.2)</cameraOffset>
+									<conditionCameraOffsets>
+										<li>
+											<cameraOffset>(-0.2, 0, 0.2)</cameraOffset>
+										</li>
+									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>
 									<renderClothes>false</renderClothes>
 									<renderHeadgear>false</renderHeadgear>
@@ -322,7 +338,11 @@
 									<drawSize>(0.8,0.8)</drawSize>
 									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
 									<rotation>West</rotation>
-									<cameraOffset>(-0.2, 0, 0.2)</cameraOffset>
+									<conditionCameraOffsets>
+										<li>
+											<cameraOffset>(-0.2, 0, 0.2)</cameraOffset>
+										</li>
+									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>
 									<renderClothes>false</renderClothes>
 									<renderHeadgear>false</renderHeadgear>

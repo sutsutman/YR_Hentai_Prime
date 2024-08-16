@@ -151,6 +151,16 @@
 						</li>
 					</conditonPawnAnimations>
 					<offset>(0,1,0.25)</offset>
+					<conditonPawnOffsets>
+						<li MayRequire="polonium.RorenRaceMod">
+							<condition>
+								<races>
+									<li>Alien_Roren</li>
+								</races>
+							</condition>
+							<offset>(0,1,0.15)</offset>
+						</li>
+					</conditonPawnOffsets>
 					<rotation>North</rotation>
 				</pawnAnimationSetting>
 				<bedAnimationList>
@@ -259,11 +269,23 @@
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
+							<li MayRequire="Roo.AntyRaceMod">
+								<condition>
+									<races>
+										<li>Anty</li>
+									</races>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									<allMatch>true</allMatch>
+									<checkPawnIsJoyPawn>true</checkPawnIsJoyPawn>
+									<Break>true</Break>
+								</condition>
+								<bedAnimationDef>YR_GloryHole_Penis_Insect</bedAnimationDef>
+							</li>
 							<li>
 								<condition>
 									<dummyForJoyIsActive>true</dummyForJoyIsActive>
 								</condition>
-								<bedAnimationDef>YR_GloryHole_Penis</bedAnimationDef>
+								<bedAnimationDef>YR_GloryHole_Penis_Normal</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
@@ -329,13 +351,18 @@
 					</li>
 				</bedAnimationList>
 				<pawnPortraitSettings>
+					<!-- 사진 -->
 					<li>
 						<portraitSetting>
 							<offset>(0.0, 2.0, 0.04)</offset>
 							<drawSize>(0.9, 0.9)</drawSize>
 							<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paper/mask</maskPath>
 							<rotation>South</rotation>
-							<cameraOffset>(0.0, -0.1, -0.1)</cameraOffset>
+							<conditionCameraOffsets>
+								<li>
+									<cameraOffset>(0.0, -0.1, -0.1)</cameraOffset>
+								</li>
+							</conditionCameraOffsets>
 							<cameraZoom>0.895</cameraZoom>
 							<renderClothes>false</renderClothes>
 							<renderHeadgear>false</renderHeadgear>
@@ -346,6 +373,7 @@
 							</portraitMeshGraphicData>
 						</portraitSetting>
 					</li>
+					<!-- 말풍선 -->
 					<li>
 						<portraitSetting>
 							<draw>false</draw>
@@ -359,7 +387,19 @@
 									<drawSize>(0.8,0.8)</drawSize>
 									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
 									<rotation>North</rotation>
-									<cameraOffset>(0, 0, -0.4)</cameraOffset>
+									<conditionCameraOffsets>
+										<li>
+											<cameraOffset>(0, 0, -0.4)</cameraOffset>
+										</li>
+										<li MayRequire="polonium.RorenRaceMod">
+											<condition>
+												<races>
+													<li>Alien_Roren</li>
+												</races>
+											</condition>
+											<cameraOffset>(0, 0, -0.3)</cameraOffset>
+										</li>
+									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>
 									<renderClothes>false</renderClothes>
 									<renderHeadgear>false</renderHeadgear>

@@ -158,6 +158,19 @@ namespace YR_Hentai_Prime_AnimationBed
                     drawSize = portraitSetting.drawSize;
                 }
 
+
+                var cameraOffset = Vector3.zero;
+                {
+                    foreach (var conditionCameraOffset in portraitSetting.conditionCameraOffsets)
+                    {
+                        void cameraOffsetAction() => cameraOffset = conditionCameraOffset.cameraOffset;
+                        if (Condition.ExecuteActionIfConditionMatches(drawPawn, building_AnimationBed, conditionCameraOffset.condition, cameraOffsetAction))
+                        {
+                            break;
+                        }
+                    }
+                }
+
                 portraitIngredients.Add(new PortraitIngredient
                 {
                     label = portraitSetting.label,
@@ -167,7 +180,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     offset = portraitSetting.offset,
                     portraitMesh = portraitSetting.portraitMeshGraphicData.Graphic.MeshAt(Rot4.South),
                     iconMat = CreateMaterial(portraitSetting, drawPawn),
-                    cameraOffset = portraitSetting.cameraOffset,
+                    cameraOffset = cameraOffset,
                     cameraZoom = portraitSetting.cameraZoom,
                     portraitSetting = portraitSetting
                 });
