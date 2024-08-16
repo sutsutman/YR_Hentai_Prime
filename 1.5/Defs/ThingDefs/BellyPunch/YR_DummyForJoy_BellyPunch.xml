@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--오락-->
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>YR_DummyForJoy_BellyPunch</defName>
+		<label>belly punch(dummy for joy</label>
+		<description>YR_DummyForJoy_BellyPunch</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<color>(0,0,0,0)</color>
+		</graphicData>
+		<thingClass>ThingWithComps</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<rotatable>true</rotatable>
+		<selectable>false</selectable>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_DummyForJoy">
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ForcePlay">
+			<jobDef>Play_BellyPunch</jobDef>
+			</li>
+		</comps>
+	</ThingDef>
+		<JobDef>
+		<defName>Play_BellyPunch</defName>
+		<driverClass>YR_Hentai_Prime_AnimationBed.JobDriver_WatchDummyForJoy</driverClass>
+		<reportString>using pillar of painful love.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joyKind>YR_Gaming_BellyPunch</joyKind>
+		<!--<taleOnCompletion>Tale_UsedComputer</taleOnCompletion>-->
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	<JoyGiverDef>
+		<defName>Play_BellyPunch</defName>
+		<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+		<baseChance>10</baseChance>
+		<thingDefs>
+			<li>YR_DummyForJoy_BellyPunch</li>
+		</thingDefs>
+		<jobDef>Play_BellyPunch</jobDef>
+		<desireSit>false</desireSit>
+		<joyKind>YR_Gaming_BellyPunch</joyKind>
+		<!--<requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>-->
+	</JoyGiverDef>
+	<JoyKindDef>
+		<defName>YR_Gaming_BellyPunch</defName>
+		<label>belly punch</label>
+	</JoyKindDef>
+	<!--배빵 헤디프-->
+	<HediffDef>
+		<defName>YR_BellyPunch_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>receiving violent love</label>
+		<description>Love, accompanied by violence, has been hammered into the abdomen. Although it hurts at first, if keep taking it, will eventually be able to enjoy the pain and feel love within it.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.001875</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<vomitMtbDays>0.4</vomitMtbDays>
+				<painOffset>0.25</painOffset>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.06</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Disciplined">
+				<!--체크주기-->
+				<ticks>50</ticks>
+				<gainTraits>
+					<li>
+						<def>Masochist</def>
+						<degree>0</degree>
+					</li>
+				</gainTraits>
+				<addTraitSeverity>0.99</addTraitSeverity>
+				<removeHediffPostAddTrait>false</removeHediffPostAddTrait>
+			</li>
+		</comps>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>YR_BellyPunch_Hediff</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_BellyPunch_Hediff</hediff>
+		<nullifyingTraits>
+			<li>Masochist</li>
+		</nullifyingTraits>
+		<neverNullifyIfAnyTrait>
+			<li>Wimp</li>
+		</neverNullifyIfAnyTrait>
+		<stages>
+			<li>
+				<label>receiving violent love</label>
+				<description>This... this isn't love... I hate it...</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>YR_BellyPunch_Hediff_Masochist</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_BellyPunch_Hediff</hediff>
+		<requiredTraits>
+			<li>Masochist</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>receiving violent love (masochist)</label>
+				<description>I can feel love being pounded into my stomach. I wish this pain could last forever...</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

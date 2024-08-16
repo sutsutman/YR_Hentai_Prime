@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 눈가리개 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_BellyPunch_EyePatch</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<offset>(0.0,0.06,0.255)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/BellyPunch/Body/EyePatch/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 묶기 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_BellyPunch_Bound</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0.0,0.06,0.0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/BellyPunch/Body/Bound/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 배빵 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_BellyPunch_BellyPunch</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/BellyPunch/Body/BellyPunch/0</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/BellyPunch/Body/BellyPunch/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/BellyPunch/Body/BellyPunch/0</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 오줌 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_BellyPunch_Pee_Up</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/BellyPunch/Body/Pee/Up</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_BellyPunch_Pee_Down</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/BellyPunch/Body/Pee/Down</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 멍 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_BellyPunch_Bruise</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0, 0, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/BellyPunch/Body/Bruise/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

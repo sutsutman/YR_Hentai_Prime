@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>YR_PheromonePee</defName>
+		<label>pheromone pee</label>
+		<description>This is a collection of vaginal lubrication or Cooper's fluid, and urine, exuded by those who have been heartily punched in the stomach with love.\n\nWhen drink it, can taste a sweet and salty flavor with a hint of lasciviousness.</description>
+		<descriptionHyperlinks>
+			<ThingDef>YR_Building_BellyPunch</ThingDef>
+			<!-- <ThingDef>YR_Maggot_PheromoneGenerator</ThingDef> -->
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Resource/YR_PheromonePee</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<!-- Can be used like meat in recipes -->
+			<Mass>0.045</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<babiesCanIngest>true</babiesCanIngest>
+			<tasteThought>YR_AtePheromonePee</tasteThought>
+		</ingestible>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+	<ThoughtDef>
+		<defName>YR_AtePheromonePee</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>drank pheromone pee</label>
+				<description>The more I drink, the more my lower body feels tingling...</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>YR_AtePheromonePee</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+</Defs>

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="YR_AnimationBedBase">
+		<defName>YR_Building_BellyPunch</defName>
+		<label>pillar of painful love</label>
+		<description>This is just an ordinary pillar with no special features. However, for masochists who enjoy pain, it appears as a tool that can receive affection. When a strong impact hits the organs located in the lower abdomen, the brain of this pervert exudes pleasure substances to withstand the pain, and they will become addicted to both pain and pleasure.\n\nIf this twisted love is continuously poured onto a prisoner, they will undoubtedly accept it someday.</description>
+		<descriptionHyperlinks>
+			<ThingDef>YR_PheromonePee</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/BellyPunch/Bed/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<uiOrder>100</uiOrder>
+		<!-- 임시로 넣은거 -->
+		<statBases>
+			<JoyGainFactor>1</JoyGainFactor>
+		</statBases>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
+				<!-- 묶였을 때 부여되는 헤디프 -->
+				<addedHediffDefs>
+					<li>YR_MilkingMachine_DisableNeed</li>
+				</addedHediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
+				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+				<hediffDefs>
+					<li>YR_PowerMode1_Hediff</li>
+					<li>YR_PowerMode2_Hediff</li>
+				</hediffDefs>
+			</li>
+			<!-- 팡팡 놀이 -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
+				<thingDef>YR_DummyForJoy</thingDef>
+				<animationDef>YR_Global_Animation_BellyPunch_North_Sound</animationDef>
+				<makeHediff>
+					<heldPawnHediffSetting>
+						<finishHediffSettings>
+							<li>
+								<hediffDef>YR_BellyPunch_Hediff</hediffDef>
+							</li>
+						</finishHediffSettings>
+					</heldPawnHediffSetting>
+				</makeHediff>
+				<makeSound>
+					<!-- 묶인 애를 기준으로 나는 소리 -->
+					<heldPawnSound>
+						<startSoundSettings>
+							<li>
+								<!-- 삽입시 응앙! 하는 소리 -->
+								<soundDefs>
+									<li>OohSound_1</li>
+									<li>OohSound_2</li>
+									<li>OohSound_3</li>
+									<li>OohSound_4</li>
+									<li>OohSound_5</li>
+									<li>OohSound_6</li>
+									<li>OohSound_7</li>
+									<li>OohSound_8</li>
+								</soundDefs>
+							</li>
+						</startSoundSettings>
+						<randomSoundSettings>
+							<li>
+								<!-- 신음 -->
+								<soundDefs>
+									<li>OohSound_1</li>
+									<li>OohSound_2</li>
+									<li>OohSound_3</li>
+									<li>OohSound_4</li>
+									<li>OohSound_5</li>
+									<li>OohSound_6</li>
+									<li>OohSound_7</li>
+									<li>OohSound_8</li>
+								</soundDefs>
+								<probability>0.01</probability>
+							</li>
+						</randomSoundSettings>
+						<finishSoundSettings/>
+					</heldPawnSound>
+				</makeSound>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
+				<pawnAnimationSetting>
+					<pawnAnimationDef>YR_Global_Animation_NoMove</pawnAnimationDef>
+					<!-- 기본 애니메이션 -->
+					<conditonPawnAnimations>
+						<li>
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									<allMatch>true</allMatch>
+								</heldPawnCondition>
+							</pawnCondition>
+							<pawnAnimationDef>YR_Global_Animation_BodyChange</pawnAnimationDef>
+						</li>
+					</conditonPawnAnimations>
+					<offset>(0,1,0.25)</offset>
+				</pawnAnimationSetting>
+				<bedAnimationList>
+					<!-- 폰의 바디, 헤드 -->
+					<li>
+						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_EnjoyingArmpit_Body_Yuran_Normal</bedAnimationDef>
+							</li>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_BellyPunch_Body_Yuran_BellyPunch</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 눈가리개 -->
+					<li>
+						<bedAnimationDef>YR_BellyPunch_EyePatch</bedAnimationDef>
+					</li>
+					<!-- 묶기 -->
+					<li>
+						<bedAnimationDef>YR_BellyPunch_Bound</bedAnimationDef>
+					</li>
+					<!-- 유란 얼굴 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<!-- 배빵중 -->
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										</races>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_Milking_Face_Yuran</bedAnimationDef>
+							</li>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_Milking_Face_Yuran_Miko</bedAnimationDef>
+							</li>
+							<!-- 배빵 끝나고 나서 -->
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										</races>
+										<hediffDefs>
+											<li>YR_BellyPunch_Hediff</li>
+										</hediffDefs>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_Milking_Face_Yuran</bedAnimationDef>
+							</li>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+										<hediffDefs>
+											<li>YR_BellyPunch_Hediff</li>
+										</hediffDefs>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_Milking_Face_Yuran_Miko</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 배빵 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<!-- 배빵이 따로 있는 애들 -->
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+										<Break>true</Break>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+							</li>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_BellyPunch_BellyPunch</bedAnimationDef>
+								<offset>(0,0.06,0)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 오줌 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_BellyPunch_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_BellyPunch_Pee_Up</bedAnimationDef>
+								<offset>(0,0.06,0)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_BellyPunch_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_BellyPunch_Pee_Down</bedAnimationDef>
+								<offset>(0,0.06,0)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 멍 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_BellyPunch_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_BellyPunch_Bruise</bedAnimationDef>
+								<offset>(0,0.06,0)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+				</bedAnimationList>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
+				<ticksToSpawn>6000</ticksToSpawn>
+				<thingToSpawn>YR_PheromonePee</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<dummyForJoyIsActive>true</dummyForJoyIsActive>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

@@ -11,6 +11,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public ThingDef thingToSpawn;
         public int spawnCount;
         public List<ConditionSpawnThing> conditionSpawnThings = new List<ConditionSpawnThing>();
+        public bool dummyForJoyIsActive = false;
     }
 
     public class ConditionSpawnThing
@@ -44,7 +45,14 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 if (Building_AnimationBed.PowerOn)
                 {
-                    ticksToSpawn--;
+                    if (Props.dummyForJoyIsActive && Building_AnimationBed.dummyForJoyIsActive)
+                    {
+                        ticksToSpawn--;
+                    }
+                    else if (!Props.dummyForJoyIsActive)
+                    {
+                        ticksToSpawn--;
+                    }
                 }
             }
             else
@@ -54,6 +62,9 @@ namespace YR_Hentai_Prime_AnimationBed
 
             if (ticksToSpawn <= 0)
             {
+
+                ticksToSpawn = Props.ticksToSpawn;
+
                 Thing spawnThing = MakeSpawnThing();
 
                 if (AffectedByFacilitiesComp == null)
@@ -112,8 +123,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private Thing MakeSpawnThing()
         {
-            ticksToSpawn = Props.ticksToSpawn;
-
             ThingDef thingToSpawn = Props.thingToSpawn;
             int spawnCount = Props.spawnCount;
 
@@ -136,6 +145,29 @@ namespace YR_Hentai_Prime_AnimationBed
             thing.stackCount = spawnCount;
 
             return thing;
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            Pawn pawn = Building_AnimationBed.HeldPawn;
+
+            if (pawn == null)
+            {
+                return "";
+            }
+
+
+            Thing spawnThing = MakeSpawnThing();
+
+
+            string milkingMachine = "";
+
+            if (pawn != null && spawnThing != null)
+            {
+                milkingMachine += "\n" + "YR_SpawnThing".Translate() + " : " + spawnThing.def.label + "\n" + "YR_SpawnCount".Translate() + " : " + spawnThing.stackCount;
+                return "NextSpawnedResourceIn".Translate() + " : " + ticksToSpawn.ToStringTicksToPeriod(true, false, true, true, false) + milkingMachine;
+            }
+            return "";
         }
 
         public override void PostExposeData()

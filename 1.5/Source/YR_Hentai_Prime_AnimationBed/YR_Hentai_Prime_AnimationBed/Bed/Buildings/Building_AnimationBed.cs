@@ -161,7 +161,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public int tempAnimationTick = 0;
         private CompPowerTrader powerComp;
-        public bool PowerOn => ((powerComp != null && powerComp.PowerOn) || powerComp == null) && !stopAnimation;
+        public bool PowerOn => ((powerComp != null && powerComp.PowerOn) || powerComp == null);
 
         public bool stopAnimation = false;
 
@@ -176,7 +176,7 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 makePortrait = true;
 
-                if (PowerOn)
+                if (PowerOn && !stopAnimation)
                 {
                     BedAnimationUtility.SetAnimation(this);
 
