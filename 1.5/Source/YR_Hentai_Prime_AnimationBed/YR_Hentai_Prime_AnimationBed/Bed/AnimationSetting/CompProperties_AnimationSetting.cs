@@ -17,7 +17,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class FillableBarSetting
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
         public Vector2 drawSize = Vector2.one;
         public Vector3 offset;
         public Color color = Color.white;
@@ -49,19 +49,19 @@ namespace YR_Hentai_Prime_AnimationBed
         public PawnRenderNodeTagDef pawnRenderNodeTagDef;
         public bool animationSynchro;
 
-        public Condition visibleCondition;
+        public PawnCondition visibleCondition;
     }
 
     public class ConditionCameraOffset
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
         public Vector3 cameraOffset;
     }
 
     public class ConditonPortraitSetting
     {
         public PortraitSetting portraitSetting;
-        public Condition condition;
+        public PawnCondition pawnCondition;
     }
 
     public class PawnAnimationSetting
@@ -84,18 +84,18 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class ConditionPawnRotation
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
         public Rot4 rotation = Rot4.South;
     }
 
     public class ConditonPawnAnimation
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
         public AnimationDef pawnAnimationDef;
     }
     public class ConditonPawnOffset
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
         public Vector3 offset;
     }
 
@@ -112,7 +112,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class ConditionBedAnimation
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
 
         public BedAnimationDef bedAnimationDef;
 

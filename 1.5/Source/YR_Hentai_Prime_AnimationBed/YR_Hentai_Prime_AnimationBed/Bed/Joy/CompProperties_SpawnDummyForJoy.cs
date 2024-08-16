@@ -56,7 +56,7 @@ namespace YR_Hentai_Prime_AnimationBed
     public class ConditionHediffDefs
     {
         public HediffDef hediffDef;
-        public Condition condition;
+        public PawnCondition pawnCondition;
     }
 
     public class CompSpawnDummyForJoy : CompBaseOfAnimationBed

@@ -22,7 +22,7 @@ namespace YR_Hentai_Prime_AnimationBed
         }
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            //Settings.DoSettingsWindowContents(inRect);
+            Settings.DoSettingsWindowContents(inRect);
         }
 
         // Token: 0x04000001 RID: 1

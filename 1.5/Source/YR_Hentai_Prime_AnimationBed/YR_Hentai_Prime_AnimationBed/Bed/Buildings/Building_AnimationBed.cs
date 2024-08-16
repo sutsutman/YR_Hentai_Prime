@@ -69,7 +69,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     void action() => offset = conditonPawnOffset.offset;
 
-                    if (Condition.ExecuteActionIfConditionMatches(HeldPawn, this, conditonPawnOffset.condition, action))
+                    if (Condition.ExecuteActionIfConditionMatches(this, conditonPawnOffset.pawnCondition, action))
                     {
                         break;
                     }
@@ -242,7 +242,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     tempProbability = conditionSoundSetting.probability;
                 }
 
-                if (Condition.ExecuteActionIfConditionMatches(pawn, building_AnimationBed, conditionSoundSetting.condition, action))
+                if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed, conditionSoundSetting.pawnCondition, action))
                 {
                     break;
                 }
@@ -276,7 +276,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     void action() => rotation = conditionPawnRotation.rotation;
 
-                    if (Condition.ExecuteActionIfConditionMatches(HeldPawn, this, conditionPawnRotation.condition, action))
+                    if (Condition.ExecuteActionIfConditionMatches(this, conditionPawnRotation.pawnCondition, action))
                     {
                         break;
                     }
@@ -1330,6 +1330,7 @@ namespace YR_Hentai_Prime_AnimationBed
         float movef = 0.001f;
         public bool dummyForJoyIsActive;
         public Pawn dummyForJoyPawn;
+        public Pawn previousJoyPawn;
         private Vector3 testPawnOffset;
         private bool openPawnOffsetSettingGizmo;
 

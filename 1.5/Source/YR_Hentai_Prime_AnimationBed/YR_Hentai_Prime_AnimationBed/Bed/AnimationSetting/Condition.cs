@@ -6,6 +6,14 @@ using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
+    public class PawnCondition
+    {
+        public Condition heldPawnCondition;
+        public Condition joyPawnCondition;
+
+        public bool allMatch = true;
+    }
+
     public class Condition
     {
         //피학자
@@ -27,26 +35,22 @@ namespace YR_Hentai_Prime_AnimationBed
         public List<Intelligence> neverIntelligences = null;
 
         public bool dummyForJoyIsActive = false;
-        public bool checkPawnIsJoyPawn = false;
+        public bool dummyForJoyIsDeactive = false;
+        public bool referPreviousJoyPawn = false;
 
         public float probability = -1;
 
         public bool allMatch = false;
         public bool reverseCondition = false;
-        bool Break = false;
+        public bool Break = false;
 
         public static bool Match(Pawn pawn, Building_AnimationBed building_AnimationBed, Condition condition, out bool needBreak)
-        {   
+        {
             // needBreak 처리 좀 더 검증 필요;
             if (condition == null)
             {
                 needBreak = false;
                 return true;
-            }
-
-            if (condition.checkPawnIsJoyPawn)
-            {
-                pawn = building_AnimationBed.dummyForJoyPawn;
             }
 
             if (pawn == null)
@@ -86,6 +90,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 CheckListCondition(condition.hediffAndSeverities, HediffAndSeverityCheck),
                 CheckListCondition(condition.traitDefs, TraitCheck),
                 CheckDummyForJoyIsActive(building_AnimationBed, condition),
+                CheckDummyForJoyIsDeactive(building_AnimationBed, condition),
                 CheckProbability(condition.probability),
                 CheckSkill(pawn,condition.skillLevelRages)
             };
@@ -123,6 +128,11 @@ namespace YR_Hentai_Prime_AnimationBed
                 => allMatch
                 ? !condition.dummyForJoyIsActive || (condition.dummyForJoyIsActive && building_AnimationBed.dummyForJoyIsActive)
                 : condition.dummyForJoyIsActive && building_AnimationBed.dummyForJoyIsActive;
+
+            bool CheckDummyForJoyIsDeactive(Building_AnimationBed building_AnimationBed, Condition condition)
+    => allMatch
+    ? !condition.dummyForJoyIsDeactive || (condition.dummyForJoyIsDeactive && !building_AnimationBed.dummyForJoyIsActive)
+    : condition.dummyForJoyIsDeactive && !building_AnimationBed.dummyForJoyIsActive;
 
             bool CheckProbability(float probability)
             {
@@ -195,14 +205,50 @@ namespace YR_Hentai_Prime_AnimationBed
                => pawn.story.traits.allTraits.Any(pawnTrait => traitDefs.Contains(pawnTrait.def));
         }
 
-        public static bool ExecuteActionIfConditionMatches(Pawn pawn, Building_AnimationBed building_AnimationBed, Condition condition, Action action)
+        public static bool ExecuteActionIfConditionMatches(Building_AnimationBed building_AnimationBed, PawnCondition pawnCondition, Action action, Pawn anotherPawn = null)
         {
-            if (Match(pawn, building_AnimationBed, condition, out bool needBreak))
+
+            if (pawnCondition == null)
             {
                 action();
+                return false;
             }
 
-            return needBreak;
+            var heldPawn = building_AnimationBed.HeldPawn;
+            if (anotherPawn != null)
+            {
+                heldPawn = anotherPawn;
+            }
+
+            bool heldPawnConditionMatch = Match(heldPawn, building_AnimationBed, pawnCondition.heldPawnCondition, out bool heldPawnNeedBreak);
+
+            var joyPawn = building_AnimationBed.dummyForJoyPawn;
+            if (pawnCondition.joyPawnCondition != null && pawnCondition.joyPawnCondition.referPreviousJoyPawn)
+            {
+                joyPawn = building_AnimationBed.previousJoyPawn;
+            }
+
+            bool joyPawnConditionMatch = Match(joyPawn, building_AnimationBed, pawnCondition.joyPawnCondition, out bool joyPawnNeedBreak);
+
+
+            if (pawnCondition.allMatch)
+            {
+                if (heldPawnConditionMatch && joyPawnConditionMatch)
+                {
+                    action();
+                }
+            }
+            else
+            {
+                if (heldPawnConditionMatch || joyPawnConditionMatch)
+                {
+                    action();
+                }
+
+            }
+
+
+            return heldPawnNeedBreak || joyPawnNeedBreak;
         }
 
     }

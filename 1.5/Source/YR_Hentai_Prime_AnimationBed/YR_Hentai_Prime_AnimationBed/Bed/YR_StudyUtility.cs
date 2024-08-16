@@ -81,7 +81,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
                     else
                     {
-                        if (!Condition.Match((Pawn)victim, (Building_AnimationBed)t.Thing, t.Thing.TryGetComp<CompAnimationBed>()?.Props.condition, out _))
+                        if (!Condition.Match((Pawn)victim, (Building_AnimationBed)t.Thing, t.Thing.TryGetComp<CompAnimationBed>()?.Props.pawnCondition?.heldPawnCondition, out _))
                         {
                             label = "YR_TieUpPawn_Condition".Translate();
                         }
@@ -124,7 +124,7 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 if (t.HasThing && t.Thing.TryGetComp(out CompAnimationBed comp) && comp.HeldPawn == null)
                 {
-                    if (!Condition.Match((Pawn)victim, (Building_AnimationBed)t.Thing, comp.Props.condition, out _))
+                    if (!Condition.Match((Pawn)victim, (Building_AnimationBed)t.Thing, comp.Props.pawnCondition?.heldPawnCondition, out _))
                     {
                         return false;
                     }

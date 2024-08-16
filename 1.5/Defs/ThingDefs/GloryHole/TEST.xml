@@ -50,7 +50,7 @@
 					<!-- <conditionHediffDefs> -->
 					<!-- <li> -->
 					<!-- <hediffDef>YR_PowerMode1_Hediff</hediffDef> -->
-					<!-- <condition/> -->
+					<!-- <pawnCondition/> -->
 					<!-- </li> -->
 					<!-- </conditionHediffDefs> -->
 					<!-- <removeWhenFinish>true</removeWhenFinish> -->
@@ -77,7 +77,7 @@
 								<!-- <conditionSoundSettings> -->
 								<!-- <li> -->
 								<!-- <soundDef/> -->
-								<!-- <condition/> -->
+								<!-- <pawnCondition/> -->
 								<!-- </li> -->
 								<!-- </conditionSoundSettings> -->
 							</li>
@@ -153,9 +153,9 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<bedAnimationDef>YR_Polar_Body</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
@@ -164,9 +164,9 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<bedAnimationDef>YR_Polar_Arm</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>

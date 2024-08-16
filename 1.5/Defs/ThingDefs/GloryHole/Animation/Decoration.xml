@@ -28,11 +28,11 @@
 				</graphicData>
 				<conditionGraphicDatas>
 					<li>
-						<condition>
+						<pawnCondition><heldPawnCondition>
 							<genders>
 								<li>Male</li>
 							</genders>
-						</condition>
+						</heldPawnCondition></pawnCondition>
 						<graphicData>
 							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/PlayWhat/North_Male</texPath>
 							<graphicClass>Graphic_Random</graphicClass>
@@ -40,11 +40,11 @@
 						</graphicData>
 					</li>
 					<li>
-						<condition>
+						<pawnCondition><heldPawnCondition>
 							<genders>
 								<li>Female</li>
 							</genders>
-						</condition>
+						</heldPawnCondition></pawnCondition>
 						<graphicData>
 							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/PlayWhat/North_Female</texPath>
 							<graphicClass>Graphic_Random</graphicClass>
@@ -68,14 +68,14 @@
 				</graphicData>
 				<conditionGraphicDatas>
 					<li>
-						<condition>
+						<pawnCondition><heldPawnCondition>
 							<skillLevelRages>
 								<li>
 									<skillDef>Social</skillDef>
 									<levelRange>17~100</levelRange>
 								</li>
 							</skillLevelRages>
-						</condition>
+						</heldPawnCondition></pawnCondition>
 						<graphicData>
 							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_A</texPath>
 							<graphicClass>Graphic_Single</graphicClass>
@@ -83,14 +83,14 @@
 						</graphicData>
 					</li>
 					<li>
-						<condition>
+						<pawnCondition><heldPawnCondition>
 							<skillLevelRages>
 								<li>
 									<skillDef>Social</skillDef>
 									<levelRange>12~16</levelRange>
 								</li>
 							</skillLevelRages>
-						</condition>
+						</heldPawnCondition></pawnCondition>
 						<graphicData>
 							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_B</texPath>
 							<graphicClass>Graphic_Single</graphicClass>
@@ -98,14 +98,14 @@
 						</graphicData>
 					</li>
 					<li>
-						<condition>
+						<pawnCondition><heldPawnCondition>
 							<skillLevelRages>
 								<li>
 									<skillDef>Social</skillDef>
 									<levelRange>8~11</levelRange>
 								</li>
 							</skillLevelRages>
-						</condition>
+						</heldPawnCondition></pawnCondition>
 						<graphicData>
 							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_C</texPath>
 							<graphicClass>Graphic_Single</graphicClass>
@@ -113,14 +113,14 @@
 						</graphicData>
 					</li>
 					<li>
-						<condition>
+						<pawnCondition><heldPawnCondition>
 							<skillLevelRages>
 								<li>
 									<skillDef>Social</skillDef>
 									<levelRange>4~7</levelRange>
 								</li>
 							</skillLevelRages>
-						</condition>
+						</heldPawnCondition></pawnCondition>
 						<graphicData>
 							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_D</texPath>
 							<graphicClass>Graphic_Single</graphicClass>
@@ -128,14 +128,14 @@
 						</graphicData>
 					</li>
 					<li>
-						<condition>
+						<pawnCondition><heldPawnCondition>
 							<skillLevelRages>
 								<li>
 									<skillDef>Social</skillDef>
 									<levelRange>2~3</levelRange>
 								</li>
 							</skillLevelRages>
-						</condition>
+						</heldPawnCondition></pawnCondition>
 						<graphicData>
 							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_E</texPath>
 							<graphicClass>Graphic_Single</graphicClass>
@@ -143,14 +143,14 @@
 						</graphicData>
 					</li>
 					<li>
-						<condition>
+						<pawnCondition><heldPawnCondition>
 							<skillLevelRages>
 								<li>
 									<skillDef>Social</skillDef>
 									<levelRange>0~1</levelRange>
 								</li>
 							</skillLevelRages>
-						</condition>
+						</heldPawnCondition></pawnCondition>
 						<graphicData>
 							<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paint/Rating/Rating_E</texPath>
 							<graphicClass>Graphic_Single</graphicClass>

@@ -163,7 +163,7 @@
 									<!-- <conditionSoundSettings> -->
 									<!-- <li> -->
 									<!-- <soundDef/> -->
-									<!-- <condition/> -->
+									<!-- <pawnCondition/> -->
 									<!-- </li> -->
 									<!-- </conditionSoundSettings> -->
 								</li>
@@ -234,7 +234,7 @@
 									<!-- <conditionSoundSettings> -->
 									<!-- <li> -->
 									<!-- <soundDef/> -->
-									<!-- <condition/> -->
+									<!-- <pawnCondition/> -->
 									<!-- </li> -->
 									<!-- </conditionSoundSettings> -->
 								</li>
@@ -397,7 +397,7 @@
 									<!-- <conditionSoundSettings> -->
 									<!-- <li> -->
 									<!-- <soundDef/> -->
-									<!-- <condition/> -->
+									<!-- <pawnCondition/> -->
 									<!-- </li> -->
 									<!-- </conditionSoundSettings> -->
 								</li>
@@ -449,7 +449,7 @@
 									<!-- <conditionSoundSettings> -->
 									<!-- <li> -->
 									<!-- <soundDef/> -->
-									<!-- <condition/> -->
+									<!-- <pawnCondition/> -->
 									<!-- </li> -->
 									<!-- </conditionSoundSettings> -->
 								</li>

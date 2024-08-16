@@ -19,12 +19,14 @@
 				<addedHediffDefs>
 					<li>YR_MilkingMachine_DisableNeed</li>
 				</addedHediffDefs>
-				<condition>
-					<races>
-						<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-						<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-					</races>
-				</condition>
+				<pawnCondition>
+					<heldPawnCondition>
+						<races>
+							<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+							<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+						</races>
+					</heldPawnCondition>
+				</pawnCondition>
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
 				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
@@ -81,24 +83,20 @@
 					<!-- 기본 애니메이션 -->
 					<conditonPawnAnimations>
 						<li>
-							<condition>
-								<races>
-									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-								</races>
-								<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								<allMatch>true</allMatch>
-							</condition>
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+									</races>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									<allMatch>true</allMatch>
+								</heldPawnCondition>
+							</pawnCondition>
 							<pawnAnimationDef>YR_Global_Animation_BodyChange</pawnAnimationDef>
 						</li>
 					</conditonPawnAnimations>
 					<offset>(0,1,0.25)</offset>
-					<conditonPawnOffsets>
-						<li>
-							<condition/>
-							<offset/>
-						</li>
-					</conditonPawnOffsets>
 				</pawnAnimationSetting>
 				<bedAnimationList>
 					<!-- 폰의 바디, 헤드 -->
@@ -107,23 +105,27 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<races>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-									</races>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_EnjoyingArmpit_Body_Yuran_Normal</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
-									<races>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-									</races>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-									<allMatch>true</allMatch>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_EnjoyingArmpit_Body_Yuran_Enjoy</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
@@ -133,9 +135,11 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_EnjoyingArmpit_Armpit_Yuran</bedAnimationDef>
 								<offset>(1.5,2.0,1)</offset>
 							</li>
@@ -145,9 +149,11 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_FellatioBackGround_Front</bedAnimationDef>
 								<offset>(1.5,2.0,1)</offset>
 							</li>
@@ -157,9 +163,11 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_EnjoyingArmpit_Lick</bedAnimationDef>
 								<offset>(1.4,2.11,1)</offset>
 							</li>
@@ -186,6 +194,17 @@
 									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
 									<rotation>West</rotation>
 									<conditionCameraOffsets>
+										<li MayRequire="Roo.AntyRaceMod">
+											<pawnCondition>
+												<joyPawnCondition>
+													<races>
+														<li>Anty</li>
+													</races>
+													<Break>true</Break>
+												</joyPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(-0.27, 0, 0.13)</cameraOffset>
+										</li>
 										<li>
 											<cameraOffset>(-0.23, 0, 0.05)</cameraOffset>
 										</li>
@@ -199,9 +218,11 @@
 										<drawSize>(2.25, 2.25)</drawSize>
 									</portraitMeshGraphicData>
 								</portraitSetting>
-								<condition>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
 							</li>
 						</conditonPortraitSettings>
 					</li>

@@ -94,6 +94,8 @@ namespace YR_Hentai_Prime_AnimationBed
                     pawn.Drawer.renderer.SetAnimation(props.animationDef);
                     Building_AnimationBed.dummyForJoyIsActive = true;
                     Building_AnimationBed.dummyForJoyPawn = pawn;
+                    //이전 폰 초기화
+                    Building_AnimationBed.previousJoyPawn = pawn;
                     Building_AnimationBed.setAnimation = true;
                     CompAnimationSetting.needMakeGraphics = true;
 
@@ -125,7 +127,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     void action() => hediffDef = conditionHediffDef.hediffDef;
 
-                    if (Condition.ExecuteActionIfConditionMatches(pawn, building_AnimationBed, conditionHediffDef.condition, action))
+                    if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed, conditionHediffDef.pawnCondition, action))
                     {
                         break;
                     }

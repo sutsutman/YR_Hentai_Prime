@@ -15,11 +15,11 @@
 				<addedHediffDefs>
 					<li>YR_MilkingMachine_DisableNeed</li>
 				</addedHediffDefs>
-				<condition>
+				<pawnCondition><heldPawnCondition>
 					<genders>
 						<li>Female</li>
 					</genders>
-				</condition>
+				</heldPawnCondition></pawnCondition>
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
 				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
@@ -47,7 +47,7 @@
 					<conditonPawnAnimations>
 						<!-- 바디 텍스처 바꾸고 싶으면 기존 바디 레이어를 숨긴 애니메이션 사용 해야 함 -->
 						<li>
-							<condition>
+							<pawnCondition><heldPawnCondition>
 								<races>
 									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
 									<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
@@ -62,19 +62,15 @@
 									<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
 									<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
 								</races>
-							</condition>
+							</heldPawnCondition></pawnCondition>
 							<pawnAnimationDef>YR_Global_Animation_BodyChange_Sound</pawnAnimationDef>
 						</li>
 					</conditonPawnAnimations>
 					<offset>(0,1,-0.1)</offset>
 					<conditonPawnOffsets>
-						<li>
-							<condition/>
-							<offset/>
-						</li>
 						<!-- B.E.P Race -->
 						<li>
-							<condition>
+							<pawnCondition><heldPawnCondition>
 								<races>
 									<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 									<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
@@ -86,7 +82,7 @@
 									<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
 									<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
 								</races>
-							</condition>
+							</heldPawnCondition></pawnCondition>
 							<offset>(0,0,-0.145)</offset>
 						</li>
 					</conditonPawnOffsets>
@@ -99,7 +95,7 @@
 						<offset>(0,0.0,-0.35)</offset>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
@@ -109,13 +105,13 @@
 										<li>YR_PowerMode2_Hediff</li>
 									</neverHediffDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<bedAnimationDef>YR_GeneratorPod_Body_Yuran</bedAnimationDef>
 								<offset>(0,0.0,-0.35)</offset>
 							</li>
 							<!-- B.E.P Race -->
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 									</races>
@@ -124,12 +120,12 @@
 										<li>YR_PowerMode2_Hediff</li>
 									</neverHediffDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0,0,-0.385)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Small</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
 										<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
@@ -147,12 +143,12 @@
 										<li>YR_PowerMode2_Hediff</li>
 									</neverHediffDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0,0,-0.385)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Small</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
 										<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
@@ -170,12 +166,12 @@
 										<li>YR_PowerMode2_Hediff</li>
 									</neverHediffDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0,0,-0.385)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Big</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
 									</races>
@@ -187,12 +183,12 @@
 										<li>YR_PowerMode2_Hediff</li>
 									</neverHediffDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0,0,-0.385)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Resur_Small</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
 									</races>
@@ -204,7 +200,7 @@
 										<li>YR_PowerMode2_Hediff</li>
 									</neverHediffDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0,0,-0.385)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Resur_Big</bedAnimationDef>
 							</li>
@@ -214,12 +210,12 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
 									</races>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<bedAnimationDef>YR_Milking_Face_Yuran</bedAnimationDef>
 								<offset>(0,0.0,-0.35)</offset>
 							</li>
@@ -231,7 +227,7 @@
 						<conditionBedAnimationDefs>
 							<!-- B.E.P Race -->
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
@@ -243,7 +239,7 @@
 										<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
 										<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
 									</races>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0,0,-0.13)</offset>
 								<bedAnimationDef>YR_GeneratorPod_NavelFuck</bedAnimationDef>
 							</li>
@@ -263,7 +259,7 @@
 						<conditionBedAnimationDefs>
 							<!-- B.E.P Race -->
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
@@ -275,7 +271,7 @@
 										<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
 										<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
 									</races>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0,0,0.04)</offset>
 								<drawSize>(-0.5,0)</drawSize>
 								<bedAnimationDef>YR_GeneratorPod_HMD</bedAnimationDef>
@@ -288,17 +284,17 @@
 						<conditionBedAnimationDefs>
 							<!-- B.E.P Race -->
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 									</races>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<!-- <offset>(0,0,-0.1)</offset> -->
 								<!-- <drawSize>(-0.2,-0.4)</drawSize> -->
 								<bedAnimationDef>YR_GeneratorPod_LegTentacle</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
 										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
@@ -313,13 +309,13 @@
 										<li>Female</li>
 									</neverBodyTypeDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<!-- <offset>(0,0,-0.1)</offset> -->
 								<!-- <drawSize>(-0.2,-0.4)</drawSize> -->
 								<bedAnimationDef>YR_GeneratorPod_LegTentacle</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
 										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
@@ -334,7 +330,7 @@
 										<li>Female</li>
 									</bodyTypeDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<!-- <offset>(0,0,-0.11)</offset> -->
 								<!-- <drawSize>(-0.2,-0.2)</drawSize> -->
 								<bedAnimationDef>YR_GeneratorPod_LegTentacle</bedAnimationDef>
@@ -347,16 +343,16 @@
 						<conditionBedAnimationDefs>
 							<!-- B.E.P Race -->
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 									</races>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0.04,0,-0.12)</offset>
 								<bedAnimationDef>YR_GeneratorPod_Milking</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
 										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
@@ -371,12 +367,12 @@
 										<li>Female</li>
 									</neverBodyTypeDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0.04,0,-0.12)</offset>
 								<bedAnimationDef>YR_GeneratorPod_Milking</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
 										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
@@ -391,7 +387,7 @@
 										<li>Female</li>
 									</bodyTypeDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0.04,0,-0.14)</offset>
 								<bedAnimationDef>YR_GeneratorPod_Milking</bedAnimationDef>
 							</li>
@@ -403,7 +399,7 @@
 						<conditionBedAnimationDefs>
 							<!-- B.E.P Race -->
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
@@ -415,7 +411,7 @@
 										<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
 										<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
 									</races>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(0,0,-0.13)</offset>
 								<bedAnimationDef>YR_GeneratorPod_Neck</bedAnimationDef>
 							</li>
@@ -427,16 +423,16 @@
 						<conditionBedAnimationDefs>
 							<!-- B.E.P Race -->
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 									</races>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(-0.05,0,-0.12)</offset>
 								<bedAnimationDef>YR_GeneratorPod_NippleFuck</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
 										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
@@ -451,12 +447,12 @@
 										<li>Female</li>
 									</neverBodyTypeDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(-0.05,0,-0.12)</offset>
 								<bedAnimationDef>YR_GeneratorPod_NippleFuck</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
+								<pawnCondition><heldPawnCondition>
 									<races>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
 										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
@@ -471,7 +467,7 @@
 										<li>Female</li>
 									</bodyTypeDefs>
 									<allMatch>true</allMatch>
-								</condition>
+								</heldPawnCondition></pawnCondition>
 								<offset>(-0.03,0,-0.16)</offset>
 								<bedAnimationDef>YR_GeneratorPod_NippleFuck</bedAnimationDef>
 							</li>

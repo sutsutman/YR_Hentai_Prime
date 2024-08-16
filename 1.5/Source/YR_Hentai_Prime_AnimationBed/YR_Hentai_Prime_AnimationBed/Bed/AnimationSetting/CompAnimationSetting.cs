@@ -110,14 +110,14 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
 
                     cameraOffset += portraitIngredient.testCameraOffset;
-                    TestLog.Error($"cameraOffset : {cameraOffset.x:F5}, {cameraOffset.y:F5}, {cameraOffset.z:F5}");
+                    //TestLog.Error($"cameraOffset : {cameraOffset.x:F5}, {cameraOffset.y:F5}, {cameraOffset.z:F5}");
 
                     var cameraZoom = portraitIngredient.cameraZoom + portraitIngredient.testCameraZoom;
                     var rotation = Props.pawnAnimationSetting.rotation;
 
                     foreach (var conditionPawnRotation in Props.pawnAnimationSetting.conditionPawnRotations)
                     {
-                        if (Condition.ExecuteActionIfConditionMatches(pawn, Building_AnimationBed, conditionPawnRotation.condition,
+                        if (Condition.ExecuteActionIfConditionMatches(Building_AnimationBed, conditionPawnRotation.pawnCondition,
                             () => rotation = conditionPawnRotation.rotation))
                         {
                             break;
@@ -254,7 +254,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class BedAnimationSetting
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
         public GraphicData graphicData;
         public List<ConditionGraphicData> conditionGraphicDatas = new List<ConditionGraphicData>();
         public string maskPathForPortrait;
@@ -285,7 +285,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class ConditionGraphicData
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
 
         public GraphicData graphicData;
     }

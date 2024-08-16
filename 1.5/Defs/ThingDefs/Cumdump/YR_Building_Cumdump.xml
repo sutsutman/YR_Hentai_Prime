@@ -58,7 +58,7 @@
 					<!-- <conditionHediffDefs> -->
 					<!-- <li> -->
 					<!-- <hediffDef>YR_PowerMode1_Hediff</hediffDef> -->
-					<!-- <condition/> -->
+					<!-- <pawnCondition/> -->
 					<!-- </li> -->
 					<!-- </conditionHediffDefs> -->
 					<!-- <removeWhenFinish>true</removeWhenFinish> -->
@@ -85,7 +85,7 @@
 								<!-- <conditionSoundSettings> -->
 								<!-- <li> -->
 								<!-- <soundDef/> -->
-								<!-- <condition/> -->
+								<!-- <pawnCondition/> -->
 								<!-- </li> -->
 								<!-- </conditionSoundSettings> -->
 							</li>
@@ -160,24 +160,18 @@
 					<!-- 기본 애니메이션 -->
 					<!-- <conditonPawnAnimations> -->
 					<!-- <li> -->
-					<!-- <condition> -->
+					<!-- <pawnCondition><heldPawnCondition> -->
 					<!-- <races> -->
 					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li> -->
 					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li> -->
 					<!-- </races> -->
 					<!-- <dummyForJoyIsActive>true</dummyForJoyIsActive> -->
 					<!-- <allMatch>true</allMatch> -->
-					<!-- </condition> -->
+					<!-- </heldPawnCondition></pawnCondition> -->
 					<!-- <pawnAnimationDef>YR_Global_Animation_BodyChange</pawnAnimationDef> -->
 					<!-- </li> -->
 					<!-- </conditonPawnAnimations> -->
 					<offset>(0,1,0.1)</offset>
-					<conditonPawnOffsets>
-						<li>
-							<condition/>
-							<offset/>
-						</li>
-					</conditonPawnOffsets>
 				</pawnAnimationSetting>
 				<bedAnimationList>
 					<!-- 폰의 바디, 헤드 -->
@@ -207,12 +201,14 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_FellatioBackGround_BackGround</bedAnimationDef>
 								<offset>(1.5,0.0,1)</offset>
 							</li>
@@ -222,12 +218,14 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_FellatioBackGround_Front</bedAnimationDef>
 								<offset>(1.5,2.0,1)</offset>
 							</li>
@@ -238,11 +236,15 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_Cumdump_FaceBackGround_BackGround</bedAnimationDef>
 								<offset>(0,1.0,1.5)</offset>
 							</li>
@@ -252,11 +254,15 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_Cumdump_FaceBackGround_Front</bedAnimationDef>
 								<offset>(0,2.0,1.5)</offset>
 							</li>
@@ -267,45 +273,56 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li MayRequire="Roo.AntyRaceMod">
-								<condition>
-									<races>
-										<li>Anty</li>
-									</races>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-									<allMatch>true</allMatch>
-									<checkPawnIsJoyPawn>true</checkPawnIsJoyPawn>
-									<Break>true</Break>
-								</condition>
+								<pawnCondition>
+									<joyPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+										<allMatch>true</allMatch>
+										<Break>true</Break>
+									</joyPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_Penis_Insect</bedAnimationDef>
 							</li>
 							<li>
-								<condition>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_Penis_Normal</bedAnimationDef>
 							</li>
 							<!-- 오줌 -->
 							<!-- 아래는 temp 등으로 임시 처리를 해줘야 함 -->
 							<li MayRequire="Roo.AntyRaceMod">
-								<condition>
-									<races>
-										<li>Anty</li>
-									</races>									
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+									</heldPawnCondition>
+									<joyPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+										<allMatch>true</allMatch>
+										<referPreviousJoyPawn>true</referPreviousJoyPawn>
+										<Break>true</Break>
+									</joyPawnCondition>
 									<allMatch>true</allMatch>
-									<checkPawnIsJoyPawn>true</checkPawnIsJoyPawn>
-									<Break>true</Break>
-								</condition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_Penis_Insect_Triming</bedAnimationDef>
+								<offset>(-1.5,0.0,0.0)</offset>
 							</li>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_Penis_Normal_Triming</bedAnimationDef>
 								<offset>(-1.5,0.0,0.0)</offset>
 							</li>
@@ -316,16 +333,18 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<races>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-									</races>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-									<allMatch>true</allMatch>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_Cumdump_Mouth_Yuran</bedAnimationDef>
 								<offset>(0.0,0.01,-0.155)</offset>
 							</li>
@@ -336,16 +355,19 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<races>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-									</races>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-									<allMatch>true</allMatch>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										</races>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_Cumdump_Mouth_Yuran_Portrait</bedAnimationDef>
 								<offset>(0.0,1.45,1.3)</offset>
 							</li>
@@ -356,11 +378,15 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_Ejaculation_Portrait</bedAnimationDef>
 								<offset>(1.5,2.01,1.15)</offset>
 								<drawSize>(4, 4)</drawSize>
@@ -371,11 +397,15 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_Ejaculation_Out_Portrait</bedAnimationDef>
 								<offset>(1.5,2.02,1.35)</offset>
 								<drawSize>(4, 4)</drawSize>
@@ -387,11 +417,15 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_Ejaculation</bedAnimationDef>
 								<offset>(0,0.05,-0.17)</offset>
 							</li>
@@ -401,11 +435,15 @@
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
 							<li>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 								<bedAnimationDef>YR_GloryHole_Ejaculation_Out</bedAnimationDef>
 								<offset>(0,0.06,-0.17)</offset>
 							</li>
@@ -439,13 +477,15 @@
 										<drawSize>(2.25, 2.25)</drawSize>
 									</portraitMeshGraphicData>
 								</portraitSetting>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-									<dummyForJoyIsActive>false</dummyForJoyIsActive>
-									<allMatch>true</allMatch>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
 							</li>
 						</conditonPortraitSettings>
 					</li>
@@ -476,12 +516,14 @@
 										<drawSize>(2.25, 2.25)</drawSize>
 									</portraitMeshGraphicData>
 								</portraitSetting>
-								<condition>
-									<hediffDefs>
-										<li>YR_Ejaculation_Hediff</li>
-									</hediffDefs>
-									<dummyForJoyIsActive>true</dummyForJoyIsActive>
-								</condition>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
 							</li>
 						</conditonPortraitSettings>
 					</li>
@@ -536,23 +578,25 @@
 					<!-- <drawSize>(2.25, 2.25)</drawSize> -->
 					<!-- </portraitMeshGraphicData> -->
 					<!-- </portraitSetting> -->
-					<!-- <condition> -->
+					<!-- <pawnCondition><heldPawnCondition> -->
 					<!-- <hediffDefs> -->
 					<!-- <li>YR_Ejaculation_Hediff</li> -->
 					<!-- </hediffDefs> -->
 					<!-- <dummyForJoyIsActive>true</dummyForJoyIsActive> -->
-					<!-- </condition> -->
+					<!-- </heldPawnCondition></pawnCondition> -->
 					<!-- </li> -->
 					<!-- </conditonPortraitSettings> -->
 					<!-- </li> -->
 				</pawnPortraitSettings>
 				<fillableBarSettings>
 					<li>
-						<condition>
-							<hediffDefs>
-								<li>YR_Pee_Hediff</li>
-							</hediffDefs>
-						</condition>
+						<pawnCondition>
+							<heldPawnCondition>
+								<hediffDefs>
+									<li>YR_Pee_Hediff</li>
+								</hediffDefs>
+							</heldPawnCondition>
+						</pawnCondition>
 						<offset>(0,0.04,0)</offset>
 						<drawSize>(0.8,0.8)</drawSize>
 						<color>(0.905,0.784,0.523,0.400)</color>

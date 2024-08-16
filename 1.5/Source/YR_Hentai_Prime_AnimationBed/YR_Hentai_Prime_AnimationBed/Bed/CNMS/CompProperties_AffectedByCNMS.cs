@@ -15,7 +15,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class ConditionSpawnThing
     {
-        public Condition condition;
+        public PawnCondition pawnCondition;
         public ThingDef thingToSpawn;
         public int spawnCount;
     }
@@ -125,7 +125,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     spawnCount = conditionSpawnThing.spawnCount;
                 }
 
-                if (Condition.ExecuteActionIfConditionMatches(HeldPawn, Building_AnimationBed, conditionSpawnThing.condition, action))
+                if (Condition.ExecuteActionIfConditionMatches(Building_AnimationBed, conditionSpawnThing.pawnCondition, action))
                 {
                     break;
                 }

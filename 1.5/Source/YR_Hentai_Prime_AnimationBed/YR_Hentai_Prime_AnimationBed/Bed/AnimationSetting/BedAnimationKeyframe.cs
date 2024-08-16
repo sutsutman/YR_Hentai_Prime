@@ -20,7 +20,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public List<SoundDef> soundDefs = new List<SoundDef>();
         public float probability = 10f;
-        public Condition condition;
+        public PawnCondition pawnCondition;
     }
 
     public class AnimationWorker_KeyframesBedAnimation : AnimationWorker_Keyframes

@@ -23,11 +23,11 @@
 					<li>OY_Tentacle_Dagger</li>
 					<li>OY_Tentacle_Bow</li>
 				</wearList>
-				<condition>
+				<pawnCondition><heldPawnCondition>
 					<bodyTypeDef>
 						<li>Female</li>
 					</bodyTypeDef>
-				</condition>
+				</heldPawnCondition></pawnCondition>
 				<makeThingCopyHitPoint>false</makeThingCopyHitPoint>
 				<makeApparel>
 					<li>YR_AP_Tentacle</li>

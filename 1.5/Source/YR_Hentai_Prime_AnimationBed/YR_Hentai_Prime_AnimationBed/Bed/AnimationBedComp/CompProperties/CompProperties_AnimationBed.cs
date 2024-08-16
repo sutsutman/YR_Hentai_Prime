@@ -24,7 +24,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public List<HediffDef> addedHediffDefs = new List<HediffDef>();
 
-        public Condition condition;
+        public PawnCondition pawnCondition;
         public CompProperties_AnimationBed() => compClass = typeof(CompAnimationBed);
     }
 }
