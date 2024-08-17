@@ -59,6 +59,8 @@
 										<li MayRequire="VAMV.MaruRaceMod">Maru</li>
 										<!-- Dragonian -->
 										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
+										<!-- 앤티 -->
+										<li MayRequir="Roo.AntyRaceMod">Anty</li>
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
@@ -533,6 +535,19 @@
 								</pawnCondition>
 								<bedAnimationDef>YR_Milking_Body_Dragonian</bedAnimationDef>
 							</li>
+							<!-- 앤티 -->
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
+								<drawSize>(-0.065,-0.065)</drawSize>
+								<offset>(0,0,-0.1375)</offset>
+								<bedAnimationDef>YR_Milking_Body_Anty</bedAnimationDef>
+							</li>
 						</conditionBedAnimationDefs>
 					</li>
 					<li>
@@ -569,6 +584,20 @@
 					<li>
 						<bedAnimationDef>YR_Milking_HMD</bedAnimationDef>
 						<conditionBedAnimationDefs>
+							<!-- 앤티 -->
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+										<Break>true</Break>
+									</heldPawnCondition>
+								</pawnCondition>
+								<drawSize>(0.75,0.75)</drawSize>
+								<offset>(0,-0.835,-0.32)</offset>
+								<bedAnimationDef>YR_Milking_HMD_AnotherSize</bedAnimationDef>
+							</li>
 							<!-- B.E.P Race -->
 							<li>
 								<pawnCondition>
@@ -588,7 +617,7 @@
 								</pawnCondition>
 								<offset>(0,0,-0.08)</offset>
 								<drawSize>(-0.2,0.4)</drawSize>
-								<bedAnimationDef>YR_Milking_HMD</bedAnimationDef>
+								<bedAnimationDef>YR_Milking_HMD_AnotherSize</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
@@ -664,6 +693,17 @@
 								<offset>(-0.02,0,-0.01)</offset>
 								<bedAnimationDef>YR_Milking_Line_R</bedAnimationDef>
 							</li>
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
+								<offset>(-0.02,0,-0.08)</offset>
+								<bedAnimationDef>YR_Milking_Line_R</bedAnimationDef>
+							</li>
 						</conditionBedAnimationDefs>
 					</li>
 					<li>
@@ -735,6 +775,17 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<offset>(0.02,0,-0.01)</offset>
+								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
+							</li>
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
+								<offset>(0.02,0,-0.08)</offset>
 								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
@@ -817,6 +868,7 @@
 					<li>
 						<bedAnimationDef>YR_Milking_Uterus</bedAnimationDef>
 						<conditionBedAnimationDefs>
+							<!-- 유란 -->
 							<li>
 								<pawnCondition>
 									<heldPawnCondition>
@@ -868,6 +920,17 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>YR_Milking_Uterus_Yuran_PowerB</bedAnimationDef>
+							</li>
+							<!-- 앤티 -->
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_Milking_Uterus_Anty</bedAnimationDef>
 							</li>
 							<!-- PowerMode(Other Race) -->
 							<li>
@@ -1152,6 +1215,18 @@
 					<!-- 우유 -->
 					<li>
 						<bedAnimationDef>YR_Milking_Milk</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_Milking_Milk_Anty</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
 					</li>
 					<!-- 펌프 -->
 					<li>

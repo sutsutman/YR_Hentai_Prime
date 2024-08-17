@@ -34,6 +34,24 @@
 				</graphicData>
 			</li>
 		</bedAnimationSettings>
+	<!-- HMD 사이즈 오염 방지용 -->
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Milking_HMD_AnotherSize</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<offset>(0.0,0.9,-0.25)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Head/HMD</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
 	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 	<!-- 착유 라인 -->
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>

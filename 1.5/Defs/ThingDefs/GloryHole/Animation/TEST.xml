@@ -23,7 +23,7 @@
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>
-				<offset>(0.0,2.95,0)</offset>
+				<offset>(0.0,3.0,0)</offset>
 				<graphicData>
 					<texPath>Yuran/Things/Building/Furniture/Polar/2</texPath>
 					<graphicClass>Graphic_Single</graphicClass>

@@ -297,8 +297,8 @@
 										<Break>true</Break>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,0.2)</offset>
-								<bedAnimationDef>YR_BellyPunch_BellyPunch</bedAnimationDef>
+								<offset>(0,0.06,0.125)</offset>
+								<bedAnimationDef>YR_BellyPunch_Pee_Up</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>

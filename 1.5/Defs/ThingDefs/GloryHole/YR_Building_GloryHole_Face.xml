@@ -433,7 +433,7 @@
 													</races>
 												</heldPawnCondition>
 											</pawnCondition>
-											<cameraOffset>(0, 0, -0.3)</cameraOffset>
+											<cameraOffset>(0, 0, -0.25)</cameraOffset>
 										</li>
 									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>

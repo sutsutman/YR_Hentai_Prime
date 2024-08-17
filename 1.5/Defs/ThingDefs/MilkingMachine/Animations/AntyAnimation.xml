@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 앤티 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Milking_Body_Anty</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<!--폰 애니메이션과 침대 애니메이션의 총 틱의 강제 매치 -->
+		<isPawnTextureReplace>true</isPawnTextureReplace>
+		<!-- 텍스처 판정을 폰 바디 랜더로 바꿈 -->
+		<setPawnColor>false</setPawnColor>
+		<!-- 이걸 해줘야 색상이 스킨 컬러, 셰이더 적용 됨. 다만 유란 같은 경우 적용이 되면 안되니깐 꺼둠 -->
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<!-- 이 텍스처는 어느 랜더 노드 태그 쓰는지 -->
+		<animationSynchro>true</animationSynchro>
+		<!--동일한 pawnRenderNodeTagDef를 가진 애니메이션과 움직임을 싱크로 -->
+		<!-- <logCurrentOffset>true</logCurrentOffset> -->
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0, 0.01,0.25)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Race/Anty/Thin/1_south</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.25, 1.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 앤티자궁 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Milking_Uterus_Anty</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Anty/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Anty/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Anty/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Anty/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>45</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Anty/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<offset>(0.0,1,0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Uterus/Anty/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 우유 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Milking_Milk_Anty</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>false</autoDurationTicksSetting>
+		<durationTicks>65</durationTicks>
+		<offset>(0.0,1,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Milk/Yellow/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>3</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Milk/Yellow/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>6</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Milk/Yellow/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>9</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Milk/Yellow/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Milk/Yellow/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+			<li>
+				<tick>15</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Body/Milk/Yellow/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>
