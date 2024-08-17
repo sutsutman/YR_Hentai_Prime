@@ -38,6 +38,7 @@
 		<joyKind>YR_Gaming_DummyForJoy</joyKind>
 		<!--<taleOnCompletion>Tale_UsedComputer</taleOnCompletion>-->
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+		<neverShowWeapon>true</neverShowWeapon>
 	</JobDef>
 	<JoyGiverDef>
 		<defName>Play_DummyForJoy</defName>

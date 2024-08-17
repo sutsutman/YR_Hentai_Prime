@@ -415,6 +415,26 @@
 										<li>
 											<cameraOffset>(0, 0, -0.4)</cameraOffset>
 										</li>
+										<li MayRequire="polonium.RorenRaceMod">
+											<pawnCondition>
+												<heldPawnCondition>
+													<races>
+														<li>Alien_Roren</li>
+													</races>
+												</heldPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(0, 0, -0.3)</cameraOffset>
+										</li>
+										<li MayRequire="Roo.AntyRaceMod">
+											<pawnCondition>
+												<heldPawnCondition>
+													<races>
+														<li>Anty</li>
+													</races>
+												</heldPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(0, 0, -0.3)</cameraOffset>
+										</li>
 									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>
 									<renderClothes>false</renderClothes>

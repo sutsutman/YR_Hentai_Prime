@@ -25,11 +25,11 @@
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_DummyForJoy">
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ForcePlay">
-			<jobDef>Play_BellyPunch</jobDef>
+				<jobDef>Play_BellyPunch</jobDef>
 			</li>
 		</comps>
 	</ThingDef>
-		<JobDef>
+	<JobDef>
 		<defName>Play_BellyPunch</defName>
 		<driverClass>YR_Hentai_Prime_AnimationBed.JobDriver_WatchDummyForJoy</driverClass>
 		<reportString>using pillar of painful love.</reportString>
@@ -38,6 +38,7 @@
 		<joyKind>YR_Gaming_BellyPunch</joyKind>
 		<!--<taleOnCompletion>Tale_UsedComputer</taleOnCompletion>-->
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+		<neverShowWeapon>true</neverShowWeapon>
 	</JobDef>
 	<JoyGiverDef>
 		<defName>Play_BellyPunch</defName>
