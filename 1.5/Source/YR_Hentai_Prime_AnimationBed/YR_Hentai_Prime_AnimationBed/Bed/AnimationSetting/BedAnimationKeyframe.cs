@@ -7,6 +7,7 @@ namespace YR_Hentai_Prime_AnimationBed
     public class BedAnimationKeyframe : Keyframe
     {
         public List<SoundSetting> soundSettings = new List<SoundSetting>();
+        public string texPath;
     }
 
     public class SoundSetting

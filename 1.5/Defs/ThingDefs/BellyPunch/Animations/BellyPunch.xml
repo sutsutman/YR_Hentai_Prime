@@ -38,6 +38,8 @@
 	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
 		<defName>YR_BellyPunch_BellyPunch</defName>
 		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
 		<bedAnimationSettings>
 			<li>
 				<tick>0</tick>

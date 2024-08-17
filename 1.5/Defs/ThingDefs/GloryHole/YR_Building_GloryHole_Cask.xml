@@ -36,6 +36,18 @@
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
 				<thingDef>YR_DummyForJoy</thingDef>
 				<animationDef>YR_Global_Animation_PanPanPlay_North_Sound</animationDef>
+				<conditionAnimationDefs>
+					<li MayRequire="Roo.AntyRaceMod">
+						<pawnCondition>
+							<joyPawnCondition>
+								<races>
+									<li>Anty</li>
+								</races>
+							</joyPawnCondition>
+						</pawnCondition>
+						<animationDef>YR_Anty_Animation_PanPanPlay_North_Sound_High</animationDef>
+					</li>
+				</conditionAnimationDefs>
 				<makeHediff>
 					<heldPawnHediffSetting>
 						<finishHediffSettings>
@@ -162,6 +174,7 @@
 					<li>
 						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						
 					</li>
 					<!-- 오크통 레이어 -->
 					<li>

@@ -35,6 +35,18 @@
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
 				<thingDef>YR_DummyForJoy</thingDef>
 				<animationDef>YR_Global_Animation_PanPanPlay_North_Sound</animationDef>
+				<conditionAnimationDefs>
+					<li MayRequire="Roo.AntyRaceMod">
+						<pawnCondition>
+							<joyPawnCondition>
+								<races>
+									<li>Anty</li>
+								</races>
+							</joyPawnCondition>
+						</pawnCondition>
+						<animationDef>YR_Anty_Animation_PanPanPlay_North_Sound_Middle</animationDef>
+					</li>
+				</conditionAnimationDefs>
 				<makeHediff>
 					<heldPawnHediffSetting>
 						<finishHediffSettings>
@@ -152,6 +164,18 @@
 							<pawnAnimationDef>YR_Global_Animation</pawnAnimationDef>
 						</li>
 					</conditonPawnAnimations>
+					<conditonPawnOffsets>
+						<li MayRequire="Roo.AntyRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Anty</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.1)</offset>
+						</li>
+					</conditonPawnOffsets>
 					<offset>(0,1,0.25)</offset>
 					<rotation>South</rotation>
 				</pawnAnimationSetting>

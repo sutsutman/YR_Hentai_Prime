@@ -40,6 +40,8 @@ namespace YR_Hentai_Prime_AnimationBed
                 CompProperties_SpawnDummyForJoy props = CompSpawnDummyForJoy?.Props;
                 Building_AnimationBed.PlaySoundSettings(Building_AnimationBed?.HeldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.waitAfterJoySoundSettings);
                 Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.waitAfterJoySoundSettings);
+
+                pawn.Drawer.renderer.SetAllGraphicsDirty();
             });
 
             watch.defaultCompleteMode = ToilCompleteMode.Delay;
@@ -88,10 +90,21 @@ namespace YR_Hentai_Prime_AnimationBed
             if (props != null)
             {
                 Pawn heldPawn = Building_AnimationBed?.HeldPawn;
-                if (pawn.Drawer.renderer.CurAnimation != props.animationDef && heldPawn != null)
+
+                var animationDef = props.animationDef;
+                foreach (var conditionAnimationDef in props.conditionAnimationDefs)
+                {
+                    void action() => animationDef = conditionAnimationDef.animationDef;
+                    if (Condition.ExecuteActionIfConditionMatches(Building_AnimationBed, conditionAnimationDef.pawnCondition, action))
+                    {
+                        break;
+                    }
+                }
+
+                if (pawn.Drawer.renderer.CurAnimation != animationDef && heldPawn != null)
                 {
                     //여기에 뭔가 원인이 있음
-                    pawn.Drawer.renderer.SetAnimation(props.animationDef);
+                    pawn.Drawer.renderer.SetAnimation(animationDef);
                     Building_AnimationBed.dummyForJoyIsActive = true;
                     Building_AnimationBed.dummyForJoyPawn = pawn;
                     //이전 폰 초기화
@@ -109,13 +122,77 @@ namespace YR_Hentai_Prime_AnimationBed
 
                         start = false;
                     }
+                }
 
+                if (heldPawn != null)
+                {
                     Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.randomSoundSettings);
                     Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.randomSoundSettings);
                 }
+
+
+                foreach (var animationPart in pawn.Drawer.renderer.CurAnimation.animationParts)
+                {
+                    for (int i = 0; i < animationPart.Value.keyframes.Count; i++)
+                    {
+                        var currentKeyframe = animationPart.Value.keyframes[i];
+                        var animationTick = pawn.Drawer.renderer.renderTree.AnimationTick;
+
+
+
+                        if (tempKeyframe != currentKeyframe && currentKeyframe is BedAnimationKeyframe BAK)
+                        {
+                            // 마지막 키프레임인지 확인
+                            if (i == animationPart.Value.keyframes.Count - 1)
+                            {
+                                // 마지막 키프레임 이후로는 해당 키프레임의 텍스처 유지
+                                if (currentKeyframe.tick <= animationTick)
+                                {
+                                    if (!BAK.texPath.NullOrEmpty())
+                                    {
+                                        if (!graphicSeted)
+                                        {
+                                            pawn.Drawer.renderer.SetAllGraphicsDirty();
+                                            graphicSeted = true;
+                                        }
+                                        else if(tempKeyframe.texPath != BAK.texPath)
+                                        {
+                                            pawn.Drawer.renderer.SetAllGraphicsDirty();
+                                        }
+                                        tempKeyframe = BAK;
+                                    }
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                var nextKeyframe = animationPart.Value.keyframes[i + 1];
+                                // 현재 애니메이션 틱이 두 키프레임 사이에 있을 때 텍스처 변경
+                                if (currentKeyframe.tick <= animationTick && animationTick < nextKeyframe.tick)
+                                {
+                                    if (!BAK.texPath.NullOrEmpty())
+                                    {
+                                        if (!graphicSeted)
+                                        {
+                                            pawn.Drawer.renderer.SetAllGraphicsDirty();
+                                            graphicSeted = true;
+                                        }
+                                        else if (tempKeyframe.texPath != BAK.texPath)
+                                        {
+                                            pawn.Drawer.renderer.SetAllGraphicsDirty();
+                                        }
+                                        tempKeyframe = BAK;
+                                    }
+                                    break; // 텍스처가 설정되었으므로 루프 중단
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-
+        bool graphicSeted = false;
+        BedAnimationKeyframe tempKeyframe;
 
         private static void AddHediff(Pawn pawn, Building_AnimationBed building_AnimationBed, List<HediffSetting> hediffSettings)
         {

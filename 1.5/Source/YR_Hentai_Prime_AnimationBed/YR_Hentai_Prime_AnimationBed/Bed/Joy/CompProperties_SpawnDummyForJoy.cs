@@ -10,11 +10,17 @@ namespace YR_Hentai_Prime_AnimationBed
         public ThingDef thingDef;
 
         public AnimationDef animationDef;
+        public List<ConditionAnimationDef> conditionAnimationDefs = new List<ConditionAnimationDef>();
 
         public int waitAfterJoyTick = 0;
 
         public MakeHediff makeHediff = new MakeHediff();
         public MakeSound makeSound = new MakeSound();
+    }
+    public class ConditionAnimationDef
+    {
+        public AnimationDef animationDef;
+        public PawnCondition pawnCondition;
     }
 
     public class MakeSound

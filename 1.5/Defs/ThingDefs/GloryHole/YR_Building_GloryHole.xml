@@ -35,6 +35,18 @@
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
 				<thingDef>YR_DummyForJoy</thingDef>
 				<animationDef>YR_Global_Animation_PanPanPlay_North_Sound</animationDef>
+				<conditionAnimationDefs>
+					<li MayRequire="Roo.AntyRaceMod">
+						<pawnCondition>
+							<joyPawnCondition>
+								<races>
+									<li>Anty</li>
+								</races>
+							</joyPawnCondition>
+						</pawnCondition>
+						<animationDef>YR_Anty_Animation_PanPanPlay_North_Sound_Middle</animationDef>
+					</li>
+				</conditionAnimationDefs>
 				<makeHediff>
 					<heldPawnHediffSetting>
 						<finishHediffSettings>

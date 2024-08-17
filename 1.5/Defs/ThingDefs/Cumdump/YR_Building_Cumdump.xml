@@ -39,6 +39,18 @@
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
 				<thingDef>YR_DummyForJoy</thingDef>
 				<animationDef>YR_Global_Animation_PanPanPlay_North_Sound</animationDef>
+				<conditionAnimationDefs>
+					<li MayRequire="Roo.AntyRaceMod">
+						<pawnCondition>
+							<joyPawnCondition>
+								<races>
+									<li>Anty</li>
+								</races>
+							</joyPawnCondition>
+						</pawnCondition>
+						<animationDef>YR_Anty_Animation_PanPanPlay_North_Sound_Low</animationDef>
+					</li>
+				</conditionAnimationDefs>
 				<waitAfterJoyTick>500</waitAfterJoyTick>
 				<makeHediff>
 					<heldPawnHediffSetting>
@@ -157,21 +169,19 @@
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
 				<pawnAnimationSetting>
 					<pawnAnimationDef>YR_Global_Animation_NoMove</pawnAnimationDef>
-					<!-- 기본 애니메이션 -->
-					<!-- <conditonPawnAnimations> -->
-					<!-- <li> -->
-					<!-- <pawnCondition><heldPawnCondition> -->
-					<!-- <races> -->
-					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li> -->
-					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li> -->
-					<!-- </races> -->
-					<!-- <dummyForJoyIsActive>true</dummyForJoyIsActive> -->
-					<!-- <allMatch>true</allMatch> -->
-					<!-- </heldPawnCondition></pawnCondition> -->
-					<!-- <pawnAnimationDef>YR_Global_Animation_BodyChange</pawnAnimationDef> -->
-					<!-- </li> -->
-					<!-- </conditonPawnAnimations> -->
 					<offset>(0,1,0.1)</offset>
+					<conditonPawnOffsets>
+						<li MayRequire="Roo.AntyRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Anty</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,1,-0.02)</offset>
+						</li>
+					</conditonPawnOffsets>
 				</pawnAnimationSetting>
 				<bedAnimationList>
 					<!-- 폰의 바디, 헤드 -->

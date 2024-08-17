@@ -89,6 +89,14 @@
 						<li>
 							<pawnCondition>
 								<heldPawnCondition>
+									<dummyForJoyIsActive>true</dummyForJoyIsActive>
+								</heldPawnCondition>
+							</pawnCondition>
+							<pawnAnimationDef>YR_Global_Animation</pawnAnimationDef>
+						</li>
+						<li>
+							<pawnCondition>
+								<heldPawnCondition>
 									<races>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
@@ -137,6 +145,20 @@
 					<!-- 눈가리개 -->
 					<li>
 						<bedAnimationDef>YR_BellyPunch_EyePatch</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,-0.03)</offset>
+								<bedAnimationDef>YR_BellyPunch_EyePatch</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
 					</li>
 					<!-- 묶기 -->
 					<li>
@@ -206,6 +228,29 @@
 					<li>
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
 						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_BellyPunch_BellyPunch</bedAnimationDef>
+								<offset>(0,0.06,0)</offset>
+							</li>
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+										<allMatch>true</allMatch>
+										<Break>true</Break>
+									</heldPawnCondition>
+								</pawnCondition>
+								<offset>(0,0.06,0.08)</offset>
+								<bedAnimationDef>YR_BellyPunch_BellyPunch</bedAnimationDef>
+							</li>
 							<!-- 배빵이 따로 있는 애들 -->
 							<li>
 								<pawnCondition>
@@ -218,15 +263,6 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
-							</li>
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<dummyForJoyIsActive>true</dummyForJoyIsActive>
-									</heldPawnCondition>
-								</pawnCondition>
-								<bedAnimationDef>YR_BellyPunch_BellyPunch</bedAnimationDef>
-								<offset>(0,0.06,0)</offset>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
@@ -246,6 +282,23 @@
 								</pawnCondition>
 								<bedAnimationDef>YR_BellyPunch_Pee_Up</bedAnimationDef>
 								<offset>(0,0.06,0)</offset>
+							</li>
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+										<hediffDefs>
+											<li>YR_BellyPunch_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+										<Break>true</Break>
+									</heldPawnCondition>
+								</pawnCondition>
+								<offset>(0,0,0.2)</offset>
+								<bedAnimationDef>YR_BellyPunch_BellyPunch</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
@@ -283,6 +336,23 @@
 								</pawnCondition>
 								<bedAnimationDef>YR_BellyPunch_Bruise</bedAnimationDef>
 								<offset>(0,0.06,0)</offset>
+							</li>
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li>Anty</li>
+										</races>
+										<hediffDefs>
+											<li>YR_BellyPunch_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+										<Break>true</Break>
+									</heldPawnCondition>
+								</pawnCondition>
+								<offset>(0,0.06,0.08)</offset>
+								<bedAnimationDef>YR_BellyPunch_Bruise</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>
