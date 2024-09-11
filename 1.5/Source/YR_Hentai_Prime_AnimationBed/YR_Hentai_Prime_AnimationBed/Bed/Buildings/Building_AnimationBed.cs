@@ -15,6 +15,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             base.SpawnSetup(map, respawningAfterLoad);
             powerComp = GetComp<CompPowerTrader>();
+            refuelableComp = GetComp<CompRefuelable>();
         }
 
         public ThingOwner innerContainer;
@@ -161,7 +162,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public int tempAnimationTick = 0;
         private CompPowerTrader powerComp;
-        public bool PowerOn => ((powerComp != null && powerComp.PowerOn) || powerComp == null);
+        private CompRefuelable refuelableComp;
+        public bool PowerOn => ((powerComp != null && powerComp.PowerOn) || powerComp == null) && (refuelableComp == null || refuelableComp != null && refuelableComp.HasFuel);
 
         public bool stopAnimation = false;
 

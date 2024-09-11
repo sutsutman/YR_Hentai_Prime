@@ -194,7 +194,7 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 					</keyframes>
 				</value>
@@ -297,27 +297,27 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 						<li>
 							<tick>4</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 						<li>
 							<tick>8</tick>
-							<offset>(0.0,-180,0.01)</offset>
+							<offset>(0.0,-9.5,0.01)</offset>
 						</li>
 						<li>
 							<tick>12</tick>
-							<offset>(0.0,-180,0.015)</offset>
+							<offset>(0.0,-9.5,0.015)</offset>
 						</li>
 						<li>
 							<tick>40</tick>
-							<offset>(0.0,-180,0.01)</offset>
+							<offset>(0.0,-9.5,0.01)</offset>
 						</li>
 						<li>
 							<tick>60</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 					</keyframes>
 				</value>
@@ -368,19 +368,19 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 						<li>
 							<tick>4</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 						<li>
 							<tick>8</tick>
-							<offset>(0.0,-180,0.01)</offset>
+							<offset>(0.0,-9.5,0.01)</offset>
 						</li>
 						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>12</tick>
-							<offset>(0.0,-180,0.015)</offset>
+							<offset>(0.0,-9.5,0.015)</offset>
 							<soundSettings>
 								<li>
 									<soundDefs>
@@ -405,11 +405,11 @@
 						</li>
 						<li>
 							<tick>40</tick>
-							<offset>(0.0,-180,0.01)</offset>
+							<offset>(0.0,-9.5,0.01)</offset>
 						</li>
 						<li>
 							<tick>60</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 					</keyframes>
 				</value>
@@ -428,11 +428,11 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>12</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 							<soundSettings>
 								<li>
 									<soundDefs>
@@ -451,11 +451,11 @@
 						</li>
 						<li>
 							<tick>40</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 						<li>
 							<tick>60</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 					</keyframes>
 				</value>
@@ -474,7 +474,7 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 					</keyframes>
 				</value>
@@ -486,7 +486,7 @@
 					<keyframes>
 						<li>
 							<tick>0</tick>
-							<offset>(0.0,-180,0)</offset>
+							<offset>(0.0,-9.5,0)</offset>
 						</li>
 					</keyframes>
 				</value>

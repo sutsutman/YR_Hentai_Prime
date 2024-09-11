@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using Verse;
 
@@ -13,9 +14,10 @@ namespace YR_Hentai_Prime_AnimationBed
     }
 
 
-    public class CompForcePlay : CompBaseOfAnimationBed
+    public class CompForcePlay : ThingComp
     {
         public CompProperties_ForcePlay Props => (CompProperties_ForcePlay)props;
+        public Building_AnimationBed Building_AnimationBed => parent.TryGetComp<CompDummyForJoy>().building_AnimationBed;
         public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn selPawn)
         {
             // 특정 건물을 우클릭했을 때의 동작 구현
@@ -28,8 +30,15 @@ namespace YR_Hentai_Prime_AnimationBed
                 selPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(Props.jobDef, parent, parent.InteractionCell));
             }
 
-            // FloatMenuOption 생성 및 추가
-            yield return new FloatMenuOption("YR_ForcePlay".Translate(selPawn), action);
+            if (Building_AnimationBed.PowerOn)
+            {
+                // FloatMenuOption 생성 및 추가
+                yield return new FloatMenuOption("YR_ForcePlay".Translate(selPawn), action);
+            }
+            else
+            {
+                yield return new FloatMenuOption("YR_CantPlay_PowerOff".Translate(parent), null, MenuOptionPriority.DisabledOption);
+            }
         }
     }
 }

@@ -42,7 +42,7 @@
 	</JobDef>
 	<JoyGiverDef>
 		<defName>Play_DummyForJoy</defName>
-		<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+		<giverClass>YR_Hentai_Prime_AnimationBed.JoyGiver_InteractBuildingInteractionCell_DummyForJoy</giverClass>
 		<baseChance>10</baseChance>
 		<thingDefs>
 			<li>YR_DummyForJoy</li>

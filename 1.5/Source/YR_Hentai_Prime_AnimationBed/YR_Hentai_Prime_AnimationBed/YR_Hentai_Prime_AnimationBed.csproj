@@ -79,10 +79,13 @@
     <Compile Include="Bed\AnimationSetting\CompProperties_AnimationSetting.cs" />
     <Compile Include="Bed\CNMS\CompProperties_AffectedByCNMS.cs" />
     <Compile Include="Bed\CNMS\CompProperties_Facility_CNMS.cs" />
+    <Compile Include="Bed\Energy\CompProperties_AffectedByStockEnergy.cs" />
+    <Compile Include="Bed\Energy\CompProperties_Facility_StockEnergy.cs" />
     <Compile Include="Bed\CompProperties_ToggleHediff.cs" />
     <Compile Include="Bed\CompProperties_DrawPicture.cs" />
     <Compile Include="Bed\CompProperties_SoundAndMote.cs" />
     <Compile Include="Bed\CompPowerPlant_Building_BaseBondageBed.cs" />
+    <Compile Include="Bed\Joy\JoyGiver_InteractBuildingInteractionCell_DummyForJoy.cs" />
     <Compile Include="Bed\Mod\YR_Hentai_Prime_AnimationBed_Setting.cs" />
     <Compile Include="Bed\Mod\YR_Hentai_Prime_AnimationBed_Mod.cs" />
     <Compile Include="Bed\Joy\CompProperties_ForcePlay.cs" />

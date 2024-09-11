@@ -84,6 +84,9 @@
 			<WorkToBuild>800</WorkToBuild>
 			<Mass>30</Mass>
 		</statBases>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<comps>
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
