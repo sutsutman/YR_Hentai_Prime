@@ -101,6 +101,16 @@
 							</pawnCondition>
 							<offset>(0,0,-0.25)</offset>
 						</li>
+						<li MayRequire="VAMV.MaruRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Maru</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,-0.25)</offset>
+						</li>
 					</conditonPawnOffsets>
 				</pawnAnimationSetting>
 				<bedAnimationList>
