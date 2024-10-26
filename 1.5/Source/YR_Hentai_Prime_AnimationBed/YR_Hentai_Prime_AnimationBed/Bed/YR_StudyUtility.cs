@@ -12,6 +12,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public static void TargetHoldingPlatformForVictim(Pawn carrier, Thing victim, bool transferBetweenPlatforms = false, Thing sourcePlatform = null)
         {
+            //1
             Find.Targeter.BeginTargeting(TargetingParameters.ForBuilding(), delegate (LocalTargetInfo t)
             {
                 if (carrier != null && !CanReserveForTransfer(t))
@@ -42,19 +43,18 @@ namespace YR_Hentai_Prime_AnimationBed
                         job.count = 1;
                         carrier.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                     }
-
-                    //if (t.Thing != null && !t.Thing.SafelyContains(victim))
-                    //{
-                    //    Messages.Message("MessageTargetBelowMinimumContainmentStrength".Translate(t.Thing.Label, victim.Label), MessageTypeDefOf.ThreatSmall);
-                    //}
                 }
-            }, delegate (LocalTargetInfo t)
+            }, 
+            //2
+            delegate (LocalTargetInfo t)
             {
                 if (ValidateTarget(t))
                 {
                     GenDraw.DrawTargetHighlight(t);
                 }
-            }, ValidateTarget, null, null, BaseContent.ClearTex, playSoundOnAction: true, delegate (LocalTargetInfo t)
+            }, 
+            //3
+            ValidateTarget, null, null, BaseContent.ClearTex, playSoundOnAction: true, delegate (LocalTargetInfo t)
             {
                 CompAnimationBed compAnimationBed = t.Thing?.TryGetComp<CompAnimationBed>();
                 if (compAnimationBed == null)
@@ -95,7 +95,9 @@ namespace YR_Hentai_Prime_AnimationBed
 
                     Widgets.MouseAttachedLabel(label);
                 }
-            }, delegate
+            }, 
+            //4
+            delegate
             {
                 foreach (Building item2 in victim.MapHeld.listerBuildings.AllBuildingsColonistOfClass<Building_AnimationBed>())
                 {
@@ -105,6 +107,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
                 }
             });
+            //5
             bool CanReserveForTransfer(LocalTargetInfo t)
             {
                 if (transferBetweenPlatforms)
@@ -119,7 +122,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 return true;
             }
-
+            //6
             bool ValidateTarget(LocalTargetInfo t)
             {
                 if (t.HasThing && t.Thing.TryGetComp(out CompAnimationBed comp) && comp.HeldPawn == null)

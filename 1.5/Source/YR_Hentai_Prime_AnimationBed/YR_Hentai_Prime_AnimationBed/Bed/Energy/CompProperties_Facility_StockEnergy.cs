@@ -1,7 +1,4 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
 using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
@@ -39,13 +36,13 @@ namespace YR_Hentai_Prime_AnimationBed
                             comp.ticksToMakeEnergy = comp.Props.ticksToMakeEnergy;
                             stockedEnergy += comp.Props.makeEnergy;
 
-                            if (stockedEnergy>=Props.stockableEnergy)
+                            if (stockedEnergy >= Props.stockableEnergy)
                             {
                                 stockedEnergy = Props.stockableEnergy;
                                 break;
                             }
                         }
-                    } 
+                    }
                 }
             }
         }
@@ -55,7 +52,7 @@ namespace YR_Hentai_Prime_AnimationBed
             return "YR_StockedEnergy".Translate() + $" : {stockedEnergy} / {Props.stockableEnergy}";
         }
 
-        
+
 
         public override void PostExposeData()
         {

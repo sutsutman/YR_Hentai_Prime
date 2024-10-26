@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
 using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
@@ -61,7 +60,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
             //시간 초기화는 에너지 받는 쪽에서 컨트롤
         }
-     
+
         public override string CompInspectStringExtra()
         {
             return "YR_EnegyMake".Translate() + $" : {Props.makeEnergy}" + "\n" + $"YR_TicksToMakeEnergy".Translate() + " : " + (int)ticksToMakeEnergy.TicksToSeconds();

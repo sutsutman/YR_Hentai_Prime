@@ -155,7 +155,7 @@ namespace YR_Hentai_Prime_AnimationBed
                                             pawn.Drawer.renderer.SetAllGraphicsDirty();
                                             graphicSeted = true;
                                         }
-                                        else if(tempKeyframe.texPath != BAK.texPath)
+                                        else if (tempKeyframe.texPath != BAK.texPath)
                                         {
                                             pawn.Drawer.renderer.SetAllGraphicsDirty();
                                         }
