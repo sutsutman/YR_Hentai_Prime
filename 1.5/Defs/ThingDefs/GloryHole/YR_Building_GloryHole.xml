@@ -92,6 +92,30 @@
 								<!-- <pawnCondition/> -->
 								<!-- </li> -->
 								<!-- </conditionSoundSettings> -->
+								<conditionSoundSettings>
+									<!-- B.E.P Race -->
+									<li>
+										<pawnCondition>
+											<heldPawnCondition>
+												<races>
+													<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+													<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+													<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+													<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+													<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+													<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+													<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+													<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+													<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+												</races>
+											</heldPawnCondition>
+										</pawnCondition>
+										<soundDefs>
+											<li>BEPRace_OohSound_1</li>
+											<li>BEPRace_OohSound_2</li>
+										</soundDefs>
+									</li>
+								</conditionSoundSettings>
 							</li>
 						</startSoundSettings>
 						<randomSoundSettings>
@@ -107,6 +131,31 @@
 									<li>OohSound_7</li>
 									<li>OohSound_8</li>
 								</soundDefs>
+								<conditionSoundSettings>
+									<!-- B.E.P Race -->
+									<li>
+										<pawnCondition>
+											<heldPawnCondition>
+												<races>
+													<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+													<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+													<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+													<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+													<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+													<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+													<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+													<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+													<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+												</races>
+											</heldPawnCondition>
+										</pawnCondition>
+										<soundDefs>
+											<li>BEPRace_OohSound_1</li>
+											<li>BEPRace_OohSound_2</li>
+										</soundDefs>
+										<probability>0.005</probability>
+									</li>
+								</conditionSoundSettings>
 								<!-- 이 경우 1틱당 0.05프로의 확률로 소리가 남 -->
 								<probability>0.005</probability>
 							</li>
@@ -175,6 +224,25 @@
 								</heldPawnCondition>
 							</pawnCondition>
 							<offset>(0,1,0.15)</offset>
+						</li>
+						<!-- B.E.P Race -->
+						<li>
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+										<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+										<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+										<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+										<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+										<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+										<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,-0.5,0.25)</offset>
 						</li>
 					</conditonPawnOffsets>
 					<rotation>North</rotation>
@@ -399,6 +467,25 @@
 								<li>
 									<cameraOffset>(0.0, -0.1, -0.1)</cameraOffset>
 								</li>
+								<!-- B.E.P Race -->
+								<li>
+									<pawnCondition>
+										<heldPawnCondition>
+											<races>
+												<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+												<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+												<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+												<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+												<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+												<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+												<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+												<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+												<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+											</races>
+										</heldPawnCondition>
+									</pawnCondition>
+									<cameraOffset>(0, -0.1, -0.21)</cameraOffset>
+								</li>
 							</conditionCameraOffsets>
 							<cameraZoom>0.895</cameraZoom>
 							<renderClothes>false</renderClothes>
@@ -447,6 +534,25 @@
 												</heldPawnCondition>
 											</pawnCondition>
 											<cameraOffset>(0, 0, -0.3)</cameraOffset>
+										</li>
+										<!-- B.E.P Race -->
+										<li>
+											<pawnCondition>
+												<heldPawnCondition>
+													<races>
+														<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+														<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+														<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+														<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+														<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+														<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+														<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+														<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+														<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+													</races>
+												</heldPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(0, 0, -0.395)</cameraOffset>
 										</li>
 									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>

@@ -86,7 +86,7 @@
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
-							<offset>(0,0,0.195)</offset>
+							<offset>(0,0,0.235)</offset>
 						</li>
 						<!-- Maru -->
 						<li>
@@ -194,7 +194,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Small</bedAnimationDef>
 							</li>
 							<li>
@@ -212,7 +212,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Small_PowerA</bedAnimationDef>
 							</li>
 							<li>
@@ -230,7 +230,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Small_PowerB</bedAnimationDef>
 							</li>
 							<li>
@@ -255,7 +255,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Small</bedAnimationDef>
 							</li>
 							<li>
@@ -282,7 +282,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Small_PowerA</bedAnimationDef>
 							</li>
 							<li>
@@ -309,7 +309,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Small_PowerB</bedAnimationDef>
 							</li>
 							<li>
@@ -334,7 +334,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Big</bedAnimationDef>
 							</li>
 							<li>
@@ -361,7 +361,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Big_PowerA</bedAnimationDef>
 							</li>
 							<li>
@@ -388,7 +388,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Big_PowerB</bedAnimationDef>
 							</li>
 							<li>
@@ -407,7 +407,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Resur_Small</bedAnimationDef>
 							</li>
 							<li>
@@ -428,7 +428,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Resur_Small_PowerA</bedAnimationDef>
 							</li>
 							<li>
@@ -449,7 +449,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Resur_Small_PowerB</bedAnimationDef>
 							</li>
 							<li>
@@ -468,7 +468,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Resur_Big</bedAnimationDef>
 							</li>
 							<li>
@@ -489,7 +489,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Resur_Big_PowerA</bedAnimationDef>
 							</li>
 							<li>
@@ -510,7 +510,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.055)</offset>
+								<offset>(0,0,-0.015)</offset>
 								<bedAnimationDef>BEPRace_YR_Milking_Body_Resur_Big_PowerB</bedAnimationDef>
 							</li>
 							<!-- Maru -->
@@ -616,7 +616,7 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<offset>(0,0,-0.08)</offset>
-								<drawSize>(-0.2,0.4)</drawSize>
+								<drawSize>(0.05,0.65)</drawSize>
 								<bedAnimationDef>YR_Milking_HMD_AnotherSize</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
@@ -634,7 +634,7 @@
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(-0.05,0,-0.11)</offset>
+								<offset>(-0.05,0,-0.09)</offset>
 								<bedAnimationDef>YR_Milking_Line_R</bedAnimationDef>
 							</li>
 							<li>
@@ -656,7 +656,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(-0.05,0,-0.11)</offset>
+								<offset>(-0.05,0,-0.09)</offset>
 								<bedAnimationDef>YR_Milking_Line_R</bedAnimationDef>
 							</li>
 							<li>
@@ -678,7 +678,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(-0.04,0,-0.14)</offset>
+								<offset>(-0.03,0,-0.12)</offset>
 								<bedAnimationDef>YR_Milking_Line_R</bedAnimationDef>
 							</li>
 							<!-- Dragonian -->
@@ -718,7 +718,7 @@
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0.05,0,-0.11)</offset>
+								<offset>(0.05,0,-0.09)</offset>
 								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
 							</li>
 							<li>
@@ -740,7 +740,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0.05,0,-0.11)</offset>
+								<offset>(0.05,0,-0.09)</offset>
 								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
 							</li>
 							<li>
@@ -762,7 +762,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0.04,0,-0.14)</offset>
+								<offset>(0.03,0,-0.12)</offset>
 								<bedAnimationDef>YR_Milking_Line_L</bedAnimationDef>
 							</li>
 							<!-- Dragonian -->
@@ -1004,7 +1004,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Small</bedAnimationDef>
-								<offset>(0,0,0.33)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 							<li>
 								<pawnCondition>
@@ -1022,7 +1023,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Small_PowerA</bedAnimationDef>
-								<offset>(0,0,0.33)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 							<li>
 								<pawnCondition>
@@ -1040,7 +1042,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Small_PowerB</bedAnimationDef>
-								<offset>(0,0,0.33)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 							<li>
 								<pawnCondition>
@@ -1066,7 +1069,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Small</bedAnimationDef>
-								<offset>(0,0,0.33)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 							<li>
 								<pawnCondition>
@@ -1094,7 +1098,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Small_PowerA</bedAnimationDef>
-								<offset>(0,0,0.33)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 							<li>
 								<pawnCondition>
@@ -1122,7 +1127,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Small_PowerB</bedAnimationDef>
-								<offset>(0,0,0.33)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 							<li>
 								<pawnCondition>
@@ -1148,7 +1154,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Big</bedAnimationDef>
-								<offset>(0,0,0.31)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 							<li>
 								<pawnCondition>
@@ -1176,7 +1183,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Big_PowerA</bedAnimationDef>
-								<offset>(0,0,0.31)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 							<li>
 								<pawnCondition>
@@ -1204,7 +1212,8 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<bedAnimationDef>BEPRace_YR_Milking_Lock_Big_PowerB</bedAnimationDef>
-								<offset>(0,0,0.31)</offset>
+								<drawSize>(0.2,0.2)</drawSize>
+								<offset>(0,0,0.23)</offset>
 							</li>
 						</conditionBedAnimationDefs>
 					</li>

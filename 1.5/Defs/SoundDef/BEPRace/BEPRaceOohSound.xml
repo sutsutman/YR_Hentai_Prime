@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<SoundDef>
+		<defName>BEPRace_OohSound_1</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEPRace/Ooh/OohSound_1</clipPath>
+					</li>
+				</grains>
+				<volumeRange>50</volumeRange>
+				<distRange>10~30</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>BEPRace_OohSound_2</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEPRace/Ooh/OohSound_2</clipPath>
+					</li>
+				</grains>
+				<volumeRange>50</volumeRange>
+				<distRange>10~30</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>
