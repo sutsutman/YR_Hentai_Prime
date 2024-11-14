@@ -1038,7 +1038,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1048,7 +1048,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1058,7 +1058,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1068,7 +1068,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1078,7 +1078,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1088,7 +1088,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1104,7 +1104,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1114,7 +1114,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1124,7 +1124,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1134,7 +1134,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1144,7 +1144,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1154,7 +1154,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1170,7 +1170,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1180,7 +1180,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1190,7 +1190,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1200,7 +1200,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1210,7 +1210,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1220,7 +1220,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1230,7 +1230,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1240,7 +1240,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1250,7 +1250,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1260,7 +1260,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1270,7 +1270,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1280,7 +1280,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1290,7 +1290,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Small/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1307,7 +1307,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1317,7 +1317,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1327,7 +1327,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1337,7 +1337,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1347,7 +1347,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1357,7 +1357,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1373,7 +1373,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1383,7 +1383,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1393,7 +1393,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1403,7 +1403,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1413,7 +1413,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1423,7 +1423,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1439,7 +1439,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1449,7 +1449,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1459,7 +1459,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1469,7 +1469,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1479,7 +1479,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1489,7 +1489,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1499,7 +1499,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1509,7 +1509,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1519,7 +1519,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1529,7 +1529,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1539,7 +1539,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/3_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1549,7 +1549,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/2_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
@@ -1559,7 +1559,7 @@
 				<graphicData>
 					<texPath>BEPRace/Build/MilkingMachine/Bond_Big/1_south</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
-					<drawSize>(2, 2)</drawSize>
+					<drawSize>(1.25, 1.25)</drawSize>
 					<shaderType>Transparent</shaderType>
 				</graphicData>
 			</li>
