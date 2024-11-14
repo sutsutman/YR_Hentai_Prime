@@ -89,7 +89,7 @@
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
-							<offset>(0,0,-0.145)</offset>
+							<offset>(0,0,-0.105)</offset>
 						</li>
 						<li MayRequire="Roo.AntyRaceMod">
 							<pawnCondition>
@@ -151,7 +151,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.385)</offset>
+								<offset>(0,0,-0.345)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Small</bedAnimationDef>
 							</li>
 							<li>
@@ -176,7 +176,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.385)</offset>
+								<offset>(0,0,-0.345)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Small</bedAnimationDef>
 							</li>
 							<li>
@@ -201,7 +201,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.385)</offset>
+								<offset>(0,0,-0.345)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Big</bedAnimationDef>
 							</li>
 							<li>
@@ -220,7 +220,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.385)</offset>
+								<offset>(0,0,-0.345)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Resur_Small</bedAnimationDef>
 							</li>
 							<li>
@@ -239,7 +239,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.385)</offset>
+								<offset>(0,0,-0.345)</offset>
 								<bedAnimationDef>BEPRace_GeneratorPod_Body_Resur_Big</bedAnimationDef>
 							</li>
 						</conditionBedAnimationDefs>
@@ -328,7 +328,7 @@
 									</heldPawnCondition>
 								</pawnCondition>
 								<offset>(0,0,0.04)</offset>
-								<drawSize>(-0.5,0)</drawSize>
+								<drawSize>(0,0.25)</drawSize>
 								<bedAnimationDef>YR_GeneratorPod_HMD</bedAnimationDef>
 							</li>
 							<li MayRequire="Roo.AntyRaceMod">
@@ -466,7 +466,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0.04,0,-0.14)</offset>
+								<offset>(0.01,0,-0.15)</offset>
 								<bedAnimationDef>YR_GeneratorPod_Milking</bedAnimationDef>
 							</li>
 							<li MayRequire="Roo.AntyRaceMod">
@@ -503,7 +503,7 @@
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(0,0,-0.13)</offset>
+								<offset>(0,0,-0.09)</offset>
 								<bedAnimationDef>YR_GeneratorPod_Neck</bedAnimationDef>
 							</li>
 							<li MayRequire="Roo.AntyRaceMod">
@@ -532,7 +532,7 @@
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(-0.05,0,-0.12)</offset>
+								<offset>(-0.03,0,-0.11)</offset>
 								<bedAnimationDef>YR_GeneratorPod_NippleFuck</bedAnimationDef>
 							</li>
 							<li>
@@ -554,7 +554,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(-0.05,0,-0.12)</offset>
+								<offset>(-0.03,0,-0.11)</offset>
 								<bedAnimationDef>YR_GeneratorPod_NippleFuck</bedAnimationDef>
 							</li>
 							<li>
@@ -576,7 +576,7 @@
 										<allMatch>true</allMatch>
 									</heldPawnCondition>
 								</pawnCondition>
-								<offset>(-0.03,0,-0.16)</offset>
+								<offset>(-0.03,0,-0.13)</offset>
 								<bedAnimationDef>YR_GeneratorPod_NippleFuck</bedAnimationDef>
 							</li>
 							<li MayRequire="Roo.AntyRaceMod">
