@@ -246,7 +246,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public void Notify_HeldOnPlatform(ThingOwner newOwner)
         {
-            Log.Error("1");
             targetHolder = null;
             Pawn pawn = null;
             if (parent is Pawn pawn2)
@@ -256,10 +255,8 @@ namespace YR_Hentai_Prime_AnimationBed
                 pawn = pawn2;
             }
 
-            Log.Error("2");
             if (newOwner != null)
             {
-                Log.Error("3");
                 if (Props.heldPawnKind != null)
                 {
                     Pawn pawn3 = PawnGenerator.GeneratePawn(new PawnGenerationRequest(Props.heldPawnKind, Faction.OfEntities, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: true, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, 0f));
@@ -283,11 +280,9 @@ namespace YR_Hentai_Prime_AnimationBed
                     Find.HiddenItemsManager.SetDiscovered(pawn3.def);
                     parent.Destroy();
                 }
-                Log.Error("4");
 
                 //containmentMode = EntityContainmentMode.Study;
             }
-            Log.Error("5");
 
             if (pawn != null && AnimationBed != null)
             {
@@ -296,19 +291,16 @@ namespace YR_Hentai_Prime_AnimationBed
                 //Find.StudyManager.UpdateStudiableCache(AnimationBed, AnimationBed.Map);
                 //PlayerKnowledgeDatabase.KnowledgeDemonstrated(ConceptDefOf.CapturingEntities, KnowledgeAmount.Total);
                 // LessonAutoActivator.TeachOpportunity(ConceptDefOf.ContainingEntities, OpportunityType.Important);
-            }
 
-            Log.Error("6");
-            foreach (var comp in AnimationBed.AllComps)
-            {
-                Log.Error("7");
-                if (comp is CompBaseOfAnimationBed compBaseOfAnimationBed)
+
+                foreach (var comp in AnimationBed.AllComps)
                 {
-                    Log.Error("8");
-                    compBaseOfAnimationBed.Notify_HeldOnPlatform(newOwner);
+                    if (comp is CompBaseOfAnimationBed compBaseOfAnimationBed)
+                    {
+                        compBaseOfAnimationBed.Notify_HeldOnPlatform(newOwner);
+                    }
                 }
             }
-            Log.Error("9");
         }
 
         public void Notify_ReleasedFromPlatform()

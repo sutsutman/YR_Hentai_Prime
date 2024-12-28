@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using Verse;
+using Verse.AI;
 using Verse.Sound;
 
 namespace YR_Hentai_Prime_AnimationBed
@@ -35,7 +36,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 var comp = this.TryGetComp<Comp_Maggot_Queen>();
                 //함정은 발동시 소멸이라 컨테이너에 안들어감
                 //발동 타이밍 때문에 편지 날라옴
-                comp?.StartSpawnBed(pawn);
+                comp?.StartSpawnBed(pawn, pawn);
             }
         }
         protected override float SpringChance(Pawn p)

@@ -1,6 +1,8 @@
 ﻿using RimWorld;
+using System;
 using System.Linq;
 using Verse;
+using Verse.AI;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
@@ -79,31 +81,31 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        public void StartSpawnBed(Pawn pawn)
+        public void StartSpawnBed(Pawn carrier, Pawn pawn)
         {
-            Building edifice = pawn.Position.GetEdifice(pawn.Map);
+            Building edifice = carrier.Position.GetEdifice(carrier.Map);
             if (edifice != null && edifice != parent)
             {
                 return;
             }
 
             bool becomPrisoner = (pawn.IsPrisoner || pawn.Faction.HostileTo(Faction.OfPlayer));
-            Building_AnimationBed bed = (Building_AnimationBed)GenSpawn.Spawn(Props.bedDef, pawn.Position, pawn.Map);
+            Building_AnimationBed bed = (Building_AnimationBed)GenSpawn.Spawn(Props.bedDef, carrier.Position, carrier.Map);
             bed.SetFaction(Faction.OfPlayer, null);
-            bed.Rotation = Rot4.South;
+            //bed.Rotation = Rot4.South;
 
             //아군, 비 적대
             if (!becomPrisoner)
             {
                 //침대 설치 불가능
-                if (pawn.GetRoom().IsPrisonCell)
+                if (carrier.GetRoom().IsPrisonCell)
                 {
-                    SpawnDoor(pawn);
+                    SpawnDoor(carrier);
                 }
             }
-            else if (becomPrisoner && (pawn.GetRoom() == null || (!pawn.GetRoom().IsPrisonCell && pawn.GetRoom().ContainedBeds.Count() > 0)))
+            else if (becomPrisoner && (carrier.GetRoom() == null || (!carrier.GetRoom().IsPrisonCell && carrier.GetRoom().ContainedBeds.Count() > 0)))
             {
-                SpawnDoor(pawn);
+                SpawnDoor(carrier);
             }
 
             //아군, 비 적대고, 일반 침대가 설치 불가능할 경우
@@ -121,7 +123,8 @@ namespace YR_Hentai_Prime_AnimationBed
             //bed.SetCompAnimationBed.HeldPawn(pawn);
             //pawn.jobs.Notify_TuckedIntoBed(bed);
             //pawn.mindState.Notify_TuckedIntoBed();
-            JobDriver_CarryToAnimationBed.ChainTakeeToPlatform((Pawn)parent, pawn, bed.TryGetComp<CompAnimationBed>());
+
+            JobDriver_CarryToAnimationBed.ChainTakeeToPlatform(carrier, pawn, bed.TryGetComp<CompAnimationBed>());
             if (bed != null)
             {
                 var comp = bed.TryGetComp<Comp_Maggot_Queen_Bed>();

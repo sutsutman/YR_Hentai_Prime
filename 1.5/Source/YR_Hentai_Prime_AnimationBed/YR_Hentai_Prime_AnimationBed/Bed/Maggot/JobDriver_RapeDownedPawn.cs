@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 
@@ -26,11 +27,12 @@ namespace YR_Hentai_Prime_AnimationBed
 
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.A).FailOn(() => !Takee.Downed).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
 
+            yield return Toils_Haul.StartCarryThing(TargetIndex.A);
             Toil toil2 = ToilMaker.MakeToil("MakeNewToils");
             toil2.initAction = delegate ()
             {
                 var comp = pawn.TryGetComp<Comp_Maggot_Queen>();
-                comp?.StartSpawnBed(Takee);
+                comp?.StartSpawnBed(pawn,Takee);
             };
             toil2.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return toil2;
