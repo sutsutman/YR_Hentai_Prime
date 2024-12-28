@@ -8,7 +8,137 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class BedAnimationUtility
     {
-        public static bool MakeBedAnimation(Building_AnimationBed building_AnimationBed)
+        // 포트레잇 정보 생성
+        public static void MakePortrait(Building_AnimationBed building_AnimationBed)
+        {
+            // 기존 포트레잇 데이터 초기화
+            var portraitIngredients = building_AnimationBed.AnimationSettingComp.portraitIngredients;
+            portraitIngredients.Clear();
+
+            // 각 PawnPortraitSetting 처리
+            foreach (var pawnPortraitSetting in building_AnimationBed.AnimationSettingComp.Props.pawnPortraitSettings)
+            {
+                // 기본 포트레잇 설정
+                var portraitSetting = pawnPortraitSetting.portraitSetting;
+
+                // 조건에 따라 포트레잇 설정 변경
+                foreach (var conditionPortraitSetting in pawnPortraitSetting.conditonPortraitSettings)
+                {
+                    // JoyPawn(가짜 Pawn)을 사용할지, HeldPawn(실제 Pawn)을 사용할지 결정
+                    var tempPawn = conditionPortraitSetting.portraitSetting.drawJoyPawn
+                        ? building_AnimationBed.dummyForJoyPawn
+                        : building_AnimationBed.HeldPawn;
+
+                    if (tempPawn == null) // Pawn이 없으면 생략
+                    {
+                        continue;
+                    }
+
+                    // 조건이 맞으면 포트레잇 설정 변경
+                    void action() => portraitSetting = conditionPortraitSetting.portraitSetting;
+                    if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed, conditionPortraitSetting.pawnCondition, action))
+                    {
+                        break;
+                    }
+                }
+
+                // 유효하지 않거나 draw가 false인 경우 스킵
+                if (portraitSetting == null || !portraitSetting.draw)
+                {
+                    continue;
+                }
+
+                // 실제 그릴 Pawn 결정
+                var drawPawn = portraitSetting.drawJoyPawn ? building_AnimationBed.dummyForJoyPawn : building_AnimationBed.HeldPawn;
+                if (drawPawn == null)
+                {
+                    continue;
+                }
+
+                // 포트레잇 크기 설정
+                var drawSize = Vector3.zero;
+                void setDrawSize() => drawSize = portraitSetting.drawSize;
+                Condition.ExecuteActionIfConditionMatches(building_AnimationBed, portraitSetting.visibleCondition, setDrawSize);
+
+                // 카메라 오프셋 설정
+                var cameraOffset = Vector3.zero;
+                foreach (var conditionCameraOffset in portraitSetting.conditionCameraOffsets)
+                {
+                    void cameraOffsetAction() => cameraOffset = conditionCameraOffset.cameraOffset;
+                    if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed, conditionCameraOffset.pawnCondition, cameraOffsetAction))
+                    {
+                        break;
+                    }
+                }
+
+                // 포트레잇 재료를 생성하여 추가
+                portraitIngredients.Add(new PortraitIngredient
+                {
+                    label = portraitSetting.label, // 포트레잇 라벨
+                    pawn = drawPawn, // 그릴 Pawn
+                    drawSize = drawSize, // 그릴 크기
+                    angle = portraitSetting.angle, // 각도
+                    offset = portraitSetting.offset, // 위치 오프셋
+                    portraitMesh = portraitSetting.portraitMeshGraphicData.Graphic.MeshAt(Rot4.South), // 메쉬 정보
+                    iconMat = CreateMaterial(portraitSetting, drawPawn), // 아이콘용 Material 생성
+                    cameraOffset = cameraOffset, // 카메라 오프셋
+                    cameraZoom = portraitSetting.cameraZoom, // 카메라 줌
+                    portraitSetting = portraitSetting // 현재 포트레잇 설정
+                });
+            }
+        }
+
+        // AnimationBed의 애니메이션 설정 및 업데이트
+        public static void SetAnimation(Building_AnimationBed building_AnimationBed)
+        {
+            // AnimationBed에 놓인 Pawn 가져오기
+            Pawn pawn = building_AnimationBed.HeldPawn;
+
+            // AnimationSettingComp 가져오기
+            var animationSettingComp = building_AnimationBed.AnimationSettingComp;
+
+            // Bed 애니메이션 생성에 실패하면 메서드 종료
+            if (!MakeBedAnimation(building_AnimationBed))
+            {
+                return;
+            }
+
+            // Bed 애니메이션 설정 업데이트
+            foreach (var bedAnimationSettingAndTick in animationSettingComp.bedAnimationSettingAndTicks)
+            {
+                // Animation 설정 상태에 따라 currentTick 초기화 또는 업데이트
+                if (building_AnimationBed.setAnimation)
+                {
+                    // Animation 재설정 상태라면 Tick을 0으로 초기화
+                    bedAnimationSettingAndTick.currentTick = 0;
+                }
+                else if (bedAnimationSettingAndTick.parentBedAnimationDef.autoDurationTicksSetting)
+                {
+                    // 자동 지속 시간 설정일 경우 Pawn의 현재 AnimationTick으로 설정
+                    bedAnimationSettingAndTick.currentTick = pawn.Drawer.renderer.renderTree.AnimationTick;
+                }
+                else
+                {
+                    // currentTick 업데이트: durationTick을 초과하지 않으면 증가, 초과 시 0으로 초기화
+                    bedAnimationSettingAndTick.currentTick =
+                        bedAnimationSettingAndTick.currentTick < bedAnimationSettingAndTick.durationTick - 1
+                        ? bedAnimationSettingAndTick.currentTick + 1
+                        : 0;
+                }
+
+                // 현재 Tick을 로그로 출력 (디버깅용)
+                if (bedAnimationSettingAndTick.parentBedAnimationDef.logCurrentTick)
+                {
+                    Log.Error($"{bedAnimationSettingAndTick.parentBedAnimationDef} : " +
+                              $"{bedAnimationSettingAndTick.currentTick} (current texture: {bedAnimationSettingAndTick.durationTick})");
+                }
+            }
+
+            // Animation 설정 상태 초기화
+            building_AnimationBed.setAnimation = false;
+        }
+
+        private static bool MakeBedAnimation(Building_AnimationBed building_AnimationBed)
         {
             // 애니메이션 침대에 연관된 Pawn을 가져옵니다.
             Pawn HeldPawn = building_AnimationBed.HeldPawn;
@@ -97,7 +227,7 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
         // FillableBar 정보를 생성 (반투명 바를 그릴 때 사용)
-        public static void MakeFillableBar(Building_AnimationBed building_AnimationBed)
+        private static void MakeFillableBar(Building_AnimationBed building_AnimationBed)
         {
             // FillableBar 재료 리스트 초기화
             building_AnimationBed.AnimationSettingComp.fillableBarIngredients = new List<FillableBarIngredient>();
@@ -125,86 +255,6 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     break; // 조건에 맞는 설정이 처리되면 루프 종료
                 }
-            }
-        }
-
-        // 포트레잇 정보 생성
-        public static void MakePortrait(Building_AnimationBed building_AnimationBed)
-        {
-            // 기존 포트레잇 데이터 초기화
-            var portraitIngredients = building_AnimationBed.AnimationSettingComp.portraitIngredients;
-            portraitIngredients.Clear();
-
-            // 각 PawnPortraitSetting 처리
-            foreach (var pawnPortraitSetting in building_AnimationBed.AnimationSettingComp.Props.pawnPortraitSettings)
-            {
-                // 기본 포트레잇 설정
-                var portraitSetting = pawnPortraitSetting.portraitSetting;
-
-                // 조건에 따라 포트레잇 설정 변경
-                foreach (var conditionPortraitSetting in pawnPortraitSetting.conditonPortraitSettings)
-                {
-                    // JoyPawn(가짜 Pawn)을 사용할지, HeldPawn(실제 Pawn)을 사용할지 결정
-                    var tempPawn = conditionPortraitSetting.portraitSetting.drawJoyPawn
-                        ? building_AnimationBed.dummyForJoyPawn
-                        : building_AnimationBed.HeldPawn;
-
-                    if (tempPawn == null) // Pawn이 없으면 생략
-                    {
-                        continue;
-                    }
-
-                    // 조건이 맞으면 포트레잇 설정 변경
-                    void action() => portraitSetting = conditionPortraitSetting.portraitSetting;
-                    if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed, conditionPortraitSetting.pawnCondition, action))
-                    {
-                        break;
-                    }
-                }
-
-                // 유효하지 않거나 draw가 false인 경우 스킵
-                if (portraitSetting == null || !portraitSetting.draw)
-                {
-                    continue;
-                }
-
-                // 실제 그릴 Pawn 결정
-                var drawPawn = portraitSetting.drawJoyPawn ? building_AnimationBed.dummyForJoyPawn : building_AnimationBed.HeldPawn;
-                if (drawPawn == null)
-                {
-                    continue;
-                }
-
-                // 포트레잇 크기 설정
-                var drawSize = Vector3.zero;
-                void setDrawSize() => drawSize = portraitSetting.drawSize;
-                Condition.ExecuteActionIfConditionMatches(building_AnimationBed, portraitSetting.visibleCondition, setDrawSize);
-
-                // 카메라 오프셋 설정
-                var cameraOffset = Vector3.zero;
-                foreach (var conditionCameraOffset in portraitSetting.conditionCameraOffsets)
-                {
-                    void cameraOffsetAction() => cameraOffset = conditionCameraOffset.cameraOffset;
-                    if (Condition.ExecuteActionIfConditionMatches(building_AnimationBed, conditionCameraOffset.pawnCondition, cameraOffsetAction))
-                    {
-                        break;
-                    }
-                }
-
-                // 포트레잇 재료를 생성하여 추가
-                portraitIngredients.Add(new PortraitIngredient
-                {
-                    label = portraitSetting.label, // 포트레잇 라벨
-                    pawn = drawPawn, // 그릴 Pawn
-                    drawSize = drawSize, // 그릴 크기
-                    angle = portraitSetting.angle, // 각도
-                    offset = portraitSetting.offset, // 위치 오프셋
-                    portraitMesh = portraitSetting.portraitMeshGraphicData.Graphic.MeshAt(Rot4.South), // 메쉬 정보
-                    iconMat = CreateMaterial(portraitSetting, drawPawn), // 아이콘용 Material 생성
-                    cameraOffset = cameraOffset, // 카메라 오프셋
-                    cameraZoom = portraitSetting.cameraZoom, // 카메라 줌
-                    portraitSetting = portraitSetting // 현재 포트레잇 설정
-                });
             }
         }
 
@@ -241,7 +291,7 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
         // BedAnimationSettingAndTick 생성
-        public static BedAnimationSettingAndTick MakeBedAnimationSettingAndTick(
+        private static BedAnimationSettingAndTick MakeBedAnimationSettingAndTick(
             Building_AnimationBed building_AnimationBed,
             BedAnimationDef bedAnimationDef,
             Vector3 offset,
@@ -406,7 +456,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
 
         // Pawn의 머리 그래픽 데이터를 생성하여 반환합니다.
-        public static Graphic GraphicForHead(Pawn pawn, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)
+        private static Graphic GraphicForHead(Pawn pawn, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)
         {
             // Pawn이 머리를 가지고 있지 않다면 null 반환
             if (!pawn.health.hediffSet.HasHead)
@@ -452,7 +502,7 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
         // Pawn의 몸체 그래픽 데이터를 생성하여 반환합니다.
-        public static Graphic GraphicForBody(Pawn pawn, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)
+        private static Graphic GraphicForBody(Pawn pawn, BedAnimationSetting bedAnimationSetting, GraphicData graphicData)
         {
             // PawnRenderNode_Body를 검색하여 적합한 노드를 찾습니다.
             var pawnRenderNode_Body = pawn.Drawer.renderer.renderTree.rootNode?.children
@@ -492,58 +542,6 @@ namespace YR_Hentai_Prime_AnimationBed
                 color                     // 적용할 색상
             );
         }
-
-
-        // AnimationBed의 애니메이션 설정 및 업데이트
-        public static void SetAnimation(Building_AnimationBed building_AnimationBed)
-        {
-            // AnimationBed에 놓인 Pawn 가져오기
-            Pawn pawn = building_AnimationBed.HeldPawn;
-
-            // AnimationSettingComp 가져오기
-            var animationSettingComp = building_AnimationBed.AnimationSettingComp;
-
-            // Bed 애니메이션 생성에 실패하면 메서드 종료
-            if (!MakeBedAnimation(building_AnimationBed))
-            {
-                return;
-            }
-
-            // Bed 애니메이션 설정 업데이트
-            foreach (var bedAnimationSettingAndTick in animationSettingComp.bedAnimationSettingAndTicks)
-            {
-                // Animation 설정 상태에 따라 currentTick 초기화 또는 업데이트
-                if (building_AnimationBed.setAnimation)
-                {
-                    // Animation 재설정 상태라면 Tick을 0으로 초기화
-                    bedAnimationSettingAndTick.currentTick = 0;
-                }
-                else if (bedAnimationSettingAndTick.parentBedAnimationDef.autoDurationTicksSetting)
-                {
-                    // 자동 지속 시간 설정일 경우 Pawn의 현재 AnimationTick으로 설정
-                    bedAnimationSettingAndTick.currentTick = pawn.Drawer.renderer.renderTree.AnimationTick;
-                }
-                else
-                {
-                    // currentTick 업데이트: durationTick을 초과하지 않으면 증가, 초과 시 0으로 초기화
-                    bedAnimationSettingAndTick.currentTick =
-                        bedAnimationSettingAndTick.currentTick < bedAnimationSettingAndTick.durationTick - 1
-                        ? bedAnimationSettingAndTick.currentTick + 1
-                        : 0;
-                }
-
-                // 현재 Tick을 로그로 출력 (디버깅용)
-                if (bedAnimationSettingAndTick.parentBedAnimationDef.logCurrentTick)
-                {
-                    Log.Error($"{bedAnimationSettingAndTick.parentBedAnimationDef} : " +
-                              $"{bedAnimationSettingAndTick.currentTick} (current texture: {bedAnimationSettingAndTick.durationTick})");
-                }
-            }
-
-            // Animation 설정 상태 초기화
-            building_AnimationBed.setAnimation = false;
-        }
-
 
     }
 }
