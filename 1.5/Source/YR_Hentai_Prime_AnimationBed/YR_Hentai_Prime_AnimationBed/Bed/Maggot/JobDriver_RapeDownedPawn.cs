@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Verse;
 using Verse.AI;
 
@@ -32,7 +31,7 @@ namespace YR_Hentai_Prime_AnimationBed
             toil2.initAction = delegate ()
             {
                 var comp = pawn.TryGetComp<Comp_Maggot_Queen>();
-                comp?.StartSpawnBed(pawn,Takee);
+                comp?.StartSpawnBed(pawn, Takee);
             };
             toil2.defaultCompleteMode = ToilCompleteMode.Instant;
             yield return toil2;

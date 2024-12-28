@@ -71,8 +71,8 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             Thing thing = takee;
 
-                platform.Container.TryAddOrTransfer(thing, 1);
-            
+            platform.Container.TryAddOrTransfer(thing, 1);
+
             thing.Rotation = Rot4.South;
             CompAnimationBedTarget compAnimationBedTarget = thing.TryGetComp<CompAnimationBedTarget>();
             if (compAnimationBedTarget != null)

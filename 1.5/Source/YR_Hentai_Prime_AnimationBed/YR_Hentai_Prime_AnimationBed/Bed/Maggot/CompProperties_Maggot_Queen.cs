@@ -1,8 +1,6 @@
 ﻿using RimWorld;
-using System;
 using System.Linq;
 using Verse;
-using Verse.AI;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
