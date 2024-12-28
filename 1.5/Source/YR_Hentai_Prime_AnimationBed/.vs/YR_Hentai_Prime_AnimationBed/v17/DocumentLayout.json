@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\bed\\animationsetting\\condition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\bed\\animationsetting\\condition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\bed\\hediffcompproperties_bedanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\bed\\hediffcompproperties_bedanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\bed\\animationsetting\\compproperties_animationsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\bed\\animationsetting\\compproperties_animationsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\bed\\yr_hentai_prime_animationbed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\bed\\yr_hentai_prime_animationbed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\bed\\animationsetting\\companimationsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\bed\\animationsetting\\companimationsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\bed\\yr_studyutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\bed\\yr_studyutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\bed\\animationsetting\\bedanimationutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\bed\\animationsetting\\bedanimationutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\yr_hentai_prime\\1.5\\source\\yr_hentai_prime_animationbed\\yr_hentai_prime_animationbed\\bed\\buildings\\building_animationbed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F1B2F86-28FC-49E2-B85A-D0228AB47BE7}|YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed.csproj|solutionrelative:yr_hentai_prime_animationbed\\bed\\buildings\\building_animationbed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Condition.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\Condition.cs",
-              "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\Condition.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\Condition.cs",
-              "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\Condition.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAqwAkBAAAFAAAAAAAAAA==",
+              "Title": "HediffCompProperties_BedAnimation.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\HediffCompProperties_BedAnimation.cs",
+              "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Bed\\HediffCompProperties_BedAnimation.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\HediffCompProperties_BedAnimation.cs",
+              "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Bed\\HediffCompProperties_BedAnimation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T15:13:07.513Z",
+              "WhenOpened": "2024-12-28T16:36:41.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CompProperties_AnimationSetting.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\CompProperties_AnimationSetting.cs",
-              "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\CompProperties_AnimationSetting.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\CompProperties_AnimationSetting.cs",
-              "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\CompProperties_AnimationSetting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Title": "YR_Hentai_Prime_AnimationBed.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\YR_Hentai_Prime_AnimationBed.cs",
+              "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Bed\\YR_Hentai_Prime_AnimationBed.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\YR_Hentai_Prime_AnimationBed.cs",
+              "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Bed\\YR_Hentai_Prime_AnimationBed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T15:32:26.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BedAnimationUtility.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\BedAnimationUtility.cs",
-              "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\BedAnimationUtility.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\BedAnimationUtility.cs",
-              "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\BedAnimationUtility.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0CAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T15:25:52.441Z",
+              "WhenOpened": "2024-12-28T16:36:37.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CompAnimationSetting.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\CompAnimationSetting.cs",
-              "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\CompAnimationSetting.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\CompAnimationSetting.cs",
-              "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Bed\\AnimationSetting\\CompAnimationSetting.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAADwv3QAAAARAAAAAAAAAA==",
+              "Title": "YR_StudyUtility.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\YR_StudyUtility.cs",
+              "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Bed\\YR_StudyUtility.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\YR_StudyUtility.cs",
+              "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Bed\\YR_StudyUtility.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T15:18:47.307Z",
+              "WhenOpened": "2024-12-28T16:36:26.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Building_AnimationBed.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\Buildings\\Building_AnimationBed.cs",
+              "RelativeDocumentMoniker": "YR_Hentai_Prime_AnimationBed\\Bed\\Buildings\\Building_AnimationBed.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\YR_Hentai_Prime\\1.5\\Source\\YR_Hentai_Prime_AnimationBed\\YR_Hentai_Prime_AnimationBed\\Bed\\Buildings\\Building_AnimationBed.cs",
+              "RelativeToolTip": "YR_Hentai_Prime_AnimationBed\\Bed\\Buildings\\Building_AnimationBed.cs",
+              "ViewState": "AgIAABcFAAAAAAAAAAAowDUFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T16:20:29.759Z",
               "EditorCaption": ""
             }
           ]

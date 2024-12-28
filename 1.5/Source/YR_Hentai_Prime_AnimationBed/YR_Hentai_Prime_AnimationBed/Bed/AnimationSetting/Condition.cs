@@ -11,6 +11,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public Condition heldPawnCondition;
         public Condition joyPawnCondition;
 
+        //heldPawn과 joyPawn의 condition이 둘 다 충족되어야 하는가?
         public bool allMatch = true;
     }
 
@@ -40,13 +41,16 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public float probability = -1;
 
+        //조건들이 모두 충족되어야 하는가?
         public bool allMatch = false;
+        //결과를 반전시키는가?
         public bool reverseCondition = false;
+        //결과가 true면 foreach를 중단시킬 것인가? (다른 코드에서 사용함)
         public bool Break = false;
 
         public static bool Match(Pawn pawn, Building_AnimationBed building_AnimationBed, Condition condition, out bool needBreak)
         {
-            // needBreak 처리 좀 더 검증 필요;
+            // 조건이 없거나 Pawn이 없으면 기본값 반환
             if (condition == null)
             {
                 needBreak = false;
@@ -205,50 +209,46 @@ namespace YR_Hentai_Prime_AnimationBed
                => pawn.story.traits.allTraits.Any(pawnTrait => traitDefs.Contains(pawnTrait.def));
         }
 
-        public static bool ExecuteActionIfConditionMatches(Building_AnimationBed building_AnimationBed, PawnCondition pawnCondition, Action action, Pawn anotherPawn = null)
+        //
+        public static bool ExecuteActionIfConditionMatches(
+            Building_AnimationBed building_AnimationBed,
+            PawnCondition pawnCondition,
+            Action action,
+            Pawn anotherPawn = null)
         {
-
+            // 조건이 없으면 바로 액션 실행 후 종료
             if (pawnCondition == null)
             {
                 action();
                 return false;
             }
 
-            var heldPawn = building_AnimationBed.HeldPawn;
-            if (anotherPawn != null)
+            // 기준 Pawn 설정 (기본: HeldPawn, 필요 시 anotherPawn 사용)
+            var heldPawn = anotherPawn ?? building_AnimationBed.HeldPawn;
+
+            // HeldPawn 조건 확인
+            bool heldMatch = Match(heldPawn, building_AnimationBed, pawnCondition.heldPawnCondition, out bool heldBreak);
+
+            // JoyPawn 설정 (PreviousJoyPawn을 참조해야 하면 변경)
+            var joyPawn = pawnCondition.joyPawnCondition?.referPreviousJoyPawn == true
+                ? building_AnimationBed.previousJoyPawn
+                : building_AnimationBed.dummyForJoyPawn;
+
+            // JoyPawn 조건 확인
+            bool joyMatch = Match(joyPawn, building_AnimationBed, pawnCondition.joyPawnCondition, out bool joyBreak);
+
+            // 조건에 따라 액션 실행
+            bool conditionMet = pawnCondition.allMatch
+                ? heldMatch && joyMatch // 모든 조건 충족 필요
+                : heldMatch || joyMatch; // 하나라도 충족 시 실행
+
+            if (conditionMet)
             {
-                heldPawn = anotherPawn;
+                action();
             }
 
-            bool heldPawnConditionMatch = Match(heldPawn, building_AnimationBed, pawnCondition.heldPawnCondition, out bool heldPawnNeedBreak);
-
-            var joyPawn = building_AnimationBed.dummyForJoyPawn;
-            if (pawnCondition.joyPawnCondition != null && pawnCondition.joyPawnCondition.referPreviousJoyPawn)
-            {
-                joyPawn = building_AnimationBed.previousJoyPawn;
-            }
-
-            bool joyPawnConditionMatch = Match(joyPawn, building_AnimationBed, pawnCondition.joyPawnCondition, out bool joyPawnNeedBreak);
-
-
-            if (pawnCondition.allMatch)
-            {
-                if (heldPawnConditionMatch && joyPawnConditionMatch)
-                {
-                    action();
-                }
-            }
-            else
-            {
-                if (heldPawnConditionMatch || joyPawnConditionMatch)
-                {
-                    action();
-                }
-
-            }
-
-
-            return heldPawnNeedBreak || joyPawnNeedBreak;
+            // Break 플래그 반환 (Held 또는 Joy 중 하나라도 Break면 true 반환)
+            return heldBreak || joyBreak;
         }
 
     }
