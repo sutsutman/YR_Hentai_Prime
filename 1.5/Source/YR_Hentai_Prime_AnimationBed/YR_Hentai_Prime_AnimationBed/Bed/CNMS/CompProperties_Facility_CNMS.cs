@@ -12,7 +12,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public CompProperties_Facility_CNMS() => compClass = typeof(CompFacility_CNMS);
 
         // 사물을 배출할 기본 틱 수
-        public int EjectTicksDefault = 1000;
+        public int ejectTicks = 1000;
     }
 
     // CNMS 컴포넌트 클래스
@@ -37,7 +37,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public CompFacility_CNMS()
         {
             innerContainer = new ThingOwner<Thing>(this);
-            ejectTicks = Props?.EjectTicksDefault ?? 1000;
+            ejectTicks = Props?.ejectTicks ?? 1000;
         }
 
         // 틱 단위 동작
@@ -48,7 +48,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
             if (ejectTicks <= 0)
             {
-                ejectTicks = Props.EjectTicksDefault;
+                ejectTicks = Props.ejectTicks;
                 EjectOrTransfer(); // 조건에 따라 사물을 배출하거나 이동
             }
         }
@@ -153,6 +153,10 @@ namespace YR_Hentai_Prime_AnimationBed
             Scribe_Values.Look(ref isMainCNMS, "isMainCNMS");
             Scribe_Values.Look(ref ejectTicks, "ejectTicks");
             Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+        }
+        public override string CompInspectStringExtra()
+        {
+            return "Contents".Translate() + ": " + innerContainer.ContentsString.CapitalizeFirst();
         }
 
         // IThingHolder 구현: 자식 컨테이너 반환

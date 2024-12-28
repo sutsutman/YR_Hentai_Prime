@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FleshTypeDef>
+		<defName>YR_Maggot</defName>
+		<corpseCategory>CorpsesInsect</corpseCategory>
+		<damageEffecter>Damage_HitInsect</damageEffecter>
+		<genericWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundA</texture>
+				<color>0.23,0.20,0.17</color>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundB</texture>
+				<color>0.23,0.20,0.17</color>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundC</texture>
+				<color>0.23,0.20,0.17</color>
+			</li>
+		</genericWounds>
+	</FleshTypeDef>
+	<!-- ====================================================== -->
+	<ThingDef ParentName="BaseInsect">
+		<defName>YR_Maggot_Larva</defName>
+		<label>lewd worm</label>
+		<description>A by-product of the sticky mating of the queen lewd worm and the host. It has no ability to capture host and reproduce like the lewd worm. But can get quality meat because have a lot of fat.</description>
+		<statBases>
+			<MoveSpeed>3.75</MoveSpeed>
+			<ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<MarketValue>100</MarketValue>
+			<LeatherAmount>0</LeatherAmount>
+		</statBases>
+		<uiIconScale>2</uiIconScale>
+		<tools>
+			<li>
+				<label>mandibles</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<fleshType>YR_Maggot</fleshType>
+			<body>BeetleLike</body>
+			<!-- <deathActionWorkerClass>YR_Hentai_Prime_AnimationBed.DeathActionWorker_Maggot_Larva</deathActionWorkerClass> -->
+			<meatColor>(255,255,255)</meatColor>
+			<baseBodySize>0.2</baseBodySize>
+			<baseHungerRate>0.10</baseHungerRate>
+			<baseHealthScale>0.4</baseHealthScale>
+			<lifeExpectancy>10</lifeExpectancy>
+			<wildness>0.2</wildness>
+			<roamMtbDays>5</roamMtbDays>
+			<trainability>None</trainability>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+					<soundDeath>Pawn_Megascarab_Death</soundDeath>
+					<soundCall>Pawn_Megascarab_Call</soundCall>
+					<soundAngry>Pawn_Megascarab_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.12)</li>
+				<li>(0.07, 0, -0.05)</li>
+				<li>(0.0, 0, -0.08)</li>
+				<li>(-0.07, 0, -0.05)</li>
+			</headPosPerRotation>
+		</race>
+		<tradeTags>
+			<li>AnimalInsect</li>
+		</tradeTags>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>YR_Maggot_Larva</defName>
+		<label>YR_Maggot_Larva</label>
+		<race>YR_Maggot_Larva</race>
+		<combatPower>40</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.15</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Yuran/Maggot/Larva/Texture</texPath>
+					<drawSize>1.5</drawSize>
+					<color>(255,255,255)</color>
+					<shadowData>
+						<volume>(0.2, 0.3, 0.2)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Yuran/Maggot/Larva/Texture</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	<!-- 시체 -->
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>YR_Maggot_Larva_CorpseMeat</defName>
+		<label>lewd worm corpse (meat)</label>
+		<description>This is the corpse of a lewd worm. Can use it as an ingredient for cooking without having to trim it.</description>
+		<graphicData>
+			<texPath>Yuran/Maggot/Larva/Texture</texPath>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>60</MarketValue>
+			<!-- Can be used like meat in recipes -->
+			<Mass>12</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>RawBad</preferability>
+			<foodType>AnimalProduct</foodType>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>
+			<tasteThought>AteRawFood</tasteThought>
+		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+</Defs>

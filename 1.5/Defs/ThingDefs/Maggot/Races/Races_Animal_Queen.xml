@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ====================================================== -->
+	<ThingDef ParentName="BaseInsect">
+		<defName>YR_Maggot_Queen</defName>
+		<label>queen lewd worm</label>
+		<description>A lewd worm that lives solely for the purpose of mating. Bite the opponent through the mouth that looks like Lamprey and inject the poison to anesthetize the opponent. Then it stick to the host's body and sucking milk or taking nutrition through sticky kisses while mating. During mate, it has no interest in anything other than the mate act.\n\nThe power itself is weak, so it can be easily removed with the help of others.\n\nIf the host is female, the eggs continue to be injected into the host's uterus through the spawning tube. The injected egg combines with the host's egg and is implanted in the uterus. And the host will give birth to the larvae after some time. If the host is male, it will determine the semen of the host through the scattering tube. The host's semen will fertilize the queen lewd worm's eggs, and the queen lewd worm will give birth to the larvae after some time.\n\nThe larvae that gave birth are very nutritious and taste good.</description>
+		<statBases>
+			<MoveSpeed>3.60</MoveSpeed>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>500</MarketValue>
+			<LeatherAmount>0</LeatherAmount>
+			<ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.27</ArmorRating_Sharp>
+		</statBases>
+		<uiIconScale>1.15</uiIconScale>
+		<tools>
+			<li>
+				<label>venom-fangs</label>
+				<capacities>
+					<li>YR_Maggot_ToxicBite</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+		<race>
+			<fleshType>YR_Maggot</fleshType>
+			<thinkTreeConstant>YR_Maggot_Queen_Constant</thinkTreeConstant>
+			<body>BeetleLikeWithClaw</body>
+			<baseHungerRate>0.35</baseHungerRate>
+			<baseBodySize>1.2</baseBodySize>
+			<baseHealthScale>2.5</baseHealthScale>
+			<meatLabel>insect meat</meatLabel>
+			<lifeExpectancy>6</lifeExpectancy>
+			<wildness>0.4</wildness>
+			<trainability>Advanced</trainability>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_BigInsect_Pain</soundWounded>
+					<soundDeath>Pawn_BigInsect_Death</soundDeath>
+					<soundCall>Pawn_BigInsect_Call</soundCall>
+					<soundAngry>Pawn_BigInsect_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalInsect</li>
+		</tradeTags>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Queen">
+				<bedDef>YR_Building_Maggot_Queen</bedDef>
+				<doorDef>YR_Maggot_Door</doorDef>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 폰카인드 -->
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>YR_Maggot_Queen</defName>
+		<label>YR_Maggot_Queen</label>
+		<race>YR_Maggot_Queen</race>
+		<combatPower>150</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.50</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Yuran/Maggot/Queen/Texture</texPath>
+					<drawSize>1.5</drawSize>
+					<color>(255,255,255)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Yuran/Maggot/Queen/Texture</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	<!-- 데미지 -->
+	<DamageDef ParentName="Bite">
+		<defName>YR_Maggot_ToxicBite</defName>
+		<label>toxic bite</label>
+		<additionalHediffs>
+			<li>
+				<hediff>Anesthetic</hediff>
+				<severityPerDamageDealt>0.5</severityPerDamageDealt>
+				<victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+		<applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+		<impactSoundType>Toxic</impactSoundType>
+		<damageEffecter>Impact_Toxic</damageEffecter>
+	</DamageDef>
+	<ManeuverDef>
+		<defName>YR_Maggot_ToxicBite</defName>
+		<requiredCapacity>YR_Maggot_ToxicBite</requiredCapacity>
+		<verb>
+			<verbClass>Verb_MeleeAttackDamage</verbClass>
+			<meleeDamageDef>YR_Maggot_ToxicBite</meleeDamageDef>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Bite_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Bite_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Bite_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Bite_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>
+	<ToolCapacityDef>
+		<defName>YR_Maggot_ToxicBite</defName>
+		<label>toxic bite</label>
+	</ToolCapacityDef>
+	<!-- 여왕 전용 사고 -->
+	<ThinkTreeDef>
+		<defName>YR_Maggot_Queen_Constant</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+				<!-- Despawned -->
+				<li Class="ThinkNode_Subtree">
+					<treeDef>Despawned</treeDef>
+				</li>
+				<li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+					<subNodes>
+						<!-- Flee enemies, tornados, meteorites, etc. -->
+						<li Class="JobGiver_AnimalFlee"/>
+						<!-- Join auto joinable caravan -->
+						<li Class="ThinkNode_Subtree">
+							<treeDef>JoinAutoJoinableCaravan</treeDef>
+						</li>
+					</subNodes>
+				</li>
+				<li Class="ThinkNode_ConditionalCanDoLordJobNow">
+					<subNodes>
+						<!-- Lord directives -->
+						<li Class="ThinkNode_Subtree">
+							<treeDef>LordDutyConstant</treeDef>
+						</li>
+					</subNodes>
+				</li>
+				<li Class="YR_Hentai_Prime_AnimationBed.JobGiver_RapeNearby">
+					<radius>75</radius>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+	<JobDef>
+		<defName>YR_RapeDownedPawn</defName>
+		<driverClass>YR_Hentai_Prime_AnimationBed.JobDriver_RapeDownedPawn</driverClass>
+		<reportString>carrying TargetA.</reportString>
+		<carryThingAfterJob>true</carryThingAfterJob>
+	</JobDef>
+</Defs>

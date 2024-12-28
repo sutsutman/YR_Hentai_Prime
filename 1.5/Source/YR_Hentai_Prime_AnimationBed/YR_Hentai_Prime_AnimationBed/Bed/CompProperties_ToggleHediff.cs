@@ -13,7 +13,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public List<HediffDef> hediffDefs = new List<HediffDef>();
     }
 
-    public class CompToggleHediff : ThingComp
+    public class CompToggleHediff : CompBaseOfAnimationBed
     {
         public CompProperties_ToggleHediff Props => (CompProperties_ToggleHediff)props;
 

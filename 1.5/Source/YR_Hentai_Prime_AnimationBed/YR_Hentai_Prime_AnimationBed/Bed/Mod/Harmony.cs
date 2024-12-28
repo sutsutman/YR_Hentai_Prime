@@ -85,7 +85,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 alienComp.bodyMaskVariant = sharedIndex;
                 pawnRenderData.sharedIndex = sharedIndex;
                 ShaderTypeDef skinShader2 = graphicPaths.skinShader;
-                Shader skinShader = ((skinShader2 != null) ? skinShader2.Shader : null) ?? ShaderUtility.GetSkinShader(pawn);
+                Shader skinShader = (skinShader2?.Shader) ?? ShaderUtility.GetSkinShader(pawn);
                 if (skinShader == ShaderDatabase.CutoutSkin && pawn.story.SkinColorOverriden)
                 {
                     skinShader = ShaderDatabase.CutoutSkinColorOverride;

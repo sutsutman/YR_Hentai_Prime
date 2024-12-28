@@ -14,6 +14,11 @@ namespace YR_Hentai_Prime_AnimationBed
         //public static JobDef YR_FeedVictim;
         public static BedAnimationDef YR_Dummy_BedAnimation;
         public static AnimationDef YR_Global_Animation_NoMove;
+        public static ThingDef YR_Maggot_Queen;
+        public static JobDef YR_RapeDownedPawn;
+        public static ThingDef YR_Maggot_Larva_CorpseMeat;
+
+        public static SoundDef HiveSpawnSound => DefDatabase<SoundDef>.GetNamed("Hive_Spawn");
 
         static YR_H_P_DefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(YR_H_P_DefOf));
     }

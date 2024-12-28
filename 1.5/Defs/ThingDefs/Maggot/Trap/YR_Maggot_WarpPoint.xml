@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>YR_Maggot_WarpPoint</defName>
+		<label>great king lewd worm(anus)</label>
+		<description>This is the anus of the great king lewd worm. In general, great king lewd worm breeds by trapping humanoid creatures inside the body, but if the anus gets exposed, it will excrete the victim and free them. There are many theories about this particular behavior, but the most supported theory is that the great king lewd worm intends to give birth to more worms by excreting the swallowed victim where the queen lewd worm populates for reproduction.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/MaggotTrap/Warp/Texture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0,0,1,0.15)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<stealable>false</stealable>
+		<uiOrder>702</uiOrder>
+		<statBases>
+			<Mass>2.5</Mass>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>3200</WorkToBuild>
+			<Flammability>1</Flammability>
+			<Beauty>-18</Beauty>
+			<Cleanliness>-5</Cleanliness>
+		</statBases>
+		<costList>
+			<Meat_Megaspider>45</Meat_Megaspider>
+			<YR_PheromonePee>6</YR_PheromonePee>
+		</costList>
+		<designationCategory>YR_RJW_Furniture</designationCategory>
+		<designationHotKey>Misc6</designationHotKey>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	</ThingDef>
+</Defs>

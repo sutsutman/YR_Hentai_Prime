@@ -4,7 +4,7 @@ using Verse;
 namespace YR_Hentai_Prime_AnimationBed
 {
     [StaticConstructorOnStartup]
-    public class CompPowerPlant_Building_BaseBondageBed : CompPowerPlant
+    public class CompPowerPlant_Building_AnimationBed : CompPowerPlant
     {
         protected override float DesiredPowerOutput => RoofedPowerOutputFactor;
         private float RoofedPowerOutputFactor

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>YR_Maggot_Trap</defName>
+		<label>great king lewd worm(trap)</label>
+		<description>Some lewd worm does not turn into queen lewd worm when maturing, but grow enormously as maggots. The giant lewd worm, or "Great King lewd word" hides underground and ambuses any humanoid creatures that walk on them, traps them in their own bodies, and reproduces in that way.\n\nGreat king lewd worms are particularly sensitive to pheromones contained in urine. Therefore, if you soak a piece of meat in urine as bait, the great king lewd worm will be attracted to it and surface. However, it will be confused if there's nobody to rape, and during that time its head will be exposed on the ground.\n\nWhen the head of great king lewd worm is exposed, it will quickly engulf the target if there's a humanoid creature passing by it. After capture, the prey is completely anesthetized from the neck below and then violated. After a brief period of mating, the victim gets completely swallowed and gets bred inside the worm's body.\n\nBut if you spray the same urine pheromones in a certain spot during this period, the great king lewd worm will reveal their anus. In this case, the captured subject will be expelled through it.</description>
+		<thingClass>YR_Hentai_Prime_AnimationBed.Building_Maggot_Trap</thingClass>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/MaggotTrap/Bed/Texture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0,0,1,0.15)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<stealable>false</stealable>
+		<uiOrder>701</uiOrder>
+		<statBases>
+			<Mass>2.5</Mass>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>3200</WorkToBuild>
+			<Flammability>1</Flammability>
+			<Beauty>-18</Beauty>
+			<Cleanliness>-5</Cleanliness>
+			<TrapMeleeDamage>100</TrapMeleeDamage>
+			<TrapSpringChance>1.0</TrapSpringChance>
+		</statBases>
+		<costList>
+			<Meat_Megaspider>45</Meat_Megaspider>
+			<YR_PheromonePee>6</YR_PheromonePee>
+		</costList>
+		<designationCategory>YR_RJW_Furniture</designationCategory>
+		<building>
+			<isTrap>true</isTrap>
+			<trapDestroyOnSpring>true</trapDestroyOnSpring>
+			<trapDamageCategory>Sharp</trapDamageCategory>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<placeWorkers>
+			<li>PlaceWorker_NeverAdjacentTrap</li>
+		</placeWorkers>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Queen">
+				<bedDef>YR_Building_Maggot_Trap</bedDef>
+				<doorDef>YR_Maggot_Door</doorDef>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

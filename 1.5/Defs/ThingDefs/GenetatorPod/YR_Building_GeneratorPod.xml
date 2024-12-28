@@ -37,7 +37,7 @@
 				</moteDefs>
 			</li>
 			<li Class="CompProperties_Power">
-				<compClass>YR_Hentai_Prime_AnimationBed.CompPowerPlant_Building_BaseBondageBed</compClass>
+				<compClass>YR_Hentai_Prime_AnimationBed.CompPowerPlant_Building_AnimationBed</compClass>
 				<basePowerConsumption>-500</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 				<soundAmbientProducingPower>YR_GeneratorPod_Sound</soundAmbientProducingPower>

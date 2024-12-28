@@ -12,27 +12,27 @@ namespace YR_Hentai_Prime_AnimationBed
         public CompProperties_AffectedByCNMS() => compClass = typeof(CompAffectedByCNMS);
 
         // 기본 생성 주기 (틱 단위)
-        public int TicksToSpawnDefault = 2000;
+        public int ticksToSpawn = 2000;
 
         // 생성될 사물의 정의
-        public ThingDef ThingToSpawn;
+        public ThingDef thingToSpawn;
 
         // 생성할 사물의 개수
-        public int SpawnCount;
+        public int spawnCount;
 
         // 조건부 생성 사물 리스트
-        public List<ConditionSpawnThing> ConditionSpawnThings = new List<ConditionSpawnThing>();
+        public List<ConditionSpawnThing> conditionSpawnThings = new List<ConditionSpawnThing>();
 
         // Joy 기능과 연계 여부
-        public bool DummyForJoyIsActive = false;
+        public bool dummyForJoyIsActive = false;
     }
 
     // 조건부 생성 항목 클래스
     public class ConditionSpawnThing
     {
-        public PawnCondition PawnCondition; // 생성 조건
-        public ThingDef ThingToSpawn; // 조건 충족 시 생성될 사물
-        public int SpawnCount; // 생성 개수
+        public PawnCondition pawnCondition; // 생성 조건
+        public ThingDef thingToSpawn; // 조건 충족 시 생성될 사물
+        public int spawnCount; // 생성 개수
     }
 
     // CNMS와 상호작용하는 컴포넌트 클래스
@@ -56,7 +56,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-            ticksToSpawn = Props.TicksToSpawnDefault; // 기본 생성 주기 설정
+            ticksToSpawn = Props.ticksToSpawn; // 기본 생성 주기 설정
         }
 
         // 매 틱마다 호출되는 메서드
@@ -67,21 +67,21 @@ namespace YR_Hentai_Prime_AnimationBed
             // 대상 Pawn이 있을 경우, 생성 주기를 감소
             if (HeldPawn != null && Building_AnimationBed.PowerOn)
             {
-                if (Props.DummyForJoyIsActive && Building_AnimationBed.dummyForJoyIsActive)
+                if (Props.dummyForJoyIsActive && Building_AnimationBed.dummyForJoyIsActive)
                     ticksToSpawn--;
-                else if (!Props.DummyForJoyIsActive)
+                else if (!Props.dummyForJoyIsActive)
                     ticksToSpawn--;
             }
             else
             {
                 // 대상 Pawn이 없으면 주기를 초기화
-                ticksToSpawn = Props.TicksToSpawnDefault;
+                ticksToSpawn = Props.ticksToSpawn;
             }
 
             // 생성 주기가 0 이하가 되면 사물 생성
             if (ticksToSpawn <= 0)
             {
-                ticksToSpawn = Props.TicksToSpawnDefault;
+                ticksToSpawn = Props.ticksToSpawn;
                 SpawnThing();
             }
         }
@@ -121,16 +121,16 @@ namespace YR_Hentai_Prime_AnimationBed
         // 조건에 따라 생성할 사물을 결정하는 메서드
         private Thing MakeSpawnThing()
         {
-            var thingToSpawn = Props.ThingToSpawn;
-            var spawnCount = Props.SpawnCount;
+            var thingToSpawn = Props.thingToSpawn;
+            var spawnCount = Props.spawnCount;
 
-            foreach (var condition in Props.ConditionSpawnThings)
+            foreach (var condition in Props.conditionSpawnThings)
             {
                 // 조건이 충족되면 해당 사물을 설정
-                if (Condition.ExecuteActionIfConditionMatches(Building_AnimationBed, condition.PawnCondition, () =>
+                if (Condition.ExecuteActionIfConditionMatches(Building_AnimationBed, condition.pawnCondition, () =>
                 {
-                    thingToSpawn = condition.ThingToSpawn;
-                    spawnCount = condition.SpawnCount;
+                    thingToSpawn = condition.thingToSpawn;
+                    spawnCount = condition.spawnCount;
                 }))
                 {
                     break;

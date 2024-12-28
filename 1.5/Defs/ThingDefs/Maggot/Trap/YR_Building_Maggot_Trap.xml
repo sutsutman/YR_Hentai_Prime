@@ -1,19 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="YR_AnimationBedBase">
-		<defName>YR_Building_Maggot_Queen</defName>
-		<label>queen lewd worm</label>
-		<description>A lewd worm that lives solely for the purpose of mating. Bite the opponent through the mouth that looks like Lamprey and inject the poison to anesthetize the opponent. Then it stick to the host's body and sucking milk or taking nutrition through sticky kisses while mating. During mate, it has no interest in anything other than the mate act.\n\nThe power itself is weak, so it can be easily removed with the help of others.\n\nIf the host is female, the eggs continue to be injected into the host's uterus through the spawning tube. The injected egg combines with the host's egg and is implanted in the uterus. And the host will give birth to the larvae after some time. If the host is male, it will determine the semen of the host through the scattering tube. The host's semen will fertilize the queen lewd worm's eggs, and the queen lewd worm will give birth to the larvae after some time.\n\nThe larvae that gave birth are very nutritious and taste good.</description>
+		<designationCategory/>
+		<defName>YR_Building_Maggot_Trap</defName>
+		<label>great king lewd worm(bed)</label>
+		<description>Some lewd worm does not turn into queen lewd worm when maturing, but grow enormously as maggots. The giant lewd worm, or "Great King lewd word" hides underground and ambuses any humanoid creatures that walk on them, traps them in their own bodies, and reproduces in that way.\n\nGreat king lewd worms are particularly sensitive to pheromones contained in urine. Therefore, if you soak a piece of meat in urine as bait, the great king lewd worm will be attracted to it and surface. However, it will be confused if there's nobody to rape, and during that time its head will be exposed on the ground.\n\nWhen the head of great king lewd worm is exposed, it will quickly engulf the target if there's a humanoid creature passing by it. After capture, the prey is completely anesthetized from the neck below and then violated. After a brief period of mating, the victim gets completely swallowed and gets bred inside the worm's body.\n\nBut if you spray the same urine pheromones in a certain spot during this period, the great king lewd worm will reveal their anus. In this case, the captured subject will be expelled through it.</description>
+		<uiOrder>701</uiOrder>
 		<graphicData>
 			<texPath>Yuran/Yuranlike/Bodies/Dummy/YR_Bote</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shadowData>
-				<volume>(0, 0, 0)</volume>
-				<offset>(0, 0, 0)</offset>
-			</shadowData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
 		</graphicData>
-		<uiOrder>100</uiOrder>
-		<size>(1,1)</size>
 		<comps>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
 				<!-- 묶였을 때 부여되는 헤디프 -->
@@ -368,6 +365,37 @@
 					</li>
 				</bedAnimationList>
 			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Queen_Bed">
+				<tendTick>500</tendTick>
+				<destroySelfAndPawnTicks>60000</destroySelfAndPawnTicks>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Warp">
+				<warpPointThingDefs>
+					<li>YR_Maggot_WarpPoint</li>
+				</warpPointThingDefs>
+			</li>
 		</comps>
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
+			<WorkToBuild>800</WorkToBuild>
+			<Mass>30</Mass>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
+			<Comfort>0.75</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+		</statBases>
+		<size>(1,1)</size>
+		<!-- 额外固定消耗 -->
+		<costList>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Steel>200</Steel>
+		</costList>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<!--<li>YR_RP_AdvancedBondageBed</li>-->
+		</researchPrerequisites>
+		<uiIconScale>1.5</uiIconScale>
 	</ThingDef>
 </Defs>

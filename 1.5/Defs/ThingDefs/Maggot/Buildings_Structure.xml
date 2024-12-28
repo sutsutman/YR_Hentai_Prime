@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="DoorBase">
+		<designationCategory/>
+		<defName>YR_Maggot_Door</defName>
+		<label>queen lewd worm's mucus</label>
+		<description>A glob of mucus discharged by the maggot queen to prevent the fleeing of her host.</description>
+		<stuffCategories Inherit="False">
+	</stuffCategories>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Maggot/Bugdoor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+				<enabled>false</enabled>
+			</damageData>
+			<drawSize>(2,1.5)</drawSize>
+		</graphicData>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>YR_Maggot_PheromoneGenerator</defName>
+		<label>pheromone generator</label>
+		<description>This is a machine that emits a captivating scent of pheromones, signifying the presence of lascivious prostitutes and male prostitutes obsessed with mating here.\n\nWho would fall for such a thing, you ask? Well... there are those who do, that's what I'm saying.</description>
+		<descriptionHyperlinks>
+			<ThingDef>YR_PheromonePee</ThingDef>
+		</descriptionHyperlinks>
+		<uiOrder>700</uiOrder>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Maggot/PheromoneGenerator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5, 1.5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<designationCategory>YR_RJW_Furniture</designationCategory>
+		<costList>
+			<Meat_Megaspider>10</Meat_Megaspider>
+			<YR_PheromonePee>6</YR_PheromonePee>
+		</costList>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>stored pheromone pee</fuelLabel>
+				<fuelGizmoLabel>pheromone pee</fuelGizmoLabel>
+				<outOfFuelMessage>stored pheromone pee exhausted</outOfFuelMessage>
+				<fuelFilter>
+					<thingDefs>
+						<li>YR_PheromonePee</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>30</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<initialConfigurableTargetFuelLevel>25</initialConfigurableTargetFuelLevel>
+				<autoRefuelPercent>0.2</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<fuelIconPath>Yuran/Things/Item/Resource/YR_PheromonePeeB</fuelIconPath>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_PheromoneGenerator">
+				<ticks>2500</ticks>
+				<fuel>10</fuel>
+				<spawnSoundDef>Hive_Spawn</spawnSoundDef>
+				<spawnPawnSettings>
+					<li>
+						<pawnKindDef>YR_Maggot_Queen</pawnKindDef>
+						<spawnAmountRange>2~3</spawnAmountRange>
+						<defaultFactionType>Insect</defaultFactionType>
+						<nullFaction>false</nullFaction>
+						<playerFaction>false</playerFaction>
+						<ageRange>0~3</ageRange>
+						<genders>
+							<li>Female</li>
+						</genders>
+						<!-- <spawnSoundDef>aa</spawnSoundDef> -->
+					</li>
+				</spawnPawnSettings>
+			</li>
+		</comps>
+		<altitudeLayer>Building</altitudeLayer>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+		</building>
+		<statBases>
+			<MarketValue>1300</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+			<Mass>15</Mass>
+			<WorkToBuild>2000</WorkToBuild>
+		</statBases>
+		<fillPercent>0.2</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<pathCost>30</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>false</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
+</Defs>

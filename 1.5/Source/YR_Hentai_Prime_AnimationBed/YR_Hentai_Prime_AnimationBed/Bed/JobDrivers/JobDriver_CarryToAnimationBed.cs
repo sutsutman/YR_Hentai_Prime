@@ -63,27 +63,32 @@ namespace YR_Hentai_Prime_AnimationBed
             yield return toil;
             yield return Toils_General.Do(delegate
             {
-                Thing thing = takee;
-                platform.Container.TryAddOrTransfer(thing, 1);
-                thing.Rotation = Rot4.South;
-                CompAnimationBedTarget compAnimationBedTarget = thing.TryGetComp<CompAnimationBedTarget>();
-                if (compAnimationBedTarget != null)
-                {
-                    compAnimationBedTarget.Notify_HeldOnPlatform(platform.Container);
+                ChainTakeeToPlatform(taker, takee, platform);
+            });
+        }
 
-                    if (thing is Pawn pawn)
+        public static void ChainTakeeToPlatform(Pawn taker, Thing takee, CompAnimationBed platform)
+        {
+            Thing thing = takee;
+            platform.Container.TryAddOrTransfer(thing, 1);
+            thing.Rotation = Rot4.South;
+            CompAnimationBedTarget compAnimationBedTarget = thing.TryGetComp<CompAnimationBedTarget>();
+            if (compAnimationBedTarget != null)
+            {
+                compAnimationBedTarget.Notify_HeldOnPlatform(platform.Container);
+
+                if (thing is Pawn pawn)
+                {
+                    foreach (var hediffDef in platform.Props.addedHediffDefs)
                     {
-                        foreach (var hediffDef in platform.Props.addedHediffDefs)
-                        {
-                            pawn.health.AddHediff(hediffDef);
-                        }
-                    }
-                    if (compAnimationBedTarget.Props.capturedLetterLabel != null)
-                    {
-                        Find.LetterStack.ReceiveLetter(compAnimationBedTarget.Props.capturedLetterLabel, compAnimationBedTarget.Props.capturedLetterText.Formatted(taker.Named("PAWN")), LetterDefOf.NeutralEvent, platform.parent);
+                        pawn.health.AddHediff(hediffDef);
                     }
                 }
-            });
+                if (compAnimationBedTarget.Props.capturedLetterLabel != null)
+                {
+                    Find.LetterStack.ReceiveLetter(compAnimationBedTarget.Props.capturedLetterLabel, compAnimationBedTarget.Props.capturedLetterText.Formatted(taker.Named("PAWN")), LetterDefOf.NeutralEvent, platform.parent);
+                }
+            }
         }
     }
 }

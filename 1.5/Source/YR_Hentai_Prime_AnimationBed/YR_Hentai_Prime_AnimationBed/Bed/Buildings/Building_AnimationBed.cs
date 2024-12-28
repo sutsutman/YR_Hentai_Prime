@@ -116,7 +116,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        private CompProperties_AnimationBed PlatformProps => GetComp<CompAnimationBed>().Props;
+        private CompProperties_AnimationBed AnimationBedCompProperties => GetComp<CompAnimationBed>().Props;
 
         public PawnDrawParms HeldPawnDrawParms
         {
@@ -360,6 +360,11 @@ namespace YR_Hentai_Prime_AnimationBed
                 HeldPawn?.GetComp<CompAnimationBedTarget>()?.Notify_ReleasedFromPlatform();
                 ToggleHediffComp?.RemoveAllHediffs(HeldPawn);
                 RemoveAnimationBedHediff();
+
+                foreach (var addedAfterEjectHediffDef in AnimationBedCompProperties.addedAfterEjectHediffDefs)
+                {
+                    HeldPawn?.health.AddHediff(addedAfterEjectHediffDef);
+                }
             }
 
             innerContainer?.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
@@ -367,7 +372,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private void RemoveAnimationBedHediff()
         {
-            List<HediffDef> addedHediffDefs = PlatformProps.addedHediffDefs;
+            List<HediffDef> addedHediffDefs = AnimationBedCompProperties.addedHediffDefs;
             if (HeldPawn == null || addedHediffDefs.NullOrEmpty())
             {
                 return;
