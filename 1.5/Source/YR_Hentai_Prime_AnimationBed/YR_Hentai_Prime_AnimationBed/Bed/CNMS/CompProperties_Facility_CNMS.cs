@@ -6,44 +6,54 @@ using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
+    // CNMS의 속성을 정의하는 클래스
     public class CompProperties_Facility_CNMS : CompProperties_Facility
     {
         public CompProperties_Facility_CNMS() => compClass = typeof(CompFacility_CNMS);
 
-        public int ejectTicks = 1000;
+        // 사물을 배출할 기본 틱 수
+        public int EjectTicksDefault = 1000;
     }
 
+    // CNMS 컴포넌트 클래스
     public class CompFacility_CNMS : CompFacility, IThingHolder
     {
+        // 속성 접근자
         public new CompProperties_Facility_CNMS Props => (CompProperties_Facility_CNMS)props;
 
+        // 내부 컨테이너 (Thing을 보관)
         public ThingOwner innerContainer;
+
+        // 임시 리스트 (저장/로드 시 사용)
         private readonly List<Thing> tmpThings = new List<Thing>();
+
+        // 배출 틱 관리
+        private int ejectTicks;
+
+        // 메인 CNMS 여부
+        private bool isMainCNMS;
+
+        // 생성자: innerContainer 초기화
         public CompFacility_CNMS()
         {
             innerContainer = new ThingOwner<Thing>(this);
+            ejectTicks = Props?.EjectTicksDefault ?? 1000;
         }
 
-        int ejectTicks = 1000;
+        // 틱 단위 동작
         public override void CompTick()
         {
             base.CompTick();
-
             ejectTicks--;
+
             if (ejectTicks <= 0)
             {
-                foreach (var thing in innerContainer)
-                {
-                    Log.Error(thing.Label + " : " + thing.stackCount);
-                }
-                ejectTicks = Props.ejectTicks;
-
-
-                // innerContainer 속 thing의 스택이 해당 thing의 def의 stack의 10배면 주변에 배출
-                EjectOrTransfer();
+                ejectTicks = Props.EjectTicksDefault;
+                EjectOrTransfer(); // 조건에 따라 사물을 배출하거나 이동
             }
         }
 
+        // 내부 컨테이너의 사물을 배출하거나 다른 CNMS로 이동
         private void EjectOrTransfer()
         {
             if (isMainCNMS)
@@ -52,80 +62,53 @@ namespace YR_Hentai_Prime_AnimationBed
             }
             else
             {
-                if (parent.Map != null)
+                // 메인 CNMS를 찾고 모든 사물을 이동
+                var mainCNMS = parent.Map?.listerThings.AllThings
+                    .Select(t => t.TryGetComp<CompFacility_CNMS>())
+                    .FirstOrDefault(comp => comp?.isMainCNMS == true);
+
+                if (mainCNMS != null)
                 {
-                    var allThings = parent.Map.listerThings.AllThings;
-
-                    foreach (var thing in allThings)
-                    {
-                        if (thing == parent)
-                        {
-                            continue;
-                        }
-                        var compCNMS = thing.TryGetComp<CompFacility_CNMS>();
-
-                        if (compCNMS != null)
-                        {
-                            if (compCNMS.isMainCNMS)
-                            {
-                                innerContainer.TryTransferAllToContainer(compCNMS.innerContainer);
-                                return;
-                            }
-                        }
-                    }
+                    innerContainer.TryTransferAllToContainer(mainCNMS.innerContainer);
+                    return;
                 }
             }
+
+            // 메인 CNMS가 없거나 이동 실패 시 배출
             CheckAndEjectOverflowingStacks();
         }
 
+        // 스택 제한을 초과한 사물을 배출
         private void CheckAndEjectOverflowingStacks()
         {
-            var thingDefCounts = new Dictionary<ThingDef, int>();
+            var thingsToEject = innerContainer
+                .GroupBy(t => t.def)
+                .Where(g => g.Count() >= 10)
+                .SelectMany(g => g)
+                .ToList();
 
-            // innerContainer에 있는 모든 Thing을 검사하고 각 ThingDef의 개수를 셉니다.
-            foreach (var thing in innerContainer)
-            {
-                var thingDef = thing.def;
-
-                if (!thingDefCounts.ContainsKey(thingDef))
-                {
-                    thingDefCounts[thingDef] = 0;
-                }
-
-                thingDefCounts[thingDef] += 1;
-            }
-
-            // 배출할 Thing들을 추출
-            var thingsToEject = new List<Thing>();
-            foreach (var kvp in thingDefCounts)
-            {
-                if (kvp.Value >= 10)
-                {
-                    // 해당 ThingDef의 모든 Thing을 배출 목록에 추가
-                    thingsToEject.AddRange(innerContainer.Where(t => t.def == kvp.Key));
-                }
-            }
-
-            // 배출할 Thing들을 주변에 떨어뜨림
             foreach (var thing in thingsToEject)
             {
-                if (!innerContainer.TryDrop(thing, parent.Position, parent.Map, ThingPlaceMode.Near, out var droppedThing))
+                if (!innerContainer.TryDrop(thing, parent.Position, parent.Map, ThingPlaceMode.Near, out _))
                 {
-                    Log.Warning($"Failed to drop {thing.LabelCap} from innerContainer.");
+                    Log.Warning($"Failed to eject {thing.LabelCap} from innerContainer.");
                 }
             }
-
         }
+
+        // 추가적인 Gizmo 제공
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
+            // 메인 CNMS 토글
             yield return new Command_Action
             {
                 defaultLabel = "YR_ToggleMainCNMS_Label".Translate(),
                 defaultDesc = "YR_ToggleMainCNMS_Desc".Translate(),
-                icon = isMainCNMS ? ContentFinder<Texture2D>.Get("UI/Commands/ToggleHediff") : ContentFinder<Texture2D>.Get("UI/Commands/TransferVictim"),
+                icon = ContentFinder<Texture2D>.Get(isMainCNMS ? "UI/Commands/ToggleHediff" : "UI/Commands/TransferVictim"),
                 action = ToggleMainCNMS
             };
 
+            // 내부 컨테이너 배출
             yield return new Command_Action
             {
                 defaultLabel = "YR_EjectInnerContainer_Label".Translate(),
@@ -135,74 +118,50 @@ namespace YR_Hentai_Prime_AnimationBed
             };
         }
 
+        // 내부 컨테이너의 모든 사물을 배출
         private void EjectInnerContainer()
         {
             innerContainer.TryDropAll(parent.Position, parent.Map, ThingPlaceMode.Near);
         }
 
-        bool isMainCNMS = false;
-        public void ToggleMainCNMS()
+        // 메인 CNMS 상태 토글
+        private void ToggleMainCNMS()
         {
-            if (isMainCNMS)
-            {
-                isMainCNMS = false;
-            }
-            else
-            {
-                isMainCNMS = true;
+            isMainCNMS = !isMainCNMS;
 
-                // 맵 전체에서 CompFacility_CNMS를 가진 자신을 제외한 모든 Thing을 찾고, 해당 CompFacility_CNMS의 isMainCNMS를 false로 처리
-                Map map = parent.Map;
-
-                if (map != null)
+            if (isMainCNMS && parent.Map != null)
+            {
+                foreach (var thing in parent.Map.listerThings.AllThings)
                 {
-                    var allThings = map.listerThings.AllThings;
+                    if (thing == parent) continue;
 
-                    foreach (var thing in allThings)
-                    {
-                        if (thing == parent)
-                        {
-                            continue;
-                        }
-                        var compCNMS = thing.TryGetComp<CompFacility_CNMS>();
-
-                        if (compCNMS != null)
-                        {
-                            compCNMS.isMainCNMS = false; // CompFacility_CNMS의 isMainCNMS를 false로 설정
-                        }
-                    }
+                    thing.TryGetComp<CompFacility_CNMS>()?.SetMainCNMS(false);
                 }
             }
         }
 
+        // 메인 CNMS 상태 설정
+        public void SetMainCNMS(bool state)
+        {
+            isMainCNMS = state;
+        }
+
+        // 데이터 저장/로드
         public override void PostExposeData()
         {
             base.PostExposeData();
             Scribe_Values.Look(ref isMainCNMS, "isMainCNMS");
-            Scribe_Values.Look(ref ejectTicks, "EjectTicks");
-
-            bool flag = !parent.SpawnedOrAnyParentSpawned;
-            if (flag && Scribe.mode == LoadSaveMode.Saving)
-            {
-                tmpThings.Clear();
-                tmpThings.AddRange(innerContainer);
-                tmpThings.Clear();
-            }
-            Scribe_Deep.Look(ref innerContainer, "innerContainer", new object[]
-            {
-                this
-            });
-            //Scribe_Values.Look(ref ticksToSpawn, "ticksToSpawn");
-
+            Scribe_Values.Look(ref ejectTicks, "ejectTicks");
+            Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
         }
+
+        // IThingHolder 구현: 자식 컨테이너 반환
         public void GetChildHolders(List<IThingHolder> outChildren)
         {
             ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
         }
 
-        public ThingOwner GetDirectlyHeldThings()
-        {
-            return innerContainer;
-        }
+        // IThingHolder 구현: 직접적으로 보유한 Thing 반환
+        public ThingOwner GetDirectlyHeldThings() => innerContainer;
     }
 }

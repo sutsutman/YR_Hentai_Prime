@@ -44,7 +44,7 @@ namespace YR_Hentai_Prime_AnimationBed
                         carrier.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                     }
                 }
-            }, 
+            },
             //2
             delegate (LocalTargetInfo t)
             {
@@ -52,7 +52,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     GenDraw.DrawTargetHighlight(t);
                 }
-            }, 
+            },
             //3
             ValidateTarget, null, null, BaseContent.ClearTex, playSoundOnAction: true, delegate (LocalTargetInfo t)
             {
@@ -95,7 +95,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
                     Widgets.MouseAttachedLabel(label);
                 }
-            }, 
+            },
             //4
             delegate
             {
