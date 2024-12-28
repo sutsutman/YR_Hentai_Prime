@@ -109,6 +109,29 @@
 						</li>
 					</conditonPawnAnimations>
 					<offset>(0,1,0.25)</offset>
+					<conditonPawnOffsets>
+						<li MayRequire="RooAndGloomy.YuranRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Yuran_Race</li>
+										<li>Yuran_Race_Miko</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.15)</offset>
+						</li>
+						<li MayRequire="SutSutMan.HakuyuRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Hakuyu_Race</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,1,0.2)</offset>
+						</li>
+					</conditonPawnOffsets>
 				</pawnAnimationSetting>
 				<bedAnimationList>
 					<!-- 폰의 바디, 헤드 -->

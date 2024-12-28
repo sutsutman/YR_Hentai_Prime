@@ -166,6 +166,26 @@
 							</pawnCondition>
 							<offset>(0,1.0,-0.03)</offset>
 						</li>
+																		<li MayRequire="RooAndGloomy.YuranRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Yuran_Race</li>
+										<li>Yuran_Race_Miko</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,-0.06)</offset>
+						</li><li MayRequire="SutSutMan.HakuyuRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Hakuyu_Race</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+					<offset>(0,1.0,-0.01)</offset>
+						</li>
 					</conditonPawnOffsets>
 					<rotation>South</rotation>
 				</pawnAnimationSetting>

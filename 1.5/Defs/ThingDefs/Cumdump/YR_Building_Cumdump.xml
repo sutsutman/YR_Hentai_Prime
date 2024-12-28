@@ -181,6 +181,26 @@
 							</pawnCondition>
 							<offset>(0,1,-0.02)</offset>
 						</li>
+						<li MayRequire="RooAndGloomy.YuranRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Yuran_Race</li>
+										<li>Yuran_Race_Miko</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.0)</offset>
+						</li><li MayRequire="SutSutMan.HakuyuRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Hakuyu_Race</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+					<offset>(0,1,0.07)</offset>
+						</li>
 					</conditonPawnOffsets>
 				</pawnAnimationSetting>
 				<bedAnimationList>
@@ -477,6 +497,17 @@
 										<li>
 											<cameraOffset>(0.0, -0.1, 0.15)</cameraOffset>
 										</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">
+											<pawnCondition>
+												<heldPawnCondition>
+													<races>
+														<li>Yuran_Race</li>
+														<li>Yuran_Race_Miko</li>
+													</races>
+												</heldPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(0, 0, 0.25)</cameraOffset>
+										</li>
 									</conditionCameraOffsets>
 									<cameraZoom>3.0</cameraZoom>
 									<renderClothes>false</renderClothes>
@@ -499,6 +530,7 @@
 							</li>
 						</conditonPortraitSettings>
 					</li>
+					<!--몸통-->
 					<li>
 						<portraitSetting>
 							<draw>false</draw>
@@ -515,7 +547,7 @@
 									<conditionCameraOffsets>
 										<li>
 											<cameraOffset>(0, 0, -0.4)</cameraOffset>
-										</li>										
+										</li>
 										<li MayRequire="polonium.RorenRaceMod">
 											<pawnCondition>
 												<heldPawnCondition>
@@ -535,6 +567,17 @@
 												</heldPawnCondition>
 											</pawnCondition>
 											<cameraOffset>(0, 0, -0.25)</cameraOffset>
+										</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">
+											<pawnCondition>
+												<heldPawnCondition>
+													<races>
+														<li>Yuran_Race</li>
+														<li>Yuran_Race_Miko</li>
+													</races>
+												</heldPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(0, 0, -0.3)</cameraOffset>
 										</li>
 									</conditionCameraOffsets>
 									<cameraZoom>3.5</cameraZoom>

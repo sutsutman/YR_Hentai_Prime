@@ -67,7 +67,7 @@
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
-							<pawnAnimationDef>YR_Global_Animation_BodyChange_Sound</pawnAnimationDef>
+							<pawnAnimationDef>YR_Global_Animation_BodyChange_NoBodyMove_Sound</pawnAnimationDef>
 						</li>
 					</conditonPawnAnimations>
 					<offset>(0,1,-0.1)</offset>
