@@ -42,6 +42,9 @@
 									<races>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+
+										<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+										
 										<!-- B.E.P Race -->
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
@@ -111,6 +114,19 @@
 								<bedAnimationDef>YR_Maggot_Queen_Body_Yuran</bedAnimationDef>
 								<offset>(0,0.0,-0.4)</offset>
 							</li>
+							<!-- Maru Race -->
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<races>
+											<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+										</races>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>MR_Maggot_Queen_Body_Maru</bedAnimationDef>
+								<offset>(0,0.0,0)</offset>
+							</li>
+
 							<!-- B.E.P Race -->
 							<li>
 								<pawnCondition>
