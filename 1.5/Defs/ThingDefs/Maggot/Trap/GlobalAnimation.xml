@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 베이스 -->
+	<!-- 그림자 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Trap_Base_Shadow</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,-0.5,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MaggotTrap/Body/Base/Shadow</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 뒤 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Trap_Base_Back</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,-0.4,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MaggotTrap/Body/Base/Back</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 앞 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Maggot_Trap_Base_Front</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,1,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/MaggotTrap/Body/Base/Front</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

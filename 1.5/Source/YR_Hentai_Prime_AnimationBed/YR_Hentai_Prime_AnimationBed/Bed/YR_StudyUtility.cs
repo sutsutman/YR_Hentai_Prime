@@ -37,12 +37,23 @@ namespace YR_Hentai_Prime_AnimationBed
                         compHoldingPlatformTarget2.targetHolder = t.Thing;
                     }
 
-                    if (carrier != null)
+                    if (carrier != null && carrier == victim)
                     {
-                        Job job = (transferBetweenPlatforms ? JobMaker.MakeJob(YR_H_P_DefOf.YR_TransferBetweenAnimationBeds, sourcePlatform, t, victim) : JobMaker.MakeJob(YR_H_P_DefOf.YR_CarryToAnimationBed, t, victim));
+                        // Self-action logic
+                        Job job = JobMaker.MakeJob(YR_H_P_DefOf.YR_SelfTieToAnimationBed, t, victim);
                         job.count = 1;
                         carrier.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                     }
+                    else if (carrier != null)
+                    {
+                        // 기존 로직
+                        Job job = (transferBetweenPlatforms
+                            ? JobMaker.MakeJob(YR_H_P_DefOf.YR_TransferBetweenAnimationBeds, sourcePlatform, t, victim)
+                            : JobMaker.MakeJob(YR_H_P_DefOf.YR_CarryToAnimationBed, t, victim));
+                        job.count = 1;
+                        carrier.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+                    }
+
                 }
             },
             //2

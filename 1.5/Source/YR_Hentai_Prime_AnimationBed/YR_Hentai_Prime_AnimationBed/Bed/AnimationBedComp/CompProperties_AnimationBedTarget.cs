@@ -32,6 +32,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         // 필드 및 캐시된 텍스처
         private static readonly CachedTexture CaptureIcon = new CachedTexture("UI/Commands/CaptureVictim");
+        private static readonly CachedTexture SelfTieIcon = new CachedTexture("UI/Commands/SelfTie");
         private static readonly CachedTexture TransferIcon = new CachedTexture("UI/Commands/TransferVictim");
         private static readonly Texture2D CancelTex = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
 
@@ -156,6 +157,7 @@ namespace YR_Hentai_Prime_AnimationBed
             if (StudiedAtHoldingPlatform && !CurrentlyHeldOnPlatform && CanBeCaptured)
             {
                 yield return CreateCaptureCommand();
+                yield return CreateSelfTieCommand();
             }
 
             if (CurrentlyHeldOnPlatform)
@@ -189,6 +191,21 @@ namespace YR_Hentai_Prime_AnimationBed
                 Order = 10001,
             };
         }
+        private Command_Action CreateSelfTieCommand()
+        {
+            return new Command_Action
+            {
+                defaultLabel = "YR_SelfTieToPlatform".Translate() + "...",
+                defaultDesc = "YR_SelfTieToPlatformDesc".Translate(parent).Resolve(),
+                icon = SelfTieIcon.Texture,
+                action = () => YR_StudyUtility.TargetHoldingPlatformForVictim((Pawn)parent, parent),
+                activateSound = SoundDefOf.Click,
+                Disabled = !YR_StudyUtility.HoldingPlatformAvailableOnCurrentMap(),
+                disabledReason = "NoHoldingPlatformsAvailable".Translate(),
+                Order = 10002,
+            };
+        }
+
 
         private Command_Action CreateTransferCommand()
         {

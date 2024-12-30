@@ -58,23 +58,34 @@
 					<offset>(0,1,-0.15)</offset>
 					<conditonPawnOffsets>
 						<!-- B.E.P Race -->
-						<li>
+						<!-- <li> -->
+						<!-- <pawnCondition> -->
+						<!-- <heldPawnCondition> -->
+						<!-- <races> -->
+						<!-- <li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li> -->
+						<!-- <li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li> -->
+						<!-- <li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li> -->
+						<!-- <li MayRequire="bep.glassy.terr">Glassy_Pawn</li> -->
+						<!-- <li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li> -->
+						<!-- <li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li> -->
+						<!-- <li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li> -->
+						<!-- <li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li> -->
+						<!-- <li MayRequire="bep.maddy.twmr">Maddy_Pawn</li> -->
+						<!-- </races> -->
+						<!-- </heldPawnCondition> -->
+						<!-- </pawnCondition> -->
+						<!-- <offset>(0,0,-0.195)</offset> -->
+						<!-- </li> -->						
+						<li MayRequire="RooAndGloomy.YuranRaceMod">
 							<pawnCondition>
 								<heldPawnCondition>
 									<races>
-										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
-										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
-										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
-										<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
-										<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
-										<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
-										<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
-										<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
-										<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+										<li>Yuran_Race</li>
+										<li>Yuran_Race_Miko</li>
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
-							<offset>(0,0,-0.195)</offset>
+							<offset>(0,0,0.15)</offset>
 						</li>
 					</conditonPawnOffsets>
 				</pawnAnimationSetting>
@@ -184,184 +195,32 @@
 						</conditionBedAnimationDefs>
 					</li>
 					<!-- Head -->
-					<li>
-						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
-						<conditionBedAnimationDefs>
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<races>
-											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-											<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-										</races>
-									</heldPawnCondition>
-								</pawnCondition>
-								<bedAnimationDef>YR_Milking_Face_Yuran</bedAnimationDef>
-								<offset>(0,0.0,-0.4)</offset>
-							</li>
-						</conditionBedAnimationDefs>
-					</li>
-					<!-- Maggot(Hug) -->
-					<li>
-						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
-						<conditionBedAnimationDefs>
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<hediffDefs>
-											<li>YR_PowerMode1_Hediff</li>
-										</hediffDefs>
-										<reverseCondition>true</reverseCondition>
-									</heldPawnCondition>
-								</pawnCondition>
-								<bedAnimationDef>YR_Maggot_Queen_FrontHug_Egg</bedAnimationDef>
-								<offset>(0,0.0,0)</offset>
-							</li>
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<hediffDefs>
-											<li>YR_PowerMode1_Hediff</li>
-										</hediffDefs>
-									</heldPawnCondition>
-								</pawnCondition>
-								<bedAnimationDef>YR_Maggot_Queen_BackHug_Egg</bedAnimationDef>
-								<offset>(0,0.0,0)</offset>
-							</li>
-							<!-- B.E.P Race -->
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<races>
-											<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
-											<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
-											<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
-											<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
-											<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
-											<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
-											<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
-											<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
-											<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
-										</races>
-										<neverHediffDefs>
-											<li>YR_PowerMode1_Hediff</li>
-										</neverHediffDefs>
-										<allMatch>true</allMatch>
-									</heldPawnCondition>
-								</pawnCondition>
-								<offset>(0,0,-0.1)</offset>
-								<drawSize>(-0.5,-0.5)</drawSize>
-								<bedAnimationDef>YR_Maggot_Queen_FrontHug_Egg</bedAnimationDef>
-							</li>
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<races>
-											<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
-											<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
-											<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
-											<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
-											<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
-											<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
-											<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
-											<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
-											<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
-										</races>
-										<hediffDefs>
-											<li>YR_PowerMode1_Hediff</li>
-										</hediffDefs>
-										<allMatch>true</allMatch>
-									</heldPawnCondition>
-								</pawnCondition>
-								<offset>(0,0,-0.1)</offset>
-								<drawSize>(-0.5,-0.5)</drawSize>
-								<bedAnimationDef>YR_Maggot_Queen_BackHug_Egg</bedAnimationDef>
-							</li>
-						</conditionBedAnimationDefs>
-					</li>
+					<!-- <li> -->
+					<!-- <bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef> -->
+					<!-- <conditionBedAnimationDefs> -->
+					<!-- <li> -->
+					<!-- <pawnCondition> -->
+					<!-- <heldPawnCondition> -->
+					<!-- <races> -->
+					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li> -->
+					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li> -->
+					<!-- </races> -->
+					<!-- </heldPawnCondition> -->
+					<!-- </pawnCondition> -->
+					<!-- <bedAnimationDef>YR_Milking_Face_Yuran</bedAnimationDef> -->
+					<!-- <offset>(0,0.0,-0.4)</offset> -->
+					<!-- </li> -->
+					<!-- </conditionBedAnimationDefs> -->
+					<!-- </li> -->
 					<!-- Maggot(BackGround) -->
 					<li>
-						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
-						<conditionBedAnimationDefs>
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<hediffDefs>
-											<li>YR_PowerMode1_Hediff</li>
-										</hediffDefs>
-									</heldPawnCondition>
-								</pawnCondition>
-								<bedAnimationDef>YR_Maggot_Queen_BackGround</bedAnimationDef>
-								<offset>(0,0.0,0)</offset>
-							</li>
-							<!-- B.E.P Race -->
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<races>
-											<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
-											<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
-											<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
-											<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
-											<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
-											<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
-											<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
-											<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
-											<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
-										</races>
-										<hediffDefs>
-											<li>YR_PowerMode1_Hediff</li>
-										</hediffDefs>
-										<allMatch>true</allMatch>
-									</heldPawnCondition>
-								</pawnCondition>
-								<offset>(0,0,-0.1)</offset>
-								<drawSize>(-0.5,-0.5)</drawSize>
-								<bedAnimationDef>YR_Maggot_Queen_BackGround</bedAnimationDef>
-							</li>
-						</conditionBedAnimationDefs>
+						<bedAnimationDef>YR_Maggot_Trap_Base_Shadow</bedAnimationDef>
 					</li>
-					<!-- Maggot(Mouth) -->
 					<li>
-						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
-						<conditionBedAnimationDefs>
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<hediffDefs>
-											<li>YR_PowerMode1_Hediff</li>
-										</hediffDefs>
-									</heldPawnCondition>
-								</pawnCondition>
-								<bedAnimationDef>YR_Maggot_Queen_Mouth</bedAnimationDef>
-								<offset>(0,0.0,0)</offset>
-							</li>
-							<!-- B.E.P Race -->
-							<li>
-								<pawnCondition>
-									<heldPawnCondition>
-										<races>
-											<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
-											<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
-											<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
-											<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
-											<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
-											<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
-											<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
-											<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
-											<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
-										</races>
-										<hediffDefs>
-											<li>YR_PowerMode1_Hediff</li>
-										</hediffDefs>
-										<allMatch>true</allMatch>
-									</heldPawnCondition>
-								</pawnCondition>
-								<offset>(0,0,-0.1)</offset>
-								<drawSize>(-0.5,-0.5)</drawSize>
-								<bedAnimationDef>YR_Maggot_Queen_Mouth</bedAnimationDef>
-							</li>
-						</conditionBedAnimationDefs>
+						<bedAnimationDef>YR_Maggot_Trap_Base_Back</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Maggot_Trap_Base_Front</bedAnimationDef>
 					</li>
 				</bedAnimationList>
 			</li>

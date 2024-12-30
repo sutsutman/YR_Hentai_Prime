@@ -79,6 +79,17 @@
 							</pawnCondition>
 							<offset>(0,0,-0.195)</offset>
 						</li>
+						<li MayRequire="RooAndGloomy.YuranRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Yuran_Race</li>
+										<li>Yuran_Race_Miko</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.15)</offset>
+						</li>
 					</conditonPawnOffsets>
 				</pawnAnimationSetting>
 				<bedAnimationList>
@@ -368,7 +379,8 @@
 					</li>
 				</bedAnimationList>
 			</li>
-		<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Queen_Bed"></li>
+			<!-- 이거에 문제 있음 -->
+			<!-- <li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Queen_Bed"/> -->
 		</comps>
 	</ThingDef>
 </Defs>

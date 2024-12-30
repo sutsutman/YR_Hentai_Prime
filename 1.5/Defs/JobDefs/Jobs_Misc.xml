@@ -36,9 +36,14 @@
 		<casualInterruptible>false</casualInterruptible>
 	</JobDef>
 	<!-- <JobDef> -->
-		<!-- <defName>YR_FeedVictim</defName> -->
-		<!-- <driverClass>JobDriver_Feed</driverClass> -->
-		<!-- <reportString>feeding TargetA to TargetB.</reportString> -->
-		<!-- <allowOpportunisticPrefix>true</allowOpportunisticPrefix> -->
+	<!-- <defName>YR_FeedVictim</defName> -->
+	<!-- <driverClass>JobDriver_Feed</driverClass> -->
+	<!-- <reportString>feeding TargetA to TargetB.</reportString> -->
+	<!-- <allowOpportunisticPrefix>true</allowOpportunisticPrefix> -->
 	<!-- </JobDef> -->
+	<JobDef>
+		<defName>YR_SelfTieToAnimationBed</defName>
+		<driverClass>YR_Hentai_Prime_AnimationBed.JobDriver_SelfTieToAnimationBed</driverClass>
+		<reportString>Moving to bind self to the animation bed.</reportString>
+	</JobDef>
 </Defs>

@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using System.Linq;
 using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
@@ -93,18 +92,18 @@ namespace YR_Hentai_Prime_AnimationBed
             //bed.Rotation = Rot4.South;
 
             //아군, 비 적대
-            if (!becomPrisoner)
-            {
-                //침대 설치 불가능
-                if (carrier.GetRoom().IsPrisonCell)
-                {
-                    SpawnDoor(carrier);
-                }
-            }
-            else if (becomPrisoner && (carrier.GetRoom() == null || (!carrier.GetRoom().IsPrisonCell && carrier.GetRoom().ContainedBeds.Count() > 0)))
-            {
-                SpawnDoor(carrier);
-            }
+            //if (!becomPrisoner)
+            //{
+            //    //침대 설치 불가능
+            //    if (carrier.GetRoom().IsPrisonCell)
+            //    {
+            //        SpawnDoor(carrier);
+            //    }
+            //}
+            //else if (becomPrisoner && (carrier.GetRoom() == null || (!carrier.GetRoom().IsPrisonCell && carrier.GetRoom().ContainedBeds.Count() > 0)))
+            //{
+            //    SpawnDoor(carrier);
+            //}
 
             //아군, 비 적대고, 일반 침대가 설치 불가능할 경우
             if (becomPrisoner)
@@ -122,7 +121,18 @@ namespace YR_Hentai_Prime_AnimationBed
             //pawn.jobs.Notify_TuckedIntoBed(bed);
             //pawn.mindState.Notify_TuckedIntoBed();
 
-            JobDriver_CarryToAnimationBed.ChainTakeeToPlatform(carrier, pawn, bed.TryGetComp<CompAnimationBed>());
+            var compAnimationBed = bed.TryGetComp<CompAnimationBed>();
+
+            if (compAnimationBed.Container.TryAdd(pawn.SplitOff(1)))
+            {
+                //pawn.DeSpawn(); // 맵에서 제거
+                CompAnimationBedTarget compTarget = pawn.TryGetComp<CompAnimationBedTarget>();
+                if (compTarget != null)
+                {
+                    compTarget.Notify_HeldOnPlatform(compAnimationBed.Container);
+                }
+            }
+
             if (bed != null)
             {
                 var comp = bed.TryGetComp<Comp_Maggot_Queen_Bed>();

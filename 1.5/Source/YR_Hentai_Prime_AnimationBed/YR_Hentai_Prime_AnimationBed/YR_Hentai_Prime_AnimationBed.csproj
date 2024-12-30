@@ -85,6 +85,7 @@
     <Compile Include="Bed\CompProperties_DrawPicture.cs" />
     <Compile Include="Bed\CompProperties_SoundAndMote.cs" />
     <Compile Include="Bed\CompPowerPlant_Building_AnimationBed.cs" />
+    <Compile Include="Bed\JobDrivers\JobDriver_SelfTieToAnimationBed.cs" />
     <Compile Include="Bed\Joy\JoyGiver_InteractBuildingInteractionCell_DummyForJoy.cs" />
     <Compile Include="Bed\Maggot\Alert_PawnDownButMaggotCantTouch.cs" />
     <Compile Include="Bed\Maggot\Building_Maggot_Trap.cs" />
