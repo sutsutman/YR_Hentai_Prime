@@ -133,60 +133,63 @@ namespace YR_Hentai_Prime_AnimationBed
                 }
             }
 
-            if (bed != null)
-            {
-                var comp = bed.TryGetComp<Comp_Maggot_Queen_Bed>();
-                if (comp != null)
-                {
-                    void action()
-                    {
-                        bool flag = parent.DeSpawnOrDeselect(DestroyMode.Vanish);
-                        if (TryAcceptThing(comp, parent, true) && flag)
-                        {
-                            Find.Selector.Select(parent, false, false);
-                        }
-                    }
-                    action();
+            //if (bed != null)
+            //{
+            //    Log.Error("0");
+            //    var comp = bed.TryGetComp<Comp_Maggot_Queen_Bed>();
+            //    if (comp != null)
+            //    {
+            //        void action()
+            //        {
+            //            Log.Error("a");
+            //            comp.StartDigesting(carrier.Position, carrier);
+            //            //bool flag = parent.DeSpawnOrDeselect(DestroyMode.Vanish);
+            //            //if (TryAcceptThing(comp, parent, true) && flag)
+            //            //{
+            //            //    Find.Selector.Select(parent, false, false);
+            //            //}
+            //        }
+            //        action();
 
-                    //CompEffectBondageBed compEffectBondageBed = bed?.TryGetComp<CompEffectBondageBed>();
-                    //if (compEffectBondageBed == null)
-                    //{
-                    //    return;
-                    //}
+            //        //CompEffectBondageBed compEffectBondageBed = bed?.TryGetComp<CompEffectBondageBed>();
+            //        //if (compEffectBondageBed == null)
+            //        //{
+            //        //    return;
+            //        //}
 
-                    //compEffectBondageBed.DoEffect(pawn);
-                    MoteMaker.ThrowText(pawn.PositionHeld.ToVector3(), pawn.MapHeld, "YR_Bound".Translate(),
-                        4f);
+            //        //compEffectBondageBed.DoEffect(pawn);
+            //        MoteMaker.ThrowText(pawn.PositionHeld.ToVector3(), pawn.MapHeld, "YR_Bound".Translate(),
+            //            4f);
 
-                    return;
-                }
-                //parent.Destroy();
-            }
+            //        return;
+            //    }
+            //    //parent.Destroy();
+            //}
 
 
         }
 
-        public virtual bool TryAcceptThing(Comp_Maggot_Queen_Bed comp, Thing thing, bool allowSpecialEffects = true)
-        {
-            bool flag;
-            if (thing.holdingOwner != null)
-            {
-                thing.holdingOwner.TryTransferToContainer(thing, comp.innerContainer, thing.stackCount, true);
-                flag = true;
-            }
-            else
-            {
-                flag = comp.innerContainer.TryAdd(thing, true);
-            }
-            if (flag)
-            {
-                //if (thing.Faction != null && thing.Faction.IsPlayer)
-                //{
-                //    this.contentsKnown = true;
-                //}
-                return true;
-            }
-            return false;
-        }
+        //public virtual bool TryAcceptThing(Comp_Maggot_Queen_Bed comp, Thing thing, bool allowSpecialEffects = true)
+        //{
+        //    bool flag;
+        //    if (thing.holdingOwner != null)
+        //    {
+        //        thing.holdingOwner.TryTransferToContainer(thing, comp.innerContainer, thing.stackCount, true);
+        //        flag = true;
+        //    }
+        //    else
+        //    {
+        //        flag = comp.innerContainer.TryAdd(thing, true);
+        //    }
+        //    if (flag)
+        //    {
+        //        //if (thing.Faction != null && thing.Faction.IsPlayer)
+        //        //{
+        //        //    this.contentsKnown = true;
+        //        //}
+        //        return true;
+        //    }
+        //    return false;
+        //}
     }
 }

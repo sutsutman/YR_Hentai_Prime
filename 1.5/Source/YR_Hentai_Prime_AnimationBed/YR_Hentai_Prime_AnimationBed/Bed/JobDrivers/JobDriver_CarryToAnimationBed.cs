@@ -86,7 +86,7 @@ namespace YR_Hentai_Prime_AnimationBed
                         pawn.health.AddHediff(hediffDef);
                     }
                 }
-                if (compAnimationBedTarget.Props.capturedLetterLabel != null)
+                if (taker != takee && compAnimationBedTarget.Props.capturedLetterLabel != null)
                 {
                     Find.LetterStack.ReceiveLetter(compAnimationBedTarget.Props.capturedLetterLabel, compAnimationBedTarget.Props.capturedLetterText.Formatted(taker.Named("PAWN")), LetterDefOf.NeutralEvent, platform.parent);
                 }

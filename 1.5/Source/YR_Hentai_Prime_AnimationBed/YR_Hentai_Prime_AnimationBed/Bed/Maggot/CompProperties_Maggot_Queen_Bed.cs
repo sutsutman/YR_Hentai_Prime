@@ -1,176 +1,285 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using System.Linq;
-using Verse;
-using Verse.Sound;
+﻿//using RimWorld;
+//using System.Collections.Generic;
+//using System.Linq;
+//using UnityEngine;
+//using Verse;
+//using Verse.AI.Group;
+//using Verse.AI;
+//using Verse.Sound;
 
-namespace YR_Hentai_Prime_AnimationBed
-{
+//namespace YR_Hentai_Prime_AnimationBed
+//{
 
-    public class CompProperties_Maggot_Queen_Bed : CompProperties
-    {
-        public CompProperties_Maggot_Queen_Bed()
-        {
-            compClass = typeof(Comp_Maggot_Queen_Bed);
-        }
-        public int tendTick = 100;
-        public int destroySelfAndPawnTicks = -10000;
-    }
+//    public class CompProperties_Maggot_Queen_Bed : CompProperties
+//    {
+//        public CompProperties_Maggot_Queen_Bed()
+//        {
+//            compClass = typeof(Comp_Maggot_Queen_Bed);
+//        }
+//        public int tendTick = 100;
+//        public int destroySelfAndPawnTicks = -10000;
+//    }
 
-    public class Comp_Maggot_Queen_Bed : ThingComp, IThingHolder
-    {
-        public CompProperties_Maggot_Queen_Bed Props => (CompProperties_Maggot_Queen_Bed)props;
+//    public class Comp_Maggot_Queen_Bed : ThingComp, IThingHolder
+//    {
+//        private ThingOwner<Thing> innerContainer;
 
-        public CompAnimationBed CompAnimationBed => parent.TryGetComp<CompAnimationBed>();
+//        private int ticksDigesting;
 
-        public ThingOwner innerContainer;
-        private readonly List<Thing> tmpThings = new List<Thing>();
-        public override void PostSpawnSetup(bool respawningAfterLoad)
-        {
-            base.PostSpawnSetup(respawningAfterLoad);
-            destroySelfAndPawnTicks = Props.destroySelfAndPawnTicks;
-        }
-        public override void PostDeSpawn(Map map)
-        {
-            base.PostDeSpawn(map);
-            List<Pawn> innerContainerPawns = new List<Pawn>();
+//        private int ticksToDigestFully;
 
-            foreach (var innerContainerThing in innerContainer.ToList())
-            {
-                if (innerContainerThing is Pawn innerContainerPawn)
-                {
-                    innerContainerPawns.Add(innerContainerPawn);
-                }
-                if (innerContainerThing is Building)
-                {
-                    var temp = parent.Position;
-                    temp.x += 3;
-                    var building = GenSpawn.Spawn(innerContainerThing, temp, parent.Map);
-                    innerContainer.Remove(innerContainerThing);
-                    Log.Error("spawn : " + building.Label);
-                }
-            }
+//        //private bool wasDrafted;
 
-            innerContainer.TryDropAll(parent.Position, map, ThingPlaceMode.Near, null, null, true);
+//        public CompProperties_Maggot_Queen_Bed Props => (CompProperties_Maggot_Queen_Bed)props;
 
-            foreach (var innerContainerPawn in innerContainerPawns)
-            {
-                var hediff = HediffMaker.MakeHediff(HediffDefOf.Anesthetic, innerContainerPawn);
-                hediff.Severity = 1;
-                innerContainerPawn.health.AddHediff(hediff);
-            }
-        }
-        int tick = -10;
-        int destroySelfAndPawnTicks = -10000;
-        public override void CompTick()
-        {
-            base.CompTick();
-            if (tick < -1)
-            {
-                tick = Props.tendTick;
-            }
-            if (CompAnimationBed.HeldPawn == null)
-            {
-                parent.Destroy();
-            }
-            else
-            {
-                tick--;
+//        public Thing DigestingThing
+//        {
+//            get
+//            {
+//                if (innerContainer.InnerListForReading.Count <= 0)
+//                {
+//                    return null;
+//                }
 
-                if (tick <= 0)
-                {
-                    tick = Props.tendTick;
+//                return innerContainer.InnerListForReading[0];
+//            }
+//        }
 
-                    foreach (var hediff in CompAnimationBed.HeldPawn.health.hediffSet.GetHediffsTendable().ToList())
-                    {
-                        hediff.Tended(0.01f, 0.05f);
-                        break;
-                    }
-                }
-            }
+//        public Pawn DigestingPawn
+//        {
+//            get
+//            {
+//                Thing digestingThing = DigestingThing;
+//                if (digestingThing == null)
+//                {
+//                    return null;
+//                }
 
-            if (destroySelfAndPawnTicks > 0)
-            {
-                destroySelfAndPawnTicks--;
+//                if (digestingThing is Corpse corpse)
+//                {
+//                    return corpse.InnerPawn;
+//                }
 
-                if (destroySelfAndPawnTicks <= 0)
-                {
-                    var comp = parent.TryGetComp<Comp_Maggot_Warp>();
+//                return digestingThing as Pawn;
+//            }
+//        }
 
-                    bool destroyed = false;
-                    if (comp == null)
-                    {
-                        destroyed = true;
-                    }
-                    else
-                    {
-                        if (!comp.WarpPawnBool())
-                        {
-                            destroyed = true;
-                        }
-                    }
-                    if (destroyed)
-                    {
-                        YR_H_P_DefOf.HiveSpawnSound.PlayOneShot(new TargetInfo(parent.Position, parent.Map, false));
-
-                        Find.LetterStack.ReceiveLetter("YR_DestroySelfAndPawn_Label".Translate(CompAnimationBed.HeldPawn.LabelShort, CompAnimationBed.HeldPawn).CapitalizeFirst(), "YR_DestroySelfAndPawn_Desc".Translate(CompAnimationBed.HeldPawn.LabelShort, CompAnimationBed.HeldPawn).CapitalizeFirst(), LetterDefOf.NeutralEvent, new TargetInfo(parent.Position, parent.Map));
-
-                        CompAnimationBed.HeldPawn.DropAndForbidEverything();
-                        CompAnimationBed.HeldPawn.apparel.DropAll(parent.Position, true);
-
-                        CompAnimationBed.HeldPawn.Destroy();
-                        parent.Destroy();
-                    }
-                }
-            }
-        }
+//        public bool Digesting => DigestingThing != null;
 
 
-        //public override void PostRemoveCompAnimationBed.HeldPawn(Pawn pawn)
-        //{
-        //    base.PostRemoveCompAnimationBed.HeldPawn(pawn);
+//        public void GetChildHolders(List<IThingHolder> outChildren)
+//        {
+//            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
+//        }
 
-        //    if (pawn.GetPosture() != PawnPosture.LayingInBed)
-        //    {
-        //        var hediff = HediffMaker.MakeHediff(HediffDefOf.Anesthetic, pawn);
-        //        hediff.Severity = 0.75f;
-        //        pawn.health.AddHediff(hediff);
-        //    }
-        //}
+//        public ThingOwner GetDirectlyHeldThings()
+//        {
+//            return innerContainer;
+//        }
 
-        public Comp_Maggot_Queen_Bed()
-        {
-            innerContainer = new ThingOwner<Thing>(this);
-        }
-        public override void PostExposeData()
-        {
-            base.PostExposeData();
-            bool flag = !parent.SpawnedOrAnyParentSpawned;
-            if (flag && Scribe.mode == LoadSaveMode.Saving)
-            {
-                tmpThings.Clear();
-                tmpThings.AddRange(innerContainer);
-                tmpThings.Clear();
-            }
-            Scribe_Deep.Look(ref innerContainer, "innerContainer", new object[]
-            {
-                this
-            });
-            Scribe_Values.Look(ref destroySelfAndPawnTicks, "destroySelfAndPawnTicks", -10000);
+//        public Comp_Maggot_Queen_Bed()
+//        {
+//            innerContainer = new ThingOwner<Thing>(this);
+//        }
 
-        }
+//        public override void CompTick()
+//        {
+//            //if (Digesting)
+//            //{
+//            //    ticksDigesting++;
+//            //}
 
-        public void GetChildHolders(List<IThingHolder> outChildren)
-        {
-            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
-        }
-        public ThingOwner GetDirectlyHeldThings()
-        {
-            return innerContainer;
-        }
-        public override string CompInspectStringExtra()
-        {
-            return "Contents".Translate() + ": " + innerContainer.ContentsString.CapitalizeFirst();
-        }
-    }
-}
+//            //innerContainer.ThingOwnerTick(removeIfDestroyed: false);
+//            //if (Digesting && DigestingPawn.Dead)
+//            //{
+//            //    CompleteDigestion();
+//            //}
+//        }
+
+//        public override string CompInspectStringExtra()
+//        {
+//            if (Digesting)
+//            {
+//                //    int digestionTicks = GetDigestionTicks();
+//                //    int ticksLeftThisToil = Pawn.jobs.curDriver.ticksLeftThisToil;
+//                //    int num = ((ticksLeftThisToil < 0) ? digestionTicks : ticksLeftThisToil);
+//                //    float num2 = (float)(digestionTicks - (digestionTicks - num)) / 60f;
+//                //    return Props.digestingInspector.Formatted(DigestingThing.Named("PAWN"), num2.Named("SECONDS"));
+//            }
+
+//            return null;
+//        }
+
+//        //public override void Notify_Downed()
+//        //{
+//        //    AbortDigestion(Pawn.MapHeld);
+//        //}
+
+//        public override void Notify_Killed(Map prevMap, DamageInfo? _ = null)
+//        {
+//            AbortDigestion(prevMap);
+//        }
+
+//        //public void DigestJobFinished()
+//        //{
+//        //    if (ticksDigesting >= ticksToDigestFully)
+//        //    {
+//        //        CompleteDigestion();
+//        //    }
+//        //    else
+//        //    {
+//        //        AbortDigestion(Pawn.MapHeld);
+//        //    }
+//        //}
+
+//        private void AbortDigestion(Map map)
+//        {
+//            if (!Digesting)
+//            {
+//                return;
+//            }
+
+//            Pawn pawn = DropPawn(map);
+//            //Find.BattleLog.Add(new BattleLogEntry_Event(pawn, RulePackDefOf.Event_DevourerDigestionAborted, Pawn));
+//            //float amount = Props.timeDamageCurve.Evaluate((float)ticksDigesting / 60f);
+//            //DamageInfo dinfo = new DamageInfo(DamageDefOf.AcidBurn, amount, 0f, -1f, Pawn);
+//            //dinfo.SetApplyAllDamage(value: true);
+//            //pawn.TakeDamage(dinfo);
+//            //if (pawn.Faction == Faction.OfPlayer)
+//            //{
+//            //    string str = (Pawn.Dead ? Props.messageEmergedCorpse : Props.messageEmerged);
+//            //    if (!str.NullOrEmpty())
+//            //    {
+//            //        str = str.Formatted(pawn.Named("PAWN"));
+//            //        Messages.Message(str, pawn, MessageTypeDefOf.NeutralEvent);
+//            //    }
+//            //}
+
+//            //EndDigestingJob();
+//            //Pawn.Drawer.renderer.SetAllGraphicsDirty();
+//            //if (Pawn.Drawer.renderer.CurAnimation == AnimationDefOf.DevourerDigesting)
+//            //{
+//            //    Pawn.Drawer.renderer.SetAnimation(null);
+//            //}
+//        }
+
+//        //private void CompleteDigestion()
+//        //{
+//        //    if (Digesting)
+//        //    {
+//        //        Pawn pawn = DropPawn(Pawn.MapHeld);
+//        //        Find.BattleLog.Add(new BattleLogEntry_Event(pawn, RulePackDefOf.Event_DevourerDigestionCompleted, Pawn));
+//        //        DamageInfo dinfo = new DamageInfo(DamageDefOf.AcidBurn, Props.completeDigestionDamage, 0f, -1f, Pawn);
+//        //        dinfo.SetApplyAllDamage(value: true);
+//        //        pawn.TakeDamage(dinfo);
+//        //        if (!Props.messageDigestionCompleted.NullOrEmpty() && !pawn.Dead && pawn.Faction == Faction.OfPlayer)
+//        //        {
+//        //            Messages.Message(Props.messageDigestionCompleted.Formatted(pawn.Named("PAWN")), pawn, MessageTypeDefOf.NegativeEvent);
+//        //        }
+
+//        //        Pawn.Drawer.renderer.SetAllGraphicsDirty();
+//        //        if (Pawn.Drawer.renderer.CurAnimation == AnimationDefOf.DevourerDigesting)
+//        //        {
+//        //            Pawn.Drawer.renderer.SetAnimation(null);
+//        //        }
+//        //    }
+//        //}
+
+//        public void StartDigesting(IntVec3 origin, LocalTargetInfo target)
+//        {
+//            Log.Error("1");
+//            if (!target.HasThing || !(target.Thing is Pawn pawn) || !pawn.Spawned)
+//            {
+//                //Pawn.abilities.GetAbility(AbilityDefOf.ConsumeLeap_Devourer).ResetCooldown();
+//                return;
+//            }
+
+//            //DamageInfo dinfo = new DamageInfo(DamageDefOf.AcidBurn, 99f, 0f, -1f, parent);
+//            //pawn.GetLord()?.Notify_PawnDamaged(pawn, dinfo);
+//            //if (pawn.drafter != null)
+//            //{
+//            //    wasDrafted = pawn.drafter.Drafted;
+//            //}
+
+//            pawn.DeSpawn();
+//            ticksDigesting = 0;
+//            innerContainer.TryAdd(pawn);
+//            //ticksToDigestFully = GetDigestionTicks() - 30;
+//            //Pawn.jobs.StartJob(JobMaker.MakeJob(JobDefOf.DevourerDigest), JobCondition.InterruptForced);
+//            //if (!Props.messageDigested.NullOrEmpty() && pawn.Faction == Faction.OfPlayer)
+//            //{
+//            //    Messages.Message(Props.messageDigested.Formatted(pawn.Named("PAWN")), Pawn, MessageTypeDefOf.NegativeEvent);
+//            //}
+
+//            //Pawn.Rotation = Rot4.FromAngleFlat((parent.Position - origin).AngleFlat);
+//            //Pawn.Drawer.renderer.SetAllGraphicsDirty();
+//            //if (Pawn.Drawer.renderer.CurAnimation != AnimationDefOf.DevourerDigesting)
+//            //{
+//            //    Pawn.Drawer.renderer.SetAnimation(AnimationDefOf.DevourerDigesting);
+//            //}
+
+//            //Find.BattleLog.Add(new BattleLogEntry_Event(pawn, RulePackDefOf.Event_DevourerConsumeLeap, Pawn));
+//            Log.Error("2");
+//        }
+
+//        private Pawn DropPawn(Map map)
+//        {
+//            if (!Digesting)
+//            {
+//                return null;
+//            }
+
+//            if (!innerContainer.TryDrop(DigestingThing, parent.PositionHeld, map, ThingPlaceMode.Near, out var lastResultingThing))
+//            {
+//                if (!RCellFinder.TryFindRandomCellNearWith(parent.PositionHeld, (IntVec3 c) => c.Standable(map), map, out var result, 1))
+//                {
+//                    Debug.LogError("Could not drop digesting pawn from devourer!");
+//                    return null;
+//                }
+
+//                lastResultingThing = GenSpawn.Spawn(innerContainer.Take(DigestingThing), result, map);
+//            }
+
+//            if (lastResultingThing is Corpse corpse)
+//            {
+//                return corpse.InnerPawn;
+//            }
+
+//            Pawn pawn = (Pawn)lastResultingThing;
+//            //pawn.stances.stunner.StunFor(60, Pawn, addBattleLog: false, showMote: false);
+//            //if (pawn.drafter != null)
+//            //{
+//            //    pawn.drafter.Drafted = wasDrafted;
+//            //}
+
+//            return pawn;
+//        }
+
+//        //public int GetDigestionTicks()
+//        //{
+//        //    if (DigestingThing == null)
+//        //    {
+//        //        return 0;
+//        //    }
+
+//        //    return Mathf.CeilToInt(Props.bodySizeDigestTimeCurve.Evaluate(DigestingPawn.BodySize) * 60f);
+//        //}
+
+//        //private void EndDigestingJob()
+//        //{
+//        //    if (!Pawn.Dead && Pawn.CurJobDef == JobDefOf.DevourerDigest && Pawn.jobs.curDriver != null && !Pawn.jobs.curDriver.ended)
+//        //    {
+//        //        Pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+//        //    }
+//        //}
+
+//        public override void PostExposeData()
+//        {
+//            base.PostExposeData();
+//            Scribe_Values.Look(ref ticksDigesting, "ticksDigesting", 0);
+//            Scribe_Values.Look(ref ticksToDigestFully, "ticksToDigestFully", 0);
+//            //Scribe_Values.Look(ref wasDrafted, "wasDrafted", defaultValue: false);
+//            Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+//        }
+//    }
+//}

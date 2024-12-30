@@ -20,6 +20,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public ThingOwner innerContainer;
 
+        public ThingOwner rapePawnContainer;
+
         private int lastDamaged;
 
         private CompAffectedByFacilities facilitiesComp;
@@ -83,6 +85,7 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
         public Pawn HeldPawn => innerContainer.FirstOrDefault((Thing x) => x is Pawn) as Pawn;
+        public Pawn RapePawn => rapePawnContainer.FirstOrDefault((Thing x) => x is Pawn) as Pawn;
 
         public bool Occupied => HeldPawn != null;
 
@@ -133,7 +136,12 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        public Building_AnimationBed() => innerContainer = new ThingOwner<Thing>(this);
+        public Building_AnimationBed()
+        {
+            innerContainer = new ThingOwner<Thing>(this);
+
+            rapePawnContainer = new ThingOwner<Thing>(this);
+        }
 
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
@@ -172,6 +180,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             base.Tick();
             innerContainer.ThingOwnerTick();
+            rapePawnContainer.ThingOwnerTick();
             tickForPortrait--;
 
             if (HeldPawn != null)
@@ -368,6 +377,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
 
             innerContainer?.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
+            rapePawnContainer?.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
         }
 
         private void RemoveAnimationBedHediff()
@@ -463,6 +473,15 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 Gizmo gizmo;
                 if ((gizmo = Building.SelectContainedItemGizmo(this, item4)) != null)
+                {
+                    yield return gizmo;
+                }
+            }
+
+            foreach (Thing item5 in rapePawnContainer)
+            {
+                Gizmo gizmo;
+                if ((gizmo = Building.SelectContainedItemGizmo(this, item5)) != null)
                 {
                     yield return gizmo;
                 }
@@ -1343,9 +1362,10 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public void Notify_PawnDied(Pawn pawn, DamageInfo? dinfo)
         {
-            if (pawn == HeldPawn)
+            if (pawn == HeldPawn || pawn == RapePawn)
             {
                 innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
+                rapePawnContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
                 if (!dinfo.HasValue || !dinfo.Value.Def.execution)
                 {
                     Messages.Message("EntityDiedOnHoldingPlatform".Translate(pawn), pawn, MessageTypeDefOf.NegativeEvent);
@@ -1383,6 +1403,7 @@ namespace YR_Hentai_Prime_AnimationBed
             base.ExposeData();
             Scribe_Values.Look(ref lastDamaged, "lastDamaged", 0);
             Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+            Scribe_Deep.Look(ref rapePawnContainer, "rapePawnContainer", this);
             Scribe_Values.Look(ref heldPawnStartTick, "heldPawnStartTick", 0);
             Scribe_Values.Look(ref stopAnimation, "stopAnimation");
         }

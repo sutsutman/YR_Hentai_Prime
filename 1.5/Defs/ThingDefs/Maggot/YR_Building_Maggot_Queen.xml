@@ -14,6 +14,9 @@
 		</graphicData>
 		<uiOrder>100</uiOrder>
 		<size>(1,1)</size>
+		    <killedLeavings>
+      <Meat_Megaspider>140</Meat_Megaspider>
+    </killedLeavings>
 		<comps>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
 				<!-- 묶였을 때 부여되는 헤디프 -->
@@ -396,7 +399,7 @@
 				</bedAnimationList>
 			</li>
 			<!-- 이거에 문제 있음 -->
-			<!-- <li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Queen_Bed"/> -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Queen_Bed"/>
 		</comps>
 	</ThingDef>
 </Defs>

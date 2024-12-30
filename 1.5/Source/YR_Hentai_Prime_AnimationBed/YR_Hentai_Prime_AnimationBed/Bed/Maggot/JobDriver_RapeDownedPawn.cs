@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Threading;
 using Verse;
 using Verse.AI;
 
@@ -34,12 +35,47 @@ namespace YR_Hentai_Prime_AnimationBed
 
             yield return Toils_General.Do(delegate
             {
-                var comp = pawn.TryGetComp<Comp_Maggot_Queen>();
-                Building_AnimationBed bed = (Building_AnimationBed)GenSpawn.Spawn(comp.Props.bedDef, pawn.Position, pawn.Map);
+                var maggot_QueenComp = pawn.TryGetComp<Comp_Maggot_Queen>();
+                Building_AnimationBed bed = (Building_AnimationBed)GenSpawn.Spawn(maggot_QueenComp.Props.bedDef, pawn.Position, pawn.Map);
                 bed.SetFaction(Faction.OfPlayer);
                 var compAnimationBed = bed.TryGetComp<CompAnimationBed>();
 
                 JobDriver_CarryToAnimationBed.ChainTakeeToPlatform(pawn, Takee, compAnimationBed);
+                pawn.Destroy();
+                //if (bed != null)
+                //{
+                //    Log.Error("0");
+                //    var maggot_Queen_BedComp = bed.TryGetComp<Comp_Maggot_Queen_Bed>();
+                //    if (maggot_Queen_BedComp != null)
+                //    {
+                //        void action()
+                //        {
+                //            Log.Error("a");
+                //            pawn.DeSpawn();
+                //            bed.rapePawnContainer.TryAdd(pawn.SplitOff(1));
+                //            //maggot_Queen_BedComp.StartDigesting(pawn.Position, pawn);
+                //            //bool flag = parent.DeSpawnOrDeselect(DestroyMode.Vanish);
+                //            //if (TryAcceptThing(comp, parent, true) && flag)
+                //            //{
+                //            //    Find.Selector.Select(parent, false, false);
+                //            //}
+                //        }
+                //        action();
+
+                //        //CompEffectBondageBed compEffectBondageBed = bed?.TryGetComp<CompEffectBondageBed>();
+                //        //if (compEffectBondageBed == null)
+                //        //{
+                //        //    return;
+                //        //}
+
+                //        //compEffectBondageBed.DoEffect(pawn);
+                //        MoteMaker.ThrowText(pawn.PositionHeld.ToVector3(), pawn.MapHeld, "YR_Bound".Translate(),
+                //            4f);
+
+                //        return;
+                //    }
+                //    //parent.Destroy();
+                //}
             });
 
             //yield return Toils_General.Do(delegate

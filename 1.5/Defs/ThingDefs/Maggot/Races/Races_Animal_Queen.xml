@@ -40,6 +40,7 @@
 			<baseHungerRate>0.35</baseHungerRate>
 			<baseBodySize>1.2</baseBodySize>
 			<baseHealthScale>2.5</baseHealthScale>
+      <useMeatFrom>Megaspider</useMeatFrom>
 			<meatLabel>insect meat</meatLabel>
 			<lifeExpectancy>6</lifeExpectancy>
 			<wildness>0.4</wildness>

@@ -90,6 +90,7 @@
     <Compile Include="Bed\Maggot\Alert_PawnDownButMaggotCantTouch.cs" />
     <Compile Include="Bed\Maggot\Building_Maggot_Trap.cs" />
     <Compile Include="Bed\Maggot\CompProperties_Maggot_Queen.cs" />
+    <Compile Include="Bed\Maggot\CompProperties_Maggot_Queen_Bed - 복사본.cs" />
     <Compile Include="Bed\Maggot\CompProperties_Maggot_Queen_Bed.cs" />
     <Compile Include="Bed\Maggot\CompProperties_Maggot_Warp.cs" />
     <Compile Include="Bed\Maggot\CompProperties_PheromoneGenerator.cs" />
