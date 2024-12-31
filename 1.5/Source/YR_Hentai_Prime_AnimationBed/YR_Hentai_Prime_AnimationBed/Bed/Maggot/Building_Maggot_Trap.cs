@@ -19,7 +19,6 @@ namespace YR_Hentai_Prime_AnimationBed
         Pawn pawn = null;
         protected override void SpringSub(Pawn p)
         {
-            Log.Error("1");
             YR_H_P_DefOf.HiveSpawnSound.PlayOneShot(new TargetInfo(Position, Map, false));
             if (p == null)
             {
@@ -30,7 +29,6 @@ namespace YR_Hentai_Prime_AnimationBed
         }
         public override void Tick()
         {
-            Log.Error("2");
             base.Tick();
             if (traped)
             {
@@ -47,7 +45,6 @@ namespace YR_Hentai_Prime_AnimationBed
         }
         protected override float SpringChance(Pawn p)
         {
-            Log.Error("3");
             var result = base.SpringChance(p);
 
             if (!p.RaceProps.Humanlike)
