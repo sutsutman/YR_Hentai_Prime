@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <Defs> 
+	<!-- <YR_Hentai_Prime_AnimationBed.SubBodyTypesDefs> -->
+		<!-- <defName>YR_SubBodyTypesDefs</defName> -->
+		<!-- <raceAndBodyTypes> -->
+			<!-- <li> -->
+				<!-- <raceDefs> -->
+					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li> -->
+					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li> -->
+					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko_BlackSnake</li> -->
+					<!-- <li MayRequire="VAMV.MaruRaceMod">Maru</li> -->
+					<!-- <li MayRequire="Nemonian.MY">Alien_Moyo</li> -->
+					<!-- <li MayRequire="AhnDemi.PanieltheAutomata">Paniel_Race</li> -->
+				<!-- </raceDefs> -->
+				<!-- <bodyTypeDefs> -->
+					<!-- <li>Thin_YR_Bote</li> -->
+					<!-- <li>Thin_YR_BB</li> -->
+					<!-- <li>Hulk_YR_Bote</li> -->
+					<!-- <li>Female_YR_Bote</li> -->
+					<!-- <li>Fat_YR_Bote</li> -->
+					<!-- <li>Male_YR_Bote</li> -->
+				<!-- </bodyTypeDefs> -->
+			<!-- </li> -->
+			<!-- <li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver"> -->
+				<!-- <raceDefs> -->
+					<!-- <li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">Mincho_ThingDef</li> -->
+				<!-- </raceDefs> -->
+				<!-- <bodyTypeDefs> -->
+					<!-- <li>Mincho_Body_Large_Mintchoco_Slime_YR_Bote</li> -->
+					<!-- <li>Mincho_Body_Large_Mintchoco_Humanlike_YR_Bote</li> -->
+				<!-- </bodyTypeDefs> -->
+			<!-- </li> -->
+		<!-- </raceAndBodyTypes> -->
+	<!-- </YR_Hentai_Prime_AnimationBed.SubBodyTypesDefs> -->
+</Defs>

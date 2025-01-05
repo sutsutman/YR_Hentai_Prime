@@ -5,10 +5,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class CompProperties_Maggot_Queen : CompProperties
     {
-        public CompProperties_Maggot_Queen()
-        {
-            compClass = typeof(Comp_Maggot_Queen);
-        }
+        public CompProperties_Maggot_Queen() => compClass = typeof(Comp_Maggot_Queen);
         public ThingDef bedDef;
         public ThingDef doorDef;
     }

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- NPC 노예 -->
+	<PawnKindDef ParentName="YuranBasePawnKind">
+		<defName>Yuran_Slave</defName>
+		<label>Yuran Slave</label>
+		<defaultFactionType>YuranNPC</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>Yuran_spawnCategoriesA</li>
+					<li>Yuran_spawnCategoriesB</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags>
+			<li>Yuran_Slave</li>
+		</apparelTags>
+		<apparelMoney>600~1000</apparelMoney>
+		<weaponTags>
+		
+		</weaponTags>
+		<weaponMoney>0</weaponMoney>
+		<minGenerationAge>18</minGenerationAge>
+	</PawnKindDef>
+	<!-- 노예상 -->
+	<TraderKindDef>
+		<defName>YR_SlaveTrader</defName>
+		<label>Yuran Slave Trader</label>
+		<stockGenerators>
+			<li Class="YR_Hentai_Prime_AnimationBed.StockGenerator_Slaves_WithoutIdeologyMeme">
+				<respectPopulationIntent>false</respectPopulationIntent>
+				<slaveKindDef>Yuran_Slave</slaveKindDef>
+				<countRange>4~6</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>2000~4000</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>YR_RabbitAphrodisiac</thingDef>
+				<countRange>20</countRange>
+			</li>
+			<li Class="StockGenerator_BuyExpensiveSimple"/>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+			</li>
+		</stockGenerators>
+	</TraderKindDef>
+</Defs>

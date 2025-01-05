@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<YR_WearSetting.WearSettingDef Name="Tentacle_WearSetting" Abstract="True">
+	<WearSetting.WearSettingDef Name="Tentacle_WearSetting" Abstract="True">
 		<wearSetting>
 			<li>
 				<wearList>
@@ -39,8 +39,8 @@
 				<prisonerRemoveWeapon>true</prisonerRemoveWeapon>
 			</li>
 		</wearSetting>
-	</YR_WearSetting.WearSettingDef>
-	<YR_WearSetting.WearSettingDef ParentName="Tentacle_WearSetting">
+	</WearSetting.WearSettingDef>
+	<WearSetting.WearSettingDef ParentName="Tentacle_WearSetting">
 		<defName>Alien_Tentacle_Setting</defName>
 		<targetRaces>
 			<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">Mincho_ThingDef</li>
@@ -50,6 +50,8 @@
 			<li MayRequire="VAMV.MaruRaceMod">Maru</li>
 			<li MayRequire="Millap.AOC">AOC</li>
 			<li MayRequire="Millap.Bori">Alien_SP</li>
+			<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+			<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
 		</targetRaces>
-	</YR_WearSetting.WearSettingDef>
+	</WearSetting.WearSettingDef>
 </Defs>

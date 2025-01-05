@@ -9,10 +9,7 @@ namespace YR_Hentai_Prime_AnimationBed
     public class Command_EggVibrator : Command_VerbTarget
     {
         // Comp_EggVibrator 인스턴스를 생성자에서 설정
-        public Command_EggVibrator(Comp_EggVibrator comp)
-        {
-            this.comp = comp;
-        }
+        public Command_EggVibrator(Comp_EggVibrator comp) => this.comp = comp;
 
         // 아이콘 색상 제어: overrideColor가 설정되어 있으면 해당 색상 사용
         public override Color IconDrawColor
@@ -28,7 +25,7 @@ namespace YR_Hentai_Prime_AnimationBed
         public override bool GroupsWith(Gizmo other)
         {
             return base.GroupsWith(other)
-                && other is Command_EggVibrator command_EggVibrator 
+                && other is Command_EggVibrator command_EggVibrator
                 && comp.parent.def == command_EggVibrator.comp.parent.def;
         }
 

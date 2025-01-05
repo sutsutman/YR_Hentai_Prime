@@ -8,10 +8,7 @@ namespace YR_Hentai_Prime_AnimationBed
     public class CompProperties_AddHediffAfterSomeTick : CompProperties
     {
         // 생성자에서 해당 컴포넌트 클래스를 지정
-        public CompProperties_AddHediffAfterSomeTick()
-        {
-            compClass = typeof(Comp_AddHediffAfterSomeTick);
-        }
+        public CompProperties_AddHediffAfterSomeTick() => compClass = typeof(Comp_AddHediffAfterSomeTick);
 
         // 부여할 헤디프 목록
         public List<HediffDef> hediffDefs = new List<HediffDef>();

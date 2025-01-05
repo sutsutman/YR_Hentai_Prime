@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--촉수 알 헤디프-->
+	<HediffDef>
+		<defName>YR_Tentacle_Egg_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>the seed of the evil tree</label>
+		<description>The seed of the evil tree was planted in the body. It will take root in body over time. \n\nThis seed can be removed before rooting.</description>
+		<defaultLabelColor>(0.392,0.329,0.556)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>0.001</initialSeverity>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_GiveHediffs">
+				<ticks>3000</ticks>
+				<severity>0.005</severity>
+				<hediffDefs>
+					<li>YR_Tentacle_Hediff</li>
+				</hediffDefs>
+			</li>
+		</comps>
+		<stages>
+		</stages>
+		<spawnThingOnRemoved>YR_Tentacle_Egg</spawnThingOnRemoved>
+	</HediffDef>
+	<!--촉수 로터 헤디프-->
+	<HediffDef>
+		<defName>YR_TentacleWiggle_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>tentacle wiggling</label>
+		<description>Tentacles are wiggling, slowing down movement and getting a big excited.</description>
+		<defaultLabelColor>(1, 0.752, 0.796)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>10</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-150</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_EggVibrator">
+				<ticks>10</ticks>
+				<maxNum>20</maxNum>
+				<sound>YR_TentacleWiggle_Sound</sound>
+				<filthDef>YR_Filth_VaginalLubricationDef</filthDef>
+				<filthNum>1</filthNum>
+				<voiceProbability>20</voiceProbability>
+				<femaleEroVoice>OohSound</femaleEroVoice>
+			</li>
+		</comps>
+	</HediffDef>
+	<!--촉수 임신 헤디프-->
+	<HediffDef>
+		<defName>YR_Pregnant_Tentacle</defName>
+		<label>bearing the seed of the evil tree</label>
+		<description>Ovums produced from {0} eroded ovaries were fertilized by semen in the evil tree. The fertilized ovum will grow into a tentacle shape and then be wrapped in mucus and given birth in the shape of a seed.</description>
+		<hediffClass>YR_Hentai_Prime_AnimationBed.Hediff_Pregnant_Tentacle</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<isBad>false</isBad>
+		<initialSeverity>0.001</initialSeverity>
+		<preventsPregnancy>true</preventsPregnancy>
+		<pregnant>true</pregnant>
+		<comps>
+			<li Class="HediffCompProperties_MessageAfterTicks">
+				<ticks>600</ticks>
+				<message>{0} is bearing the seed of the evil tree!</message>
+				<messageType>PositiveEvent</messageType>
+			</li>
+			<li MayRequire="RooAndGloomy.YuranRaceMod" Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_ChangeBodyType">
+				<bodyTypePostfix>_YR_Bote</bodyTypePostfix>
+				<races>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko_BlackSnake</li>
+					<li MayRequire="Nemonian.MY">Alien_Moyo</li>
+					<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">Mincho_ThingDef</li>
+				</races>
+				<ticks>600</ticks>
+				<unPreferencePostfixs>
+					<li>_YR_BB</li>
+				</unPreferencePostfixs>
+				<severity>0.5</severity>
+				<compSetting>
+					<compPostTick>
+						<activeComp>true</activeComp>
+						<addHediffDefs>
+							<li>YR_Milking_Tentacle_Hediff</li>
+						</addHediffDefs>
+					</compPostTick>
+					<compPostPostRemoved>
+						<activeComp>true</activeComp>
+						<addHediffDefs>
+							<li>YR_BB_Hediff</li>
+						</addHediffDefs>
+					</compPostPostRemoved>
+				</compSetting>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>early-stage</label>
+				<vomitMtbDays>2.5</vomitMtbDays>
+			</li>
+			<li>
+				<label>middle-stage</label>
+				<minSeverity>0.333</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>late-stage</label>
+				<minSeverity>0.666</minSeverity>
+				<vomitMtbDays>2</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<!--촉수 출산-->
+	<HediffDef>
+		<defName>YR_Pregnant_Tentacle_Birth</defName>
+		<label>birth the seed of the evil tree</label>
+		<hediffClass>YR_Hentai_Prime_AnimationBed.Hediff_Pregnant_Tentacle_Birth</hediffClass>
+		<description>Giving birth to a seed of the evil tree. The roots of the evil tree are poking the vagina with tentacles to help the seed come out well.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_EggVibrator_Maker">
+				<ticks>600</ticks>
+				<rand>50</rand>
+				<hediffDef>YR_TentacleWiggle_Hediff</hediffDef>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Pregnant_Tentacle_Birth">
+				<thingDef>YR_Tentacle_Egg</thingDef>
+				<spawnCount>10</spawnCount>
+				<femaleEroVoice>OohSound</femaleEroVoice>
+				<ticks>6000</ticks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<setMax>0</setMax>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<!--촉수 강화 헤디프-->
+	<HediffDef>
+		<defName>YR_Tentacle_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!--사목의 뿌리-->
+		<label>the root of the evil tree</label>
+		<description>The seed of the evil tree that germinated after endless harass is the root of the host. It is in the form of tentacles and constantly harass and rape the host following the nature of the evil tree that covets women. It gives a strong excited regardless of the host's will, and this excited sometimes goes too far that convulse and immobilize the host.\n\nAlso, as the roots assimilate with the body, the host also has regenerative ability.</description>
+		<defaultLabelColor>(0.392,0.329,0.556)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>0.001</initialSeverity>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Tentalce">
+				<ticks>1000</ticks>
+				<healPoint>1</healPoint>
+				<colonistTraitDefs>
+					<li>YR_Tentalcle</li>
+				</colonistTraitDefs>
+				<nonColonistTraitDefs>
+					<li>YR_Tentalcle_NonColonist</li>
+				</nonColonistTraitDefs>
+				<makeApparels>
+					<li>YR_AP_Tentacle</li>
+					<li>YR_AP_Tentacle_Rooted</li>
+					<li>YR_AP_Tentacle_Headgear</li>
+				</makeApparels>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_GiveHediffs">
+				<ticks>1000</ticks>
+				<severity>0.001111</severity>
+				<hediffDefs>
+					<li>YR_Pregnant_Tentacle</li>
+				</hediffDefs>
+				<reset>true</reset>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<!--촉수 착유 헤디프-->
+	<HediffDef>
+		<defName>YR_Milking_Tentacle_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!--촉수에 침식됨-->
+		<label>milking-able(abyss lewd milk)</label>
+		<description>The root of the evil tree erodes the mammary glands of the host, producing a malformed breast milk that is terribly sweet enough to rot the brain. In addition, as the semen of the root of the evil tree is mixed with breast milk and fermented, it is hardened like cheese in the mammary glands, which is also scratched when breast milk is milking and put in a bottle together.</description>
+		<defaultLabelColor>(0.392,0.329,0.556)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.5</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>1.5</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.1</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	<!--전투용 최음 가스 헤디프-->
+	<HediffDef>
+		<defName>YR_Tentacle_Combat_Aphrodisiac_Gas</defName>
+		<label>combat aphrodisiac gas</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>This is the combat aphrodisiac gas, that puts the inhaler in a state of extreme excitement. Literally going crazy, feeling no pain. Can fight longer because gas strengthens body.\n\nHowever, because the inhaler continues to taste pleasure that is never possible to get used to, the vagina infinitely spews of vaginal lubrication, and the orgasm is constantly repeated.\n\nIf stop inhaling, the inhaler's body, that  endured with gas, will eventually collapse due to fatigue caused by the orgasm. Since then, due to the gas and aftereffects remaining in the lungs, will have to lie in bed for a while and feel orgasm from masturbation.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_EggVibrator_Maker">
+				<ticks>600</ticks>
+				<rand>30</rand>
+				<hediffDef>YR_TentacleWiggle_Hediff</hediffDef>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<IncomingDamageFactor>0.5</IncomingDamageFactor>
+				</statFactors>
+				<painFactor>0</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<!--마스크 해제 후 헤디프-->
+	<HediffDef>
+		<defName>YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect</defName>
+		<label>combat aphrodisiac gas aftereffect</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>This is a side effect of the combat aphrodisiac gas. Can't get up because of the tremendous fatigue and orgasm.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.33333</severityPerDay>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_EggVibrator_Maker">
+				<ticks>600</ticks>
+				<rand>80</rand>
+				<hediffDef>YR_TentacleWiggle_Hediff</hediffDef>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<IncomingDamageFactor>1.5</IncomingDamageFactor>
+				</statFactors>
+				<painFactor>3</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<setMax>0</setMax>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.66666</minSeverity>
+				<statFactors>
+					<IncomingDamageFactor>1.2</IncomingDamageFactor>
+				</statFactors>
+				<painFactor>3</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.75</postFactor>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.75</postFactor>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<statFactors>
+					<IncomingDamageFactor>1.1</IncomingDamageFactor>
+				</statFactors>
+				<painFactor>3</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.9</postFactor>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.9</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- 애드온 표시, 이펙트 표시용 헤디프 -->
+	<HediffDef>
+		<defName>YR_TentacleRush_Hediff</defName>
+		<label>YR TentacleRush Hediff</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>부스터용 헤디프</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-2000</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- 돌진 쿨타임 초기화 체크용 헤디프 -->
+	<HediffDef>
+		<defName>YR_CheckKillEnemy_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<!--촉수에 침식됨-->
+		<label>YR_CheckKillEnemy_Hediff</label>
+		<description>YR_CheckKillEnemy_Hediff</description>
+		<defaultLabelColor>(0.392,0.329,0.556)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.5</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>1.5</initialSeverity>
+		<comps>
+		<!-- 킬 체크는 옷쪽에 -->
+			<li Class="Mincho_Booster.HediffCompProperties_Booster">
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

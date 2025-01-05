@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MealBaseIngredientless">
+		<defName>YR_Tentacle_Meal</defName>
+		<label>evil tree set menu</label>
+		<description>This is a set meal made by boiling, sashimi, and frying young and soft tentacles inside the seeds of the evil tree.\n\nRice : this is "Takikomi Gohan", chopped tentacles were added to mixed grains, and flavored with soy sauce and mirin.\n\nSashimi : this is "Sukhoe", made by cutting well-boiled tentacles. Dip it in vinegared red pepper paste and soy sauce.\n\nFried : this is crispy and golden "Tatsuta tempura", after being coated with starch and fried twice. Dip it in the semen of tentacles and try it. Salty and sweet goes really well with it.\n\nSoybean Paste Soup : this is a soybean paste soup based on the broth made with tentacles. It has carrots, tofu, and green onions.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Meal/Tentacle_Meal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>40</MarketValue>
+			<WorkToMake>800</WorkToMake>
+			<Nutrition>1</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>MealLavish</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<!-- <joy>0.7</joy> -->
+			<!-- <outcomedoers> -->
+			<!-- <li mayrequire="sutsutman.marilyntheminchoworshipperwitchharver" class="ingestionoutcomedoer_givehediff"> -->
+			<!-- <hediffdef>mincho_mintchococake_high</hediffdef> -->
+			<!-- <severity>1.0</severity> -->
+			<!-- </li> -->
+			<!-- </outcomedoers> -->
+			<tasteThought>AteLavishMeal</tasteThought>
+			<specialThoughtDirect>YR_AteTentacle_Meal</specialThoughtDirect>
+		</ingestible>
+		<comps>
+		</comps>
+	</ThingDef>
+	<ThoughtDef>
+		<defName>YR_AteTentacle_Meal</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate evil tree set menu</label>
+				<description>The tentacles are very fresh and the texture is chewy. No matter how cook it, it's amazing. ...It's really perfect when I close my eyes about this delicious fried sauce is from the tentacle's semen, and this tentacle was birthed by the girl who's climaxing with her pussy whipped by the tentacles right next to me.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<RecipeDef>
+		<defName>YR_Tentacle_Meal_Cook</defName>
+		<label>cook evil tree set menu</label>
+		<description>Cook the seeds of the evil tree to make set meal. The key is how well remove the mucus from the outside of tentacles with salt and flour.</description>
+		<jobString>Cooking evil tree set menu.</jobString>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>YR_Tentacle_Egg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>YR_Tentacle_Egg</li>
+			</thingDefs>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<YR_Tentacle_Meal>1</YR_Tentacle_Meal>
+		</products>
+		<displayPriority>300</displayPriority>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>YR_Tentacle_Meal_CookBulk</defName>
+		<label>cook evil tree set menu x4</label>
+		<description>Cook the seeds of the evil tree to make 4 set meal. The key is how well remove the mucus from the outside of tentacles with salt and flour.</description>
+		<jobString>Cooking 4 evil tree set menus.</jobString>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>YR_Tentacle_Egg</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>YR_Tentacle_Egg</li>
+			</thingDefs>
+			<categories>
+				<li>PlantFoodRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<YR_Tentacle_Meal>4</YR_Tentacle_Meal>
+		</products>
+		<displayPriority>600</displayPriority>
+	</RecipeDef>
+</Defs>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>YR_OnaholeBread</defName>
+		<label>onahole bread</label>
+		<description>This is a onahole filled with plenty of semen collected from a male or a futanari's penis. The heat from the penis kept the bread moderately warm. With every bite you take, you can feel the vitality of the semen that's moving through the esophagus to fulfill its duty. n\n\It's a shame that they won't meet any ovum at the end, only stomach acid.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Resource/YR_OnaholeBread</texPath>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<!-- Can be used like meat in recipes -->
+			<Mass>0.045</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<foodType>Meal</foodType>
+			<preferability>MealSimple</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>YR_AteOnaholeBread</tasteThought>
+		</ingestible>
+		<thingCategories>
+			<li>Foods</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+	<ThoughtDef>
+		<defName>YR_AteOnaholeBread</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate onahole bread</label>
+				<description>Aha...♪The sperm are moving through the esophagus to get me pregnant...♥️ There's only stomach acid in there...♥️</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

@@ -10,10 +10,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class HediffCompProperties_Tentalce : HediffCompProperties
     {
-        public HediffCompProperties_Tentalce()
-        {
-            compClass = typeof(HediffComp_Tentalce);
-        }
+        public HediffCompProperties_Tentalce() => compClass = typeof(HediffComp_Tentalce);
 
         public int healPoint = 1;
 

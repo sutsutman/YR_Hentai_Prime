@@ -19,10 +19,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        public CompProperties_SecondLayer()
-        {
-            compClass = typeof(CompSecondLayer);
-        }
+        public CompProperties_SecondLayer() => compClass = typeof(CompSecondLayer);
     }
     internal class CompSecondLayer : ThingComp
     {

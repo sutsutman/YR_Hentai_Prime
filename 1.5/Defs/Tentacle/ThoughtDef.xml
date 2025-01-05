@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>YR_TentacleWiggle_Hediff</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_TentacleWiggle_Hediff</hediff>
+		<stages>
+			<li>
+				<label>tentacle wiggling</label>
+				<description>More! Whip my body more!</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+		<ThoughtDef>
+		<defName>YR_Tentacle_Hediff</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_Tentacle_Hediff</hediff>
+		<stages>
+			<li>
+				<label>fall in pleasure</label>
+				<description>Higge! Hueet!</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

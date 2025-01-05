@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="Yuran_ApparelBase" Name="Yuran_BoteApparelBase" Abstract="True">
+		<recipeMaker>
+		</recipeMaker>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>55</costStuffCount>
+		<statBases>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<tags>
+				<li>Yuran_Bote</li>
+			</tags>
+		</apparel>
+		<!--<equippedStatOffsets>
+			<PsychicSensitivityOffset MayRequire="Ludeon.RimWorld.Royalty">0.75</PsychicSensitivityOffset>
+			<PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.2</PsychicEntropyRecoveryRate>
+		</equippedStatOffsets>-->
+		<comps>
+			<li Class="CompProperties_CauseHediff_Apparel">
+				<hediff>YR_BoteApparel_Hediff</hediff>
+				<part>Head</part>
+			</li>
+		</comps>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>100</weight>
+					<only>(1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	<!--임신복-->
+	<ThingDef ParentName="Yuran_BoteApparelBase">
+		<defName>YR_AP_MaternityDress</defName>
+		<label>Yuran maternity dress</label>
+		<description>A garment that is made to be comfortable to wear even if full after getting pregnant.</description>
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_MaternityDress/Texture</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_MaternityDress/Texture</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+	<!--착유복-->
+	<ThingDef ParentName="Yuran_BoteApparelBase">
+		<defName>YR_AP_MilkingDress</defName>
+		<label>Yuran milking dress</label>
+		<description>A garment that increases the amount of lactation by stimulating the chest of Yuran, who can be breastfeeding after pregnancy or childbirth.</description>
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_MilkingDress/Texture</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_MilkingDress/Texture</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+	<!--버니-->
+	<ThingDef ParentName="Yuran_BoteApparelBase">
+		<defName>YR_AP_BunnyDress</defName>
+		<label>Yuran bunny dress</label>
+		<description>A bunny suit made of luxurious leather and strong vinyl. Because of its elasticity, the size changes accordingly even if get pregnant or chest gets bigger.</description>
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_BunnyDress/Texture</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_BunnyDress/Texture</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+	<!--역버니-->
+	<ThingDef ParentName="Yuran_BoteApparelBase">
+		<defName>YR_AP_ReverseBunnyDress</defName>
+		<label>Yuran reverse bunny dress</label>
+		<description>A bunny suit made of luxurious leather.Because the front is open, can wear it comfortably even if pregnant.</description>
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_ReverseBunnyDress/Texture</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_ReverseBunnyDress/Texture</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+	<!--노예복-->
+	<ThingDef ParentName="Yuran_BoteApparelBase">
+		<defName>YR_AP_SlaveDress</defName>
+		<label>Yuran slave dress</label>
+		<description>A thin piece of cloth for slaves. It will see a beautiful body even if lift it up a little.</description>
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_SlaveDress/Texture</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_SlaveDress/Texture</wornGraphicPath>
+			<tags>
+				<li>Yuran_Slave</li>
+			</tags>
+		</apparel>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+	</ThingDef>
+	<!--조교복-->
+	<ThingDef ParentName="Yuran_BoteApparelBase">
+		<defName>YR_AP_DisciplineDress</defName>
+		<label>Yuran discipline dress</label>
+		<description>Tightened with a rope and put the rotor in the vagina. If wear it continuously, it will eventually disciplined and become a lewd female.</description>
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_DisciplineDress/Texture</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_DisciplineDress/Texture</wornGraphicPath>
+		</apparel>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.05</MoveSpeed>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<tickerType>Normal</tickerType>
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Plasteel>10</Plasteel>
+		</costList>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_EggVibrator">
+				<hediffDefs>
+					<li>YR_EggVibrator_Hediff</li>
+				</hediffDefs>
+				<commandHediffDefs>
+					<li>YR_VaginalLubricationFireExtinguisher_Hediff</li>
+				</commandHediffDefs>
+				<ticks>1000</ticks>
+				<rand>30</rand>
+				<cooldownTicks>1800</cooldownTicks>
+				<filthDef>YR_Filth_VaginalLubricationDef</filthDef>
+				<filthNum>1</filthNum>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Disciplined_Apparel">
+				<hediffDef>YR_Disciplined_Hediff</hediffDef>
+				<severity>0.01</severity>
+				<stopAddHediffTraitDef>YR_Disciplined</stopAddHediffTraitDef>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>YR_Hentai_Prime_AnimationBed.Verb_EggVibrator</verbClass>
+				<label>switch on</label>
+				<violent>false</violent>
+				<hasStandardCommand>true</hasStandardCommand>
+				<targetable>false</targetable>
+				<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+				<onlyManualCast>True</onlyManualCast>
+			</li>
+		</verbs>
+	</ThingDef>
+</Defs>

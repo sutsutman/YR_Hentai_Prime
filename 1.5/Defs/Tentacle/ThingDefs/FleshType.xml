@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FleshTypeDef>
+		<defName>YR_Tentacle_Girl_FleshTypeDef</defName>
+		<corpseCategory>CorpsesAnimal</corpseCategory>
+		<genericWounds>
+			<li>
+				<color>0.274, 0.129, 0.423</color>
+				<texture>Things/Pawn/Wounds/WoundA</texture>
+			</li>
+			<li>
+				<color>0.274, 0.129, 0.423</color>
+				<texture>Things/Pawn/Wounds/WoundB</texture>
+			</li>
+			<li>
+				<color>0.274, 0.129, 0.423</color>
+				<texture>Things/Pawn/Wounds/WoundC</texture>
+			</li>
+		</genericWounds>
+		<bandagedWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/BandagedA</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/BandagedB</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/BandagedC</texture>
+			</li>
+		</bandagedWounds>
+	</FleshTypeDef>
+</Defs>

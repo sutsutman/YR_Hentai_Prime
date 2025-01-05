@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	This is sample XML for modders.
+	If you want to automatically resolve texture of apparel, define ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef. (in your Defs folder.)
+	"defName" must be same as defName of "BodyTypeDef", and you can choice alternative BodyTypeDef in "alternatives" field.
+-->
+<Defs>
+	<ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+		<defName>Mincho_Body_Large_Mintchoco_Slime_Bote</defName>
+		<alternatives>
+			<li>Mincho_Body_Large_Mintchoco_Slime</li>
+		</alternatives>
+	</ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+	<ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+		<defName>Mincho_Body_Large_Mintchoco_Humanlike_Bote</defName>
+		<alternatives>
+			<li>Mincho_Body_Large_Mintchoco_Humanlike</li>
+		</alternatives>
+	</ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+	<!-- <ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef> -->
+		<!-- <defName>Mincho_Body_Large_BluePolarBear_Slime_Bote</defName> -->
+		<!-- <alternatives> -->
+			<!-- <li>Mincho_Body_Large_Mintchoco_Slime_Bote</li> -->
+			<!-- <li>Mincho_Body_Large_Mintchoco_Slime</li> -->
+		<!-- </alternatives> -->
+	<!-- </ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef> -->
+	<!-- <ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef> -->
+		<!-- <defName>Mincho_Body_Large_BluePolarBear_Humanlike_Bote</defName> -->
+		<!-- <alternatives> -->
+			<!-- <li>Mincho_Body_Large_Mintchoco_Humanlike_Bote</li> -->
+			<!-- <li>Mincho_Body_Large_Mintchoco_Humanlike</li> -->
+		<!-- </alternatives> -->
+	<!-- </ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef> -->
+	<!-- <ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef> -->
+		<!-- <defName>Mincho_Body_Large_PinkFallInLove_Slime_Bote</defName> -->
+		<!-- <alternatives> -->
+			<!-- <li>Mincho_Body_Large_Mintchoco_Slime_Bote</li> -->
+			<!-- <li>Mincho_Body_Large_Mintchoco_Slime</li> -->
+		<!-- </alternatives> -->
+	<!-- </ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef> -->
+	<!-- <ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef> -->
+		<!-- <defName>Mincho_Body_Large_PinkFallInLove_Humanlike_Bote</defName> -->
+		<!-- <alternatives> -->
+			<!-- <li>Mincho_Body_Large_Mintchoco_Humanlike_Bote</li> -->
+			<!-- <li>Mincho_Body_Large_Mintchoco_Humanlike</li> -->
+		<!-- </alternatives> -->
+	<!-- </ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef> -->
+</Defs>

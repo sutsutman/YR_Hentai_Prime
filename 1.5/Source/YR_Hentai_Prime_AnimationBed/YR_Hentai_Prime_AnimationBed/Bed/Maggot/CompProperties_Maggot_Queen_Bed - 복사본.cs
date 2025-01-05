@@ -8,10 +8,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class CompProperties_Maggot_Queen_Bed : CompProperties
     {
-        public CompProperties_Maggot_Queen_Bed()
-        {
-            compClass = typeof(Comp_Maggot_Queen_Bed);
-        }
+        public CompProperties_Maggot_Queen_Bed() => compClass = typeof(Comp_Maggot_Queen_Bed);
         public int tendTick = 100;
         public int destroySelfAndPawnTicks = -10000;
     }

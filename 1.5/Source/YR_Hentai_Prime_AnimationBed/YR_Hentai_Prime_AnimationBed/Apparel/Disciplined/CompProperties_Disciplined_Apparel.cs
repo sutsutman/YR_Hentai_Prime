@@ -8,10 +8,7 @@ namespace YR_Hentai_Prime_AnimationBed
     public class CompProperties_Disciplined_Apparel : CompProperties
     {
         // 생성자: 관련 컴포넌트 클래스 설정
-        public CompProperties_Disciplined_Apparel()
-        {
-            compClass = typeof(Comp_Disciplined_Apparel);
-        }
+        public CompProperties_Disciplined_Apparel() => compClass = typeof(Comp_Disciplined_Apparel);
 
         // 추가될 Hediff 정의
         public HediffDef hediffDef;

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef>
+		<defName>YR_AP_Tentacle</defName>
+		<label>evil tree apparel</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+	<ThingDef ParentName="ApparelNoQualityBase" Name="YR_AP_Tentacle_Base" Abstract="True">
+		<thingCategories Inherit="False">
+			<li>YR_AP_Tentacle</li>
+		</thingCategories>
+		<techLevel>Neolithic</techLevel>
+		<tickerType>Normal</tickerType>
+		<smeltable>false</smeltable>
+		<apparel>
+			<tags Inherit="False">
+				<!-- <li>PrestigeCombatGear</li> -->
+				<li>YR_NeverNaked</li>
+			</tags>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+			<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+			<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+			<careIfDamaged>false</careIfDamaged>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<tradeability>None</tradeability>
+		<equippedStatOffsets>
+			 <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">1</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+	</ThingDef>
+	<ThingDef ParentName="YR_AP_Tentacle_Base">
+		<defName>YR_AP_Tentacle</defName>
+		<description>The seed of the evil tree that germinated after endless harass is the root of the host. It is in the form of tentacles and constantly harass and rape the host following the nature of the evil tree that covets women. It gives a strong excited regardless of the host's will, and this excited sometimes goes too far that convulse and immobilize the host.</description>
+		<label>the root of the evil tree</label>
+		<!--========== Graphic Data ==========-->
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<!--========== Stat Base ==========-->
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Mass>9</Mass>
+			<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.7</ArmorRating_Heat>
+			<Insulation_Cold>50.0</Insulation_Cold>
+			<Insulation_Heat>50.0</Insulation_Heat>
+			<EquipDelay>11</EquipDelay>
+			<IncomingDamageFactor>0.7</IncomingDamageFactor>
+		</statBases>
+		<!--========== Apparel ==========-->
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<!--
+			<li>OnSkin</li>
+			<li>Middle</li>
+			<li>Shell</li>
+			<li>Belt</li>
+			<li>Overhead</li>
+			-->
+			</layers>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_CauseHediff_Apparel">
+				<hediff>YR_TentacleApparel_Hediff</hediff>
+				<!--머리 애드온은 머리에 적용!-->
+				<part>Head</part>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_EggVibrator">
+				<hediffDefs>
+					<li>YR_TentacleWiggle_Hediff</li>
+				</hediffDefs>
+				<commandHediffDefs>
+					<li>YR_VaginalLubricationFireExtinguisher_Hediff</li>
+				</commandHediffDefs>
+				<ticks>1000</ticks>
+				<rand>30</rand>
+				<cooldownTicks>1800</cooldownTicks>
+				<filthDef>YR_Filth_VaginalLubricationDef</filthDef>
+				<filthNum>1</filthNum>
+				<description>command {0} to stir the host's vagina to its heart's content.</description>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Tentacle_Apparel">
+				<ticks>100</ticks>
+				<hpRecovery>3</hpRecovery>
+			</li>
+			<li Class="Mincho_Booster.CompProperties_Booster">
+				<hediffDefs>
+					<li>YR_TentacleRush_Hediff</li>
+				</hediffDefs>
+				<cooldownTicks>1000</cooldownTicks>
+				<!-- <hotKey>Misc5</hotKey> -->
+				<booster_Cooldown>YR_Cooldown</booster_Cooldown>
+				<faceCellCommandLabel>FaceCellCommandLabel</faceCellCommandLabel>
+				<faceCellCommandDesc>FaceCellCommandDesc</faceCellCommandDesc>
+				<statDef>YR_TentacleRushSkipRadius</statDef>
+				<flyingDef>YR_PawnSkipper</flyingDef>
+				<nonQualityEffectiveRange>5</nonQualityEffectiveRange>
+				<requireWeaponDefs>
+					<li>YR_Tentacle_Sword</li>
+					<li>OY_Tentacle_Dagger</li>
+				</requireWeaponDefs>
+				<hediffDefForCheckKillEnemy>YR_CheckKillEnemy_Hediff</hediffDefForCheckKillEnemy>
+				<faceCellIconPath>Yuran/Icon/FaceCell</faceCellIconPath>
+				<faceOriginalIconPath>Yuran/Icon/FaceOriginal</faceOriginalIconPath>
+				<description>Followed by the sword of the evil tree, it makes a quick rush for the target. This rush can cancel all actions and be used immediately. \n\nCan use it only when equip one of : "{1}". Available every {0} seconds. Cool time is initialized if the host kills something directly.</description>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ChangeApparelTextureByCondition">
+				<changeApparelTextureByConditions>
+					<!-- 폴라 -->
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">
+						<condition>
+							<races>
+								<li>Mincho_ThingDef</li>
+							</races>
+							<hediffDefs>
+								<li>Mincho_BluePolarBear_Hediff</li>
+							</hediffDefs>
+							<bodyTypeDefs>
+								<li>Mincho_Body_Large_Mintchoco_Slime</li>
+							</bodyTypeDefs>
+							<allMatch>true</allMatch>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_BluePolarBear_Slime</texturePath>
+					</li>
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">
+						<condition>
+							<races>
+								<li>Mincho_ThingDef</li>
+							</races>
+							<hediffDefs>
+								<li>Mincho_BluePolarBear_Hediff</li>
+							</hediffDefs>
+							<bodyTypeDefs>
+								<li>Mincho_Body_Large_Mintchoco_Humanlike</li>
+							</bodyTypeDefs>
+							<allMatch>true</allMatch>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_BluePolarBear_Humanlike</texturePath>
+					</li>
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">
+						<condition>
+							<races>
+								<li>Mincho_ThingDef</li>
+							</races>
+							<hediffDefs>
+								<li>Mincho_BluePolarBear_Hediff</li>
+							</hediffDefs>
+							<bodyTypeDefs>
+								<li>Mincho_Body_Large_Mintchoco_Slime_YR_Bote</li>
+							</bodyTypeDefs>
+							<allMatch>true</allMatch>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_BluePolarBear_Slime_YR_Bote</texturePath>
+					</li>
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">
+						<condition>
+							<races>
+								<li>Mincho_ThingDef</li>
+							</races>
+							<hediffDefs>
+								<li>Mincho_BluePolarBear_Hediff</li>
+							</hediffDefs>
+							<bodyTypeDefs>
+								<li>Mincho_Body_Large_Mintchoco_Humanlike_YR_Bote</li>
+							</bodyTypeDefs>
+							<allMatch>true</allMatch>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_BluePolarBear_Humanlike_YR_Bote</texturePath>
+					</li>
+					<!-- 핑크러브 -->
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">
+						<condition>
+							<races>
+								<li>Mincho_ThingDef</li>
+							</races>
+							<hediffDefs>
+								<li>Mincho_PinkFallInLove_Hediff</li>
+							</hediffDefs>
+							<bodyTypeDefs>
+								<li>Mincho_Body_Large_Mintchoco_Slime</li>
+							</bodyTypeDefs>
+							<allMatch>true</allMatch>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_PinkFallInLove_Slime</texturePath>
+					</li>
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">
+						<condition>
+							<races>
+								<li>Mincho_ThingDef</li>
+							</races>
+							<hediffDefs>
+								<li>Mincho_PinkFallInLove_Hediff</li>
+							</hediffDefs>
+							<bodyTypeDefs>
+								<li>Mincho_Body_Large_Mintchoco_Humanlike</li>
+							</bodyTypeDefs>
+							<allMatch>true</allMatch>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_PinkFallInLove_Humanlike</texturePath>
+					</li>
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">
+						<condition>
+							<races>
+								<li>Mincho_ThingDef</li>
+							</races>
+							<hediffDefs>
+								<li>Mincho_PinkFallInLove_Hediff</li>
+							</hediffDefs>
+							<bodyTypeDefs>
+								<li>Mincho_Body_Large_Mintchoco_Slime_YR_Bote</li>
+							</bodyTypeDefs>
+							<allMatch>true</allMatch>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_PinkFallInLove_Slime_YR_Bote</texturePath>
+					</li>
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">
+						<condition>
+							<races>
+								<li>Mincho_ThingDef</li>
+							</races>
+							<hediffDefs>
+								<li>Mincho_PinkFallInLove_Hediff</li>
+							</hediffDefs>
+							<bodyTypeDefs>
+								<li>Mincho_Body_Large_Mintchoco_Humanlike_YR_Bote</li>
+							</bodyTypeDefs>
+							<allMatch>true</allMatch>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_PinkFallInLove_Humanlike_YR_Bote</texturePath>
+					</li>
+				</changeApparelTextureByConditions>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>YR_Hentai_Prime_AnimationBed.Verb_EggVibrator</verbClass>
+				<label>wiggling</label>
+				<violent>false</violent>
+				<hasStandardCommand>true</hasStandardCommand>
+				<targetable>false</targetable>
+				<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+				<onlyManualCast>True</onlyManualCast>
+				<commandIcon>Yuran/Icon/Wiggle</commandIcon>
+			</li>
+			<!-- 기존 방향 보기 -->
+			<li>
+				<verbClass>Mincho_Booster.Verb_Booster</verbClass>
+				<label>evil rush</label>
+				<violent>false</violent>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<warmupTime>0</warmupTime>
+				<warmupEffecter>YR_WarmupEffect</warmupEffecter>
+				<requireLineOfSight>true</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetPawns>true</canTargetPawns>
+					<canTargetBuildings>false</canTargetBuildings>
+				</targetParams>
+				<soundLanding>YR_TentacleRush_Land_Sound</soundLanding>
+				<flightEffecterDef>YR_TentacleRush_Effect</flightEffecterDef>
+				<commandIcon>Yuran/Icon/Tentacle_Sword</commandIcon>
+			</li>
+		</verbs>
+	</ThingDef>
+	<!-- 이것저것용 외투 -->
+	<ThingDef ParentName="YR_AP_Tentacle_Base">
+		<defName>YR_AP_Tentacle_Rooted</defName>
+		<description>Can't wear other apparels because body is rooted by the root of the evil tree.</description>
+		<label>the root of the evil tree(rooted)</label>
+		<!--========== Graphic Data ==========-->
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle_Rooted/Texture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<!--========== Stat Base ==========-->
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Mass>9</Mass>
+			<ArmorRating_Sharp>0</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Insulation_Cold>0</Insulation_Cold>
+			<Insulation_Heat>0</Insulation_Heat>
+			<EquipDelay>11</EquipDelay>
+			<IncomingDamageFactor>0.7</IncomingDamageFactor>
+		</statBases>
+		<!--========== Apparel ==========-->
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle_Rooted/Texture</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Shell</li>
+				<!--
+			<li>OnSkin</li>
+			<li>Middle</li>
+			<li>Shell</li>
+			<li>Belt</li>
+			<li>Overhead</li>
+			-->
+			</layers>
+		</apparel>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Tentacle_Apparel">
+				<ticks>100</ticks>
+				<hpRecovery>100</hpRecovery>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ChangeApparelTextureByCondition">
+				<changeApparelTextureByConditions>
+					<li>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle_Rooted/Texture_Male</texturePath>
+					</li>
+				</changeApparelTextureByConditions>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 모자 -->
+	<ThingDef ParentName="YR_AP_Tentacle_Base" Name="YR_AP_Tentacle_Headgear_Base">
+		<defName>YR_AP_Tentacle_Headgear</defName>
+		<description>The seed of the evil tree that germinated after endless harass is the root of the host. It wraps around the host's head like it's stroking the lover's face. If the host is in danger, the will of the tree can put a mask on the host that emits the combat aphrodisiac gas.</description>
+		<label>the root of the evil tree(head)</label>
+		<!--========== Crafting ==========-->
+		<!--========== Stat Base ==========-->
+		<statBases>
+			<Mass>3</Mass>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<!--========== Graphic Data ==========-->
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle_Headgear/Texture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<!--========== Apparel ==========-->
+		<apparel>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle_Headgear/Texture</wornGraphicPath>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+		</apparel>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Tentacle_Apparel">
+				<ticks>100</ticks>
+				<hpRecovery>3</hpRecovery>
+			</li>
+			<li Class="YR_ItemFormChange.CompPropertiesFormChange">
+				<transformData>
+					<li>
+						<label>wear mask</label>
+						<description>This is a mask made with the root of the evil tree completely close to the host's nose and mouth.\n\nThe mask completely blocks ordinary air as well as toxic substances around it, and emits only the combat aphrodisiac gas inside the mask. The host must continue to inhale this obscene gas to avoid suffocation.\n\nCombat aphrodisiac gas puts the inhaler in a state of extreme excitement. Literally going crazy, feeling no pain. Can fight longer because gas strengthens body.\n\nHowever, because the inhaler continues to taste pleasure that is never possible to get used to, the vagina infinitely spews of vaginal lubrication, and the orgasm is constantly repeated.\n\nThe root of the evil tree will take the mask if run out of the combat aphrodisiac gas that stored. And the inhaler's body, that  endured with gas, will eventually collapse due to fatigue caused by the orgasm. Since then, due to the gas and aftereffects remaining in the lungs, will have to lie in bed for a while and feel orgasm from masturbation.</description>
+						<thingDef>YR_AP_Tentacle_Headgear_Mask</thingDef>
+						<transformCooldown>1</transformCooldown>
+						<soundOnTransform>YR_AP_Tentacle_Headgear_Mask_Sound</soundOnTransform>
+						<!--<moteOnTransform>PsycastSkipFlashEntry</moteOnTransform>-->
+					</li>
+				</transformData>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_AP_Tentacle_Headgear_Base">
+		<defName>YR_AP_Tentacle_Headgear_Mask</defName>
+		<description>This is a mask made with the root of the evil tree completely close to the host's nose and mouth.\n\nThe mask completely blocks ordinary air as well as toxic substances around it, and emits only the combat aphrodisiac gas inside the mask. The host must continue to inhale this obscene gas to avoid suffocation.\n\nCombat aphrodisiac gas puts the inhaler in a state of extreme excitement. Literally going crazy, feeling no pain. Can fight longer because gas strengthens body.\n\nHowever, because the inhaler continues to taste pleasure that is never possible to get used to, the vagina infinitely spews of vaginal lubrication, and the orgasm is constantly repeated.\n\nThe root of the evil tree will take the mask if run out of the combat aphrodisiac gas that stored. And the inhaler's body, that  endured with gas, will eventually collapse due to fatigue caused by the orgasm. Since then, due to the gas and aftereffects remaining in the lungs, will have to lie in bed for a while and feel orgasm from masturbation.</description>
+		<label>the root of the evil tree(mask)</label>
+		<!--========== Graphic Data ==========-->
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle_Headgear_Mask/Texture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<!--========== Apparel ==========-->
+		<apparel>
+			<wornGraphicPath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle_Headgear_Mask/Texture</wornGraphicPath>
+		</apparel>
+		<comps Inherit="False">
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Tentacle_Apparel">
+				<ticks>100</ticks>
+				<hpRecovery>3</hpRecovery>
+			</li>
+			<li Class="YR_ItemFormChange.CompPropertiesFormChange">
+				<revertData>
+					<label>Reverting to the root of the evil tree(head)</label>
+					<description>Reverting back to the root of the evil tree(head)</description>
+					<thingDef>YR_AP_Tentacle_Headgear</thingDef>
+					<revertAfterTicks>18000</revertAfterTicks>
+					<commandIcon>Yuran/Icon/UnwearMask</commandIcon>
+					<disabledReason>Reverting to {1} after {0} second automatically.</disabledReason>
+				</revertData>
+				<transformData>
+					<li>
+						<label>unwear mask</label>
+						<description>Unwear the mask. For the time being, the host will suffer from the aftereffects.</description>
+						<thingDef>YR_AP_Tentacle_Headgear</thingDef>
+						<transformCooldown>180000</transformCooldown>
+						<soundOnTransform>YR_AP_Tentacle_Headgear_Mask_Sound</soundOnTransform>
+						<!--<moteOnTransform>PsycastSkipFlashEntry</moteOnTransform>-->
+						<commandIcon>Yuran/Icon/UnwearMask</commandIcon>
+					</li>
+				</transformData>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Tentacle_Mask">
+				<hediffDef>YR_Tentacle_Combat_Aphrodisiac_Gas</hediffDef>
+				<moteDef>YR_Tentacle_Combat_Aphrodisiac_Gas</moteDef>
+				<moteRepeat>3</moteRepeat>
+				<ticks>200</ticks>
+				<unequippedHediffDef>YR_Tentacle_Combat_Aphrodisiac_Gas_Aftereffect</unequippedHediffDef>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Tentacle_Mask_Sub">
+				<moteDef>YR_Tentacle_Combat_Aphrodisiac_Gas_Eye</moteDef>
+				<longMoteDef>YR_Tentacle_Combat_Aphrodisiac_Gas_Eye</longMoteDef>
+				<moteRepeat>3</moteRepeat>
+				<ticks>1</ticks>
+				<!-- 좌측 눈 기준 Left eye base-->
+				<offSet>(0.075, -9, 0.22)</offSet>
+				<eastOffSet>(0.2, -9, 0.22)</eastOffSet>
+				<moveOnly>true</moveOnly>
+				<isEye>true</isEye>
+				<raceSettings>
+					<li>
+						<races>
+							<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">Mincho_ThingDef</li>
+						</races>
+						<offSet>(0.075,-9, 0.425)</offSet>
+						<eastOffSet>(0.2,-9, 0.425)</eastOffSet>
+					</li>
+					<li>
+						<races>
+							<li MayRequire="Millap.AOC">AOC</li>
+						</races>
+						<offSet>(0.1,-9, 0.46)</offSet>
+						<eastOffSet>(0.2,-9, 0.42)</eastOffSet>
+					</li>
+					<li>
+						<races>
+							<li MayRequire="Roo.AntyRaceMod">Anty</li>
+						</races>
+						<offSet>(0.09,-9, 0.31)</offSet>
+						<eastOffSet>(0.2,-9, 0.31)</eastOffSet>
+					</li>
+					<li>
+						<races>
+							<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+							<li MayRequire="Nemonian.MY">Alien_Moyo</li>
+						</races>
+						<offSet>(0.09,-9, 0.275)</offSet>
+						<eastOffSet>(0.2,-9, 0.275)</eastOffSet>
+					</li>
+				</raceSettings>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="MoteBase">
+		<defName>YR_Tentacle_Combat_Aphrodisiac_Gas</defName>
+		<thingClass>MoteThrown</thingClass>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/Smoke</texPath>
+			<color>(0.933, 0.745, 0.788, 1)</color>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.25</fadeInTime>
+			<solidTime>2.75</solidTime>
+			<fadeOutTime>0.25</fadeOutTime>
+			<growthRate>0.47</growthRate>
+			<acceleration>(0,0,0.0014)</acceleration>
+		</mote>
+	</ThingDef>
+	<ThingDef ParentName="MoteBase">
+		<defName>YR_Tentacle_Combat_Aphrodisiac_Gas_Eye</defName>
+		<thingClass>MoteThrown</thingClass>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/Smoke</texPath>
+			<color>(1, 0.1, 0.1, 0.75)</color>
+			<drawSize>(0.15,0.15)</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.01</fadeInTime>
+			<solidTime>1</solidTime>
+			<fadeOutTime>0.1</fadeOutTime>
+			<growthRate>0.47</growthRate>
+			<acceleration>(0,0,0.0014)</acceleration>
+		</mote>
+	</ThingDef>
+	<ThingDef ParentName="MoteBase">
+		<defName>YR_Tentacle_Combat_Aphrodisiac_Gas_Eye_Long</defName>
+		<thingClass>MoteThrown</thingClass>
+		<graphicData>
+			<shaderType>MoteGlow</shaderType>
+			<texPath>Things/Mote/Smoke</texPath>
+			<color>(1, 0.1, 0.1, 0.75)</color>
+			<drawSize>(0.15,0.15)</drawSize>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.01</fadeInTime>
+			<solidTime>4</solidTime>
+			<fadeOutTime>0.4</fadeOutTime>
+			<growthRate>0.47</growthRate>
+			<acceleration>(0,0,0.0014)</acceleration>
+		</mote>
+	</ThingDef>
+</Defs>

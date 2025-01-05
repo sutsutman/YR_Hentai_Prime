@@ -133,8 +133,15 @@
     <Compile Include="Bed\Tentacle\CompProperties_TentacleAbility.cs" />
     <Compile Include="Bed\Tentacle\HediffGiver_RandomAgeCurved_NoAlram.cs" />
     <Compile Include="Bed\Tentacle\ThingComp_FemaleGender.cs" />
+    <Compile Include="CompProperties_Blink.cs" />
+    <Compile Include="Hediff\HediffCompProperties_Test.cs" />
+    <Compile Include="StockGenerator_Slaves_WithoutIdeologyMeme.cs" />
+    <Compile Include="Hediff\HediffCompProperties_Milking.cs" />
+    <Compile Include="IngestionOutcomeDoer_OffsetNeed_Race.cs" />
     <Compile Include="SoundSettingDef.cs" />
     <Compile Include="Hediff\HediffCompProperties_ChangeBodyType.cs" />
+    <Compile Include="Tentacle\CompEffectSpawnTentacleGirl.cs" />
+    <Compile Include="Tentacle\HediffGiver_Random.cs" />
     <Compile Include="YR_H_P_Icon.cs" />
     <Compile Include="Hediff\HediffCompProperties_GiveHediffs.cs" />
     <Compile Include="Hediff\HediffCompProperties_Disciplined.cs" />

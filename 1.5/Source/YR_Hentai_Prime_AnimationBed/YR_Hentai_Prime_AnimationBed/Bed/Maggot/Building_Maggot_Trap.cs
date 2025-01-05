@@ -55,10 +55,5 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
 
-        // Token: 0x040042D7 RID: 17111
-        private static readonly FloatRange DamageRandomFactorRange = new FloatRange(0.8f, 1.2f);
-
-        // Token: 0x040042D8 RID: 17112
-        private static readonly float DamageCount = 5f;
     }
 }

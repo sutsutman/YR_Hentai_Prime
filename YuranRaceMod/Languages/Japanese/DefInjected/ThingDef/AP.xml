@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 임신복 -->
+
+  <YR_AP_MaternityDress.label>ユラン マタニティドレス</YR_AP_MaternityDress.label>
+  <YR_AP_MaternityDress.description>妊娠してお腹が膨れても快適に着られるように工夫された普段着です.</YR_AP_MaternityDress.description>
+
+
+  <!-- 착유복 -->
+
+  <YR_AP_MilkingDress.label>ユラン 搾乳用ドレス</YR_AP_MilkingDress.label>
+  <YR_AP_MilkingDress.description>妊娠・出産後に母乳を出しやすくするため,ユランの胸を刺激して母乳の量を増やす服です.</YR_AP_MilkingDress.description>
+
+
+  <!-- 버니 -->
+
+  <YR_AP_BunnyDress.label>ユラン バニースーツ</YR_AP_BunnyDress.label>
+  <YR_AP_BunnyDress.description>高級感のある革と丈夫なビニール素材で作られたバニースーツです.伸縮性があるので,妊娠しても,胸が大きくなっても,安心して着ることが安心できるようサイズ調整が可能です.</YR_AP_BunnyDress.description>
+
+
+  <!-- 역버니 -->
+
+  <YR_AP_ReverseBunnyDress.label>ユラン 逆バニースーツ</YR_AP_ReverseBunnyDress.label>
+  <YR_AP_ReverseBunnyDress.description>高級感のある革素材を使ったバニースーツです.前が開いているので,妊娠していても楽に着ることができます.</YR_AP_ReverseBunnyDress.description>
+
+
+  <!-- 노예복 -->
+
+  <YR_AP_SlaveDress.label>ユラン 奴隷服</YR_AP_SlaveDress.label>
+  <YR_AP_SlaveDress.description>奴隷用の薄手の布です.少しめくるだけでそのきれいな体を見ることができます.</YR_AP_SlaveDress.description>
+
+
+  <!-- 조교복 -->
+
+  <YR_AP_DisciplineDress.label>ユラン 調教用ドレス</YR_AP_DisciplineDress.label>
+  <YR_AP_DisciplineDress.description>荒縄で亀甲縛りにした上で,振動する機械を取り付けて,そのスイッチをベルトで固定しています.これを着続けさせていると,やがて躾けられて淫乱メス堕ちします.</YR_AP_DisciplineDress.description>
+  <YR_AP_DisciplineDress.verbs.0.label>スイッチオン</YR_AP_DisciplineDress.verbs.0.label>
+
+
+</LanguageData>

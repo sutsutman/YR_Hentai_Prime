@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- 테스트용 -->
+	<HediffDef>
+		<defName>YR_Test_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_Test_Hediff</label>
+		<description>YR_Test_Hediff</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.01</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Test">
+		
+			</li>
+		</comps>
+	</HediffDef>
+	<!--조교중 헤디프-->
+	<HediffDef>
+		<defName>YR_Disciplined_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>disciplined</label>
+		<description>It's being trained by discipline dress. Even if take off it, the progress will be maintained, but it will decrease slightly over time.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>0.01</initialSeverity>
+		<isBad>false</isBad>
+		<!--<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>-->
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Disciplined">
+				<!--체크주기-->
+				<ticks>600</ticks>
+				<gainTraits>
+					<li>
+						<def>Masochist</def>
+						<degree>0</degree>
+					</li>
+					<li>
+						<def>YR_Disciplined</def>
+						<degree>0</degree>
+					</li>
+				</gainTraits>
+				<addTraitSeverity>0.99</addTraitSeverity>
+				<removeHediffPostAddTrait>true</removeHediffPostAddTrait>
+				<apparelDefs>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">YR_AP_DisciplineDress</li>
+				</apparelDefs>
+			</li>
+		</comps>
+	</HediffDef>
+	<!--로터 헤디프-->
+	<HediffDef>
+		<defName>YR_EggVibrator_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>egg vibrator active</label>
+		<description>The vibrator is activated, slowing down movement and getting a little excited.</description>
+		<defaultLabelColor>(1, 0.752, 0.796)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0.5</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-150</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_EggVibrator">
+				<ticks>10</ticks>
+				<maxNum>20</maxNum>
+				<sound>YR_EggVibrator_Sound</sound>
+			</li>
+		</comps>
+	</HediffDef>
+	<!--애액으로 소화-->
+	<HediffDef>
+		<defName>YR_VaginalLubricationFireExtinguisher_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_VaginalLubricationFireExtinguisher_Hediff</label>
+		<description>YR_VaginalLubricationFireExtinguisher_Hediff</description>
+		<defaultLabelColor>(1, 0.752, 0.796)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<statFactors>
+					<Flammability>0</Flammability>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-150</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+	</HediffDef>
+	<!--세쿠시 옷 헤디프-->
+	<HediffDef Name="YR_BoteApparel_Hediff">
+		<defName>YR_BoteApparel_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_BoteApparel_Hediff</label>
+		<description>Because wear special apparel, the face addon changed.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+		</comps>
+	</HediffDef>
+	<!-- 촉수 옷 헤디프 -->
+	<HediffDef ParentName="YR_BoteApparel_Hediff">
+		<defName>YR_TentacleApparel_Hediff</defName>
+		<label>YR_TentacleApparel_Hediff</label>
+	</HediffDef>
+	<!--젖 나오는 헤디프-->
+	<HediffDef>
+		<defName>YR_Milking_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>milking-able</label>
+		<description>Can milking sweet breast milk from Yuran for a certain period of time during pregnancy and after birth.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Milking">
+				<requestHediffDefs>
+					<li>Pregnant</li>
+					<li>YR_BB_Hediff</li>
+					<li>YR_Pregnant_Tentacle</li>
+					<li MayRequire="rim.job.world">RJW_pregnancy</li>
+					<li MayRequire="rim.job.world">RJW_pregnancy_beast</li>
+					<li MayRequire="rim.job.world">RJW_pregnancy_mech</li>
+				</requestHediffDefs>
+				<ticks>1200</ticks>
+				<severity>0.00132</severity>
+			</li>
+		</comps>
+	</HediffDef>
+	<!--출산후 빅젖 헤디프-->
+	<HediffDef>
+		<defName>YR_BB_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_BB_Hediff</label>
+		<description>Breasts got bigger because gave birth.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.2</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<!--<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_ChangeHead">
+				<headPostfix>_Pregnant</headPostfix>
+				<race>Yuran_Race</race>
+				<preferencePostfixs>
+					<li>_Horny</li>
+					<li>_Shame</li>
+				</preferencePostfixs>
+			</li>-->
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_ChangeBodyType">
+				<bodyTypePostfix>_YR_BB</bodyTypePostfix>
+				<races>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko_BlackSnake</li>
+				</races>
+				<preferencePostfixs>
+					<li>_YR_Bote</li>
+				</preferencePostfixs>
+				<ticks>600</ticks>
+				<compSetting>
+					<compPostPostAdd>
+						<activeComp>true</activeComp>
+						<addHediffDefs>
+							<li>YR_Milking_Hediff</li>
+						</addHediffDefs>
+					</compPostPostAdd>
+					<compPostTick>
+						<activeComp>false</activeComp>
+					</compPostTick>
+					<compPostPostRemoved>
+						<activeComp>true</activeComp>
+						<addHediffDefs>
+							<li>YR_Milking_Hediff</li>
+						</addHediffDefs>
+					</compPostPostRemoved>
+				</compSetting>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- 보테 헤디프 -->
+	<HediffDef>
+		<defName>YR_Bote_Hediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_Bote_Hediff</label>
+		<description>Bote.</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.2</maxSeverity>
+		<initialSeverity>0.01</initialSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_ChangeBodyType">
+				<bodyTypePostfix>_YR_Bote</bodyTypePostfix>
+				<races>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko_BlackSnake</li>
+					<li MayRequire="Nemonian.MY">Alien_Moyo</li>
+					<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+					<li MayRequire="AhnDemi.PanieltheAutomata">Paniel_Race</li>
+					<li MayRequire="SutSutMan.MinchoTheMintChocoSlimeHARver">Mincho_ThingDef</li>
+				</races>
+				<!--체크주기-->
+				<ticks>600</ticks>
+				<unPreferencePostfixs>
+					<li>_YR_BB</li>
+				</unPreferencePostfixs>
+				<!--이 이상의 심각도일때 체형변환-->
+				<severity>0.5</severity>
+				<compSetting>
+					<compPostTick>
+						<activeComp>true</activeComp>
+						<addHediffDefs>
+							<li>YR_Milking_Hediff</li>
+						</addHediffDefs>
+					</compPostTick>
+					<compPostPostRemoved>
+						<activeComp>true</activeComp>
+						<addHediffDefs>
+							<li>YR_BB_Hediff</li>
+						</addHediffDefs>
+					</compPostPostRemoved>
+				</compSetting>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.08</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+	<!-- 미믹에게 보호 됨 -->
+		<HediffDef>
+		<defName>YR_Building_Mimic_Hediff</defName>
+		<label>trapped by mimic</label>
+		<description>Trapped by Mimic and forced to mate with her in a box. At the same time protected by her box.</description>
+		<priceImpact>false</priceImpact>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArmorRating_Sharp>2</ArmorRating_Sharp>
+					<ArmorRating_Blunt>2</ArmorRating_Blunt>
+					<ArmorRating_Heat>2</ArmorRating_Heat>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

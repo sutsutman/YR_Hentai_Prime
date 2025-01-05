@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<DesignatorDropdownGroupDef>
+		<defName>YR_Neon_Yuran</defName>
+	</DesignatorDropdownGroupDef>
+	<DesignatorDropdownGroupDef>
+		<defName>YR_Neon_AOC</defName>
+	</DesignatorDropdownGroupDef>
+	<DesignatorDropdownGroupDef>
+		<defName>YR_Neon_Anty</defName>
+	</DesignatorDropdownGroupDef>
+	<DesignatorDropdownGroupDef>
+		<defName>YR_Neon_Maru</defName>
+	</DesignatorDropdownGroupDef>
+	<DesignatorDropdownGroupDef>
+		<defName>YR_Neon_Penis</defName>
+	</DesignatorDropdownGroupDef>
+	<DesignatorDropdownGroupDef>
+		<defName>YR_Neon_Ejaculation</defName>
+	</DesignatorDropdownGroupDef>
+	<ThingDef ParentName="LampBase" Name="YR_NeonBase" Abstract="True">
+		<tickerType>Normal</tickerType>
+		<designationCategory>YR_RJW_Furniture</designationCategory>
+		<costList>
+			<Steel>20</Steel>
+		</costList>
+		<statBases>
+			<Mass>4</Mass>
+		</statBases>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>Standable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<canOverlapZones>false</canOverlapZones>
+		<building>
+			<canPlaceOverWall>true</canPlaceOverWall>
+			<isEdifice>false</isEdifice>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+		<rotatable>true</rotatable>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>30</basePowerConsumption>
+			</li>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_NeonBase" Name="YR_NeonBase_TimeBlink" Abstract="True">
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Blink">
+				<glowTicks>150</glowTicks>
+				<blinkTicks>50</blinkTicks>
+				<neverTimeBlink>false</neverTimeBlink>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_NeonBase" Name="YR_NeonBase_NeverTimeBlink" Abstract="True">
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Blink">
+				<neverTimeBlink>true</neverTimeBlink>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 유란 -->
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Yuran_East</defName>
+		<label>YR_Neon_Yuran</label>
+		<description>YR_Neon_Yuran</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Yuran/East</texPath>
+		</graphicData>
+		<uiOrder>8000</uiOrder>
+		<designatorDropdown>YR_Neon_Yuran</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,115,185,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Yuran_West</defName>
+		<label>YR_Neon_Yuran</label>
+		<description>YR_Neon_Yuran</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Yuran/West</texPath>
+		</graphicData>
+		<uiOrder>8000</uiOrder>
+		<designatorDropdown>YR_Neon_Yuran</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,115,185,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- AOC -->
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_AOC_East</defName>
+		<label>YR_Neon_AOC</label>
+		<description>YR_Neon_AOC</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/AOC/East</texPath>
+		</graphicData>
+		<uiOrder>8000</uiOrder>
+		<designatorDropdown>YR_Neon_AOC</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(0,255,255,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_AOC_West</defName>
+		<label>YR_Neon_AOC</label>
+		<description>YR_Neon_AOC</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/AOC/West</texPath>
+		</graphicData>
+		<uiOrder>8000</uiOrder>
+		<designatorDropdown>YR_Neon_AOC</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(0,255,255,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 앤티 -->
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Anty_East</defName>
+		<label>YR_Neon_Anty</label>
+		<description>YR_Neon_Anty</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Anty/East</texPath>
+		</graphicData>
+		<uiOrder>8000</uiOrder>
+		<designatorDropdown>YR_Neon_Anty</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,201,0,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Anty_West</defName>
+		<label>YR_Neon_Anty</label>
+		<description>YR_Neon_Anty</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Anty/West</texPath>
+		</graphicData>
+		<uiOrder>8000</uiOrder>
+		<designatorDropdown>YR_Neon_Anty</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(213,235,247,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 마루 -->
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Maru_East</defName>
+		<label>YR_Neon_Maru</label>
+		<description>YR_Neon_Maru</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Maru/East</texPath>
+		</graphicData>
+		<uiOrder>8000</uiOrder>
+		<designatorDropdown>YR_Neon_Maru</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(213,235,247,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Maru_West</defName>
+		<label>YR_Neon_Maru</label>
+		<description>YR_Neon_Maru</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Maru/West</texPath>
+		</graphicData>
+		<uiOrder>8000</uiOrder>
+		<designatorDropdown>YR_Neon_Maru</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,255,255,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 꼬추 -->
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Penis_East</defName>
+		<label>YR_Neon_Penis</label>
+		<description>YR_Neon_Penis</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Penis/East</texPath>
+		</graphicData>
+		<uiOrder>8050</uiOrder>
+		<designatorDropdown>YR_Neon_Penis</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,115,185,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Penis_West</defName>
+		<label>YR_Neon_Penis</label>
+		<description>YR_Neon_Penis</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Penis/West</texPath>
+		</graphicData>
+		<uiOrder>8051</uiOrder>
+		<designatorDropdown>YR_Neon_Penis</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,115,185,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 사정 -->
+	<ThingDef ParentName="YR_NeonBase_TimeBlink">
+		<defName>YR_Neon_Ejaculation_East</defName>
+		<label>YR_Neon_Ejaculation</label>
+		<description>YR_Neon_Ejaculation</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Ejaculation/East</texPath>
+		</graphicData>
+		<uiOrder>8052</uiOrder>
+		<designatorDropdown>YR_Neon_Ejaculation</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,255,255,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_NeonBase_TimeBlink">
+		<defName>YR_Neon_Ejaculation_West</defName>
+		<label>YR_Neon_Ejaculation</label>
+		<description>YR_Neon_Ejaculation</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Ejaculation/West</texPath>
+		</graphicData>
+		<uiOrder>8053</uiOrder>
+		<designatorDropdown>YR_Neon_Ejaculation</designatorDropdown>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,255,255,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 뷰지 -->
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_Pussy</defName>
+		<label>YR_Neon_Pussy</label>
+		<description>YR_Neon_Pussy</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/Pussy/Texture</texPath>
+		</graphicData>
+		<uiOrder>8054</uiOrder>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(255,115,185,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 쓰레기 봉투 -->
+	<ThingDef ParentName="YR_NeonBase_NeverTimeBlink">
+		<defName>YR_Neon_GarbageBag</defName>
+		<label>YR_Neon_GarbageBag</label>
+		<description>YR_Neon_GarbageBag</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Neon/GarbageBag/Texture</texPath>
+		</graphicData>
+		<uiOrder>8054</uiOrder>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(220,0,255,0)</glowColor>
+				<!-- <darklightToggle>true</darklightToggle> -->
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

@@ -1,178 +1,201 @@
-﻿//using RimWorld;
-//using System.Collections.Generic;
-//using System.Linq;
-//using UnityEngine;
-//using Verse;
+﻿using RimWorld;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using Verse;
 
-//namespace YR_Hentai_Prime_AnimationBed
-//{
-//    public class CompProperties_ChangeApparelTextureByCondition : CompProperties
-//    {
-//        public CompProperties_ChangeApparelTextureByCondition()
-//        {
-//            compClass = typeof(Comp_ChangeApparelTextureByCondition);
-//        }
-//        public List<ChangeApparelTextureByCondition> changeApparelTextureByConditions = new List<ChangeApparelTextureByCondition>();
-//    }
+namespace YR_Hentai_Prime_AnimationBed
+{
+    public class CompProperties_ChangeApparelTextureByCondition : CompProperties
+    {
+        public CompProperties_ChangeApparelTextureByCondition() => compClass = typeof(Comp_ChangeApparelTextureByCondition);
 
-//    public class ChangeApparelTextureByCondition
-//    {
-//        public Condition condition;
-//        public string texturePath;
-//    }
+        // 조건에 따라 변경할 텍스처 목록
+        public List<ChangeApparelTextureByCondition> changeApparelTextureByConditions = new List<ChangeApparelTextureByCondition>();
+    }
 
-//    public class Comp_ChangeApparelTextureByCondition : ThingComp
-//    {
-//        public CompProperties_ChangeApparelTextureByCondition Props => (CompProperties_ChangeApparelTextureByCondition)props;
-//        public Apparel Apparel => parent as Apparel;
-//        public Pawn Wearer => Apparel.Wearer;
+    public class ChangeApparelTextureByCondition
+    {
+        // 텍스처 변경 조건과 경로
+        public Condition condition;
+        public string texturePath;
+    }
 
-//        public ApparelGraphicRecord apparelGraphicRecord = new ApparelGraphicRecord();
+    public class Comp_ChangeApparelTextureByCondition : ThingComp
+    {
+        public CompProperties_ChangeApparelTextureByCondition Props => (CompProperties_ChangeApparelTextureByCondition)props;
+        public Apparel Apparel => parent as Apparel;
+        public Pawn Wearer => Apparel.Wearer;
 
-//        public bool changeTexture = true;
+        // 착용 아이템 그래픽 기록
+        public ApparelGraphicRecord apparelGraphicRecord = new ApparelGraphicRecord();
 
-//        public bool graphicMaked = false;
+        public bool changeTexture = true;
+        public bool graphicMaked = false;
 
-//        private PawnCondition compPawnCondition = null;
-//        private PawnCondition originalPawnCondition = null;
+        // Pawn 상태 저장
+        private PawnConditionForCheck compPawnConditionForCheck = null;
+        private PawnConditionForCheck originalPawnConditionForCheck = null;
 
-//        public override void PostSpawnSetup(bool respawningAfterLoad)
-//        {
-//            base.PostSpawnSetup(respawningAfterLoad);
-//            changeTexture = true;
-//            graphicMaked = false;
-//        }
-//        public override void Notify_Equipped(Pawn pawn)
-//        {
-//            base.Notify_Equipped(pawn);
-//            changeTexture = true;
-//            graphicMaked = false;
-//        }
-//        public override void Notify_Unequipped(Pawn pawn)
-//        {
-//            base.Notify_Unequipped(pawn);
-//            changeTexture = true;
-//            graphicMaked = false;
-//        }
-//        public override void CompDrawWornExtras()
-//        {
-//            base.CompDrawWornExtras();
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            changeTexture = true;
+            graphicMaked = false;
+        }
 
-//            if (changeTexture)
-//            {
-//                if (TryGetGraphicApparel_Transparency(Apparel, Wearer.story.bodyType, out apparelGraphicRecord))
-//                {
-//                    Wearer.Drawer.renderer.graphics.ResolveAllGraphics();
-//                    changeTexture = false;
-//                    graphicMaked = true;
-//                }
-//                else
-//                {
-//                    changeTexture = false;
-//                    graphicMaked = false;
-//                }
-//            }
-//        }
-//        public override void CompTick()
-//        {
-//            base.CompTick();
-//            CheckPawnAndCompPawnCondition();
-//        }
-//        void CheckPawnAndCompPawnCondition()
-//        {
-//            List<Hediff> hediffs = Wearer.health.hediffSet.hediffs;
-//            List<Trait> traits = Wearer.story.traits.allTraits;
+        public override void Notify_Equipped(Pawn pawn)
+        {
+            base.Notify_Equipped(pawn);
+            changeTexture = true;
+            graphicMaked = false;
+        }
 
-//            if (compPawnCondition == null)
-//            {
-//                compPawnCondition = new PawnCondition
-//                {
-//                    race = Wearer.def,
-//                    gender = Wearer.gender,
-//                    hediffDefs = hediffs.Select(x => x.def).ToList(),
-//                    bodyTypeDef = Wearer.story.bodyType,
-//                    traitDefs = traits.Select(x => x.def).ToList()
-//                };
-//                changeTexture = true;
-//                return;
-//            }
-//            else
-//            {
-//                originalPawnCondition = new PawnCondition
-//                {
-//                    race = Wearer.def,
-//                    gender = Wearer.gender,
-//                    bodyTypeDef = Wearer.story.bodyType
-//                };
-//            }
+        public override void Notify_Unequipped(Pawn pawn)
+        {
+            base.Notify_Unequipped(pawn);
+            changeTexture = true;
+            graphicMaked = false;
+        }
 
-//            bool race = compPawnCondition.race == originalPawnCondition.race;
-//            bool gender = compPawnCondition.gender == originalPawnCondition.gender;
+        public override void CompDrawWornExtras()
+        {
+            base.CompDrawWornExtras();
 
-//            bool hediffDef = hediffs.Select(x => x.def).SequenceEqual(compPawnCondition.hediffDefs);
+            // 텍스처 변경 필요 시 처리
+            if (changeTexture && Wearer != null)
+            {
+                if (TryGetGraphicApparel_Transparency(Apparel, Wearer.story.bodyType, out apparelGraphicRecord))
+                {
+                    Wearer.Drawer.renderer.SetAllGraphicsDirty();
+                    changeTexture = false;
+                    graphicMaked = true;
+                }
+                else
+                {
+                    changeTexture = false;
+                    graphicMaked = false;
+                }
+            }
+        }
 
-//            bool bodyTypeDef = compPawnCondition.bodyTypeDef == originalPawnCondition.bodyTypeDef;
+        public class PawnConditionForCheck
+        {
+            public BodyTypeDef bodyTypeDef = null;
+            public List<HediffDef> hediffDefs = new List<HediffDef>();
+            public Gender? gender = null;
+            public ThingDef race = null;
+            public List<TraitDef> traitDefs;
+        }
 
-//            bool traitDef = traits.Select(x => x.def).SequenceEqual(compPawnCondition.traitDefs);
+        int ticks = 10;
+        public override void CompTick()
+        {
+            base.CompTick();
+            if (Wearer != null)
+            {
+                ticks--;
+                if (ticks <= 0)
+                {
+                    CheckPawnAndCompPawnCondition();
+                    ticks = 10;
+                }
+                if (changeTexture)
+                {
+                    Wearer.Drawer.renderer.SetAllGraphicsDirty();
+                    changeTexture = false;
+                }
+            }
+        }
 
-//            bool allEqual = race && gender && hediffDef && bodyTypeDef && traitDef;
+        void CheckPawnAndCompPawnCondition()
+        {
+            // Wearer가 null인지 확인하여 예외 방지
+            if (Wearer == null)
+            {
+                return;
+            }
 
-//            if (!allEqual)
-//            {
-//                compPawnCondition = new PawnCondition
-//                {
-//                    race = Wearer.def,
-//                    gender = Wearer.gender,
-//                    hediffDefs = hediffs.Select(x => x.def).ToList(),
-//                    bodyTypeDef = Wearer.story.bodyType,
-//                    traitDefs = traits.Select(x => x.def).ToList()
-//                };
-//                changeTexture = true;
-//            }
-//        }
+            // Hediff와 Trait 목록 가져오기
+            List<Hediff> hediffs = Wearer.health?.hediffSet?.hediffs ?? new List<Hediff>();
+            List<Trait> traits = Wearer.story?.traits?.allTraits ?? new List<Trait>();
 
-//        public bool TryGetGraphicApparel_Transparency(Apparel apparel, BodyTypeDef bodyType, out ApparelGraphicRecord rec)
-//        {
-//            if (bodyType == null)
-//            {
-//                Log.Error("Getting apparel graphic with undefined body type.");
-//                bodyType = BodyTypeDefOf.Male;
-//            }
+            // 처음 상태 기록
+            if (compPawnConditionForCheck == null)
+            {
+                compPawnConditionForCheck = new PawnConditionForCheck
+                {
+                    race = Wearer.def,
+                    gender = Wearer.gender,
+                    hediffDefs = hediffs.Select(x => x.def).ToList(),
+                    bodyTypeDef = Wearer.story?.bodyType,
+                    traitDefs = traits.Select(x => x.def).ToList()
+                };
+                changeTexture = true;
+                return;
+            }
+            else
+            {
+                originalPawnConditionForCheck = new PawnConditionForCheck
+                {
+                    race = Wearer.def,
+                    gender = Wearer.gender,
+                    bodyTypeDef = Wearer.story?.bodyType
+                };
+            }
 
-//            rec = new ApparelGraphicRecord(null, null);
+            // 상태 비교
+            bool allEqual = compPawnConditionForCheck.race == originalPawnConditionForCheck.race &&
+                            compPawnConditionForCheck.gender == originalPawnConditionForCheck.gender &&
+                            hediffs.Select(x => x.def).SequenceEqual(compPawnConditionForCheck.hediffDefs) &&
+                            compPawnConditionForCheck.bodyTypeDef == originalPawnConditionForCheck.bodyTypeDef &&
+                            traits.Select(x => x.def).SequenceEqual(compPawnConditionForCheck.traitDefs);
 
-//            string path;
-//            bool result = false;
-//            foreach (var changeApparelTextureByCondition in Props.changeApparelTextureByConditions)
-//            {
-//                if (Condition.Match(Wearer, changeApparelTextureByCondition.condition))
-//                {
-//                    path = changeApparelTextureByCondition.texturePath;
+            // 변경된 상태가 있으면 텍스처 변경 플래그 설정
+            if (!allEqual)
+            {
+                compPawnConditionForCheck = new PawnConditionForCheck
+                {
+                    race = Wearer.def,
+                    gender = Wearer.gender,
+                    hediffDefs = hediffs.Select(x => x.def).ToList(),
+                    bodyTypeDef = Wearer.story?.bodyType,
+                    traitDefs = traits.Select(x => x.def).ToList()
+                };
+                changeTexture = true;
+                Wearer.Drawer.renderer.SetAllGraphicsDirty();
+            }
+        }
 
-//                    //if (apparel.def.apparel.LastLayer != ApparelLayerDefOf.Overhead && apparel.def.apparel.LastLayer != ApparelLayerDefOf.EyeCover && !PawnRenderer.RenderAsPack(apparel) && apparel.WornGraphicPath != BaseContent.PlaceholderImagePath && apparel.WornGraphicPath != BaseContent.PlaceholderGearImagePath)
-//                    //{
-//                    //    var bodyTypeDefName = bodyType.defName;
 
-//                    //    path += "_" + bodyTypeDefName;
-//                    //}
+        public bool TryGetGraphicApparel_Transparency(Apparel apparel, BodyTypeDef bodyType, out ApparelGraphicRecord rec)
+        {
+            if (bodyType == null)
+            {
+                Log.Error("Getting apparel graphic with undefined body type.");
+            }
 
-//                    Shader shader = ShaderDatabase.Cutout;
-//                    if (apparel.def.apparel.useWornGraphicMask)
-//                    {
-//                        shader = ShaderDatabase.CutoutComplex;
-//                    }
+            rec = new ApparelGraphicRecord(null, null);
 
-//                    Graphic graphic = GraphicDatabase.Get<Graphic_Multi>(path, shader, apparel.def.graphicData.drawSize, apparel.DrawColor);
-//                    rec = new ApparelGraphicRecord(graphic, apparel);
+            foreach (var changeApparelTextureByCondition in Props.changeApparelTextureByConditions)
+            {
+                if (Condition.Match(Wearer, null, changeApparelTextureByCondition.condition, out bool needBreak))
+                {
+                    string path = changeApparelTextureByCondition.texturePath;
 
-//                    result = true;
-//                    if (Condition.NeedBreak(changeApparelTextureByCondition.condition))
-//                    {
-//                        break;
-//                    }
-//                }
-//            }
-//            return result;
-//        }
-//    }
-//}
+                    // 그래픽 생성 및 설정
+                    Shader shader = apparel.def.apparel.useWornGraphicMask ? ShaderDatabase.CutoutComplex : ShaderDatabase.Cutout;
+                    Graphic graphic = GraphicDatabase.Get<Graphic_Multi>(path, shader, apparel.def.graphicData.drawSize, apparel.DrawColor);
+                    rec = new ApparelGraphicRecord(graphic, apparel);
+
+                    if (needBreak)
+                    {
+                        break;
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+}

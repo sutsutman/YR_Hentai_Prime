@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 사목의 탕약 -->
+	<ThingDef ParentName="MakeableDrugBase" Name="YR_Tentacle_Drug_Base">
+		<defName>YR_Tentacle_Drug</defName>
+		<label>evil tree decoction</label>
+		<!-- 사목의 씨앗을 달여 만든 탕약입니다. 굉장히 쓰고 마치 목구멍을 범하는 듯한 찐득함을 가지고 있습니다. 섭취시 몸에 활기가 돌면서 더 강해지고 빨라집니다. 두개를 연달아 마시면 더 강한 효과를 볼 수 있지만, 그만큼 중독될 가능성도 커질것입니다. -->
+		<description>This is a decoction made by boil the seeds of the evil tree. It's very bitter and has a sticky taste reminiscent of semen. When consumed, the body becomes more active and stronger and faster. Drinking two in a row can have a stronger effect, but the possibility of addiction will also increase.</description>
+		<descriptionHyperlinks>
+			<HediffDef>YR_Tentacle_DrugHigh</HediffDef>
+			<HediffDef>YR_Tentacle_Drug_Addiction</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Drug/YR_Tentacle_Drug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>53</MarketValue>
+			<Mass>0.1</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<joyKind>Chemical</joyKind>
+			<joy>0.1</joy>
+			<drugCategory>Hard</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<baseIngestTicks>80</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Inject {0}</ingestCommandString>
+			<ingestReportString>Injecting {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<chairSearchRadius>0</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>YR_Tentacle_DrugHigh</hediffDef>
+					<severity>0.5</severity>
+					<toleranceChemical>YR_Tentacle_Drug</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>YR_Tentacle_Drug_Feel</hediffDef>
+					<severity>0.5</severity>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.4</offset>
+					<toleranceChemical>YR_Tentacle_Drug</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+					<offset>0.15</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<soundWorking>Recipe_Drug</soundWorking>
+		</recipeMaker>
+		<costList>
+			<MedicineHerbal>2</MedicineHerbal>
+			<YR_Tentacle_Egg>1</YR_Tentacle_Egg>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>YR_Tentacle_Drug</chemical>
+				<addictiveness>0.026</addictiveness>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+				<listOrder>200</listOrder>
+				<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+				<largeOverdoseChance>0.005</largeOverdoseChance>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- 사목의 음액 -->
+	<ThingDef ParentName="YR_Tentacle_Drug_Base">
+		<defName>YR_Tentacle_Drug_Enhance</defName>
+		<label>evil tree lewd decoction</label>
+		<!-- 사목의 탕약에 발정제와 암브로시아를 추가로 넣고 달여 만든 더 강력한 약물입니다. 암브로시아의 달콤함이 쓴맛을 중화시켜 주어 고급진 느낌의 맛이 납니다. 덕분에 마치 애인이 사랑을 담아서 목구멍을 범해주는것과 같은 느낌이 듭니다. 사목의 탕약과 같은 위험성을 지니면서도, 사목의 탕약을 2개 섭취한 것과 동일한 약효를 냅니다. -->
+		<description>This is a more powerful drug made by adding rabbit aphrodisiac and ambrosia to the evil tree decoction. The existing bitterness is replaced by the sweetness of ambrosia, giving the lover's sticky love an ecstasy that flows to throat raw. It has the same risk as the tree decoction, but it works the same effect as taking two tree decoctions.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Drug/YR_Tentacle_Drug_Enhance</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>53</MarketValue>
+			<Mass>0.1</Mass>
+		</statBases>
+		<ingestible>
+			<joy>1</joy>
+			<outcomeDoers Inherit="False">
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>YR_Tentacle_DrugHigh</hediffDef>
+					<severity>1</severity>
+					<toleranceChemical>YR_Tentacle_Drug</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>YR_Tentacle_Drug_Enhance_Feel</hediffDef>
+					<severity>1</severity>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.4</offset>
+					<toleranceChemical>YR_Tentacle_Drug</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+					<offset>0.15</offset>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<costList>
+			<YR_Tentacle_Drug>2</YR_Tentacle_Drug>
+			<YR_RabbitAphrodisiac>1</YR_RabbitAphrodisiac>
+		</costList>
+	</ThingDef>
+	<!-- 공통 헤디프-->
+	<HediffDef>
+		<defName>YR_Tentacle_DrugHigh</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>high on evil tree decoction</label>
+		<labelNoun>a evil tree decoction high</labelNoun>
+		<description>evil tree decoction in the bloodstream. It supercharges combat-related abilities.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.75</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0.1</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.10</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.50</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.51</minSeverity>
+				<painFactor>0.25</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.4</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.6</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- 사목의 탕약 취함 헤디프 -->
+	<HediffDef>
+		<defName>YR_Tentacle_Drug_Feel</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_Tentacle_Drug_Feel</label>
+		<description>YR_Tentacle_Drug_Feel</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.75</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- 사목의 음액 취함 헤디프-->
+	<HediffDef>
+		<defName>YR_Tentacle_Drug_Enhance_Feel</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>YR_Tentacle_Drug_Enhance_Feel</label>
+		<description>YR_Tentacle_Drug_Enhance_Feel</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.75</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- 사목의 탕약 취함 무드 -->
+	<ThoughtDef>
+		<defName>YR_Tentacle_Drug_Feel</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_Tentacle_Drug_Feel</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>high on evil tree decoction</label>
+				<description>I can't get the sticky and hot feeling out of my throat. I feel good...</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- 사목의 음액 취함 무드-->
+	<ThoughtDef>
+		<defName>YR_Tentacle_Drug_Enhance_Feel</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_Tentacle_Drug_Enhance_Feel</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>high on evil tree lewd decoction</label>
+				<description>Ah... I feel like love is flowing in my throat rawly...</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<!-- 중독 -->
+	<ChemicalDef>
+		<defName>YR_Tentacle_Drug</defName>
+		<label>evil tree decoction</label>
+		<addictionHediff>YR_Tentacle_Drug_Addiction</addictionHediff>
+		<geneOverdoseChanceFactorResist>0.5</geneOverdoseChanceFactorResist>
+		<geneOverdoseChanceFactorImmune>0</geneOverdoseChanceFactorImmune>
+	</ChemicalDef>
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>YR_Tentacle_Drug_Chemical</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>evil tree decoction</label>
+		<description>Because of a evil tree decoction addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+		<fallPerDay>0.333</fallPerDay>
+		<listPriority>45</listPriority>
+	</NeedDef>
+	<HediffDef ParentName="AddictionBase">
+		<defName>YR_Tentacle_Drug_Addiction</defName>
+		<label>evil tree decoction addiction</label>
+		<description>A chemical addiction to evil tree decoction. Long-term presence of evil tree decoction has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\n\nWithout regular doses of evil tree decoction, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<causesNeed>YR_Tentacle_Drug_Chemical</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.045</severityPerDay>
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+      </li>
+			<li>
+				<label>withdrawal</label>
+				<painFactor>3</painFactor>
+				<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+				<statOffsets>
+					<RestFallRateFactor>0.3</RestFallRateFactor>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Binging_DrugExtreme</mentalState>
+						<mtbDays>40</mtbDays>
+					</li>
+					<li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>10</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>YR_Tentacle_DrugWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>YR_Tentacle_Drug_Addiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>evil tree decoction withdrawal</label>
+				<description>Please anyone, pour that hot, sticky thing to my neck...!</description>
+				<baseMoodEffect>-22</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>YR_Tentacle_DrugTolerance</defName>
+		<label>evil tree decoction tolerance</label>
+		<description>A built-up tolerance to evil tree decoction. The more severe this tolerance is, the more evil tree decoction it takes to get the same effect.</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.015</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>YR_Tentacle_Drug</chemical>
+			</li>
+		</comps>
+		<hediffGivers>
+			<li Class="HediffGiver_RandomDrugEffect">
+				<hediff>ChemicalDamageModerate</hediff>
+				<severityToMtbDaysCurve>
+					<points>
+						<li>(0.45, 99999)</li>
+						<li>(0.5, 120)</li>
+						<li>(1, 90)</li>
+					</points>
+				</severityToMtbDaysCurve>
+				<partsToAffect>
+					<li>Brain</li>
+				</partsToAffect>
+			</li>
+		</hediffGivers>
+	</HediffDef>
+</Defs>

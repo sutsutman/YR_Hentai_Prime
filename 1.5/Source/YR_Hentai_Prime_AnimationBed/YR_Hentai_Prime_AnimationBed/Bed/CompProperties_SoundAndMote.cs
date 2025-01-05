@@ -10,10 +10,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class CompProperties_SoundAndMote : CompProperties
     {
-        public CompProperties_SoundAndMote()
-        {
-            compClass = typeof(Comp_SoundAndMote);
-        }
+        public CompProperties_SoundAndMote() => compClass = typeof(Comp_SoundAndMote);
         public SoundDef soundAmbient;
 
         public List<ThingDef> moteDefs;

@@ -7,10 +7,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class CompProperties_Spawner_Tentacle : CompProperties_Spawner
     {
-        public CompProperties_Spawner_Tentacle()
-        {
-            this.compClass = typeof(CompSpawner_Tentacle);
-        }
+        public CompProperties_Spawner_Tentacle() => this.compClass = typeof(CompSpawner_Tentacle);
         public bool spawnSelfPosition = false;
         public List<ThingDef> neverStackThingDefs = new List<ThingDef>();
         public bool anotherRoomChange = false;

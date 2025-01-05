@@ -8,10 +8,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class CompProperties_Maggot_Warp : CompProperties
     {
-        public CompProperties_Maggot_Warp()
-        {
-            compClass = typeof(Comp_Maggot_Warp);
-        }
+        public CompProperties_Maggot_Warp() => compClass = typeof(Comp_Maggot_Warp);
 
         public List<ThingDef> warpPointThingDefs = new List<ThingDef>();
     }

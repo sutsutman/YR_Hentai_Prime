@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>YR_Tentacle_Egg_Install</defName>
+    <label>plant seed of the evil tree</label>
+    <description>Plant the seed of the evil tree.</description>
+    <workerClass>Recipe_AddHediff</workerClass>
+    <jobString>Planting seed of the evil tree.</jobString>
+    <workAmount>1500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <addsHediff>YR_Tentacle_Egg_Hediff</addsHediff>
+    <surgerySuccessChanceFactor>2</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>YR_Tentacle_Egg</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>YR_Tentacle_Egg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+  </RecipeDef>
+  
+   <RecipeDef ParentName="SurgeryFlesh">
+    <defName>YR_Tentacle_Egg_Remove</defName>
+    <label>remove seed of the evil tree</label>
+    <description>Remove the seed of the evil tree.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Removing seed of the evil tree.</jobString>
+    <workAmount>4500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <removesHediff>YR_Tentacle_Egg_Hediff</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully removed {1}'s seed of the evil tree.</successfullyRemovedHediffMessage>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>MedicineHerbal</li>
+      </disallowedThingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+</Defs>

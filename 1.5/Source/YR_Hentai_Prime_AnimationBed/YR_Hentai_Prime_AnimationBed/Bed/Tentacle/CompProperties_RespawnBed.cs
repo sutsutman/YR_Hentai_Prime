@@ -5,10 +5,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class CompProperties_RespawnBed : CompProperties
     {
-        public CompProperties_RespawnBed()
-        {
-            compClass = typeof(CompRespawnBed);
-        }
+        public CompProperties_RespawnBed() => compClass = typeof(CompRespawnBed);
         public Vector2 drawsize = new Vector2(5, 5);
         public Vector3 adjustOffsetBeforeSetOccupant = new Vector3(0, 0, -1);
     }

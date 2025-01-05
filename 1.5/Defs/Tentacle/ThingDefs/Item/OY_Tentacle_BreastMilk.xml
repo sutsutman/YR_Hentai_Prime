@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Mofy Milk -->
+	
+	<ThingDef MayRequire="bep.mofy.twfiaclr" ParentName="OrganicProductBase" >
+		<defName>Mofy_Tentacle_BreastMilk</defName>
+		<label>mofy abyss lewd milk</label>
+		<description>It is a slightly different horny milk that can be taken from Mofys who has fallen into pleasure. Since it has medicinal properties, the storage container is designed differently to prevent accidental mix-ups.\n\nThe Mofys produce milk that boosts immune system , but it has been further improved by mixing with the Evil Tree's secretions; this mixture improves the already-present immune boosting properties. However, caution is required as it has a strong aphrodisiac side effect.\n\nIt's still sweet enough to melt your brain, but the bitternes has slightly increased - as they said, 'Good medicine has a bitter taste' - so shut up and drink it.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Mofy_Tentacle_MilkHediff</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>BEPRace/Item/Mofy_Tentacle_BreastMilk</texPath>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<!-- Can be used like meat in recipes -->
+			<Mass>0.045</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<babiesCanIngest>true</babiesCanIngest>
+			<tasteThought>YR_AteTentacle_BreastMilk</tasteThought>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>Mofy_Tentacle_MilkHediff</hediffDef>
+					<severity>1.0</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+	
+	<HediffDef>
+		<defName>Mofy_Tentacle_MilkHediff</defName>
+		<label>mofy abyss lewd milk</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.4, 0.8, 0.8)</defaultLabelColor>
+		<isBad>false</isBad>
+		<maxSeverity>1.0</maxSeverity>
+		<description>Mofy's abyss lewd milk has the effect of speeding up the healing of diseases. but...</description>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>30000</min>
+					<max>30000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<SexFrequency MayRequire="rim.job.world">10</SexFrequency>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>3.0</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Sweety Milk -->
+	
+	<ThingDef MayRequire="bep.sweety.mcsr" ParentName="OrganicProductBase" >
+		<defName>Sweety_Tentacle_BreastMilk</defName>
+		<label>sweety abyss lewd milk</label>
+		<description>It is a slightly different horny milk that you can get from Sweeties who have fallen into pleasure. Due to its nature, the design of the container is slightly different so as not to be drunk by mistake.\n\nThe sweet, sweet chocolate milk produced by Sweety retains its sweetness enough to drown out the bitterness of the semen even after being processed with Evil Tree's semen. Therefore, it can be used as an enjoyable drink for aphrodisiac lovers or as a companion at night as a "relatively easy-to-drink aphrodisiac".\n\nHowever, the aphrodisiac effect is very strong, and it also has an extremely powerful fertility enhancing effect. If you want to prevent 'accidental' pregnancies, you should avoid drinking this milk.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Sweety_Tentacle_MilkHediff</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>BEPRace/Item/Sweety_Tentacle_BreastMilk</texPath>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<!-- Can be used like meat in recipes -->
+			<Mass>0.045</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<babiesCanIngest>true</babiesCanIngest>
+			<tasteThought>YR_AteTentacle_BreastMilk</tasteThought>
+			<joy>1.0</joy>
+			<joyKind>Gluttonous</joyKind>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>Sweety_Tentacle_MilkHediff</hediffDef>
+					<severity>1.0</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+	
+	<HediffDef>
+		<defName>Sweety_Tentacle_MilkHediff</defName>
+		<label>sweety abyss lewd milk</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.4, 0.8, 0.8)</defaultLabelColor>
+		<isBad>false</isBad>
+		<maxSeverity>1.0</maxSeverity>
+		<description>sweety's abyss lewd milk has greatly increased their libido.</description>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>30000</min>
+					<max>30000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<SexFrequency MayRequire="rim.job.world">10</SexFrequency>
+				</statFactors>
+				<capMods>
+					<li MayRequire="rim.job.world">
+						<capacity>RJW_Fertility</capacity>
+						<postFactor>10</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	This is sample XML for modders.
+	If you want to automatically resolve texture of apparel, define ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef. (in your Defs folder.)
+	"defName" must be same as defName of "BodyTypeDef", and you can choice alternative BodyTypeDef in "alternatives" field.
+-->
+<Defs>
+	<ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+		<defName>Thin_YR_Bote</defName>
+		<alternatives>
+			<li>Thin</li>
+		</alternatives>
+	</ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+	<ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+		<defName>Thin_YR_BB</defName>
+		<alternatives>
+			<li>Thin</li>
+		</alternatives>
+	</ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+	<!-- 추가 체형 -->
+	<ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+		<defName>Hulk_YR_Bote</defName>
+		<alternatives>
+			<li>Thin_YR_Bote</li>
+			<li>Hulk</li>
+		</alternatives>
+	</ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+	<ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+		<defName>Female_YR_Bote</defName>
+		<alternatives>
+			<li>Thin_YR_Bote</li>
+			<li>Female</li>
+		</alternatives>
+	</ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+	<ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+		<defName>Fat_YR_Bote</defName>
+		<alternatives>
+			<li>Thin_YR_Bote</li>
+			<li>Fat</li>
+		</alternatives>
+	</ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+	<ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+		<defName>Male_YR_Bote</defName>
+		<alternatives>
+			<li>Thin_YR_Bote</li>
+			<li>Male</li>
+		</alternatives>
+	</ApparelBodyTypeResolver.PredefinedBodyTypeResolverDef>
+</Defs>

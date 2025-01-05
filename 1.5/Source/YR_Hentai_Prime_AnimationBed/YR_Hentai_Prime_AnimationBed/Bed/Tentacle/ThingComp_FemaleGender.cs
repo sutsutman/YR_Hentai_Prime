@@ -30,9 +30,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class CompProperties_FemaleGender : CompProperties
     {
-        public CompProperties_FemaleGender()
-        {
-            this.compClass = typeof(ThingComp_FemaleGender);
-        }
+        public CompProperties_FemaleGender() => this.compClass = typeof(ThingComp_FemaleGender);
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<YR_WearSetting.WearSettingDef>
+	<WearSetting.WearSettingDef>
 		<defName>OY_WearSetting_LitF</defName>
 		<targetRaces>
 			<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
@@ -23,11 +23,11 @@
 					<li>OY_Tentacle_Dagger</li>
 					<li>OY_Tentacle_Bow</li>
 				</wearList>
-				<pawnCondition><heldPawnCondition>
+				<condition>
 					<bodyTypeDef>
 						<li>Female</li>
 					</bodyTypeDef>
-				</heldPawnCondition></pawnCondition>
+				</condition>
 				<makeThingCopyHitPoint>false</makeThingCopyHitPoint>
 				<makeApparel>
 					<li>YR_AP_Tentacle</li>
@@ -56,5 +56,5 @@
 				<prisonerRemoveWeapon>true</prisonerRemoveWeapon>
 			</li>
 		</wearSetting>
-	</YR_WearSetting.WearSettingDef>
+	</WearSetting.WearSettingDef>
 </Defs>

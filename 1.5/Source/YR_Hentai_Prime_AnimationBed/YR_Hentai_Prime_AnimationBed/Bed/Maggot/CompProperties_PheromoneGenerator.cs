@@ -9,10 +9,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class CompProperties_PheromoneGenerator : CompProperties
     {
-        public CompProperties_PheromoneGenerator()
-        {
-            compClass = typeof(Comp_PheromoneGenerator);
-        }
+        public CompProperties_PheromoneGenerator() => compClass = typeof(Comp_PheromoneGenerator);
         public string label = "YR_Maggot_PheromoneGenerator_Active";
         public string desc = "YR_Maggot_PheromoneGenerator_Desc";
         public int ticks = 2500;

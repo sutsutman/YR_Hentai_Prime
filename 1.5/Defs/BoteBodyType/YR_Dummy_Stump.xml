@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HeadTypeDef ParentName="AverageBase">
+    <defName>YR_Dummy_Stump</defName>
+    <graphicPath>Yuran/Yuranlike/Bodies/Dummy/YR_Bote</graphicPath>
+    <selectionWeight>0</selectionWeight>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+</Defs>

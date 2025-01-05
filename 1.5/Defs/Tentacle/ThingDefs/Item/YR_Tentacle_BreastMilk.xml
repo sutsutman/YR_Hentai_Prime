@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>YR_Tentacle_BreastMilk</defName>
+		<label>abyss lewd milk</label>
+		<description>The altered breast milk from the host, the semen from the root of the evil tree and the normal breast milk are mixed in the eroded mammary glands, which concentrated and fermented the mixture, resulting in cheese-like lumps that are scooped out from the mammary gland and collected in a bottle.\n\nThe right way to consume this beverage is to chew on the lumps while drinking the remaining milk; the milk is brain-cloyingly sweet, and the lump's feels like it's a large gunk of cum trying to make your stomach pregnant. Even with this horrible taste combination, the taste is so addictive that you want more.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Resource/YR_Tentacle_BreastMilk</texPath>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<!-- Can be used like meat in recipes -->
+			<Mass>0.045</Mass>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>14</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<babiesCanIngest>true</babiesCanIngest>
+			<tasteThought>YR_AteTentacle_BreastMilk</tasteThought>
+		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+	<ThoughtDef>
+		<defName>YR_AteTentacle_BreastMilk</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>drank abyss lewd milk</label>
+				<description>Drink♥️ something♥️ like♥️ this♥️ brain♥️ will♥️ rot♥️ Hngg♥️</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

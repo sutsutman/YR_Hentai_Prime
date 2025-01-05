@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 임신복 -->
+
+  <YR_AP_MaternityDress.label>悠兰孕妇装</YR_AP_MaternityDress.label>
+  <YR_AP_MaternityDress.description>这是一种日常穿搭，即使怀孕后穿着也很舒适。</YR_AP_MaternityDress.description>
+
+
+  <!-- 착유복 -->
+
+  <YR_AP_MilkingDress.label>悠兰挤奶连衣裙</YR_AP_MilkingDress.label>
+  <YR_AP_MilkingDress.description>一种通过刺激悠兰胸部来增加哺乳量的服装，悠兰可以在怀孕或分娩后哺乳。</YR_AP_MilkingDress.description>
+
+
+  <!-- 버니 -->
+
+  <YR_AP_BunnyDress.label>悠兰兔子连衣裙</YR_AP_BunnyDress.label>
+  <YR_AP_BunnyDress.description>由奢华皮革和强力乙烯基制成的兔子套装。由于其弹性，即使怀孕或胸部变大，尺寸也会相应变化。</YR_AP_BunnyDress.description>
+
+
+  <!-- 역버니 -->
+
+  <YR_AP_ReverseBunnyDress.label>悠兰兔子连衣裙(反向)</YR_AP_ReverseBunnyDress.label>
+  <YR_AP_ReverseBunnyDress.description>由奢华皮革制成的兔女郎套装。由于正面是敞开的，即使怀孕也可以穿着舒适。</YR_AP_ReverseBunnyDress.description>
+
+
+  <!-- 노예복 -->
+
+  <YR_AP_SlaveDress.label>悠兰奴隶服</YR_AP_SlaveDress.label>
+  <YR_AP_SlaveDress.description>奴隶用的薄布。只要把它稍稍拉起来，它就会看到一个美丽的身体。</YR_AP_SlaveDress.description>
+
+
+  <!-- 조교복 -->
+
+  <YR_AP_DisciplineDress.label>悠兰调教服</YR_AP_DisciplineDress.label>
+  <YR_AP_DisciplineDress.description>用绳子捆绑并将振动棒插入阴道中。 如果连续穿着，它最终会受到调教，成为一个淫荡的女性。</YR_AP_DisciplineDress.description>
+  <YR_AP_DisciplineDress.verbs.0.label>启动</YR_AP_DisciplineDress.verbs.0.label>
+
+
+</LanguageData>

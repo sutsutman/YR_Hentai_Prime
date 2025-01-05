@@ -7,10 +7,7 @@ namespace YR_Hentai_Prime_AnimationBed
     public class HediffCompProperties_GiveHediffs : HediffCompProperties
     {
         // 생성자에서 해당 컴포넌트 클래스를 지정
-        public HediffCompProperties_GiveHediffs()
-        {
-            compClass = typeof(HediffComp_GiveHediffs);
-        }
+        public HediffCompProperties_GiveHediffs() => compClass = typeof(HediffComp_GiveHediffs);
 
         // 틱 카운트 (헤디프가 부여되기 전까지의 시간)
         public int ticks = 100;

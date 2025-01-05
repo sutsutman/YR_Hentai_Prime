@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>YR_MechanicalEgg</defName>
+		<label>mechanical egg</label>
+		<description>Small grubs of metal-polymers are gestating in the eggs. They can be converted into components at a drug lab.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Resource/YR_MechanicalEgg</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<MarketValue>2.6</MarketValue>
+			<Mass>0.05</Mass>
+			<Flammability>0.6</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+	</ThingDef>
+	<RecipeDef>
+		<defName>YR_Make_ComponentIndustrial</defName>
+		<label>make component</label>
+		<description>Make a component.</description>
+		<jobString>Making component.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>5000</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>YR_MechanicalEgg</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>YR_MechanicalEgg</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</products>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+</Defs>

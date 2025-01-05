@@ -2,10 +2,7 @@
 {
     public class CompProperties_Tentacle_Mask_Sub : CompProperties_Tentacle_Mask
     {
-        public CompProperties_Tentacle_Mask_Sub()
-        {
-            compClass = typeof(Comp_Tentacle_Mask_Sub);
-        }
+        public CompProperties_Tentacle_Mask_Sub() => compClass = typeof(Comp_Tentacle_Mask_Sub);
     }
 
     public class Comp_Tentacle_Mask_Sub : Comp_Tentacle_Mask

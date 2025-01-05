@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_HPF.HPFWorkGiverDef>
+		<defName>Milking_YR_BreastMilk</defName>
+		<harvestJobDef>Milking_YR_BreastMilk</harvestJobDef>
+		<label>Milking breast milk from yuran</label>
+		<workType>Handling</workType>
+		<verb>milking</verb>
+		<gerund>milking</gerund>
+		<priorityInType>80</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<giverClass>YR_HPF.WorkGiver_GatherPawnResources</giverClass>
+	</YR_HPF.HPFWorkGiverDef>
+
+</Defs>

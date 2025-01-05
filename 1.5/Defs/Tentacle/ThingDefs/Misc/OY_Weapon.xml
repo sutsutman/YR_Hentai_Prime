@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseWeapon">
+		<defName>OY_Tentacle_Dagger</defName>
+		<label>dagger of the evil tree</label>
+		<description>The root of the evil tree has been transformed into the form of a dagger to protect the host. Purely pursuing sharpness, and is literally a part of the host's body, It is small enough to be handled by a race of relatively small stature, but sharp enough to be used.</description>
+		<graphicData>
+			<texPath>BEPRace/Equipment/TentacleWeapon/Tentacle_Dagger</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.1</uiIconScale>
+		<techLevel>Neolithic</techLevel>
+		<statBases>
+			<MarketValue>0.01</MarketValue>
+			<Mass>2</Mass>
+		</statBases>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleePiercer</li>
+		</weaponClasses>
+		<equippedAngleOffset>0</equippedAngleOffset>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Tentacle_Weapon"/>
+			<li Class="YR_ItemFormChange.CompPropertiesFormChange">
+				<!--<sharedComps>
+				<li>RimWorld.CompQuality</li> 
+				<li>RimWorld.CompArt</li>
+			</sharedComps>-->
+				<transformData>
+					<li>
+						<label>transformed into bow of the evil tree</label>
+						<description>The root of evil tree has been transformed into the form of a bow to protect the host. The arrows are also controlled by tentacles, and the tentacles inhibit the movement of enemies who are hit by them.</description>
+						<thingDef>OY_Tentacle_Bow</thingDef>
+						<transformCooldown>30</transformCooldown>
+						<soundOnTransform>OY_Tentacle_Bow_Sound</soundOnTransform>
+						<!--<moteOnTransform>PsycastSkipFlashEntry</moteOnTransform>-->
+					</li>
+				</transformData>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseWeapon">
+		<defName>OY_Tentacle_Bow</defName>
+		<label>bow of the evil tree</label>
+		<description>The root of evil tree has been transformed into the form of a bow to protect the host. The arrows are also controlled by tentacles, and the tentacles inhibit the movement of enemies who are hit by them.</description>
+		<graphicData>
+			<texPath>BEPRace/Equipment/TentacleWeapon/Tentacle_Bow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.1</uiIconScale>
+		<techLevel>Neolithic</techLevel>
+		<statBases>
+			<MarketValue>0.01</MarketValue>
+			<Mass>2</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.9</AccuracyShort>
+			<AccuracyMedium>0.7</AccuracyMedium>
+			<AccuracyLong>0.3</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleeBlunt</li>
+		</weaponClasses>
+		<equippedAngleOffset>0</equippedAngleOffset>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Tentacle_Weapon"/>
+			<li Class="YR_ItemFormChange.CompPropertiesFormChange">
+				<!--<sharedComps>
+				<li>RimWorld.CompQuality</li> 
+				<li>RimWorld.CompArt</li>
+			</sharedComps>-->
+				<transformData>
+					<li>
+						<label>transformed into dagger of the evil tree</label>
+						<description>The root of the evil tree has been transformed into the form of a dagger to protect the host. Purely pursuing sharpness, and is literally a part of the host's body, It is small enough to be handled by a race of relatively small stature, but sharp enough to be used.</description>
+						<thingDef>OY_Tentacle_Dagger</thingDef>
+						<transformCooldown>200</transformCooldown>
+						<soundOnTransform>OY_Tentacle_Dagger_Sound</soundOnTransform>
+						<!--<moteOnTransform>PsycastSkipFlashEntry</moteOnTransform>-->
+					</li>
+				</transformData>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>OY_Tentacle_Arrow</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>38</range>
+				<soundCast>Interact_BeatFire</soundCast>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>limb</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>OY_Tentacle_Arrow</defName>
+		<label>arrow of the evil tree</label>
+		<graphicData>
+			<texPath>BEPRace/Equipment/TentacleWeapon/Tentacle_Arrow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Arrow</damageDef>
+			<damageAmountBase>6</damageAmountBase>
+			<speed>70</speed>
+			<extraDamages>
+				<li>
+					<def>Stun</def>
+					<amount>3</amount>
+					<chance>0.5</chance>
+				</li>
+			</extraDamages>
+		</projectile>
+	</ThingDef>
+	
+</Defs>

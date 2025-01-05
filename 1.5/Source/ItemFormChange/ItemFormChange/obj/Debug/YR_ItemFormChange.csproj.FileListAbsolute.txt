@@ -1,0 +1,12 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Yuran_RJW_Addon\1.4\Assemblies\YR_ItemFormChange.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Yuran_RJW_Addon\1.4\Assemblies\YR_ItemFormChange.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Yuran_RJW_Addon\1.4\Source\ItemFormChange\ItemFormChange\obj\Debug\YR_ItemFormChange.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Yuran_RJW_Addon\1.4\Source\ItemFormChange\ItemFormChange\obj\Debug\YR_ItemFormChange.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Yuran_RJW_Addon\1.4\Source\ItemFormChange\ItemFormChange\obj\Debug\YR_ItemFormChange.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Yuran_RJW_Addon\1.4\Source\ItemFormChange\ItemFormChange\obj\Debug\YR_ItemFormChange.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\ItemFormChange\ItemFormChange\obj\Debug\YR_ItemFormChange.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\ItemFormChange\ItemFormChange\obj\Debug\YR_ItemFormChange.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Assemblies\YR_ItemFormChange.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Assemblies\YR_ItemFormChange.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\ItemFormChange\ItemFormChange\obj\Debug\YR_ItemFormChange.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\ItemFormChange\ItemFormChange\obj\Debug\YR_ItemFormChange.pdb

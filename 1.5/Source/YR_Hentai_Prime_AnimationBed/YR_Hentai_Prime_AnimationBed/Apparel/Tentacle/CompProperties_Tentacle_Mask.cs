@@ -8,10 +8,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class CompProperties_Tentacle_Mask : CompProperties
     {
-        public CompProperties_Tentacle_Mask()
-        {
-            compClass = typeof(Comp_Tentacle_Mask);
-        }
+        public CompProperties_Tentacle_Mask() => compClass = typeof(Comp_Tentacle_Mask);
 
         public HediffDef hediffDef;
         public HediffDef unequippedHediffDef;

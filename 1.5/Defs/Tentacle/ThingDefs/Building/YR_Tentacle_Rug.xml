@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- <DesignatorDropdownGroupDef> -->
+	<!-- <defName>YR_Tentacle_Rug_DropDown</defName> -->
+	<!-- </DesignatorDropdownGroupDef> -->
+	<ThingDef Name="YR_Tentacle_Rug_Base" Abstract="True">
+		<label>evil tree mucus</label>
+		<description>A mucus that intertwines the soles of the feet as if they were holding a lover's hand.</description>
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<graphicData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<WorkToBuild>650</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>20</Beauty>
+			<Cleanliness>0.5</Cleanliness>
+			<Mass>10</Mass>
+		</statBases>
+		<costList>
+			<Meat_Human>3</Meat_Human>
+		</costList>
+		<rotatable>true</rotatable>
+		<clearBuildingArea>false</clearBuildingArea>
+		<saveCompressible>false</saveCompressible>
+		<tickerType>Rare</tickerType>
+	</ThingDef>
+	<ThingDef ParentName="YR_Tentacle_Rug_Base">
+		<defName>YR_Tentacle_Rug_A</defName>
+		<label>YR_Tentacle_Rug_A</label>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Tentacle/Rug/A</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(3.8,3.8)</drawSize>
+			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+		</graphicData>
+		<size>(3,3)</size>
+		<uiIconScale>0.85</uiIconScale>
+	</ThingDef>
+	<ThingDef ParentName="YR_Tentacle_Rug_Base">
+		<defName>YR_Tentacle_Rug_B</defName>
+		<label>YR_Tentacle_Rug_B</label>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Tentacle/Rug/B</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(4.4,4.4)</drawSize>
+			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+		</graphicData>
+		<size>(4,3)</size>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Spawner_Tentacle">
+				<thingToSpawn>YR_Tentacle_Rug_A</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>1000~1500</spawnIntervalRange>
+				<spawnMaxAdjacent>6</spawnMaxAdjacent>
+				<saveKeysPrefix>rug_a</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+				<neverStackThingDefs>
+					<li>YR_Tentacle_Rug_A</li>
+					<li>YR_Tentacle_Rug_B</li>
+				</neverStackThingDefs>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_Tentacle_Rug_Base">
+		<defName>YR_Tentacle_Rug_C</defName>
+		<label>YR_Tentacle_Rug_C</label>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Tentacle/Rug/A</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(6,6)</drawSize>
+			<onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+		</graphicData>
+		<size>(5,5)</size>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Spawner_Tentacle">
+				<thingToSpawn>YR_Tentacle_Rug_B</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>1000~1500</spawnIntervalRange>
+				<spawnMaxAdjacent>10</spawnMaxAdjacent>
+				<saveKeysPrefix>rug_b</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+				<neverStackThingDefs>
+					<li>YR_Tentacle_Rug_A</li>
+					<li>YR_Tentacle_Rug_B</li>
+					<li>YR_Tentacle_Rug_C</li>
+				</neverStackThingDefs>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
+

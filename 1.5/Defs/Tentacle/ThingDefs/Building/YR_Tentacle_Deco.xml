@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name="YR_Tentacle_Deco_Base" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Standable</passability>
+		<statBases>
+			<MaxHitPoints>140</MaxHitPoints>
+			<WorkToBuild>650</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>20</Beauty>
+			<Cleanliness>0.5</Cleanliness>
+			<Mass>10</Mass>
+		</statBases>
+		<costList>
+			<Meat_Human>3</Meat_Human>
+		</costList>
+		<rotatable>false</rotatable>
+		<clearBuildingArea>false</clearBuildingArea>
+		<saveCompressible>false</saveCompressible>
+		<uiIconScale>2</uiIconScale>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Spawner_Tentacle">
+				<thingToSpawn>YR_Tentacle_Rug_A</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>10000~15000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>rug_a</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+				<spawnSelfPosition>true</spawnSelfPosition>
+				<neverStackThingDefs>
+					<li>YR_Tentacle_Rug_B</li>
+					<li>YR_Tentacle_Rug_C</li>
+				</neverStackThingDefs>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="YR_Tentacle_Deco_Base">
+		<defName>YR_Tentacle_EggDeco</defName>
+		<label>evil tree egg</label>
+		<description>An egg sac that formed by chance from a reaction of mixing semen and vaginal secretion. A form of unfertilized egg, there is continuous mucous discharge of mixed bodily fluids.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6,6)</drawSize>
+			<onGroundRandomRotateAngle>20</onGroundRandomRotateAngle>
+		</graphicData>
+		<size>(1,1)</size>
+	</ThingDef>
+	<ThingDef ParentName="YR_Tentacle_Deco_Base">
+		<defName>YR_Tentacle_Deco</defName>
+		<label>evil tree tentacle</label>
+		<description>A tentacle sprung up to spread the love further. It continues to secrete mucus.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Tentacle/Deco</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+	</ThingDef>
+	<ThingDef ParentName="YR_Tentacle_Deco_Base">
+		<defName>YR_Tentacle_Light</defName>
+		<label>evil tree light</label>
+		<description>A light emitting tentacle with an oculus to behold the lewd brides, moaning in pleasure. It continues to secrete mucus.\n\nIt is said that an act of pure love by nascent couple, too shy to even hold hands lusting after each other after being struck by lewdness is the tentacle's second favorite scene to behold.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Tentacle/Light</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<size>(1,1)</size>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2.9</glowRadius>
+				<glowColor>(78, 226, 229, 0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
+

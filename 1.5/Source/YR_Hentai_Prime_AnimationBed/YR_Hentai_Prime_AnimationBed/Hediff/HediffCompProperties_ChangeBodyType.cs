@@ -6,10 +6,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class HediffCompProperties_ChangeBodyType : HediffCompProperties
     {
-        public HediffCompProperties_ChangeBodyType()
-        {
-            compClass = typeof(HediffCompChangeBodyType);
-        }
+        public HediffCompProperties_ChangeBodyType() => compClass = typeof(HediffCompChangeBodyType);
 
         public string bodyTypePostfix = "";
 

@@ -4,10 +4,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class CompProperties_Tentacle_Weapon : CompProperties
     {
-        public CompProperties_Tentacle_Weapon()
-        {
-            compClass = typeof(Comp_Tentacle_Weapon);
-        }
+        public CompProperties_Tentacle_Weapon() => compClass = typeof(Comp_Tentacle_Weapon);
     }
 
     public class Comp_Tentacle_Weapon : ThingComp

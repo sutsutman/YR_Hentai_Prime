@@ -8,10 +8,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     public class HediffCompProperties_Disciplined : HediffCompProperties
     {
-        public HediffCompProperties_Disciplined()
-        {
-            compClass = typeof(HediffComp_Disciplined);
-        }
+        public HediffCompProperties_Disciplined() => compClass = typeof(HediffComp_Disciplined);
         public int ticks = 600;
         public List<GainTrait> gainTraits;
         public float severity = 0.01f;

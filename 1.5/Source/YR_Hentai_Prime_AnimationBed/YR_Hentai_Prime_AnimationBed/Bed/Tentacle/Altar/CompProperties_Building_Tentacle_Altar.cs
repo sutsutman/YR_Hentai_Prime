@@ -10,10 +10,7 @@ namespace YR_Hentai_Prime_AnimationBed
     public class CompProperties_Building_Tentacle_Altar : CompProperties
     {
         // 생성자에서 해당 컴포넌트 클래스를 지정
-        public CompProperties_Building_Tentacle_Altar()
-        {
-            compClass = typeof(Comp_Building_Tentacle_Altar);
-        }
+        public CompProperties_Building_Tentacle_Altar() => compClass = typeof(Comp_Building_Tentacle_Altar);
 
         // 필요한 시체 수 및 최대 시체 수 설정
         public int needCorpseCount = 2;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<YR_HPF.HPFJobDef>		
+		<defName>Milking_YR_BreastMilk</defName>
+		<driverClass>YR_HPF.JobDriver_GatherPawnResources</driverClass>
+		<isSelf>false</isSelf>
+		<reportString>milking Yuran breast milk from TargetA.</reportString>
+		<totalWork>10</totalWork>
+		<activeSkill>Animals</activeSkill>
+		<activeStat>AnimalGatherSpeed</activeStat>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</YR_HPF.HPFJobDef>
+</Defs>

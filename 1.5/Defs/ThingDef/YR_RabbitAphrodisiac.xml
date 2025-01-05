@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>YR_RabbitAphrodisiac</defName>
+		<label>yuran rabbit aphrodisiac</label>
+		<description>A very powerful aphrodisiac that makes the imbiber a lewd whore who can't think of anything but fucking, with just a drop ingested. It's made to discipline Yuran, but it has a similar effect on other races.\n\nIt also makes Yurans produce more milk.</description>
+		<descriptionHyperlinks>
+			<HediffDef>YR_RabbitAphrodisiacHigh</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Drug/YR_RabbitAphrodisiac</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>18</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>0.7</Flammability>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>YR_RabbitAphrodisiacHigh</hediffDef>
+					<severity>1.0</severity>
+				</li>
+				<li MayRequire="rim.job.world" Class="YR_Hentai_Prime_AnimationBed.IngestionOutcomeDoer_OffsetNeed_Race">
+					<need>Sex</need>
+					<offset>-0.15</offset>
+					<raceOnly>
+						<race>
+							<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+						</race>
+						<offset>-0.3</offset>
+					</raceOnly>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<MedicineHerbal>1</MedicineHerbal>
+			<PsychoidLeaves>2</PsychoidLeaves>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
+	<HediffDef>
+		<defName>YR_RabbitAphrodisiacHigh</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>YR_RabbitAphrodisiac</label>
+		<description>Became a lewd female who could only think of a cock.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<!--<li MayRequire="RooAndGloomy.YuranRaceMod" Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Changehead">
+				<headPostfix>_Horny</headPostfix>
+				<race>Yuran_Race</race>
+				<unPreferencePostfixs>
+					<li>_Pregnant</li>
+					<li>_Shame</li>
+				</unPreferencePostfixs>
+				<dontRemoveHeadPostfixHediffDefs>
+					<li>YR_MilkingMachineAddon_Hediff</li>
+				</dontRemoveHeadPostfixHediffDefs>
+			</li>-->
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.5</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_ChangeBodyType">
+				<bodyTypePostfix>_YR_BB</bodyTypePostfix>
+				<races>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+					<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko_BlackSnake</li>
+				</races>
+				<preferencePostfixs>
+					<li>_YR_Bote</li>
+				</preferencePostfixs>
+				<ticks>600</ticks>
+				<compSetting>
+					<compPostPostAdd>
+						<activeComp>true</activeComp>
+						<addHediffDefs>
+							<li>YR_Milking_Hediff</li>
+						</addHediffDefs>
+					</compPostPostAdd>
+					<compPostTick>
+						<activeComp>false</activeComp>
+					</compPostTick>
+					<compPostPostRemoved>
+						<activeComp>true</activeComp>
+						<addHediffDefs>
+							<li>YR_Milking_Hediff</li>
+						</addHediffDefs>
+					</compPostPostRemoved>
+				</compSetting>
+			</li>
+			<li MayRequire="rim.job.world" Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Need">
+				<need>Sex</need>
+				<offset>-0.005</offset>
+				<ticks>1200</ticks>
+				<raceOnly>
+					<race>
+						<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+					</race>
+					<offset>-0.01</offset>
+				</raceOnly>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

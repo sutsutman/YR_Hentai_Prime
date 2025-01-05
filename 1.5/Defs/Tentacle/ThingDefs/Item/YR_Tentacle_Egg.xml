@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ResourceBase">
+		<defName>YR_Tentacle_Egg</defName>
+		<label>the seed of the evil tree</label>
+		<description>This is a seed that contains a lot of immature evil tree tentacles. Seeds can be transplanted into a woman's uterus. When the transplanted seeds germinates, the tentacles begin to erode the body, starting with the uterus: the process is irreversible if allowed to complete.\n\nThe tentacles inside the seeds are so soft that they are easy to cook and delicious. It is also used as a ingredient to create dangerously potent drugs.</description>
+		<graphicData>
+			<texPath>Yuran/Things/Item/Resource/YR_Tentacle_Egg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.88</drawSize>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<MarketValue>3</MarketValue>
+			<Mass>0.075</Mass>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>8</DeteriorationRate>
+			<!--<Nutrition>0.1</Nutrition>-->
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<!--
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <foodType>Processed</foodType>
+      <joy>0.10</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>4</maxNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>-->
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<possessionCount>10</possessionCount>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Use {0_label}</useLabel>
+				<useDuration>600</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>YR_Hentai_Prime_AnimationBed.CompEffectSpawnTentacleGirl</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf" />
+		</comps>
+	</ThingDef>
+</Defs>

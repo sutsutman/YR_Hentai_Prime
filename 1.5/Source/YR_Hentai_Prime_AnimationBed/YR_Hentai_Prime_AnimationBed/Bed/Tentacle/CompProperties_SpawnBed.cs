@@ -8,10 +8,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public ThingDef bedDef;
 
-        public CompProperties_SpawnBed()
-        {
-            compClass = typeof(CompSpawnBed);
-        }
+        public CompProperties_SpawnBed() => compClass = typeof(CompSpawnBed);
     }
 
     public class CompSpawnBed : ThingComp

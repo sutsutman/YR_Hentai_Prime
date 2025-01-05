@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <ThinkTreeDef>
+    <defName>YR_TentacleGirl_Main</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+
+		<li Class="JobGiver_RescueNearby">
+		  <radius>30</radius>
+		</li>
+		
+
+		<li Class="ThinkNode_Tagger">
+			<tagToGive>Misc</tagToGive>
+			<subNodes>
+				<li Class="JobGiver_Haul" />
+			</subNodes>
+		</li>
+
+        <li Class="ThinkNode_Tagger">
+          <tagToGive>Idle</tagToGive>
+          <subNodes>
+            <li Class="JobGiver_WanderAnywhere">
+              <maxDanger>Deadly</maxDanger>
+            </li>
+          </subNodes>
+        </li>		
+		
+		<li Class="ThinkNode_Subtree">
+          <treeDef>SatisfyBasicNeeds</treeDef>
+        </li>	
+
+        <li Class="JobGiver_IdleError"/>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  
+  	<ThinkTreeDef>
+		<defName>YR_TentacleGirl_Constant</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+					<subNodes>
+            <!-- Lord directives -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+			</subNodes>
+				
+				</li>
+
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+  
+  <ThinkTreeDef>
+    <defName>YR_TentacleGirl_Exit</defName>
+    <thinkRoot Class="ThinkNode_Tagger">
+      <tagToGive>InMentalState</tagToGive>
+      <subNodes>
+        <!-- Give up and leave -->
+        <li Class="ThinkNode_ConditionalMentalState">
+          <state>YR_TentacleGirl_Exit</state>
+          <subNodes>
+            <li Class="JobGiver_ExitMapRandom">
+              <defaultLocomotion>Sprint</defaultLocomotion>
+            </li>
+            <li Class="JobGiver_WanderAnywhere">
+              <maxDanger>Deadly</maxDanger>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

@@ -36,17 +36,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private int heldPawnStartTick = -1;
 
-        private const float ChainsUntetheredYOffset = 0.05f;
-
-        private const float ChainsTetheredYOffset = 9f / 65f;
-
-        private const float LurchMTBTicks = 100f;
-
-        private const float DamageMTBDays = 2f;
-
-        private static readonly FloatRange Damage = new FloatRange(1f, 3f);
-
-        private Dictionary<AttachPointType, Vector3> platformPoints;
 
         public float HeldPawnDrawPos_Y => DrawPos.y + 1f / 26f;
 
@@ -146,7 +135,6 @@ namespace YR_Hentai_Prime_AnimationBed
         public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
             EjectContents();
-            platformPoints = null;
             base.DeSpawn(mode);
         }
 

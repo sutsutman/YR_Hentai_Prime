@@ -5,10 +5,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class HediffCompProperties_Pregnant_Tentacle_Birth : HediffCompProperties
     {
-        public HediffCompProperties_Pregnant_Tentacle_Birth()
-        {
-            compClass = typeof(HediffComp_Pregnant_Tentacle_Birth);
-        }
+        public HediffCompProperties_Pregnant_Tentacle_Birth() => compClass = typeof(HediffComp_Pregnant_Tentacle_Birth);
 
         public ThingDef thingDef;
         public int spawnCount = 1;

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ApparelNoQualityBase">
+		<defName>YR_AP_EggVibrator</defName>
+		<label>Yuran egg vibrator</label>
+		<!--원격으로 가동 가능한 에그 바이브레이터 입니다. 진동 때문에 움직이기가 힘들어 집니다. 원격으로 순간 출력을 높여 움직이지 못하게 할 수 있습니다.-->
+		<description>An egg vibrator that can be operated remotely. The vibration makes it difficult to move. Remotely and instantaneously increase the output, which can interfere with the wearer's movement.</description>
+		<graphicData>
+			<texPath>Yuran/Yuranlike/Apparel/Belt/YR_AP_EggVibrator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<Mass>3</Mass>
+			<WorkToMake>5000</WorkToMake>
+			<Flammability>0.4</Flammability>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<!--<thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>-->
+		<costList>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			<Plasteel>10</Plasteel>
+		</costList>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<thingCategories>
+			<li>ApparelUtility</li>
+		</thingCategories>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.05</SlaveSuppressionOffset>
+			<MoveSpeed>-0.05</MoveSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<ignoredByNonViolent>true</ignoredByNonViolent>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+		<comps>
+			<!--<li MayRequire="RooAndGloomy.YuranRaceMod" Class="YR_Hentai_Prime_AnimationBed.CompProperties_ChangeHead_Apparel">
+				<headPostfix>_Shame</headPostfix>
+				<race>Yuran_Race</race>
+				<preferencePostfixs>
+					<li>_Horny</li>
+				</preferencePostfixs>
+				<unPreferencePostfixs>
+					<li>_Pregnant</li>
+				</unPreferencePostfixs>
+			</li>-->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_EggVibrator">
+				<hediffDefs>
+					<li>YR_EggVibrator_Hediff</li>
+				</hediffDefs>
+				<commandHediffDefs>
+					<li>YR_VaginalLubricationFireExtinguisher_Hediff</li>
+				</commandHediffDefs>
+				<ticks>1000</ticks>
+				<rand>30</rand>
+				<cooldownTicks>1800</cooldownTicks>
+				<filthDef>YR_Filth_VaginalLubricationDef</filthDef>
+				<filthNum>1</filthNum>
+			</li>
+			<li Class="CompProperties_Usable">
+				<compClass>YR_Hentai_Prime_AnimationBed.CompUsable_NonCompFloatMenuOptions</compClass>
+				<useJob>UseItem</useJob>
+				<useLabel>Insert egg vibrator</useLabel>
+				<useDuration>600</useDuration>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>YR_Hentai_Prime_AnimationBed.CompUseEffect_EggVibrator</compClass>
+				<!--<sound>aa</sound>-->
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>YR_Hentai_Prime_AnimationBed.Verb_EggVibrator</verbClass>
+				<label>switch on</label>
+				<violent>false</violent>
+				<hasStandardCommand>true</hasStandardCommand>
+				<targetable>false</targetable>
+				<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+				<onlyManualCast>True</onlyManualCast>
+			</li>
+		</verbs>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
+	</ThingDef>
+	<RecipeDef>
+		<defName>YR_InsertEggVibrator</defName>
+		<label>insert egg vibrator</label>
+		<description>Insert a egg vibrator.</description>
+		<workerClass>Recipe_AdministerUsableItem</workerClass>
+		<jobString>Inserting egg vibrator.</jobString>
+		<targetsBodyPart>false</targetsBodyPart>
+		<anesthetize>false</anesthetize>
+		<workAmount>600</workAmount>
+		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>YR_AP_EggVibrator</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>YR_AP_EggVibrator</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<!--애액-->
+	<ThingDef ParentName="BaseFilth">
+		<defName>YR_Filth_VaginalLubricationDef</defName>
+		<label>Vaginal lubrication</label>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>-1</Cleanliness>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/Spatter</texPath>
+			<color>(255, 255, 255, 100)</color>
+		</graphicData>
+		<filth>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>20</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+		</filth>
+	</ThingDef>
+</Defs>
