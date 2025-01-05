@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawnKnockback", "PawnKnockback.csproj", "{C2B07841-995A-4034-9C9E-90A4F367A8B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2B07841-995A-4034-9C9E-90A4F367A8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B07841-995A-4034-9C9E-90A4F367A8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B07841-995A-4034-9C9E-90A4F367A8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B07841-995A-4034-9C9E-90A4F367A8B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

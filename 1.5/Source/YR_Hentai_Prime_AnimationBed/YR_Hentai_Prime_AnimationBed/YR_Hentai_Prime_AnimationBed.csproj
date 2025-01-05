@@ -78,7 +78,6 @@
     <Compile Include="Apparel\EggVibrator\CompUseEffect_EggVibrator.cs" />
     <Compile Include="Apparel\EggVibrator\HediffCompProperties_EggVibrator.cs" />
     <Compile Include="Apparel\EggVibrator\HediffCompProperties_EggVibrator_Maker.cs" />
-    <Compile Include="Apparel\EggVibrator\IFCHarmony.cs" />
     <Compile Include="Apparel\EggVibrator\Verb_EggVibrator.cs" />
     <Compile Include="Apparel\Golem\CompProperties_Golem_Apparel.cs" />
     <Compile Include="Apparel\Golem\Comp_Golem_Apparel.cs" />
@@ -88,6 +87,7 @@
     <Compile Include="Apparel\Tentacle\CompProperties_Tentacle_Weapon.cs" />
     <Compile Include="Apparel\Tentacle\Comp_ChangeApparelTextureByCondition.cs" />
     <Compile Include="Apparel\Tentacle\ConvenientTool.cs" />
+    <Compile Include="Apparel\Tentacle\Harmony_PawnGraphicSet.cs" />
     <Compile Include="Apparel\Tentacle\HediffCompProperties_Pregnant_Tentacle_Birth.cs" />
     <Compile Include="Apparel\Tentacle\HediffCompProperties_Tentalce.cs" />
     <Compile Include="Apparel\Tentacle\Hediff_Pregnant_Tentacle.cs" />

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<EffecterDef>
+		<defName>YR_BlastMechBandShockwave</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>YR_Fleck_BlastMechBandShockwave</fleckDef>
+				<burstCount>1</burstCount>
+				<spawnLocType>OnSource</spawnLocType>
+				<absoluteAngle>true</absoluteAngle>
+				<rotation>0~0</rotation>
+			</li>
+			<!-- <li> -->
+			<!-- <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass> -->
+			<!-- <fleckDef>Fleck_BlastMechBandRedLine</fleckDef> -->
+			<!-- <burstCount>1</burstCount> -->
+			<!-- <spawnLocType>OnSource</spawnLocType> -->
+			<!-- <absoluteAngle>true</absoluteAngle> -->
+			<!-- <rotation>0~0</rotation> -->
+			<!-- </li> -->
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>YR_Fleck_BlastMechBandRedLine</fleckDef>
+				<burstCount>1</burstCount>
+				<spawnLocType>OnSource</spawnLocType>
+				<absoluteAngle>true</absoluteAngle>
+				<rotation>0~0</rotation>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<moteDef>Mote_RedFlashStrong</moteDef>
+				<burstCount>1</burstCount>
+				<spawnLocType>OnSource</spawnLocType>
+				<scale>24</scale>
+			</li>
+		</children>
+	</EffecterDef>
+	<FleckDef ParentName="FleckBase">
+		<defName>YR_Fleck_BlastMechBandShockwave</defName>
+		<altitudeLayer>MoteOverheadLow</altitudeLayer>
+		<fadeInTime>0.04</fadeInTime>
+		<fadeOutTime>0.1</fadeOutTime>
+		<solidTime>0.8</solidTime>
+		<growthRate>1.5</growthRate>
+		<drawOffscreen>true</drawOffscreen>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<texPath>Things/Mote/Black</texPath>
+			<shaderType>MoteLargeDistortionWave</shaderType>
+			<shaderParameters>
+				<_DistortionTex>/Things/Mote/PsycastDistortionMask</_DistortionTex>
+				<_NoiseTex>/Things/Mote/SmokeTiled</_NoiseTex>
+				<_distortionIntensity>0.066</_distortionIntensity>
+				<_brightnessMultiplier>1.15</_brightnessMultiplier>
+			</shaderParameters>
+			<drawSize>21</drawSize>
+		</graphicData>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>YR_Fleck_BlastMechBandRedLine</defName>
+		<altitudeLayer>LightingOverlay</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<fadeOutTime>0.28</fadeOutTime>
+		<solidTime>1.7</solidTime>
+		<growthRate>11</growthRate>
+		<drawOffscreen>true</drawOffscreen>
+		<graphicData>
+			<texPath>Things/Mote/YR_RedLineGlow</texPath>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<shaderType>MoteMultiplyAddCircular</shaderType>
+			<shaderParameters>
+				<_DistortionTex>/Things/Mote/RadiationDistortion_A</_DistortionTex>
+				<_texAScale>0.5</_texAScale>
+				<_texBScale>2</_texBScale>
+				<_texAScrollSpeed>0</_texAScrollSpeed>
+				<_texBScrollSpeed>-0.4</_texBScrollSpeed>
+				<_Intensity>0.5</_Intensity>
+				<_InnerFadeAmount>0</_InnerFadeAmount>
+				<_DistortionIntensity>0.5</_DistortionIntensity>
+				<_TexAScaleDivisorPerProgress>1.5</_TexAScaleDivisorPerProgress>
+			</shaderParameters>
+			<drawSize>(6, 6)</drawSize>
+		</graphicData>
+	</FleckDef>
+	<!-- <ThingDef ParentName="MoteBase"> -->
+	<!-- <defName>Mote_RedFlashStrong</defName> -->
+	<!-- <thingClass>MoteAttached</thingClass> -->
+	<!-- <altitudeLayer>MoteOverhead</altitudeLayer> -->
+	<!-- <mote> -->
+	<!-- <fadeInTime>0.1</fadeInTime> -->
+	<!-- <fadeOutTime>0.13</fadeOutTime> -->
+	<!-- <solidTime>0.1</solidTime> -->
+	<!-- </mote> -->
+	<!-- <graphicData> -->
+	<!-- <texPath>Things/Mote/BrightFlash</texPath> -->
+	<!-- <shaderType>MoteGlow</shaderType> -->
+	<!-- <color>(1, 0.34, 0.2, 0.75)</color> -->
+	<!-- </graphicData> -->
+	<!-- </ThingDef> -->
+</Defs>

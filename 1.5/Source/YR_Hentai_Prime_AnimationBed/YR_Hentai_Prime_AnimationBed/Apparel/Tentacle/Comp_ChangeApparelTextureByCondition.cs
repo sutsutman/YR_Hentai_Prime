@@ -100,11 +100,6 @@ namespace YR_Hentai_Prime_AnimationBed
                     CheckPawnAndCompPawnCondition();
                     ticks = 10;
                 }
-                if (changeTexture)
-                {
-                    Wearer.Drawer.renderer.SetAllGraphicsDirty();
-                    changeTexture = false;
-                }
             }
         }
 
@@ -188,10 +183,6 @@ namespace YR_Hentai_Prime_AnimationBed
                     Graphic graphic = GraphicDatabase.Get<Graphic_Multi>(path, shader, apparel.def.graphicData.drawSize, apparel.DrawColor);
                     rec = new ApparelGraphicRecord(graphic, apparel);
 
-                    if (needBreak)
-                    {
-                        break;
-                    }
                     return true;
                 }
             }

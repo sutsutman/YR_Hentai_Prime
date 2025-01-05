@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="YR_AnimationBedBase">
+		<defName>YR_Building_Tentacle</defName>
+		<label>evil tree(bed)</label>
+		<description>This is a pile of tentacles united by the evil tree that for rape the offered woman. The woman lying on this pile of tentacles is raped by a tree, and eggs are planted in the uterus. When the planted eggs wake up and completely root in the woman's body, the tentacles pile will release their own sexual slavery - the "abyss bride."</description>		
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Tentacle/Bed/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<uiOrder>100</uiOrder>
+		<!-- 임시로 넣은거 -->
+		<statBases>
+			<JoyGainFactor>1</JoyGainFactor>
+		</statBases>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
+				<!-- 묶였을 때 부여되는 헤디프 -->
+				<addedHediffDefs>
+					<li>YR_MilkingMachine_DisableNeed</li>
+				</addedHediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
+				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+				<hediffDefs>
+					<li>YR_PowerMode1_Hediff</li>
+					<li>YR_PowerMode2_Hediff</li>
+				</hediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AddHediffAfterSomeTick">
+				<!-- 일정 시간 후 부여되는 헤디프 -->
+				<ticks>10000</ticks>
+				<hediffDefs>
+					<li>YR_Tentacle_Hediff</li>
+				</hediffDefs>
+				<ejectContents>true</ejectContents>
+				<showMessage>true</showMessage>
+				<messageDesc>Message_Comp_AddHediffAfterSomeTick</messageDesc>
+				<compInspectStringExtra>CompInspectStringExtra_Comp_AddHediffAfterSomeTick</compInspectStringExtra>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
+				<pawnAnimationSetting>
+					<pawnAnimationDef>YR_Global_Animation_Sound</pawnAnimationDef>
+					<!-- 기본 애니메이션 -->
+					<conditonPawnAnimations>
+						<!-- 바디 텍스처 바꾸고 싶으면 기존 바디 레이어를 숨긴 애니메이션 사용 해야 함 -->
+						<li>
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
+										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
+										<!-- B.E.P Race -->
+										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+										<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+										<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+										<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+										<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+										<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+										<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+										<!-- Maru -->
+										<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+										<!-- Dragonian -->
+										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
+										<!-- 앤티 -->
+										<li MayRequir="Roo.AntyRaceMod">Anty</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<pawnAnimationDef>YR_Global_Animation_Sound</pawnAnimationDef>
+						</li>
+					</conditonPawnAnimations>
+					<offset>(0,1,0.25)</offset>
+					<conditonPawnOffsets>
+						<!-- B.E.P Race -->
+						<li>
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+										<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+										<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+										<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+										<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+										<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+										<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+										<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.235)</offset>
+						</li>
+						<!-- Maru -->
+						<li>
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li MayRequire="VAMV.MaruRaceMod">Maru</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.075)</offset>
+						</li>
+						<!-- Dragonian -->
+						<li>
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.192)</offset>
+						</li>
+						<li MayRequire="Roo.AntyRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Anty</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.1)</offset>
+						</li>
+						<li MayRequire="RooAndGloomy.YuranRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Yuran_Race</li>
+										<li>Yuran_Race_Miko</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,0,0.15)</offset>
+						</li>
+						<li MayRequire="SutSutMan.HakuyuRaceMod">
+							<pawnCondition>
+								<heldPawnCondition>
+									<races>
+										<li>Hakuyu_Race</li>
+									</races>
+								</heldPawnCondition>
+							</pawnCondition>
+							<offset>(0,1,0.2)</offset>
+						</li>
+					</conditonPawnOffsets>
+				</pawnAnimationSetting>
+				<bedAnimationList>
+					<!-- 폰의 바디, 헤드 -->
+					<!-- 침대의 애니메이션 -->
+					<!-- 눈가리개 -->
+					<li>
+						<bedAnimationDef>YR_Tentacle_Blindfold</bedAnimationDef>
+					</li>
+					<!-- 마스크 -->
+					<li>
+						<bedAnimationDef>YR_Tentacle_Mask</bedAnimationDef>
+					</li>
+					<!-- 목 -->
+					<li>
+						<bedAnimationDef>YR_Tentacle_Neck</bedAnimationDef>
+					</li>
+					<!-- 앞부분 -->
+					<li>
+						<bedAnimationDef>YR_Tentacle_Front</bedAnimationDef>
+					</li>
+					<!-- 알 -->
+					<li>
+						<bedAnimationDef>YR_Tentacle_Egg_LeftLower</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Tentacle_Egg_LeftUpper</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Tentacle_Egg_Middle</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Tentacle_Egg_RightLower</bedAnimationDef>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Tentacle_Egg_RightUpper</bedAnimationDef>
+					</li>
+				</bedAnimationList>
+			</li>
+	
+		</comps>
+	</ThingDef>
+</Defs>

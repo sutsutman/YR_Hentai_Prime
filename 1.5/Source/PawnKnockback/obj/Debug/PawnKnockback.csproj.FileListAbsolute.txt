@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Assemblies\PawnKnockback.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Assemblies\PawnKnockback.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\PawnKnockback_Maru\obj\Debug\PawnKnockback.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\PawnKnockback_Maru\obj\Debug\PawnKnockback.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\PawnKnockback_Maru\obj\Debug\PawnKnockback.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\YR_Hentai_Prime\1.5\Source\PawnKnockback_Maru\obj\Debug\PawnKnockback.pdb

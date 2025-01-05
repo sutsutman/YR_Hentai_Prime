@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>YR_Building_Tentacle_Altar</defName>
+		<label>altar of the evil tree</label>
+		<description>An altar to bring the tree of the abyss - evil tree into the real world. If continue to offer fresh corpses, the tree begins to spread its roots in the abyss toward the nutrition dedicated to the altar. And when the roots touch the real world, they break down the altar and grow trees in it.</description>
+		<designationCategory>YR_RJW_Furniture</designationCategory>
+		<thingClass>YR_Hentai_Prime_AnimationBed.Building_Tentacle_Altar</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<size>(3,4)</size>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<WorkToBuild>16000</WorkToBuild>
+			<Beauty>30</Beauty>
+			<MeditationFocusStrength>0.18</MeditationFocusStrength>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>200</costStuffCount>
+		<costList>
+			<Meat_Human>200</Meat_Human>
+		</costList>
+		<uiIconScale>1.5</uiIconScale>
+		<uiIconOffset>(0, 0.02)</uiIconOffset>
+		<uiOrder>100</uiOrder>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Yuran/Things/Building/Furniture/Tentacle/Altar/Texture</texPath>
+			<drawSize>(3,3)</drawSize>
+			<drawOffset>(0,0,-0.5)</drawOffset>
+			<shadowData>
+				<volume>(2.2, 1, 2.2)</volume>
+				<offset>(0, 0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.1,0.1,2.9,2.9)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef/>
+		<thingCategories Inherit="false"/>
+		<!--건물-->
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<preventDeteriorationInside>true</preventDeteriorationInside>
+			<haulToContainerDuration>1</haulToContainerDuration>
+			<fixedStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>CorpsesHumanlike</li>
+					</categories>
+					<specialFiltersToDisallow>
+						<li>AllowRotten</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<filter>
+					<categories>
+						<li>CorpsesHumanlike</li>
+					</categories>
+					<specialFiltersToAllow>
+						<li MayRequire="Ludeon.RimWorld.Ideology">AllowCorpsesSlave</li>
+						<li>AllowCorpsesStranger</li>
+					</specialFiltersToAllow>
+					<specialFiltersToDisallow>
+						<li>AllowCorpsesColonist</li>
+						<li>AllowRotten</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+				</focusTypes>
+			</li>
+			<!-- <li Class="CompProperties_AssignableToPawn"> -->
+			<!-- <drawAssignmentOverlay>false</drawAssignmentOverlay> -->
+			<!-- <compClass>CompAssignableToPawn_Grave</compClass> -->
+			<!-- </li> -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Building_Tentacle_Altar">
+				<needCorpseCount>20</needCorpseCount>
+				<maxCorpseCount>20</maxCorpseCount>
+				<thingDef>Building_Tentacle_Tree</thingDef>
+				<needCorpseString>YR_NeedCorpse_Tentacle_Altar</needCorpseString>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

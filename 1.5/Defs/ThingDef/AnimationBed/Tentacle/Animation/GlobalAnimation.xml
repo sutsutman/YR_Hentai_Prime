@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 침대 애니메이션 -->
+	<!-- 눈가리개 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Blindfold</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<offset>(0.0,0.9,0.1)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Blindfold/Blindfold</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 마스크 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Mask</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Head</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<offset>(0.0,0.9,0.1)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Mask/Mask</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>	
+	<!-- 목 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Neck</defName>
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+		<animationSynchro>true</animationSynchro>
+		<offset>(0.0,0.9,0.0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Neck/Neck</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 딜도 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Front</defName>
+		<!-- 이거의 durationTicks은 comp에서 자동으로 조정 -->
+		<autoDurationTicksSetting>true</autoDurationTicksSetting>
+		<offset>(0,1,-0.025)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Front/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Front/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Front/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Front/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>40</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Front/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>55</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Front/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

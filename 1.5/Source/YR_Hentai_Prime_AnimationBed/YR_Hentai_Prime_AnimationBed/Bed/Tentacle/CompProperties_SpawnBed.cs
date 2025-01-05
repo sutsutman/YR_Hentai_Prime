@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
@@ -17,31 +18,59 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public CompProperties_SpawnBed Props => (CompProperties_SpawnBed)props;
 
+        public bool spawn = true;
         public override void PostExposeData()
         {
             Scribe_References.Look(ref bed, "bed");
+            Scribe_Values.Look(ref spawn, "spawn");
         }
 
-        public override void PostSpawnSetup(bool respawningAfterLoad)
+        public override void CompTick()
         {
-            base.PostSpawnSetup(respawningAfterLoad);
-            CheckBed();
+            base.CompTick();
+
+            if(spawn)
+            {
+                spawn = false;
+                CheckBed();
+            }
         }
 
         public void CheckBed()
         {
-            if (Props.bedDef != null && (bed == null || bed.Destroyed))
+            if (Props.bedDef == null)
+            {
+                Log.Error("CompSpawnBed: bedDef is null in CompProperties_SpawnBed.");
+                return;
+            }
+
+            if (parent?.Map == null)
+            {
+                Log.Error("CompSpawnBed: parent or parent.Map is null.");
+                return;
+            }
+
+            if (bed == null || bed.Destroyed)
             {
                 bed = FindBed();
                 if (bed == null)
                 {
-                    bed = GenSpawn.Spawn(Props.bedDef, parent.Position, parent.Map) as Building_AnimationBed;
-                    bed.SetFaction(Faction.OfPlayer, null);
-                    bed.Rotation = Rot4.South;
-                    CompRespawnBed compRespawnBed = bed.TryGetComp<CompRespawnBed>();
-                    if (compRespawnBed != null)
+                    var pos = parent.Position;
+                    pos.z--;
+                    bed = GenSpawn.Spawn(Props.bedDef, pos, parent.Map) as Building_AnimationBed;
+                    if (bed != null)
                     {
-                        compRespawnBed.parentTree = (Building_Tentacle_Altar)parent;
+                        bed.SetFaction(Faction.OfPlayer, null);
+
+                        CompRespawnBed compRespawnBed = bed.TryGetComp<CompRespawnBed>();
+                        if (compRespawnBed != null)
+                        {
+                            compRespawnBed.parentTree = parent as Building_Tentacle_Altar;
+                        }
+                    }
+                    else
+                    {
+                        Log.Error("CompSpawnBed: Failed to spawn bed.");
                     }
                 }
                 else
@@ -49,22 +78,33 @@ namespace YR_Hentai_Prime_AnimationBed
                     CompRespawnBed compRespawnBed = bed.TryGetComp<CompRespawnBed>();
                     if (compRespawnBed != null)
                     {
-                        compRespawnBed.parentTree = (Building_Tentacle_Altar)parent;
+                        compRespawnBed.parentTree = parent as Building_Tentacle_Altar;
                     }
                 }
             }
         }
 
+
         public override void PostDeSpawn(Map map)
         {
+            base.PostDeSpawn(map);
+
             if (bed != null && !bed.Destroyed)
             {
                 bed.Destroy();
+                bed = null;
             }
         }
 
+
         private Building_AnimationBed FindBed()
         {
+            if (parent == null || parent.Map == null)
+            {
+                Log.Error("CompSpawnBed: parent or parent.Map is null in FindBed.");
+                return null;
+            }
+
             List<Thing> things = parent.Map.thingGrid.ThingsListAt(parent.Position);
             foreach (Thing thing in things)
             {
@@ -75,5 +115,6 @@ namespace YR_Hentai_Prime_AnimationBed
             }
             return null;
         }
+
     }
 }

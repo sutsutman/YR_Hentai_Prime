@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 알 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Egg_LeftLower</defName>
+		<autoDurationTicksSetting>false</autoDurationTicksSetting>
+		<offset>(0,1.5,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftLower/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>3</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftLower/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>6</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftLower/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>13</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftLower/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>19</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftLower/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>28</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftLower/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>31</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftLower/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 알2 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Egg_LeftUpper</defName>
+		<autoDurationTicksSetting>false</autoDurationTicksSetting>
+		<offset>(0,1.5,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftUpper/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftUpper/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftUpper/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftUpper/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftUpper/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftUpper/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/LeftUpper/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 알3 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Egg_Middle</defName>
+		<autoDurationTicksSetting>false</autoDurationTicksSetting>
+		<offset>(0.0,1.5,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.5, 1.5)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.55, 1.55)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>8</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.6, 1.6)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>12</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.65, 1.65)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>16</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.7, 1.7)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.75, 1.75)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>24</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.7, 1.7)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>			
+			<li>
+				<tick>28</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.65, 1.65)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>			
+			<li>
+				<tick>32</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.6, 1.6)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>			
+			<li>
+				<tick>36</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/Middle/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.55, 1.55)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 알4 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Egg_RightLower</defName>
+		<autoDurationTicksSetting>false</autoDurationTicksSetting>
+		<offset>(0,1,-0.025)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightLower/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>4</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightLower/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>6</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightLower/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>7</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightLower/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>9</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightLower/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>11</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightLower/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>15</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightLower/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 알5 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Tentacle_Egg_RightUpper</defName>
+		<autoDurationTicksSetting>false</autoDurationTicksSetting>
+		<offset>(0,1.5,0)</offset>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightUpper/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>5</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightUpper/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>10</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightUpper/3</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>15</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightUpper/4</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>20</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightUpper/5</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>25</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightUpper/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+			<li>
+				<tick>30</tick>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Tentacle/Egg/RightUpper/6</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2.25, 2.25)</drawSize>
+					<shaderType>Transparent</shaderType>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

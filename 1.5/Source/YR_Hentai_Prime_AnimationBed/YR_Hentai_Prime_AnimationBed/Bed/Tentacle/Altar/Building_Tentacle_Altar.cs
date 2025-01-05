@@ -16,24 +16,10 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
         // 이 건물의 특별한 컴포넌트를 가져오는 속성
-        private Comp_Building_Tentacle_Altar Comp_Building_Tentacle_Altar => GetComp<Comp_Building_Tentacle_Altar>();
+        private Comp_Building_Tentacle_Altar Comp_Building_Tentacle_Altar => this.TryGetComp<Comp_Building_Tentacle_Altar>();
 
         // 연료 관련 컴포넌트
-        public CompRefuelable refuelableComp;
-
-        // 건물이 생성될 때 호출되는 메서드
-        public override void PostMake()
-        {
-            base.PostMake();
-            refuelableComp = GetComp<CompRefuelable>();
-        }
-
-        // 건물이 맵에 배치될 때 호출되는 메서드
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-            refuelableComp = GetComp<CompRefuelable>();
-        }
+        public CompRefuelable RefuelableComp => this.TryGetComp<CompRefuelable>();
 
         // 시체가 건물로 옮겨졌을 때 호출되는 메서드
         public override void Notify_HauledTo(Pawn hauler, Thing thing, int count)
@@ -58,21 +44,41 @@ namespace YR_Hentai_Prime_AnimationBed
             if (Comp_Building_Tentacle_Altar != null)
             {
                 CompProperties_Building_Tentacle_Altar Props = Comp_Building_Tentacle_Altar.Props;
-                if (offeredCorpse >= Props.needCorpseCount)
-                {
-                    if (Props.thingDef != null)
-                    {
-                        IntVec3 position = Position;
-                        Map map = Map;
 
-                        Destroy();
-                        Thing makedThing = ThingMaker.MakeThing(Props.thingDef);
-                        makedThing.SetFaction(Faction.OfPlayer);
-                        GenSpawn.Spawn(makedThing, position, map);
+                if (Props != null && Props.thingDef != null)
+                {
+                    if (offeredCorpse >= Props.needCorpseCount)
+                    {
+                        if (Map != null && Position != null)
+                        {
+                            IntVec3 position = Position;
+                            Map map = Map;
+
+                            if(position==null)
+                            {
+                                Log.Error("position is null");
+                            }
+                            if (map == null)
+                            {
+                                Log.Error("map is null");
+                            }
+                            Destroy();
+                            var thing = GenSpawn.Spawn(Props.thingDef, position, map);
+                            thing.SetFaction(Faction.OfPlayer);
+                        }
+                        else
+                        {
+                            Log.Error("Building_Tentacle_Altar: Map or Position is null.");
+                        }
                     }
+                }
+                else
+                {
+                    Log.Error("Building_Tentacle_Altar: Props or thingDef is null.");
                 }
             }
         }
+
 
         // 건물이 특정 아이템을 수락할 수 있는지 여부를 확인하는 메서드
         public override bool Accepts(Thing thing)

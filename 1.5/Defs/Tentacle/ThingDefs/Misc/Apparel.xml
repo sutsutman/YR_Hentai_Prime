@@ -247,6 +247,15 @@
 						</condition>
 						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Texture_Mincho_Body_Large_PinkFallInLove_Humanlike_YR_Bote</texturePath>
 					</li>
+					<!-- 백웅 -->
+					<li MayRequire="SutSutMan.HakuyuRaceMod">
+						<condition>
+							<races>
+								<li>Hakuyu_Race</li>
+							</races>
+						</condition>
+						<texturePath>Yuran/Yuranlike/Apparel/Bote/YR_AP_Tentacle/Hakuyu/Texture_Thin</texturePath>
+					</li>
 				</changeApparelTextureByConditions>
 			</li>
 		</comps>
