@@ -12,7 +12,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public ThingDef thingDef;
         public int spawnCount = 1;
-        public EroVoiceDef femaleEroVoice;
+        public SoundSettingDef femaleEroVoice;
         public int ticks = 6000;
     }
 

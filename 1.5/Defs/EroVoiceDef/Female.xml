@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<YR_Hentai_Prime_AnimationBed.EroVoiceDef>
+	<YR_Hentai_Prime_AnimationBed.SoundSettingDef>
 		<defName>OohSound</defName>
 		<soundDefs>
 			<li>OohSound_1</li>
@@ -12,8 +12,110 @@
 			<li>OohSound_7</li>
 			<li>OohSound_8</li>
 		</soundDefs>
-	</YR_Hentai_Prime_AnimationBed.EroVoiceDef>
-	<YR_Hentai_Prime_AnimationBed.EroVoiceDef>
+		<conditionSoundSettings>
+			<!-- B.E.P Race -->
+			<li>
+				<pawnCondition>
+					<heldPawnCondition>
+						<races>
+							<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+							<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+							<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+							<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+							<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+							<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+							<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+							<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+							<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+						</races>
+					</heldPawnCondition>
+				</pawnCondition>
+				<soundDefs>
+					<li>BEPRace_OohSound_1</li>
+					<li>BEPRace_OohSound_2</li>
+				</soundDefs>
+			</li>
+		</conditionSoundSettings>
+	</YR_Hentai_Prime_AnimationBed.SoundSettingDef>
+	<YR_Hentai_Prime_AnimationBed.SoundSettingDef>
+		<defName>OohSound_Random</defName>
+		<soundDefs>
+			<li>OohSound_1</li>
+			<li>OohSound_2</li>
+			<li>OohSound_3</li>
+			<li>OohSound_4</li>
+			<li>OohSound_5</li>
+			<li>OohSound_6</li>
+			<li>OohSound_7</li>
+			<li>OohSound_8</li>
+		</soundDefs>
+		<conditionSoundSettings>
+			<!-- B.E.P Race -->
+			<li>
+				<pawnCondition>
+					<heldPawnCondition>
+						<races>
+							<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+							<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+							<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+							<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+							<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+							<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+							<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+							<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+							<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+						</races>
+					</heldPawnCondition>
+				</pawnCondition>
+				<soundDefs>
+					<li>BEPRace_OohSound_1</li>
+					<li>BEPRace_OohSound_2</li>
+				</soundDefs>
+				<probability>0.01</probability>
+			</li>
+		</conditionSoundSettings>
+		<probability>0.01</probability>
+	</YR_Hentai_Prime_AnimationBed.SoundSettingDef>
+	<YR_Hentai_Prime_AnimationBed.SoundSettingDef>
+		<defName>OohSound_Random_Low</defName>
+		<soundDefs>
+			<li>OohSound_1</li>
+			<li>OohSound_2</li>
+			<li>OohSound_3</li>
+			<li>OohSound_4</li>
+			<li>OohSound_5</li>
+			<li>OohSound_6</li>
+			<li>OohSound_7</li>
+			<li>OohSound_8</li>
+		</soundDefs>
+		<conditionSoundSettings>
+			<!-- B.E.P Race -->
+			<li>
+				<pawnCondition>
+					<heldPawnCondition>
+						<races>
+							<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+							<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+							<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+							<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+							<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+							<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+							<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+							<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+							<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+						</races>
+					</heldPawnCondition>
+				</pawnCondition>
+				<soundDefs>
+					<li>BEPRace_OohSound_1</li>
+					<li>BEPRace_OohSound_2</li>
+				</soundDefs>
+				<probability>0.005</probability>
+			</li>
+		</conditionSoundSettings>
+		<probability>0.005</probability>
+	</YR_Hentai_Prime_AnimationBed.SoundSettingDef>
+	<YR_Hentai_Prime_AnimationBed.SoundSettingDef>
 		<defName>BlowJobSound</defName>
 		<soundDefs>
 			<li>BlowJobSound_1</li>
@@ -25,5 +127,5 @@
 			<li>BlowJobSound_7</li>
 			<li>BlowJobSound_8</li>
 		</soundDefs>
-	</YR_Hentai_Prime_AnimationBed.EroVoiceDef>
+	</YR_Hentai_Prime_AnimationBed.SoundSettingDef>
 </Defs>

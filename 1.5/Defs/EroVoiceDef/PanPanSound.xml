@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_Hentai_Prime_AnimationBed.SoundSettingDef>
+		<defName>PanPanSound</defName>
+		<soundDefs>
+			<li>YR_PanPanSound_1</li>
+			<li>YR_PanPanSound_2</li>
+			<li>YR_PanPanSound_3</li>
+			<li>YR_PanPanSound_4</li>
+			<li>YR_PanPanSound_5</li>
+			<li>YR_PanPanSound_6</li>
+			<li>YR_PanPanSound_7</li>
+			<li>YR_PanPanSound_8</li>
+			<li>YR_PanPanSound_9</li>
+		</soundDefs>
+	</YR_Hentai_Prime_AnimationBed.SoundSettingDef>
+</Defs>

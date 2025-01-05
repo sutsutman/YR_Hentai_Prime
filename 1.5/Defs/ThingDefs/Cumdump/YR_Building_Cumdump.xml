@@ -81,7 +81,7 @@
 				<makeSound>
 					<!-- 묶인 애를 기준으로 나는 소리 -->
 					<heldPawnSound>
-						<startSoundSettings>
+						<startSoundSettingDefs>
 							<li>
 								<!-- 삽입시 응앙! 하는 소리 -->
 								<soundDefs>
@@ -94,15 +94,15 @@
 									<li>OohSound_7</li>
 									<li>OohSound_8</li>
 								</soundDefs>
-								<!-- <conditionSoundSettings> -->
+								<!-- <conditionSoundSettingDefs> -->
 								<!-- <li> -->
 								<!-- <soundDef/> -->
 								<!-- <pawnCondition/> -->
 								<!-- </li> -->
-								<!-- </conditionSoundSettings> -->
+								<!-- </conditionSoundSettingDefs> -->
 							</li>
-						</startSoundSettings>
-						<randomSoundSettings>
+						</startSoundSettingDefs>
+						<randomSoundSettingDefs>
 							<li>
 								<!-- 신음 -->
 								<soundDefs>
@@ -118,51 +118,16 @@
 								<!-- 이 경우 1틱당 0.05프로의 확률로 소리가 남 -->
 								<probability>0.005</probability>
 							</li>
-						</randomSoundSettings>
-						<finishSoundSettings/>
+						</randomSoundSettingDefs>
+						<finishSoundSettingDefs/>
 					</heldPawnSound>
 					<!-- 하는 애를 기준으로 나는 소리 -->
 					<joyPawnSound>
-						<finishSoundSettings>
-							<li>
-								<!-- 사정 소리 -->
-								<soundDefs>
-									<li>EjaculationSound_1</li>
-									<li>EjaculationSound_2</li>
-									<li>EjaculationSound_3</li>
-									<li>EjaculationSound_4</li>
-									<li>EjaculationSound_5</li>
-									<li>EjaculationSound_6</li>
-									<li>EjaculationSound_7</li>
-									<li>EjaculationSound_8</li>
-									<li>EjaculationSound_9</li>
-									<li>EjaculationSound_10</li>
-									<li>EjaculationSound_11</li>
-									<li>EjaculationSound_12</li>
-									<li>EjaculationSound_13</li>
-									<li>EjaculationSound_14</li>
-									<li>EjaculationSound_15</li>
-									<li>EjaculationSound_16</li>
-									<li>EjaculationSound_17</li>
-									<li>EjaculationSound_18</li>
-									<li>EjaculationSound_19</li>
-									<li>EjaculationSound_20</li>
-									<li>EjaculationSound_21</li>
-									<li>EjaculationSound_22</li>
-									<li>EjaculationSound_23</li>
-									<li>EjaculationSound_24</li>
-									<li>EjaculationSound_25</li>
-								</soundDefs>
-							</li>
-						</finishSoundSettings>
-						<waitAfterJoySoundSettings>
-							<li>
-								<!-- 오줌 소리 나중에 바꿔야 함 -->
-								<soundDefs>
-									<li>OohSound_1</li>
-								</soundDefs>
-							</li>
-						</waitAfterJoySoundSettings>
+						<finishSoundSettingDefs>
+							<li>FinishSound</li>
+						</finishSoundSettingDefs>
+						<!-- 오줌소리 바꿔야 함 -->
+						<waitAfterJoySoundSettingDefs><li>GulpSound</li></waitAfterJoySoundSettingDefs>
 					</joyPawnSound>
 				</makeSound>
 			</li>

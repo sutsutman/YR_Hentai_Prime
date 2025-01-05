@@ -220,13 +220,13 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     if (keyframe is BedAnimationKeyframe BAK && HeldPawn.Drawer.renderer.renderTree.AnimationTick == BAK.tick)
                     {
-                        PlaySoundSettings(HeldPawn, this, BAK.soundSettings);
+                        PlaySoundSettings(HeldPawn, this, BAK.soundSettingDefs);
                     }
                 }
             }
         }
 
-        public static void PlaySoundSettings(Pawn pawn, Building_AnimationBed building_AnimationBed, List<SoundSetting> soundSettings)
+        public static void PlaySoundSettings(Pawn pawn, Building_AnimationBed building_AnimationBed, List<SoundSettingDef> soundSettings)
         {
             foreach (var soundSetting in soundSettings)
             {
@@ -240,7 +240,7 @@ namespace YR_Hentai_Prime_AnimationBed
             }
         }
 
-        private static void GetSoundDefAndProbability(Pawn pawn, Building_AnimationBed building_AnimationBed, SoundSetting soundSetting, out SoundDef soundDef, out float probability)
+        private static void GetSoundDefAndProbability(Pawn pawn, Building_AnimationBed building_AnimationBed, SoundSettingDef soundSetting, out SoundDef soundDef, out float probability)
         {
             var tempSoundDef = soundSetting.soundDefs.RandomElement();
             var tempProbability = soundSetting.probability;

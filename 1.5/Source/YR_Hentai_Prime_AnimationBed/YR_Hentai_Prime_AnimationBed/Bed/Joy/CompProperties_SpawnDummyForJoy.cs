@@ -32,10 +32,10 @@ namespace YR_Hentai_Prime_AnimationBed
 
     public class PawnSound
     {
-        public List<SoundSetting> startSoundSettings = new List<SoundSetting>();
-        public List<SoundSetting> randomSoundSettings = new List<SoundSetting>();
-        public List<SoundSetting> finishSoundSettings = new List<SoundSetting>();
-        public List<SoundSetting> waitAfterJoySoundSettings = new List<SoundSetting>();
+        public List<SoundSettingDef> startSoundSettingDefs = new List<SoundSettingDef>();
+        public List<SoundSettingDef> randomSoundSettingDefs = new List<SoundSettingDef>();
+        public List<SoundSettingDef> finishSoundSettingDefs = new List<SoundSettingDef>();
+        public List<SoundSettingDef> waitAfterJoySoundSettingDefs = new List<SoundSettingDef>();
     }
 
     public class MakeHediff

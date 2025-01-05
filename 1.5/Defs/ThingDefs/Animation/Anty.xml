@@ -74,27 +74,9 @@
 							<tick>12</tick>
 							<offset>(0.0,0,0.015)</offset>
 							<texPath>Antylike/Bodies/AddonGraphic/PanPanPlay/Naked_Thin</texPath>
-							<soundSettings>
-								<li>
-									<soundDefs>
-										<li>YR_PanPanSound_1</li>
-										<li>YR_PanPanSound_2</li>
-										<li>YR_PanPanSound_3</li>
-										<li>YR_PanPanSound_4</li>
-										<li>YR_PanPanSound_5</li>
-										<li>YR_PanPanSound_6</li>
-										<li>YR_PanPanSound_7</li>
-										<li>YR_PanPanSound_8</li>
-										<li>YR_PanPanSound_9</li>
-									</soundDefs>
-									<!-- <conditionSoundSettings> -->
-									<!-- <li> -->
-									<!-- <soundDef/> -->
-									<!-- <pawnCondition/> -->
-									<!-- </li> -->
-									<!-- </conditionSoundSettings> -->
-								</li>
-							</soundSettings>
+							<soundSettingDefs>
+								<li>PanPanSound</li>
+							</soundSettingDefs>
 						</li>
 						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>40</tick>
@@ -184,27 +166,9 @@
 							<tick>12</tick>
 							<offset>(0.0,0,0.015)</offset>
 							<texPath>Antylike/Bodies/AddonGraphic/PanPanPlay/Naked_Thin</texPath>
-							<soundSettings>
-								<li>
-									<soundDefs>
-										<li>YR_PanPanSound_1</li>
-										<li>YR_PanPanSound_2</li>
-										<li>YR_PanPanSound_3</li>
-										<li>YR_PanPanSound_4</li>
-										<li>YR_PanPanSound_5</li>
-										<li>YR_PanPanSound_6</li>
-										<li>YR_PanPanSound_7</li>
-										<li>YR_PanPanSound_8</li>
-										<li>YR_PanPanSound_9</li>
-									</soundDefs>
-									<!-- <conditionSoundSettings> -->
-									<!-- <li> -->
-									<!-- <soundDef/> -->
-									<!-- <pawnCondition/> -->
-									<!-- </li> -->
-									<!-- </conditionSoundSettings> -->
-								</li>
-							</soundSettings>
+							<soundSettingDefs>
+								<li>PanPanSound</li>
+							</soundSettingDefs>
 						</li>
 						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>40</tick>
@@ -294,27 +258,9 @@
 							<tick>12</tick>
 							<offset>(0.0,0,0.015)</offset>
 							<texPath>Antylike/Bodies/AddonGraphic/PanPanPlay/Naked_Thin</texPath>
-							<soundSettings>
-								<li>
-									<soundDefs>
-										<li>YR_PanPanSound_1</li>
-										<li>YR_PanPanSound_2</li>
-										<li>YR_PanPanSound_3</li>
-										<li>YR_PanPanSound_4</li>
-										<li>YR_PanPanSound_5</li>
-										<li>YR_PanPanSound_6</li>
-										<li>YR_PanPanSound_7</li>
-										<li>YR_PanPanSound_8</li>
-										<li>YR_PanPanSound_9</li>
-									</soundDefs>
-									<!-- <conditionSoundSettings> -->
-									<!-- <li> -->
-									<!-- <soundDef/> -->
-									<!-- <pawnCondition/> -->
-									<!-- </li> -->
-									<!-- </conditionSoundSettings> -->
-								</li>
-							</soundSettings>
+							<soundSettingDefs>
+								<li>PanPanSound</li>
+							</soundSettingDefs>
 						</li>
 						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>40</tick>

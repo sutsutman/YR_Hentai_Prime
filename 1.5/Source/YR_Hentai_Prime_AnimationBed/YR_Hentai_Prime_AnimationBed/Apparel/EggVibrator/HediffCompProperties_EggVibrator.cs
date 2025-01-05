@@ -17,9 +17,9 @@ namespace YR_Hentai_Prime_AnimationBed
         public ThingDef filthDef;
         public int filthNum = 1;
 
-        public EroVoiceDef femaleEroVoice;
-        public EroVoiceDef noneEroVoice;
-        public EroVoiceDef maleEroVoice;
+        public SoundSettingDef femaleEroVoice;
+        public SoundSettingDef noneEroVoice;
+        public SoundSettingDef maleEroVoice;
         public int voiceProbability = 50;
     }
 

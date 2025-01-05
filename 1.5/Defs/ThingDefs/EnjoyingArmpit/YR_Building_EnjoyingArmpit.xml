@@ -42,38 +42,13 @@
 				<makeSound>
 					<!-- 묶인 애를 기준으로 나는 소리 -->
 					<heldPawnSound>
-						<startSoundSettings>
-							<li>
-								<!-- 삽입시 응앙! 하는 소리 -->
-								<soundDefs>
-									<li>OohSound_1</li>
-									<li>OohSound_2</li>
-									<li>OohSound_3</li>
-									<li>OohSound_4</li>
-									<li>OohSound_5</li>
-									<li>OohSound_6</li>
-									<li>OohSound_7</li>
-									<li>OohSound_8</li>
-								</soundDefs>
-							</li>
-						</startSoundSettings>
-						<randomSoundSettings>
-							<li>
-								<!-- 신음 -->
-								<soundDefs>
-									<li>OohSound_1</li>
-									<li>OohSound_2</li>
-									<li>OohSound_3</li>
-									<li>OohSound_4</li>
-									<li>OohSound_5</li>
-									<li>OohSound_6</li>
-									<li>OohSound_7</li>
-									<li>OohSound_8</li>
-								</soundDefs>
-								<probability>0.01</probability>
-							</li>
-						</randomSoundSettings>
-						<finishSoundSettings/>
+						<startSoundSettingDefs>
+							<li>OohSound</li>
+						</startSoundSettingDefs>
+						<randomSoundSettingDefs>
+							<li>OohSound_Random</li>
+						</randomSoundSettingDefs>
+						<finishSoundSettingDefs/>
 					</heldPawnSound>
 				</makeSound>
 			</li>

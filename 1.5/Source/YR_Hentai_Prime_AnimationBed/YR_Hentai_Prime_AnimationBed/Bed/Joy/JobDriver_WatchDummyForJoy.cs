@@ -38,8 +38,8 @@ namespace YR_Hentai_Prime_AnimationBed
                 FinishAction();
 
                 CompProperties_SpawnDummyForJoy props = CompSpawnDummyForJoy?.Props;
-                Building_AnimationBed.PlaySoundSettings(Building_AnimationBed?.HeldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.waitAfterJoySoundSettings);
-                Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.waitAfterJoySoundSettings);
+                Building_AnimationBed.PlaySoundSettings(Building_AnimationBed?.HeldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.waitAfterJoySoundSettingDefs);
+                Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.waitAfterJoySoundSettingDefs);
 
                 pawn.Drawer.renderer.SetAllGraphicsDirty();
             });
@@ -117,8 +117,8 @@ namespace YR_Hentai_Prime_AnimationBed
                         AddHediff(heldPawn, Building_AnimationBed, props.makeHediff.heldPawnHediffSetting.startHediffSettings);
                         AddHediff(pawn, Building_AnimationBed, props.makeHediff.joyPawnHediffSetting.startHediffSettings);
 
-                        Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.startSoundSettings);
-                        Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.startSoundSettings);
+                        Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.startSoundSettingDefs);
+                        Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.startSoundSettingDefs);
 
                         start = false;
                     }
@@ -126,8 +126,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
                 if (heldPawn != null)
                 {
-                    Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.randomSoundSettings);
-                    Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.randomSoundSettings);
+                    Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.randomSoundSettingDefs);
+                    Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.randomSoundSettingDefs);
                 }
 
 
@@ -232,8 +232,8 @@ namespace YR_Hentai_Prime_AnimationBed
             RemoveStartHediff(heldPawn, props.makeHediff.heldPawnHediffSetting.startHediffSettings);
             RemoveStartHediff(pawn, props.makeHediff.joyPawnHediffSetting.startHediffSettings);
 
-            Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.finishSoundSettings);
-            Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.finishSoundSettings);
+            Building_AnimationBed.PlaySoundSettings(heldPawn, Building_AnimationBed, props.makeSound.heldPawnSound.finishSoundSettingDefs);
+            Building_AnimationBed.PlaySoundSettings(pawn, Building_AnimationBed, props.makeSound.joyPawnSound.finishSoundSettingDefs);
 
             //이걸로 멈춰야 에러 안남
             stop = true;

@@ -153,27 +153,9 @@
 						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>12</tick>
 							<offset>(0.0,0,0.015)</offset>
-							<soundSettings>
-								<li>
-									<soundDefs>
-										<li>YR_PanPanSound_1</li>
-										<li>YR_PanPanSound_2</li>
-										<li>YR_PanPanSound_3</li>
-										<li>YR_PanPanSound_4</li>
-										<li>YR_PanPanSound_5</li>
-										<li>YR_PanPanSound_6</li>
-										<li>YR_PanPanSound_7</li>
-										<li>YR_PanPanSound_8</li>
-										<li>YR_PanPanSound_9</li>
-									</soundDefs>
-									<!-- <conditionSoundSettings> -->
-									<!-- <li> -->
-									<!-- <soundDef/> -->
-									<!-- <pawnCondition/> -->
-									<!-- </li> -->
-									<!-- </conditionSoundSettings> -->
-								</li>
-							</soundSettings>
+							<soundSettingDefs>
+								<li>PanPanSound</li>
+							</soundSettingDefs>
 						</li>
 						<li>
 							<tick>40</tick>
@@ -308,20 +290,9 @@
 						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>12</tick>
 							<offset>(0.0,0,0.02)</offset>
-							<soundSettings>
-								<li>
-									<soundDefs>
-										<li>LickSound_1</li>
-										<li>LickSound_2</li>
-									</soundDefs>
-									<!-- <conditionSoundSettings> -->
-									<!-- <li> -->
-									<!-- <soundDef/> -->
-									<!-- <pawnCondition/> -->
-									<!-- </li> -->
-									<!-- </conditionSoundSettings> -->
-								</li>
-							</soundSettings>
+							<soundSettingDefs>
+								<li>LickSound</li>
+							</soundSettingDefs>
 						</li>
 						<li>
 							<tick>12</tick>
@@ -409,13 +380,9 @@
 						<li Class="YR_Hentai_Prime_AnimationBed.BedAnimationKeyframe">
 							<tick>12</tick>
 							<offset>(0.0,0,0.015)</offset>
-							<soundSettings>
-								<li>
-									<soundDefs>
-										<li>BellyPunchSound_1</li>
-									</soundDefs>
-								</li>
-							</soundSettings>
+							<soundSettingDefs>
+								<li>BellyPunchSound</li>
+							</soundSettingDefs>
 						</li>
 						<li>
 							<tick>40</tick>

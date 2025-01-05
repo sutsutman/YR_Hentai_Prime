@@ -74,80 +74,19 @@
 				<makeSound>
 					<!-- 묶인 애를 기준으로 나는 소리 -->
 					<heldPawnSound>
-						<startSoundSettings>
-							<li>
-								<!-- 삽입시 응앙! 하는 소리 -->
-								<soundDefs>
-									<li>OohSound_1</li>
-									<li>OohSound_2</li>
-									<li>OohSound_3</li>
-									<li>OohSound_4</li>
-									<li>OohSound_5</li>
-									<li>OohSound_6</li>
-									<li>OohSound_7</li>
-									<li>OohSound_8</li>
-								</soundDefs>
-								<!-- <conditionSoundSettings> -->
-								<!-- <li> -->
-								<!-- <soundDef/> -->
-								<!-- <pawnCondition/> -->
-								<!-- </li> -->
-								<!-- </conditionSoundSettings> -->
-							</li>
-						</startSoundSettings>
-						<randomSoundSettings>
-							<li>
-								<!-- 신음 -->
-								<soundDefs>
-									<li>OohSound_1</li>
-									<li>OohSound_2</li>
-									<li>OohSound_3</li>
-									<li>OohSound_4</li>
-									<li>OohSound_5</li>
-									<li>OohSound_6</li>
-									<li>OohSound_7</li>
-									<li>OohSound_8</li>
-								</soundDefs>
-								<!-- 이 경우 1틱당 0.05프로의 확률로 소리가 남 -->
-								<probability>0.005</probability>
-							</li>
-						</randomSoundSettings>
-						<finishSoundSettings/>
+						<startSoundSettingDefs>
+							<li>OohSound</li>
+						</startSoundSettingDefs>
+						<randomSoundSettingDefs>
+							<li>OohSound_Random_Low</li>
+						</randomSoundSettingDefs>
+						<finishSoundSettingDefs/>
 					</heldPawnSound>
 					<!-- 하는 애를 기준으로 나는 소리 -->
 					<joyPawnSound>
-						<finishSoundSettings>
-							<li>
-								<!-- 사정 소리 -->
-								<soundDefs>
-									<li>EjaculationSound_1</li>
-									<li>EjaculationSound_2</li>
-									<li>EjaculationSound_3</li>
-									<li>EjaculationSound_4</li>
-									<li>EjaculationSound_5</li>
-									<li>EjaculationSound_6</li>
-									<li>EjaculationSound_7</li>
-									<li>EjaculationSound_8</li>
-									<li>EjaculationSound_9</li>
-									<li>EjaculationSound_10</li>
-									<li>EjaculationSound_11</li>
-									<li>EjaculationSound_12</li>
-									<li>EjaculationSound_13</li>
-									<li>EjaculationSound_14</li>
-									<li>EjaculationSound_15</li>
-									<li>EjaculationSound_16</li>
-									<li>EjaculationSound_17</li>
-									<li>EjaculationSound_18</li>
-									<li>EjaculationSound_19</li>
-									<li>EjaculationSound_20</li>
-									<li>EjaculationSound_21</li>
-									<li>EjaculationSound_22</li>
-									<li>EjaculationSound_23</li>
-									<li>EjaculationSound_24</li>
-									<li>EjaculationSound_25</li>
-								</soundDefs>
-							</li>
-						</finishSoundSettings>
+						<finishSoundSettingDefs>
+							<li>FinishSound</li>
+						</finishSoundSettingDefs>
 					</joyPawnSound>
 				</makeSound>
 			</li>
@@ -166,7 +105,7 @@
 							</pawnCondition>
 							<offset>(0,1.0,-0.03)</offset>
 						</li>
-																		<li MayRequire="RooAndGloomy.YuranRaceMod">
+						<li MayRequire="RooAndGloomy.YuranRaceMod">
 							<pawnCondition>
 								<heldPawnCondition>
 									<races>
@@ -176,7 +115,8 @@
 								</heldPawnCondition>
 							</pawnCondition>
 							<offset>(0,0,-0.06)</offset>
-						</li><li MayRequire="SutSutMan.HakuyuRaceMod">
+						</li>
+						<li MayRequire="SutSutMan.HakuyuRaceMod">
 							<pawnCondition>
 								<heldPawnCondition>
 									<races>
@@ -184,7 +124,7 @@
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
-					<offset>(0,1.0,-0.01)</offset>
+							<offset>(0,1.0,-0.01)</offset>
 						</li>
 					</conditonPawnOffsets>
 					<rotation>South</rotation>
@@ -194,7 +134,6 @@
 					<li>
 						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
 						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
-						
 					</li>
 					<!-- 오크통 레이어 -->
 					<li>

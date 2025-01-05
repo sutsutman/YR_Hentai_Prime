@@ -5,7 +5,7 @@ namespace YR_Hentai_Prime_AnimationBed
 {
     internal class ConvenientTool
     {
-        public static void ShotSexSound(Pawn pawn, EroVoiceDef femaleEroVoiceDef = null, EroVoiceDef maleEroVoiceDef = null, EroVoiceDef noneEroVoiceDef = null, int voiceProbability = 50)
+        public static void ShotSexSound(Pawn pawn, SoundSettingDef femaleEroVoiceDef = null, SoundSettingDef maleEroVoiceDef = null, SoundSettingDef noneEroVoiceDef = null, int voiceProbability = 50)
         {
             if (pawn == null)
             {
@@ -36,7 +36,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 soundDef.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
             }
         }
-        static SoundDef RandSound(EroVoiceDef eroVoiceDef)
+        static SoundDef RandSound(SoundSettingDef eroVoiceDef)
         {
             return eroVoiceDef.soundDefs.RandomElement();
         }

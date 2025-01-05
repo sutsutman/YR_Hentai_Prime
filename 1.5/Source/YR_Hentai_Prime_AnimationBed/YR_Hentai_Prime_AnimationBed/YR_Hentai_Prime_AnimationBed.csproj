@@ -133,7 +133,7 @@
     <Compile Include="Bed\Tentacle\CompProperties_TentacleAbility.cs" />
     <Compile Include="Bed\Tentacle\HediffGiver_RandomAgeCurved_NoAlram.cs" />
     <Compile Include="Bed\Tentacle\ThingComp_FemaleGender.cs" />
-    <Compile Include="EroVoiceDef.cs" />
+    <Compile Include="SoundSettingDef.cs" />
     <Compile Include="Hediff\HediffCompProperties_ChangeBodyType.cs" />
     <Compile Include="YR_H_P_Icon.cs" />
     <Compile Include="Hediff\HediffCompProperties_GiveHediffs.cs" />
