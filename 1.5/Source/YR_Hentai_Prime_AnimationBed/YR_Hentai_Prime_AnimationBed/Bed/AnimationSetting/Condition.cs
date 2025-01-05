@@ -84,8 +84,11 @@ namespace YR_Hentai_Prime_AnimationBed
                 return false;
             }
 
-            IEnumerable<bool> matchConditions = new[]
+            IEnumerable<bool> matchConditions;
+            if (building_AnimationBed != null)
             {
+                matchConditions = new[]
+                {
                 Check(bodyType, condition.bodyTypeDefs),
                 Check(pawn.gender, condition.genders),
                 Check(pawn.def, condition.races),
@@ -98,6 +101,22 @@ namespace YR_Hentai_Prime_AnimationBed
                 CheckProbability(condition.probability),
                 CheckSkill(pawn,condition.skillLevelRages)
             };
+            }
+            else
+            {
+                matchConditions = new[]
+                {
+                Check(bodyType, condition.bodyTypeDefs),
+                Check(pawn.gender, condition.genders),
+                Check(pawn.def, condition.races),
+                Check(pawn.def.race.intelligence, condition.intelligences),
+                CheckListCondition(condition.hediffDefs, HediffCheck),
+                CheckListCondition(condition.hediffAndSeverities, HediffAndSeverityCheck),
+                CheckListCondition(condition.traitDefs, TraitCheck),
+                CheckProbability(condition.probability),
+                CheckSkill(pawn,condition.skillLevelRages)
+            };
+            }
 
             bool match = allMatch
                     ? matchConditions.All(x => x)
@@ -251,6 +270,64 @@ namespace YR_Hentai_Prime_AnimationBed
             return heldBreak || joyBreak;
         }
 
+
+        public static void ConditionAddHediff(Pawn pawn, List<ConditionHediffSetting> conditionHediffSettings)
+        {
+            foreach (var conditionHediffSetting in conditionHediffSettings)
+            {
+                if (Match(pawn, null, conditionHediffSetting.condition, out bool needBreak))
+                {
+                    AddHediff(pawn, conditionHediffSetting);
+                    if (needBreak)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+        public static bool AddHediff(Pawn pawn, ConditionHediffSetting conditionHediffSetting)
+        {
+            //conditionHediffSetting.Break면 그만두게 false 보냄
+            bool addHediff = false;
+            foreach (RaceBodyPart raceBodyPart in conditionHediffSetting.raceBodyParts)
+            {
+                if (raceBodyPart.race != pawn.def)
+                {
+                    continue;
+                }
+
+                foreach (BodyPartRecord part in pawn.RaceProps.body.AllParts)
+                {
+                    if (raceBodyPart.bodyPart != part.def)
+                    {
+                        continue;
+                    }
+
+                    foreach (HediffDef hediffDef in conditionHediffSetting.hediffDefs)
+                    {
+                        pawn.health.AddHediff(hediffDef, part);
+                        addHediff = true;
+                        if (conditionHediffSetting.Break)
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            if (!addHediff)
+            {
+                foreach (HediffDef hediffDef in conditionHediffSetting.hediffDefs)
+                {
+                    pawn.health.AddHediff(hediffDef);
+                    if (conditionHediffSetting.Break)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
     }
 
     public class SkillLevelRage
@@ -263,6 +340,25 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public HediffDef hediffDef;
         public FloatRange severityRange;
+    }
+
+    public class RaceBodyPart
+    {
+        public ThingDef race;
+        public BodyPartDef bodyPart;
+    }
+
+    public class ConditionHediffSetting
+    {
+        public Condition condition;
+        public List<HediffDef> hediffDefs = new List<HediffDef>();
+        public List<RaceBodyPart> raceBodyParts = new List<RaceBodyPart>();
+        public bool checkOpponentCondition = false;
+        public bool checkConditionWhenRemove = false;
+
+        public bool Break = false;
+
+        public bool removeHediffs = true;
     }
 
 }

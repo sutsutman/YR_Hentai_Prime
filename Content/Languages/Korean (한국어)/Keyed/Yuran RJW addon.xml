@@ -89,7 +89,10 @@
   <!-- {7} encroaches on {6}'s body... -->
   <YR_LockApparelMessage>{2}(이)가 {1}의 신체를 잠식합니다...</YR_LockApparelMessage>
   <!-- Until the evil tree is fully rooted: {0} -->
+  <CompInspectStringExtra_Comp_AddHediffAfterSomeTick>헤디프 부여까지 : {0}</CompInspectStringExtra_Comp_AddHediffAfterSomeTick>
   <YR_FinishEggInsert>사목이 완전히 뿌리 내리기까지 : {0}</YR_FinishEggInsert>
+  
+  <Message_Comp_AddHediffAfterSomeTick>헤디프 부여 완료 : {0}</Message_Comp_AddHediffAfterSomeTick>
   <!-- Need to offer {1} more corpses to summon evil tree -->
   <YR_NeedCorpse_Tentacle_Altar>사목 소환을 위해 시체 {1}구를 더 바쳐야 함</YR_NeedCorpse_Tentacle_Altar>
   <!-- Need to offer {1} more corpses to grow evil tree -->

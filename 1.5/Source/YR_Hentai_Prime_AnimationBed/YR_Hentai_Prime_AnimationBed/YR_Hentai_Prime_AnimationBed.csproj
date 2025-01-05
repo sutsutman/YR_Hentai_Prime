@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="AlienRace">
       <HintPath>..\..\..\..\..\..\..\..\workshop\content\294100\839005762\1.5\Assemblies\AlienRace.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -69,6 +70,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apparel\Disciplined\CompProperties_Disciplined_Apparel.cs" />
+    <Compile Include="Apparel\Disciplined\YR_Disciplined_Patch.cs" />
+    <Compile Include="Apparel\EggVibrator\Command_EggVibrator.cs" />
+    <Compile Include="Apparel\EggVibrator\CompProperties_EggVibrator.cs" />
+    <Compile Include="Apparel\EggVibrator\CompUsable_NonCompFloatMenuOptions.cs" />
+    <Compile Include="Apparel\EggVibrator\CompUseEffect_EggVibrator.cs" />
+    <Compile Include="Apparel\EggVibrator\HediffCompProperties_EggVibrator.cs" />
+    <Compile Include="Apparel\EggVibrator\HediffCompProperties_EggVibrator_Maker.cs" />
+    <Compile Include="Apparel\EggVibrator\IFCHarmony.cs" />
+    <Compile Include="Apparel\EggVibrator\Verb_EggVibrator.cs" />
+    <Compile Include="Apparel\Golem\CompProperties_Golem_Apparel.cs" />
+    <Compile Include="Apparel\Golem\Comp_Golem_Apparel.cs" />
+    <Compile Include="Apparel\Tentacle\CompProperties_Tentacle_Apparel.cs" />
+    <Compile Include="Apparel\Tentacle\CompProperties_Tentacle_Mask.cs" />
+    <Compile Include="Apparel\Tentacle\CompProperties_Tentacle_Mask_Sub.cs" />
+    <Compile Include="Apparel\Tentacle\CompProperties_Tentacle_Weapon.cs" />
+    <Compile Include="Apparel\Tentacle\Comp_ChangeApparelTextureByCondition.cs" />
+    <Compile Include="Apparel\Tentacle\ConvenientTool.cs" />
+    <Compile Include="Apparel\Tentacle\HediffCompProperties_Pregnant_Tentacle_Birth.cs" />
+    <Compile Include="Apparel\Tentacle\HediffCompProperties_Tentalce.cs" />
+    <Compile Include="Apparel\Tentacle\Hediff_Pregnant_Tentacle.cs" />
+    <Compile Include="Apparel\Tentacle\Hediff_Pregnant_Tentacle_Birth.cs" />
     <Compile Include="Bed\CompBaseOfAnimationBed.cs" />
     <Compile Include="Bed\AnimationSetting\BedAnimationDef.cs" />
     <Compile Include="Bed\AnimationSetting\CompAnimationSetting.cs" />
@@ -100,7 +123,21 @@
     <Compile Include="Bed\Mod\YR_Hentai_Prime_AnimationBed_Setting.cs" />
     <Compile Include="Bed\Mod\YR_Hentai_Prime_AnimationBed_Mod.cs" />
     <Compile Include="Bed\Joy\CompProperties_ForcePlay.cs" />
-    <Compile Include="HediffCompProperties_Disciplined.cs" />
+    <Compile Include="Bed\Tentacle\Altar\Building_Tentacle_Altar.cs" />
+    <Compile Include="Bed\Tentacle\Altar\CompProperties_Building_Tentacle_Altar.cs" />
+    <Compile Include="Bed\Tentacle\CompProperties_AddHediffAfterSomeTick.cs" />
+    <Compile Include="Bed\Tentacle\CompProperties_RespawnBed.cs" />
+    <Compile Include="Bed\Tentacle\CompProperties_SecondLayer.cs" />
+    <Compile Include="Bed\Tentacle\CompProperties_SpawnBed.cs" />
+    <Compile Include="Bed\Tentacle\CompProperties_Spawner_Tentacle.cs" />
+    <Compile Include="Bed\Tentacle\CompProperties_TentacleAbility.cs" />
+    <Compile Include="Bed\Tentacle\HediffGiver_RandomAgeCurved_NoAlram.cs" />
+    <Compile Include="Bed\Tentacle\ThingComp_FemaleGender.cs" />
+    <Compile Include="EroVoiceDef.cs" />
+    <Compile Include="Hediff\HediffCompProperties_ChangeBodyType.cs" />
+    <Compile Include="YR_H_P_Icon.cs" />
+    <Compile Include="Hediff\HediffCompProperties_GiveHediffs.cs" />
+    <Compile Include="Hediff\HediffCompProperties_Disciplined.cs" />
     <Compile Include="TestLog.cs" />
     <Compile Include="Bed\Joy\CompProperties_DummyForJoy.cs" />
     <Compile Include="Bed\Joy\CompProperties_SpawnDummyForJoy.cs" />

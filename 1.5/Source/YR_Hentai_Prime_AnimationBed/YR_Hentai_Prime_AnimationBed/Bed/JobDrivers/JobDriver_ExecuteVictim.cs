@@ -9,7 +9,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         private const TargetIndex PlatformIndex = TargetIndex.A;
 
-        private Thing Platform => base.TargetThingA;
+        private Thing Platform => TargetThingA;
 
         private Pawn InnerPawn => (Platform as Building_AnimationBed)?.HeldPawn;
 

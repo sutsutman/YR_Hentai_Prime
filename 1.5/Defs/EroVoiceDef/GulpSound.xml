@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<YR_Hentai_Prime_AnimationBed.EroVoiceDef>
+		<defName>GulpSound</defName>
+		<soundDefs>
+			<li>BlowJobSound_9</li>
+			<li>BlowJobSound_10</li>
+		</soundDefs>
+	</YR_Hentai_Prime_AnimationBed.EroVoiceDef>
+		<YR_Hentai_Prime_AnimationBed.EroVoiceDef>
+		<defName>BurpSound</defName>
+		<soundDefs>
+			<li>YR_Burp_Sound</li>
+		</soundDefs>
+	</YR_Hentai_Prime_AnimationBed.EroVoiceDef>
+</Defs>

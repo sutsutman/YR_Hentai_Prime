@@ -15,7 +15,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private const int MaxMedicineReservations = 10;
 
-        private Thing Platform => base.TargetThingA;
+        private Thing Platform => TargetThingA;
 
         private Pawn InnerPawn => (Platform as Building_AnimationBed)?.HeldPawn;
 

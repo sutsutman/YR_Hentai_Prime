@@ -15,7 +15,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 {
                     if (building_AnimationBed.HeldPawn != null)
                     {
-                        return -base.Props.PowerConsumption;
+                        return -Props.PowerConsumption;
                     }
                 }
 

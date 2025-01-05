@@ -21,6 +21,8 @@ namespace YR_Hentai_Prime_AnimationBed
         public static SoundDef HiveSpawnSound => DefDatabase<SoundDef>.GetNamed("Hive_Spawn");
 
         public static JobDef YR_SelfTieToAnimationBed;
+        internal static TraitDef YR_Disciplined;
+        internal static Hediff YR_Pregnant_Tentacle_Birth;
 
         static YR_H_P_DefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(YR_H_P_DefOf));
     }

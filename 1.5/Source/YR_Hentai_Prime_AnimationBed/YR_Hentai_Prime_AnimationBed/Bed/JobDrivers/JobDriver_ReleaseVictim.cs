@@ -13,7 +13,7 @@ namespace YR_Hentai_Prime_AnimationBed
 
         private const int TransferTicks = 300;
 
-        private Thing Platform => base.TargetThingA;
+        private Thing Platform => TargetThingA;
 
         private Pawn InnerPawn => (Platform as Building_AnimationBed)?.HeldPawn;
 
@@ -50,7 +50,7 @@ namespace YR_Hentai_Prime_AnimationBed
             yield return toil;
             yield return Toils_General.Do(delegate
             {
-                if (base.TargetThingB is Pawn thing)
+                if (TargetThingB is Pawn thing)
                 {
                     CompAnimationBedTarget CompAnimationBedTarget = thing.TryGetComp<CompAnimationBedTarget>();
                     //CompAnimationBedTarget.Escape(initiator: false);

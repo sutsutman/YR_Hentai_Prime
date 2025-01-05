@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TraitDef>
+		<defName>YR_Disciplined</defName>
+		<commonality>0</commonality>
+		<degreeDatas>
+			<li>
+				<label>disciplined</label>
+				<description>{PAWN_nameDef} has been thoroughly disciplined and has become obscene in both body and mind. {PAWN_nameDef} is no longer ashamed to don't wear anything.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	<TraitDef>
+		<defName>YR_Tentalcle</defName>
+		<commonality>0</commonality>
+		<degreeDatas>
+			<li>
+				<label>abyss bride</label>
+				<description>Whether by others or by herself, {PAWN_nameDef} has abandoned her life as an ordinary woman, and has become a plaything for a evil tree. There will be only excited in her future that will completely destroy her reason.</description>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<disabledWorkTags>
+			<li>ManualDumb</li>
+			<li>ManualSkilled</li>
+			<li>Caring</li>
+			<li>Social</li>
+			<li>Commoner</li>
+			<li>Intellectual</li>
+			<li>Animals</li>
+			<li>Artistic</li>
+			<li>Crafting</li>
+			<li>Cooking</li>
+			<li>Firefighting</li>
+			<li>Cleaning</li>
+			<li>Hauling</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+			<li>Hunting</li>
+			<li>Constructing</li>
+			<li>Shooting</li>
+		</disabledWorkTags>
+	</TraitDef>
+	<TraitDef>
+		<defName>YR_Tentalcle_NonColonist</defName>
+		<commonality>0</commonality>
+		<degreeDatas>
+			<li>
+				<label>abyss bride</label>
+				<description>Whether by others or by herself, {PAWN_nameDef} has abandoned her life as an ordinary woman, and has become a plaything for a evil tree. There will be only excited in her future that will completely destroy her reason.</description>
+			</li>
+		</degreeDatas>
+		<disabledWorkTags>
+			<li>Violent</li>
+			<li>Shooting</li>
+			<li>AllWork</li>
+		</disabledWorkTags>
+	</TraitDef>
+</Defs>

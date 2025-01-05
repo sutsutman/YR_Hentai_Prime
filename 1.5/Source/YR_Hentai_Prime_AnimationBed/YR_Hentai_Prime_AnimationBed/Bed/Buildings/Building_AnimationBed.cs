@@ -50,11 +50,11 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public float HeldPawnDrawPos_Y => DrawPos.y + 1f / 26f;
 
-        public float HeldPawnBodyAngle => base.Rotation.AsAngle;
+        public float HeldPawnBodyAngle => Rotation.AsAngle;
 
         public PawnPosture HeldPawnPosture => PawnPosture.LayingOnGroundFaceUp;
 
-        public Rot4 HeldPawnRotation => base.Rotation;
+        public Rot4 HeldPawnRotation => Rotation;
 
         public Vector3 PawnDrawOffset
         {
@@ -376,8 +376,8 @@ namespace YR_Hentai_Prime_AnimationBed
                 }
             }
 
-            innerContainer?.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
-            rapePawnContainer?.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
+            innerContainer?.TryDropAll(Position, Map, ThingPlaceMode.Near);
+            rapePawnContainer?.TryDropAll(Position, Map, ThingPlaceMode.Near);
         }
 
         private void RemoveAnimationBedHediff()
@@ -472,7 +472,7 @@ namespace YR_Hentai_Prime_AnimationBed
             foreach (Thing item4 in innerContainer)
             {
                 Gizmo gizmo;
-                if ((gizmo = Building.SelectContainedItemGizmo(this, item4)) != null)
+                if ((gizmo = SelectContainedItemGizmo(this, item4)) != null)
                 {
                     yield return gizmo;
                 }
@@ -481,7 +481,7 @@ namespace YR_Hentai_Prime_AnimationBed
             foreach (Thing item5 in rapePawnContainer)
             {
                 Gizmo gizmo;
-                if ((gizmo = Building.SelectContainedItemGizmo(this, item5)) != null)
+                if ((gizmo = SelectContainedItemGizmo(this, item5)) != null)
                 {
                     yield return gizmo;
                 }
@@ -527,7 +527,7 @@ namespace YR_Hentai_Prime_AnimationBed
                 yield return new Command_Action
                 {
                     defaultLabel = "Open controll setting",
-                    icon = ContentFinder<Texture2D>.Get("UI/Heroart/RimWorldLogo"),
+                    icon = YR_H_P_Icon.rimworldLogoIcon,
                     action = ToggleOpenControlSetting
                 };
 
@@ -568,7 +568,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"Pawn Offset Reset",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
+                                icon = YR_H_P_Icon.resetIcon,
                                 action = delegate
                                 {
                                     testPawnOffset = new Vector3();
@@ -578,7 +578,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"Pawn Offset : Right",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                icon = YR_H_P_Icon.rightIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -590,7 +590,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"Pawn Offset : Left",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                icon = YR_H_P_Icon.leftIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -605,7 +605,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"Pawn Offset : Up",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                icon = YR_H_P_Icon.upIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -617,7 +617,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"Pawn Offset : Down",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                icon = YR_H_P_Icon.downIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -685,7 +685,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "Reset",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
+                                icon = YR_H_P_Icon.resetIcon,
                                 action = delegate
                                 {
                                     foreach (var bedAnimationSetting in bedAnimationSettings)
@@ -720,7 +720,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "Right",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                icon = YR_H_P_Icon.rightIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -735,7 +735,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "Left",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                icon = YR_H_P_Icon.leftIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -753,7 +753,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "Front",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
+                                icon = YR_H_P_Icon.frontIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -768,7 +768,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "Back",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
+                                icon = YR_H_P_Icon.backIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -786,7 +786,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "Up",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                icon = YR_H_P_Icon.upIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -801,7 +801,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "Down",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                icon = YR_H_P_Icon.downIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -819,7 +819,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "draw x Big",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
+                                icon = YR_H_P_Icon.drawSizeUpIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -836,7 +836,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = $"{label} : " + "draw x Small",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
+                                icon = YR_H_P_Icon.drawSizeDownIcon,
                                 action = delegate
                                 {
                                     float n = 0;
@@ -917,7 +917,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : Reset",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
+                                icon = YR_H_P_Icon.resetIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testAngle = 0;
@@ -932,7 +932,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : Right",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                icon = YR_H_P_Icon.rightIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testOffset.x += movef;
@@ -943,7 +943,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : Left",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                icon = YR_H_P_Icon.leftIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testOffset.x -= movef;
@@ -956,7 +956,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : Front",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
+                                icon = YR_H_P_Icon.frontIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testOffset.y += movef;
@@ -967,7 +967,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : Back",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
+                                icon = YR_H_P_Icon.backIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testOffset.y -= movef;
@@ -980,7 +980,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : Up",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                icon = YR_H_P_Icon.upIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testOffset.z += movef;
@@ -991,7 +991,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : Down",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                icon = YR_H_P_Icon.downIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testOffset.z -= movef;
@@ -1005,7 +1005,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : draw x Big",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
+                                icon = YR_H_P_Icon.drawSizeUpIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testDrawSize.x += movef;
@@ -1016,7 +1016,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : draw x Small",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
+                                icon = YR_H_P_Icon.drawSizeDownIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testDrawSize.x -= movef;
@@ -1053,7 +1053,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "CameraOffset : Right",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                icon = YR_H_P_Icon.rightIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testCameraOffset.x += movef;
@@ -1064,7 +1064,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "CameraOffset : Left",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                icon = YR_H_P_Icon.leftIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testCameraOffset.x -= movef;
@@ -1077,7 +1077,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "CameraOffset : Front",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
+                                icon = YR_H_P_Icon.frontIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testCameraOffset.y += movef;
@@ -1088,7 +1088,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "CameraOffset : Back",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
+                                icon = YR_H_P_Icon.backIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testCameraOffset.y -= movef;
@@ -1101,7 +1101,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "CameraOffset : Up",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                icon = YR_H_P_Icon.upIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testCameraOffset.z += movef;
@@ -1112,7 +1112,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "CameraOffset : Down",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                icon = YR_H_P_Icon.downIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testCameraOffset.z -= movef;
@@ -1126,7 +1126,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : CameraZoom +",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
+                                icon = YR_H_P_Icon.drawSizeUpIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testCameraZoom += movef;
@@ -1137,7 +1137,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "Portrait : CameraZoom -",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
+                                icon = YR_H_P_Icon.drawSizeDownIcon,
                                 action = delegate
                                 {
                                     portraitIngredient.testCameraZoom -= movef;
@@ -1178,7 +1178,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : Reset",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Reset"),
+                                icon = YR_H_P_Icon.resetIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testDrawSize = new Vector2();
@@ -1190,7 +1190,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : Right",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Right"),
+                                icon = YR_H_P_Icon.rightIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testOffset.x += movef;
@@ -1201,7 +1201,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : Left",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Left"),
+                                icon = YR_H_P_Icon.leftIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testOffset.x -= movef;
@@ -1214,7 +1214,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : Front",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Front"),
+                                icon = YR_H_P_Icon.frontIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testOffset.y += movef;
@@ -1225,7 +1225,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : Back",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Back"),
+                                icon = YR_H_P_Icon.backIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testOffset.y -= movef;
@@ -1238,7 +1238,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : Up",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Up"),
+                                icon = YR_H_P_Icon.upIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testOffset.z += movef;
@@ -1249,7 +1249,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : Down",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/Down"),
+                                icon = YR_H_P_Icon.downIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testOffset.z -= movef;
@@ -1263,7 +1263,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : draw x Big",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Big"),
+                                icon = YR_H_P_Icon.drawSizeUpIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testDrawSize.x += movef;
@@ -1274,7 +1274,7 @@ namespace YR_Hentai_Prime_AnimationBed
                             yield return new Command_Action
                             {
                                 defaultLabel = "FillableBar : draw x Small",
-                                icon = ContentFinder<Texture2D>.Get("UI/Icons/GDAV3/draw_x_Small"),
+                                icon = YR_H_P_Icon.drawSizeDownIcon,
                                 action = delegate
                                 {
                                     fillableBarIngredient.testDrawSize.x -= movef;
@@ -1364,8 +1364,8 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             if (pawn == HeldPawn || pawn == RapePawn)
             {
-                innerContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
-                rapePawnContainer.TryDropAll(base.Position, base.Map, ThingPlaceMode.Near);
+                innerContainer.TryDropAll(Position, Map, ThingPlaceMode.Near);
+                rapePawnContainer.TryDropAll(Position, Map, ThingPlaceMode.Near);
                 if (!dinfo.HasValue || !dinfo.Value.Def.execution)
                 {
                     Messages.Message("EntityDiedOnHoldingPlatform".Translate(pawn), pawn, MessageTypeDefOf.NegativeEvent);
