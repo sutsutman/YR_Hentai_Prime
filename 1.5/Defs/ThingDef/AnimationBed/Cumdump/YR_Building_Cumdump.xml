@@ -44,7 +44,7 @@
 						<pawnCondition>
 							<joyPawnCondition>
 								<races>
-									<li>Anty</li>
+							<li MayRequire="Roo.AntyRaceMod">Anty</li>
 								</races>
 							</joyPawnCondition>
 						</pawnCondition>
@@ -108,7 +108,7 @@
 							<pawnCondition>
 								<heldPawnCondition>
 									<races>
-										<li>Anty</li>
+							<li MayRequire="Roo.AntyRaceMod">Anty</li>
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
@@ -239,7 +239,7 @@
 								<pawnCondition>
 									<joyPawnCondition>
 										<races>
-											<li>Anty</li>
+							<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 										<dummyForJoyIsActive>true</dummyForJoyIsActive>
 										<allMatch>true</allMatch>
@@ -267,7 +267,7 @@
 									</heldPawnCondition>
 									<joyPawnCondition>
 										<races>
-											<li>Anty</li>
+							<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 										<allMatch>true</allMatch>
 										<referPreviousJoyPawn>true</referPreviousJoyPawn>
@@ -495,7 +495,7 @@
 											<pawnCondition>
 												<heldPawnCondition>
 													<races>
-														<li>Anty</li>
+							<li MayRequire="Roo.AntyRaceMod">Anty</li>
 													</races>
 												</heldPawnCondition>
 											</pawnCondition>

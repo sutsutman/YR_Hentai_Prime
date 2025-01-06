@@ -111,17 +111,17 @@
 					</compPostPostRemoved>
 				</compSetting>
 			</li>
-			<li MayRequire="rim.job.world" Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Need">
-				<need>Sex</need>
-				<offset>-0.005</offset>
-				<ticks>1200</ticks>
-				<raceOnly>
-					<race>
-						<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
-					</race>
-					<offset>-0.01</offset>
-				</raceOnly>
-			</li>
+			<!-- <li MayRequire="rim.job.world" Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_Need"> -->
+				<!-- <need>Sex</need> -->
+				<!-- <offset>-0.005</offset> -->
+				<!-- <ticks>1200</ticks> -->
+				<!-- <raceOnly> -->
+					<!-- <race> -->
+						<!-- <li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li> -->
+					<!-- </race> -->
+					<!-- <offset>-0.01</offset> -->
+				<!-- </raceOnly> -->
+			<!-- </li> -->
 		</comps>
 	</HediffDef>
 </Defs>

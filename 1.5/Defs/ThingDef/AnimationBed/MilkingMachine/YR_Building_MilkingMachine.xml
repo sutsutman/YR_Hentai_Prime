@@ -60,7 +60,7 @@
 										<!-- Dragonian -->
 										<li MayRequire="RooAndGloomy.DragonianRaceMod">Dragonian_Race</li>
 										<!-- 앤티 -->
-										<li MayRequir="Roo.AntyRaceMod">Anty</li>
+										<li MayRequire="Roo.AntyRaceMod">Anty</li>
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
@@ -114,7 +114,7 @@
 							<pawnCondition>
 								<heldPawnCondition>
 									<races>
-										<li>Anty</li>
+										<li MayRequire="Roo.AntyRaceMod">Anty</li>
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
@@ -561,7 +561,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-											<li>Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
@@ -610,7 +610,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-											<li>Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 										<Break>true</Break>
 									</heldPawnCondition>
@@ -718,7 +718,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-											<li>Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
@@ -802,7 +802,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-											<li>Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
@@ -947,7 +947,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-											<li>Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
@@ -1250,7 +1250,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-											<li>Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>

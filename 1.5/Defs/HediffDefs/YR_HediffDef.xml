@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- 테스트용 -->
+	<!-- 테스트용 -->
 	<HediffDef>
 		<defName>YR_Test_Hediff</defName>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -285,7 +285,7 @@
 		</comps>
 	</HediffDef>
 	<!-- 미믹에게 보호 됨 -->
-		<HediffDef>
+	<HediffDef>
 		<defName>YR_Building_Mimic_Hediff</defName>
 		<label>trapped by mimic</label>
 		<description>Trapped by Mimic and forced to mate with her in a box. At the same time protected by her box.</description>

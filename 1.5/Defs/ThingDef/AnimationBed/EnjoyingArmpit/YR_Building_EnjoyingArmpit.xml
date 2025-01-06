@@ -195,7 +195,7 @@
 											<pawnCondition>
 												<joyPawnCondition>
 													<races>
-														<li>Anty</li>
+							<li MayRequire="Roo.AntyRaceMod">Anty</li>
 													</races>
 													<Break>true</Break>
 												</joyPawnCondition>
