@@ -1264,68 +1264,95 @@
 					</li>
 				</bedAnimationList>
 			</li>
-			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
-				<ticksToSpawn>120000</ticksToSpawn>
-				<thingToSpawn>Milk</thingToSpawn>
-				<spawnCount>20</spawnCount>
-				<conditionSpawnThings>
-					<li MayRequire="RooAndGloomy.YuranRaceMod">
-						<pawnCondition>
-							<heldPawnCondition>
-								<races>
-									<li>Yuran_Race</li>
-								</races>
-							</heldPawnCondition>
-						</pawnCondition>
-						<thingToSpawn>YR_BreastMilk</thingToSpawn>
-						<spawnCount>20</spawnCount>
-					</li>
-					<li MayRequire="RooAndGloomy.YuranRaceMod">
-						<pawnCondition>
-							<heldPawnCondition>
-								<races>
-									<li>Yuran_Race_Miko</li>
-								</races>
-							</heldPawnCondition>
-						</pawnCondition>
-						<thingToSpawn>YR_BreastMilk</thingToSpawn>
-						<spawnCount>40</spawnCount>
-					</li>
-					<li MayRequire="RooAndGloomy.DragonianRaceMod">
-						<pawnCondition>
-							<heldPawnCondition>
-								<races>
-									<li>Dragonian_Race</li>
-								</races>
-							</heldPawnCondition>
-						</pawnCondition>
-						<thingToSpawn>DragonianMilk</thingToSpawn>
-						<spawnCount>40</spawnCount>
-					</li>
-					<li MayRequire="bep.mofy.twfiaclr">
-						<pawnCondition>
-							<heldPawnCondition>
-								<races>
-									<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
-								</races>
-							</heldPawnCondition>
-						</pawnCondition>
-						<thingToSpawn>Mofy_Milk</thingToSpawn>
-						<spawnCount>10</spawnCount>
-					</li>
-					<li MayRequire="bep.sweety.mcsr">
-						<pawnCondition>
-							<heldPawnCondition>
-								<races>
-									<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
-								</races>
-							</heldPawnCondition>
-						</pawnCondition>
-						<thingToSpawn>Sweety_ChocoMilk</thingToSpawn>
-						<spawnCount>10</spawnCount>
-					</li>
-				</conditionSpawnThings>
-			</li>
+<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
+    <ticksToSpawn>120000</ticksToSpawn>
+    <spawnItems>
+        <li>
+            <spawnThingInfo>
+                <thingDef>Milk</thingDef>
+                <spawnCount>20</spawnCount>
+            </spawnThingInfo>
+        </li>
+    </spawnItems>
+    <conditionSpawnItems>
+        <li MayRequire="RooAndGloomy.YuranRaceMod">
+            <pawnCondition>
+                <heldPawnCondition>
+                    <races>
+                        <li>Yuran_Race</li>
+                    </races>
+                </heldPawnCondition>
+            </pawnCondition>
+            <spawnItem>
+                <spawnThingInfo>
+                    <thingDef>YR_BreastMilk</thingDef>
+                    <spawnCount>20</spawnCount>
+                </spawnThingInfo>
+            </spawnItem>
+        </li>
+        <li MayRequire="RooAndGloomy.YuranRaceMod">
+            <pawnCondition>
+                <heldPawnCondition>
+                    <races>
+                        <li>Yuran_Race_Miko</li>
+                    </races>
+                </heldPawnCondition>
+            </pawnCondition>
+            <spawnItem>
+                <spawnThingInfo>
+                    <thingDef>YR_BreastMilk</thingDef>
+                    <spawnCount>40</spawnCount>
+                </spawnThingInfo>
+            </spawnItem>
+        </li>
+        <li MayRequire="RooAndGloomy.DragonianRaceMod">
+            <pawnCondition>
+                <heldPawnCondition>
+                    <races>
+                        <li>Dragonian_Race</li>
+                    </races>
+                </heldPawnCondition>
+            </pawnCondition>
+            <spawnItem>
+                <spawnThingInfo>
+                    <thingDef>DragonianMilk</thingDef>
+                    <spawnCount>40</spawnCount>
+                </spawnThingInfo>
+            </spawnItem>
+        </li>
+        <li MayRequire="bep.mofy.twfiaclr">
+            <pawnCondition>
+                <heldPawnCondition>
+                    <races>
+                        <li>Mofy_Pawn</li>
+                    </races>
+                </heldPawnCondition>
+            </pawnCondition>
+            <spawnItem>
+                <spawnThingInfo>
+                    <thingDef>Mofy_Milk</thingDef>
+                    <spawnCount>10</spawnCount>
+                </spawnThingInfo>
+            </spawnItem>
+        </li>
+        <li MayRequire="bep.sweety.mcsr">
+            <pawnCondition>
+                <heldPawnCondition>
+                    <races>
+                        <li>Sweety_Pawn</li>
+                    </races>
+                </heldPawnCondition>
+            </pawnCondition>
+            <spawnItem>
+                <spawnThingInfo>
+                    <thingDef>Sweety_ChocoMilk</thingDef>
+                    <spawnCount>10</spawnCount>
+                </spawnThingInfo>
+            </spawnItem>
+        </li>
+    </conditionSpawnItems>
+</li>
+
 		</comps>
 	</ThingDef>
 </Defs>

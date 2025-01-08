@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="YR_AnimationBedBase">
+		<designationCategory Inherit="False"></designationCategory>
 		<defName>YR_Building_Tentacle</defName>
 		<label>evil tree(bed)</label>
 		<description>This is a pile of tentacles united by the evil tree that for rape the offered woman. The woman lying on this pile of tentacles is raped by a tree, and eggs are planted in the uterus. When the planted eggs wake up and completely root in the woman's body, the tentacles pile will release their own sexual slavery - the "abyss bride."</description>		

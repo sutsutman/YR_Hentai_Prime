@@ -2,6 +2,7 @@
 <Defs>
 	<!--엉덩이-->
 	<ThingDef ParentName="YR_AnimationBedBase">
+		<designationCategory Inherit="False"></designationCategory>
 		<defName>HKY_Building_Igloo</defName>
 		<label>igloo</label>
 		<description>TEST</description>

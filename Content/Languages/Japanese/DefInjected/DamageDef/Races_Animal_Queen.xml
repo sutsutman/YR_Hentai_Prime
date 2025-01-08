@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 데미지 -->
+
+  <YR_Maggot_ToxicBite.label>毒噛みつき</YR_Maggot_ToxicBite.label>
+  <YR_Maggot_ToxicBite.deathMessage>{0}は殺された.</YR_Maggot_ToxicBite.deathMessage>
+
+
+</LanguageData>

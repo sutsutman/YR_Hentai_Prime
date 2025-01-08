@@ -9,4 +9,9 @@
   <YR_ExecuteVictim.reportString>TargetAを処刑している.</YR_ExecuteVictim.reportString>
 
 
+  <!-- </JobDef> -->
+
+  <YR_SelfTieToAnimationBed.reportString>ベッドに自分を拘束するために移動している.</YR_SelfTieToAnimationBed.reportString>
+
+
 </LanguageData>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 유란 -->
+
+  <YR_Neon_Yuran_East.label>ネオン(ユラン-東)</YR_Neon_Yuran_East.label>
+  <YR_Neon_Yuran_East.description>ネオン(ユラン)</YR_Neon_Yuran_East.description>
+
+  <YR_Neon_Yuran_West.label>ネオン(ユラン-西)</YR_Neon_Yuran_West.label>
+  <YR_Neon_Yuran_West.description>ネオン(ユラン)</YR_Neon_Yuran_West.description>
+
+
+  <!-- AOC -->
+
+  <YR_Neon_AOC_East.label>ネオン(AOC-東)</YR_Neon_AOC_East.label>
+  <YR_Neon_AOC_East.description>ネオン(AOC)</YR_Neon_AOC_East.description>
+
+  <YR_Neon_AOC_West.label>ネオン(AOC-西)</YR_Neon_AOC_West.label>
+  <YR_Neon_AOC_West.description>ネオン(AOC)</YR_Neon_AOC_West.description>
+
+
+  <!-- 앤티 -->
+
+  <YR_Neon_Anty_East.label>ネオン(アンティ-東)</YR_Neon_Anty_East.label>
+  <YR_Neon_Anty_East.description>ネオン(アンティ)</YR_Neon_Anty_East.description>
+
+  <YR_Neon_Anty_West.label>ネオン(アンティ-西)</YR_Neon_Anty_West.label>
+  <YR_Neon_Anty_West.description>ネオン(アンティ)</YR_Neon_Anty_West.description>
+
+
+  <!-- 마루 -->
+
+  <YR_Neon_Maru_East.label>ネオン(マル-東)</YR_Neon_Maru_East.label>
+  <YR_Neon_Maru_East.description>ネオン(マル)</YR_Neon_Maru_East.description>
+
+  <YR_Neon_Maru_West.label>ネオン(マル-西)</YR_Neon_Maru_West.label>
+  <YR_Neon_Maru_West.description>ネオン(マル)</YR_Neon_Maru_West.description>
+
+
+  <!-- 꼬추 -->
+
+  <YR_Neon_Penis_East.label>ネオン(おチンポ-東)</YR_Neon_Penis_East.label>
+  <YR_Neon_Penis_East.description>ネオン(おチンポ)</YR_Neon_Penis_East.description>
+
+  <YR_Neon_Penis_West.label>ネオン(おチンポ-西)</YR_Neon_Penis_West.label>
+  <YR_Neon_Penis_West.description>ネオン(おチンポ)</YR_Neon_Penis_West.description>
+
+
+  <!-- 사정 -->
+
+  <YR_Neon_Ejaculation_East.label>ネオン(射精-東)</YR_Neon_Ejaculation_East.label>
+  <YR_Neon_Ejaculation_East.description>ネオン(射精)</YR_Neon_Ejaculation_East.description>
+
+  <YR_Neon_Ejaculation_West.label>ネオン(射精-西)</YR_Neon_Ejaculation_West.label>
+  <YR_Neon_Ejaculation_West.description>ネオン(射精)</YR_Neon_Ejaculation_West.description>
+
+
+  <!-- 뷰지 -->
+
+  <YR_Neon_Pussy.label>ネオン(オマンコ)</YR_Neon_Pussy.label>
+  <YR_Neon_Pussy.description>ネオン(オマンコ)</YR_Neon_Pussy.description>
+
+
+  <!-- 쓰레기 봉투 -->
+
+  <YR_Neon_GarbageBag.label>ネオン(ゴミ袋)</YR_Neon_GarbageBag.label>
+  <YR_Neon_GarbageBag.description>ネオン(ゴミ袋)</YR_Neon_GarbageBag.description>
+
+
+</LanguageData>

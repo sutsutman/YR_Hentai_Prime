@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 공통 헤디프 -->
+
+  <YR_Tentacle_DrugHigh.label>淫妖樹の煎汁効果</YR_Tentacle_DrugHigh.label>
+  <YR_Tentacle_DrugHigh.labelNoun>淫妖樹の煎汁効果</YR_Tentacle_DrugHigh.labelNoun>
+  <YR_Tentacle_DrugHigh.description>血液中に淫妖樹の煎汁が入った状態です.戦闘に関係する能力を一時的に強化します.</YR_Tentacle_DrugHigh.description>
+
+
+  <!-- 사목의 탕약 취함 헤디프 -->
+
+  <YR_Tentacle_Drug_Feel.label>淫妖樹の煎汁用Hediff</YR_Tentacle_Drug_Feel.label>
+  <YR_Tentacle_Drug_Feel.description>淫妖樹の煎汁用Hediff</YR_Tentacle_Drug_Feel.description>
+
+
+  <!-- 사목의 음액 취함 헤디프 -->
+
+  <YR_Tentacle_Drug_Enhance_Feel.label>淫妖樹の淫煎汁Hediff</YR_Tentacle_Drug_Enhance_Feel.label>
+  <YR_Tentacle_Drug_Enhance_Feel.description>淫妖樹の淫煎汁Hediff</YR_Tentacle_Drug_Enhance_Feel.description>
+
+
+  <!-- 중독 -->
+
+  <YR_Tentacle_Drug_Addiction.label>淫妖樹の煎汁依存症</YR_Tentacle_Drug_Addiction.label>
+  <YR_Tentacle_Drug_Addiction.description>淫妖樹の煎汁に対する化学物質による中毒症状.長期にわたる淫妖樹の煎汁の摂取は,細胞レベルでの神経的適応症を引き起こし,その結果,脳はもう淫妖樹の煎汁なしでは適切に機能することができなくなります.\n\n\n定期的に淫妖樹の煎汁を摂取しないと禁断症状が出ます.しかし,摂取禁止を続けることで,少しずつ脳は正常な状態に戻るようになり,依存症は解消されます.</YR_Tentacle_Drug_Addiction.description>
+  <YR_Tentacle_Drug_Addiction.stages.withdrawal.label>離脱症状</YR_Tentacle_Drug_Addiction.stages.withdrawal.label>
+
+  <YR_Tentacle_DrugTolerance.label>淫妖樹の煎汁耐性</YR_Tentacle_DrugTolerance.label>
+  <YR_Tentacle_DrugTolerance.description>淫妖樹の煎汁に対する耐性の蓄積です.この耐性が高いほど,同じ効果を得るのに多くの淫妖樹の煎汁の摂取が必要になります.</YR_Tentacle_DrugTolerance.description>
+  <YR_Tentacle_DrugTolerance.stages.small.label>小</YR_Tentacle_DrugTolerance.stages.small.label>
+  <YR_Tentacle_DrugTolerance.stages.large.label>大</YR_Tentacle_DrugTolerance.stages.large.label>
+  <YR_Tentacle_DrugTolerance.stages.massive.label>極大</YR_Tentacle_DrugTolerance.stages.massive.label>
+
+
+</LanguageData>

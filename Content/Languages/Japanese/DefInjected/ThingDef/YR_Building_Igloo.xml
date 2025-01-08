@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 엉덩이 -->
+
+  <HKY_Building_Igloo.label>イグルー</HKY_Building_Igloo.label>
+  <HKY_Building_Igloo.description>TEST</HKY_Building_Igloo.description>
+
+
+  <!-- 온도 조절기 -->
+
+  <HKY_ArcticMaker.label>北極愛</HKY_ArcticMaker.label>
+  <HKY_ArcticMaker.description>TEST</HKY_ArcticMaker.description>
+
+
+</LanguageData>

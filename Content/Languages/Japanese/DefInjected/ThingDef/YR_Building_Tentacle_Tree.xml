@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Building_Tentacle_Tree.label>淫妖樹</Building_Tentacle_Tree.label>
+  <Building_Tentacle_Tree.description>これは,死体の山を糧にして生い茂った邪悪な深淵の樹です.\n\n存在するだけで恐怖と嫌悪感を与える生物である淫妖樹は,呼び寄せ,育てた者に対する敵や囚人,奴隷に非常に強い恐怖を植え付けます.\n\n淫妖樹は,新鮮な死体を養分として成長し,捧げられた死体の養分を利用して邪悪な力を振るうことができます.中には,樹が十分に成長しないと使えない力もあります.\n\n淫妖樹は,女性にとても執着するので,捧げられた女性に悪戯をし,淫猥な行為を繰り返します.犯した女性に種を植えて,しっかり根付かせます.その後,その女性は一生,淫妖樹の性奴隷,つまり"深淵の花嫁"として生きることになります.\n\nほとんどの人にとっては呪いなのですが,淫妖樹を崇拝する人にとっては一生の祝福となるのです.\n\n一度発芽した種は,宿主が死なない限り取り除くことはできません.</Building_Tentacle_Tree.description>
+  <Building_Tentacle_Tree.comps.CompRefuelable.fuelGizmoLabel>新鮮な死体</Building_Tentacle_Tree.comps.CompRefuelable.fuelGizmoLabel>
+  <Building_Tentacle_Tree.comps.CompRefuelable.fuelLabel>捧げられた死体</Building_Tentacle_Tree.comps.CompRefuelable.fuelLabel>
+  <Building_Tentacle_Tree.comps.CompRefuelable.outOfFuelMessage>淫妖樹が飢えている</Building_Tentacle_Tree.comps.CompRefuelable.outOfFuelMessage>
+
+
+</LanguageData>

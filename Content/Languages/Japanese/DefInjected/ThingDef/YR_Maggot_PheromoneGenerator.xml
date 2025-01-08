@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <YR_Maggot_PheromoneGenerator.label>フェロモン発信器</YR_Maggot_PheromoneGenerator.label>
+  <YR_Maggot_PheromoneGenerator.description>これはフェロモンの魅惑的な匂いを放つ機械で,ここで交尾に夢中になっている痴女や男娼の気配が感じられます.\n\n誰がそんなものに引っかかるのかって？まあ...そういう人もいるよね,ということです.</YR_Maggot_PheromoneGenerator.description>
+  <YR_Maggot_PheromoneGenerator.comps.CompRefuelable.fuelGizmoLabel>フェロモン聖水</YR_Maggot_PheromoneGenerator.comps.CompRefuelable.fuelGizmoLabel>
+  <YR_Maggot_PheromoneGenerator.comps.CompRefuelable.fuelLabel>溜まったフェロモン聖水</YR_Maggot_PheromoneGenerator.comps.CompRefuelable.fuelLabel>
+  <YR_Maggot_PheromoneGenerator.comps.CompRefuelable.outOfFuelMessage>溜まったフェロモン聖水を排出</YR_Maggot_PheromoneGenerator.comps.CompRefuelable.outOfFuelMessage>
+
+
+</LanguageData>

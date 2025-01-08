@@ -1,62 +1,71 @@
 ﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
-    // 이 클래스는 CNMS(생성 및 관리 시스템)과 상호작용하는 컴포넌트의 속성을 정의합니다.
+    // 사물 생성 정보 클래스
+    public class SpawnThingInfo
+    {
+        public ThingDef thingDef; // 생성할 사물의 정의
+        public int spawnCount; // 생성 개수
+    }
+
+    // 폰 생성 정보 클래스
+    public class SpawnPawnInfo
+    {
+        public PawnKindDef pawnKindDef; // 생성할 PawnKind
+        public int spawnPawnCount; // 생성할 Pawn 개수
+    }
+
+    // 생성 항목 클래스 (사물, 폰, 사운드 포함)
+    public class SpawnItem
+    {
+        public SpawnThingInfo spawnThingInfo; // 사물 생성 정보
+        public SpawnPawnInfo spawnPawnInfo; // 폰 생성 정보
+        public SoundDef soundDef; // 생성 시 재생할 사운드
+    }
+
+    // 조건부 생성 항목 클래스
+    public class ConditionSpawnItem
+    {
+        public PawnCondition pawnCondition; // 생성 조건
+        public SpawnItem spawnItem; // 조건 충족 시 생성할 항목
+    }
+
+    // CNMS 관련 컴포넌트 속성 정의 클래스
     public class CompProperties_AffectedByCNMS : CompProperties
     {
         public CompProperties_AffectedByCNMS() => compClass = typeof(CompAffectedByCNMS);
 
-        // 기본 생성 주기 (틱 단위)
-        public int ticksToSpawn = 2000;
+        public int ticksToSpawn = 2000; // 기본 생성 주기
 
-        // 생성될 사물의 정의
-        public ThingDef thingToSpawn;
-
-        // 생성할 사물의 개수
-        public int spawnCount;
-
-        // 조건부 생성 사물 리스트
-        public List<ConditionSpawnThing> conditionSpawnThings = new List<ConditionSpawnThing>();
-
-        // Joy 기능과 연계 여부
-        public bool dummyForJoyIsActive = false;
-    }
-
-    // 조건부 생성 항목 클래스
-    public class ConditionSpawnThing
-    {
-        public PawnCondition pawnCondition; // 생성 조건
-        public ThingDef thingToSpawn; // 조건 충족 시 생성될 사물
-        public int spawnCount; // 생성 개수
+        public List<SpawnItem> spawnItems = new List<SpawnItem>(); // 기초 생성 항목
+        public List<ConditionSpawnItem> conditionSpawnItems = new List<ConditionSpawnItem>(); // 조건부 생성 항목 리스트
     }
 
     // CNMS와 상호작용하는 컴포넌트 클래스
     [StaticConstructorOnStartup]
     public class CompAffectedByCNMS : CompBaseOfAnimationBed
     {
-        // 디버그 관련 상수 및 기본 아이콘 경로
         private const string DebugSpawnLabel = "DEBUG: Spawn ";
         private const string UiIconPath = "Ui/Widgets/CheckOff";
+        private const string PawnOnlyIconPath = "AAA"; // Pawn만 생성 시 아이콘 경로
 
-        // 현재 컴포넌트의 속성 접근자
-        public CompProperties_AffectedByCNMS Props => (CompProperties_AffectedByCNMS)props;
+        public CompProperties_AffectedByCNMS Props => (CompProperties_AffectedByCNMS)props; // 속성에 접근하는 프로퍼티
+        public CompAffectedByFacilities AffectedByFacilitiesComp => parent.TryGetComp<CompAffectedByFacilities>(); // CNMS 시설과의 상호작용 컴포넌트
 
-        // CNMS 관련 시설 컴포넌트 접근자
-        public CompAffectedByFacilities AffectedByFacilitiesComp => parent.TryGetComp<CompAffectedByFacilities>();
+        private int ticksToSpawn; // 생성 주기를 저장하는 변수
 
-        // 생성 주기를 저장하는 변수
-        private int ticksToSpawn;
-
-        // 컴포넌트 초기 설정
+        // 컴포넌트 초기 설정 메서드
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-            ticksToSpawn = Props.ticksToSpawn; // 기본 생성 주기 설정
+            ticksToSpawn = Props.ticksToSpawn; // 생성 주기 초기화
         }
 
         // 매 틱마다 호출되는 메서드
@@ -64,111 +73,153 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             base.CompTick();
 
-            // 대상 Pawn이 있을 경우, 생성 주기를 감소
+            // 대상 Pawn이 있는 경우 생성 주기를 감소
             if (HeldPawn != null && Building_AnimationBed.PowerOn)
             {
-                if (Props.dummyForJoyIsActive && Building_AnimationBed.dummyForJoyIsActive)
-                    ticksToSpawn--;
-                else if (!Props.dummyForJoyIsActive)
-                    ticksToSpawn--;
+                ticksToSpawn--;
             }
             else
             {
-                // 대상 Pawn이 없으면 주기를 초기화
+                // 대상 Pawn이 없는 경우 생성 주기를 초기화
                 ticksToSpawn = Props.ticksToSpawn;
             }
 
-            // 생성 주기가 0 이하가 되면 사물 생성
+            // 생성 주기가 0 이하가 되면 생성 항목 처리
             if (ticksToSpawn <= 0)
             {
-                ticksToSpawn = Props.ticksToSpawn;
-                SpawnThing();
+                ticksToSpawn = Props.ticksToSpawn; // 주기 초기화
+                SpawnItem();
             }
+        }
+
+        // 항목을 생성하는 메서드
+        private void SpawnItem()
+        {
+            var spawnItem = SelectSpawnItem(); // 생성할 항목 선택
+            if (spawnItem == null) return;
+
+            if (spawnItem.spawnThingInfo != null && spawnItem.spawnThingInfo.thingDef != null)
+            {
+                SpawnThing(spawnItem.spawnThingInfo); // 사물 생성
+            }
+
+            if (spawnItem.spawnPawnInfo != null && spawnItem.spawnPawnInfo.pawnKindDef != null)
+            {
+                SpawnPawn(spawnItem.spawnPawnInfo); // 폰 생성
+            }
+
+            spawnItem.soundDef?.PlayOneShot(new TargetInfo(parent.Position, parent.Map, false)); // 사운드 재생
+        }
+
+        // 생성 항목 선택 메서드
+        private SpawnItem SelectSpawnItem()
+        {
+            foreach (var conditionItem in Props.conditionSpawnItems)
+            {
+                // 조건에 맞는 항목을 찾으면 반환
+                if (Condition.ExecuteActionIfConditionMatches(Building_AnimationBed, conditionItem.pawnCondition, () => { }))
+                {
+                    return conditionItem.spawnItem;
+                }
+            }
+
+            // 조건에 맞는 항목이 없으면 기본 생성 항목 반환
+            return Props.spawnItems.FirstOrDefault();
         }
 
         // 사물을 생성하는 메서드
-        private void SpawnThing()
+        private void SpawnThing(SpawnThingInfo info)
         {
-            var spawnThing = MakeSpawnThing();
+            if (info == null || info.thingDef == null) return;
 
-            // CNMS 관련 컴포넌트가 없거나 연계된 시설이 없으면 기본 위치에 생성
+            var thing = ThingMaker.MakeThing(info.thingDef); // 사물 생성
+            thing.stackCount = info.spawnCount; // 생성 개수 설정
+
             if (AffectedByFacilitiesComp?.LinkedFacilitiesListForReading.NullOrEmpty() ?? true)
             {
-                GenSpawn.Spawn(spawnThing, parent.Position, parent.Map);
+                // 연계된 시설이 없으면 현재 위치에 생성
+                GenSpawn.Spawn(thing, parent.Position, parent.Map);
                 return;
             }
 
-            // 가장 가까운 CNMS를 찾아서 해당 위치에 생성
             var closestCNMS = FindClosestCNMS(parent.Position, AffectedByFacilitiesComp.LinkedFacilitiesListForReading);
             if (closestCNMS?.TryGetComp<CompFacility_CNMS>() is CompFacility_CNMS compCNMS)
             {
-                compCNMS.innerContainer.TryAddOrTransfer(spawnThing);
+                // 가장 가까운 CNMS에 추가
+                compCNMS.innerContainer.TryAddOrTransfer(thing);
             }
             else
             {
-                // CNMS가 제대로 설정되지 않은 경우 기본 위치에 생성
-                Log.Error($"{closestCNMS?.def} is set to CompProperties_AffectedByFacilities_CNMS, but it is not CNMS");
-                GenSpawn.Spawn(spawnThing, parent.Position, parent.Map);
+                // CNMS가 제대로 설정되지 않은 경우 현재 위치에 생성
+                GenSpawn.Spawn(thing, parent.Position, parent.Map);
             }
         }
 
-        // 지정된 위치에서 가장 가까운 CNMS를 찾는 메서드
+        // 폰을 생성하는 메서드
+        private void SpawnPawn(SpawnPawnInfo info)
+        {
+            if (info == null || info.pawnKindDef == null) return;
+
+            for (int i = 0; i < info.spawnPawnCount; i++)
+            {
+                var request = new PawnGenerationRequest(info.pawnKindDef, allowDowned: true, fixedBiologicalAge: 0);
+                var pawn = PawnGenerator.GeneratePawn(request); // 폰 생성
+                GenSpawn.Spawn(pawn, CellFinder.RandomClosewalkCellNear(parent.Position, parent.Map, 1), parent.Map, WipeMode.Vanish); // 폰 스폰
+                pawn.SetFaction(HeldPawn.Faction); // 팩션 설정
+            }
+        }
+
+        // 가장 가까운 CNMS를 찾는 메서드
         private Thing FindClosestCNMS(IntVec3 referencePosition, List<Thing> things)
         {
             return things?.OrderBy(thing => referencePosition.DistanceTo(thing.Position)).FirstOrDefault();
         }
 
-        // 조건에 따라 생성할 사물을 결정하는 메서드
-        private Thing MakeSpawnThing()
-        {
-            var thingToSpawn = Props.thingToSpawn;
-            var spawnCount = Props.spawnCount;
-
-            foreach (var condition in Props.conditionSpawnThings)
-            {
-                // 조건이 충족되면 해당 사물을 설정
-                if (Condition.ExecuteActionIfConditionMatches(Building_AnimationBed, condition.pawnCondition, () =>
-                {
-                    thingToSpawn = condition.thingToSpawn;
-                    spawnCount = condition.spawnCount;
-                }))
-                {
-                    break;
-                }
-            }
-
-            // 사물을 생성하고 개수를 설정
-            var thing = ThingMaker.MakeThing(thingToSpawn);
-            thing.stackCount = spawnCount;
-
-            return thing;
-        }
-
-        // 컴포넌트의 추가 설명 문자열을 반환
+        // 컴포넌트의 추가 설명 문자열 반환
         public override string CompInspectStringExtra()
         {
-            var pawn = Building_AnimationBed.HeldPawn;
-            if (pawn == null) return "";
+            var nextSpawnItem = SelectSpawnItem(); // 다음 생성 항목 선택
+            if (nextSpawnItem == null) return "";
 
-            var spawnThing = MakeSpawnThing();
-            return spawnThing == null
-                ? ""
-                : $"NextSpawnedResourceIn: {ticksToSpawn.ToStringTicksToPeriod()} \n" +
-                  $"Spawn Thing: {spawnThing.def.label} \n" +
-                  $"Spawn Count: {spawnThing.stackCount}";
+            var thingInfo = nextSpawnItem.spawnThingInfo;
+            var pawnInfo = nextSpawnItem.spawnPawnInfo;
+
+            var info = $"NextSpawnedResourceIn: {ticksToSpawn.ToStringTicksToPeriod()}"; // 다음 생성까지 남은 시간 표시
+
+            if (thingInfo != null)
+            {
+                // 생성될 사물 정보 추가
+                info += $"\nSpawn Thing: {thingInfo.thingDef?.label ?? "Unknown"} \nSpawn Count: {thingInfo.spawnCount}";
+            }
+
+            if (pawnInfo != null)
+            {
+                // 생성될 폰 정보 추가
+                info += $"\nSpawn Pawn: {pawnInfo.pawnKindDef?.label ?? "Unknown"} \nSpawn Count: {pawnInfo.spawnPawnCount}";
+            }
+
+            return info;
         }
 
-        // 디버그용 추가 Gizmo를 생성
+        // 디버그용 추가 Gizmo 생성
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             if (Prefs.DevMode)
             {
-                var spawnThing = MakeSpawnThing();
+                var spawnItem = SelectSpawnItem(); // 생성 항목 선택
+                var iconPath = spawnItem?.spawnPawnInfo != null && spawnItem.spawnThingInfo == null
+                    ? ContentFinder<Texture2D>.Get(spawnItem.spawnPawnInfo.pawnKindDef.lifeStages[0].bodyGraphicData.texPath + "_south") // 폰만 생성 시 지정된 아이콘 경로 사용
+                    : spawnItem?.spawnThingInfo?.thingDef?.uiIcon ?? ContentFinder<Texture2D>.Get(UiIconPath);
+
+                var label = spawnItem?.spawnPawnInfo?.pawnKindDef != null
+                    ? $"{DebugSpawnLabel}{spawnItem.spawnPawnInfo.pawnKindDef.label}" // 폰Kind 라벨 표시
+                    : $"{DebugSpawnLabel}{spawnItem?.spawnThingInfo?.thingDef?.label ?? "Nothing"}"; // 사물 라벨 표시
+
                 yield return new Command_Action
                 {
-                    defaultLabel = $"{DebugSpawnLabel}{spawnThing?.def.label ?? "Nothing"}",
-                    icon = spawnThing?.def.uiIcon ?? ContentFinder<Texture2D>.Get(UiIconPath),
-                    action = SpawnThing
+                    defaultLabel = label,
+                    icon = iconPath, // 아이콘 설정
+                    action = () => SpawnItem() // 클릭 시 항목 생성
                 };
             }
         }

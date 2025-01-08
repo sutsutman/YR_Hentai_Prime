@@ -3,7 +3,8 @@ using Verse;
 
 namespace YR_Hentai_Prime_AnimationBed
 {
-    internal class YR_H_P_Icon
+    [StaticConstructorOnStartup]
+    public class YR_H_P_Icon
     {
         //Dev용
         public static Texture2D rimworldLogoIcon = ContentFinder<Texture2D>.Get("UI/Heroart/RimWorldLogo");

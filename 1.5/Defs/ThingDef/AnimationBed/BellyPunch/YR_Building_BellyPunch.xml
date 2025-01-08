@@ -148,7 +148,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-							<li MayRequire="Roo.AntyRaceMod">Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 									</heldPawnCondition>
 								</pawnCondition>
@@ -239,7 +239,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-							<li MayRequire="Roo.AntyRaceMod">Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 										<dummyForJoyIsActive>true</dummyForJoyIsActive>
 										<allMatch>true</allMatch>
@@ -285,7 +285,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-							<li MayRequire="Roo.AntyRaceMod">Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 										<hediffDefs>
 											<li>YR_BellyPunch_Hediff</li>
@@ -339,7 +339,7 @@
 								<pawnCondition>
 									<heldPawnCondition>
 										<races>
-							<li MayRequire="Roo.AntyRaceMod">Anty</li>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
 										</races>
 										<hediffDefs>
 											<li>YR_BellyPunch_Hediff</li>
@@ -358,9 +358,22 @@
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
 				<ticksToSpawn>6000</ticksToSpawn>
-				<thingToSpawn>YR_PheromonePee</thingToSpawn>
-				<spawnCount>1</spawnCount>
-				<dummyForJoyIsActive>true</dummyForJoyIsActive>
+				<spawnItems>
+					<li>
+						<spawnThingInfo>
+							<thingDef>YR_PheromonePee</thingDef>
+							<spawnCount>1</spawnCount>
+						</spawnThingInfo>
+						<spawnPawnInfo>
+							<pawnKindDef/>
+							<spawnPawnCount/>
+						</spawnPawnInfo>
+						<soundDef/>
+					</li>
+				</spawnItems>
+				<conditionSpawnItems>
+					<!-- 조건부 생성 항목을 추가하려면 여기에 작성 -->
+				</conditionSpawnItems>
 			</li>
 		</comps>
 	</ThingDef>

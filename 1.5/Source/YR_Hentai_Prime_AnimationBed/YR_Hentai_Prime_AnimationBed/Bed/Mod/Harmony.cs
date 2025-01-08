@@ -91,7 +91,7 @@ namespace YR_Hentai_Prime_AnimationBed
                     skinShader = ShaderDatabase.CutoutSkinColorOverride;
                 }
                 Shader shader = __instance.ShaderFor(pawn);
-                if (pawn.def is AlienRace.ThingDef_AlienRace thingDef_AlienRace)
+                if (pawn.def is ThingDef_AlienRace thingDef_AlienRace)
                 {
                     if (skinShader == ShaderDatabase.CutoutSkin && pawn.story.SkinColorOverriden)
                     {

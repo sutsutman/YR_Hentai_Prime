@@ -14,9 +14,9 @@
 		</graphicData>
 		<uiOrder>100</uiOrder>
 		<size>(1,1)</size>
-		    <killedLeavings>
-      <Meat_Megaspider>140</Meat_Megaspider>
-    </killedLeavings>
+		<killedLeavings>
+			<Meat_Megaspider>140</Meat_Megaspider>
+		</killedLeavings>
 		<comps>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
 				<!-- 묶였을 때 부여되는 헤디프 -->
@@ -45,9 +45,7 @@
 									<races>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race</li>
 										<li MayRequire="RooAndGloomy.YuranRaceMod">Yuran_Race_Miko</li>
-
 										<li MayRequire="VAMV.MaruRaceMod">Maru</li>
-										
 										<!-- B.E.P Race -->
 										<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
 										<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
@@ -129,7 +127,6 @@
 								<bedAnimationDef>MR_Maggot_Queen_Body_Maru</bedAnimationDef>
 								<offset>(0,0.0,0)</offset>
 							</li>
-
 							<!-- B.E.P Race -->
 							<li>
 								<pawnCondition>
@@ -400,6 +397,17 @@
 			</li>
 			<!-- 이거에 문제 있음 -->
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_Maggot_Queen_Bed"/>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AffectedByCNMS">
+				<ticksToSpawn>240000</ticksToSpawn>
+				<spawnItems>
+					<li>
+						<spawnPawnInfo>
+							<pawnKindDef>YR_Maggot_Larva</pawnKindDef>
+							<spawnPawnCount>2</spawnPawnCount>
+						</spawnPawnInfo>
+					</li>
+				</spawnItems>
+			</li>
 		</comps>
 	</ThingDef>
 </Defs>

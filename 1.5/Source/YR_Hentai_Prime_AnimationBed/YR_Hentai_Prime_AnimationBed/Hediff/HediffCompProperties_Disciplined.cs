@@ -72,7 +72,7 @@ namespace YR_Hentai_Prime_AnimationBed
                                 hasTrait = true;
                                 break;
                             }
-                            if (Pawn.def is AlienRace.ThingDef_AlienRace alienThingDef)
+                            if (Pawn.def is ThingDef_AlienRace alienThingDef)
                             {
                                 if (!RaceRestrictionSettings.CanGetTrait(gainTrait.def, Pawn.def, gainTrait.degree))
                                 {

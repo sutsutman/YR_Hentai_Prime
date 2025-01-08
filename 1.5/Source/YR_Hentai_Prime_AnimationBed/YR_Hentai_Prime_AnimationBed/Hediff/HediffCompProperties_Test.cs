@@ -9,7 +9,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public HediffCompProperties_Test() => compClass = typeof(HediffComp_Test);
 
-        public BodyTypeDef bodyTypeDef = BodyTypeDefOf.Hulk;
+        public BodyTypeDef bodyTypeDef;
     }
 
 
@@ -21,7 +21,7 @@ namespace YR_Hentai_Prime_AnimationBed
         {
             base.CompPostPostAdd(dinfo);
 
-            parent.pawn.story.bodyType = Props.bodyTypeDef;
+            parent.pawn.story.bodyType = Props.bodyTypeDef ?? BodyTypeDefOf.Hulk;
 
             parent.pawn.Drawer.renderer.SetAllGraphicsDirty();
         }

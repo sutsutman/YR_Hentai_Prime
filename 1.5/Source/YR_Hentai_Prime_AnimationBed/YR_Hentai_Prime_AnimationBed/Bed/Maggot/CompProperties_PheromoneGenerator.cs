@@ -44,17 +44,9 @@ namespace YR_Hentai_Prime_AnimationBed
         }
 
         private Building Building => (Building)parent;
-        private CompRefuelable refuelableComp;
+        private CompRefuelable RefuelableComp=> Building.GetComp<CompRefuelable>();
         bool active = false;
         int ticks = 2500;
-        public override void PostPostMake()
-        {
-            refuelableComp = Building.GetComp<CompRefuelable>();
-        }
-        public override void PostSpawnSetup(bool respawningAfterLoad)
-        {
-            refuelableComp = Building.GetComp<CompRefuelable>();
-        }
 
         public override void CompTick()
         {
@@ -127,11 +119,6 @@ namespace YR_Hentai_Prime_AnimationBed
 
                                 soundDef?.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
                             }
-
-                            //if (!Props.message.NullOrEmpty())
-                            //{
-                            //    Messages.Message(Props.message.Translate(), Props.messageTypeDef);
-                            //}
                         }
                     }
                 }
@@ -144,15 +131,15 @@ namespace YR_Hentai_Prime_AnimationBed
             {
                 defaultLabel = Props.label.Translate(),
                 defaultDesc = Props.desc.Translate(),
-                Disabled = active || refuelableComp.Fuel < Props.fuel,
+                Disabled = active || RefuelableComp.Fuel < Props.fuel,
                 icon = ContentFinder<Texture2D>.Get("Ui/Commands/CallAid"),
                 action = delegate ()
                 {
-                    if (refuelableComp != null)
+                    if (RefuelableComp != null)
                     {
-                        if (refuelableComp.Fuel >= Props.fuel)
+                        if (RefuelableComp.Fuel >= Props.fuel)
                         {
-                            refuelableComp.ConsumeFuel(Props.fuel);
+                            RefuelableComp.ConsumeFuel(Props.fuel);
                             active = true;
                             ticks = Props.ticks;
                         }
@@ -164,6 +151,21 @@ namespace YR_Hentai_Prime_AnimationBed
                     }
                 }
             };
+
+            if (Prefs.DevMode)
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "Tick = 1",
+                    defaultDesc = "Make Tick = 1",
+                    Disabled = !active,
+                    icon = ContentFinder<Texture2D>.Get("Ui/Commands/CallAid"),
+                    action = delegate ()
+                    {
+                        ticks = 1;
+                    }
+                };
+            }
 
             yield break;
         }
