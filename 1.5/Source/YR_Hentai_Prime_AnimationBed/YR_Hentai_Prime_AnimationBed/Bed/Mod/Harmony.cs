@@ -59,7 +59,7 @@ namespace YR_Hentai_Prime_AnimationBed
     {
         public static void Postfix(PawnRenderTree __instance, ref int __result)
         {
-            if (__instance.pawn.holdingOwner.Owner is Building_AnimationBed building_AnimationBed && !building_AnimationBed.PowerOn)
+            if (__instance.pawn?.holdingOwner?.Owner is Building_AnimationBed building_AnimationBed && !building_AnimationBed.PowerOn)
             {
                 __result = building_AnimationBed.tempAnimationTick;
             }
