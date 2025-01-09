@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="YR_AnimationBedBase">
+		<designationCategory Inherit="False"></designationCategory>
 		<defName>YR_Building_Maggot_Queen</defName>
 		<label>queen lewd worm</label>
 		<description>A lewd worm that lives solely for the purpose of mating. Bite the opponent through the mouth that looks like Lamprey and inject the poison to anesthetize the opponent. Then it stick to the host's body and sucking milk or taking nutrition through sticky kisses while mating. During mate, it has no interest in anything other than the mate act.\n\nThe power itself is weak, so it can be easily removed with the help of others.\n\nIf the host is female, the eggs continue to be injected into the host's uterus through the spawning tube. The injected egg combines with the host's egg and is implanted in the uterus. And the host will give birth to the larvae after some time. If the host is male, it will determine the semen of the host through the scattering tube. The host's semen will fertilize the queen lewd worm's eggs, and the queen lewd worm will give birth to the larvae after some time.\n\nThe larvae that gave birth are very nutritious and taste good.</description>
@@ -24,7 +25,7 @@
 					<li>YR_MilkingMachine_DisableNeed</li>
 				</addedHediffDefs>
 				<addedAfterEjectHediffDefs>
-					<li>Anesthetic</li>
+					<li>YR_Maggot_Toxic</li>
 				</addedAfterEjectHediffDefs>
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
@@ -92,7 +93,7 @@
 									</races>
 								</heldPawnCondition>
 							</pawnCondition>
-							<offset>(0,0,0.15)</offset>
+							<offset>(0,0,-0.25)</offset>
 						</li>
 					</conditonPawnOffsets>
 				</pawnAnimationSetting>

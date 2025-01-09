@@ -118,6 +118,7 @@
     <Compile Include="Bed\Maggot\CompProperties_Maggot_Warp.cs" />
     <Compile Include="Bed\Maggot\CompProperties_PheromoneGenerator.cs" />
     <Compile Include="Bed\Maggot\DeathActionWorker_Maggot_Larva.cs" />
+    <Compile Include="Bed\Maggot\HediffCompProperties_GiveHediffs.cs" />
     <Compile Include="Bed\Maggot\JobDriver_RapeDownedPawn.cs" />
     <Compile Include="Bed\Maggot\JobGiver_RapeNearby.cs" />
     <Compile Include="Bed\Mod\YR_Hentai_Prime_AnimationBed_Setting.cs" />

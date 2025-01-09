@@ -40,7 +40,7 @@
 			<baseHungerRate>0.35</baseHungerRate>
 			<baseBodySize>1.2</baseBodySize>
 			<baseHealthScale>2.5</baseHealthScale>
-      <useMeatFrom>Megaspider</useMeatFrom>
+			<useMeatFrom>Megaspider</useMeatFrom>
 			<meatLabel>insect meat</meatLabel>
 			<lifeExpectancy>6</lifeExpectancy>
 			<wildness>0.4</wildness>
@@ -91,14 +91,119 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
+	<HediffDef ParentName="DiseaseBase">
+		<defName>YR_Maggot_Toxic</defName>
+		<label>YR_Maggot_Toxic</label>
+		<description>YR_Maggot_Toxic</description>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>45000~120000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.HediffCompProperties_MaggotToxic">
+				<severityPerDay>-0.8</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>wearing off</label>
+				<painFactor>0.95</painFactor>
+				<vomitMtbDays>4</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.9</setMax>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>WanderConfused</mentalState>
+						<mtbDays>50</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<label>woozy</label>
+				<painFactor>0.8</painFactor>
+				<vomitMtbDays>0.25</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.7</setMax>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+				<forgetMemoryThoughtMtbDays>5</forgetMemoryThoughtMtbDays>
+				<mentalStateGivers>
+					<li>
+						<mentalState>WanderConfused</mentalState>
+						<mtbDays>5</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>sedated</label>
+				<painFactor>0</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.01</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.99</minSeverity>
+				<label>sedated</label>
+				<painFactor>0</painFactor>				
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
 	<!-- 데미지 -->
 	<DamageDef ParentName="Bite">
 		<defName>YR_Maggot_ToxicBite</defName>
 		<label>toxic bite</label>
 		<additionalHediffs>
 			<li>
-				<hediff>Anesthetic</hediff>
-				<severityPerDamageDealt>0.5</severityPerDamageDealt>
+				<hediff>YR_Maggot_Toxic</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
 				<victimSeverityScaling>ToxicResistance</victimSeverityScaling>
 				<inverseStatScaling>true</inverseStatScaling>
 				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>

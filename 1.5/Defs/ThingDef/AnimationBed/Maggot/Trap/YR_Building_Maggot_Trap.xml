@@ -18,7 +18,7 @@
 					<li>YR_MilkingMachine_DisableNeed</li>
 				</addedHediffDefs>
 				<addedAfterEjectHediffDefs>
-					<li>Anesthetic</li>
+					<li>YR_Maggot_Toxic</li>
 				</addedAfterEjectHediffDefs>
 			</li>
 			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">

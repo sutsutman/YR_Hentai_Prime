@@ -8,7 +8,7 @@
 			<texPath>Yuran/Things/Building/Furniture/MilkingMachine/Bed/Texture</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 		</graphicData>
-		<uiOrder>100</uiOrder>
+		<uiOrder>50</uiOrder>
 		<!-- 임시로 넣은거 -->
 		<statBases>
 			<JoyGainFactor>1</JoyGainFactor>
