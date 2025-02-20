@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 제일 위 레이어 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Press_TopLayer</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0, 0.08, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Press/Body/Base/1</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+	<!-- 프레스 부분 -->
+	<YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+		<defName>YR_Press_Part</defName>
+		<bedAnimationSettings>
+			<li>
+				<tick>0</tick>
+				<offset>(0, 0.08, 0)</offset>
+				<graphicData>
+					<texPath>Yuran/Things/Building/Furniture/Press/Body/Base/2</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</graphicData>
+			</li>
+		</bedAnimationSettings>
+	</YR_Hentai_Prime_AnimationBed.BedAnimationDef>
+</Defs>

@@ -13,6 +13,8 @@ namespace YR_Hentai_Prime_AnimationBed
 
         public List<PawnPortraitSetting> pawnPortraitSettings = new List<PawnPortraitSetting>();
         public List<FillableBarSetting> fillableBarSettings = new List<FillableBarSetting>();
+
+        public GraphicData bedHeldPawnGraphicData;
     }
 
     public class FillableBarSetting

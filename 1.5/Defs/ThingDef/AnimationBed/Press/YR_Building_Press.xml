@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="YR_AnimationBedBase">
+		<defName>YR_Building_Press</defName>
+		<label>YR_Building_Press</label>
+		<description>YR_Building_Press</description>
+		<graphicData>
+			<texPath>Yuran/Things/Building/Furniture/Press/Bed/Texture</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<uiOrder>100</uiOrder>
+		<!-- 임시로 넣은거 -->
+		<statBases>
+			<JoyGainFactor>1</JoyGainFactor>
+		</statBases>
+		<uiIconScale>1.25</uiIconScale>
+		<size>(1,2)</size>
+		<costList>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Steel>100</Steel>
+		</costList>
+		<comps>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationBed">
+				<!-- 묶였을 때 부여되는 헤디프 -->
+				<addedHediffDefs>
+					<li>YR_MilkingMachine_DisableNeed</li>
+				</addedHediffDefs>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_ToggleHediff">
+				<!-- 버튼으로 리스트에 있는 헤디프를 순서대로 변경 -->
+				<hediffDefs>
+					<li>YR_PowerMode1_Hediff</li>
+					<li>YR_PowerMode2_Hediff</li>
+				</hediffDefs>
+			</li>
+			<!-- 팡팡 놀이 -->
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_SpawnDummyForJoy">
+				<thingDef>YR_DummyForJoy</thingDef>
+				<animationDef>YR_Global_Animation_PanPanPlay_North_Sound</animationDef>
+				<conditionAnimationDefs>
+					<li MayRequire="Roo.AntyRaceMod">
+						<pawnCondition>
+							<joyPawnCondition>
+								<races>
+									<li MayRequire="Roo.AntyRaceMod">Anty</li>
+								</races>
+							</joyPawnCondition>
+						</pawnCondition>
+						<animationDef>YR_Anty_Animation_PanPanPlay_North_Sound_Low</animationDef>
+					</li>
+				</conditionAnimationDefs>
+				<waitAfterJoyTick>500</waitAfterJoyTick>
+				<makeHediff>
+					<heldPawnHediffSetting>
+						<finishHediffSettings>
+							<li>
+								<hediffDef>YR_Ejaculation_Hediff</hediffDef>
+							</li>
+							<li>
+								<hediffDef>YR_Pee_Hediff</hediffDef>
+							</li>
+						</finishHediffSettings>
+					</heldPawnHediffSetting>
+					<!-- <joyPawnHediffSetting> -->
+					<!-- <startHediffSettings> -->
+					<!-- <li> -->
+					<!-- <hediffDef>YR_PowerMode1_Hediff</hediffDef> -->
+					<!-- <conditionHediffDefs> -->
+					<!-- <li> -->
+					<!-- <hediffDef>YR_PowerMode1_Hediff</hediffDef> -->
+					<!-- <pawnCondition/> -->
+					<!-- </li> -->
+					<!-- </conditionHediffDefs> -->
+					<!-- <removeWhenFinish>true</removeWhenFinish> -->
+					<!-- </li> -->
+					<!-- </startHediffSettings> -->
+					<!-- </joyPawnHediffSetting> -->
+				</makeHediff>
+				<makeSound>
+					<!-- 묶인 애를 기준으로 나는 소리 -->
+					<heldPawnSound>
+						<startSoundSettingDefs>
+							<li>OohSound</li>
+						</startSoundSettingDefs>
+						<randomSoundSettingDefs>
+							<li>OohSound_Random_Low</li>
+						</randomSoundSettingDefs>
+						<finishSoundSettingDefs/>
+					</heldPawnSound>
+					<!-- 하는 애를 기준으로 나는 소리 -->
+					<joyPawnSound>
+						<finishSoundSettingDefs>
+							<li>FinishSound</li>
+						</finishSoundSettingDefs>
+						<!-- 오줌소리 바꿔야 함 -->
+						<waitAfterJoySoundSettingDefs>
+							<li>GulpSound</li>
+						</waitAfterJoySoundSettingDefs>
+					</joyPawnSound>
+				</makeSound>
+			</li>
+			<li Class="YR_Hentai_Prime_AnimationBed.CompProperties_AnimationSetting">
+				<bedHeldPawnGraphicData>
+					<texPath>Yuran/Things/Building/Furniture/Press/Bed/Texture_HeldPawn</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>(2,2)</drawSize>
+				</bedHeldPawnGraphicData>
+				<pawnAnimationSetting>
+					<pawnAnimationDef>YR_Global_Animation_NoMove</pawnAnimationDef>
+					<offset>(0,1,0.25)</offset>
+					<rotation>North</rotation>
+					<!-- <conditonPawnOffsets> -->
+					<!-- <li MayRequire="Roo.AntyRaceMod"> -->
+					<!-- <pawnCondition> -->
+					<!-- <heldPawnCondition> -->
+					<!-- <races> -->
+					<!-- <li MayRequire="Roo.AntyRaceMod">Anty</li> -->
+					<!-- </races> -->
+					<!-- </heldPawnCondition> -->
+					<!-- </pawnCondition> -->
+					<!-- <offset>(0,1,-0.02)</offset> -->
+					<!-- </li> -->
+					<!-- <li MayRequire="RooAndGloomy.YuranRaceMod"> -->
+					<!-- <pawnCondition> -->
+					<!-- <heldPawnCondition> -->
+					<!-- <races> -->
+					<!-- <li>Yuran_Race</li> -->
+					<!-- <li>Yuran_Race_Miko</li> -->
+					<!-- </races> -->
+					<!-- </heldPawnCondition> -->
+					<!-- </pawnCondition> -->
+					<!-- <offset>(0,0,0.0)</offset> -->
+					<!-- </li><li MayRequire="SutSutMan.HakuyuRaceMod"> -->
+					<!-- <pawnCondition> -->
+					<!-- <heldPawnCondition> -->
+					<!-- <races> -->
+					<!-- <li>Hakuyu_Race</li> -->
+					<!-- </races> -->
+					<!-- </heldPawnCondition> -->
+					<!-- </pawnCondition> -->
+					<!-- <offset>(0,1,0.07)</offset> -->
+					<!-- </li> -->
+					<!-- </conditonPawnOffsets> -->
+				</pawnAnimationSetting>
+				<bedAnimationList>
+					<!-- 폰의 바디, 헤드 -->
+					<li>
+						<!-- YR_Dummy_BedAnimation는 아무 애니메이션 없는거 -->
+						<bedAnimationDef>YR_Press_Part</bedAnimationDef>
+					</li>
+					<!-- 장식 -->					
+					<li>
+						<bedAnimationDef>YR_Press_TopLayer</bedAnimationDef>
+					</li>
+					<!-- 제일 위 레이어 -->
+					<li>
+						<bedAnimationDef>YR_Press_TopLayer</bedAnimationDef>
+					</li>
+					<!-- 펠라티오 배경 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_GloryHole_FellatioBackGround_BackGround</bedAnimationDef>
+								<offset>(1.5,0.0,1)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_GloryHole_FellatioBackGround_Front</bedAnimationDef>
+								<offset>(1.5,2.0,1)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 꼬추 -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li MayRequire="Roo.AntyRaceMod">
+								<pawnCondition>
+									<joyPawnCondition>
+										<races>
+											<li MayRequire="Roo.AntyRaceMod">Anty</li>
+										</races>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+										<allMatch>true</allMatch>
+										<Break>true</Break>
+									</joyPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_GloryHole_Penis_Insect</bedAnimationDef>
+							</li>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_GloryHole_Penis_Normal</bedAnimationDef>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 정액(포트레잇) -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_GloryHole_Ejaculation_Portrait</bedAnimationDef>
+								<offset>(1.5,2.01,1.15)</offset>
+								<drawSize>(4, 4)</drawSize>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_GloryHole_Ejaculation_Out_Portrait</bedAnimationDef>
+								<offset>(1.5,2.02,1.35)</offset>
+								<drawSize>(4, 4)</drawSize>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<!-- 정액(몸통) -->
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_GloryHole_Ejaculation</bedAnimationDef>
+								<offset>(0,0.05,-0.02)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+					<li>
+						<bedAnimationDef>YR_Dummy_BedAnimation</bedAnimationDef>
+						<conditionBedAnimationDefs>
+							<li>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsDeactive>true</dummyForJoyIsDeactive>
+										<allMatch>true</allMatch>
+									</heldPawnCondition>
+								</pawnCondition>
+								<bedAnimationDef>YR_GloryHole_Ejaculation_Out</bedAnimationDef>
+								<offset>(0,0.06,-0.02)</offset>
+							</li>
+						</conditionBedAnimationDefs>
+					</li>
+				</bedAnimationList>
+				<pawnPortraitSettings>
+					<!-- 사진 -->
+					<li>
+						<portraitSetting>
+							<offset>(0.0, 2.0, 0.04)</offset>
+							<drawSize>(0.9, 0.9)</drawSize>
+							<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/Paper/mask</maskPath>
+							<rotation>South</rotation>
+							<conditionCameraOffsets>
+								<li>
+									<cameraOffset>(0.0, -0.1, -0.1)</cameraOffset>
+								</li>
+								<!-- B.E.P Race -->
+								<li>
+									<pawnCondition>
+										<heldPawnCondition>
+											<races>
+												<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+												<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+												<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+												<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+												<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+												<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+												<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+												<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+												<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+											</races>
+										</heldPawnCondition>
+									</pawnCondition>
+									<cameraOffset>(0, -0.1, -0.21)</cameraOffset>
+								</li>
+							</conditionCameraOffsets>
+							<cameraZoom>0.895</cameraZoom>
+							<renderClothes>false</renderClothes>
+							<renderHeadgear>false</renderHeadgear>
+							<portraitMeshGraphicData>
+								<texPath>Yuran/Things/Building/Furniture/Press/Body/Moniter/1</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<drawSize>(2.25, 2.25)</drawSize>
+							</portraitMeshGraphicData>
+						</portraitSetting>
+					</li>
+					<!-- 말풍선 -->
+					<li>
+						<portraitSetting>
+							<draw>false</draw>
+						</portraitSetting>
+						<conditonPortraitSettings>
+							<li>
+								<portraitSetting>
+									<offset>(1.5,2.0,1)</offset>
+									<pawnRenderNodeTagDef>Body</pawnRenderNodeTagDef>
+									<animationSynchro>true</animationSynchro>
+									<drawSize>(0.8,0.8)</drawSize>
+									<maskPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/Mask</maskPath>
+									<rotation>North</rotation>
+									<conditionCameraOffsets>
+										<li>
+											<cameraOffset>(0, 0, -0.4)</cameraOffset>
+										</li>
+										<li MayRequire="polonium.RorenRaceMod">
+											<pawnCondition>
+												<heldPawnCondition>
+													<races>
+														<li>Alien_Roren</li>
+													</races>
+												</heldPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(0, 0, -0.3)</cameraOffset>
+										</li>
+										<li MayRequire="Roo.AntyRaceMod">
+											<pawnCondition>
+												<heldPawnCondition>
+													<races>
+														<li MayRequire="Roo.AntyRaceMod">Anty</li>
+													</races>
+												</heldPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(0, 0, -0.3)</cameraOffset>
+										</li>
+										<!-- B.E.P Race -->
+										<li>
+											<pawnCondition>
+												<heldPawnCondition>
+													<races>
+														<li MayRequire="bep.littlefairy.ttwsfabr">LittleFairy_Pawn</li>
+														<li MayRequire="bep.mofy.twfiaclr">Mofy_Pawn</li>
+														<li MayRequire="bep.resurreviewy.tnair">Resurreviewy_Pawn</li>
+														<li MayRequire="bep.glassy.terr">Glassy_Pawn</li>
+														<li MayRequire="bep.sweety.mcsr">Sweety_Pawn</li>
+														<li MayRequire="bep.legacyfairy.tftr">LegacyFairy_Pawn</li>
+														<li MayRequire="bep.magiaplant.tfmr">MagiaPlant_Pawn</li>
+														<li MayRequire="bep.forgotty.tfcr">Forgotty_Pawn</li>
+														<li MayRequire="bep.maddy.twmr">Maddy_Pawn</li>
+													</races>
+												</heldPawnCondition>
+											</pawnCondition>
+											<cameraOffset>(0, 0, -0.395)</cameraOffset>
+										</li>
+									</conditionCameraOffsets>
+									<cameraZoom>3.5</cameraZoom>
+									<renderClothes>false</renderClothes>
+									<renderHeadgear>false</renderHeadgear>
+									<portraitMeshGraphicData>
+										<texPath>Yuran/Things/Building/Furniture/GloryHole/Body/FellatioBackGround/BackGround</texPath>
+										<graphicClass>Graphic_Single</graphicClass>
+										<drawSize>(2.25, 2.25)</drawSize>
+									</portraitMeshGraphicData>
+								</portraitSetting>
+								<pawnCondition>
+									<heldPawnCondition>
+										<hediffDefs>
+											<li>YR_Ejaculation_Hediff</li>
+										</hediffDefs>
+										<dummyForJoyIsActive>true</dummyForJoyIsActive>
+									</heldPawnCondition>
+								</pawnCondition>
+							</li>
+						</conditonPortraitSettings>
+					</li>
+				</pawnPortraitSettings>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

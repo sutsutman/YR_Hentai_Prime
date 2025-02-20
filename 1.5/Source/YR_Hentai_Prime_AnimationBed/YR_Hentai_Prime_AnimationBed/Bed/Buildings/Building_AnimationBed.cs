@@ -11,6 +11,26 @@ namespace YR_Hentai_Prime_AnimationBed
     [StaticConstructorOnStartup]
     public class Building_AnimationBed : Building, IThingHolderWithDrawnPawn, IThingHolder, IRoofCollapseAlert, ISearchableContents
     {
+        private Graphic cachedGraphicFull;
+
+        public override Graphic Graphic
+        {
+            get
+            {
+                if (HeldPawn != null)
+                {
+                    var bedHeldPawnGraphicData = animationSettingComp?.Props?.bedHeldPawnGraphicData;
+                    if (bedHeldPawnGraphicData == null)
+                    {
+                        return base.Graphic;
+                    }
+
+                    return cachedGraphicFull ??= bedHeldPawnGraphicData.GraphicColoredFor(this);
+                }
+                return base.Graphic;
+            }
+        }
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
